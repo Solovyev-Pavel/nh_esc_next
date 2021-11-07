@@ -1,0 +1,110 @@
+# particle definitions for psionic weapons
+ObjectTypes = {
+
+############################################################
+###      Psionic Weapons' Particles : Psionic cannon     ###
+############################################################
+
+# muzzle flash
+pdxparticle = {
+	name = "esc_psionic_cannon_tiny_muzzle_particle"
+	type = "esc_psionic_cannon_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_psionic_cannon_small_muzzle_particle"
+	type = "esc_psionic_cannon_muzzle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_psionic_cannon_medium_muzzle_particle"
+	type = "esc_psionic_cannon_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_psionic_cannon_large_muzzle_particle"
+	type = "esc_psionic_cannon_muzzle_effect"
+	scale = 1.25
+}
+
+# hit effect
+pdxparticle = {
+	name = "esc_psionic_cannon_small_hit_effect"
+	type = "esc_psionic_cannon_hit_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_psionic_cannon_medium_hit_effect"
+	type = "esc_psionic_cannon_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_psionic_cannon_large_hit_effect"
+	type = "esc_psionic_cannon_hit_effect"
+	scale = 1.5
+}
+
+############################################################
+###     Psionic Weapons' Particles : Psionic torpedo     ###
+############################################################
+
+# muzzle flash
+pdxparticle = {
+	name = "esc_psionic_torpedo_muzzle_particle"
+	type = "esc_psionic_torpedo_muzzle_effect"
+	scale = 1.0
+}
+
+# hit effect
+pdxparticle = {
+	name = "esc_psionic_torpedo_hit_effect"
+	type = "esc_psionic_torpedo_hit_effect"
+	scale = 2.0
+}
+
+# missile fire and trail
+pdxparticle = {
+	name = "esc_psionic_torpedo_idle_particle"
+	type = "esc_psionic_torpedo_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "esc_psionic_torpedo_idle_trail_particle"
+	type = "esc_psionic_torpedo_idle_trail_effect"
+	scale = 1.0
+}
+
+############################################################
+###      Psionic Weapons' Particles : Psionic lance      ###
+############################################################
+
+pdxparticle = {
+	name = "esc_psionic_lance_windup_effect"
+	type = "esc_psionic_lance_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_psionic_lance_muzzle_windup_effect"
+	type = "esc_psionic_lance_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_psionic_lance_muzzle_particle"
+	type = "esc_psionic_lance_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_psionic_lance_hit_effect"
+	type = "esc_psionic_lance_hit_effect"
+	scale = 1.15
+}
+
+}

@@ -1,0 +1,13 @@
+### special blocker created by Mantle Mining Facility
+d_esc_large_borehole_1 = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_max_districts_add = -5 # -3
+    }
+
+    drop_weight = {
+        weight = 0 # event only
+    }
+}

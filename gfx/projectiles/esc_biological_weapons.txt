@@ -1,0 +1,82 @@
+############################################################
+###         Bio Weapons' Projectiles : Bio Cannon        ###
+############################################################
+
+# bio cannon : small
+projectile_gfx_ballistic = {
+	name = "esc_bio_projectile_small"
+	color = { 1.0 1.0 1.0 0.7 }
+	hit_entity = "esc_bio_projectile_small_hit_entity"
+	shield_hit_entity = "esc_bio_projectile_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_bio_projectile_small_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_bio_projectile_small_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+# bio cannon : medium
+projectile_gfx_ballistic = {
+	name = "esc_bio_projectile_medium"
+	color = { 1.0 1.0 1.0 0.7 }
+	hit_entity = "esc_bio_projectile_medium_hit_entity"
+	shield_hit_entity = "esc_bio_projectile_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_bio_projectile_medium_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_bio_projectile_medium_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+# bio cannon : large
+projectile_gfx_ballistic = {
+	name = "esc_bio_projectile_large"
+	color = { 1.0 1.0 1.0 0.7 }
+	hit_entity = "esc_bio_projectile_large_hit_entity"
+	shield_hit_entity = "esc_bio_projectile_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_bio_projectile_large_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_bio_projectile_large_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###         Bio Weapons' Projectiles : Bio Missile       ###
+############################################################
+
+projectile_gfx_ballistic = {
+	name = "esc_bio_missile"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_bio_missile_hit_entity"
+	shield_hit_entity = "esc_bio_missile_shield_hit_entity"
+	muzzle_flash_entity = "esc_bio_missile_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_bio_missile_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

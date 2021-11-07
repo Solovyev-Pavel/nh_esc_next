@@ -1,0 +1,579 @@
+############################################################
+###           Combat Computers : Event & Crises          ###
+############################################################
+
+### Contingency combat computer
+utility_component_template = {
+	key = ESC_AI_COMPUTER
+	size = small
+	icon = GFX_esc_computer_contingency
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 20 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "default"
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 10
+		ship_accuracy_add = 10
+		ship_weapon_damage = 0.25
+		ship_fire_rate_mult = 0.25
+	}
+
+	modifier = {
+		ship_evasion_add = 5
+	}
+
+	ai_weight = { weight = 25 }
+}
+
+### Shroud Consiouness
+utility_component_template = {
+	key = ESC_SHROUD_CONSCIOUSNESS_GOOD
+	size = small
+	icon = GFX_esc_shroud_avatar_computer_good
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { energy = 10 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = line
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 20
+		ship_accuracy_add = 20
+		ship_fire_rate_mult = 0.25
+	}
+
+	modifier = {
+		ship_evasion_add = 5
+	}
+
+	ai_weight = { weight = 25 }
+}
+
+### Corrupted Shroud Consiouness
+utility_component_template = {
+	key = ESC_SHROUD_CONSCIOUSNESS_BAD
+	size = small
+	icon = GFX_esc_shroud_avatar_computer_bad
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { energy = 10 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = line
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 20
+		ship_accuracy_add = 20
+		ship_fire_rate_mult = 0.25
+		ship_weapon_damage = 0.25
+	}
+
+	modifier = {
+		ship_evasion_add = 5
+	}
+
+	ai_weight = { weight = 25 }
+}
+
+### Gray goo LINE computer
+utility_component_template = {
+	key = ESC_GRAY_GOO_COMPUTER_LINE
+	size = small
+	icon = GFX_esc_computer_gray_goo_line
+	icon_frame = 1
+	hidden = yes
+
+	power = 0
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.50
+		ship_weapon_damage = 0.50
+
+		ship_accuracy_add = 20
+		ship_tracking_add = 20
+
+		ship_shield_mult = 1.0
+		ship_armor_mult = 1.0
+		ship_hull_mult = 1.0
+	}
+
+	ai_weight = { weight = 0 }
+}
+
+### Gray goo ARTILLERY computer
+utility_component_template = {
+	key = ESC_GRAY_GOO_COMPUTER_ARTILLERY
+	size = small
+	icon = GFX_esc_computer_gray_goo_artillery
+	icon_frame = 1
+	hidden = yes
+
+	power = 0
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.50
+		ship_weapon_damage = 0.50
+
+		ship_accuracy_add = 20
+		ship_tracking_add = 20
+
+		ship_shield_mult = 1.0
+		ship_armor_mult = 1.0
+		ship_hull_mult = 1.0
+	}
+
+	ai_weight = { weight = 0 }
+}
+
+### Gray goo PLATFORM computer
+utility_component_template = {
+	key = ESC_GRAY_GOO_COMPUTER_PLATFORM
+	size = small
+	icon = GFX_esc_computer_gray_goo_platform
+	icon_frame = 1
+	hidden = yes
+
+	power = 0
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_starbase }
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.50
+		ship_weapon_damage = 0.50
+
+		ship_accuracy_add = 20
+		ship_tracking_add = 20
+
+		ship_shield_mult = 1.0
+		ship_armor_mult = 1.0
+		ship_hull_mult = 1.0
+	}
+
+	ai_weight = { weight = 0 }
+}
+
+############################################################
+###                   Weapons : Crises                   ###
+############################################################
+
+# small matter disintegrator
+weapon_component_template = {
+	key = SMALL_ESC_EXTRADIMENSIONAL_1
+
+	size = small
+	type = instant
+	icon = GFX_ship_part_extradimensional_weapon_1
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	damage = { min = 32.0 max = 82.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.9
+	power = -28
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @s_t6_cost
+			rare_crystals = @s_t6_rare
+		}
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = 2.0
+	armor_penetration = 0.0
+	armor_damage = 1.5
+	shield_penetration = 0.0
+	shield_damage = 0.5
+	tracking = 0.6
+
+	component_set = ESC_EXTRADIMENSIONAL_1
+	prerequisites = { "esc_tech_extradimensional_weapon_1" }
+	upgrades_to = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium matter distintegrator
+weapon_component_template = {
+	key = MEDIUM_ESC_EXTRADIMENSIONAL_1
+
+	size = medium
+	type = instant
+	icon = GFX_ship_part_extradimensional_weapon_1
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	damage = { min = 98.0 max = 192.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	power = -52
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @m_t6_cost
+			rare_crystals = @m_t6_rare
+		}
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = 2.0
+	armor_penetration = 0.0
+	armor_damage = 1.5
+	shield_penetration = 0.0
+	shield_damage = 0.5
+	tracking = 0.3
+
+	component_set = ESC_EXTRADIMENSIONAL_1
+	prerequisites = { "esc_tech_extradimensional_weapon_1" }
+	upgrades_to = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large matter disintegrator
+weapon_component_template = {
+	key = LARGE_ESC_EXTRADIMENSIONAL_1
+
+	size = large
+	type = instant
+	icon = GFX_ship_part_extradimensional_weapon_1
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	damage = { min = 208.0 max = 414.0 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	power = -100
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @l_t6_cost
+			rare_crystals = @l_t6_rare
+		}
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = 2.0
+	armor_penetration = 0.0
+	armor_damage = 1.5
+	shield_penetration = 0.0
+	shield_damage = 0.5
+	tracking = 0.05
+
+	component_set = ESC_EXTRADIMENSIONAL_1
+	prerequisites = { "esc_tech_extradimensional_weapon_1" }
+	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# Medium probe lightning
+weapon_component_template = {
+	key = MEDIUM_ESC_PROBE_LIGHTNING
+	hidden = yes
+
+	size = medium
+	type = instant
+	icon = GFX_ship_part_extradimensional_weapon_1
+	icon_frame = 1
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	damage = { min = 75.0 max = 150.0 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 30
+	range = 90
+	accuracy = 0.85
+	power = -15
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 15 }
+	}
+
+	hull_damage = 1.0
+	armor_penetration = 1.0
+	armor_damage = 1.0
+	shield_penetration = 1.0
+	shield_damage = 1.0
+	tracking = 0.3
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# Standard Scourge Missile
+weapon_component_template = {
+	key = LARGE_ESC_SCOURGE_MISSILE_1
+	size = torpedo
+
+	icon = "GFX_ship_part_scourge_missile_1"
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 196.0 max = 388.0 }
+	windup = { min = 1.0 max = 19.0 }
+	total_fire_time = 40
+	range = 120
+	accuracy = 1.0
+	missile_speed = 20
+	missile_evasion = 0.4
+	missile_health = 35
+	missile_retarget_range = 120
+	power = -45
+
+	resources = {
+		category = ship_components
+		cost = { food = 100 }
+	}
+
+	hull_damage = 1.5
+	armor_penetration = 0.0
+	armor_damage = 1.5
+	shield_penetration = 0.0
+	shield_damage = 1.0
+	tracking = 0.05
+
+	projectile_gfx = "scourge_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	prerequisites = { "esc_tech_swarm_missile" }
+	component_set = ESC_SCOURGE_MISSILE_1
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# Medium Projectile
+weapon_component_template = {
+	key = MEDIUM_ESC_SCOURGE_PROJECTILE_WEAPON
+	hidden = yes
+
+	size = medium
+	type = instant
+	icon = GFX_ship_part_scourge_missile_1
+	icon_frame = 1
+
+	damage = { min = 70.0 max = 195.0 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 40
+	range = 60.0
+	accuracy = 0.75
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = { food = 20 }
+	}
+
+	hull_damage = 1.5
+	armor_penetration = 0.0
+	armor_damage = 1.5
+	shield_penetration = 0.0
+	shield_damage = 1.0
+	tracking = 0.75
+
+	component_set = ESC_SCOURGE_PROJECTILE_WEAPON
+	projectile_gfx = "scourge_projectile_weapon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# Small Projectile
+weapon_component_template = {
+	key = SMALL_ESC_SCOURGE_PROJECTILE_WEAPON
+	hidden = yes
+
+	size = small
+	type = instant
+	icon = GFX_ship_part_scourge_missile_1
+	icon_frame = 1
+
+	damage = { min = 40.0 max = 70.0 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 40
+	range = 60.0
+	accuracy = 0.75
+	power = -10
+
+	resources = {
+		category = ship_components
+		cost = { food = 10 }
+	}
+
+	hull_damage = 1.5
+	armor_penetration = 0.0
+	armor_damage = 1.5
+	shield_penetration = 0.0
+	shield_damage = 1.0
+	tracking = 0.75
+
+	component_set = ESC_SCOURGE_PROJECTILE_WEAPON
+	projectile_gfx = "small_scourge_projectile_weapon"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# Standard Swarm Fighter
+strike_craft_component_template = {
+	key = ESC_SWARM_STRIKE_CRAFT_1
+	size = LARGE
+	entity = "swarm_01_fighter_entity"
+	power = -80
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = 10
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 10 max = 18 }
+	cooldown = 2
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 110
+	armor = 20
+	shield = 0
+
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = 650
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_penetration = 0.66
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	weapon_type = instant
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	prerequisites = { "esc_tech_swarm_strike_craft_1" }
+	component_set = ESC_SWARM_STRIKE_CRAFT_1
+	icon = GFX_ship_part_swarm_strike_craft_1
+	icon_frame = 1
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_SWARMER_STRIKECRAFT_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}

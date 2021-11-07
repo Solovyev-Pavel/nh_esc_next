@@ -1,0 +1,755 @@
+############################################################
+###               Antimatter Thrusters                   ###
+############################################################
+
+# corvettes & transports & civilian ships
+utility_component_template = {
+	key = ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_corvette
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_corvette
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = ESC_THRUSTERS_6
+	size_restriction = {
+		# vanilla ship classes
+		corvette crisis_corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport
+		# EAC ships
+		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
+
+	ai_weight = { weight = 5 }
+}
+
+# destroyers
+utility_component_template = {
+	key = DESTROYER_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_destroyer
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_destroyer
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 16
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = DESTROYER_ESC_THRUSTERS_6
+	size_restriction = { destroyer crisis_destroyer }
+
+	ai_weight = { weight = 5 }
+}
+
+# cruisers
+utility_component_template = {
+	key = CRUISER_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_cruiser
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_cruiser
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 12
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = CRUISER_ESC_THRUSTERS_6
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser
+		# Deadly tempest
+		graygoo_interdictor
+		# Realistic ships : cruisers
+		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
+		# Playable fallen empire ships
+		@PFE_Escort }
+
+	ai_weight = { weight = 5 }
+}
+
+# battleships
+utility_component_template = {
+	key = BATTLESHIP_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_battleship
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_battleship
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = BATTLESHIP_ESC_THRUSTERS_6
+	size_restriction = {
+		# vanilla ship classes
+		battleship
+		# NSC ships
+		@NSC_ExplorationShip
+		# Realsitic ships : dreadnoughts
+		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
+		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU
+		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+# titans
+utility_component_template = {
+	key = TITAN_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_titan
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_titan
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 4
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = TITAN_ESC_THRUSTERS_6
+	size_restriction = {
+		# vanilla ship classes
+		titan
+		# Playable fallen empire ships
+		@PFE_Titan
+		# Deadly tempest
+		graygoo_mothership }
+
+	ai_weight = { weight = 5 }
+}
+
+# colossi
+utility_component_template = {
+	key = COLOSSUS_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_colossus
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_colossus
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = COLOSSUS_ESC_THRUSTERS_6
+	size_restriction = { colossus star_eater juggernaut @MISC_WarJuggernaut }
+
+	ai_weight = { weight = 5 }
+}
+
+# strike cruisers
+utility_component_template = {
+	key = STRIKECRUISER_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_strikecruiser
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_strikecruiser
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 14
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = STRIKECRUISER_ESC_THRUSTERS_6
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_strike_cruiser
+		# NSC ships
+		@NSC_StrikeCruiser }
+
+	ai_weight = { weight = 5 }
+}
+
+# battlecruisers
+utility_component_template = {
+	key = BATTLECRUISER_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_battlecruiser
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_battlecruiser
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = BATTLECRUISER_ESC_THRUSTERS_6
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_battle_cruiser
+		# NSC ships
+		@NSC_BattleCruiser @NSC_EscortCarrier
+		# Playable fallen empire ships
+		@PFE_Battlecruiser }
+
+	ai_weight = { weight = 5 }
+}
+
+# carriers
+utility_component_template = {
+	key = CARRIER_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_carrier
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_carrier
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = CARRIER_ESC_THRUSTERS_6
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_carrier
+		# NSC ships
+		@NSC_Carrier
+		# SCX ships
+		@SCX_Carrier }
+
+	ai_weight = { weight = 5 }
+}
+
+# dreadnoughts
+utility_component_template = {
+	key = DREADNOUGHT_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_dreadnought
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_dreadnought
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+		ship_evasion_add = 6
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = DREADNOUGHT_ESC_THRUSTERS_6
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_dreadnought
+		# NSC ships
+		@NSC_Dreadnought
+		# SCX ships
+		@SCX_Dreadnought
+		# other...
+		@MISC_Dreadnought_A }
+
+	ai_weight = { weight = 5 }
+}
+
+# flaships
+utility_component_template = {
+	key = FLAGSHIP_ESC_THRUSTERS_5
+	size = small
+	icon = GFX_esc_thrusters_5
+	icon_frame = 1
+	power = @ESC_THRUSTER_t5_power_flagship
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t5_cost_flagship
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.0
+	}
+
+	prerequisites = { "esc_tech_thrusters_5" }
+	component_set = "thruster_components"
+	upgrades_to = FLAGSHIP_ESC_THRUSTERS_6
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_flagship
+		# NSC ships
+		@NSC_Flagship @Freebooters_Flagship
+		# other...
+		@MISC_Ultrajuggernaut }
+
+	ai_weight = { weight = 5 }
+}
+
+############################################################
+###              Gravity Manipulation Engines            ###
+############################################################
+
+# corvettes & transports & civilian ships
+utility_component_template = {
+	key = ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_corvette
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_corvette
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 25
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# vanilla ship classes
+		corvette crisis_corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport
+		# EAC ships
+		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
+
+	ai_weight = { weight = 6 }
+}
+
+# destroyers
+utility_component_template = {
+	key = DESTROYER_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_destroyer
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_destroyer
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 20
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = { destroyer crisis_destroyer }
+
+	ai_weight = { weight = 6 }
+}
+
+# cruisers
+utility_component_template = {
+	key = CRUISER_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_cruiser
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_cruiser
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 15
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser
+		# Deadly tempest
+		graygoo_interdictor
+		# Realistic ships : cruisers
+		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
+		# Playable fallen empire ships
+		@PFE_Escort }
+
+	ai_weight = { weight = 6 }
+}
+
+# battleships
+utility_component_template = {
+	key = BATTLESHIP_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_battleship
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_battleship
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# vanilla ship classes
+		battleship
+		# NSC ships
+		@NSC_ExplorationShip
+		# Realsitic ships : dreadnoughts
+		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
+		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU
+		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
+	}
+
+	ai_weight = { weight = 6 }
+}
+
+# titans
+utility_component_template = {
+	key = TITAN_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_titan
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_titan
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 7
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# vanilla ship classes
+		titan
+		# Playable fallen empire ships
+		@PFE_Titan
+		# Deadly tempest
+		graygoo_mothership }
+
+	ai_weight = { weight = 6 }
+}
+
+# colossi
+utility_component_template = {
+	key = COLOSSUS_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_colossus
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_colossus
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = { colossus star_eater juggernaut @MISC_WarJuggernaut }
+
+	ai_weight = { weight = 6 }
+}
+
+# strike cruisers
+utility_component_template = {
+	key = STRIKECRUISER_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_strikecruiser
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_strikecruiser
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 17
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_strike_cruiser
+		# NSC ships
+		@NSC_StrikeCruiser }
+
+	ai_weight = { weight = 6 }
+}
+
+# battlecruisers
+utility_component_template = {
+	key = BATTLECRUISER_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_battlecruiser
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_battlecruiser
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 13
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_battle_cruiser
+		# NSC ships
+		@NSC_BattleCruiser @NSC_EscortCarrier
+		# Playable fallen empire ships
+		@PFE_Battlecruiser }
+
+	ai_weight = { weight = 6 }
+}
+
+# carriers
+utility_component_template = {
+	key = CARRIER_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_carrier
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_carrier
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 10
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_carrier
+		# NSC ships
+		@NSC_Carrier
+		# SCX ships
+		@SCX_Carrier }
+
+	ai_weight = { weight = 6 }
+}
+
+# dreadnoughts
+utility_component_template = {
+	key = DREADNOUGHT_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_dreadnought
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_dreadnought
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 8
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_dreadnought
+		# NSC ships
+		@NSC_Dreadnought
+		# SCX ships
+		@SCX_Dreadnought
+		# other...
+		@MISC_Dreadnought_A }
+
+	ai_weight = { weight = 6 }
+}
+
+# flaships
+utility_component_template = {
+	key = FLAGSHIP_ESC_THRUSTERS_6
+	size = small
+	icon = GFX_esc_thrusters_6
+	icon_frame = 1
+	power = @ESC_THRUSTER_t6_power_flagship
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_THRUSTER_t6_cost_flagship
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 3
+	}
+
+	prerequisites = { "esc_tech_thrusters_6" }
+	component_set = "thruster_components"
+	size_restriction = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		esc_dummy_flagship
+		# NSC ships
+		@NSC_Flagship @Freebooters_Flagship
+		# other...
+		@MISC_Ultrajuggernaut }
+
+	ai_weight = { weight = 6 }
+}
+
+################################################
+##     Special engines for event entities     ##
+################################################
+
+### Mysterious Force
+utility_component_template = {
+	key = ESC_THRUSTER_AVATAR
+	size = small
+	icon = GFX_esc_shroud_avatar_thruster
+	icon_frame = 1
+	power = 0
+	hidden = yes
+
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 10
+		}
+	}
+
+	modifier = {
+		ship_base_speed_mult = 1.25
+		ship_evasion_add = 5
+	}
+
+	component_set = "thruster_components"
+	class_restriction = { shipclass_military }
+
+	ai_weight = { weight = 6 }
+}

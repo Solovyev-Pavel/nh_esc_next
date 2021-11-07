@@ -1,0 +1,919 @@
+############################################################
+###          ESC TECHNOLOGIES : PSIONIC WEAPONS          ###
+############################################################
+
+# ── Psi-blast Torpedo						: tier 1 psionic torpedo
+#     └─ Improved Psi-blast Torpedo			: tier 2 psionic torpedo
+# ── Psionic Energy Projector				: tier 1 psionic cannon
+#     ├─ Psionic Beam Cannon				: tier 2 psionic cannon
+#     │   └─ Psionic Lance					: tier 1 psionic lance
+#     │       └─ Shroud Piercer				: tier 2 psionic lance
+#     │           └─ Void Ray				: titanic psionic lance
+#     └─ Shroud Strike						: tier 1 psionic cannon
+#         └─ Shroud Wrath					: tier 2 psionic cannon
+# ── Psionic Interceptors					: psionic strikecrafts
+# ── Focused Minds							: psionic damage repeatable
+# ── Well of Power							: psionic rate of fire repeatable
+
+############################################################
+##                 Psionic Energy Projector               ##
+############################################################
+
+esc_tech_psionic_cannon_1 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_weapons" }
+	gateway = ESC_PSIONIC_CANNONS
+
+	potential = {
+		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+############################################################
+##                  Psionic Beam Cannon                   ##
+############################################################
+
+esc_tech_psionic_cannon_2 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_cannon_1" }
+	is_rare = yes
+
+	potential = {
+		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_cannon_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_cannon_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                     Shroud Strike                      ##
+############################################################
+
+esc_tech_psionic_strike_1 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_cannon_1" }
+	is_reverse_engineerable = no
+	is_rare = yes
+	gateway = ESC_PSIONIC_STRIKES
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_strike_1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_strike_1 }
+			}
+		}
+	}
+}
+
+############################################################
+##                      Shroud Wrath                      ##
+############################################################
+
+esc_tech_psionic_strike_2 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_strike_1" }
+	is_reverse_engineerable = no
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_strike_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_strike_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                    Psi-blast Torpedo                   ##
+############################################################
+
+esc_tech_psionic_torpedo_1 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_weapons" }
+	gateway = ESC_PSIONIC_TORPEDOES
+
+	potential = {
+		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+	}
+}
+
+############################################################
+##              Improved Psi-blast Torpedo                ##
+############################################################
+
+esc_tech_psionic_torpedo_2 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_torpedo_1" }
+	is_rare = yes
+
+	potential = {
+		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_torpedo_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_torpedo_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                      Psionic Lance                     ##
+############################################################
+
+esc_tech_psionic_lance_1 = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_cannon_2" "esc_tech_advanced_heavy_weapons" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	gateway = ESC_PSIONIC_LANCES
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_lance_1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_lance_1 }
+			}
+		}
+	}
+}
+
+############################################################
+##                     Shroud Pierecer                    ##
+############################################################
+
+esc_tech_psionic_lance_2 = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_lance_1" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	gateway = ESC_PSIONIC_LANCES
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_lance_1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_lance_1 }
+			}
+		}
+	}
+}
+
+############################################################
+##                         Void Ray                       ##
+############################################################
+
+esc_tech_psionic_lance_titanic = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_lance_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_titans
+				has_technology = tech_juggernaut
+			}
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_lance_titanic }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_titans
+				has_technology = tech_juggernaut
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_lance_titanic }
+			}
+		}
+	}
+}
+
+############################################################
+##                   Psionic Interceptors                 ##
+############################################################
+
+esc_tech_psionic_interceptors = {
+	area = society
+	category = { voidcraft }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = military
+	prerequisites = { "tech_strike_craft_3" "esc_tech_psionic_weapons" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_interceptors }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_interceptors }
+			}
+		}
+	}
+}
+
+############################################################
+##                       Focused Minds                    ##
+############################################################
+
+esc_tech_repeatable_psionic_damage = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { psionics }
+	levels = -1
+	prerequisites = { "esc_tech_psionic_weapons" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	modifier = {
+		weapon_type_psionic_weapon_damage_mult = 0.05
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_psionic_cannon_1
+				has_technology = esc_tech_psionic_torpedo_1
+				has_technology = esc_tech_psionic_interceptors
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+	}
+}
+
+############################################################
+##                      Well of Power                     ##
+############################################################
+
+esc_tech_repeatable_psionic_fire_rate = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { psionics }
+	levels = -1
+	prerequisites = { "esc_tech_psionic_weapons" }
+	weight = @repeatableTechWeight
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	modifier = {
+		weapon_type_psionic_weapon_fire_rate_mult = 0.05
+	}
+
+	weight_modifier = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_psionic_cannon_1
+				has_technology = esc_tech_psionic_torpedo_1
+				has_technology = esc_tech_psionic_interceptors
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+	}
+}

@@ -1,0 +1,1188 @@
+############################################################
+###                ESC buildings : general               ###
+############################################################
+
+# - Central Besearch Bureau			: mid-game superlab, provides scientist jobs and boosts local science production as well as empire's research speed
+# - Culture Nexus					: superlab for society research; improves unity production
+# - Cerebral Node					: organic hive-mind version of the Culture Nexus
+# - Network Regulator				: machine intelligence version of the Culture Nexus
+# - Advanced Materials Laboratory	: superlab for engineering research; improves armor and empire's mineral and alloy production
+# - Technology Institute			: superlab for physics research; improves shields and empire's energy produciton
+# - Watcher of Eternity				: end-game superlab, provides scientist jobs and boosts local science production as well as empire's research speed
+# - Stellar Energy Tower			: special bulding that generates energy, physics and boosts local food production. requires empire to have killed Stellarite Devourer
+# - Quantum Computation Node		: special lab building, provides scientist jobs and boosts local science production. requires resolved Infinity Machine event chain
+# - Dragon Hatchery					: spawn ether drake hatchlings
+
+############################################################
+###                Central Research Bureau               ###
+############################################################
+
+esc_building_central_research_bureau = {
+	base_buildtime = 540
+	category = research
+	icon = esc_building_centralresearchbureau
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			minerals = 750
+		}
+		# human player cost modifier
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			influence = 15
+			rare_crystals = 25
+			volatile_motes = 25
+			exotic_gases = 25
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# human player upkeep modifier
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			rare_crystals = 1
+			volatile_motes = 1
+			exotic_gases = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.20 # 20% more science from researchers
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.05
+		num_tech_alternatives_add = 1
+	}
+
+	# regular empire jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_researcher_add = 1
+			job_researcher_add = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = esc_central_research_bureau_effect_regular
+	}
+
+	# hive minds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 7
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	# machine empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 7
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden } }
+	prerequisites = { "esc_tech_grand_research_initiative" }
+}
+
+############################################################
+###                     Culture Nexus                    ###
+############################################################
+
+esc_building_culture_nexus = {
+	base_buildtime = 360
+	icon = esc_building_culture_nexus
+	category = unity
+
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	convert_to = {
+		esc_building_cerebral_node
+		esc_building_network_regulator
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			minerals = 750
+		}
+		# human player cost modifier
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			influence = 15
+			rare_crystals = 25
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# human player upkeep modifier
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			rare_crystals = 1
+		}
+		produces = {
+			influence = 0.5
+		}
+	}
+
+	country_modifier = {
+		pop_government_ethic_attraction = 0.3
+		species_leader_exp_gain = 0.25
+		country_society_tech_research_speed = 0.05
+	}
+
+	planet_modifier = {
+		pop_happiness = 0.05
+		planet_amenities_add = 10
+	}
+
+	### non-spiritualist non-megacorp empires without death cult/memorialist civics -> culture workers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
+		}
+		job_culture_worker_add = 5
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
+		}
+		text = job_culture_worker_effect_desc
+	}
+
+	### spiritualist empires without death cult/memorialist civics -> priests
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_priests = yes }
+		}
+		job_priest_add = 5
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_priests = yes }
+		}
+		text = job_priest_effect_desc
+	}
+
+	### non-spiritualist megacorp empires without death cult/memorialist civics -> manager
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_managers = yes }
+		}
+		job_manager_add = 5
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_managers = yes }
+		}
+		text = job_manager_effect_desc
+	}
+
+	### death cult empires -> death priests + mortal initiates
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_death_priests = yes }
+		}
+		modifier = {
+			job_death_priest_add = 3
+			job_mortal_initiate_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_death_priests = yes }
+		}
+		text = esc_culture_nexus_effect_death_priests
+	}
+
+	### memorialist empires -> death chroniclers
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_memorialists = yes }
+		}
+		modifier = {
+			job_death_chronicler_add = 5
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_memorialists = yes }
+		}
+		text = job_death_chronicler_effect_desc
+	}
+
+	show_tech_unlock_if = {
+		owner = { is_regular_empire = yes }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+	}
+	prerequisites = { "esc_tech_culture_nexus" }
+
+}
+
+############################################################
+###                     Cerebral Node                    ###
+############################################################
+
+esc_building_cerebral_node = {
+	base_buildtime = 360
+	icon = esc_building_culture_nexus
+	category = unity
+
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	convert_to = {
+		esc_building_culture_nexus
+		esc_building_network_regulator
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			minerals = 750
+		}
+		# human player cost modifier
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			influence = 15
+			rare_crystals = 25
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# human player upkeep modifier
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			rare_crystals = 1
+		}
+		produces = {
+			influence = 0.5
+		}
+	}
+
+	country_modifier = {
+		leader_skill_levels = 1
+		pop_environment_tolerance = 0.05
+		country_society_tech_research_speed = 0.05
+	}
+
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 10
+	}
+
+	### non-chronicler biological hives
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
+		}
+		job_esc_mind_walker_add = 5
+		job_maintenance_drone_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
+		}
+		text = esc_cerebral_node_effect_regular
+	}
+
+	### death chronicler biological hives
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
+		}
+		job_chronicle_drone_add = 5
+		job_maintenance_drone_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
+		}
+		text = esc_cerebral_node_effect_death_chronicle
+	}
+
+	show_tech_unlock_if = {
+		owner = { is_hive_empire = yes }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+	}
+	prerequisites = { "esc_tech_culture_nexus" }
+}
+
+############################################################
+###                   Network Regulator                  ###
+############################################################
+
+esc_building_network_regulator = {
+	base_buildtime = 360
+	icon = esc_building_culture_nexus
+	category = unity
+
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	convert_to = {
+		esc_building_culture_nexus
+		esc_building_cerebral_node
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			minerals = 750
+		}
+		# human player cost modifier
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			influence = 15
+			rare_crystals = 25
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# human player upkeep modifier
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			rare_crystals = 1
+		}
+		produces = {
+			influence = 0.5
+		}
+	}
+
+	country_modifier = {
+		leader_skill_levels = 1
+		country_society_tech_research_speed = 0.05
+	}
+
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 10
+	}
+
+	### non-chronicler machines
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
+		}
+		job_evaluator_add = 5
+		job_maintenance_drone_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
+		}
+		text = esc_network_regulator_effect_regular
+	}
+
+	### death chronicler machines
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
+		}
+		job_chronicle_drone_add = 5
+		job_maintenance_drone_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
+		}
+		text = esc_network_regulator_effect_death_chronicle
+	}
+
+	show_tech_unlock_if = {
+		owner = { is_machine_empire = yes }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+	}
+	prerequisites = { "esc_tech_culture_nexus" }
+}
+
+############################################################
+###             Advanced Materials Laboratory            ###
+############################################################
+
+esc_building_materials_laboratory = {
+	base_buildtime = 360
+	icon = esc_building_materials_laboratory
+	category = research
+
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			minerals = 750
+		}
+		# human player cost modifier
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			influence = 15
+			volatile_motes = 25
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# human player upkeep modifier
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			volatile_motes = 1
+		}
+		produces = {
+			influence = 0.5
+		}
+	}
+
+	country_modifier = {
+		ship_armor_damage_mult = 0.1
+		country_engineering_tech_research_speed = 0.05
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}
+
+	# hive minds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	# machine empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden } }
+	prerequisites = { "esc_tech_advanced_materials_lab" }
+}
+
+############################################################
+###                 Technology Institute                 ###
+############################################################
+
+esc_building_technology_institute = {
+	base_buildtime = 360
+	icon = esc_building_technology_institute
+	category = research
+
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			minerals = 750
+		}
+		# human player cost modifier
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			influence = 15
+			exotic_gases = 25
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# human player upkeep modifier
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			exotic_gases = 1
+		}
+		produces = {
+			influence = 0.5
+		}
+	}
+
+	country_modifier = {
+		ship_shield_damage_mult = 0.1
+		country_physics_tech_research_speed = 0.05
+	}
+
+	# regular empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}
+
+	# hive minds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	# machine empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 3
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden } }
+	prerequisites = { "esc_tech_technology_institute" }
+}
+
+############################################################
+###                 Watcher of Eternity                  ###
+############################################################
+
+esc_building_watcher = {
+	base_buildtime = 540
+	icon = esc_building_watcher
+	category = research
+
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			influence = 15
+			rare_crystals = 25
+			exotic_gases = 25
+			sr_dark_matter = 15
+		}
+		upkeep = {
+			energy = 10
+			sr_dark_matter = 2
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.05
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.20
+		planet_jobs_society_research_produces_mult = 0.20
+		planet_jobs_engineering_research_produces_mult = 0.20
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_researcher_add = 1
+			job_researcher_add = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = esc_watcher_of_eternity_effect_regular
+	}
+
+	# hive minds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 5
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	# machine empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 5
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden } }
+	prerequisites = { "esc_tech_watcher_of_eternity" }
+}
+
+############################################################
+###                 Stellar Energy Tower                 ###
+############################################################
+
+esc_building_stellar_energy_tower = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	icon = esc_building_stellar_energy_tower
+	category = resource
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden }
+		exists = owner
+		owner = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			rare_crystals = 25
+			exotic_gases = 25
+		}
+		produces = {
+			energy = 10
+			unity = 3
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.15
+	}
+
+	# regular empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 1
+			job_technician_add = 1
+			job_technician_per_pop = 0.05
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = esc_stellar_tower_effect_regular
+	}
+
+	# hive mind
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 1
+			job_technician_drone_add = 1
+			job_technician_drone_per_pop = 0.05
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = esc_stellar_tower_effect_hive
+	}
+
+	# machine empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 1
+			job_technician_drone_add = 1
+			job_technician_drone_per_pop = 0.05
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = esc_stellar_tower_effect_machine
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden } }
+	prerequisites = { "esc_tech_stellar_energy_tower" }
+}
+
+############################################################
+###               Quantum Computation Node               ###
+############################################################
+
+esc_building_quantum_node = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	icon = esc_building_quantum_node
+	category = research
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden }
+		exists = owner
+		owner = { has_country_flag = technosphere_studied }
+	}
+
+	allow = { has_upgraded_capital = yes }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			rare_crystals = 25
+		}
+		produces = {
+			physics_research = 5
+			society_research = 5
+			engineering_research = 5
+			unity = 5
+		}
+		upkeep = {
+			energy = 7
+			rare_crystals = 1
+		}
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}
+
+	# hive minds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	# machine empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 4
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden } }
+	prerequisites = { "esc_tech_quantum_node" }
+}
+
+############################################################
+###                   Dragon Hatchery                    ###
+############################################################
+
+esc_building_dragon_hatchery = {
+	base_buildtime = 720
+	icon = esc_building_dragon_hatchery
+	category = army
+	empire_limit = { base = 1 }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		# base cost
+		cost = {
+			influence = 50
+			minerals = 2500
+		}
+		# cost modifier for empires that use food
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_food = yes }
+			}
+			food = 2500
+		}
+		# cost modifier for empires that don't use food
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_food = no }
+			}
+			minerals = 2500
+		}
+		# cost modifier for human players
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_ai = no }
+			}
+			exotic_gases = 200
+		}
+		# base upkeep
+		upkeep = {
+			energy = 10
+		}
+		# upkeep modifier for empires that use food
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_food = yes }
+			}
+			food = 45
+		}
+		# upkeep modifier for empired that don't use food
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { country_uses_food = no }
+			}
+			minerals = 45
+		}
+		# upkeep modifier for human players
+		upkeep = {
+			trigger = { owner = { is_ai = no } }
+			exotic_gases = 3
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.20
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_researcher_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}
+
+	# hive minds
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_brain_drone_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_brain_drone_effect_desc
+	}
+
+	# machine empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_calculator_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_calculator_effect_desc
+	}
+
+	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden } }
+	prerequisites = { esc_tech_dragon_hatchery }
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 20
+	}
+}

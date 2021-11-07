@@ -1,0 +1,861 @@
+############################################################
+###   Kinetic Weapons' Projectiles : Asteroid Thrower    ###
+############################################################
+
+entity = {
+	name = "esc_asteroid_cannon_projectile_entity"
+	pdxmesh = "asteroid_ship_mesh"
+
+	default_state = idle
+	state = {
+		name = "idle"
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_mass_driver_fire" }
+		}
+	}
+
+	scale = 0.33
+}
+
+############################################################
+###      Kinetic Weapons' Projectiles : MHD Cannon 1     ###
+############################################################
+
+### windup
+entity = {
+	name = "esc_mhd_cannon_1_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_8
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_7
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_6
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_5
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_4
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_3
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_mhd_cannon_1_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_mhd_cannon_1_turret_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_mhd_cannon_1_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "humanoid_01_esc_mhd_cannon_1_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_mhd_cannon_1_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "arthropoid_01_esc_mhd_cannon_1_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_mhd_cannon_1_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "molluscoid_01_esc_mhd_cannon_1_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.2
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_mhd_cannon_1_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_mhd_cannon_1_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+### muzzle
+entity = {
+	name = "esc_mhd_cannon_1_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 3
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_mhd_cannon_1_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "xl_arc_emitter_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_xl_arc_emitter_fire" }
+		}
+	}
+}
+
+### Hit effect normal & shield
+entity = {
+	name = "esc_mhd_cannon_1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_mhd_cannon_1_hit_effect"
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_mhd_cannon_1_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		#event = { time = 0.0 particle = arc_emitter_hit_effect }
+		start_event = {
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		 }
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+############################################################
+###      Kinetic Weapons' Projectiles : MHD Cannon 2     ###
+############################################################
+
+### windup : x-slot
+
+entity = {
+	name = "esc_mhd_cannon_2_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_8
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_7
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_6
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_5
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_4
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_3
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_mhd_cannon_2_turret_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "humanoid_01_esc_mhd_cannon_2_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "arthropoid_01_esc_mhd_cannon_2_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "molluscoid_01_esc_mhd_cannon_2_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.2
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+# windup : titanic
+
+entity = {
+	name = "esc_mhd_cannon_2_titanic_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = no
+		next_state = "attack_2"
+		state_time = 0.8
+
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "titan_laser_windup_02" }
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.1
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.1
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.5
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.5
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.7
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.7
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "attack_2"
+		looping = no
+		next_state = "attack_3"
+		state_time = 0.6
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.06
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.06
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.18
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.18
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.36
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.36
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.42
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.42
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_mhd_cannon_2_windup_effect"
+			keep_particle = yes
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "attack_3"
+		looping = yes
+		state_time = 0.4
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "titan_laser_windup_01" }
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.04
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.04
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.08
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.08
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.16
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.16
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.28
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+		event = {
+			time = 0.28
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_mhd_cannon_2_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_mhd_cannon_2_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+### muzzle
+entity = {
+	name = "esc_mhd_cannon_2_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 3
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_mhd_cannon_2_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "xl_arc_emitter_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_xl_arc_emitter_fire" }
+		}
+	}
+}
+
+### Hit effect normal & shield
+entity = {
+	name = "esc_mhd_cannon_2_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_mhd_cannon_2_hit_effect"
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_mhd_cannon_2_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		#event = { time = 0.0 particle = arc_emitter_hit_effect }
+		start_event = {
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		 }
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}

@@ -1,0 +1,612 @@
+############################################################
+###        ESC TECHNOLOGIES : crystalline weapons        ###
+############################################################
+
+# ── Crystal Shard Thrower									: tier 1 crystalline weapons (S/M/L); also unlocks crystal farm building
+#     ├─ Improved Crystal Shard Thrower						: tier 2 crystalline weapons (S/M/L)
+#     │   └─ Crystal Shard Thrower							: tier 3 crystalline weapons (S/M/L)
+#     │       └─ Improved Crystal Shard Thrower				: tier 4 crystalline weapons (S/M/L)
+#     │           └─ Crystal Spear Cannon					: tier 5 crystalline weapons (S/M/L)
+#     │               └─ Crystal Javelin Cannon				: tier 1 crystalline XL weapon
+#     │                   └─ Crystal Lance Cannon			: tier 2 crystalline XL weapon
+#     │                       └─ Crystalline Impaler		: Titanic crystalline weapon
+#     └─ Improved Crystal Farm								: unlocks an improved crystal farm building
+
+############################################################
+##                    Crystal Shard Thrower               ##
+############################################################
+
+esc_tech_crystal_cannon_1 = {
+	area = society
+	category = { materials }
+	tier = 1
+	cost = @tier1cost3
+	weight = @tier1weight2
+	ai_update_type = military
+	prerequisites = { }
+	# prerequisites are country flags and, thus, are defined in weight_modifier
+	gateway = ESC_CRYSTALLINE_CANNON
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_crystalline_weapons = no
+		}
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_crystalline_weapons = no
+		}
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##               Improved Crystal Shard Thrower           ##
+############################################################
+
+esc_tech_crystal_cannon_2 = {
+	area = society
+	category = { materials }
+	tier = 3
+	cost = @tier3cost1
+	weight = @tier3weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	gateway = ESC_CRYSTALLINE_CANNON
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                   Crystal Spike Thrower                ##
+############################################################
+
+esc_tech_crystal_cannon_3 = {
+	area = society
+	category = { materials }
+	tier = 4
+	cost = @tier4cost1
+	weight = @tier4weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	gateway = ESC_CRYSTALLINE_CANNON
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##             Improved Crystal Spike Thrower             ##
+############################################################
+
+esc_tech_crystal_cannon_4 = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_cannon_3" "esc_tech_new_age_warfare" }
+	gateway = ESC_CRYSTALLINE_CANNON
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                   Crystal Spear Cannon                 ##
+############################################################
+
+esc_tech_crystal_cannon_5 = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_cannon_5 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_cannon_5 }
+			}
+		}
+	}
+}
+
+############################################################
+##                  Crystal Javelin Cannon                ##
+############################################################
+
+esc_tech_crystal_lance_1 = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_cannon_5" "esc_tech_advanced_heavy_weapons" }
+	gateway = ESC_CRYSTALLINE_LANCE
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                  Crystal Lance Cannon                  ##
+############################################################
+
+esc_tech_crystal_lance_2 = {
+	area = society
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_lance_1" }
+	is_rare = yes
+	gateway = ESC_CRYSTALLINE_LANCE
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_lance_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_lance_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                  Crystalline Impaler                   ##
+############################################################
+
+esc_tech_crystal_lance_titanic = {
+	area = society
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_lance_2" }
+	is_rare = yes
+
+	potential = {
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_titans
+				has_technology = tech_juggernaut
+			}
+		}
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_lance_titanic }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_titans
+				has_technology = tech_juggernaut
+			}
+		}
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_lance_titanic }
+			}
+		}
+	}
+}
+
+############################################################
+##                  Improved Crystal Farm                 ##
+############################################################
+
+esc_tech_improved_crystal_farm = {
+	area = society
+	category = { materials }
+	tier = 3
+	cost = @tier3cost1
+	weight = @tier3weight1
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}

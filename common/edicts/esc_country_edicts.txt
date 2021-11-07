@@ -1,0 +1,40 @@
+### ################################################# ###
+###                     ESC Edicts                    ###
+### ################################################# ###
+
+# - Mod Menu							(none) opens ESC mod menu; only human player can use it
+
+### ################################################# ###
+###                     ESC Mod menu                  ###
+### ################################################# ###
+
+esc_mod_control_edict = {
+	length = 0
+
+	resources = {
+		category = edicts
+		cost = {
+			energy = 0
+		}
+	}
+
+	allow = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_MENU_ACTIVE }
+	}
+
+	potential = {
+		# only human players are allowed to use this
+		exists = owner
+		owner = { is_ai = no }
+		# free use in singleplayer, available only for the first 15 years in multiplayer
+		OR = {
+			is_multiplayer = no
+			AND = {
+				is_multiplayer = yes
+				years_passed < 15
+			}
+		}
+	}
+
+	effect = { country_event = { id = esc_options.1000 days = 0 } }
+}

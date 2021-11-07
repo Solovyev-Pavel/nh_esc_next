@@ -1,0 +1,87 @@
+# shroud avatar components
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_shroud_avatar_cannon"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_esc_shroud_cannon.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_shroud_avatar_sensor"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_esc_shroud_eye.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_shroud_avatar_thruster"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_esc_shroud_mysterious_force.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_shroud_avatar_ftl_drive"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_esc_shroud_gate.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_shroud_avatar_computer_good"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_esc_shroud_consciousness.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_shroud_avatar_computer_bad"
+		textureFile = "gfx/interface/icons/ship_parts/computers/ship_part_esc_shroud_consciousness_corrupted.dds"
+	}
+}
+
+# starbase buildings and modules
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_starbase_reactor"
+		textureFile = "gfx/interface/icons/starbase_buildings/esc_orbital_powerplant.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_starbase_nanite_plant"
+		textureFile = "gfx/interface/icons/starbase_modules/esc_orbital_nanite_plant.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_starbase_dark_matter_plant"
+		textureFile = "gfx/interface/icons/starbase_modules/esc_orbital_dm_plant.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_starbase_zro_plant"
+		textureFile = "gfx/interface/icons/starbase_modules/esc_orbital_zro_plant.dds"
+	}
+}
+
+# armies
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_army_icons"
+		textureFile = "gfx/interface/planetview/esc_army_icons.dds"
+		noOfFrames = 6
+	}
+
+	spriteType = {
+		name = "GFX_esc_army_psi_avatar"
+		sprite_sheet_sprite_type = "GFX_esc_army_icons"
+		default_frame = 1
+	}
+	spriteType = {
+		name = "GFX_esc_army_chrono_trooper"
+		sprite_sheet_sprite_type = "GFX_esc_army_icons"
+		default_frame = 2
+	}
+	spriteType = {
+		name = "GFX_esc_army_tesla_trooper"
+		sprite_sheet_sprite_type = "GFX_esc_army_icons"
+		default_frame = 3
+	}
+	spriteType = {
+		name = "GFX_esc_army_tesla"
+		sprite_sheet_sprite_type = "GFX_esc_army_icons"
+		default_frame = 4
+	}
+	spriteType = {
+		name = "GFX_esc_army_beasts"
+		sprite_sheet_sprite_type = "GFX_esc_army_icons"
+		default_frame = 5
+	}
+	spriteType = {
+		name = "GFX_esc_army_praetorian"
+		sprite_sheet_sprite_type = "GFX_esc_army_icons"
+		default_frame = 6
+	}
+}

@@ -1,0 +1,386 @@
+## ##################################################### ##
+##               ESC Mod Presets Effects                 ##
+## ##################################################### ##
+
+# enable all mod's content
+ESC_PRESET_enable_all = {
+	# kinetic weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+	# energy weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+	# missiles
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+	# point defense
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+	# strike crafts
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+	# creature weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+
+	# biological weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+	# crystalline weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+	# gravitic weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+	# nanite weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+	# psionic weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+	# tesla weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+
+	# utility components
+	remove_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+
+	# crisis & leviathans
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+
+	# buildings
+	remove_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+# disable all mod's content
+ESC_PRESET_diable_all = {
+	# kinetic weapons
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+	# energy weapons
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+	# missiles
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+	# point defense
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+	# strike crafts
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+	# creature weapons
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+
+	# biological weapons
+	set_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+	# crystalline weapons
+	set_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+	# gravitic weapons
+	set_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+	# nanite weapons
+	set_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+	# psionic weapons
+	set_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+	# tesla weapons
+	set_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+
+	# utility components
+	set_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+
+	# crisis & leviathans
+	set_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+
+	# buildings
+	set_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+## ##################################################### ##
+
+# all components but no non-special-resource buidings
+ESC_PRESET_no_special_buildsings = {
+	ESC_PRESET_enable_all = yes
+	# buildings
+	set_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+# only leviathan rewards
+ESC_PRESET_leviathan_only = {
+	ESC_PRESET_diable_all = yes
+	# crisis & leviathans
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+}
+
+# enable only advanced vanilla weapons
+ESC_PRESET_advanced_vanilla = {
+	# kinetic weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+	# energy weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+	# missiles
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+	# point defense
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+	# strike crafts
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+	# creature weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+
+	# biological weapons
+	set_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+	# crystalline weapons
+	set_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+	# gravitic weapons
+	set_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+	# nanite weapons
+	set_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+	# psionic weapons
+	set_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+	# tesla weapons
+	set_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+
+	# utility components
+	remove_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+
+	# crisis & leviathans
+	set_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+
+	# buildings
+	remove_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+# vanilla + leviathan weapons
+ESC_PRESET_advanced_vanilla_and_leviathan = {
+	ESC_PRESET_advanced_vanilla = yes
+	# crisis & leviathans
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+}
+
+# enable only special weapons
+ESC_PRESET_new_weapons_only = {
+	# kinetic weapons
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+	# energy weapons
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+	# missiles
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+	# point defense
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+	# strike crafts
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+	# creature weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+
+	# biological weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+	# crystalline weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+	# gravitic weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+	# nanite weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+	# psionic weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+	# tesla weapons
+	remove_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+
+	# utility components
+	remove_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+
+	# crisis & leviathans
+	set_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+
+	# buildings
+	remove_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+# special + leviathan weapons
+ESC_PRESET_new_and_leviathan_weapons = {
+	ESC_PRESET_new_weapons_only = yes
+	# crisis & leviathans
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+}

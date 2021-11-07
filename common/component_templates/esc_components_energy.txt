@@ -1,0 +1,3162 @@
+############################################################
+##                   ESC : Energy Weapons                 ##
+############################################################
+
+# - Advanced Combat Laser			S/M/L
+# - Aurora Laser					S/M/L
+# - Advanced Plasma Cannon			S/M/L
+# - Dragonbreath Cannon				S/M/L
+# - Tachyon Disruptor				S/M
+# - Disruptor Lance					S/M
+# - Muon Launcher					L
+# - Antimatter Launcher				L
+# - Chrono-Vortex Cannon			S/M/L
+# - Amplified Cloud Lightning		L
+# - Thunderstorm Generator			L
+# - Plasma Cutter					S/M
+# - Advanced Plasma Cutter			S/M
+# - Juggernaut Beam Cannon			M (Juggernaut only)
+# - Improved Juggernaut Beam Cannon	M (Juggernaut only)
+
+@ESC_WEAPON_laser_hull_damage = 1.0
+@ESC_WEAPON_laser_armor_damage = 1.5
+@ESC_WEAPON_laser_armor_penetration = 0.0
+@ESC_WEAPON_laser_shield_damage = 0.5
+@ESC_WEAPON_laser_shield_penetration = 0.0
+
+@ESC_WEAPON_plasma_hull_damage = 1.5
+@ESC_WEAPON_plasma_armor_damage = 2.0
+@ESC_WEAPON_plasma_armor_penetration = 0.0
+@ESC_WEAPON_plasma_shield_damage = 0.25
+@ESC_WEAPON_plasma_shield_penetration = 0.0
+
+@ESC_WEAPON_disruptor_hull_damage = 1.0
+@ESC_WEAPON_disruptor_armor_damage = 1.0
+@ESC_WEAPON_disruptor_armor_penetration = 1.0
+@ESC_WEAPON_disruptor_shield_damage = 1.0
+@ESC_WEAPON_disruptor_shield_penetration = 1.0
+
+@ESC_WEAPON_energy_launcher_hull_damage = 1.75
+@ESC_WEAPON_energy_launcher_armor_damage = 1.5
+@ESC_WEAPON_energy_launcher_armor_penetration = 0.0
+@ESC_WEAPON_energy_launcher_shield_damage = 0.5
+@ESC_WEAPON_energy_launcher_shield_penetration = 0.0
+
+@ESC_WEAPON_chrono_hull_damage = 1.5
+@ESC_WEAPON_chrono_armor_damage = 1.0
+@ESC_WEAPON_chrono_armor_penetration = 0.0
+@ESC_WEAPON_chrono_shield_damage = 2.0
+@ESC_WEAPON_chrono_shield_penetration = 0.0
+
+@ESC_WEAPON_lightning_hull_damage_2 = 1.0
+@ESC_WEAPON_lightning_hull_damage_3 = 1.15
+@ESC_WEAPON_lightning_armor_damage = 1.0
+@ESC_WEAPON_lightning_armor_penetration = 1.0
+@ESC_WEAPON_lightning_shield_damage = 1.0
+@ESC_WEAPON_lightning_shield_penetration = 1.0
+
+@ESC_WEAPON_drone_laser_hull_damage = 1.75
+@ESC_WEAPON_drone_laser_armor_damage_2 = 1.25
+@ESC_WEAPON_drone_laser_armor_damage_3 = 1.5
+@ESC_WEAPON_drone_laser_armor_penetration = 0.0
+@ESC_WEAPON_drone_laser_shield_damage = 0.5
+@ESC_WEAPON_drone_laser_shield_penetration = 0.0
+
+# - Improved Tachyon Lance				X
+# - Hypercharged Tachyon Lance			X
+# - Light of Destruction				Titanic + Juggernaut
+# - Lightning Cannon					X
+# - Arc Cannon							X
+# - Divine Thunder						Titanic + Juggernaut
+# - Wave-Motion Gun						X
+# - Dimensional Wave Cannon				X
+# - Titanic Dimensional Wave Cannon		Titanic + Juggernaut
+# - Arc-en-Ciel Cannon					X, Titanic + Juggernaut
+
+@ESC_WEAPON_particle_lance_hull_damage = 1.5
+@ESC_WEAPON_particle_lance_armor_damage = 2.0
+@ESC_WEAPON_particle_lance_armor_penetration = 0.0
+@ESC_WEAPON_particle_lance_shield_damage = 0.5
+@ESC_WEAPON_particle_lance_shield_penetration = 0.0
+
+@ESC_WEAPON_arc_emitter_hull_damage = 1.0
+@ESC_WEAPON_arc_emitter_armor_penetration = 1.0
+@ESC_WEAPON_arc_emitter_armor_damage = 1.0
+@ESC_WEAPON_arc_emitter_shield_penetration = 1.0
+@ESC_WEAPON_arc_emitter_shield_damage = 1.0
+
+@ESC_WEAPON_wmg_hull_damage = 1.75
+@ESC_WEAPON_wmg_armor_damage = 0.75
+@ESC_WEAPON_wmg_armor_penetration = 0.0
+@ESC_WEAPON_wmg_shield_damage = 1.5
+@ESC_WEAPON_wmg_shield_penetration = 0.0
+
+@ESC_WEAPON_arc_en_ciel_hull_damage = 1.15
+@ESC_WEAPON_arc_en_ciel_armor_damage = 1.0
+@ESC_WEAPON_arc_en_ciel_armor_penetration = 1.0
+@ESC_WEAPON_arc_en_ciel_shield_damage = 1.0
+@ESC_WEAPON_arc_en_ciel_shield_penetration = 1.0
+
+# - Matter Annihilator				S/M/L
+# - Great Matter Annihilator		X
+# - Titanic Matter Annihilator		T
+# - Reality Eraser					S/M/L
+# - Great Reality Eraser			X
+# - Titanic Reality Eraser			T
+
+@ESC_WEAPON_extradimensional_hull_damage = 2.0
+@ESC_WEAPON_extradimensional_armor_damage = 1.5
+@ESC_WEAPON_extradimensional_armor_penetration = 0.0
+@ESC_WEAPON_extradimensional_shield_damage = 0.5
+@ESC_WEAPON_extradimensional_shield_penetration = 0.0
+
+@ESC_WEAPON_eraser_hull_damage = 2.0
+@ESC_WEAPON_eraser_armor_damage = 1.5
+@ESC_WEAPON_eraser_armor_penetration = 0.0
+@ESC_WEAPON_eraser_shield_damage = 1.0
+@ESC_WEAPON_eraser_shield_penetration = 0.0
+
+############################################################
+##                  Advanced Combat Laser                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_LASER_6
+	size = small
+	icon = GFX_esc_laser_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 21 max = 58 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 40
+	accuracy = 0.9
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t6_upkeep_energy
+			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_laser_6" }
+	component_set = ESC_LASER_6
+	projectile_gfx = "esc_laser_6_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = SMALL_ESC_LASER_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_LASER_6
+	size = medium
+	icon = GFX_esc_laser_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 53 max = 134 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.9
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t6_upkeep_energy
+			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_laser_6" }
+	component_set = ESC_LASER_6
+	projectile_gfx = "esc_laser_6_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = MEDIUM_ESC_LASER_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_LASER_6
+	size = large
+	icon = GFX_esc_laser_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 132 max = 310 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.9
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t6_upkeep_energy
+			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_laser_6" }
+	component_set = ESC_LASER_6
+	projectile_gfx = "esc_laser_6_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = LARGE_ESC_LASER_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                       Aurora Laser                     ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_LASER_7
+	size = small
+	icon = GFX_esc_laser_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25 max = 72 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 40
+	accuracy = 0.9
+	power = -24
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_laser_7" }
+	component_set = ESC_LASER_7
+	projectile_gfx = "esc_laser_7_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_LASER_7
+	size = medium
+	icon = GFX_esc_laser_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 65 max = 206 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.9
+	power = -46
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_laser_7" }
+	component_set = ESC_LASER_7
+	projectile_gfx = "esc_laser_7_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_LASER_7
+	size = large
+	icon = GFX_esc_laser_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 184 max = 412 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.9
+	power = -90
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_laser_7" }
+	component_set = ESC_LASER_7
+	projectile_gfx = "esc_laser_7_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                 Advanced Plasma Cannon                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PLASMA_4
+	size = small
+	icon = GFX_esc_plasma_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25 max = 53 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.8
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t6_cost_alloys
+			exotic_gases = @ESC_WEAPON_s_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t6_upkeep_energy
+			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.4
+
+	prerequisites = { "esc_tech_plasma_4" }
+	component_set = ESC_PLASMA_4
+	projectile_gfx = "esc_plasma_4_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = SMALL_ESC_PLASMA_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PLASMA_4
+	size = medium
+	icon = GFX_esc_plasma_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 61 max = 129 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.8
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t6_cost_alloys
+			exotic_gases = @ESC_WEAPON_m_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t6_upkeep_energy
+			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_plasma_4" }
+	component_set = ESC_PLASMA_4
+	projectile_gfx = "esc_plasma_4_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = MEDIUM_ESC_PLASMA_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PLASMA_4
+	size = large
+	icon = GFX_esc_plasma_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 148 max = 310 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.8
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t6_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t6_upkeep_energy
+			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_plasma_4" }
+	component_set = ESC_PLASMA_4
+	projectile_gfx = "esc_plasma_4_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = LARGE_ESC_PLASMA_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                   Dragonbreath Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PLASMA_5
+	size = small
+	icon = GFX_esc_plasma_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 30 max = 66 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.8
+	power = -24
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.4
+
+	prerequisites = { "esc_tech_plasma_5" }
+	component_set = ESC_PLASMA_5
+	projectile_gfx = "esc_plasma_5_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PLASMA_5
+	size = medium
+	icon = GFX_esc_plasma_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 73 max = 195 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.8
+	power = -46
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_plasma_5" }
+	component_set = ESC_PLASMA_5
+	projectile_gfx = "esc_plasma_5_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+#large
+weapon_component_template = {
+	key = LARGE_ESC_PLASMA_5
+	size = large
+	icon = GFX_esc_plasma_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 192 max = 400 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.8
+	power = -90
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_plasma_5" }
+	component_set = ESC_PLASMA_5
+	projectile_gfx = "esc_plasma_5_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                    Tachyon Disruptor                   ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_DISRUPTOR_4
+	size = small
+	icon = GFX_esc_disruptor_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5 max = 35 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 30
+	accuracy = 1.0
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t6_upkeep_energy
+			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_disruptors_4" }
+	component_set = ESC_DISRUPTOR_4
+	projectile_gfx = "esc_disruptor_4_small"
+	upgrades_to = SMALL_ESC_DISRUPTOR_5
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_DISRUPTOR_4
+	size = medium
+	icon = GFX_esc_disruptor_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 85 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 50
+	accuracy = 1.0
+	power = -37
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t6_upkeep_energy
+			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_4" }
+	component_set = ESC_DISRUPTOR_4
+	projectile_gfx = "esc_disruptor_4_medium"
+	upgrades_to = MEDIUM_ESC_DISRUPTOR_5
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                     Disruptor Lance                    ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_DISRUPTOR_5
+	size = small
+	icon = GFX_esc_disruptor_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5 max = 43 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 30
+	accuracy = 1.0
+	power = -24
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_disruptors_5" }
+	component_set = ESC_DISRUPTOR_5
+	projectile_gfx = "esc_disruptor_5_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_DISRUPTOR_5
+	size = medium
+	icon = GFX_esc_disruptor_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 115 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 50
+	range = 50
+	accuracy = 1.0
+	power = -46
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_5" }
+	component_set = ESC_DISRUPTOR_5
+	projectile_gfx = "esc_disruptor_5_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                      Muon Launcher                     ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ENERGY_TORPEDO_3
+	size = large
+	icon = GFX_esc_energy_launcher_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 590 max = 1280 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 150
+	range = 130
+	accuracy = 0.9
+	power = -105
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_3" }
+	component_set = ESC_ENERGY_TORPEDO_3
+	projectile_gfx = "esc_energy_torpedoes_3"
+	upgrades_to = ESC_ENERGY_TORPEDO_4
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                   Antimatter Launcher                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ENERGY_TORPEDO_4
+	size = large
+	icon = GFX_esc_energy_launcher_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 710 max = 1550 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 150
+	range = 130
+	accuracy = 0.9
+	power = -120
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_4" }
+	component_set = ESC_ENERGY_TORPEDO_4
+	projectile_gfx = "esc_energy_torpedoes_4"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                  Chrono-Vortex Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CHRONO_CANNON
+	size = small
+	icon = GFX_esc_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 60 max = 110 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = 40
+	accuracy = 0.8
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t9_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_s_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t9_upkeep_energy
+			alloys = @ESC_WEAPON_s_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON
+	projectile_gfx = "esc_chronocannon_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CHRONO_CANNON
+	size = medium
+	icon = GFX_esc_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 114 max = 278 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.85
+	power = -70
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t9_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_m_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t9_upkeep_energy
+			alloys = @ESC_WEAPON_m_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON
+	projectile_gfx = "esc_chronocannon_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CHRONO_CANNON
+	size = large
+	icon = GFX_esc_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 294 max = 546 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = 80
+	accuracy = 0.85
+	power = -120
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t9_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t9_upkeep_energy
+			alloys = @ESC_WEAPON_l_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON
+	projectile_gfx = "esc_chronocannon_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##               Amplified Cloud Lightning                ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_CLOUD_LIGHTNING_2
+	size = large
+	icon = GFX_esc_cloud_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 192 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 45
+	range = 90
+	accuracy = 1
+	power = -55
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t6_upkeep_energy
+			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_2" }
+	component_set = ESC_CLOUD_LIGHTNING_2
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	upgrades_to = ESC_CLOUD_LIGHTNING_3
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                 Thunderstorm Generator                 ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_CLOUD_LIGHTNING_3
+	size = large
+	icon = GFX_esc_cloud_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 268 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 45
+	range = 100
+	accuracy = 1
+	power = -70
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_3" }
+	component_set = ESC_CLOUD_LIGHTNING_3
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                     Plasma Cutter                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MINING_LASER_2
+	size = small
+	icon = GFX_esc_mining_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 52 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 30
+	range = 30
+	accuracy = 0.8
+	power = -9
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t6_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t6_upkeep_energy
+			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_2
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.45
+
+	prerequisites = { "esc_tech_mining_laser_2" }
+	component_set = ESC_MINING_LASER_2
+	projectile_gfx = "esc_mining_laser_2_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull }
+	upgrades_to = SMALL_ESC_MINING_LASER_3
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MINING_LASER_2
+	size = medium
+	icon = GFX_esc_mining_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 48 max = 128 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 30
+	range = 60
+	accuracy = 0.8
+	power = -17
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t6_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t6_upkeep_energy
+			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_2
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_mining_laser_2" }
+	component_set = ESC_MINING_LASER_2
+	projectile_gfx = "esc_mining_laser_2_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull }
+	upgrades_to = MEDIUM_ESC_MINING_LASER_3
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                 Advanced Plasma Cutter                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MINING_LASER_3
+	size = small
+	icon = GFX_esc_mining_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 28 max = 60 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 30
+	range = 30
+	accuracy = 0.85
+	power = -12
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_3
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_mining_laser_3" }
+	component_set = ESC_MINING_LASER_3
+	projectile_gfx = "esc_mining_laser_3_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MINING_LASER_3
+	size = medium
+	icon = GFX_esc_mining_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 64 max = 174 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 30
+	range = 60
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_3
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_mining_laser_3" }
+	component_set = ESC_MINING_LASER_3
+	projectile_gfx = "esc_mining_laser_3_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                 Juggernaut Beam Cannon                 ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_JUGGERNAUT_BEAM_CANNON_1
+	size = medium
+	icon = GFX_esc_juggernaut_laser_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 410 max = 635 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 75
+	range = 90
+	accuracy = 0.85
+	power = -105
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_juggernaut_beam_1" }
+	component_set = ESC_JUGGERNAUT_BEAM_CANNON_1
+	projectile_gfx = "esc_juggernaut_beam_cannon_1"
+	upgrades_to = ESC_JUGGERNAUT_BEAM_CANNON_2
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##            Improved Juggernaut Beam Cannon             ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_JUGGERNAUT_BEAM_CANNON_2
+	size = medium
+	icon = GFX_esc_juggernaut_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 460 max = 785 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 75
+	range = 90
+	accuracy = 0.85
+	power = -120
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_juggernaut_beam_2" }
+	component_set = ESC_JUGGERNAUT_BEAM_CANNON_2
+	projectile_gfx = "esc_juggernaut_beam_cannon_2"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                 Improved Tachyon Lance                 ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PARTICLE_LANCE_3
+	size = extra_large
+	icon = GFX_esc_particle_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 2300 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 150
+	accuracy = 0.85
+	power = -280
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_3" }
+	component_set = ESC_PARTICLE_LANCE_3
+	projectile_gfx = "esc_particle_lance_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	upgrades_to = ESC_PARTICLE_LANCE_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                 Hyperdimensional Lance                 ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PARTICLE_LANCE_4
+	size = extra_large
+	icon = GFX_esc_particle_lance_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1250 max = 2600 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 150
+	accuracy = 0.85
+	power = -310
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_4" }
+	component_set =ESC_PARTICLE_LANCE_4
+	projectile_gfx = "esc_particle_lance_4"
+	upgrades_to = ESC_PARTICLE_LANCE_JUGGERNAUT
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Light of Destruction                  ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_PARTICLE_LANCE_TITANIC
+	size = titanic
+	icon = GFX_esc_particle_lance_titanic
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 30 max = 35 }
+	total_fire_time = 175
+	range = 250
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_titanic" }
+	component_set = ESC_PARTICLE_LANCE_TITANIC
+	projectile_gfx = "esc_particle_lance_titanic_big"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_PARTICLE_LANCE_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_particle_lance_titanic
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 30 max = 35 }
+	total_fire_time = 175
+	range = 200
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_titanic" }
+	component_set = ESC_PARTICLE_LANCE_JUGGERNAUT
+	projectile_gfx = "esc_particle_lance_titanic"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                    Lightning Cannon                    ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ARC_EMITTER_3
+	size = extra_large
+	icon = GFX_esc_arc_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 50 max = 2000 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 150
+	accuracy = 1.0
+	power = -280
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_3" }
+	component_set = ESC_ARC_EMITTER_3
+	projectile_gfx = "esc_arc_emitter_3"
+	upgrades_to = ESC_ARC_EMITTER_4
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                       Arc Cannon                       ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ARC_EMITTER_4
+	size = extra_large
+	icon = GFX_esc_arc_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 100 max = 2300 }
+	windup = { min = 1 max = 19 }
+	total_fire_time = 70
+	range = 150
+	accuracy = 1.0
+	power = -310
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_4" }
+	component_set = ESC_ARC_EMITTER_4
+	projectile_gfx = "esc_arc_emitter_4"
+	upgrades_to = ESC_ARC_EMITTER_JUGGERNAUT
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                     Divine Thunder                     ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_ARC_EMITTER_TITANIC
+	size = titanic
+	icon = GFX_esc_arc_cannon_titanic
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 7500 }
+	windup = { min = 20 max = 30 }
+	total_fire_time = 170
+	range = 250
+	accuracy = 1.0
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_titanic" }
+	component_set = ESC_ARC_EMITTER_TITANIC
+	projectile_gfx = "esc_arc_emitter_4_titanic"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_ARC_EMITTER_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_arc_cannon_titanic
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 7500 }
+	windup = { min = 20 max = 30 }
+	total_fire_time = 170
+	range = 200
+	accuracy = 1.0
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_titanic" }
+	component_set = ESC_ARC_EMITTER_JUGGERNAUT
+	projectile_gfx = "esc_arc_emitter_4"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                     Wave-Motion Gun                    ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_WAVEMOTIONGUN_1
+	size = extra_large
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1250 max = 2500 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = 125
+	accuracy = 0.85
+	power = -250
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
+			exotic_gases = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_1" }
+	component_set = ESC_WAVEMOTIONGUN_1
+	projectile_gfx = "esc_wavemotiongun_1"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	upgrades_to = ESC_WAVEMOTIONGUN_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                 Dimensional Wave Cannon                ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_WAVEMOTIONGUN_2
+	size = extra_large
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1500 max = 2750 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = 125
+	accuracy = 0.85
+	power = -280
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
+			exotic_gases = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_2" }
+	component_set = ESC_WAVEMOTIONGUN_2
+	projectile_gfx = "esc_wavemotiongun_2"
+	upgrades_to = ESC_WAVEMOTIONGUN_JUGGERNAUT
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##            Titanic Dimensional Wave Cannon             ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_WAVEMOTIONGUN_3
+	size = titanic
+	icon = GFX_esc_wave_motion_gun_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 9000 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 150
+	range = 225
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+			exotic_gases = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_titanic" }
+	component_set = ESC_WAVEMOTIONGUN_3
+	projectile_gfx = "esc_wavemotiongun_3_titanic"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_WAVEMOTIONGUN_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_wave_motion_gun_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 9000 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 150
+	range = 180
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+			exotic_gases = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_titanic" }
+	component_set = ESC_WAVEMOTIONGUN_JUGGERNAUT
+	projectile_gfx = "esc_wavemotiongun_3"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                   Arc-en-Ciel Cannon                   ##
+############################################################
+
+# no Apocalypse/Federations DLC
+weapon_component_template = {
+	key = ESC_ARC_EN_CIEL
+	size = extra_large
+	icon = GFX_esc_arc_en_ciel
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 2000.0 max = 4000.0 }
+	windup = { min = 20.0 max = 40.0 }
+	total_fire_time = 75
+	range = 150
+	accuracy = 1.0
+	power = -375
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_en_ciel_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_en_ciel_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_en_ciel_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_en_ciel_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arcenciel" }
+	component_set = ESC_ARC_EN_CIEL
+	projectile_gfx = "esc_arc_en_ciel"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##               Arc-en-Ciel Cannon (Titanic)             ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_ARC_EN_CIEL_TITANIC
+	size = titanic
+	icon = GFX_esc_arc_en_ciel
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 20.0 max = 40.0 }
+	total_fire_time = 170
+	range = 275
+	accuracy = 1.0
+	power = -600
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_en_ciel_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_en_ciel_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_en_ciel_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_en_ciel_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arcenciel_titanic" }
+	component_set = ESC_ARC_EN_CIEL_TITANIC
+	projectile_gfx = "esc_arc_en_ciel_titanic"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_ARC_EN_CIEL_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_arc_en_ciel
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 20.0 max = 40.0 }
+	total_fire_time = 170
+	range = 225
+	accuracy = 1.0
+	power = -600
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_en_ciel_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_en_ciel_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_en_ciel_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_en_ciel_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arcenciel_titanic" }
+	component_set = ESC_ARC_EN_CIEL_JUGGERNAUT
+	projectile_gfx = "esc_arc_en_ciel"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                   Matter Annihilator                   ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_2
+	size = small
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 36 max = 102 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.9
+	power = -28
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t8_upkeep_energy
+			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	projectile_gfx = "disruptor_2_small"
+	upgrades_to = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_2
+	size = medium
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 114 max = 218 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	power = -52
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	projectile_gfx = "disruptor_2_medium"
+	upgrades_to = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_2
+	size = large
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 228 max = 454 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	power = -100
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	projectile_gfx = "disruptor_2_large"
+	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                Grand Matter Annihilator                ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_EXTRADIMENSIONAL_WEAPON_2_X
+	size = extra_large
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1500 max = 2700 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 70
+	range = 180
+	accuracy = 0.85
+	power = -280
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2_x" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_X
+	projectile_gfx = "esc_extradimensional_x_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_X
+	# no clean way to enable upgrades both to Juggernaut version and to Reality Eraser, so using only the former
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##               Titanic Matter Annihilator               ##
+############################################################
+
+weapon_component_template = {
+	key =ESC_EXTRADIMENSIONAL_WEAPON_2_T
+	size = titanic
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 6000 max = 9000 }
+	windup = { min = 20 max = 60 }
+	total_fire_time = 170
+	range = 240
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2_t" }
+	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_T
+	projectile_gfx = "esc_extradimensional_t_2"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_T
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                     Reality Eraser                     ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
+	size = small
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 42 max = 118 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 60
+	accuracy = 0.9
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t9_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_s_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t9_upkeep_energy
+			alloys = @ESC_WEAPON_s_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_extradimensional_weapon_3" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
+	projectile_gfx = "esc_disruptor_4_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
+	size = medium
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 128 max = 236 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 90
+	accuracy = 0.9
+	power = -60
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t9_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_m_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t9_upkeep_energy
+			alloys = @ESC_WEAPON_m_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_extradimensional_weapon_3" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
+	projectile_gfx = "esc_disruptor_4_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
+	size = large
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 252 max = 488 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 35
+	range = 120
+	accuracy = 0.9
+	power = -110
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t9_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t9_upkeep_energy
+			alloys = @ESC_WEAPON_l_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_extradimensional_weapon_3" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                  Grand Reality Eraser                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_EXTRADIMENSIONAL_WEAPON_3_X
+	size = extra_large
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1700 max = 2850 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 70
+	range = 180
+	accuracy = 0.85
+	power = -330
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_extradimensional_weapon_3_x" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
+	projectile_gfx = "esc_extradimensional_x_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                 Titanic Reality Eraser                 ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_EXTRADIMENSIONAL_WEAPON_3_T
+	size = titanic
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 7000 max = 9000 }
+	windup = { min = 20 max = 60 }
+	total_fire_time = 170
+	range = 250
+	accuracy = 0.85
+	power = -550
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_extradimensional_weapon_3_t" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
+	projectile_gfx = "esc_extradimensional_t_3"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}

@@ -1,0 +1,147 @@
+# particle definitions for gravitic weapons
+ObjectTypes = {
+
+############################################################
+###     Gravitic Weapons' Particles : Gravitic cannon    ###
+############################################################
+
+# muzzle flash
+pdxparticle = {
+	name = "esc_gravity_cannon_large_muzzle_particle"
+	type = "esc_gravitic_cannon_muzzle_effects"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_medium_muzzle_particle"
+	type = "esc_gravitic_cannon_muzzle_effects"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_small_muzzle_particle"
+	type = "esc_gravitic_cannon_muzzle_effects"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_tiny_muzzle_particle"
+	type = "esc_gravitic_cannon_muzzle_effects"
+	scale = 0.25
+}
+
+# idle paricles
+pdxparticle = {
+	name = "esc_gravity_cannon_large_idle_particle"
+	type = "esc_gravitic_cannon_idle_effects"
+	scale = 1.5
+}
+pdxparticle = {
+	name = "esc_gravity_cannon_large_idle_drops_particle"
+	type = "esc_gravitic_cannon_idle_drops_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_medium_idle_particle"
+	type = "esc_gravitic_cannon_idle_effects"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "esc_gravity_cannon_medium_idle_drops_particle"
+	type = "esc_gravitic_cannon_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_small_idle_particle"
+	type = "esc_gravitic_cannon_idle_effects"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "esc_gravity_cannon_small_idle_drops_particle"
+	type = "esc_gravitic_cannon_idle_drops_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_tiny_idle_particle"
+	type = "esc_gravitic_cannon_idle_effects"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "esc_gravity_cannon_tiny_idle_drops_particle"
+	type = "esc_gravitic_cannon_idle_drops_effect"
+	scale = 0.5
+}
+
+# hit effects
+pdxparticle = {
+	name = "esc_gravity_cannon_small_hit_effect"
+	type = "esc_gravity_cannon_hit_effect"
+	scale = 0.35
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_medium_hit_effect"
+	type = "esc_gravity_cannon_hit_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_cannon_large_hit_effect"
+	type = "esc_gravity_cannon_hit_effect"
+	scale = 0.8
+}
+
+############################################################
+###     Gravitic Weapons' Particles : Gravitic torpedo   ###
+############################################################
+
+pdxparticle = {
+	name = "esc_gravitic_torpedoes_hit_effect"
+	type = "esc_gravitic_torpedoes_hit_effect"
+	scale = 1.25
+}
+
+pdxparticle = {
+	name = "esc_gravitic_torpedoes_idle_particle"
+	type = "esc_gravitic_torpedoes_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_gravitic_torpedoes_idle_trail_particle"
+	type = "esc_gravitic_torpedoes_idle_trail_effect"
+	scale = 1.0
+}
+
+############################################################
+###     Gravitic Weapons' Particles : Gravitic lance     ###
+############################################################
+
+pdxparticle = {
+	name = "esc_gravity_lance_windup_effect"
+	type = "esc_gravity_lance_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_lance_muzzle_windup_effect"
+	type = "esc_gravity_lance_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_lance_muzzle_particle"
+	type = "esc_gravity_lance_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_gravity_lance_hit_effect"
+	type = "esc_gravity_lance_hit_effect"
+	scale = 1.15
+}
+
+}

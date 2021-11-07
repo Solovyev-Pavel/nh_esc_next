@@ -1,0 +1,35 @@
+# starbase reactor
+esc_starbase_reactor = {
+	icon = "GFX_esc_starbase_reactor"
+	construction_days = 360
+
+	potential = {
+		exists = owner
+		owner = { has_technology = esc_tech_orbital_powerplant }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starfortress"
+			has_starbase_size >= starbase_starfortress
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 400
+		}
+		produces = {
+			energy = 12
+		}
+	}
+
+	show_in_tech = "esc_tech_orbital_powerplant"
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 15
+	}
+}

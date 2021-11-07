@@ -1,0 +1,462 @@
+namespace = esc_events_crisis
+
+## ##################################################### ##
+##           Detecting dangerous tech research           ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events_crisis.1000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_crises_allowed = yes
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				years_passed > 1
+				OR = {
+					last_increased_tech = esc_tech_chrono_cannon
+					last_increased_tech = esc_tech_corrosive_warhead_torpedo
+					last_increased_tech = esc_tech_arcenciel
+					last_increased_tech = esc_tech_arcenciel_titanic
+					last_increased_tech = esc_tech_temporal_displacer
+					last_increased_tech = esc_tech_shields_8
+				}
+				OR = {
+					has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+					has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+				}
+				NOT = { has_global_flag = ESC_CRISIS_trigger_condition_reached }
+			}
+
+			set_global_flag = ESC_CRISIS_trigger_condition_reached
+			# grace period
+			if = {
+				limit = { end_game_years_passed < 15 }
+				random_country = {
+					limit = { is_country_type = ambient } # should always exist
+				}
+				country_event = { id = esc_events_crisis.2000 days = 7200 } # 20 years
+			}
+			else_if = {
+				limit = { end_game_years_passed < 30 }
+				random_country = {
+					limit = { is_country_type = ambient } # should always exist
+				}
+				country_event = { id = esc_events_crisis.2000 days = 5400 } # 15 years
+			}
+			else = {
+				random_country = {
+					limit = { is_country_type = ambient } # should always exist
+				}
+				country_event = { id = esc_events_crisis.2000 days = 3600 } # 10 years
+			}
+		}
+	}
+}
+
+## ##################################################### ##
+##                    Grace period ends                  ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events_crisis.2000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_crises_allowed = yes
+		has_global_flag = ESC_CRISIS_trigger_condition_reached
+	}
+
+	immediate = {
+		set_global_flag = ESC_CRISIS_run_rng
+	}
+}
+
+## ##################################################### ##
+##                    Rolling the dice                   ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events_crisis.3000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_country_type = ambient
+		is_crises_allowed = yes
+		has_global_flag = ESC_CRISIS_run_rng
+	}
+
+	immediate = {
+		random_list = {
+			90 = {} # nothing happens
+			10 = {
+				remove_global_flag = ESC_CRISIS_run_rng
+				country_event = { id = esc_events_crisis.4000 days = 10 random = 340 }
+			}
+		}
+	}
+}
+
+## ##################################################### ##
+##                    Start the crisis                   ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events_crisis.4000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_crises_allowed = yes
+		# ensure that we don't already have Unbidden crisis in the game
+		NOT = { has_global_flag = extradimensional_invasion_happened }
+	}
+
+	immediate = {
+		country_event = { id = esc_events_crisis.4001 days = 0 }
+	}
+}
+
+country_event = {
+	id = esc_events_crisis.4001
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_crisis_sound = extradimensional_crisis_ambient_stage_1
+		set_crisis_stage_1 = yes
+
+		# destroy and recreate unbidden countries
+		if = {
+			limit = { any_country = { is_country_type = portal_holder } }
+			random_country = {
+				limit = { is_country_type = portal_holder }
+				destroy_country = yes
+			}
+		}
+		if = {
+			limit = { exists = event_target:extradimensionals }
+			event_target:extradimensionals = {
+				destroy_country = yes
+			}
+		}
+
+		# create portal holder country
+		create_country = {
+			name = "NAME_Portal_Holder_1"
+			type = portal_holder
+			flag = {
+				icon= { category = "special" file = "extradimensional_01.dds" }
+				background= { category = "backgrounds" file = "circle.dds" }
+				colors={ "black" "black" "null" "null" }
+			}
+			effect = {
+				save_global_event_target_as = portal_holder_1
+				every_playable_country = {
+					establish_communications_no_message = event_target:portal_holder_1
+				}
+			}
+		}
+		awaken_guardians_of_the_galaxy = yes
+
+		set_global_flag = extradimensional_invasion_happened
+		random_system = {
+			limit = {
+				NOT = {
+					any_country = {
+						OR = {
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+						any_system_within_border = {
+							is_same_value = prev
+						}
+					}
+				}
+			}
+			set_star_flag = extradimensional_origin_system
+			save_event_target_as = extradimensional_system
+			random_system_planet = {
+				# unbidden species
+				if = {
+					limit = {
+						NOT = { exists = event_target:extradimensional_species }
+					}
+					create_species = {
+						name = "NAME_Unbidden"
+						class = EXD
+						namelist = Extradimensional
+						portrait = exd1
+						traits = random
+						effect = { save_event_target_as = extradimensional_species }
+					}
+				}
+				# create unbidden country
+				create_country = {
+					name = "NAME_Unbidden"
+					type = "extradimensional"
+					species = event_target:extradimensional_species
+					name_list = "Extradimensional"
+					effect = { set_country_flag = unbidden }
+					flag = {
+						icon= { category = "special" file = "extradimensional_01.dds" }
+						background= { category = "backgrounds" file = "circle.dds" }
+						colors={ "indigo" "blue" "null" "null" }
+					}
+					effect = {
+						create_ship_design = { design = "NAME_Void_Shaper" }
+						add_ship_design = last_created_design
+						create_ship_design = { design = "NAME_Unbidden_Anchor" }
+						add_ship_design = last_created_design
+						create_ship_design = { design = "NAME_Unbidden_Starbase" }
+						add_ship_design = last_created_design
+						save_global_event_target_as = extradimensionals
+						establish_communications_no_message = event_target:portal_holder_1
+						set_faction_hostility = {
+							target = event_target:portal_holder_1
+							set_hostile = no
+						}
+						set_graphical_culture = extra_dimensional_01
+						save_event_target_as = extradimensionals
+					}
+				}
+				event_target:extradimensionals = {
+					create_fleet = {
+						name = "NAME_Dimensional_Portal"
+						effect = {
+							set_owner = PREV
+							create_ship = {
+								name = random
+								design = "NAME_Unbidden_Portal"
+								graphical_culture = "extra_dimensional_01"
+								effect = { set_ship_flag = unbidden_portal }
+							}
+							set_location = {
+								target = PREVPREV
+								distance = 40
+								angle = random
+							}
+							save_event_target_as = dimensional_portal
+							fleet_event = { id = crisis.1003 days = 15 } # Second Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 30 } # Third Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 55 } # Fourth Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 90 } # Fifth Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 180 } # Sixth Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 265 } # Seventh Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 340 } # Eight Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 425 } # Ninth Fleet Arrives
+							fleet_event = { id = crisis.1003 days = 550 } # Tenth Fleet Arrives
+							fleet_event = { id = crisis.1006 days = 20 } # First Constructor Arrives
+							fleet_event = { id = crisis.1006 days = 25 } # Second Constructor Arrives
+							fleet_event = { id = crisis.1006 days = 160 } # Third Constructor Arrives
+							fleet_event = { id = crisis.1006 days = 310 } # Fourth Constructor Arrives
+							event_target:extradimensionals = { country_event = { id = crisis.1260 days = 350 } } # Spawn Cycle starts
+							#set_owner = event_target:portal_holder_1 #when first anchor built
+						}
+					}
+					create_leader = {
+						class = admiral
+						species = event_target:extradimensional_species
+						name = random
+						skill = 3
+						traits = {
+							trait = leader_trait_ethereal
+						}
+					}
+					create_fleet = {
+						effect = {
+							set_owner = PREV
+							create_ship = {
+								name = random
+								design = "NAME_Revenant"
+								graphical_culture = "extra_dimensional_01"
+							}
+							assign_leader = last_created_leader
+							while = {
+								count = 20
+								create_ship = {
+									name = random
+									design = "NAME_Revenant"
+									graphical_culture = "extra_dimensional_01"
+								}
+							}
+							while = {
+								count = 30
+								create_ship = {
+									name = random
+									design = "NAME_Phantom"
+									graphical_culture = "extra_dimensional_01"
+								}
+							}
+							while = {
+								count = 45
+								create_ship = {
+									name = random
+									design = "NAME_Wraith"
+									graphical_culture = "extra_dimensional_01"
+								}
+							}
+							set_location = {
+								target = event_target:dimensional_portal
+								distance = 5
+								angle = random
+							}
+							set_fleet_stance = aggressive
+							set_aggro_range = 500
+							set_aggro_range_measure_from = self
+							set_fleet_bombardment_stance = armageddon
+						}
+					}
+				}
+			}
+			if = {
+				limit = { exists = starbase }
+				starbase = { fleet = { destroy_fleet = this } }
+			}
+			create_starbase = {
+				size = starbase_exd
+				owner = event_target:extradimensionals
+			}
+			star = {
+				create_ambient_object = {
+					type = "extradimensional_2"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_ambient_object_flag = extradimensional_system_effect_2
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}
+		observer_event = { id = observer.34 }
+		# make portal invincible
+		event_target:extradimensionals = {
+			random_owned_ship = { ship_event = { id = crisis.1280 } }
+		}
+
+		# Custodian/Emperor Announcements
+		event_target:extradimensionals = { save_event_target_as = crisis_country }
+		if = {
+			limit = { has_galactic_custodian = yes }
+			random_playable_country = {
+				limit = { is_galactic_custodian = yes }
+				country_event = { id = custodian.50 days = 30 }
+			}
+		}
+		if = {
+			limit = { has_galactic_emperor = yes }
+			random_playable_country = {
+				limit = { is_galactic_emperor = yes }
+				country_event = { id = emperor.90 days = 30 }
+			}
+		}
+
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				intel_level = {
+					level = high
+					system = event_target:extradimensional_system
+				}
+			}
+			country_event = { id = crisis.1007 }
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+				NOT = {
+					intel_level = {
+						level = high
+						system = event_target:extradimensional_system
+					}
+				}
+			}
+			country_event = { id = crisis.1008 }
+		}
+	}
+}
+
+## ##################################################### ##
+##                      Re:Invasion...                   ##
+## ##################################################### ##
+
+event = {
+	id = esc_events_crisis.6000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_crises_allowed = yes
+		end_game_years_passed > 0
+		has_global_flag = extradimensional_invasion_happened
+		has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+	}
+
+	immediate = {
+		random_country = {
+			limit = { has_country_flag = extradimensionals_expunged }
+			# unset flag for next invasion and switch to ambient country before running again
+			# to avoid issues with countries being defeated and destoryed mucking up events
+			remove_country_flag = extradimensionals_expunged
+			random_country = {
+				limit = { is_country_type = ambient }
+				country_event = { id = esc_events_crisis.6001 days = 720 }
+			}
+			every_system = {
+				limit = { has_star_flag = extradimensional_origin_system }
+				remove_star_flag = extradimensional_origin_system
+			}
+		}
+	}
+}
+
+country_event = {
+	id = esc_events_crisis.6001
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		remove_global_flag = extradimensional_invasion_happened
+		set_global_flag = ESC_CRISIS_run_rng
+	}
+}
+
+## ##################################################### ##
+##                 for testing purposes...               ##
+## ##################################################### ##
+
+event = {
+	id = esc_events_crisis.666 ### more appropriate event name
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_crises_allowed = yes
+	}
+
+	immediate = {
+		random_country = {
+			limit = { ESC_TRIGGER_is_playable_empire = yes }
+			country_event = { id = esc_events_crisis.4000 days = 10 random = 5 }
+		}
+	}
+}

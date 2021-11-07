@@ -1,0 +1,748 @@
+############################################################
+###                       Sensors                        ###
+############################################################
+
+### Advanced Tachyon Sensors
+utility_component_template = {
+	key = ESC_SENSOR_5
+	size = medium
+	icon = GFX_esc_sensors_5
+	icon_frame = 1
+	power = @ESC_SENSOR_t5_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_SENSOR_t5_cost
+		}
+	}
+
+	sensor_range = @ESC_SENSOR_t5_sensor_range
+	hyperlane_range = @ESC_SENSOR_t5_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t5_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_5" }
+	component_set = "sensor_components"
+
+	upgrades_to = ESC_SENSOR_6
+	ai_weight = { weight = 1000 }
+}
+
+# String Sensors
+utility_component_template = {
+	key = ESC_SENSOR_6
+	size = medium
+	icon = GFX_esc_sensors_6
+	icon_frame = 1
+	power = @ESC_SENSOR_t6_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_SENSOR_t6_cost
+		}
+	}
+
+	sensor_range = @ESC_SENSOR_t6_sensor_range
+	hyperlane_range = @ESC_SENSOR_t6_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t6_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_6" }
+	component_set = "sensor_components"
+
+	upgrades_to = ESC_SENSOR_7
+	ai_weight = { weight = 1500 }
+}
+
+# Advanced String Sensors
+utility_component_template = {
+	key = ESC_SENSOR_7
+	size = medium
+	icon = GFX_esc_sensors_7
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_SENSOR_t7_cost
+		}
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t7_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_7" }
+	component_set = "sensor_components"
+	upgrades_to = ESC_SENSOR_PRECURSOR
+
+	ai_weight = { weight = 2000 }
+}
+
+# Precursor Sensor Arrays
+utility_component_template = {
+	key = ESC_SENSOR_PRECURSOR
+	size = medium
+	icon = GFX_esc_sensors_precursor
+	icon_frame = 1
+	power = @ESC_SENSOR_t6_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_SENSOR_t6_cost
+			sr_dark_matter = 1
+		}
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+		ship_accuracy_add = 10
+	}
+
+	prerequisites = { "esc_tech_sensors_precursor" }
+	component_set = "sensor_components"
+
+	ai_weight = {
+		weight = 2500
+		# AI shouldn't use it if there is no dark matter income
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# psionic sensors
+utility_component_template = {
+	key = ESC_SENSOR_PSIONIC
+	size = medium
+	icon = GFX_esc_psionic_sensors
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_SENSOR_t7_cost
+			sr_zro = 1
+		}
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_psionic" }
+	component_set = "sensor_components"
+
+	valid_for_country = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = { weight = 2000 }
+}
+
+# Shroud Eye
+utility_component_template = {
+	key = ESC_SENSOR_AVATAR
+	size = medium
+	icon = GFX_esc_shroud_avatar_sensor
+	icon_frame = 1
+	power = 0
+	hidden = yes
+
+	resources = {
+		category = ship_components
+		cost = {
+			energy = 10
+		}
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+	}
+
+	component_set = "sensor_components"
+
+	ai_weight = { weight = 2000 }
+}
+
+############################################################
+###                      FTL Drives                      ###
+############################################################
+
+# Improved Jump Drive
+utility_component_template = {
+	key = ESC_JUMP_DRIVE_2
+	size = small
+	icon = GFX_esc_jump_drive_2
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t2_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_JUMP_DRIVE_t2_cost
+			sr_dark_matter = 1.5
+		}
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.825
+		ship_jumpdrive_cooldown_mult = -0.125
+		ship_ftl_jumpdrive_range_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { esc_tech_jump_drive_2 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_JUMP_DRIVE_3
+}
+
+# Supercharged Jump Drive
+utility_component_template = {
+	key = ESC_JUMP_DRIVE_3
+	size = small
+	icon = GFX_esc_jump_drive_3
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t3_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_JUMP_DRIVE_t3_cost
+			sr_dark_matter = 2
+		}
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.9
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 0.5
+	}
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { esc_tech_jump_drive_3 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_JUMP_DRIVE_PRECURSOR
+}
+
+# Precursor Jump Drive
+utility_component_template = {
+	key = ESC_JUMP_DRIVE_PRECURSOR
+	size = small
+	icon = GFX_esc_jump_drive_precursor
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t3_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_JUMP_DRIVE_t3_cost
+			sr_dark_matter = 2.5
+		}
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.5
+		ship_ftl_jumpdrive_range_mult = 1
+	}
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { esc_tech_jump_drive_precursor }
+	component_set = "ftl_components"
+}
+
+# Improved Psionic Jump Drive
+utility_component_template = {
+	key = ESC_PSI_JUMP_DRIVE_2
+	size = small
+	icon = GFX_esc_psi_jump_drive_2
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t2_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_JUMP_DRIVE_t2_cost
+			sr_zro = 1.5
+		}
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.875
+		ship_jumpdrive_cooldown_mult = -0.125
+		ship_ftl_jumpdrive_range_mult = 0.75
+	}
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = esc_psionic_charge }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { esc_tech_psi_jump_drive_2 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_PSI_JUMP_DRIVE_3
+}
+
+# Shroud Guide
+utility_component_template = {
+	key = ESC_PSI_JUMP_DRIVE_3
+	size = small
+	icon = GFX_esc_psi_jump_drive_3
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t3_power
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_JUMP_DRIVE_t3_cost
+			sr_zro = 2
+		}
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 1
+	}
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = esc_psionic_charge }
+		}
+	}
+
+	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
+	prerequisites = { esc_tech_psi_jump_drive_3 }
+	component_set = "ftl_components"
+}
+
+# Shroud Gate
+utility_component_template = {
+	key = ESC_JUMP_DRIVE_AVATAR
+	size = small
+	icon = GFX_esc_shroud_avatar_ftl_drive
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = 0
+
+	hidden = yes
+
+	resources = {
+		category = ship_components
+		cost = { energy = 10 }
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 1
+	}
+
+	ai_weight = {
+		weight = 6
+	}
+
+	class_restriction = { shipclass_military}
+	component_set = "ftl_components"
+}
+
+############################################################
+###                         Auras                        ###
+############################################################
+
+# mirage system (vanilla)
+utility_component_template = {
+	key = ESC_TITAN_AURA_MIRAGE_VANILLA
+	size = medium
+	icon = GFX_esc_titan_aura_mirage
+	icon_frame = 1
+	power = 0
+
+	size_restriction = { titan }
+	prerequisites = { esc_tech_aura_mirage_system }
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "esc_aura_mirage_system"
+		radius = @ESC_AURA_mirageAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = esc_aura_mirage_system
+			priority = 25
+		}
+
+		modifier = {
+			ship_accuracy_add = -15
+			ship_tracking_add = -15
+			ship_weapon_damage = -0.05
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 10 }
+}
+
+# mirage system (NSC)
+utility_component_template = {
+	key = ESC_TITAN_AURA_MIRAGE_NSC
+	size = medium
+	icon = GFX_esc_titan_aura_mirage
+	icon_frame = 1
+	power = -300
+
+	component_set = @ESC_AURA_NSC_TitanAuraComponent
+	prerequisites = { esc_tech_aura_mirage_system }
+
+	hostile_aura = {
+		name = "esc_aura_mirage_system"
+		radius = @ESC_AURA_mirageAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = esc_aura_mirage_system
+			priority = 5
+		}
+
+		modifier = {
+			ship_accuracy_add = -30
+			ship_tracking_add = -30
+			ship_weapon_damage = -0.10
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+# shield destabilizer (NSC)
+utility_component_template = {
+	key = ESC_TITAN_AURA_SHIELD_DESTABILIZER_NSC
+	size = medium
+	icon = GFX_ship_part_aura_shield_dampener
+	icon_frame = 1
+	power = -300
+
+	component_set = @ESC_AURA_NSC_TitanAuraComponent
+	prerequisites = { tech_titans } # FIXME
+
+	hostile_aura = {
+		name = "esc_aura_shield_destabilizer"
+		radius = @ESC_AURA_normalAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = esc_aura_shield_destabilizer
+			priority = 5
+		}
+
+		modifier = {
+			ship_shield_reduction = 0.2
+			ship_shield_regen_add_perc = -1.5
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	friendly_aura = {
+		name = "esc_aura_shield_destabilizer"
+		radius = @ESC_AURA_normalAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = esc_aura_shield_destabilizer
+			priority = 5
+		}
+
+		modifier = {
+			ship_shield_penetration_mult = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+# nanite infiltration swarm (vanilla)
+utility_component_template = {
+	key = ESC_TITAN_AURA_OFFENSIVE_NANITES_VANILLA
+	size = medium
+	icon = GFX_esc_titan_aura_nanite
+	icon_frame = 1
+	power = 0
+
+	size_restriction = { titan }
+	prerequisites = { esc_tech_aura_nanite_swarm }
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "esc_aura_nanite_offensive"
+		radius = @ESC_AURA_normalAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = esc_aura_nanite_offensive
+			priority = 25
+		}
+
+		modifier = {
+			ship_armor_reduction = 0.1
+			ship_hull_mult = -0.1
+			ship_armor_regen_add_perc = -1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 10 }
+}
+
+# nanite infiltration swarm (NSC)
+utility_component_template = {
+	key = ESC_TITAN_AURA_OFFENSIVE_NANITES_NSC
+	size = medium
+	icon = GFX_esc_titan_aura_nanite
+	icon_frame = 1
+	power = -300
+
+	component_set = @ESC_AURA_NSC_TitanAuraComponent
+	prerequisites = { esc_tech_aura_nanite_swarm }
+
+	hostile_aura = {
+		name = "esc_aura_nanite_offensive"
+		radius = @ESC_AURA_normalAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = esc_aura_nanite_offensive
+			priority = 5
+		}
+
+		modifier = {
+			ship_armor_reduction = 0.2
+			ship_hull_mult = -0.2
+			ship_armor_regen_add_perc = -1
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+# space distortion module (vanilla)
+utility_component_template = {
+	key = ESC_TITAN_AURA_SPACE_DISTORTION_VANILLA
+	size = medium
+	icon = GFX_esc_titan_aura_gravitic
+	icon_frame = 1
+	power = 0
+
+	size_restriction = { titan }
+	prerequisites = { esc_tech_aura_space_distortion }
+	component_set = "ship_aura_components"
+
+	hostile_aura = {
+		name = "esc_aura_space_distortion"
+		radius = @ESC_AURA_normalAuraRange
+		apply_on = ships
+
+		stack_info = {
+			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = esc_aura_space_distortion
+			priority = 25
+		}
+
+		modifier = {
+			ship_evasion_mult = -0.2
+			ship_weapon_range_mult = -0.2
+			ship_speed_reduction = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 10 }
+}
+
+# space distortion module (NSC)
+utility_component_template = {
+	key = ESC_TITAN_AURA_SPACE_DISTORTION_NSC
+	size = medium
+	icon = GFX_esc_titan_aura_gravitic
+	icon_frame = 1
+	power = -300
+
+	component_set = @ESC_AURA_NSC_TitanAuraComponent
+	prerequisites = { esc_tech_aura_space_distortion }
+
+	hostile_aura = {
+		name = "esc_aura_space_distortion"
+		radius = @ESC_AURA_normalAuraRange
+		apply_on = ships
+
+		stack_info = {
+			id = esc_aura_space_distortion
+			priority = 5
+		}
+
+		modifier = {
+			ship_evasion_mult = -0.2
+			ship_weapon_range_mult = -0.2
+			ship_speed_reduction = 0.2
+		}
+
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_negative_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+
+	ai_weight = { weight = 5 }
+}

@@ -1,0 +1,467 @@
+############################################################
+###           ESC TECHNOLOGIES : POINT DEFENSE           ###
+############################################################
+
+# ── Improved Flak Artillery				: tier 4 flak battery
+#     └─ Ironcloud Defender					: tier 5 flak battery
+# ── Protector Point Defense				: tier 4 point defense cannon
+#     └─ Iron Curtain Point Defense			: tier 5 point defense cannon
+# ── Juggernaut PD System					: point defense for Juggernaut
+#     └─ Improved Juggernaut PD System		: point defense for Juggernaut
+# ── Lightstorm Point-Defense				: laser-based point defense system
+
+############################################################
+##                   Improved Flak Artillery              ##
+############################################################
+
+esc_tech_flak_cannon_4 = {
+	area = engineering
+	category = { propulsion }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = military
+	prerequisites = { "tech_flak_batteries_3" "esc_tech_new_age_warfare" }
+	gateway = ESC_FLAK_CANNONS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.95
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.05
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.95
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.05
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+############################################################
+##                     Ironcloud Defender                 ##
+############################################################
+
+esc_tech_flak_cannon_5 = {
+	area = engineering
+	category = { propulsion }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_flak_cannon_4" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.95
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.05
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_flak_cannon_5 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.95
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.05
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_flak_cannon_5 }
+			}
+		}
+	}
+}
+
+############################################################
+##                  Protector Point-Defense               ##
+############################################################
+
+esc_tech_point_defense_4 = {
+    area = physics
+	category = { computing }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = military
+	prerequisites = { "tech_pd_tracking_3" "esc_tech_new_age_warfare" }
+	gateway = ESC_PD_CANNONS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+############################################################
+##                Iron Curtain Point-Defense              ##
+############################################################
+
+esc_tech_point_defense_5 = {
+    area = physics
+	category = { computing }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_point_defense_4" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_point_defense_5 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_point_defense_5 }
+			}
+		}
+	}
+}
+
+############################################################
+##             Juggernaut Point Defense System            ##
+############################################################
+
+esc_tech_juggernaut_pd_1 = {
+	area = physics
+	category = { computing }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = military
+	prerequisites = { "tech_juggernaut" }
+	gateway = ESC_JUGGERNAUT_PD
+
+	potential = {
+		host_has_dlc = "Federations"
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_point_defense_4
+				has_technology = esc_tech_flak_cannon_4
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_point_defense_4
+				has_technology = esc_tech_flak_cannon_4
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+############################################################
+##         Improved Juggernaut Point Defense System       ##
+############################################################
+
+esc_tech_juggernaut_pd_2 = {
+	area = physics
+	category = { computing }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_juggernaut_pd_1" }
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Federations"
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_juggernaut_pd_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_juggernaut_pd_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                 Lightstorm Point-Defense               ##
+############################################################
+
+esc_tech_point_defense_laser = {
+    area = physics
+	category = { particles }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_point_defense_4" "esc_tech_laser_6" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_point_defense_laser }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_point_defense_laser }
+			}
+		}
+	}
+}

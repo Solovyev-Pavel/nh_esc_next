@@ -1,0 +1,244 @@
+############################################################
+###                      ESC armies                      ###
+############################################################
+
+### Psionic Avatar : Psionic weapons' subtree
+esc_psionic_avatar_army = {
+	damage = 5.0
+	health = 7.0
+	morale_damage = 2.0
+	war_exhaustion = 5.0
+	time = 25
+	has_species = no
+	has_morale = no
+
+	icon = GFX_esc_army_psi_avatar
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 2500
+			sr_zro = 100
+		}
+	}
+
+	show_tech_unlock_if = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	potential = {
+		custom_tooltip = {
+			planet = { is_capital = yes }
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+		}
+	}
+
+	prerequisites = { esc_tech_psi_avatar_army }
+}
+
+### Erasure Squad : Chrono-spatial weapons' subtree
+esc_erasure_squad_army = {
+	damage = 7.0
+	health = 2.0
+	morale = 2.0
+	morale_damage = 3.0
+	war_exhaustion = 3.0
+	time = 360
+
+	icon = GFX_esc_army_chrono_trooper
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 250
+			minerals = 500
+			sr_dark_matter = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	show_tech_unlock_if = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+		from = { is_sapient = yes }
+		owner = {
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_civic = civic_machine_assimilator
+			}
+		}
+	}
+
+	prerequisites = { esc_tech_chrono_spatial_weapons }
+}
+
+### Eradicator Droids : mechanical verions of Erasure Squads
+esc_eradicator_droids_army = {
+	damage = 7.0
+	health = 2.0
+	morale_damage = 3.0
+	war_exhaustion = 3.0
+	time = 360
+	has_morale = no
+	has_species = no
+
+	icon = GFX_esc_army_chrono_trooper
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 250
+			alloys = 200
+			sr_dark_matter = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	show_tech_unlock_if = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+		has_authority = auth_machine_intelligence
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+		owner = { has_authority = auth_machine_intelligence }
+		from = {
+			OR = {
+				has_trait = trait_machine_unit
+				has_trait = trait_mechanical
+			}
+		}
+	}
+
+	prerequisites = { esc_tech_chrono_spatial_weapons }
+}
+
+### Tesla Troopers : organic tesla armies
+esc_tesla_troopers_army = {
+	damage = 3.5
+	health = 4.0
+	morale = 2.0
+	morale_damage = 2.0
+	war_exhaustion = 1.5
+	time = 360
+
+	icon = GFX_esc_army_tesla_trooper
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 150
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+		from = { is_sapient = yes }
+		owner = {
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_civic = civic_machine_assimilator
+			}
+		}
+	}
+
+	prerequisites = { esc_tech_tesla_weapons }
+}
+
+### Tesla Droids : mechanical tesla armies
+esc_tesla_droids_army = {
+	damage = 3.5
+	health = 4.0
+	morale_damage = 2.0
+	war_exhaustion = 1.5
+	time = 360
+	has_morale = no
+	has_species = no
+
+	icon = GFX_esc_army_tesla_trooper
+
+	resources = {
+		category = armies
+		cost = {
+			energy = 150
+			alloys = 100
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+		has_authority = auth_machine_intelligence
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+		owner = { has_authority = auth_machine_intelligence }
+		from = {
+			OR = {
+				has_trait = trait_machine_unit
+				has_trait = trait_mechanical
+			}
+		}
+	}
+
+	prerequisites = { esc_tech_tesla_weapons }
+}
+
+### Bio-Horror Horde : advanced bio-ascension army
+esc_biohorror_army = {
+	health = 4.0
+	damage = 4.0
+	morale_damage = 2.5
+	collateral_damage = 4.0
+	war_exhaustion = 0.25
+	time = 100
+	has_morale = no
+	has_species = no
+
+	icon = GFX_army_type_xenomorph
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 350
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	potential = {
+		owner = {
+			ESC_TRIGGER_may_research_biological_weapons_advanced = yes
+		}
+	}
+
+	prerequisites = { esc_tech_bio_horror_army }
+
+}

@@ -1,0 +1,45 @@
+############################################################
+###                 ESC budgeting : food                 ###
+############################################################
+
+food_expenditure_ships = {
+    resource = food
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.125
+	}
+}
+
+food_expenditure_ship_upgrades = {
+	resource = food
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.125
+	}
+}
+
+food_crystal_upkeep_ships = {
+	resource = food
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}

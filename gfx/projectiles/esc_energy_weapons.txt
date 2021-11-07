@@ -1,0 +1,1815 @@
+############################################################
+###         Energy Weapons' Projectiles : Laser 6        ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_laser_6_small"
+	color = { 0.95 0.95 0.06 0.3 }
+	hit_entity = "esc_laser_6_small_hit_entity"
+	shield_hit_entity = "esc_laser_6_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_laser_6_small_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_laser_6_medium"
+	color = { 0.95 0.95 0.06 0.3 }
+	hit_entity = "esc_laser_6_medium_hit_entity"
+	shield_hit_entity = "esc_laser_6_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_laser_6_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+# large
+projectile_gfx_beam = {
+	name = "esc_laser_6_large"
+	color = { 0.95 0.95 0.06 0.3 }
+	hit_entity = "esc_laser_6_large_hit_entity"
+	shield_hit_entity = "esc_laser_6_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_laser_6_large_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+############################################################
+###         Energy Weapons' Projectiles : Laser 7        ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_laser_7_small"
+	color = { 1.0 1.0 1.0 0.3 }
+	hit_entity = "esc_laser_7_small_hit_entity"
+	shield_hit_entity = "esc_laser_7_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_laser_7_small_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_laser_7_medium"
+	color = { 1.0 1.0 1.0 0.3 }
+	hit_entity = "esc_laser_7_medium_hit_entity"
+	shield_hit_entity = "esc_laser_7_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_laser_7_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+# large
+projectile_gfx_beam = {
+	name = "esc_laser_7_large"
+	color = { 1.0 1.0 1.0 0.3 }
+	hit_entity = "esc_laser_7_large_hit_entity"
+	shield_hit_entity = "esc_laser_7_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_laser_7_large_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+############################################################
+###     Energy Weapons' Projectiles : Plasma Cutter 2    ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_mining_laser_2_small"
+	color = { 0.73 0.95 0.95 0.3 }
+	hit_entity = "blue_laser_small_hit_entity"
+	shield_hit_entity = "blue_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "blue_laser_small_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_mining_laser_2_medium"
+	color = { 0.73 0.95 0.95 0.3 }
+	hit_entity = "blue_laser_medium_hit_entity"
+	shield_hit_entity = "blue_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "blue_laser_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+############################################################
+###     Energy Weapons' Projectiles : Plasma Cutter 3    ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_mining_laser_3_small"
+	color = { 0.78 0.74 0.95 0.3 }
+	hit_entity = "uv_laser_small_hit_entity"
+	shield_hit_entity = "uv_laser_small_shield_hit_entity"
+	muzzle_flash_entity = "uv_laser_small_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_mining_laser_3_medium"
+	color = { 0.78 0.74 0.95 0.3 }
+	hit_entity = "uv_laser_medium_hit_entity"
+	shield_hit_entity = "uv_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "uv_laser_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+############################################################
+###    Energy Weapons' Projectiles : Energy Launchers    ###
+############################################################
+
+### Muon Energy Launcher
+projectile_gfx_ballistic = {
+	name = "esc_energy_torpedoes_3"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_energy_torpedoes_3_hit_entity"
+	shield_hit_entity = "esc_energy_torpedoes_3_shield_hit_entity"
+	muzzle_flash_entity = "esc_energy_torpedoes_3_muzzle_entity"
+
+	#ballistic specific
+	entity = "esc_energy_torpedoes_3_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+### Antimatter Launcher
+projectile_gfx_ballistic = {
+	name = "esc_energy_torpedoes_4"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_energy_torpedoes_4_hit_entity"
+	shield_hit_entity = "esc_energy_torpedoes_4_shield_hit_entity"
+	muzzle_flash_entity = "esc_energy_torpedoes_4_muzzle_entity"
+
+	#ballistic specific
+	entity = "esc_energy_torpedoes_4_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###       Energy Weapons' Projectiles : Disruptor 4      ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_disruptor_4_small"
+	color = { 0.53 0.06 0.72 1.0 }
+	hit_entity = "esc_disruptor_4_small_hit_entity"
+	shield_hit_entity = "esc_disruptor_4_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_disruptor_4_small_muzzle_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 4.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_disruptor_4_medium"
+	color = { 0.53 0.06 0.72 1.0 }
+	hit_entity = "esc_disruptor_4_medium_hit_entity"
+	shield_hit_entity = "esc_disruptor_4_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_disruptor_4_medium_muzzle_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 4.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+# large
+projectile_gfx_beam = {
+	name = "esc_disruptor_4_large"
+	color = { 0.53 0.06 0.72 1.0 }
+	hit_entity = "esc_disruptor_4_large_hit_entity"
+	shield_hit_entity = "esc_disruptor_4_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_disruptor_4_large_muzzle_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 4.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+############################################################
+###       Energy Weapons' Projectiles : Disruptor 5      ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_disruptor_5_small"
+	color = { 0.80 0.06 0.06 1.0 }
+	hit_entity = "esc_disruptor_5_small_hit_entity"
+	shield_hit_entity = "esc_disruptor_5_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_disruptor_5_small_muzzle_entity"
+
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 4.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_disruptor_5_medium"
+	color = { 0.80 0.06 0.06 1.0 }
+	hit_entity = "esc_disruptor_5_medium_hit_entity"
+	shield_hit_entity = "esc_disruptor_5_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_disruptor_5_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 4.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+# large
+projectile_gfx_beam = {
+	name = "esc_disruptor_5_large"
+	color = { 0.80 0.06 0.06 1.0 }
+	hit_entity = "esc_disruptor_5_large_hit_entity"
+	shield_hit_entity = "esc_disruptor_5_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_disruptor_5_large_muzzle_entity"
+
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 4.0
+	stretch_to_fit = no
+	texture_tiling = 2.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.75
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.75
+	}
+	texture = "gfx/models/combat_items/disruptor_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.25
+		delay = 0
+	}
+}
+
+############################################################
+###         Energy Weapons' Projectiles : Plasma 4       ###
+############################################################
+
+# small
+projectile_gfx_ballistic = {
+	name = "esc_plasma_4_small"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_plasma_4_small_hit_entity"
+	shield_hit_entity = "esc_plasma_4_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_plasma_4_small_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_plasma_4_small_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+# medium
+projectile_gfx_ballistic = {
+	name = "esc_plasma_4_medium"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_plasma_4_medium_hit_entity"
+	shield_hit_entity = "esc_plasma_4_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_plasma_4_medium_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_plasma_4_medium_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+# large
+projectile_gfx_ballistic = {
+	name = "esc_plasma_4_large"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_plasma_4_large_hit_entity"
+	shield_hit_entity = "esc_plasma_4_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_plasma_4_large_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_plasma_4_large_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###         Energy Weapons' Projectiles : Plasma 5       ###
+############################################################
+
+# small
+projectile_gfx_ballistic = {
+	name = "esc_plasma_5_small"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_plasma_5_small_hit_entity"
+	shield_hit_entity = "esc_plasma_5_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_plasma_5_small_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_plasma_5_small_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+# medium
+projectile_gfx_ballistic = {
+	name = "esc_plasma_5_medium"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_plasma_5_medium_hit_entity"
+	shield_hit_entity = "esc_plasma_5_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_plasma_5_medium_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_plasma_5_medium_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+# large
+projectile_gfx_ballistic = {
+	name = "esc_plasma_5_large"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_plasma_5_large_hit_entity"
+	shield_hit_entity = "esc_plasma_5_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_plasma_5_large_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_plasma_5_large_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###  Energy Weapons' Projectiles : Chrono-Vortex Cannon  ###
+############################################################
+
+# small
+projectile_gfx_ballistic = {
+	name = "esc_chronocannon_small"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "esc_chronocannon_small_hit_entity"
+	shield_hit_entity = "esc_chronocannon_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_chronocannon_small_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_chronocannon_small_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+# medium
+projectile_gfx_ballistic = {
+	name = "esc_chronocannon_medium"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "esc_chronocannon_medium_hit_entity"
+	shield_hit_entity = "esc_chronocannon_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_chronocannon_medium_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_chronocannon_medium_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+# large
+projectile_gfx_ballistic = {
+	name = "esc_chronocannon_large"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "esc_chronocannon_large_hit_entity"
+	shield_hit_entity = "esc_chronocannon_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_chronocannon_large_muzzle_flash_entity"
+
+	#ballistic specific
+	entity = "esc_chronocannon_large_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###     Energy Weapons' Projectiles : Particle Lances    ###
+############################################################
+
+# improved tachyon lance
+projectile_gfx_beam = {
+	name = "esc_particle_lance_3"
+	color = { 0.66 0.34 0.99 1.0 }
+	hit_entity = "esc_particle_lance_3_hit_entity"
+	shield_hit_entity = "esc_particle_lance_3_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_3_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_particle_lance_3_windup_entity"
+		extra_large_turret = "esc_particle_lance_3_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 8.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+# hyperdimensional lance
+projectile_gfx_beam = {
+	name = "esc_particle_lance_4"
+	color = { 0.84 0.43 0.92 1.0 }
+	hit_entity = "esc_particle_lance_4_hit_entity"
+	shield_hit_entity = "esc_particle_lance_4_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_4_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_particle_lance_4_windup_entity"
+		extra_large_turret = "esc_particle_lance_4_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 8.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+# light of destruction : x-slot
+projectile_gfx_beam = {
+	name = "esc_particle_lance_titanic"
+	color = { 0.99 0.78 0.38 1.0 }
+	hit_entity = "esc_particle_lance_titanic_hit_entity"
+	shield_hit_entity = "esc_particle_lance_titanic_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_titanic_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_particle_lance_titanic_windup_entity"
+		extra_large_turret = "esc_particle_lance_titanic_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+# light of destruction : titanic
+projectile_gfx_beam = {
+	name = "esc_particle_lance_titanic_big"
+	color = { 0.99 0.78 0.38 1.0 }
+	hit_entity = "esc_particle_lance_titanic_hit_entity"
+	shield_hit_entity = "esc_particle_lance_titanic_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_titanic_muzzle_entity"
+	windup_entity = "esc_particle_lance_titanic_windup_titanic_entity"
+
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+############################################################
+###      Energy Weapons' Projectiles : Arc Emitters      ###
+############################################################
+
+### Lightning Cannon
+projectile_gfx_beam = {
+	name = "esc_arc_emitter_3"
+	color = { 0.05 0.55 0.85 1.0 }
+	hit_entity = "esc_arc_emitter_3_hit_entity"
+	shield_hit_entity = "esc_arc_emitter_3_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_emitter_3_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_arc_emitter_3_windup_entity"
+		extra_large_turret = "esc_arc_emitter_3_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Divine Thunder : x-slot
+projectile_gfx_beam = {
+	name = "esc_arc_emitter_4"
+	color = { 0.9 0.9 1.0 1.0 }
+	hit_entity = "esc_arc_emitter_4_hit_entity"
+	shield_hit_entity = "esc_arc_emitter_4_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_emitter_4_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_arc_emitter_4_windup_entity"
+		extra_large_turret = "esc_arc_emitter_4_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Divine Thunder : titanic
+projectile_gfx_beam = {
+	name = "esc_arc_emitter_4_titanic"
+	color = { 0.9 0.9 1.0 1.0 }
+	hit_entity = "esc_arc_emitter_4_hit_entity"
+	shield_hit_entity = "esc_arc_emitter_4_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_emitter_4_muzzle_entity"
+	windup_entity = "esc_arc_emitter_4_titanic_windup_entity"
+
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+############################################################
+###    Energy Weapons' Projectiles : Wave Motion Guns    ###
+############################################################
+
+### Wave-Motion Gun
+projectile_gfx_beam = {
+	name = "esc_wavemotiongun_1"
+	color = { 1.0 0.25 0.25 1.0 }
+	hit_entity = "particle_lance_hit_entity"
+	shield_hit_entity = "particle_lance_shield_hit_entity"
+	muzzle_flash_entity = "particle_lance_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "particle_lance_windup_entity"
+		extra_large_turret = "particle_lance_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Dimensional Wave Cannon
+projectile_gfx_beam = {
+	name = "esc_wavemotiongun_2"
+	color = { 0.25 0.25 1.0 1.0 }
+	hit_entity = "tachyon_lance_hit_entity"
+	shield_hit_entity = "tachyon_lance_shield_hit_entity"
+	muzzle_flash_entity = "tachyon_lance_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "tachyon_lance_windup_entity"
+		extra_large_turret = "tachyon_lance_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Titanic Dimensional Wave Cannon : x-slot
+projectile_gfx_beam = {
+	name = "esc_wavemotiongun_3"
+	color = { 1.0 0.25 1.0 1.0 }
+	hit_entity = "esc_particle_lance_3_hit_entity"
+	shield_hit_entity = "esc_particle_lance_3_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_3_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_particle_lance_3_windup_entity"
+		extra_large_turret = "esc_particle_lance_3_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Titanic Dimensional Wave Cannon : titanic
+projectile_gfx_beam = {
+	name = "esc_wavemotiongun_3_titanic"
+	color = { 1.0 0.25 1.0 1.0 }
+	hit_entity = "esc_particle_lance_3_hit_entity"
+	shield_hit_entity = "esc_particle_lance_3_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_3_muzzle_entity"
+	windup_entity = "nhsc_wavemotiongun_3_titanic_windup_entity"
+
+	#beam specific data
+	width = 10
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+############################################################
+###       Energy Weapons' Projectiles : Arc-en-Ciel      ###
+############################################################
+
+### x-slot
+projectile_gfx_beam = {
+	name = "esc_arc_en_ciel"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_emitter_4_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_arc_emitter_4_windup_entity"
+		extra_large_turret = "esc_arc_emitter_4_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 40.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 40.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### titanic
+projectile_gfx_beam = {
+	name = "esc_arc_en_ciel_titanic"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_emitter_4_muzzle_entity"
+	windup_entity = "esc_arc_emitter_4_titanic_windup_entity"
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 40.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 40.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+############################################################
+###    Energy Weapons' Projectiles : Juggernaut Beams    ###
+############################################################
+
+projectile_gfx_beam = {
+	name = "esc_juggernaut_beam_cannon_1"
+	color = { 0.85 0.1 0.85 0.5 }
+	hit_entity = "uv_laser_medium_hit_entity"
+	shield_hit_entity = "uv_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "uv_laser_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	name = "esc_juggernaut_beam_cannon_2"
+	color = { 0.95 0.1 0.1 0.5 }
+	hit_entity = "infrared_laser_medium_hit_entity"
+	shield_hit_entity = "infrared_laser_medium_shield_hit_entity"
+	muzzle_flash_entity = "infrared_laser_medium_muzzle_entity"
+
+	#beam specific data
+	width = 1.5
+	texture_scroll_speed = 2.5
+	texture_tiling = 20.0
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 50.0
+			0.8 5.0
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.2 25.0
+			0.8 1.0
+			1.0 0.0
+		}
+		duration = 0.25
+	}
+	texture = "gfx/models/combat_items/laser_diffuse2.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 0.8
+		delay = 0.1
+	}
+}
+
+############################################################
+###    Energy Weapons' Projectiles : Unbidden Weapons    ###
+############################################################
+
+### Grand Matter Annihilator
+projectile_gfx_beam = {
+	name = "esc_extradimensional_x_2"
+	color = { 0.66 0.99 0.66 0.75 }
+	hit_entity = "tachyon_lance_hit_entity"
+	shield_hit_entity = "tachyon_lance_shield_hit_entity"
+	muzzle_flash_entity = "tachyon_lance_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "tachyon_lance_windup_entity"
+		extra_large_turret = "tachyon_lance_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 3.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 25.0
+			0.4 1.25
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 25.0
+			0.4 1.25
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+### Titanic Matter Annihilator
+projectile_gfx_beam = {
+	name = "esc_extradimensional_t_2"
+	color = { 0.66 0.99 0.66 0.75 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_emitter_4_muzzle_entity"
+	windup_entity = "esc_arc_emitter_4_titanic_windup_entity"
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 10.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 10.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Grand Reality Eraser
+projectile_gfx_beam = {
+	name = "esc_extradimensional_x_3"
+	color = { 0.66	0.34	0.99	0.75 }
+	hit_entity = "esc_particle_lance_3_hit_entity"
+	shield_hit_entity = "esc_particle_lance_3_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_3_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_particle_lance_3_windup_entity"
+		extra_large_turret = "esc_particle_lance_3_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 3.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 25.0
+			0.4 1.25
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 25.0
+			0.4 1.25
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/energy_lance_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+### Titanic Reality Eraser
+projectile_gfx_beam = {
+	name = "esc_extradimensional_t_3"
+	color = { 0.66	0.34	0.99	0.75 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_particle_lance_3_muzzle_entity"
+	windup_entity = "nhsc_wavemotiongun_3_titanic_windup_entity"
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 10.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 10.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}

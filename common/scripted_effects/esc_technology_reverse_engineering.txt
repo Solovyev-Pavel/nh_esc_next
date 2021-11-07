@@ -1,0 +1,1772 @@
+ESC_EFFECT_reverse_engineer_techs = {
+	### armor
+	if = { limit = { last_increased_tech = esc_tech_bio_armor_1 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_armor_nanite_1 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_armor_shield_1 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_armor_7 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_armor_6 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_dragon_armor } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_ship_armor_5 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_ship_armor_4 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_ship_armor_3 } ESC_EFFECT_armor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_armor_3 } ESC_EFFECT_crystal_plating_check = yes break = yes }
+	### shields
+	if = { limit = { last_increased_tech = esc_tech_shields_cyclonic_3 } ESC_EFFECT_shield_tech_check = yes ESC_EFFECT_shield_recharger_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_shields_cyclonic_2 } ESC_EFFECT_shield_tech_check = yes ESC_EFFECT_shield_recharger_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_shields_cyclonic_1 } ESC_EFFECT_shield_tech_check = yes ESC_EFFECT_shield_recharger_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_shields_7 } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_shields_6 } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_dark_matter_shields_2 } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_dark_matter_deflector } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_psionic_shield } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_shields_5 } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_shields_4 } ESC_EFFECT_shield_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_shields_3 } ESC_EFFECT_shield_tech_check = yes break = yes }
+	### thrusters
+	if = { limit = { last_increased_tech = esc_tech_thrusters_6 } ESC_EFFECT_thruster_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_thrusters_5 } ESC_EFFECT_thruster_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_dark_matter_propulsion } ESC_EFFECT_thruster_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_thrusters_4 } ESC_EFFECT_thruster_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_thrusters_3 } ESC_EFFECT_thruster_tech_check = yes break = yes }
+	### sensors
+	if = { limit = { last_increased_tech = esc_tech_sensors_7 } ESC_EFFECT_sensor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_sensors_6 } ESC_EFFECT_sensor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_sensors_5 } ESC_EFFECT_sensor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_sensors_4 } ESC_EFFECT_sensor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_sensors_3 } ESC_EFFECT_sensor_tech_check = yes break = yes }
+	### combat computers
+	if = { limit = { last_increased_tech = tech_combat_computers_3 } ESC_EFFECT_computer_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_combat_computers_2 } ESC_EFFECT_computer_tech_check = yes break = yes }
+	### afterburners
+	if = { limit = { last_increased_tech = esc_tech_afterburners_3 } ESC_EFFECT_afterburner_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_afterburners_2 } ESC_EFFECT_afterburner_tech_check = yes break = yes }
+	### shield capacitors
+	if = { limit = { last_increased_tech = esc_tech_advanced_shield_capacitors } ESC_EFFECT_shield_recharger_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_infused_capacitor } ESC_EFFECT_shield_recharger_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_forged_capacitor } ESC_EFFECT_shield_recharger_tech_check = yes break = yes }
+	### reactors
+	if = { limit = { last_increased_tech = esc_tech_reactor_8 } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_reactor_7 } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_reactor_6 } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_dark_matter_power_core_2 } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_dark_matter_power_core } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_zero_point_power } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_antimatter_power } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_cold_fusion_power } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_fusion_power } ESC_EFFECT_reactor_tech_check = yes break = yes }
+	### lasers
+	if = { limit = { last_increased_tech = esc_tech_laser_7 } ESC_EFFECT_laser_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_laser_6 } ESC_EFFECT_laser_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_lasers_5 } ESC_EFFECT_laser_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_lasers_5 } ESC_EFFECT_laser_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_lasers_4 } ESC_EFFECT_laser_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_lasers_3 } ESC_EFFECT_laser_tech_check = yes break = yes }
+	### mass drivers
+	if = { limit = { last_increased_tech = esc_tech_mass_driver_7 } ESC_EFFECT_mass_driver_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_mass_driver_6 } ESC_EFFECT_mass_driver_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_mass_drivers_5 } ESC_EFFECT_mass_driver_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_mass_drivers_4 } ESC_EFFECT_mass_driver_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_mass_drivers_3 } ESC_EFFECT_mass_driver_tech_check = yes break = yes }
+	### missiles and plasma missiles
+	if = { limit = { last_increased_tech = esc_tech_xmissile_2 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_xmissile_1 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_plasma_missiles_3 } ESC_EFFECT_plasma_tech_check = yes ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_plasma_missiles_2 } ESC_EFFECT_plasma_tech_check = yes ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_plasma_missiles_1 } ESC_EFFECT_plasma_tech_check = yes ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_missiles_7 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_missiles_6 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_missiles_5 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_missiles_4 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_missiles_3 } ESC_EFFECT_missile_tech_check = yes break = yes }
+	### plasma cannons
+	if = { limit = { last_increased_tech = esc_tech_plasma_5 } ESC_EFFECT_plasma_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_plasma_4 } ESC_EFFECT_plasma_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_plasma_3 } ESC_EFFECT_plasma_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_plasma_2 } ESC_EFFECT_plasma_tech_check = yes break = yes }
+	### kinetic artillery
+	if = { limit = { last_increased_tech = esc_tech_kinetic_artillery_4 } ESC_EFFECT_kinetic_artillery_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_kinetic_artillery_3 } ESC_EFFECT_kinetic_artillery_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_kinetic_artillery_2 } ESC_EFFECT_kinetic_artillery_tech_check = yes break = yes }
+	### flak cannons
+	if = { limit = { last_increased_tech = esc_tech_flak_cannon_5 } ESC_EFFECT_flak_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_flak_cannon_4 } ESC_EFFECT_flak_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_flak_batteries_3 } ESC_EFFECT_flak_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_flak_batteries_2 } ESC_EFFECT_flak_tech_check = yes break = yes }
+	### swarmer missiles
+	if = { limit = { last_increased_tech = esc_tech_swarmer_missiles_4 } ESC_EFFECT_swarmer_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_swarmer_missiles_3 } ESC_EFFECT_swarmer_missile_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_swarmer_missiles_2 } ESC_EFFECT_swarmer_missile_tech_check = yes break = yes }
+	### energy launchers
+	if = { limit = { last_increased_tech = esc_tech_energy_torpedo_4 } ESC_EFFECT_energy_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_energy_torpedo_3 } ESC_EFFECT_energy_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_energy_torpedoes_2 } ESC_EFFECT_energy_torpedo_tech_check = yes break = yes }
+	### energy lances
+	if = { limit = { last_increased_tech = esc_tech_particle_lance_4 } ESC_EFFECT_lance_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_particle_lance_3 } ESC_EFFECT_lance_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_energy_lance_2 } ESC_EFFECT_lance_tech_check = yes break = yes }
+	### arc emitters
+	if = { limit = { last_increased_tech = esc_tech_arc_emitter_4 } ESC_EFFECT_arc_emitter_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_arc_emitter_3 } ESC_EFFECT_arc_emitter_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_arc_emitter_2 } ESC_EFFECT_arc_emitter_tech_check = yes break = yes }
+	### wave-motion gun
+	if = { limit = { last_increased_tech = esc_tech_wave_motion_gun_2 } ESC_EFFECT_wave_motion_gun_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_wave_motion_gun_1 } ESC_EFFECT_thruster_tech_check = yes ESC_EFFECT_reactor_tech_check = yes break = yes }
+	### mass accelerators
+	if = { limit = { last_increased_tech = esc_tech_giga_cannon_4 } ESC_EFFECT_mass_accelerator_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_giga_cannon_3 } ESC_EFFECT_mass_accelerator_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_mass_accelerator_2 } ESC_EFFECT_mass_accelerator_tech_check = yes break = yes }
+	# magnetohydrodynamic cannons
+	if = { limit = { last_increased_tech = esc_tech_mhd_cannon_2 } ESC_EFFECT_mass_accelerator_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_mhd_cannon_1 } ESC_EFFECT_mass_accelerator_tech_check = yes break = yes }
+	### autocannons
+	if = { limit = { last_increased_tech = esc_tech_autocannon_x_2 } ESC_EFFECT_autocannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_autocannon_x_1 } ESC_EFFECT_autocannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_autocannon_5 } ESC_EFFECT_autocannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_autocannon_4 } ESC_EFFECT_autocannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_autocannons_3 } ESC_EFFECT_autocannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_autocannons_2 } ESC_EFFECT_autocannon_tech_check = yes break = yes }
+	### torpedoes
+	if = { limit = { last_increased_tech = esc_tech_torpedoes_5 } ESC_EFFECT_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_torpedoes_4 } ESC_EFFECT_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_torpedoes_3 } ESC_EFFECT_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_torpedoes_2 } ESC_EFFECT_torpedo_tech_check = yes break = yes }
+	### strikecrafts
+	if = { limit = { last_increased_tech = esc_tech_strikecraft_5 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_strikecraft_mercenary_2 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_strikecraft_4 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_strike_craft_3 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_strikecraft_mercenary_1 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_strike_craft_2 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_amoeba_2 } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	### disruptors
+	if = { limit = { last_increased_tech = esc_tech_disruptors_5 } ESC_EFFECT_disruptor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_disruptors_4 } ESC_EFFECT_disruptor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_disruptors_3 } ESC_EFFECT_disruptor_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_disruptors_2 } ESC_EFFECT_disruptor_tech_check = yes break = yes }
+	### point defense
+	if = { limit = { last_increased_tech = esc_tech_point_defense_laser } ESC_EFFECT_laser_tech_check = yes ESC_EFFECT_pd_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_point_defense_5 } ESC_EFFECT_pd_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_point_defense_4 } ESC_EFFECT_pd_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_pd_tracking_3 } ESC_EFFECT_pd_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = tech_pd_tracking_2 } ESC_EFFECT_pd_tech_check = yes break = yes }
+	### cloud lightning
+	if = { limit = { last_increased_tech = esc_tech_cloud_lightning_3 } ESC_EFFECT_cloud_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_cloud_lightning_2 } ESC_EFFECT_cloud_tech_check = yes break = yes }
+	### mining drone laser
+	if = { limit = { last_increased_tech = esc_tech_mining_laser_3 } ESC_EFFECT_mining_drone_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_mining_laser_2 } ESC_EFFECT_mining_drone_tech_check = yes break = yes }
+	### crystalline weapons
+	if = { limit = { last_increased_tech = esc_tech_crystal_lance_titanic } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_lance_2 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_lance_1 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_cannon_5 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_cannon_4 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_cannon_3 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_cannon_2 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	### gravitic weapons
+	if = { limit = { last_increased_tech = esc_tech_gravity_lance_titanic } ESC_EFFECT_gravity_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_lance_2 } ESC_EFFECT_gravity_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_lance_1 } ESC_EFFECT_gravity_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_cannon_2 } ESC_EFFECT_gravity_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_cannon_1 } ESC_EFFECT_gravity_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_torpedo_2 } ESC_EFFECT_gravity_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_torpedo_1 } ESC_EFFECT_gravity_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_gravity_bombers } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	### nanite weapons
+	if = { limit = { last_increased_tech = esc_tech_nanite_torpedo_1 } ESC_EFFECT_nanite_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_nanite_cannon_1 } ESC_EFFECT_nanite_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_nanite_bomber } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	### biological weapons
+	if = { limit = { last_increased_tech = esc_tech_bio_missile_1 } ESC_EFFECT_bio_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_bio_cannon_2 } ESC_EFFECT_bio_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_bio_cannon_1 } ESC_EFFECT_bio_tech_check = yes break = yes }
+	### tesla weapons
+	if = { limit = { last_increased_tech = esc_tech_tesla_cannon_titanic } ESC_EFFECT_tesla_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_cannon_2 } ESC_EFFECT_tesla_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_cannon_1 } ESC_EFFECT_tesla_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_coil_2 } ESC_EFFECT_tesla_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_coil_1 } ESC_EFFECT_tesla_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_bomb_2 } ESC_EFFECT_tesla_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_bomb_1 } ESC_EFFECT_tesla_torpedo_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_tesla_interdictor } ESC_EFFECT_strike_craft_tech_check = yes break = yes }
+	### psionic weapons
+	if = { limit = { last_increased_tech = esc_tech_psionic_cannon_2 } ESC_EFFECT_psionic_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_psionic_cannon_1 } ESC_EFFECT_psionic_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_psionic_torpedo_2 } ESC_EFFECT_psionic_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_psionic_torpedo_1 } ESC_EFFECT_psionic_tech_check = yes break = yes }
+	### extradimensional weapons
+	if = { limit = { last_increased_tech = esc_tech_extradimensional_weapon_2_t } ESC_EFFECT_extradimensional_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_extradimensional_weapon_2_x } ESC_EFFECT_extradimensional_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_extradimensional_weapon_2 } ESC_EFFECT_extradimensional_tech_check = yes break = yes }
+	### Jump drives
+	if = { limit = { last_increased_tech = esc_tech_jump_drive_2 } ESC_EFFECT_jump_drive_tech_check = yes break = yes }
+}
+
+## ##################################################### ##
+##            Armor-related scripted effects             ##
+## ##################################################### ##
+
+ESC_EFFECT_armor_tech_check = {
+	## bio armor 1 >>> biological weapons
+	if = {
+		limit = {
+			has_technology = esc_tech_bio_armor_1
+			ESC_TRIGGER_may_reverse_engineer_biological_weapons = yes
+			NOT = { has_technology = esc_tech_biological_weapons }
+		}
+		give_technology = { tech = esc_tech_biological_weapons }
+	}
+	## armor 7 >>> armor 6
+	if = {
+		limit = {
+			has_technology = esc_tech_armor_7
+			NOT = { has_technology = esc_tech_armor_6 }
+		}
+		give_technology = { message = no tech = esc_tech_armor_6 }
+	}
+	## dragonscale armor >>> armor 5
+	## armor 6 >>> armor 5
+	## shieldsing armor 1 >>> armor 5
+	## nanite armor 1 >>> armor 5
+	## bio armor 1 >>> armor 5
+	if = {
+		limit = {
+			OR = {
+				has_technology = tech_dragon_armor
+				has_technology = esc_tech_armor_6
+				has_technology = esc_tech_armor_nanite_1
+				has_technology = esc_tech_armor_shield_1
+				has_technology = esc_tech_bio_armor_1
+			}
+			NOT = { has_technology = tech_ship_armor_5 }
+		}
+		give_technology = { message = no tech = tech_ship_armor_5 }
+	}
+	## nanite armor OR shielding armor >>> sythetic lifeform studies [since they require nanites]
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_armor_nanite_1
+				has_technology = esc_tech_armor_shield_1
+			}
+			NOT = { has_technology = esc_tech_synthetic_lifeform_studies }
+		}
+		give_technology = { message = no tech = esc_tech_synthetic_lifeform_studies }
+	}
+	## armor 5 >>> armor 4
+	if = {
+		limit = {
+			has_technology = tech_ship_armor_5
+			NOT = { has_technology = tech_ship_armor_4 }
+		}
+		give_technology = { message = no tech = tech_ship_armor_4 }
+	}
+	## armor 4 >>> armor 3
+	if = {
+		limit = {
+				has_technology = tech_ship_armor_4
+				NOT = { has_technology = tech_ship_armor_3 }
+
+		}
+		give_technology = { message = no tech = tech_ship_armor_3 }
+	}
+	## armor 3 >>> armor 2
+	if = {
+		limit = {
+			has_technology = tech_ship_armor_3
+			NOT = { has_technology = tech_ship_armor_2 }
+		}
+		give_technology = { message = no tech = tech_ship_armor_2 }
+	}
+}
+
+ESC_EFFECT_crystal_plating_check = {
+	## crystal plating 3 >>> crystal plating 2
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_armor_3
+			NOT = { has_technology = tech_crystal_armor_2 }
+		}
+		give_technology = { message = no tech = tech_crystal_armor_2 }
+	}
+	## crystal plating 3 >>> crystal plating 1
+	## crystal plating 2 >>> crystal plating 1
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_crystal_armor_3
+				has_technology = tech_crystal_armor_2
+			}
+			NOT = { has_technology = tech_crystal_armor_1 }
+		}
+		give_technology = { message = no tech = tech_crystal_armor_1 }
+	}
+}
+
+## ##################################################### ##
+##            Shield-related scripted effects            ##
+## ##################################################### ##
+
+ESC_EFFECT_shield_tech_check = {
+	## cyclonic shields 3 >>> cyclonic shields 2
+	if = {
+		limit = {
+			has_technology = esc_tech_shields_cyclonic_3
+			NOT = { has_technology = esc_tech_shields_cyclonic_2 }
+		}
+		give_technology = { message = no tech = esc_tech_shields_cyclonic_2 }
+	}
+	## cyclonic shields 2 >>> cyclonic shields 1
+	if = {
+		limit = {
+			has_technology = esc_tech_shields_cyclonic_2
+			 NOT = { has_technology = esc_tech_shields_cyclonic_1 }
+		}
+		give_technology = { message = no tech = esc_tech_shields_cyclonic_1 }
+	}
+	## shields 7 >>> shields 6
+	if = {
+		limit = {
+			has_technology = esc_tech_shields_7
+			NOT = { has_technology = esc_tech_shields_6 }
+		}
+		give_technology = { message = no tech = esc_tech_shields_6 }
+	}
+	## imrpoved dark matter shields >>> dark matter deflectors
+	if = {
+		limit = {
+			has_technology = esc_tech_dark_matter_shields_2
+			NOT = { has_technology = tech_dark_matter_deflector }
+		}
+		give_technology = { message = no tech = tech_dark_matter_deflector }
+	}
+	## shields 6 >>> shields 5
+	## dark matter deflectors >>> shields 5
+	## psionic shields >>> shields 5
+	## cyclonic shields 1 >>> shields 5
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_shields_6
+				has_technology = tech_dark_matter_deflector
+				has_technology = esc_tech_shields_cyclonic_1
+				has_technology = tech_psionic_shield
+			}
+			NOT = { has_technology = tech_shields_5 }
+		}
+		give_technology = { message = no tech = tech_shields_5 }
+	}
+	## shields 5 >>> shields 4
+	if = {
+		limit = {
+			has_technology = tech_shields_5
+			NOT = { has_technology = tech_shields_4 }
+		}
+		give_technology = { message = no tech = tech_shields_4 }
+	}
+	## shields 4 >>> shields 3
+	if = {
+		limit = {
+			has_technology = tech_shields_4
+			NOT = { has_technology = tech_shields_3 }
+		}
+		give_technology = { message = no tech = tech_shields_3 }
+	}
+	## shields 3 >>> shields 2
+	if = {
+		limit = {
+			has_technology = tech_shields_3
+			NOT = { has_technology = tech_shields_2 }
+		}
+		give_technology = { message = no tech = tech_shields_2 }
+	}
+}
+
+## ##################################################### ##
+##          Thrusters-related scripted effects           ##
+## ##################################################### ##
+
+ESC_EFFECT_thruster_tech_check = {
+	## wave-motion gun >>> thrusters 5
+	## thrusters 6 >>> thrusters 5
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_wave_motion_gun_1
+				has_technology = esc_tech_thrusters_6
+			}
+			NOT = { has_technology = esc_tech_thrusters_5 }
+		}
+		give_technology = { message = no tech = esc_tech_thrusters_5 }
+		ESC_EFFECT_reactor_tech_check = yes
+	}
+	## thrusters 5 >>> thrusters 4
+	## dark matter thrusters >>> thrusters 4
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_thrusters_5
+				has_technology = tech_dark_matter_propulsion
+			}
+			NOT = { has_technology = tech_thrusters_4 }
+		}
+		give_technology = { message = no tech = tech_thrusters_4 }
+	}
+	## thrusters 4 >>> thrusters 3
+	if = {
+		limit = {
+			has_technology = tech_thrusters_4
+			NOT = { has_technology = tech_thrusters_3 }
+		}
+		give_technology = { message = no tech = tech_thrusters_3 }
+	}
+	## thrusters 3 >>> thrusters 2
+	if = {
+		limit = {
+			has_technology = tech_thrusters_3
+			NOT = { has_technology = tech_thrusters_2 }
+		}
+		give_technology = { message = no tech = tech_thrusters_2 }
+	}
+}
+
+## ##################################################### ##
+##            Sensor-related scripted effects            ##
+## ##################################################### ##
+
+ESC_EFFECT_sensor_tech_check = {
+	## sensors 7 >>> sensors 6
+	if = {
+		limit = {
+			has_technology = esc_tech_sensors_7
+			NOT = { has_technology = esc_tech_sensors_6 }
+		}
+		give_technology = { message = no tech = esc_tech_sensors_6 }
+	}
+	## sensors 6 >>> sensors 5
+	if = {
+		limit = {
+			has_technology = esc_tech_sensors_6
+			NOT = { has_technology = esc_tech_sensors_5 }
+		}
+		give_technology = { message = no tech = esc_tech_sensors_5 }
+	}
+	## sensors 5 >>> sensors 4
+	if = {
+		limit = {
+			has_technology = esc_tech_sensors_5
+			NOT = { has_technology = tech_sensors_4 }
+		}
+		give_technology = { message = no tech = tech_sensors_4 }
+	}
+	## sensors 4 >>> sensors 3
+	if = {
+		limit = {
+			has_technology = tech_sensors_4
+			NOT = { has_technology = tech_sensors_3 }
+		}
+		give_technology = { message = no tech = tech_sensors_3 }
+	}
+	## sensors 3 >>> sensors 2
+	if = {
+		limit = {
+			has_technology = tech_sensors_3
+			NOT = { has_technology = tech_sensors_2 }
+		}
+		give_technology = { message = no tech = tech_sensors_2 }
+	}
+}
+
+## ##################################################### ##
+##       Combat computer-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_computer_tech_check = {
+	## computer 3 >>> computer 2
+	if = {
+		limit = {
+			has_technology = tech_combat_computers_3
+			NOT = { has_technology = tech_combat_computers_2 }
+		}
+		give_technology = { message = no tech = tech_combat_computers_2 }
+	}
+	## computer 2 >>> computer 1
+	if = {
+		limit = {
+			has_technology = tech_combat_computers_2
+			NOT = { has_technology = tech_combat_computers_1 }
+		}
+		give_technology = { message = no tech = tech_combat_computers_1 }
+	}
+}
+
+## ##################################################### ##
+##         Afterburners-related scripted effects         ##
+## ##################################################### ##
+
+ESC_EFFECT_afterburner_tech_check = {
+	## afterburners 3 >>> afterburners 2
+	if = {
+		limit = {
+			has_technology = esc_tech_afterburners_3
+			NOT = { has_technology = tech_afterburners_2 }
+		}
+		give_technology = { message = no tech = tech_afterburners_2 }
+	}
+	## afterburners 2 >>> afterburners 1
+	if = {
+		limit = {
+			has_technology = tech_afterburners_2
+			NOT = { has_technology = tech_afterburners_1 }
+		}
+		give_technology = { message = no tech = tech_afterburners_1 }
+	}
+}
+
+## ##################################################### ##
+##           Reactor-related scripted effects            ##
+## ##################################################### ##
+
+ESC_EFFECT_reactor_tech_check = {
+	## reactor 8 >>> reactor 7
+	if = {
+		limit = {
+			has_technology = esc_tech_reactor_8
+			NOT = { has_technology = esc_tech_reactor_7 }
+		}
+		give_technology = { message = no tech = esc_tech_reactor_7 }
+	}
+	## wave-motion gun >>> reactor 6
+	## reactor 7 >>> reactor 6
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_wave_motion_gun_1
+				has_technology = esc_tech_reactor_7
+			}
+			NOT = { has_technology = esc_tech_reactor_6 }
+		}
+		give_technology = { message = no tech = esc_tech_reactor_6 }
+	}
+	## improved dark matter reactor >>> dark matter reactor
+	if = {
+		limit = {
+			has_technology = esc_tech_dark_matter_power_core_2
+			NOT = { has_technology = tech_dark_matter_power_core }
+		}
+		give_technology = { message = no tech = tech_dark_matter_power_core }
+	}
+	## dark matter reactor >>> reactor 5
+	## reactor 6 >>> reactor 5
+	if = {
+		limit = {
+			OR = {
+				has_technology = tech_dark_matter_power_core
+				has_technology = esc_tech_reactor_6
+			}
+			NOT = { has_technology = tech_zero_point_power }
+		}
+		give_technology = { message = no tech = tech_zero_point_power }
+	}
+	## reactor 5 >>> reactor 4
+	if = {
+		limit = {
+			has_technology = tech_zero_point_power
+			NOT = { has_technology = tech_antimatter_power }
+		}
+		give_technology = { message = no tech = tech_antimatter_power }
+	}
+	## reactor 4 >>> reactor 3
+	if = {
+		limit = {
+			has_technology = tech_antimatter_power
+			NOT = { has_technology = tech_cold_fusion_power }
+		}
+		give_technology = { message = no tech = tech_cold_fusion_power }
+	}
+	## reactor 3 >>> reactor 2
+	if = {
+		limit = {
+			has_technology = tech_cold_fusion_power
+			NOT = { has_technology = tech_fusion_power }
+		}
+		give_technology = { message = no tech = tech_fusion_power }
+	}
+}
+
+## ##################################################### ##
+##           Lasers-related scripted effects             ##
+## ##################################################### ##
+
+ESC_EFFECT_laser_tech_check = {
+	## laser 7 >>> laser 6
+	## lightstorm pd >> laser 6
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_laser_7
+				has_technology = esc_tech_point_defense_laser
+			}
+			NOT = { has_technology = esc_tech_laser_6 }
+		}
+		give_technology = { message = no tech = esc_tech_laser_6 }
+	}
+	## laser 6 >>> laser 5
+	if = {
+		limit = {
+			has_technology = esc_tech_laser_6
+			NOT = { has_technology = tech_lasers_5 }
+		}
+		give_technology = { message = no tech = tech_lasers_5 }
+	}
+	## laser 5 >>> laser 4
+	if = {
+		limit = {
+			has_technology = tech_lasers_5
+			NOT = { has_technology = tech_lasers_4 }
+		}
+		give_technology = { message = no tech = tech_lasers_4 }
+	}
+	## laser 4 >>> laser 3
+	if = {
+		limit = {
+			has_technology = tech_lasers_4
+			NOT = { has_technology = tech_lasers_3 }
+		}
+		give_technology = { message = no tech = tech_lasers_3 }
+	}
+	## laser 3 >>> laser 2
+	if = {
+		limit = {
+			has_technology = tech_lasers_3
+			NOT = { has_technology = tech_lasers_2 }
+		}
+		give_technology = { message = no tech = tech_lasers_2 }
+	}
+}
+
+## ##################################################### ##
+##         Mass Driver-related scripted effects          ##
+## ##################################################### ##
+
+ESC_EFFECT_mass_driver_tech_check = {
+	## mass driver 7 >>> mass driver 6
+	if = {
+		limit = {
+			has_technology = esc_tech_mass_driver_7
+			NOT = { has_technology = esc_tech_mass_driver_6 }
+		}
+		give_technology = { message = no tech = esc_tech_mass_driver_6 }
+	}
+	## mass driver 6 >>> mass driver 5
+	if = {
+		limit = {
+			has_technology = esc_tech_mass_driver_6
+			NOT = { has_technology = tech_mass_drivers_5 }
+		}
+		give_technology = { message = no tech = tech_mass_drivers_5 }
+	}
+	## mass driver 5 >>> mass driver 4
+	if = {
+		limit = {
+			has_technology = tech_mass_drivers_5
+			NOT = { has_technology = tech_mass_drivers_4 }
+		}
+		give_technology = { message = no tech = tech_mass_drivers_4 }
+	}
+	## mass driver 4 >>> mass driver 3
+	if = {
+		limit = {
+			has_technology = tech_mass_drivers_4
+			NOT = { has_technology = tech_mass_drivers_3 }
+		}
+		give_technology = { message = no tech = tech_mass_drivers_3 }
+	}
+	## mass driver 3 >>> mass driver 2
+	if = {
+		limit = {
+			has_technology = tech_mass_drivers_3
+			NOT = { has_technology = tech_mass_drivers_2 }
+		}
+		give_technology = { message = no tech = tech_mass_drivers_2 }
+	}
+}
+
+## ##################################################### ##
+##          Missiles-related scripted effects            ##
+## ##################################################### ##
+
+ESC_EFFECT_missile_tech_check = {
+	## x-slot missile 2 >>> x-slot missile 1
+	if = {
+		limit = {
+			has_technology = esc_tech_xmissile_2
+			NOT = { has_technology = esc_tech_xmissile_1 }
+		}
+		give_technology = { message = no tech = esc_tech_xmissile_1 }
+	}
+	## x-slot missile 1 >>> missile 6
+	## missile 7 >>> missile 6
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_xmissile_1
+				has_technology = esc_tech_missiles_7
+			}
+			NOT = { has_technology = esc_tech_missiles_6 }
+		}
+		give_technology = { message = no tech = esc_tech_missiles_6 }
+	}
+	## plasma missile 3 >>> plasma missile 2
+	if = {
+		limit = {
+			has_technology = esc_tech_plasma_missiles_3
+			NOT = { has_technology = esc_tech_plasma_missiles_2 }
+		}
+		give_technology = { message = no tech = esc_tech_plasma_missiles_2 }
+	}
+	## plasma missile 2 >>> plasma missile 1
+	if = {
+		limit = {
+			has_technology = esc_tech_plasma_missiles_2
+			NOT = { has_technology = esc_tech_plasma_missiles_1 }
+		}
+		give_technology = { message = no tech = esc_tech_plasma_missiles_1 }
+	}
+	## plasma missile 1 >>> missile 5
+	## missile 6 >>> missile 5
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_plasma_missiles_1
+				has_technology = esc_tech_missiles_6
+			}
+			NOT = { has_technology = tech_missiles_5 }
+		}
+		give_technology = { message = no tech = tech_missiles_5 }
+	}
+	## missile 5 >>> missile 4
+	if = {
+		limit = {
+			has_technology = tech_missiles_5
+			NOT = { has_technology = tech_missiles_4 }
+		}
+		give_technology = { message = no tech = tech_missiles_4 }
+	}
+	## missile 4 >>> missile 3
+	if = {
+		limit = {
+			has_technology = tech_missiles_4
+			NOT = { has_technology = tech_missiles_3 }
+		}
+		give_technology = { message = no tech = tech_missiles_3 }
+	}
+	## missile 3 >>> missile 2
+	if = {
+		limit = {
+			has_technology = tech_missiles_3
+			NOT = { has_technology = tech_missiles_2 }
+		}
+		give_technology = { message = no tech = tech_missiles_2 }
+	}
+}
+
+## ##################################################### ##
+##      Kinetic Artillery-related scripted effects       ##
+## ##################################################### ##
+
+ESC_EFFECT_kinetic_artillery_tech_check = {
+	## kinetic artillery 4 >>> kinetic artillery 3
+	if = {
+		limit = {
+			has_technology = esc_tech_kinetic_artillery_4
+			NOT = { has_technology = esc_tech_kinetic_artillery_3 }
+		}
+		give_technology = { message = no tech = esc_tech_kinetic_artillery_3 }
+	}
+	## kinetic artillery 3 >>> kinetic artillery 2
+	if = {
+		limit = {
+			has_technology = esc_tech_kinetic_artillery_3
+			NOT = { has_technology = tech_kinetic_artillery_2 }
+		}
+		give_technology = { message = no tech = tech_kinetic_artillery_2 }
+	}
+	## kinetic artillery 2 >>> kinetic artillery 1
+	if = {
+		limit = {
+			has_technology = tech_kinetic_artillery_2
+			NOT = { has_technology = tech_kinetic_artillery_1 }
+		}
+		give_technology = { message = no tech = tech_kinetic_artillery_1 }
+	}
+}
+
+## ##################################################### ##
+##       Flak Cannons-related scripted effects           ##
+## ##################################################### ##
+
+ESC_EFFECT_flak_tech_check = {
+	## flak cannon 5 >>> flak cannon 4
+	if = {
+		limit = {
+			has_technology = esc_tech_flak_cannon_5
+			NOT = { has_technology = esc_tech_flak_cannon_4 }
+		}
+		give_technology = { message = no tech = esc_tech_flak_cannon_4 }
+	}
+	## flak cannon 4 >>> flak cannon 3
+	if = {
+		limit = {
+			has_technology = esc_tech_flak_cannon_4
+			NOT = { has_technology = tech_flak_batteries_3 }
+		}
+		give_technology = { message = no tech = tech_flak_batteries_3 }
+	}
+	## flak cannon 3 >>> flak cannon 2
+	if = {
+		limit = {
+			has_technology = tech_flak_batteries_3
+			NOT = { has_technology = tech_flak_batteries_2 }
+		}
+		give_technology = { message = no tech = tech_flak_batteries_2 }
+	}
+	## flak cannon 2 >>> flak cannon 1
+	if = {
+		limit = {
+			has_technology = tech_flak_batteries_2
+			NOT = { has_technology = tech_flak_batteries_1 }
+		}
+		give_technology = { message = no tech = tech_flak_batteries_1 }
+	}
+}
+
+## ##################################################### ##
+##       Swarmer Missile-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_swarmer_missile_tech_check = {
+	## swarmer missile 4 >>> swarmer missile 3
+	if = {
+		limit = {
+			has_technology = esc_tech_swarmer_missiles_4
+			NOT = { has_technology = esc_tech_swarmer_missiles_3 }
+		}
+		give_technology = { message = no tech = esc_tech_swarmer_missiles_3 }
+	}
+	## swarmer missile 3 >>> swarmer missile 2
+	if = {
+		limit = {
+			has_technology = esc_tech_swarmer_missiles_3
+			NOT = { has_technology = tech_swarmer_missiles_2 }
+		}
+		give_technology = { message = no tech = tech_swarmer_missiles_2 }
+	}
+	## swarmer missile 2 >>> swarmer missile 1
+	if = {
+		limit = {
+			has_technology = tech_swarmer_missiles_2
+			NOT = { has_technology = tech_swarmer_missiles_1 }
+		}
+		give_technology = { message = no tech = tech_swarmer_missiles_1 }
+	}
+}
+
+## ##################################################### ##
+##       Energy Launcher-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_energy_torpedo_tech_check = {
+	## energy launcher 4 >>> energy launcher 3
+	if = {
+		limit = {
+			has_technology = esc_tech_energy_torpedo_4
+			NOT = { has_technology = esc_tech_energy_torpedo_3 }
+		}
+		give_technology = { message = no tech = esc_tech_energy_torpedo_3 }
+	}
+	## energy launcher 3 >>> energy launcher 2
+	if = {
+		limit = {
+			has_technology = esc_tech_energy_torpedo_3
+			NOT = { has_technology = tech_energy_torpedoes_2 }
+		}
+		give_technology = { message = no tech = tech_energy_torpedoes_2 }
+	}
+	## energy launcher 2 >>> energy launcher 1
+	if = {
+		limit = {
+			has_technology = tech_energy_torpedoes_2
+			NOT = { has_technology = tech_energy_torpedoes_1 }
+		}
+		give_technology = { message = no tech = tech_energy_torpedoes_1 }
+	}
+}
+
+## ##################################################### ##
+##         Energy Lances-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_lance_tech_check = {
+	## energy lance 4 >>> energy lance 3
+	if = {
+		limit = {
+			has_technology = esc_tech_particle_lance_4
+			NOT = { has_technology = esc_tech_particle_lance_3 }
+		}
+		give_technology = { message = no tech = esc_tech_particle_lance_3 }
+	}
+	## energy lance 3 >>> energy lance 2
+	if = {
+		limit = {
+			has_technology = esc_tech_particle_lance_3
+			NOT = { has_technology = tech_energy_lance_2 }
+		}
+		give_technology = { message = no tech = tech_energy_lance_2 }
+	}
+	## energy lance 2 >>> energy lance 1
+	if = {
+		limit = {
+			has_technology = tech_energy_lance_2
+			NOT = { has_technology = tech_energy_lance_1 }
+		}
+		give_technology = { message = no tech = tech_energy_lance_1 }
+	}
+}
+
+## ##################################################### ##
+##          Arc Emitter-related scripted effects         ##
+## ##################################################### ##
+
+ESC_EFFECT_arc_emitter_tech_check = {
+	## arc emitter 4 >>> arc emitter 3
+	if = {
+		limit = {
+			has_technology = esc_tech_arc_emitter_4
+			NOT = { has_technology = esc_tech_arc_emitter_3 }
+		}
+		give_technology = { message = no tech = esc_tech_arc_emitter_3 }
+	}
+	## arc emitter 3 >>> arc emitter 2
+	if = {
+		limit = {
+			has_technology = esc_tech_arc_emitter_3
+			NOT = { has_technology = tech_arc_emitter_2 }
+		}
+		give_technology = { message = no tech = tech_arc_emitter_2 }
+	}
+	## arc emitter 2 >>> arc emitter 1
+	if = {
+		limit = {
+			has_technology = tech_arc_emitter_2
+			NOT = { has_technology = tech_arc_emitter_1 }
+		}
+		give_technology = { message = no tech = tech_arc_emitter_1 }
+	}
+}
+
+## ##################################################### ##
+##       Wave-Motion Gun-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_wave_motion_gun_tech_check = {
+	## wave-motion gun 2 >>> wave-motion gun 1
+	if = {
+		limit = {
+			has_technology = esc_tech_wave_motion_gun_2
+			NOT = { has_technology = esc_tech_wave_motion_gun_1 }
+		}
+		give_technology = { message = no tech = esc_tech_wave_motion_gun_1 }
+	}
+	ESC_EFFECT_thruster_tech_check = yes
+	ESC_EFFECT_reactor_tech_check = yes
+}
+
+## ##################################################### ##
+##       Mass Accelerator-related scripted effects       ##
+## ##################################################### ##
+
+ESC_EFFECT_mass_accelerator_tech_check = {
+	## mhd cannon 2 >> mhs cannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_mhd_cannon_2
+			NOT = { has_technology = esc_tech_mhd_cannon_1 }
+		}
+		give_technology = { message = no tech = esc_tech_mhd_cannon_1 }
+	}
+	## mass accelerator 4 >>> mass accelerator 3
+	if = {
+		limit = {
+			has_technology = esc_tech_giga_cannon_4
+			NOT = { has_technology = esc_tech_giga_cannon_3 }
+		}
+		give_technology = { message = no tech = esc_tech_giga_cannon_3 }
+	}
+	## mhd cannon 1 >>> advanced materials
+	if = {
+		limit = {
+			has_technology = esc_tech_mhd_cannon_1
+			NOT = { has_technology = esc_tech_advanced_materials }
+		}
+		give_technology = { message = no tech = esc_tech_advanced_materials }
+	}
+	## mass accelerator 3 >>> mass accelerator 2
+	## mhd cannon 1 >>> mass accelerator 2
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_giga_cannon_3
+				has_technology = esc_tech_mhd_cannon_1
+			}
+			NOT = { has_technology = tech_mass_accelerator_2 }
+		}
+		give_technology = { message = no tech = tech_mass_accelerator_2 }
+	}
+	## mass accelerator 2 >>> mass accelerator 1
+	if = {
+		limit = {
+			has_technology = tech_mass_accelerator_2
+			NOT = { has_technology = tech_mass_accelerator_1 }
+		}
+		give_technology = { message = no tech = tech_mass_accelerator_1 }
+	}
+}
+
+## ##################################################### ##
+##          Autocannon-related scripted effects          ##
+## ##################################################### ##
+
+ESC_EFFECT_autocannon_tech_check = {
+	## x autocannon 2 >>> x autocannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_autocannon_x_2
+			NOT = { has_technology = esc_tech_autocannon_x_1 }
+		}
+		give_technology = { message = no tech = esc_tech_autocannon_x_1 }
+	}
+	## x autocannon 1 >>> supersized autocannons
+	if = {
+		limit = {
+			has_technology = esc_tech_autocannon_x_1
+			NOT = { has_technology = esc_tech_autocannons_l }
+		}
+		give_technology = { message = no tech = esc_tech_autocannons_l }
+	}
+	if = {
+		limit = {
+			has_technology = esc_tech_autocannons_l
+			NOT = { has_technology = esc_tech_autocannons_m }
+		}
+		give_technology = { message = no tech = esc_tech_autocannons_m }
+	}
+	## autocannon 5 >>> autocannon 4
+	## x autocannon 1 >>> autocannon 4
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_autocannon_5
+				has_technology = esc_tech_autocannon_x_1
+			}
+			NOT = { has_technology = esc_tech_autocannon_4 }
+		}
+		give_technology = { message = no tech = esc_tech_autocannon_4 }
+	}
+	## autocannon 4 >>> autocannon 3
+	if = {
+		limit = {
+			has_technology = esc_tech_autocannon_4
+			NOT = { has_technology = tech_autocannons_3 }
+		}
+		give_technology = { message = no tech = tech_autocannons_3 }
+	}
+	## autocannon 3 >>> autocannon 2
+	if = {
+		limit = {
+			has_technology = tech_autocannons_3
+			NOT = { has_technology = tech_autocannons_2 }
+		}
+		give_technology = { message = no tech = tech_autocannons_2 }
+	}
+	## autocannon 2 >>> autocannon 1
+	if = {
+		limit = {
+			has_technology = tech_autocannons_2
+			NOT = { has_technology = tech_autocannons_1 }
+		}
+		give_technology = { message = no tech = tech_autocannons_1 }
+	}
+}
+
+## ##################################################### ##
+##          Torpedoes-related scripted effects           ##
+## ##################################################### ##
+
+ESC_EFFECT_torpedo_tech_check = {
+	## torpedo 5 >>> torpedo 4
+	if = {
+		limit = {
+			has_technology = esc_tech_torpedoes_5
+			NOT = { has_technology = esc_tech_torpedoes_4 }
+		}
+		give_technology = { message = no tech = esc_tech_torpedoes_4 }
+	}
+	## torpedo 4 >>> torpedo 3
+	if = {
+		limit = {
+			has_technology = esc_tech_torpedoes_4
+			NOT = { has_technology = tech_torpedoes_3 }
+		}
+		give_technology = { message = no tech = tech_torpedoes_3 }
+	}
+	## torpedo 3 >>> torpedo 2
+	if = {
+		limit = {
+			has_technology = tech_torpedoes_3
+			NOT = { has_technology = tech_torpedoes_2 }
+		}
+		give_technology = { message = no tech = tech_torpedoes_2 }
+	}
+	## torpedo 2 >>> torpedo 1
+	if = {
+		limit = {
+			has_technology = tech_torpedoes_2
+			NOT = { has_technology = tech_torpedoes_1 }
+		}
+		give_technology = { message = no tech = tech_torpedoes_1 }
+	}
+}
+
+## ##################################################### ##
+##        Strikecrafts-related scripted effects          ##
+## ##################################################### ##
+
+ESC_EFFECT_strike_craft_tech_check = {
+	## elite mercenary squadron >>> mercenary squardon
+	if = {
+		limit = {
+			has_technology = esc_tech_strikecraft_mercenary_2
+			NOT = { has_technology = esc_tech_strikecraft_mercenary_1 }
+		}
+		give_technology = { message = no tech = esc_tech_strikecraft_mercenary_1 }
+	}
+	## strikecrafts 5 >>> strikecrafts 4
+	if = {
+		limit = {
+			has_technology = esc_tech_strikecraft_5
+			NOT = { has_technology = esc_tech_strikecraft_4 }
+		}
+		give_technology = { message = no tech = esc_tech_strikecraft_4 }
+	}
+	## nanite strikecrafts >>> strikecrafts 3
+	## tesla strikecrafts >>> strikecrafts 3
+	## gravitic strikecrafts >>> strikecrafts 3
+	## strikecrafts 4 >>> strikecrafts 3
+	## elite mercenary squadron >>> strikecrafts 3
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_strikecraft_4
+				has_technology = esc_tech_nanite_bomber
+				has_technology = esc_tech_tesla_interdictor
+				has_technology = esc_tech_gravity_bombers
+				has_technology = esc_tech_strikecraft_mercenary_2
+			}
+			NOT = { has_technology = tech_strike_craft_3 }
+		}
+		give_technology = { message = no tech = tech_strike_craft_3 }
+	}
+	## strikecrafts 3 >>> strikecrafts 2
+	## mercenary squadron >>> strikecrafts 2
+	if = {
+		limit = {
+			OR = {
+				has_technology = tech_strike_craft_3
+				has_technology = esc_tech_strikecraft_mercenary_1
+			}
+			NOT = { has_technology = tech_strike_craft_2 }
+		}
+		give_technology = { message = no tech = tech_strike_craft_2 }
+	}
+	## strikecrafts 2 >>> strikecrafts 1
+	if = {
+		limit = {
+			has_technology = tech_strike_craft_2
+			NOT = { has_technology = tech_strike_craft_1 }
+		}
+		give_technology = { message = no tech = tech_strike_craft_1 }
+	}
+
+	## amoeba 2 >>> amoeba 1
+	## strikecrafts 2 >>> strikecrafts 1
+	if = {
+		limit = {
+			has_technology = esc_tech_amoeba_2
+			NOT = { has_technology = tech_amoeba_strike_craft_1 }
+		}
+		give_technology = { message = no tech = tech_amoeba_strike_craft_1 }
+	}
+
+	## nanite strikecrafts >>> synthetic lifeform studies
+	if = {
+		limit = {
+			has_technology = esc_tech_nanite_bomber
+			NOT = { has_technology = esc_tech_synthetic_lifeform_studies }
+		}
+		give_technology = { message = no tech = esc_tech_synthetic_lifeform_studies }
+	}
+	## gravitic strikecrafts >>> weaponized gravity
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_bombers
+			NOT = { has_technology = esc_tech_gravity_weapons }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_weapons }
+	}
+	## tesla strikecrafst >>> tesla weapons
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_interdictor
+		}
+		give_technology = { message = no tech = esc_tech_tesla_weapons }
+	}
+}
+
+## ##################################################### ##
+##            Plasma-related scripted effects            ##
+## ##################################################### ##
+
+ESC_EFFECT_plasma_tech_check = {
+	## plasma 5 >>> plasma 4
+	if = {
+		limit = {
+			has_technology = esc_tech_plasma_5
+			NOT = { has_technology = esc_tech_plasma_4 }
+		}
+		give_technology = { message = no tech = esc_tech_plasma_4 }
+	}
+	## plasma missiles >>> plasma 3
+	## plasma 4 >>> plasma 3
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_plasma_missiles_3
+				has_technology = esc_tech_plasma_missiles_2
+				has_technology = esc_tech_plasma_missiles_1
+				has_technology = esc_tech_plasma_4
+			}
+			NOT = { has_technology = tech_plasma_3 }
+		}
+		give_technology = { message = no tech = tech_plasma_3 }
+	}
+	## plasma 3 >>> plasma 2
+	if = {
+		limit = {
+			has_technology = tech_plasma_3
+			NOT = { has_technology = tech_plasma_2 }
+		}
+		give_technology = { message = no tech = tech_plasma_2 }
+	}
+	## plasma 2 >>> plasma 1
+	if = {
+		limit = {
+			has_technology = tech_plasma_2
+			NOT = { has_technology = tech_plasma_1 }
+		}
+		give_technology = { message = no tech = tech_plasma_1 }
+	}
+}
+
+## ##################################################### ##
+##          Disruptor-related scripted effects           ##
+## ##################################################### ##
+
+ESC_EFFECT_disruptor_tech_check = {
+	## disruptor 5 >>> disruptor 4
+	if = {
+		limit = {
+			has_technology = esc_tech_disruptors_5
+			NOT = { has_technology = esc_tech_disruptors_4 }
+		}
+		give_technology = { message = no tech = esc_tech_disruptors_4 }
+	}
+	## disruptor 4 >>> disruptor 3
+	if = {
+		limit = {
+			has_technology = esc_tech_disruptors_4
+			NOT = { has_technology = tech_disruptors_3 }
+		}
+		give_technology = { message = no tech = tech_disruptors_3 }
+	}
+	## disruptor 3 >>> disruptor 2
+	if = {
+		limit = {
+			has_technology = tech_disruptors_3
+			NOT = { has_technology = tech_disruptors_2 }
+		}
+		give_technology = { message = no tech = tech_disruptors_2 }
+	}
+	## disruptor 2 >>> disruptor 1
+	if = {
+		limit = {
+			has_technology = tech_disruptors_2
+			NOT = { has_technology = tech_disruptors_1 }
+		}
+		give_technology = { message = no tech = tech_disruptors_1 }
+	}
+}
+
+## ##################################################### ##
+##        Point Defense-related scripted effects         ##
+## ##################################################### ##
+
+ESC_EFFECT_pd_tech_check = {
+	## lightstorm pd >>> point defense 4
+	## point defense 5 >>> point defense 4
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_point_defense_5
+				has_technology = esc_tech_point_defense_laser
+			}
+			NOT = { has_technology = esc_tech_point_defense_4 }
+		}
+		give_technology = { message = no tech = esc_tech_point_defense_4 }
+	}
+	## point defense 4 >>> point defense 3
+	if = {
+		limit = {
+			has_technology = esc_tech_point_defense_4
+			NOT = { has_technology = tech_pd_tracking_3 }
+		}
+		give_technology = { message = no tech = tech_pd_tracking_3 }
+	}
+	## point defense 3 >>> point defense 2
+	if = {
+		limit = {
+			has_technology = tech_pd_tracking_3
+			NOT = { has_technology = tech_pd_tracking_2 }
+		}
+		give_technology = { message = no tech = tech_pd_tracking_2 }
+	}
+	## point defense 2 >>> point defense 1
+	if = {
+		limit = {
+			has_technology = tech_pd_tracking_2
+			NOT = { has_technology = tech_pd_tracking_1 }
+		}
+		give_technology = { message = no tech = tech_pd_tracking_1 }
+	}
+}
+
+## ##################################################### ##
+##       Cloud Lightning-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_cloud_tech_check = {
+	## cloud lightning 3 >>> cloud lightning 2
+	if = {
+		limit = {
+			has_technology = esc_tech_cloud_lightning_3
+			NOT = { has_technology = esc_tech_cloud_lightning_2 }
+		}
+		give_technology = { message = no tech = esc_tech_cloud_lightning_2 }
+	}
+	## cloud lightning 2 >>> cloud lightning 1
+	if = {
+		limit = {
+			has_technology = esc_tech_cloud_lightning_2
+			NOT = { has_technology = tech_space_cloud_weapon_1 }
+		}
+		give_technology = { message = no tech = tech_space_cloud_weapon_1 }
+	}
+}
+
+## ##################################################### ##
+##      Mining Drone Laser-related scripted effects      ##
+## ##################################################### ##
+
+ESC_EFFECT_mining_drone_tech_check = {
+	## mining drone laser 3 >>> mining drone laser 2
+	if = {
+		limit = {
+			has_technology = esc_tech_mining_laser_3
+			NOT = { has_technology = esc_tech_mining_laser_2 }
+		}
+		give_technology = { message = no tech = esc_tech_mining_laser_2 }
+	}
+	## mining drone laser 2 >>> mining drone laser 1
+	if = {
+		limit = {
+			has_technology = esc_tech_mining_laser_2
+			NOT = { has_technology = tech_mining_drone_weapon_1 }
+		}
+		give_technology = { message = no tech = tech_mining_drone_weapon_1 }
+	}
+}
+
+## ##################################################### ##
+##       Shield Recharger-related scripted effects       ##
+## ##################################################### ##
+
+ESC_EFFECT_shield_recharger_tech_check = {
+	## crystal-forged shield capacitors >>> crystal-infused shield capacitors
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_forged_capacitor
+			NOT = { has_technology = esc_tech_crystal_infused_capacitor }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_infused_capacitor }
+	}
+	## cyclonic shields 3 >>> shield rechargers
+	## cyclonic shields 2 >>> shield rechargers
+	## cyclonic shields 2 >>> shield rechargers
+	## crystal-infused shield capacitors >>> shield rechargers
+	## advanced shield capacitors >>> shield rechargers
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_shields_cyclonic_3
+				has_technology = esc_tech_shields_cyclonic_2
+				has_technology = esc_tech_shields_cyclonic_1
+				has_technology = esc_tech_crystal_infused_capacitor
+				has_technology = esc_tech_advanced_shield_capacitors
+			}
+			NOT = { has_technology = tech_shield_rechargers_1 }
+		}
+		give_technology = { message = no tech = tech_shield_rechargers_1 }
+	}
+}
+
+## ##################################################### ##
+##      Crystalline weapon-related scripted effects      ##
+## ##################################################### ##
+
+ESC_EFFECT_crystal_cannon_tech_check = {
+	## crystalline impaler >>> crystal lance 2
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_lance_titanic
+			NOT = { has_technology = esc_tech_crystal_lance_2 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_lance_2 }
+	}
+	## crystal lance 2 >>> crystal lance 1
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_lance_2
+			NOT = { has_technology = esc_tech_crystal_lance_1 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_lance_1 }
+	}
+	## crystal lance 1 >>> crystal cannon 5
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_lance_1
+			NOT = { has_technology = esc_tech_crystal_cannon_5 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_cannon_5 }
+	}
+	## crystal cannon 5 >>> crystal cannon 4
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_cannon_5
+			NOT = { has_technology = esc_tech_crystal_cannon_4 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_cannon_4 }
+	}
+	## crystal cannon 4 >>> crystal cannon 3
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_cannon_4
+			NOT = { has_technology = esc_tech_crystal_cannon_3 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_cannon_3 }
+	}
+	## crystal cannon 3 >>> crystal cannon 2
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_cannon_3
+			NOT = { has_technology = esc_tech_crystal_cannon_2 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_cannon_2 }
+	}
+	## crystal cannon 2 >>> crystal cannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_cannon_2
+			NOT = { has_technology = esc_tech_crystal_cannon_1 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_cannon_1 }
+	}
+}
+
+## ##################################################### ##
+##        Gravitic Cannon-related scripted effects       ##
+## ##################################################### ##
+
+ESC_EFFECT_gravity_cannon_tech_check = {
+	## gravity lance T >>> gravity lance 2
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_lance_titanic
+			NOT = { has_technology = esc_tech_gravity_lance_2 }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_lance_2 }
+	}
+	## gravity lance 2 >>> gravity lance 1
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_lance_2
+			NOT = { has_technology = esc_tech_gravity_lance_1 }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_lance_1 }
+	}
+	## gravity lance 1 >>> gravity cannon 2
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_lance_1
+			NOT = { has_technology = esc_tech_gravity_cannon_2 }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_cannon_2 }
+	}
+	## gravity cannon 2 >>> gravity cannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_cannon_2
+			NOT = { has_technology = esc_tech_gravity_cannon_1 }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_cannon_1 }
+	}
+	## gravity cannon 1 >>> weaponized gravity
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_cannon_1
+			NOT = { has_technology = esc_tech_gravity_weapons }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_weapons }
+	}
+}
+
+## ##################################################### ##
+##       Gravitic Torpedo-related scripted effects       ##
+## ##################################################### ##
+
+ESC_EFFECT_gravity_torpedo_tech_check = {
+	## gravity torpedo 2 >>> gravity torpedo 1
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_torpedo_2
+			NOT = { has_technology = esc_tech_gravity_torpedo_1 }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_torpedo_1 }
+	}
+	## gravity torpedo 1 >>> weaponized gravity
+	if = {
+		limit = {
+			has_technology = esc_tech_gravity_torpedo_1
+			NOT = { has_technology = esc_tech_gravity_weapons }
+		}
+		give_technology = { message = no tech = esc_tech_gravity_weapons }
+	}
+}
+
+## ##################################################### ##
+##          Nanite technology scripted effects           ##
+## ##################################################### ##
+
+ESC_EFFECT_nanite_tech_check = {
+	## nanite torpedo 1 >>> synthetic lifeform studies
+	## nanite cannon 1 >>> synthetic lifeform studies
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_cannon_1
+			}
+			NOT = { has_technology = esc_tech_synthetic_lifeform_studies }
+		}
+		give_technology = { message = no tech = esc_tech_synthetic_lifeform_studies }
+	}
+}
+
+## ##################################################### ##
+##        Biological technology scripted effects         ##
+## ##################################################### ##
+
+ESC_EFFECT_bio_tech_check = {
+	## bio cannon 2 >>> bio cannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_bio_cannon_2
+			NOT = { has_technology = esc_tech_bio_cannon_1 }
+			ESC_TRIGGER_may_reverse_engineer_biological_weapons = yes
+		}
+		give_technology = { message = no tech = esc_tech_bio_cannon_1 }
+	}
+	## bio missile 1 >>> bio weapons
+	## bio cannon 1 >>> bio weapons
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_bio_cannon_1
+				has_technology = esc_tech_bio_missile_1
+			}
+			NOT = { has_technology = esc_tech_biological_weapons }
+			ESC_TRIGGER_may_reverse_engineer_biological_weapons = yes
+		}
+		give_technology = { message = no tech = esc_tech_biological_weapons }
+	}
+}
+
+## ##################################################### ##
+##         Tesla Cannon-related scripted effects         ##
+## ##################################################### ##
+
+ESC_EFFECT_tesla_cannon_tech_check = {
+	## tesla cannon T >>> tesla cannon 2
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_cannon_titanic
+			NOT = { has_technology = esc_tech_tesla_cannon_2 }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_cannon_2 }
+	}
+	## tesla cannon 2 >>> tesla cannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_cannon_2
+			NOT = { has_technology = esc_tech_tesla_cannon_1 }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_cannon_1 }
+	}
+	## tesla cannon 1 >>> tesla coil 2
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_cannon_1
+			NOT = { has_technology = esc_tech_tesla_coil_2 }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_coil_2 }
+	}
+	## tesla coil 2 >>> tesla coil 1
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_coil_2
+			NOT = { has_technology = esc_tech_tesla_coil_1 }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_coil_1 }
+	}
+	## tesla coil 1 >>> tesla weapons
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_coil_1
+			NOT = { has_technology = esc_tech_tesla_weapons }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_weapons }
+	}
+}
+
+## ##################################################### ##
+##         Tesla Torpedo-related scripted effects        ##
+## ##################################################### ##
+
+ESC_EFFECT_tesla_torpedo_tech_check = {
+	## tesla torpedo 2 >>> tesla torpedo 1
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_bomb_2
+			NOT = { has_technology = esc_tech_tesla_bomb_1 }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_bomb_1 }
+	}
+	## tesla torpedo 1 >>> tesla weapons
+	if = {
+		limit = {
+			has_technology = esc_tech_tesla_bomb_1
+			NOT = { has_technology = esc_tech_tesla_weapons }
+		}
+		give_technology = { message = no tech = esc_tech_tesla_weapons }
+	}
+}
+
+## ##################################################### ##
+##          Psionic technology scripted effects          ##
+## ##################################################### ##
+
+ESC_EFFECT_psionic_tech_check = {
+	## psionic cannon 2 >>> psionic cannon 1
+	if = {
+		limit = {
+			has_technology = esc_tech_psionic_cannon_2
+			NOT = { has_technology = esc_tech_psionic_cannon_1 }
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		}
+		give_technology = { message = no tech = esc_tech_psionic_cannon_1 }
+	}
+	## psionic torpedo 2 >>> psionic torpedo 1
+	if = {
+		limit = {
+			has_technology = esc_tech_psionic_torpedo_2
+			NOT = { has_technology = esc_tech_psionic_torpedo_1 }
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		}
+		give_technology = { message = no tech = esc_tech_psionic_torpedo_1 }
+	}
+	## psionic cannon 1 >>> psionic weapons
+	## psionic torpedo 1 >>> psionic weapons
+	if = {
+		limit = {
+			OR = {
+				has_technology = esc_tech_psionic_torpedo_1
+				has_technology = esc_tech_psionic_cannon_1
+			}
+			NOT = { has_technology = esc_tech_psionic_weapons }
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		}
+		give_technology = { message = no tech = esc_tech_psionic_weapons }
+	}
+}
+
+## ##################################################### ##
+##       Extradimensional-related scripted effects       ##
+## ##################################################### ##
+
+ESC_EFFECT_extradimensional_tech_check = {
+	## titanic matter annihilator >>> grand matter annihilator
+	if = {
+		limit = {
+			has_technology = esc_tech_extradimensional_weapon_2_t
+			NOT = { has_technology = esc_tech_extradimensional_weapon_2_x }
+		}
+		give_technology = { message = no tech = esc_tech_extradimensional_weapon_2_x }
+	}
+	## grand matter annihilator >>>  matter annihilator
+	if = {
+		limit = {
+			has_technology = esc_tech_extradimensional_weapon_2_x
+			NOT = { has_technology = esc_tech_extradimensional_weapon_2 }
+		}
+		give_technology = { message = no tech = esc_tech_extradimensional_weapon_2 }
+	}
+	## matter annihilator >>>  matter disintegrator
+	if = {
+		limit = {
+			has_technology = esc_tech_extradimensional_weapon_2
+			NOT = { has_technology = tech_extradimensional_weapon_1 }
+		}
+		give_technology = { message = no tech = tech_extradimensional_weapon_1 }
+	}
+}
+
+## ##################################################### ##
+##          Jump Drive-related scripted effects          ##
+## ##################################################### ##
+
+ESC_EFFECT_jump_drive_tech_check = {
+	## jump drive 2 >>> jump drive 1
+	if = {
+		limit = { has_technology = esc_tech_jump_drive_2 }
+		give_technology = { message = no tech = tech_jump_drive_1 }
+	}
+}

@@ -1,0 +1,937 @@
+############################################################
+###       Psionic Weapons' Assets : Psionic Cannon       ###
+############################################################
+
+### Muzzle flash
+
+entity = {
+	name = "esc_psionic_cannon_tiny_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 2.0
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_psionic_cannon_tiny_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "disruptor_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_small_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 2.0
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_psionic_cannon_small_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "disruptor_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_medium_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 2.0
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_psionic_cannon_medium_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "disruptor_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_large_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 2.0
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_psionic_cannon_large_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "disruptor_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_fire" }
+		}
+	}
+}
+
+### Hit effect normal & shield
+
+entity = {
+	name = "esc_psionic_cannon_small_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_psionic_cannon_small_hit_effect"
+			sound = { soundeffect = "disruptor_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_medium_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_psionic_cannon_medium_hit_effect"
+			sound = { soundeffect = "disruptor_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_large_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_psionic_cannon_large_hit_effect"
+			sound = { soundeffect = "disruptor_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_disruptor_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_small_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+        	start_event = {
+			particle = "esc_psionic_cannon_small_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			particle = "laser_medium_shield_hit_effect"
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_medium_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+        	start_event = {
+			particle = "esc_psionic_cannon_medium_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			particle = "laser_medium_shield_hit_effect"
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_cannon_large_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+        	start_event = {
+			particle = "esc_psionic_cannon_large_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			particle = "laser_medium_shield_hit_effect"
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+############################################################
+###       Psionic Weapons' Assets : Psionic Torpedo      ###
+############################################################
+
+### Projectile
+entity = {
+	name = "esc_psionic_torpedo_entity"
+	cull_radius = 1.0
+	default_state = idle
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "esc_psionic_torpedo_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "esc_psionic_torpedo_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+### Muzzle flash
+entity = {
+	name = "esc_psionic_torpedo_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7.0
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_psionic_torpedo_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "energy_torpedo_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_fire" }
+		}
+	}
+}
+
+
+### Hit effect normal & shield
+entity = {
+	name = "esc_psionic_torpedo_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_psionic_torpedo_hit_effect"
+			sound = { soundeffect = "energy_torpedo_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_torpedo_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_psionic_torpedo_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+############################################################
+###        Psionic Weapons' Assets : Psionic Lance       ###
+############################################################
+
+### windup
+entity = {
+	name = "esc_psionic_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_8
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_7
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_6
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_5
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_4
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_3
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_psionic_lance_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_lance_turret_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "humanoid_01_esc_psionic_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "arthropoid_01_esc_psionic_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "molluscoid_01_esc_psionic_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.2
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_psionic_lance_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+### Muzzle
+entity = {
+	name = "esc_psionic_lance_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_psionic_lance_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_fire" }
+		}
+	}
+}
+
+### Hit effect normal & shield
+entity = {
+	name = "esc_psionic_lance_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 2
+		looping = no
+		start_event = {
+			particle = "esc_psionic_lance_hit_effect"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_psionic_lance_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_psionic_lance_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			particle = "projectile_large_shield_hit_effect"
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+############################################################
+###       Psionic Weapons' Assets : Psionic Lance T      ###
+############################################################
+
+entity = {
+	name = "esc_psionic_lance_titanic_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = no
+		next_state = "attack_2"
+		state_time = 0.8
+
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "titan_laser_windup_02" }
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.1
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.1
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.5
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.5
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.7
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.7
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "attack_2"
+		looping = no
+		next_state = "attack_3"
+		state_time = 0.6
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.06
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.06
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.18
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.18
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.36
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.36
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.42
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.42
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_psionic_lance_windup_effect"
+			keep_particle = yes
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "attack_3"
+		looping = yes
+		state_time = 0.4
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "titan_laser_windup_01" }
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.04
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.04
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.08
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.08
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.16
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.16
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.28
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_psionic_lance_windup_effect"
+		}
+		event = {
+			time = 0.28
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_psionic_lance_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_psionic_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}

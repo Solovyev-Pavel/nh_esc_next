@@ -1,0 +1,772 @@
+############################################################
+###          Technologies : auxiliary components         ###
+############################################################
+
+# ── Advanced Fire Control Systems				: advanced version of vanilla auxiliary fire control
+# ── Pulsed Plasma Afterburners					: tier 3 afterburners
+# ── Auxiliary Zero Point Reactor				: tier 4 auxiliary reactor
+#     └─ Auxiliary Singularity Reactor			: tier 5 auxiliary reactor
+# ── Improved Shield Capacitors					: stronger version of shield capacitors
+# ── Crystal-Infused Shield Capacitors			: shield capacitors that also improve hull strength
+# ── Crystal-Forged Shield Capacitors			: shield capacitors that also improve hull strength
+# ── Auxiliary Maneuver Thrusters				: advanced evasion component
+# ── Stellarite Power Core						: improves kinetic and energy weapons; requires killed Stellarite Devourer / Leviathans DLC
+# ── Warhead Standardization					: improves missile weapons
+# ── Psionic Reinforcement						: imrpves hull strength at the cost of lowered shields
+# ── Structural Reinforcement					: auxiliary component that increases hull strength
+# ── Reapir Drones								: auxiliary component for automatic ship repair
+# ── Temporal Displacer							: adds a bit of evasion and large emergency ftl boost
+
+############################################################
+##            Advanced Fire Control Systems               ##
+############################################################
+
+esc_tech_auxiliary_fire_control_2 = {
+	area = physics
+	tier = 3
+	cost = @tier3cost2
+	weight = @tier3weight2
+	category = { computing }
+	ai_update_type = military
+	prerequisites = { "tech_auxiliary_fire_control" "esc_tech_grand_research_initiative" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+	}
+}
+
+############################################################
+##              Pulsed Plasma Afterburners                ##
+############################################################
+
+esc_tech_afterburners_3 = {
+	area = engineering
+	category = { propulsion }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = all
+	prerequisites = { "tech_afterburners_2" "esc_tech_grand_research_initiative" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+############################################################
+##             Auxiliary Zero Point Reactor               ##
+############################################################
+
+esc_tech_reactor_booster_4 = {
+	area = physics
+	category = { particles }
+	tier = 4
+	cost = @tier4cost2
+	weight = @tier4weight2
+	ai_update_type = all
+	prerequisites = { "tech_zero_point_power" "tech_reactor_boosters_3" "esc_tech_grand_research_initiative" }
+
+	potential = {
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+			has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+			has_global_flag = @NSC_active_flag
+			has_global_flag = @ACOT_active_flag
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+############################################################
+##             Auxiliary Singularity Reactor              ##
+############################################################
+
+esc_tech_reactor_booster_5 = {
+	area = physics
+	category = { particles }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	prerequisites = { "esc_tech_reactor_7" "esc_tech_reactor_booster_4" }
+	is_rare = yes
+
+	potential = {
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+			has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+			has_global_flag = @NSC_active_flag
+			has_global_flag = @ACOT_active_flag
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_reactor_booster_5 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_reactor_booster_5 }
+			}
+		}
+	}
+}
+
+############################################################
+##              Improved Shield Capacitors                ##
+############################################################
+
+esc_tech_advanced_shield_capacitors = {
+	area = physics
+	category = { field_manipulation }
+	tier = 4
+	cost = @tier4cost2
+	weight = @tier4weight2
+	ai_update_type = all
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_shield_rechargers_1" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_advanced_shield_capacitors }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_advanced_shield_capacitors }
+			}
+		}
+	}
+}
+
+############################################################
+##          Crystal-Infused Shield Capacitors             ##
+############################################################
+
+esc_tech_crystal_infused_capacitor = {
+	area = physics
+	category = { field_manipulation }
+	tier = 3
+	cost = @tier3cost3
+	weight = @tier3weight3
+	ai_update_type = all
+	prerequisites = { "tech_shield_rechargers_1" "tech_crystal_armor_1" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_infused_capacitor }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_infused_capacitor }
+			}
+		}
+	}
+}
+
+############################################################
+##          Crystal-Forged Shield Capacitors              ##
+############################################################
+
+esc_tech_crystal_forged_capacitor = {
+	area = physics
+	category = { field_manipulation }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = all
+	prerequisites = { "tech_shield_rechargers_1" "tech_crystal_armor_2" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_forged_capacitor }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_forged_capacitor }
+			}
+		}
+	}
+}
+
+############################################################
+##             Auxiliary Maneuver Thrusters               ##
+############################################################
+
+esc_tech_aux_maneuver_thrusters = {
+	area = engineering
+	category = { propulsion }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = all
+	prerequisites = { "tech_afterburners_2" "esc_tech_grand_research_initiative" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_propulsion"
+			}
+		}
+	}
+}
+
+############################################################
+##                Stellarite Power Core                   ##
+############################################################
+
+esc_tech_stellarite_powercore = {
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = all
+	prerequisites = { }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##               Warhead Standardization                  ##
+############################################################
+
+esc_tech_standardized_warheads = {
+	area = engineering
+	category = { voidcraft }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = all
+	prerequisites = { "esc_tech_grand_research_initiative" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_missiles_5"
+				has_technology = "tech_swarmer_missiles_2"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_missiles_5"
+				has_technology = "tech_swarmer_missiles_2"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+############################################################
+##              Structural Reinforcement                  ##
+############################################################
+
+esc_tech_structural_reinforcement = {
+	area = engineering
+	category = { materials }
+	tier = 3
+	cost = @tier3cost3
+	weight = @tier3weight3
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_cruisers" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                     Repair Drones                      ##
+############################################################
+
+esc_tech_repair_drones = {
+	area = engineering
+	category = { materials }
+	tier = 4
+	cost = @tier4cost1
+	weight = @tier4weight1
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_cruisers" }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                 Psionic Reinforcement                  ##
+############################################################
+
+esc_tech_psionic_reinforcement = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "tech_psionic_shield" "esc_tech_psionic_weapons" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                   Temporal Displacer                   ##
+############################################################
+
+esc_tech_temporal_displacer = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	ai_update_type = all
+	prerequisites = { "esc_tech_chrono_spatial_weapons" }
+	is_rare = yes
+	is_dangerous = yes
+
+	potential = {
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+			has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+		}
+	}
+
+	weight_modifier = {
+		factor = 1.5
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_temporal_displacer }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_temporal_displacer }
+			}
+		}
+	}
+}

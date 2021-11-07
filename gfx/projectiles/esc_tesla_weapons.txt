@@ -1,0 +1,500 @@
+############################################################
+###      Tesla Weapons' Projectiles : Tesla Weapons 1    ###
+############################################################
+
+# tesla projectile 1 : tiny (strikecraft)
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_1_tiny"
+	color = { 0.99 0.99 0.83 1.0 }
+	hit_entity = "esc_tesla_1_small_hit_entity"
+	shield_hit_entity = "esc_tesla_1_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_1_tiny_muzzle_entity"
+
+	#beam specific data
+	width = 5
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = small
+		delay = 0
+	}
+}
+
+# tesla projectile 1 : small
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_1_small"
+	color = { 0.99 0.99 0.83 1.0 }
+	hit_entity = "esc_tesla_1_small_hit_entity"
+	shield_hit_entity = "esc_tesla_1_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_1_small_muzzle_entity"
+
+	#beam specific data
+	width = 7
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = small
+		delay = 0
+	}
+}
+
+# tesla projectile 1 : medium
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_1_medium"
+	color = { 0.99 0.99 0.83 1.0 }
+	hit_entity = "esc_tesla_1_medium_hit_entity"
+	shield_hit_entity = "esc_tesla_1_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_1_medium_muzzle_entity"
+
+	#beam specific data
+	width = 9
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = medium
+		delay = 0
+	}
+}
+
+# tesla projectile 1 : large
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_1_large"
+	color = { 0.99 0.99 0.83 1.0 }
+	hit_entity = "esc_tesla_1_large_hit_entity"
+	shield_hit_entity = "esc_tesla_1_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_1_large_muzzle_entity"
+
+	#beam specific data
+	width = 12
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+# tesla projectile 1 : xl
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_1_xl"
+	color = { 0.99 0.99 0.83 1.0 }
+	hit_entity = "esc_tesla_1_xl_hit_entity"
+	shield_hit_entity = "esc_tesla_1_xl_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_1_xl_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_tesla_1_xl_windup_entity"
+		extra_large_turret = "esc_tesla_1_xl_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+############################################################
+###      Tesla Weapons' Projectiles : Tesla Weapons 2    ###
+############################################################
+
+# tesla projectile 2 : small
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_2_small"
+	color = { 0.83 0.92 1.0 1.0 }
+	hit_entity = "esc_tesla_2_small_hit_entity"
+	shield_hit_entity = "esc_tesla_2_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_2_small_muzzle_entity"
+
+	#beam specific data
+	width = 7
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = small
+		delay = 0
+	}
+}
+
+# tesla projectile 2 : medium
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_2_medium"
+	color = { 0.83 0.92 1.0 1.0 }
+	hit_entity = "esc_tesla_2_medium_hit_entity"
+	shield_hit_entity = "esc_tesla_2_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_2_medium_muzzle_entity"
+
+	#beam specific data
+	width = 9
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = medium
+		delay = 0
+	}
+}
+
+# tesla projectile 2 : large
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_2_large"
+	color = { 0.83 0.92 1.0 1.0 }
+	hit_entity = "esc_tesla_2_large_hit_entity"
+	shield_hit_entity = "esc_tesla_2_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_2_large_muzzle_entity"
+
+	#beam specific data
+	width = 12
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+# tesla projectile 2 : xl
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_2_xl"
+	color = { 0.83 0.92 1.0 1.0 }
+	hit_entity = "esc_tesla_2_xl_hit_entity"
+	shield_hit_entity = "esc_tesla_2_xl_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_2_xl_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_tesla_2_xl_windup_entity"
+		extra_large_turret = "esc_tesla_2_xl_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 15
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+# tesla projectile 2 : xxl
+projectile_gfx_beam = {
+	#common for all types of projectiles
+	name = "esc_tesla_2_titanic"
+	color = { 0.83 0.92 1.0 1.0 }
+	hit_entity = "esc_tesla_2_xl_hit_entity"
+	shield_hit_entity = "esc_tesla_2_xl_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_2_xl_muzzle_entity"
+	windup_entity = "esc_tesla_2_titanic_windup_entity"
+
+	#beam specific data
+	width = 18
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.1 50.0
+			0.25 0.0
+			0.3 0.0
+			0.45 5.0
+			1.0 0.0
+		}
+		duration = 0.4
+	}
+	texture = "gfx/models/combat_items/arc_emitter_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+############################################################
+###       Tesla Weapons' Projectiles : Tesla Bomb 1      ###
+############################################################
+
+projectile_gfx_ballistic = {
+	name = "esc_tesla_bomb_1_missile"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_tesla_1_large_hit_entity"
+	shield_hit_entity = "esc_tesla_1_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_1_large_muzzle_entity"
+
+	#ballistic specific
+	entity = "torpedo_03_large_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###       Tesla Weapons' Projectiles : Tesla Bomb 2      ###
+############################################################
+
+projectile_gfx_ballistic = {
+	name = "esc_tesla_bomb_2_missile"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_tesla_2_large_hit_entity"
+	shield_hit_entity = "esc_tesla_2_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_tesla_2_large_muzzle_entity"
+
+	#ballistic specific
+	entity = "torpedo_03_large_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

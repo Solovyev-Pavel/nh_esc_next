@@ -1,0 +1,321 @@
+namespace = esc_special_projects
+
+############################################################
+###             Machines learn about psionics            ###
+############################################################
+
+### Machine empires learn about psionics
+country_event = {
+	id = esc_special_projects.1000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_machine_empire = yes
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics_queued
+			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics
+			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics_declined
+		}
+		ESC_TRIGGER_can_do_machine_psionics_special_project = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { is_ai = yes }
+			set_country_flag = ESC_COUNTRY_FLAG_machine_psionics
+			add_research_option = esc_tech_psionic_weapons
+		}
+		else = {
+			set_country_flag = ESC_COUNTRY_FLAG_machine_psionics_queued
+			country_event = { id = esc_special_projects.1001 days = 30 random = 30 }
+		}
+	}
+}
+
+# offer a special project to reserarch psionics
+country_event = {
+	id = esc_special_projects.1001
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+
+	title = esc_special_projects.1001.name
+	desc = esc_special_projects.1001.desc
+
+	trigger = { }
+
+	option = {
+		name = esc_special_projects.1001.a
+		capital_scope = {
+			enable_special_project = {
+				name = ESC_MACHINE_EMPIRE_PSIONICS
+				location = this
+				owner = root.owner
+			}
+		}
+	}
+	option = {
+		name = esc_special_projects.1001.b
+		add_resource = { influence = 100 }
+		hidden_effect = { set_country_flag = ESC_COUNTRY_FLAG_machine_psionics_declined }
+	}
+
+	after = {
+		remove_country_flag = ESC_COUNTRY_FLAG_machine_psionics_queued
+	}
+}
+
+# special project for machine intelligence psionics completed
+country_event = {
+	id = esc_special_projects.1002
+	is_triggered_only = yes
+	picture = GFX_evt_psionics
+
+	title = esc_special_projects.1002.name
+	desc = esc_special_projects.1002.desc
+
+	trigger = {}
+
+	option = {
+		name = EXCELLENT
+		hidden_effect = { set_country_flag = ESC_COUNTRY_FLAG_machine_psionics }
+		add_research_option = esc_tech_psionic_weapons
+	}
+}
+
+############################################################
+###           Automated Dreadnought observation          ###
+############################################################
+
+# checks whether the country meets criteria for getting Automated Dreadnought computer
+country_event = {
+	id = esc_special_projects.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+			has_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
+			has_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer
+			has_country_flag = ESC_COUNTRY_FLAG_dreadnought_computer_declined
+		}
+		has_technology = tech_cruisers
+		has_country_flag = encountered_dreadnought
+	}
+
+	immediate = {
+		set_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
+
+		if = {
+			limit = { is_ai = yes }
+			random_list = {
+				33 = { country_event = { id = esc_special_projects.2001 days = 1180 random = 100 } }
+				33 = { country_event = { id = esc_special_projects.2001 days = 1440 random = 100 } }
+				33 = { country_event = { id = esc_special_projects.2001 days = 1800 random = 100 } }
+			}
+		}
+		else = {
+			random_list = {
+				33 = { country_event = { id = esc_special_projects.2002 days = 180 } }
+				33 = { country_event = { id = esc_special_projects.2002 days = 360 } }
+				33 = { country_event = { id = esc_special_projects.2002 days = 540 } }
+			}
+		}
+	}
+}
+
+# AI just gets tech option
+country_event = {
+	id = esc_special_projects.2001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_research_option = esc_tech_dreadnought_computer
+		remove_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
+		set_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer
+	}
+}
+
+# human player can either choose to run a special project to get the tech, or give the chance up for influence
+country_event = {
+	id = esc_special_projects.2002
+	is_triggered_only = yes
+	title = esc_special_projects.2002.name
+	desc = esc_special_projects.2002.desc
+	picture = GFX_evt_automated_dreadnought
+
+	trigger = {
+		has_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
+	}
+
+	option = {
+		name = esc_special_projects.2002.option.a
+		capital_scope = {
+			enable_special_project = {
+				name = ESC_DREADNOUGHT_OBSERVATION
+				location = this
+				owner = root.owner
+			}
+		}
+		hidden_effect = { set_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer }
+	}
+	option = {
+		name = esc_special_projects.2002.option.b
+		add_resource = { influence = 250 }
+		hidden_effect = { set_country_flag = ESC_COUNTRY_FLAG_dreadnought_computer_declined }
+	}
+
+	after = {
+		remove_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
+	}
+}
+
+# human player gets the research option
+country_event = {
+	id = esc_special_projects.2003
+	is_triggered_only = yes
+	title = esc_special_projects.2003.name
+	desc = esc_special_projects.2003.desc
+	picture = GFX_evt_automated_dreadnought
+
+	option = {
+		name = "EXCELLENT"
+		add_research_option = esc_tech_dreadnought_computer
+	}
+}
+
+############################################################
+###                 Nanite Thought Matrix                ###
+############################################################
+
+# route 1 : Synthetic Lifeform Studies + Sapient Combat Simulations
+country_event = {
+	id = esc_special_projects.3000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		# empire doesn't know the technology yet
+		NOR = {
+			has_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+			has_country_flag = ESC_COUNTRY_FLAG_nanite_computer
+			has_country_flag = ESC_COUNTRY_FLAG_nanite_computer_rejected
+		}
+		# empire has necessary technologies to begin research
+		has_technology = esc_tech_synthetic_lifeform_studies
+		OR = {
+			has_technology = tech_combat_computers_3
+			has_technology = tech_combat_computers_autonomous
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { is_ai = yes }
+			add_research_option = esc_tech_nanite_thought_matrix
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer
+		}
+		else = {
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+		}
+	}
+}
+
+# roll for nanite thought matrix special project
+country_event = {
+	id = esc_special_projects.3001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+	}
+
+	immediate = {
+		random_list = {
+			25 = { country_event = { id = esc_special_projects.3002 days = 0 } }
+			75 = {}
+		}
+	}
+}
+
+# allow player to choose if they want to research special project
+country_event = {
+	id = esc_special_projects.3002
+	is_triggered_only = yes
+	title = esc_special_projects.3002.name
+	desc = esc_special_projects.3002.desc
+	picture = GFX_evt_engineering_research
+
+	option = {
+		name = esc_special_projects.3002.option.a
+		capital_scope = {
+			enable_special_project = {
+				name = ESC_NANITE_THOUGHT_MATRIX_DEVELOP
+				location = this
+				owner = root.owner
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer
+		}
+	}
+	option = {
+		name = esc_special_projects.3002.option.b
+		add_resource = { influence = 100 }
+		hidden_effect = {
+			remove_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer_rejected
+		}
+	}
+}
+
+# allow player to choose if they want to research special project
+country_event = {
+	id = esc_special_projects.3003
+	is_triggered_only = yes
+	title = esc_special_projects.3003.name
+	desc = esc_special_projects.3003.desc
+	picture = GFX_evt_gray_goo_ships
+
+	option = {
+		name = esc_special_projects.3003.option.a
+		capital_scope = {
+			enable_special_project = {
+				name = ESC_NANITE_THOUGHT_MATRIX_RENGINEER
+				location = this
+				owner = root.owner
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer
+		}
+	}
+	option = {
+		name = esc_special_projects.3003.option.b
+		add_resource = { influence = 100 }
+		hidden_effect = {
+			remove_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer_rejected
+		}
+	}
+}
+
+# human player gets the research option
+country_event = {
+	id = esc_special_projects.3004
+	is_triggered_only = yes
+	title = esc_special_projects.3004.name
+	desc = esc_special_projects.3004.desc
+	picture = GFX_evt_engineering_research
+
+	option = {
+		name = EXCELLENT
+		add_research_option = esc_tech_nanite_thought_matrix
+	}
+}

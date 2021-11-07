@@ -1,0 +1,1163 @@
+############################################################
+##               ESC : Crystalline Weapons                ##
+############################################################
+
+# - Crystal Shard Thrower 				S/M/L
+# - Improved Crystal Shard Thrower		S/M/L
+# - Crystal Spike Thrower				S/M/L
+# - Improved Crystal Spike Thrower		S/M/L
+# - Crystal Spear Cannon				S/M/L
+# - Crystal Javelin Cannon				X
+# - Crystal Lance Cannon				X
+# - Crystalline Impaler					Titanic
+
+@ESC_WEAPON_crystalline_hull_damage = 1.0
+@ESC_WEAPON_crystalline_lance_hull_damage = 1.25
+@ESC_WEAPON_crystalline_armor_damage = 1.0
+@ESC_WEAPON_crystalline_armor_penetration = 0.0
+@ESC_WEAPON_crystalline_shields_damage = 1.0
+@ESC_WEAPON_crystalline_shields_penetration = 0.0
+
+############################################################
+##                 Crystal Shard Thrower                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_1
+	size = small
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 8 max = 20 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 50
+	accuracy = 0.85
+	power = -7
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_s_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t3_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_s_t3_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_s_t3_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_1
+	projectile_gfx = red_crystal_ship_projectile
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_2
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_1
+	size = medium
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 50 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 70
+	accuracy = 0.85
+	power = -13
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_m_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t3_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_m_t3_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_m_t3_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_1
+	projectile_gfx = "red_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_2
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_1
+	size = large
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 50 max = 120 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 90
+	accuracy = 0.85
+	power = -25
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_l_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t3_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_l_t3_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_1
+	projectile_gfx = "red_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_2
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##             Improved Crystal Shard Thrower             ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_2
+	size = small
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 32 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 50
+	accuracy = 0.85
+	power = -11
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_s_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t4_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_s_t4_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_s_t4_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_3
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_2
+	size = medium
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 27 max = 78 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 70
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_m_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t4_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_m_t4_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_m_t4_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_3
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_2
+	size = large
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 58 max = 190 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 90
+	accuracy = 0.85
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_l_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t4_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_l_t4_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_3
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Crystal Spike Thrower                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_3
+	size = small
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 14 max = 44 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 50
+	accuracy = 0.85
+	power = -17
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_s_t5_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t5_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_s_t5_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_s_t5_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_3
+	projectile_gfx = "crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_4
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_3
+	size = medium
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 42 max = 86 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 70
+	accuracy = 0.85
+	power = -30
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_m_t5_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t5_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_m_t5_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_m_t5_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_3
+	projectile_gfx = "crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_4
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_3
+	size = large
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 88 max = 220 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 90
+	accuracy = 0.85
+	power = -58
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_l_t5_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t5_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_l_t5_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_3
+	projectile_gfx = "crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_4
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##             Improved Crystal Spike Thrower             ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_4
+	size = small
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 18 max = 47 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 50
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_s_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t6_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_s_t6_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_s_t6_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_4
+	projectile_gfx = "crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_5
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_4
+	size = medium
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 52 max = 108 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 70
+	accuracy = 0.85
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_m_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t6_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_m_t6_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_m_t6_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_4
+	projectile_gfx = "crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_5
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_4
+	size = large
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 118 max = 238 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 90
+	accuracy = 0.85
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_l_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t6_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_l_t6_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_4
+	projectile_gfx = "crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_5
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Crystal Spear Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_5
+	size = small
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 22 max = 58 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 50
+	accuracy = 0.85
+	power = -24
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_s_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t7_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_s_t7_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_s_t7_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_5
+	size = medium
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 72 max = 162 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 70
+	accuracy = 0.85
+	power = -46
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_m_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t7_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_m_t7_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_m_t7_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_5
+	size = large
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 154 max = 326 }
+	windup = { min = 2 max = 17 }
+	total_fire_time = 25
+	range = 90
+	accuracy = 0.85
+	power = -90
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t7_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_l_t7_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                 Crystal Javelin Cannon                 ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_CRYSTAL_LANCE_1
+	size = extra_large
+	icon = GFX_esc_crystal_lance_1
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 1750 max = 3000 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 80
+	range = 150
+	accuracy = 0.85
+	power = -225
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_lance_1_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_lance_1_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_lance_1_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_lance_1_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_crystal_lance_1" }
+	component_set = ESC_CRYSTAL_LANCE_1
+	projectile_gfx = "yellow_crystal_ship_projectile"
+	upgrades_to = ESC_CRYSTAL_LANCE_2
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Crystal Lance Cannon                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_CRYSTAL_LANCE_2
+	size = extra_large
+	icon = GFX_esc_crystal_lance_2
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 2000 max = 3500 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 80
+	range = 150
+	accuracy = 0.85
+	power = -275
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_lance_2_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_lance_2_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_lance_2_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_lance_2_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_crystal_lance_2" }
+	component_set = ESC_CRYSTAL_LANCE_2
+	projectile_gfx = "yellow_crystal_ship_projectile"
+	upgrades_to = ESC_CRYSTAL_LANCE_JUGGERNAUT
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                 Crystalline Impaler                    ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_CRYSTAL_LANCE_TITANIC
+	size = titanic
+	icon = GFX_esc_crystal_lance_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 5000 max = 9000 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 160
+	range = 250
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_lance_3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_lance_3_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_lance_3_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_lance_3_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_crystal_lance_titanic" }
+	component_set = ESC_CRYSTAL_LANCE_TITANIC
+	projectile_gfx = "yellow_crystal_ship_projectile"
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_CRYSTAL_LANCE_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_crystal_lance_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 5000 max = 9500 }
+	windup = { min = 2 max = 18 }
+	total_fire_time = 155
+	range = 200
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_lance_3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_lance_3_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_lance_3_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_lance_3_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_crystal_lance_titanic" }
+	component_set = ESC_CRYSTAL_LANCE_JUGGERNAUT
+	projectile_gfx = "yellow_crystal_ship_projectile"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

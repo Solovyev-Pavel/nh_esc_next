@@ -1,0 +1,418 @@
+############################################################
+###     Psionic Weapons' Projectiles : Psionic Cannon    ###
+############################################################
+
+# psionic cannon : tiny (interceptors)
+projectile_gfx_beam = {
+	name = "esc_psionic_cannon_tiny"
+	color = { 0.80 0.11 0.91 1.0 }
+	hit_entity = "esc_psionic_cannon_small_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_tiny_muzzle_entity"
+
+	#beam specific data
+	width = 2.0
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+# psionic cannon : small
+projectile_gfx_beam = {
+	name = "esc_psionic_cannon_small"
+	color = { 0.80 0.11 0.91 1.0 }
+	hit_entity = "esc_psionic_cannon_small_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_small_muzzle_entity"
+
+	#beam specific data
+	width = 3.5
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+# psionic cannon : medium
+projectile_gfx_beam = {
+	name = "esc_psionic_cannon_medium"
+	color = { 0.80 0.11 0.91 1.0 }
+	hit_entity = "esc_psionic_cannon_medium_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_medium_muzzle_entity"
+
+	#beam specific data
+	width = 4.0
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+# psionic cannon : large
+projectile_gfx_beam = {
+	name = "esc_psionic_cannon_large"
+	color = { 0.80 0.11 0.91 1.0 }
+	hit_entity = "esc_psionic_cannon_large_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_large_muzzle_entity"
+
+	#beam specific data
+	width = 4.5
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+############################################################
+###     Psionic Weapons' Projectiles : Shroud Strike     ###
+############################################################
+
+# shroud strike : small
+projectile_gfx_beam = {
+	name = "esc_psionic_strike_small"
+	color = { 0.80 0.11 0.91 0.20 }
+	hit_entity = "esc_psionic_cannon_small_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_small_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_small_muzzle_entity"
+
+	#beam specific data
+	width = 3.5
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+# shroud strike : medium
+projectile_gfx_beam = {
+	name = "esc_psionic_strike_medium"
+	color = { 0.80 0.11 0.91 0.20 }
+	hit_entity = "esc_psionic_cannon_medium_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_medium_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_medium_muzzle_entity"
+
+	#beam specific data
+	width = 4.0
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+# shroud strike : large
+projectile_gfx_beam = {
+	name = "esc_psionic_strike_large"
+	color = { 0.80 0.11 0.91 0.20 }
+	hit_entity = "esc_psionic_cannon_large_hit_entity"
+	shield_hit_entity = "esc_psionic_cannon_large_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_cannon_large_muzzle_entity"
+
+	#beam specific data
+	width = 4.5
+	texture_scroll_speed = 7.5
+	texture_tiling = 3.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 1.0
+			0.8 0.5
+			1.0 0.0
+		}
+		duration = 1.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.4 0.0
+			0.8 0.0
+			1.0 0.0
+		}
+		duration = 0.5
+
+	}
+	texture = "gfx/models/combat_items/esc_psionic_beam.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.0
+		delay = 0.05
+	}
+}
+
+############################################################
+###    Psionic Weapons' Projectiles : Psionic Torpedo    ###
+############################################################
+
+projectile_gfx_ballistic = {
+	name = "esc_psionic_torpedo"
+	color = { 1.0 1.0 1.0 1.0 }
+	hit_entity = "esc_psionic_torpedo_hit_entity"
+	shield_hit_entity = "esc_psionic_torpedo_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_torpedo_muzzle_entity"
+
+	#ballistic specific
+	entity = "esc_psionic_torpedo_entity"
+	speed = 90.0
+	max_duration = 3.0
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###     Psionic Weapons' Projectiles : Psionic Lance     ###
+############################################################
+
+projectile_gfx_beam = {
+	name = "esc_psionic_lance"
+	color = { 0.80 0.11 0.91 1.0 }
+	hit_entity = "esc_psionic_lance_hit_entity"
+	shield_hit_entity = "esc_psionic_lance_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_lance_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_psionic_lance_windup_entity"
+		extra_large_turret = "esc_psionic_lance_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 8.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/esc_psionic_lance.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}
+
+projectile_gfx_beam = {
+	name = "esc_psionic_lance_titanic"
+	color = { 0.80 0.11 0.91 1.0 }
+	hit_entity = "esc_psionic_lance_hit_entity"
+	shield_hit_entity = "esc_psionic_lance_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_lance_muzzle_entity"
+	windup_entity = "esc_psionic_lance_titanic_windup_entity"
+
+	#beam specific data
+	width = 8.0
+	texture_scroll_speed = 2.5
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 2.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 50.0
+			0.4 5.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/esc_psionic_lance.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 0.5
+		delay = 0.1
+	}
+}

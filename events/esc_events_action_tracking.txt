@@ -1,0 +1,112 @@
+namespace = esc_action_tracking
+
+############################################################
+###                Action Tracking Events                ###
+############################################################
+
+### space dragon killing
+country_event = {
+	id = esc_action_tracking.1000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROMFROMFROM = {
+			is_ship_size = space_dragon_red
+			is_ship_size = space_dragon_blue
+		}
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		set_country_flag = ESC_COUNTRY_FLAG_killed_ether_drake
+	}
+}
+
+### stellarite devourer killing
+country_event = {
+	id = esc_action_tracking.2000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROMFROMFROM = { has_ship_flag = stellarite_ship }
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		set_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer
+	}
+}
+
+### automated dreadnought killing
+country_event = {
+	id = esc_action_tracking.3000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROMFROMFROM = { is_ship_size = npc_warship_01 }
+		ESC_TRIGGER_is_playable_empire = yes
+		NOR = {
+			has_country_flag = ESC_COUNTRY_FLAG_dreadnought_computer_declined
+			has_technology = esc_tech_dreadnought_computer
+			has_tech_option = esc_tech_dreadnought_computer
+		}
+	}
+
+	immediate = {
+		set_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer
+		remove_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
+		add_research_option = esc_tech_dreadnought_computer
+
+		if = {
+			limit = { has_special_project = ESC_DREADNOUGHT_OBSERVATION }
+			abort_special_project = { type = ESC_DREADNOUGHT_OBSERVATION }
+		}
+	}
+}
+
+### gray goo fleet killing
+country_event = {
+	id = esc_action_tracking.4000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FROM = { is_country_type = gray_goo }
+		THIS = {
+			NOR = {
+				has_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+				has_country_flag = ESC_COUNTRY_FLAG_nanite_computer
+				has_country_flag = ESC_COUNTRY_FLAG_nanite_computer_rejected
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { is_ai = yes }
+			add_research_option = esc_tech_nanite_thought_matrix
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer
+		}
+		else = {
+			set_country_flag = ESC_COUNTRY_FLAG_nanite_computer_queued
+			country_event = { id = esc_special_projects.3003 days = 10 }
+		}
+	}
+}
+
+############################################################
+###              Technology Related Events               ###
+############################################################
+
+country_event = {
+	id = esc_action_tracking.5000
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		ESC_EFFECT_reverse_engineer_techs = yes
+	}
+}

@@ -1,0 +1,1237 @@
+############################################################
+##                 ESC : Psionic Weapons                  ##
+############################################################
+
+# - Psionic Energy Projector			S/M/L
+# - Psionic Beam Cannon					S/M/L
+# - Shroud Strike						S/M/L
+# - Shroud Wrath						S/M/L
+# - Psi-blast Torpedo					G
+# - Improved Psi-blast Torpedo			G
+# - Psionic Lance						X
+# - Shroud Piercer						X
+# - Void Ray							Titanic
+# - Psionic Interceptors				H
+# - Psionic Blast (Shroud Avatar)		M
+
+@ESC_WEAPON_psionic_hull_damage = 1.25
+@ESC_WEAPON_psionic_lance_hull_damage = 1.5
+@ESC_WEAPON_psionic_strike_hull_damage = 1.0
+@ESC_WEAPON_psionic_armor_damage = 1.0
+@ESC_WEAPON_psionic_armor_penetration = 1.0
+@ESC_WEAPON_psionic_shield_damage = 0.5
+@ESC_WEAPON_psionic_torpedo_shield_damage = 0.7
+@ESC_WEAPON_psionic_strike_shield_damage = 1.0
+@ESC_WEAPON_psionic_shield_penetration = 0
+@ESC_WEAPON_psionic_strike_shield_penetration = 1.0
+
+@ESC_WEAPON_psionic_strikecraft_hull_damage = 1.25
+@ESC_WEAPON_psionic_strikecraft_armor_damage = 1.0
+@ESC_WEAPON_psionic_strikecraft_armor_penetration = 1.0
+@ESC_WEAPON_psionic_strikecraft_shield_damage = 0.5
+@ESC_WEAPON_psionic_strikecraft_shield_penetration = 0.75
+
+############################################################
+##                Psionic Energy Projector                ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_CANNON_1
+	size = small
+	icon = GFX_esc_psionic_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25 max = 70 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_psionic_cannon_1" }
+	component_set = ESC_PSIONIC_CANNON_1
+	projectile_gfx = "esc_psionic_cannon_small"
+	upgrades_to = SMALL_ESC_PSIONIC_CANNON_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_CANNON_1
+	size = medium
+	icon = GFX_esc_psionic_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 60 max = 130 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.85
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_cannon_1" }
+	component_set = ESC_PSIONIC_CANNON_1
+	projectile_gfx = "esc_psionic_cannon_medium"
+	upgrades_to = MEDIUM_ESC_PSIONIC_CANNON_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_CANNON_1
+	size = large
+	icon = GFX_esc_psionic_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 160 max = 330 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.85
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_cannon_1" }
+	component_set = ESC_PSIONIC_CANNON_1
+	projectile_gfx = "esc_psionic_cannon_large"
+	upgrades_to = LARGE_ESC_PSIONIC_CANNON_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                   Psionic Beam Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_CANNON_2
+	size = small
+	icon = GFX_esc_psionic_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 35 max = 90 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t8_upkeep_energy
+			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_psionic_cannon_2" }
+	component_set = ESC_PSIONIC_CANNON_2
+	projectile_gfx = "esc_psionic_cannon_small"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_CANNON_2
+	size = medium
+	icon = GFX_esc_psionic_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 95 max = 220 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.85
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_cannon_2" }
+	component_set = ESC_PSIONIC_CANNON_2
+	projectile_gfx = "esc_psionic_cannon_medium"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_CANNON_2
+	size = large
+	icon = GFX_esc_psionic_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 230 max = 450 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.85
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_cannon_2" }
+	component_set = ESC_PSIONIC_CANNON_2
+	projectile_gfx = "esc_psionic_cannon_large"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                      Shroud Strike                     ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_STRIKE_1
+	size = small
+	icon = GFX_esc_psionic_strike_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 15 max = 35 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_strike_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strike_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_psionic_strike_1" }
+	component_set = ESC_PSIONIC_STRIKE_1
+	projectile_gfx = "esc_psionic_strike_small"
+	upgrades_to = SMALL_ESC_PSIONIC_STRIKE_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_STRIKE_1
+	size = medium
+	icon = GFX_esc_psionic_strike_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 30 max = 65 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.85
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_strike_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strike_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_strike_1" }
+	component_set = ESC_PSIONIC_STRIKE_1
+	projectile_gfx = "esc_psionic_strike_medium"
+	upgrades_to = MEDIUM_ESC_PSIONIC_STRIKE_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_STRIKE_1
+	size = large
+	icon = GFX_esc_psionic_strike_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 80 max = 140 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.85
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_strike_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strike_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_strike_1" }
+	component_set = ESC_PSIONIC_STRIKE_1
+	projectile_gfx = "esc_psionic_strike_large"
+	upgrades_to = LARGE_ESC_PSIONIC_STRIKE_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                      Shroud Wrath                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_STRIKE_2
+	size = small
+	icon = GFX_esc_psionic_strike_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 50 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.85
+	power = -24
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t8_upkeep_energy
+			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_strike_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strike_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_psionic_strike_2" }
+	component_set = ESC_PSIONIC_STRIKE_2
+	projectile_gfx = "esc_psionic_strike_small"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_STRIKE_2
+	size = medium
+	icon = GFX_esc_psionic_strike_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 45 max = 90 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.85
+	power = -46
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_strike_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strike_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_strike_2" }
+	component_set = ESC_PSIONIC_STRIKE_2
+	projectile_gfx = "esc_psionic_strike_medium"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_STRIKE_2
+	size = large
+	icon = GFX_esc_psionic_strike_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 100 max = 200 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.85
+	power = -90
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_strike_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strike_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_strike_2" }
+	component_set = ESC_PSIONIC_STRIKE_2
+	projectile_gfx = "esc_psionic_strike_large"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                   Psi-blast Torpedo                    ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PSIONIC_TORPEDO_1
+	size = torpedo
+	icon = GFX_esc_psionic_torpedo_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 135 max = 285 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 45
+	range = 100
+	accuracy = 1.0
+	missile_speed = 20
+	missile_evasion = 0.1
+	missile_health = 25
+	missile_retarget_range = 100
+	power = -70
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_torpedo_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_torpedo_1" }
+	component_set = ESC_PSIONIC_TORPEDO_1
+	projectile_gfx = "esc_psionic_torpedo"
+	upgrades_to = ESC_PSIONIC_TORPEDO_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##               Improved Psi-blast Torpedo               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PSIONIC_TORPEDO_2
+	size = torpedo
+	icon = GFX_esc_psionic_torpedo_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 180 max = 378 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 45
+	range = 100
+	accuracy = 1.0
+	missile_speed = 20
+	missile_evasion = 0.1
+	missile_health = 25
+	missile_retarget_range = 100
+	power = -80
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_torpedo_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_torpedo_2" }
+	component_set = ESC_PSIONIC_TORPEDO_2
+	projectile_gfx = "esc_psionic_torpedo"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                     Psionic Lance                      ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PSIONIC_LANCE_1
+	size = extra_large
+	icon = GFX_esc_psionic_lance_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 2500 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 70
+	range = 160
+	accuracy = 0.85
+	power = -275
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_psionic_lance_1" }
+	component_set = ESC_PSIONIC_LANCE_1
+	projectile_gfx = "esc_psionic_lance"
+	upgrades_to = ESC_PSIONIC_LANCE_2
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                    Shroud Piercer                      ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PSIONIC_LANCE_2
+	size = extra_large
+	icon = GFX_esc_psionic_lance_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1200 max = 2800 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 70
+	range = 160
+	accuracy = 0.85
+	power = -325
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			sr_zro = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_psionic_lance_2" }
+	component_set = ESC_PSIONIC_LANCE_2
+	projectile_gfx = "esc_psionic_lance"
+	upgrades_to = ESC_PSIONIC_LANCE_JUGGERNAUT
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                        Void Ray                        ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_PSIONIC_LANCE_TITANIC
+	size = titanic
+	icon = GFX_esc_psionic_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 9000 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 170
+	range = 250
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_psionic_lance_titanic" }
+	component_set = ESC_PSIONIC_LANCE_TITANIC
+	projectile_gfx = "esc_psionic_lance"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_PSIONIC_LANCE_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_psionic_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5000 max = 9000 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 170
+	range = 200
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_psionic_lance_titanic" }
+	component_set = ESC_PSIONIC_LANCE_JUGGERNAUT
+	projectile_gfx = "esc_psionic_lance"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                  Psionic Interceptors                  ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_PSIONIC_INTERCEPTORS
+	size = LARGE
+	entity = "fighter_entity"
+	icon = GFX_esc_psionic_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_psionic_cannon_tiny"
+	power = -70
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_zro = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+
+	health = 70
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_psionic_strikecraft_hull_damage
+	armor_damage = @ESC_WEAPON_psionic_strikecraft_armor_damage
+	armor_penetration = @ESC_WEAPON_psionic_strikecraft_armor_penetration
+	shield_penetration = @ESC_WEAPON_psionic_strikecraft_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strikecraft_shield_damage
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_PSIONIC_INTERCEPTORS
+	prerequisites = { "esc_tech_psionic_interceptors" }
+	tags = { weapon_type_strike_craft }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##            Psionic Blast (Shroud Avatar)               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_PSIONIC_BLAST_AVATAR
+	size = medium
+	entity = "large_space_cloud_weapon_entity"
+	icon = GFX_esc_shroud_avatar_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 400 max = 800 }
+	windup = { min = 2 max = 25 }
+	total_fire_time = 30
+	range = 85
+	accuracy = 0.9
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { energy = 10 }
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 1.0
+
+	component_set = ESC_PSIONIC_BLAST_AVATAR
+	projectile_gfx = "esc_psionic_cannon_medium"
+	tags = { weapon_type_energy weapon_type_psionic }
+	ai_tags = { weapon_role_anti_armor }
+	hidden = yes
+}

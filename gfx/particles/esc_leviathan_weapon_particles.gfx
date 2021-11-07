@@ -1,0 +1,105 @@
+# particle definitions for leviathan weapons
+ObjectTypes = {
+
+############################################################
+###    Leviathan Weapons' Particles : Enigmatic Cannon   ###
+############################################################
+
+pdxparticle = {
+	name = "esc_enigmatic_cannon_small_muzzle_particle"
+	type = "esc_enigmatic_cannon_muzzle_effect"
+	scale = 1.25
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_cannon_medium_muzzle_particle"
+	type = "esc_enigmatic_cannon_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_cannon_large_muzzle_particle"
+	type = "esc_enigmatic_cannon_muzzle_effect"
+	scale = 2.0
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_cannon_large_idle_particle"
+	type = "esc_enigmatic_cannon_idle_effect"
+	scale = 2.5
+}
+pdxparticle = {
+	name = "esc_enigmatic_cannon_large_idle_drops_particle"
+	type = "esc_enigmatic_cannon_idle_drop_effect"
+	scale = 2.5
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_cannon_small_hit_effect"
+	type = "esc_enigmatic_cannon_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_cannon_large_hit_effect"
+	type = "esc_enigmatic_cannon_hit_effect"
+	scale = 2.0
+}
+
+############################################################
+###    Leviathan Weapons' Particles : Enigmatic lance    ###
+############################################################
+
+pdxparticle = {
+	name = "esc_enigmatic_lance_windup_effect"
+	type = "esc_enigmatic_lance_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_lance_muzzle_windup_effect"
+	type = "esc_enigmatic_lance_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_lance_muzzle_particle"
+	type = "esc_enigmatic_lance_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_enigmatic_lance_hit_effect"
+	type = "esc_enigmatic_lance_hit_effect"
+	scale = 1.15
+}
+
+############################################################
+###     Leviathan Weapons' Particles : Tiyanki lance     ###
+############################################################
+
+pdxparticle = {
+	name = "esc_tiyanki_lance_windup_effect"
+	type = "esc_tiyanki_lance_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_tiyanki_lance_muzzle_windup_effect"
+	type = "esc_tiyanki_lance_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_tiyanki_lance_muzzle_particle"
+	type = "esc_tiyanki_lance_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_tiyanki_lance_hit_effect"
+	type = "esc_tiyanki_lance_hit_effect"
+	scale = 1.15
+}
+
+}

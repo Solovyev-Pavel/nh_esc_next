@@ -1,0 +1,1584 @@
+############################################################
+###               ESC TECHNOLOGIES : ARMOR               ###
+############################################################
+
+# ── Advanced Neutronium Armor						: basic tier 6 armor
+#     └─ Adamantium Armor							: basic tier 7 armor
+# ── Bio-Material Armor								: self-repairing armor [tier 6+]
+#     └─ Improved Bio-Material Armor				: self-repairing armor [tier 7+]
+# ── Nanomaterial Armor								: self-repairing armor [tier 6+]
+#     └─ Improved Nanomaterial Armor				: self-repairing armor [tier 7+]
+#         └─ Nanite-augmented Dragonscale Armor		: self-repairing armor [tier 8+]; requires Dragonscale armor / Leviathans DLC
+# ── Shielding Armor								: shield-generating armor [tier 6+]
+#     └─ Improved Shielding Armor					: shield-generating armor [tier 7+]
+#         └─ Shielding Bulwark						: shield-generating armor [tier 8+]
+# ── Hardlight Armor								: shield-regenerating armor [tier 7+]; requires killed Wraith / Leviathans DLC
+# ── Horror Armor									: self-repairing armor [tier 8+]; requires killed Dimensional Horror / Leviathans DLC
+# ── Reinforced Crystalline Plating					: hull-enhancing "armor"
+
+############################################################
+##               Improved Neutronium Armor                ##
+############################################################
+
+esc_tech_armor_6 = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_advanced_materials" "tech_ship_armor_5" }
+	gateway = ESC_ARMOR
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                    Adamantium Armor                    ##
+############################################################
+
+esc_tech_armor_7 = {
+	area = engineering
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	prerequisites = { "esc_tech_armor_6" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_armor_7 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_armor_7 }
+			}
+		}
+	}
+}
+
+############################################################
+##                    Bio-Material Armor                  ##
+############################################################
+
+esc_tech_bio_armor_1 = {
+	area = society
+	category = { biology }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_biological_weapons" "tech_ship_armor_5" }
+	gateway = ESC_BIO_ARMOR
+
+	potential = {
+		ESC_TRIGGER_may_reverse_engineer_biological_weapons = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+############################################################
+##              Improved Bio-Material Armor               ##
+############################################################
+
+esc_tech_bio_armor_2 = {
+	area = society
+	category = { biology }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_bio_armor_1" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_biological_weapons_advanced = no
+		}
+		modifier = {
+			factor = 2
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_bio_armor_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_biological_weapons_advanced = no
+		}
+		modifier = {
+			factor = 2
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_bio_armor_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                    Nanomaterial Armor                  ##
+############################################################
+
+esc_tech_armor_nanite_1 = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
+	gateway = ESC_NANITE_ARMOR
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			ESC_TRIGGER_may_research_cybernetic_amoeba = yes
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			ESC_TRIGGER_may_research_cybernetic_amoeba = yes
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##              Improved Nanomaterial Armor               ##
+############################################################
+
+esc_tech_armor_nanite_2 = {
+	area = society
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_armor_nanite_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_armor_nanite_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##             Augmented Dragonscale Armor                ##
+############################################################
+
+esc_tech_armor_dragonscales_nanite = {
+	area = society
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" "tech_dragon_armor" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                     Shielding Armor                    ##
+############################################################
+
+esc_tech_armor_shield_1 = {
+	area = physics
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
+	gateway = ESC_SHIELD_ARMOR
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##               Improved Shielding Armor                 ##
+############################################################
+
+esc_tech_armor_shield_2 = {
+	area = physics
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	prerequisites = { "esc_tech_armor_shield_1" }
+	gateway = ESC_SHIELD_ARMOR
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                   Shielding Bulwark                    ##
+############################################################
+
+esc_tech_armor_shield_3 = {
+	area = physics
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_armor_shield_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_armor_shield_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_armor_shield_3 }
+			}
+		}
+	}
+}
+
+############################################################
+##                    Hardlight Armor                     ##
+############################################################
+
+esc_tech_armor_wraith = {
+	area = physics
+	category = { particles }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = killed_wraith }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = killed_wraith }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                      Horror Armor                      ##
+############################################################
+
+esc_tech_armor_horror = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	prerequisites = {  }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = horror_killed }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = horror_killed }
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##             Reinforced Crystalline Plating             ##
+############################################################
+
+esc_tech_crystal_armor_3 = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_armor_6" }
+	is_rare = yes
+	ai_update_type = all
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_armor_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_armor_3 }
+			}
+		}
+	}
+}
+
+############################################################
+###             ESC TECHNOLOGIES : SHIELDS               ###
+############################################################
+
+# ── Improved Hyper Shield					: tier 6 shields
+#     └─ Ultrahyperbolic Shields			: tier 7 shields
+#         └─ Wave-Force Armor				: tier 8 shields
+# ── Cyclonic Deflectors					: special tier 5 shields
+#     └─ Cyclonic Shields					: special tier 6 shields
+#         └─ Improved Cyclonic Shields		: special tier 7 shields
+# ── Improved Dark Matter Shields			: tier 7 shields [vanilla FE upgrade]
+#     └─ Perfected Dark Matter Shields		: tier 8 shields [vanilla FE upgrade]
+# ── Improved Psionic Shields				: tier 7 psionic shields
+#     └─ Absolute Terror Field				: tier 8 psionic shields
+
+############################################################
+##                 Improved Hyper Shield                  ##
+############################################################
+
+esc_tech_shields_6 = {
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	prerequisites = { "tech_shields_5" "esc_tech_grand_research_initiative" }
+	gateway = ESC_SHIELDS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+############################################################
+##                UltraHyperbolic Shield                  ##
+############################################################
+
+esc_tech_shields_7 = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = all
+	prerequisites = { "esc_tech_shields_6" }
+	is_rare = yes
+	gateway = ESC_SHIELDS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_shields_7 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_shields_7 }
+			}
+		}
+	}
+}
+
+############################################################
+##                   Wave-Force Armor                     ##
+############################################################
+
+esc_tech_shields_8 = {
+	area = physics
+	category = { field_manipulation }
+	tier = 7
+	cost = @ESC_TECH_tier7_cost1
+	weight = @ESC_TECH_tier7_weight1
+	ai_update_type = all
+	prerequisites = { "esc_tech_shields_7" "esc_tech_chrono_spatial_weapons" }
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_shields_8 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_shields_8 }
+			}
+		}
+	}
+}
+
+############################################################
+##                  Cyclonic Deflectors                   ##
+############################################################
+
+esc_tech_shields_cyclonic_1 = {
+    area = physics
+	category = { field_manipulation }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = all
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_shield_rechargers_1" "tech_shields_5" }
+	gateway = ESC_CYCLONIC_SHIELDS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+}
+
+############################################################
+##                    Cyclonic Shields                    ##
+############################################################
+
+esc_tech_shields_cyclonic_2 = {
+    area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	ai_update_type = all
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	gateway = ESC_CYCLONIC_SHIELDS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+}
+
+############################################################
+##               Improved Cyclonic Shields                ##
+############################################################
+
+esc_tech_shields_cyclonic_3 = {
+    area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = all
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		factor = 1.25
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_shields_cyclonic_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_shields_cyclonic_3 }
+			}
+		}
+	}
+}
+
+############################################################
+##              Improved Dark Matter Shield               ##
+############################################################
+
+esc_tech_dark_matter_shields_2 = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = all
+	prerequisites = { "tech_dark_matter_deflector" }
+	is_rare = yes
+	gateway = ESC_DARK_MATTER_SHIELDS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = @ACOT_active_flag
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_dark_matter_shields_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			has_global_flag = @ACOT_active_flag
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_dark_matter_shields_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##              Perfected Dark Matter Shield              ##
+############################################################
+
+esc_tech_dark_matter_shields_3 = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	ai_update_type = all
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			has_global_flag = @ACOT_active_flag
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_dark_matter_shields_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			has_global_flag = @ACOT_active_flag
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_dark_matter_shields_3 }
+			}
+		}
+	}
+}
+
+############################################################
+##                 Imprived Psionic Shield                ##
+############################################################
+
+esc_tech_psionic_shield_2 = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = all
+	prerequisites = { "tech_psionic_shield" "esc_tech_psionic_weapons" }
+	gateway = ESC_PSIONIC_SHIELDS
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                       A.T. Field                       ##
+############################################################
+
+esc_tech_psionic_shield_3 = {
+	area = society
+	category = { psionics }
+	tier = 6 # there aren't enough tier 6 society tech to unlock tier 7 purely on psionics
+	cost = @ESC_TECH_tier7_cost1
+	weight = @ESC_TECH_tier7_weight1
+	ai_update_type = all
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 0.75
+			NOR = {
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_psionics"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}

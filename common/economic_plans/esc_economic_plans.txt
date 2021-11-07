@@ -1,0 +1,232 @@
+# ############################################################
+# ##                 ESC : AI Economic Plans                ##
+# ############################################################
+
+basic_economy_plan = {
+
+	# energy and mineral
+	income = {
+		energy = 400
+		minerals = 600
+	}
+
+	focus = {
+		energy = 100
+		minerals = 100
+	}
+
+	# consumer goods
+	subplan = {
+		potential = {
+			country_uses_consumer_goods = yes
+			has_monthly_income = { resource = minerals value > 30 }
+		}
+
+		income = { consumer_goods = 30 }
+		focus = { consumer_goods = 10 }
+	}
+
+	# food production
+	subplan = {
+		potential = {
+			country_uses_food = yes
+		}
+
+		income = { food = 40 }
+		focus = { food = 30 }
+	}
+
+	# alloys : from minerals
+	subplan = {
+		potential = {
+			is_catalytic_empire = no
+			has_monthly_income = { resource = minerals value > 30 }
+		}
+
+		income = { alloys = 30 }
+		focus = { alloys = 20 }
+	}
+	# alloys : from food
+	subplan = {
+		potential = {
+			is_catalytic_empire = yes
+			has_monthly_income = { resource = food value > 30 }
+		}
+
+		income = { alloys = 30 }
+		focus = { alloys = 20 }
+	}
+
+	# research, unity and vanilla rare resources | no CG usage
+	subplan = {
+		potential = {
+			country_uses_consumer_goods = no
+			has_monthly_income = { resource = energy value > 60 }
+			has_monthly_income = { resource = minerals value > 20 }
+		}
+
+		income = {
+			physics_research = 500
+			society_research = 500
+			engineering_research = 500
+			unity = 150
+			alloys = 500
+			exotic_gases = 5
+			volatile_motes = 5
+			rare_crystals = 5
+		}
+		pops = 9000
+	}
+	# research, unity and vanilla rare resources | CG usage
+	subplan = {
+		potential = {
+			country_uses_consumer_goods = yes
+			has_monthly_income = { resource = energy value > 60 }
+			has_monthly_income = { resource = minerals value > 60 }
+			has_monthly_income = { resource = consumer_goods value > 30 }
+		}
+
+		income = {
+			physics_research = 500
+			society_research = 500
+			engineering_research = 500
+			unity = 150
+			alloys = 500
+			exotic_gases = 5
+			volatile_motes = 5
+			rare_crystals = 5
+		}
+		pops = 9000
+	}
+
+	# strategic resources : zro : CG usage
+	subplan = {
+		potential = {
+			country_uses_consumer_goods = yes
+			has_technology = tech_mine_zro
+			has_monthly_income = { resource = energy value > 30 }
+			has_monthly_income = { resource = minerals value > 30 }
+			has_monthly_income = { resource = consumer_goods value > 20 }
+			has_monthly_income = { resource = exotic_gases value > 4 }
+			has_monthly_income = { resource = rare_crystals value > 4 }
+			has_monthly_income = { resource = volatile_motes value > 4 }
+		}
+
+		income = { sr_zro = 4 }
+	}
+	# strategic resources : zro : no GS usage
+	subplan = {
+		potential = {
+			country_uses_consumer_goods = no
+			has_technology = tech_mine_zro
+			has_monthly_income = { resource = energy value > 30 }
+			has_monthly_income = { resource = minerals value > 30 }
+			has_monthly_income = { resource = exotic_gases value > 4 }
+			has_monthly_income = { resource = rare_crystals value > 4 }
+			has_monthly_income = { resource = volatile_motes value > 4 }
+		}
+
+		income = { sr_zro = 4 }
+	}
+
+	# strategic resources : dark matter : nornal empires
+	subplan = {
+		potential = {
+			is_gestalt = no
+			has_technology = tech_mine_dark_matter
+			has_monthly_income = { resource = consumer_goods value > 20 }
+			has_monthly_income = { resource = food value > 20 }
+			has_monthly_income = { resource = volatile_motes value > 4 }
+		}
+
+		income = { sr_dark_matter = 4 }
+	}
+	# strategic resources : dark matter : food usage hvies
+	subplan = {
+		potential = {
+			country_uses_food = yes
+			is_hive_empire = yes
+			has_technology = tech_mine_dark_matter
+			has_monthly_income = { resource = energy value > 20 }
+			has_monthly_income = { resource = food value > 20 }
+			has_monthly_income = { resource = volatile_motes value > 4 }
+		}
+
+		income = { sr_dark_matter = 4 }
+	}
+	# strategic resources : dark matter : mineral usage hives
+	subplan = {
+		potential = {
+			country_uses_food = no
+			is_hive_empire = yes
+			has_technology = tech_mine_dark_matter
+			has_monthly_income = { resource = energy value > 20 }
+			has_monthly_income = { resource = minerals value > 20 }
+			has_monthly_income = { resource = volatile_motes value > 4 }
+		}
+
+		income = { sr_dark_matter = 4 }
+	}
+	# strategic resources : dark matter : machives
+	subplan = {
+		potential = {
+			is_machine_empire = yes
+			has_technology = tech_mine_dark_matter
+			has_monthly_income = { resource = energy value > 30 }
+			has_monthly_income = { resource = volatile_motes value > 4 }
+		}
+
+		income = { sr_dark_matter = 4 }
+	}
+
+	# ESC special resources : nanites : normal empires
+	subplan = {
+		potential = {
+			is_gestalt = no
+			has_technology = esc_tech_synthetic_lifeform_studies
+			has_monthly_income = { resource = alloys value > 30 }
+			has_monthly_income = { resource = consumer_goods value > 30 }
+		}
+
+		income = { nanites = 4 }
+	}
+	# ESC special resources : nanites : food usage hives
+	subplan = {
+		potential = {
+			has_technology = esc_tech_synthetic_lifeform_studies
+			country_uses_food = yes
+			is_hive_empire = yes
+			has_monthly_income = { resource = food value > 20 }
+			has_monthly_income = { resource = alloys value > 20 }
+		}
+
+		income = { nanites = 4 }
+	}
+	# ESC special resources : nanites : mineral usage hives
+	subplan = {
+		potential = {
+			has_technology = esc_tech_synthetic_lifeform_studies
+			country_uses_food = no
+			is_hive_empire = yes
+			has_monthly_income = { resource = minerals value > 20 }
+			has_monthly_income = { resource = alloys value > 20 }
+		}
+
+		income = { nanites = 4 }
+	}
+	# ESC special resources : nanites : machines
+	subplan = {
+		potential = {
+			has_technology = esc_tech_synthetic_lifeform_studies
+			is_machine_empire = yes
+			has_monthly_income = { resource = energy value > 30 }
+			has_monthly_income = { resource = alloys value > 30 }
+		}
+
+		income = { nanites = 4 }
+	}
+
+	empire_size = 1.1 #admin cap is fine with being 10% over limit
+
+	ai_weight = { weight = 5 }
+}

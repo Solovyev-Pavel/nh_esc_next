@@ -1,0 +1,414 @@
+# particle definitions for Misisle weapons
+ObjectTypes = {
+
+############################################################
+###     Missile Weapons' Particles : Normal Missiles     ###
+############################################################
+
+# Idle Effects
+
+pdxparticle = {
+	name = "esc_missile_6_idle_particle"
+	type = "esc_purple_missile_idle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_missile_6_idle_trail_particle"
+	type = "esc_purple_missile_idle_drops_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_missile_7_idle_particle"
+	type = "esc_red_missile_idle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_missile_7_idle_trail_particle"
+	type = "esc_red_missile_idle_drops_effect"
+	scale = 0.75
+}
+
+############################################################
+###     Missile Weapons' Particles : Corrosive Torp      ###
+############################################################
+
+# Idle Effects
+
+pdxparticle = {
+	name = "esc_corrosive_warhead_idle_particle"
+	type = "esc_corrosive_warhead_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_corrosive_warhead_idle_trail_particle"
+	type = "esc_corrosive_warhead_idle_drop_effect"
+	scale = 1.0
+}
+
+# Hit Effects
+
+pdxparticle = {
+	name = "esc_corrosive_warhead_hit_effect"
+	type = "esc_corrosive_warhead_hit_effect"
+	scale = 2.0
+}
+
+############################################################
+###     Missile Weapons' Particles : Plasma Missiles 1   ###
+############################################################
+
+# Plasma Missile 1 muzzle effects
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_1_muzzle_particle"
+	type = "esc_plasma_missile_1_muzzle_effect"
+	scale = 0.80
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_1_muzzle_particle"
+	type = "esc_plasma_missile_1_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_1_muzzle_particle"
+	type = "esc_plasma_missile_1_muzzle_effect"
+	scale = 0.25
+}
+
+# Plasma Missile 1 idle effects
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_1_idle_particle"
+	type = "esc_plasma_missile_1_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "small_esc_plasma_missile_1_idle_trail_particle"
+	type = "esc_plasma_missile_1_idle_drop_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_1_idle_particle"
+	type = "esc_plasma_missile_1_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "medium_esc_plasma_missile_1_idle_trail_particle"
+	type = "esc_plasma_missile_1_idle_drop_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_1_idle_particle"
+	type = "esc_plasma_missile_1_idle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_1_idle_trail_particle"
+	type = "esc_plasma_missile_1_idle_drop_effect"
+	scale = 1.5
+}
+
+# Plasma Missile 1 hit effects
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_1_hit_effect"
+	type = "esc_plasma_missile_1_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_1_hit_effect"
+	type = "esc_plasma_missile_1_hit_effect"
+	scale = 0.6
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_1_hit_effect"
+	type = "esc_plasma_missile_1_hit_effect"
+	scale = 0.45
+}
+
+############################################################
+###     Missile Weapons' Particles : Plasma Missiles 2   ###
+############################################################
+
+# Plasma Missile 2 muzzle effects
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_2_muzzle_particle"
+	type = "esc_plasma_missile_2_muzzle_effect"
+	scale = 0.80
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_2_muzzle_particle"
+	type = "esc_plasma_missile_2_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_2_muzzle_particle"
+	type = "esc_plasma_missile_2_muzzle_effect"
+	scale = 0.25
+}
+
+# Plasma Missile 2 idle effects
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_2_idle_particle"
+	type = "esc_plasma_missile_2_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "small_esc_plasma_missile_2_idle_trail_particle"
+	type = "esc_plasma_missile_2_idle_drop_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_2_idle_particle"
+	type = "esc_plasma_missile_2_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "medium_esc_plasma_missile_2_idle_trail_particle"
+	type = "esc_plasma_missile_2_idle_drop_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_2_idle_particle"
+	type = "esc_plasma_missile_2_idle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_2_idle_trail_particle"
+	type = "esc_plasma_missile_2_idle_drop_effect"
+	scale = 1.5
+}
+
+# Plasma Missile 2 hit effects
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_2_hit_effect"
+	type = "esc_plasma_missile_2_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_2_hit_effect"
+	type = "esc_plasma_missile_2_hit_effect"
+	scale = 0.6
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_2_hit_effect"
+	type = "esc_plasma_missile_2_hit_effect"
+	scale = 0.45
+}
+
+############################################################
+###     Missile Weapons' Particles : Plasma Missiles 3   ###
+############################################################
+
+# Plasma Missile 3 muzzle effects
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_3_muzzle_particle"
+	type = "esc_plasma_missile_3_muzzle_effect"
+	scale = 0.80
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_3_muzzle_particle"
+	type = "esc_plasma_missile_3_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_3_muzzle_particle"
+	type = "esc_plasma_missile_3_muzzle_effect"
+	scale = 0.25
+}
+
+# Plasma Missile 3 idle effects
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_3_idle_particle"
+	type = "esc_plasma_missile_3_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "small_esc_plasma_missile_3_idle_trail_particle"
+	type = "esc_plasma_missile_3_idle_drop_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_3_idle_particle"
+	type = "esc_plasma_missile_3_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "medium_esc_plasma_missile_3_idle_trail_particle"
+	type = "esc_plasma_missile_3_idle_drop_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_3_idle_particle"
+	type = "esc_plasma_missile_3_idle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_3_idle_trail_particle"
+	type = "esc_plasma_missile_3_idle_drop_effect"
+	scale = 1.5
+}
+
+# Plasma Missile 1 hit effects
+
+pdxparticle = {
+	name = "large_esc_plasma_missile_3_hit_effect"
+	type = "esc_plasma_missile_3_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_missile_3_hit_effect"
+	type = "esc_plasma_missile_3_hit_effect"
+	scale = 0.6
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_missile_3_hit_effect"
+	type = "esc_plasma_missile_3_hit_effect"
+	scale = 0.45
+}
+
+############################################################
+###     Missile Weapons' Particles : Swarmer Missiles    ###
+############################################################
+
+# Idle Effects
+
+pdxparticle = {
+	name = "esc_swarmer_missiles_3_idle_particle"
+	type = "esc_purple_missile_idle_effect"
+	scale = 0.7
+}
+
+pdxparticle = {
+	name = "esc_swarmer_missiles_4_idle_particle"
+	type = "esc_red_missile_idle_effect"
+	scale = 0.7
+}
+
+# Hit Effects
+
+pdxparticle = {
+	name = "esc_swarmer_missiles_3_hit_effect"
+	type = "esc_swarmer_missiles_3_hit_effect"
+	scale = 2.0
+}
+
+pdxparticle = {
+	name = "esc_swarmer_missiles_4_hit_effect"
+	type = "esc_swarmer_missiles_4_hit_effect"
+	scale = 2.0
+}
+
+############################################################
+###     Missile Weapons' Particles : X-Slot Missiles     ###
+############################################################
+
+# Muzzle effects
+
+pdxparticle = {
+	name = "esc_xmissile1_muzzle_effect"
+	type = "esc_red_missile_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_xmissile2_muzzle_effect"
+	type = "esc_blue_missile_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_xmissile3_muzzle_effect"
+	type = "esc_purple_missile_muzzle_effect"
+	scale = 1.5
+}
+
+# Idle effects
+
+pdxparticle = {
+	name = "esc_xmissile1_idle_particle"
+	type = "esc_red_missile_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile1_idle_trail_particle"
+	type = "esc_red_missile_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile2_idle_particle"
+	type = "esc_blue_missile_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile2_idle_trail_particle"
+	type = "esc_blue_missile_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile3_idle_particle"
+	type = "esc_purple_missile_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile3_idle_trail_particle"
+	type = "esc_purple_missile_idle_drops_effect"
+	scale = 1.0
+}
+
+# hit effects
+
+pdxparticle = {
+	name = "esc_xmissile1_hit_effect"
+	type = "esc_red_missile_hit_effect"
+	scale = 2.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile2_hit_effect"
+	type = "esc_blue_missile_hit_effect"
+	scale = 2.0
+}
+
+pdxparticle = {
+	name = "esc_xmissile3_hit_effect"
+	type = "esc_purple_missile_hit_effect"
+	scale = 2.0
+}
+
+}

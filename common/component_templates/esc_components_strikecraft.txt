@@ -1,0 +1,937 @@
+############################################################
+##                   ESC : Strikecrafts                   ##
+############################################################
+
+# - Assault Strikecrafts
+#   - Assault Interceptor Wing			H
+#   - Assault Bomber Wing				H
+# - Siegebreaker Strikecrafts
+#   - Siegebreaker Interceptor Wing		H
+#   - Siegebreaker Bomber Wing			H
+# - Voidstalker Strikecrafts
+#   - Voidstalker Interceptor Wing		H
+#   - Voidstalker Bomber Wing			H
+# - Highbred Amoeba						H
+#   - Genetically-Engineered Amoeba		H
+#      - Perfect Space Organism			H
+#   - Cybernetically-Augmented Amoeba	H
+#      - Bionic Amoeba					H
+# - Ravaging Swarmers					H
+# - Mercenary Squadron					H
+# - Elite Mercenary Squadron			H
+
+############################################################
+##                Assault Interceptor Wing                ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_FIGHTERS_HANGAR_4
+	size = LARGE
+	entity = "fighter_entity"
+	icon = GFX_esc_strikecrafts_interceptor_4
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_fighter_laser_4"
+	power = -75
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t6_upkeep_energy
+			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 10 max = 20 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 50
+	armor = 0
+	shield = 40
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_FIGHTERS_HANGAR_4
+	prerequisites = { "esc_tech_strikecraft_4" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_FIGHTERS_HANGAR_5
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                   Assault Bomber Wing                  ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_BOMBERS_HANGAR_4
+	size = LARGE
+	entity = "bomber_entity"
+	icon = GFX_esc_strikecrafts_bomber_4
+	icon_frame = 1
+
+	weapon_type = instant
+	projectile_gfx = "esc_bomber_laser_4"
+	power = -75
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t6_upkeep_energy
+			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 40 }
+	cooldown = 4
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 60
+	armor = 0
+	shield = 40
+
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_BOMBERS_HANGAR_4
+	prerequisites = { "esc_tech_strikecraft_4" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_BOMBERS_HANGAR_5
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##              Siegebreaker Interceptor Wing             ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_FIGHTERS_HANGAR_5
+	size = LARGE
+	entity = "fighter_entity"
+	icon = GFX_esc_strikecrafts_interceptor_5
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_fighter_laser_5"
+	power = -85
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 60
+	armor = 0
+	shield = 50
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_FIGHTERS_HANGAR_5
+	prerequisites = { "esc_tech_strikecraft_5" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_FIGHTERS_HANGAR_6
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                Siegebreaker Bomber Wing                ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_BOMBERS_HANGAR_5
+	size = LARGE
+	entity = "bomber_entity"
+	icon = GFX_esc_strikecrafts_bomber_5
+	icon_frame = 1
+
+	weapon_type = instant
+	projectile_gfx = "esc_bomber_laser_5"
+	power = -85
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 30 max = 50 }
+	cooldown = 4
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 70
+	armor = 0
+	shield = 50
+
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_BOMBERS_HANGAR_5
+	prerequisites = { "esc_tech_strikecraft_5" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_BOMBERS_HANGAR_6
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##              Voidstalker Interceptor Wing              ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_FIGHTERS_HANGAR_6
+	size = LARGE
+	entity = "fighter_entity"
+	icon = GFX_esc_strikecrafts_interceptor_6
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_fighter_laser_6"
+	power = -100
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 60
+	armor = 0
+	shield = 50
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_6
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_FIGHTERS_HANGAR_6
+	prerequisites = { "esc_tech_strikecraft_6" }
+	tags = { weapon_type_strike_craft }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                Voidstalker Bomber Wing                 ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_BOMBERS_HANGAR_6
+	size = LARGE
+	entity = "bomber_entity"
+	icon = GFX_esc_strikecrafts_bomber_6
+	icon_frame = 1
+
+	weapon_type = instant
+	projectile_gfx = "esc_bomber_laser_6"
+	power = -100
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 40 max = 60 }
+	cooldown = 4
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 70
+	armor = 0
+	shield = 50
+
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_6
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_BOMBERS_HANGAR_6
+	prerequisites = { "esc_tech_strikecraft_6" }
+	tags = { weapon_type_strike_craft }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                     Highbred Amoeba                    ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_AMOEBA_2
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 35 max = 55 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.7
+	health = 75
+	armor = 20
+	shield = 0
+
+	tracking = 0.5
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.6
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_2
+	prerequisites = { "esc_tech_amoeba_2" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_AMOEBA_BIO_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##              Genetically-Engineered Amoeba             ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_AMOEBA_BIO_3
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+	power = -50
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 50 max = 70 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 100
+	armor = 20
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_3
+	prerequisites = { "esc_tech_amoeba_3b" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_AMOEBA_BIO_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##              Genetically-Engineered Amoeba             ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_AMOEBA_BIO_4
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+	power = -60
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 60 max = 80 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 125
+	armor = 30
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_4
+	prerequisites = { "esc_tech_amoeba_4b" }
+	tags = { weapon_type_strike_craft }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##              Genetically-Engineered Amoeba             ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_AMOEBA_CYBER_3
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+	power = -50
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 45 max = 65 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 80
+	armor = 0
+	shield = 25
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_3
+	prerequisites = { "esc_tech_amoeba_3c" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_AMOEBA_CYBER_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##                       Bionic Amoeba                    ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_AMOEBA_CYBER_4
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+	power = -60
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 55 max = 75 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 85
+	armor = 0
+	shield = 50
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_4
+	prerequisites = { "esc_tech_amoeba_4c" }
+	tags = { weapon_type_strike_craft }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##                    Mercenary Squadron                  ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_MERCENRY_HANGAR_1
+	size = LARGE
+	entity = "fighter_entity"
+	icon = GFX_esc_strikecrafts_mercenary_1
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "scout_laser_1"
+	power = -45
+
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @l_t5_cost
+			alloys = @l_t3_cost
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t6_upkeep_energy
+			alloys = @l_t4_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 6 max = 12 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 40
+	armor = 0
+	shield = 25
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_6
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_MERCENRY_HANGAR_1
+	prerequisites = { "esc_tech_strikecraft_mercenary_1" }
+	tags = { weapon_type_strike_craft }
+	upgrades_to = ESC_MERCENRY_HANGAR_2
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_megacorp = no
+		}
+	}
+}
+
+############################################################
+##                 Elite Mercenary Squadron               ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_MERCENRY_HANGAR_2
+	size = LARGE
+	entity = "fighter_entity"
+	icon = GFX_esc_strikecrafts_mercenary_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "strike_craft_laser_3"
+	power = -75
+
+	resources = {
+		category = ship_components
+		cost = {
+			energy = @ESC_WEAPON_m_t7_cost_alloys
+			alloys = @l_t4_cost
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @l_t5_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 12 max = 24 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 60
+	armor = 0
+	shield = 35
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_6
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
+	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_MERCENRY_HANGAR_2
+	prerequisites = { "esc_tech_strikecraft_mercenary_2" }
+	tags = { weapon_type_strike_craft }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_megacorp = no
+		}
+	}
+}
+
+############################################################
+##                     Ravaging Swarmers                  ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_SWARMER_STRIKECRAFT_2
+	size = LARGE
+	entity = "swarm_01_fighter_entity"
+	icon = GFX_esc_strikecrafts_scourge_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+	power = -90
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+			volatile_motes = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = 10
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 150
+	armor = 30
+	shield = 0
+
+	tracking = 0.70
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_penetration = 0.75
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_SWARMER_STRIKECRAFT_2
+	prerequisites = { "esc_tech_swarm_strike_craft_2" }
+	tags = { weapon_type_strike_craft }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}

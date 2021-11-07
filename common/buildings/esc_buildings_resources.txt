@@ -1,0 +1,754 @@
+############################################################
+###               ESC buildings : resources              ###
+############################################################
+
+# - Zro Distillery					: special building for Zro production
+# - Dark Matter Drawing Facility	: special building for Zro production
+# - Nanite foundry          		: provides jobs for generation of 'nanites' resources (nanite weapons, nanite-augmented armor, shielding armor)
+# - Crystal Farm	        		: provides jobs for generation of 'rare crystal' resources (crystalline weapons)
+# - Improved Crystal Farm	   		: improved versin of Crystal Farm
+# - Reprocessing Plant				: special building that provides 'resource reprocessing manager' jobs that provide alloys and consumer goods. requires empire to have killed Scavenger Bot
+# - Mantle Mining Facility			: special ecumenopolis mining building
+# - Imporved Mantle Mining Facility	: improved version of the Mantle Mining Facility
+
+############################################################
+###                    Zro Distillery                    ###
+############################################################
+
+esc_building_zro_distillery = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	icon = esc_building_zro_distillery
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	allow = { has_upgraded_capital = yes }
+
+	resources = {
+        category = planet_buildings
+        cost = {
+			minerals = 400
+			rare_crystals = 15
+			exotic_gases = 15
+			volatile_motes = 15
+        }
+        upkeep = {
+			energy = 5
+        }
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_zro_distiller_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = job_esc_zro_distiller_effect_desc
+	}
+
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_zro_distiller_drone_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_hive_empire = yes }
+        }
+        text = job_esc_zro_distiller_drone_effect_desc
+	}
+
+	prerequisites = { "esc_tech_zro_distilleries" }
+
+	ai_resource_production = {
+		sr_zro = 4
+        trigger = { always = yes }
+    }
+}
+
+############################################################
+###             Dark Matter Drawing Facility             ###
+############################################################
+
+esc_building_dark_matter_facility = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	icon = esc_building_dark_matter_facility
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+			has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+			has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+		}
+	}
+
+	allow = { has_upgraded_capital = yes }
+
+	resources = {
+        category = planet_buildings
+        cost = {
+			minerals = 500
+			volatile_motes = 25
+		}
+		produces = {
+			sr_dark_matter = 2
+		}
+        upkeep = {
+			energy = 5
+			volatile_motes = 2
+        }
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_dark_matter_shaper_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = job_esc_dark_matter_shaper_effect_desc
+	}
+
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_dark_matter_shaper_drone_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = job_esc_dark_matter_shaper_drone_effect_desc
+	}
+
+	prerequisites = { "esc_tech_dark_matter_facilities" }
+
+	ai_resource_production = {
+		sr_dark_matter = 4
+        trigger = { always = yes }
+	}
+}
+
+############################################################
+###                   Nanite Foundry                     ###
+############################################################
+
+esc_building_nanite_foundry = {
+	base_buildtime = 540
+	icon = esc_building_nanite_foundry
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		exists = owner
+		owner = { ESC_TRIGGER_is_normal_empire_or_machine_fe = yes }
+	}
+
+    resources = {
+        category = planet_buildings
+        cost = {
+			minerals = 600
+			rare_crystals = 50
+			exotic_gases = 25
+        }
+        upkeep = {
+			energy = 4
+			alloys = 2
+        }
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_nanite_breeder_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = job_esc_nanite_breeder_effect_desc
+	}
+
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_nanite_breeder_drone_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = job_esc_nanite_breeder_drone_effect_desc
+	}
+
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
+
+	ai_resource_production = {
+		nanites = 4
+        trigger = { always = yes }
+    }
+}
+
+############################################################
+###                    Crystal Farm                      ###
+############################################################
+
+esc_building_crystal_farm_1 = {
+    base_buildtime = 360
+	icon = esc_building_crystal_farm_1
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	allow = { has_upgraded_capital = yes }
+
+	resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 360
+        }
+        upkeep = {
+            minerals = 4
+        }
+	}
+
+	upgrades = { esc_building_crystal_farm_2 }
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_crystal_farmer_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = job_esc_crystal_farmer_effect_desc
+	}
+
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_crystal_farmer_drone_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = job_esc_crystal_farmer_drone_effect_desc
+	}
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+
+	ai_resource_production = {
+        rare_crystals = 8
+        trigger = { always = yes }
+    }
+}
+
+############################################################
+###               Improved Crystal Farm                  ###
+############################################################
+
+esc_building_crystal_farm_2 = {
+    base_buildtime = 360
+	icon = esc_building_crystal_farm_2
+	category = manufacturing
+	can_build = no
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+	}
+
+	allow = { has_upgraded_capital = yes }
+
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 480
+            rare_crystals = 50
+        }
+        upkeep = {
+            minerals = 8
+            rare_crystals = 1
+        }
+    }
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_crystal_farmer_add = 4
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = job_esc_crystal_farmer_effect_desc
+	}
+
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_crystal_farmer_drone_add = 4
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = job_esc_crystal_farmer_drone_effect_desc
+	}
+
+	prerequisites = { "esc_tech_improved_crystal_farm" }
+
+	ai_resource_production = {
+        rare_crystals = 8
+        trigger = { always = yes }
+    }
+}
+
+############################################################
+###                 Reprocessing Plant                   ###
+############################################################
+
+esc_building_reprocessing_plant = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	icon = esc_building_reprocessing_plant
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden }
+		exists = owner
+		owner = { has_country_flag = scrapper_killed }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+        category = planet_buildings
+        cost = {
+			minerals = 400
+			rare_crystals = 10
+			exotic_gases = 10
+        }
+        upkeep = {
+			energy = 3
+        }
+	}
+
+	# regular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_pops_consumer_goods_upkeep_mult = -0.1
+			pop_amenities_usage_mult = -0.1
+			job_esc_reprocessor_add = 1
+			job_esc_reprocessor_per_pop = 0.05
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = job_esc_reprocessor_effect_desc
+	}
+
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			pop_amenities_usage_no_happiness_mult = -0.2
+			job_esc_reprocessor_drone_add = 1
+			job_esc_reprocessor_drone_per_pop = 0.05
+		}
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+				is_gestalt = yes
+				NOT = { has_valid_civic = civic_machine_servitor }
+			}
+        }
+        text = job_esc_reprocessor_drone_effect_desc
+	}
+	triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = { has_valid_civic = civic_machine_servitor }
+        }
+        text = job_esc_reprocessor_drone_rs_effect_desc
+	}
+
+	prerequisites = { "esc_tech_reprocessing_plant" }
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 4
+	}
+}
+
+############################################################
+###                Mantle Mining Facility                ###
+############################################################
+
+esc_building_magmaminer_1 = {
+	base_buildtime = 1080
+	base_cap_amount = 1
+	icon = esc_building_magmaminer_1
+	category = resource
+
+	potential = {
+		ESC_TRIGGER_can_host_mantle_miner = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
+	}
+
+	allow = { ESC_TRIGGER_can_build_mantle_miner = yes }
+
+	resources = {
+        category = planet_buildings
+        cost = {
+			minerals = 4000
+			alloys = 1000
+			volatile_motes = 100
+			rare_crystals = 100
+		}
+		produces = {
+			minerals = 10
+		}
+        upkeep = {
+			energy = 15
+			alloys = 10
+        }
+	}
+
+	# regular empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_planetary_core_miner_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = no
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = esc_planetary_core_miner_effect_regular_1
+	}
+
+	# regular empire + arcology planet
+	triggered_planet_modifier = {
+		potential = {
+			ESC_TRIGGER_is_city_planet = yes
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_borehole_maintainer_add = 1
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = esc_planetary_core_miner_effect_regular_2
+	}
+
+	# gestalt empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_planetary_core_miner_drone_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = no
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = esc_planetary_core_miner_effect_gestalt_1
+	}
+
+	# gestalt empire + arcology planet
+	triggered_planet_modifier = {
+		potential = {
+			ESC_TRIGGER_is_city_planet = yes
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_borehole_maintainer_drone_add = 1
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = esc_planetary_core_miner_effect_gestalt_2
+	}
+
+	prerequisites = { "esc_tech_magmaminer_1" }
+
+	### give AI extra minerals for free
+	ai_resource_production = {
+		minerals = 20
+        trigger = { always = yes }
+	}
+
+	on_queued = {
+		if = {
+			limit = { ESC_TRIGGER_needs_giant_borehole = yes }
+			set_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
+			add_deposit = d_esc_large_borehole_1
+		}
+	}
+
+	on_unqueued = {
+		if = {
+			limit = { has_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner }
+			remove_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
+			random_deposit = {
+				limit = { is_deposit_type = d_esc_large_borehole_1 }
+				remove_deposit = d_esc_large_borehole_1
+			}
+		}
+	}
+
+	on_built = {
+		remove_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
+		# after this, it is impossible to remove the blocker without cheats
+	}
+
+	upgrades = { esc_building_magmaminer_2 }
+}
+
+############################################################
+###           Improved Mantle Mining Facility            ###
+############################################################
+
+esc_building_magmaminer_2 = {
+	base_buildtime = 720
+	can_build = no # upgrade
+	icon = esc_building_magmaminer_2
+	category = resource
+
+	potential = {
+		ESC_TRIGGER_can_host_upgraded_mantle_miner = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
+	}
+
+	allow = { ESC_TRIGGER_can_build_mantle_miner = yes }
+
+	resources = {
+        category = planet_buildings
+        cost = {
+			minerals = 4000
+			alloys = 1000
+			volatile_motes = 100
+			rare_crystals = 100
+		}
+		produces = {
+			minerals = 20
+		}
+        upkeep = {
+			energy = 30
+			alloys = 20
+        }
+	}
+
+	# regular empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_planetary_core_miner_add = 5
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = no
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = esc_planetary_core_miner_effect_regular_1
+	}
+
+	# regular empire + arcology planet
+	triggered_planet_modifier = {
+		potential = {
+			ESC_TRIGGER_is_city_planet = yes
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_esc_borehole_maintainer_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = { is_regular_empire = yes }
+        }
+        text = esc_planetary_core_miner_effect_regular_2
+	}
+
+	# gestalt empire
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_planetary_core_miner_drone_add = 5
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = no
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = esc_planetary_core_miner_effect_gestalt_1
+	}
+
+	# gestalt empire + arcology planet
+	triggered_planet_modifier = {
+		potential = {
+			ESC_TRIGGER_is_city_planet = yes
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_esc_borehole_maintainer_drone_add = 2
+		}
+	}
+	triggered_desc = {
+        trigger = {
+			ESC_TRIGGER_is_city_planet = yes
+            exists = owner
+            owner = { is_gestalt = yes }
+        }
+        text = esc_planetary_core_miner_effect_gestalt_2
+	}
+
+	prerequisites = { "esc_tech_magmaminer_2" }
+
+	### give AI extra minerals for free
+	ai_resource_production = {
+		minerals = 40
+        trigger = { always = yes }
+	}
+}

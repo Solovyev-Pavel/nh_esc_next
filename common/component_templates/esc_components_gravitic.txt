@@ -1,0 +1,839 @@
+############################################################
+##                 ESC : Gravitic Weapons                 ##
+############################################################
+
+# - Gravitational Anomaly Projector		S/M/L
+# - Microsingularity Cannon				S/M/L
+# - Spatial Distortion Warhead			G
+# - Microsingularity Warhead			G
+# - Super-Graviton Cannon				X
+# - Focused Super-Graviton Cannon		X
+# - Titanic Super-Graviton Cannon		Titanic
+# - Singulatiry Bombers					H
+
+@ESC_WEAPON_gravitic_hull_damage = 1.25
+@ESC_WEAPON_gravitic_lance_hull_damage = 1.5
+@ESC_WEAPON_gravitic_armor_damage = 0.5
+@ESC_WEAPON_gravitic_armor_penetration = 0.0
+@ESC_WEAPON_gravitic_shield_damage = 2.0
+@ESC_WEAPON_gravitic_shield_penetration = 0.0
+
+@ESC_WEAPON_gravitic_bombers_hull_damage = 1.75
+@ESC_WEAPON_gravitic_bombers_armor_damage = 0.75
+@ESC_WEAPON_gravitic_bombers_armor_penetration = 0.0
+@ESC_WEAPON_gravitic_bombers_shield_damage = 1.0
+@ESC_WEAPON_gravitic_bombers_shield_penetration = 1.0
+
+############################################################
+##             Gravitational Anomaly Projector            ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_GRAVITY_CANNON_1
+	size = small
+	icon = GFX_esc_gravitic_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 34 max = 66 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_gravity_cannon_1" }
+	component_set = ESC_GRAVITY_CANNON_1
+	projectile_gfx = "esc_gravity_cannon_small"
+	upgrades_to = SMALL_ESC_GRAVITY_CANNON_2
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_GRAVITY_CANNON_1
+	size = medium
+	icon = GFX_esc_gravitic_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 68 max = 138 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.85
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_gravity_cannon_1" }
+	component_set = ESC_GRAVITY_CANNON_1
+	projectile_gfx = "esc_gravity_cannon_medium"
+	upgrades_to = MEDIUM_ESC_GRAVITY_CANNON_2
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_GRAVITY_CANNON_1
+	size = large
+	icon = GFX_esc_gravitic_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 182 max = 358 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.85
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_cannon_1" }
+	component_set = ESC_GRAVITY_CANNON_1
+	projectile_gfx = "esc_gravity_cannon_large"
+	upgrades_to = LARGE_ESC_GRAVITY_CANNON_2
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                Microsingularity Cannon                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_GRAVITY_CANNON_2
+	size = small
+	icon = GFX_esc_gravitic_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 48 max = 88 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 40
+	accuracy = 0.85
+	power = -24
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t8_upkeep_energy
+			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_gravity_cannon_2" }
+	component_set = ESC_GRAVITY_CANNON_2
+	projectile_gfx = "esc_gravity_cannon_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_GRAVITY_CANNON_2
+	size = medium
+	icon = GFX_esc_gravitic_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 106 max = 242 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.85
+	power = -46
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_gravity_cannon_2" }
+	component_set = ESC_GRAVITY_CANNON_2
+	projectile_gfx = "esc_gravity_cannon_medium"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_GRAVITY_CANNON_2
+	size = large
+	icon = GFX_esc_gravitic_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 256 max = 488 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.85
+	power = -90
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_cannon_2" }
+	component_set = ESC_GRAVITY_CANNON_2
+	projectile_gfx = "esc_gravity_cannon_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##               Spatial Distortion Warhead               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_GRAVITY_TORPS_1
+	size = torpedo
+	icon = GFX_esc_gravitic_torpedo_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 138 max = 358 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 45
+	range = 100
+	accuracy = 1.0
+	missile_speed = 17
+	missile_evasion = 0.1
+	missile_health = 25
+	missile_retarget_range = 100
+	power = -70
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_gravity_torpedo_1" }
+	component_set = ESC_GRAVITY_TORPS_1
+	projectile_gfx = "esc_gravitic_torpedoes"
+	upgrades_to = ESC_GRAVITY_TORPS_2
+	tags = { weapon_type_explosive weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                Microsingularity  Warhead               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_GRAVITY_TORPS_2
+	size = torpedo
+	icon = GFX_esc_gravitic_torpedo_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 208 max = 442 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 45
+	range = 100
+	accuracy = 1.0
+	missile_speed = 17
+	missile_evasion = 0.1
+	missile_health = 25
+	missile_retarget_range = 100
+	power = -80
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_gravity_torpedo_2" }
+	component_set = ESC_GRAVITY_TORPS_2
+	projectile_gfx = "esc_gravitic_torpedoes"
+	tags = { weapon_type_explosive weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                 Super-Graviton Cannon                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_GRAVITY_LANCE_1
+	size = extra_large
+	icon = GFX_esc_gravitic_lance_1
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 1300 max = 2600 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 70
+	range = 160
+	accuracy = 0.85
+	power = -275
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_lance_1" }
+	component_set = ESC_GRAVITY_LANCE_1
+	projectile_gfx = "esc_gravity_lance"
+	upgrades_to = ESC_GRAVITY_LANCE_2
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##            Focused Super-Graviton Cannon               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_GRAVITY_LANCE_2
+	size = extra_large
+	icon = GFX_esc_gravitic_lance_2
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 1600 max = 2800 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 70
+	range = 160
+	accuracy = 0.85
+	power = -325
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_lance_2" }
+	component_set = ESC_GRAVITY_LANCE_2
+	projectile_gfx = "esc_gravity_lance"
+	upgrades_to = ESC_GRAVITY_LANCE_JUGGERNAUT
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##            Titanic Super-Graviton Cannon               ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_GRAVITY_LANCE_TITANIC
+	size = titanic
+	icon = GFX_esc_gravitic_lance_3
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 165
+	range = 250
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_lance_titanic" }
+	component_set = ESC_GRAVITY_LANCE_TITANIC
+	projectile_gfx = "esc_gravity_lance_titanic"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_GRAVITY_LANCE_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_gravitic_lance_3
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+
+	damage = { min = 5000 max = 10000 }
+	windup = { min = 30 max = 50 }
+	total_fire_time = 165
+	range = 200
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_lance_titanic" }
+	component_set = ESC_GRAVITY_LANCE_JUGGERNAUT
+	projectile_gfx = "esc_gravity_lance"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                   Singularity Bombers                  ##
+############################################################
+
+strike_craft_component_template = {
+	key = ESC_GRAVITY_BOMBERS
+	size = LARGE
+	entity = "bomber_entity"
+	icon = GFX_esc_gravitic_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_gravity_cannon_tiny"
+	power = -70
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t7_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t7_upkeep_energy
+			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+
+	health = 70
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_gravitic_bombers_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_bombers_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_bombers_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_bombers_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_bombers_shield_damage
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_GRAVITY_BOMBERS
+	prerequisites = { "esc_tech_gravity_bombers" }
+	tags = { weapon_type_strike_craft }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires and Materialist FE/AFE should use this component
+			ESC_TRIGGER_is_normal_empire_or_materialist_fe = no
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}

@@ -1,0 +1,862 @@
+############################################################
+##                ESC : Leviathan Weapons                 ##
+############################################################
+
+# - Enigmatic Energy Discharger					L
+# - Enigmatic Energy Lash						M
+# - Enigmatic Energy Autocannon					S
+# - Enigmatic Energy Lance						X, Titanic
+# - Dimensional Horror Point Defense			M
+# - Tiyanki Beam Cannon							X, Titanic
+# - Junk Mine Launcher							G
+# - Voidspawn Missile Launcher					G, X, Titanic
+
+@ESC_WEAPON_enigmatic_hull_damage = 1.25
+@ESC_WEAPON_enigmatic_armor_damage = 0.5
+@ESC_WEAPON_enigmatic_armor_penetration = 0.5
+@ESC_WEAPON_enigmatic_shield_damage = 2.0
+@ESC_WEAPON_enigmatic_shield_penetration = 0.0
+
+@ESC_WEAPON_dimensional_horror_hull_damage = 1.1
+@ESC_WEAPON_dimensional_horror_armor_penetration = 0.1
+@ESC_WEAPON_dimensional_horror_armor_damage = 0.9
+@ESC_WEAPON_dimensional_horror_shield_penetration = 1.0
+@ESC_WEAPON_dimensional_horror_shield_damage = 1.0
+
+@ESC_WEAPON_tiyanki_hull_damage = 1.0
+@ESC_WEAPON_tiyanki_armor_damage = 2.0
+@ESC_WEAPON_tiyanki_armor_penetration = 0.0
+@ESC_WEAPON_tiyanki_shield_damage = 2.0
+@ESC_WEAPON_tiyanki_shield_penetration = 0.0
+
+@ESC_WEAPON_junk_hull_damage = 1.5
+@ESC_WEAPON_junk_armor_penetration = 0.0
+@ESC_WEAPON_junk_armor_damage = 0.8
+@ESC_WEAPON_junk_shield_penetration = 1.0
+@ESC_WEAPON_junk_shield_damage = 1.0
+
+@ESC_WEAPON_voidspawn_hull_damage = 3.0
+@ESC_WEAPON_voidspawn_armor_damage = 0.8
+@ESC_WEAPON_voidspawn_armor_penetration = 0.0
+@ESC_WEAPON_voidspawn_shield_damage = 1.0
+@ESC_WEAPON_voidspawn_shield_penetration = 1.0
+
+############################################################
+##              Enigmatic Energy Autocannon               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ENIGMATIC_AUTOCANNON
+	size = small
+	icon = GFX_esc_enigmatic_autocannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25.0 max = 35.0 }
+	windup = { min = 2.0 max = 14.0 }
+	total_fire_time = 15
+	range = 45
+	accuracy = 0.9
+	power = -25
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t8_upkeep_energy
+			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.65
+
+	prerequisites = { "esc_tech_enigmatic_autocannon" }
+	component_set = ESC_ENIGMATIC_AUTOCANNON
+	projectile_gfx = "esc_enigmatic_cannon_small"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                 Enigmatic Energy Lash                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ENIGMATIC_LASH
+	size = medium
+	icon = GFX_esc_enigmatic_lash
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 10.0 max = 15.0 }
+	windup = { min = 1.0 max = 1.0 }
+	total_fire_time = 5
+	range = 45
+	accuracy = 0.75
+	power = -25
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_enigmatic_lash" }
+	component_set = ESC_ENIGMATIC_LASH
+	projectile_gfx = "esc_enigmatic_cannon_medium"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##              Enigmatic Energy Discharger               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ENIGMATIC_CANNON
+	size = large
+	icon = GFX_esc_enigmatic_discharger
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 305.0 max = 825.0 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 55
+	range = 130
+	accuracy = 0.9
+	power = -110
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_enigmatic_cannon" }
+	component_set = ESC_ENIGMATIC_CANNON
+	projectile_gfx = "esc_enigmatic_cannon_large"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                Enigmatic Energy Lance                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_ENIGMATIC_LANCE
+	size = extra_large
+	icon = GFX_esc_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1750 max = 2500 }
+	windup = { min = 2.0 max = 18.0 }
+	total_fire_time = 70
+	range = 175
+	accuracy = 0.85
+	power = -300
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t8_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_enigmatic_lance" }
+	component_set = ESC_ENIGMATIC_LANCE
+	projectile_gfx = "esc_enigmatic_lance"
+	upgrades_to = ESC_ENIGMATIC_LANCE_JUGGERNAUT
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##            Enigmatic Energy Lance (Titanic)            ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_ENIGMATIC_LANCE_TITANIC
+	size = titanic
+	icon = GFX_esc_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 6000 max = 8500 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 160
+	range = 260
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_enigmatic_lance_titanic" }
+	component_set = ESC_ENIGMATIC_LANCE_TITANIC
+	projectile_gfx = "esc_enigmatic_lance_titanic"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = esc_enigmatic_energy }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_ENIGMATIC_LANCE_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 6000 max = 8500 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 160
+	range = 210
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t6_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_t_t6_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t6_upkeep_energy
+			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_enigmatic_lance_titanic" }
+	component_set = ESC_ENIGMATIC_LANCE_JUGGERNAUT
+	projectile_gfx = "esc_enigmatic_lance"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##            Dimensional Horror Point Defense            ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_EXTRADIMENSIONAL_PD
+	size = medium
+	icon = GFX_esc_horror_pd
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 17.0 max = 22.0 }
+	windup = { min = 1.0 max = 3.0 }
+	total_fire_time = 8
+	range = 50
+	accuracy = 0.8
+	power = -25
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			sr_dark_matter = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_dimensional_horror_hull_damage
+	armor_penetration = @ESC_WEAPON_dimensional_horror_armor_penetration
+	armor_damage = @ESC_WEAPON_dimensional_horror_armor_damage
+	shield_penetration = @ESC_WEAPON_dimensional_horror_shield_penetration
+	shield_damage = @ESC_WEAPON_dimensional_horror_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_extradimensional_pd" }
+	component_set = ESC_EXTRADIMENSIONAL_PD
+	projectile_gfx = "dimensional_horror_spike_weapon"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                  Tiyanki Beam Cannon                   ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_TIYANKI_CANNON
+	size = extra_large
+	icon = GFX_esc_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 2500 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = 175
+	accuracy = 0.85
+	power = -290
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_xl_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_xl_t7_upkeep_energy
+			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.3
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam" }
+	component_set = ESC_TIYANKI_CANNON
+	projectile_gfx = "esc_tiyanki_lance"
+	upgrades_to = ESC_TIYANKI_CANNON_JUGGERNAUT
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##             Tiyanki Beam Cannon (Titanic)              ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_TIYANKI_CANNON_TITANIC
+	size = titanic
+	icon = GFX_esc_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 4500 max = 9500 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 165
+	range = 250
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
+	component_set = ESC_TIYANKI_CANNON_TITANIC
+	projectile_gfx = "esc_tiyanki_lance_titanic"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# juggernaut
+weapon_component_template = {
+	key = ESC_TIYANKI_CANNON_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 4500 max = 9500 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 165
+	range = 200
+	accuracy = 0.85
+	power = -500
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_t_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_t_t7_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_t_t7_upkeep_energy
+			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = 10
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
+	component_set = ESC_TIYANKI_CANNON_JUGGERNAUT
+	projectile_gfx = "esc_tiyanki_lance"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                   Junk Mine Launcher                   ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_JUNK_MINE_LAUNCHER
+	size = torpedo
+	icon = GFX_esc_junk_mine
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 140 max = 190 }
+	windup = { min = 2 max = 15 }
+	total_fire_time = 40
+	range = 120
+	accuracy = 1.0
+	missile_speed = 17
+	missile_evasion = 0.1
+	missile_health = 20
+	missile_armor = 0
+	missile_retarget_range = 120
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t6_cost_alloys
+			minerals = @ESC_WEAPON_m_t6_cost_alloys
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t6_upkeep_energy
+			minerals = @ESC_WEAPON_m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_junk_hull_damage
+	armor_damage = @ESC_WEAPON_junk_armor_damage
+	armor_penetration = @ESC_WEAPON_junk_armor_penetration
+	shield_damage = @ESC_WEAPON_junk_shield_damage
+	shield_penetration = @ESC_WEAPON_junk_shield_penetration
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_junk_mines" }
+	component_set = ESC_JUNK_MINE_LAUNCHER
+	projectile_gfx = "scavenger_bot_secondary_weapon"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+############################################################
+##               Voidspawn Missile Launcher               ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_VOIDSPAWN_MISSILE
+	size = torpedo
+	icon = GFX_esc_voidspawn_missile_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 300 max = 500 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 80
+	range = 140
+	accuracy = 1.0
+	missile_speed = 17
+	missile_evasion = 0.1
+	missile_health = 25
+	missile_retarget_range = 120
+	power = -50
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t7_cost_alloys
+			food = @ESC_WEAPON_m_t7_cost_alloys
+			volatile_motes = @ESC_WEAPON_l_t9_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t7_upkeep_energy
+			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+			food = @ESC_WEAPON_l_t9_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
+	armor_damage = @ESC_WEAPON_voidspawn_armor_damage
+	armor_penetration = @ESC_WEAPON_voidspawn_armor_penetration
+	shield_damage = @ESC_WEAPON_voidspawn_shield_damage
+	shield_penetration = @ESC_WEAPON_voidspawn_shield_penetration
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_voidspawn_missile" }
+	component_set = ESC_VOIDSPAWN_MISSILE
+	projectile_gfx = "voidspawn_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+############################################################
+##               Voidspawn Missile Launcher               ##
+############################################################
+
+# x-slot
+weapon_component_template = {
+	key = ESC_VOIDSPAWN_MISSILE_X
+	size = extra_large
+	icon = GFX_esc_voidspawn_missile_1
+	icon_frame = 1
+	type = missile
+	firing_arc = 25.0
+	min_range = 15.0
+	use_ship_kill_target = no
+
+	damage = { min = 1200 max = 2400 }
+	windup = { min = 2 max = 20 }
+	total_fire_time = 80
+	range = 200
+	accuracy = 1.0
+	missile_speed = 17
+	missile_evasion = 0.1
+	missile_health = 100
+	missile_retarget_range = 120
+	power = -330
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t9_cost_alloys
+			food = @ESC_WEAPON_m_t9_cost_alloys
+			volatile_motes = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t9_upkeep_energy
+			alloys = @ESC_WEAPON_m_t9_upkeep_alloys
+			food = @ESC_WEAPON_xl_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
+	armor_damage = @ESC_WEAPON_voidspawn_armor_damage
+	armor_penetration = @ESC_WEAPON_voidspawn_armor_penetration
+	shield_damage = @ESC_WEAPON_voidspawn_shield_damage
+	shield_penetration = @ESC_WEAPON_voidspawn_shield_penetration
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_voidspawn_missile_x" }
+	component_set = ESC_VOIDSPAWN_MISSILE_X
+	projectile_gfx = "voidspawn_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+
+	valid_for_country = {
+		modifier = {
+			factor = 0 # only normal empires should use this component
+			is_fallen_empire = yes
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}

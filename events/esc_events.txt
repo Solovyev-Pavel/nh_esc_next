@@ -1,0 +1,322 @@
+namespace = esc_events
+
+## ##################################################### ##
+##             Setting up mod-is-in-use flags            ##
+## ##################################################### ##
+
+event = {
+	id = esc_events.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_global_flag = Extra_Ship_Components_NEXT
+		}
+	}
+	immediate = {
+		set_global_flag = Extra_Ship_Components_NEXT
+		set_global_flag = ESC_AI_research_boost_easy_scaling
+		set_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+	}
+}
+
+## ##################################################### ##
+##                  Ether Drake Events                   ##
+## ##################################################### ##
+
+### spawn a hatchling
+planet_event = {
+	id = esc_events.2000
+	is_triggered_only = yes
+	picture = GFX_evt_space_dragon
+	location = root
+	show_sound = event_mystic_reveal
+
+	title = esc_events.2000.title
+	desc = esc_events.2000.desc
+
+	immediate = {
+		create_fleet = {
+			name = "NAME_Ether_Hatchling"
+			settings = {
+				can_upgrade = no
+				spawn_debris = no
+			}
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					design = NAME_Dragonspawn
+					name = "NAME_Ether_Hatchling"
+					prefix = no
+					upgradable = no
+				}
+				set_location = root
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+### learning about drake cloning via capturing the planet with the building
+planet_event = {
+	id = esc_events.2001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_building = esc_building_dragon_hatchery
+		FROM = {
+			NOT = { has_valid_civic = civic_machine_terminator }
+			NOR = {
+				has_technology = esc_tech_dragon_hatchery
+				has_tech_option = esc_tech_dragon_hatchery
+			}
+		}
+	}
+
+	immediate = {
+		owner = { add_research_option = esc_tech_dragon_hatchery }
+	}
+}
+
+## ##################################################### ##
+##            Mantle Mining Facility Resources           ##
+## ##################################################### ##
+
+### random resource boons from mantle miner
+country_event = {
+    id = esc_events.3000
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+        OR = {
+            ESC_TRIGGER_is_playable_empire = yes
+            is_fallen_empire = yes
+        }
+    }
+
+    immediate = {
+        every_owned_planet = {
+            limit = {
+                is_colony = yes
+                num_pops > 0
+                OR = {
+                    has_building = esc_building_magmaminer_1
+                    has_building = esc_building_magmaminer_2
+                }
+            }
+
+            random_list = {
+                90 = {}
+                2 = { planet_event = { id = esc_events.3001 days = 30 random = 90 } }
+                2 = { planet_event = { id = esc_events.3002 days = 30 random = 90 } }
+                2 = { planet_event = { id = esc_events.3003 days = 30 random = 90 } }
+                2 = { planet_event = { id = esc_events.3004 days = 30 random = 90 } }
+                2 = { planet_event = { id = esc_events.3005 days = 30 random = 90 } }
+            }
+        }
+    }
+}
+
+# extra minerals
+planet_event = {
+    id = esc_events.3001
+    is_triggered_only = yes
+    title = esc_events.3001.name
+    desc = esc_events.3001.desc
+    picture = GFX_evt_mining_operations
+
+    option = {
+        name = EXCELLENT
+            owner = {
+            add_resource = {
+                minerals = 500
+            }
+        }
+    }
+}
+
+# some alloys
+planet_event = {
+    id = esc_events.3002
+    is_triggered_only = yes
+    title = esc_events.3002.name
+    desc = esc_events.3002.desc
+    picture = GFX_evt_mining_operations
+
+    option = {
+        name = EXCELLENT
+        owner = {
+            add_resource = {
+                alloys = 100
+            }
+        }
+    }
+}
+
+# some rare crystals
+planet_event = {
+    id = esc_events.3003
+    is_triggered_only = yes
+    title = esc_events.3003.name
+    desc = esc_events.3003.desc
+    picture = GFX_evt_mining_operations
+
+    option = {
+        name = EXCELLENT
+        owner = {
+            add_resource = {
+                rare_crystals = 50
+            }
+        }
+    }
+}
+
+# some volatile motes
+planet_event = {
+    id = esc_events.3004
+    is_triggered_only = yes
+    title = esc_events.3004.name
+    desc = esc_events.3004.desc
+    picture = GFX_evt_mining_operations
+
+    option = {
+        name = EXCELLENT
+        owner = {
+            add_resource = {
+                volatile_motes = 50
+            }
+        }
+    }
+}
+
+# some exotic gases
+planet_event = {
+    id = esc_events.3005
+    is_triggered_only = yes
+    title = esc_events.3005.name
+    desc = esc_events.3005.desc
+    picture = GFX_evt_mining_operations
+
+    option = {
+        name = EXCELLENT
+        owner = {
+            add_resource = {
+                exotic_gases = 50
+            }
+        }
+    }
+}
+
+## ##################################################### ##
+##             Dark Matter technologies events           ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events.4000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		# dark matter power core >>> dark matter deflectors
+		if = {
+			limit = {
+				has_technology = tech_dark_matter_power_core
+				NOR = {
+					has_technology = tech_dark_matter_deflector
+					has_tech_option = tech_dark_matter_deflector
+				}
+			}
+			add_research_option = tech_dark_matter_deflector
+		}
+		# dark matter power core >>> dark matter propulsion
+		if = {
+			limit = {
+				has_technology = tech_dark_matter_power_core
+				NOR = {
+					has_technology = tech_dark_matter_propulsion
+					has_tech_option = tech_dark_matter_propulsion
+				}
+			}
+			add_research_option = tech_dark_matter_propulsion
+		}
+		# dark matter deflectors >>> dark matter power core
+		if = {
+			limit = {
+				has_technology = tech_dark_matter_deflector
+				NOR = {
+					has_technology = tech_dark_matter_power_core
+					has_tech_option = tech_dark_matter_power_core
+				}
+			}
+			add_research_option = tech_dark_matter_power_core
+		}
+		# dark matter deflectors >>> dark matter propulsion
+		if = {
+			limit = {
+				has_technology = tech_dark_matter_deflector
+				NOR = {
+					has_technology = tech_dark_matter_propulsion
+					has_tech_option = tech_dark_matter_propulsion
+				}
+			}
+			add_research_option = tech_dark_matter_propulsion
+		}
+		# dark matter propulsion >>> dark matter power core
+		if = {
+			limit = {
+				has_technology = tech_dark_matter_propulsion
+				NOR = {
+					has_technology = tech_dark_matter_power_core
+					has_tech_option = tech_dark_matter_power_core
+				}
+			}
+			add_research_option = tech_dark_matter_power_core
+		}
+		# dark matter propulsion >>> dark matter deflectors
+		if = {
+			limit = {
+				has_technology = tech_dark_matter_propulsion
+				NOR = {
+					has_technology = tech_dark_matter_deflector
+					has_tech_option = tech_dark_matter_deflector
+				}
+			}
+			add_research_option = tech_dark_matter_deflector
+		}
+
+	}
+}
+
+## ##################################################### ##
+##             Setting up AI boost modifiers             ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events.5000
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		# remove AI bonus modifiers
+		ESC_EFFECT_ai_remove_science_boost = yes
+		# if is AI, set bonus modifiers
+		if = {
+			limit = { is_ai = yes }
+			ESC_EFFECT_ai_set_science_boost = yes
+		}
+	}
+}

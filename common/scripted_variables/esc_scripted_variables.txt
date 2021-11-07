@@ -1,0 +1,938 @@
+############################################################
+###              ESC NEXT : scripted variables           ###
+############################################################
+
+# - conventional weapons
+# - biological weapons
+# - crystalline weapons
+# - armor
+# - shields
+# - reactors
+# - strikecraft
+# - sensors
+# - auras
+# - combat computers
+# - thrusters
+# - jump drives
+# - advanced technology costs and weights
+# - global flags from other mods
+
+############################################################
+###                Conventional Weapons                  ###
+############################################################
+
+# tier 6 weapons
+@ESC_WEAPON_s_t6_cost_alloys 					= 29
+@ESC_WEAPON_s_t6_cost_special 					= 0.43
+@ESC_WEAPON_s_t6_upkeep_energy 					= 0.29
+@ESC_WEAPON_s_t6_upkeep_alloys 					= 0.058
+
+@ESC_WEAPON_m_t6_cost_alloys 					= 57
+@ESC_WEAPON_m_t6_cost_special 					= 0.85
+@ESC_WEAPON_m_t6_upkeep_energy 					= 0.57
+@ESC_WEAPON_m_t6_upkeep_alloys 					= 0.104
+
+@ESC_WEAPON_l_t6_cost_alloys 					= 114
+@ESC_WEAPON_l_t6_cost_special 					= 1.69
+@ESC_WEAPON_l_t6_upkeep_energy 					= 1.14
+@ESC_WEAPON_l_t6_upkeep_alloys 					= 0.228
+
+### tier 7 weapons
+@ESC_WEAPON_s_t7_cost_alloys 					= 38
+@ESC_WEAPON_s_t7_cost_special 					= 0.55
+@ESC_WEAPON_s_t7_upkeep_energy 					= 0.38
+@ESC_WEAPON_s_t7_upkeep_alloys 					= 0.076
+
+@ESC_WEAPON_m_t7_cost_alloys 					= 74
+@ESC_WEAPON_m_t7_cost_special 					= 1.1
+@ESC_WEAPON_m_t7_upkeep_energy 					= 0.74
+@ESC_WEAPON_m_t7_upkeep_alloys 					= 0.148
+
+@ESC_WEAPON_l_t7_cost_alloys 					= 148
+@ESC_WEAPON_l_t7_cost_special 					= 2.2
+@ESC_WEAPON_l_t7_upkeep_energy 					= 1.48
+@ESC_WEAPON_l_t7_upkeep_alloys 					= 0.296
+
+### tier 8
+@ESC_WEAPON_s_t8_cost_alloys					= 52
+@ESC_WEAPON_s_t8_cost_special 					= 0.7
+@ESC_WEAPON_s_t8_upkeep_energy 					= 0.52
+@ESC_WEAPON_s_t8_upkeep_alloys 					= 0.104
+
+@ESC_WEAPON_m_t8_cost_alloys					= 104
+@ESC_WEAPON_m_t8_cost_special 					= 1.4
+@ESC_WEAPON_m_t8_upkeep_energy 					= 1.04
+@ESC_WEAPON_m_t8_upkeep_alloys 					= 0.208
+
+@ESC_WEAPON_l_t8_cost_alloys					= 208
+@ESC_WEAPON_l_t8_cost_special 					= 2.75
+@ESC_WEAPON_l_t8_upkeep_energy 					= 2.08
+@ESC_WEAPON_l_t8_upkeep_alloys 					= 0.416
+
+### tier 9
+@ESC_WEAPON_s_t9_cost_alloys 					= 68
+@ESC_WEAPON_s_t9_cost_special 					= 0.85
+@ESC_WEAPON_s_t9_upkeep_energy 					= 0.68
+@ESC_WEAPON_s_t9_upkeep_alloys 					= 0.136
+
+@ESC_WEAPON_m_t9_cost_alloys 					= 136
+@ESC_WEAPON_m_t9_cost_special 					= 1.75
+@ESC_WEAPON_m_t9_upkeep_energy 					= 1.36
+@ESC_WEAPON_m_t9_upkeep_alloys 					= 0.272
+
+@ESC_WEAPON_l_t9_cost_alloys 					= 272
+@ESC_WEAPON_l_t9_cost_special 					= 3.0
+@ESC_WEAPON_l_t9_upkeep_energy 					= 2.72
+@ESC_WEAPON_l_t9_upkeep_alloys 					= 0.544
+
+### X slots
+@ESC_WEAPON_xl_t7_cost_alloys 					= 298
+@ESC_WEAPON_xl_t7_cost_special 					= 4.4
+@ESC_WEAPON_xl_t7_upkeep_energy 				= 2.98
+@ESC_WEAPON_xl_t7_upkeep_alloys 				= 0.596
+
+@ESC_WEAPON_xl_t8_cost_alloys 					= 387
+@ESC_WEAPON_xl_t8_cost_special 					= 5.6
+@ESC_WEAPON_xl_t8_upkeep_energy 				= 3.87
+@ESC_WEAPON_xl_t8_upkeep_alloys 				= 0.774
+
+### T slots
+@ESC_WEAPON_t_t6_cost_alloys 					= 456
+@ESC_WEAPON_t_t6_cost_special 					= 6.76
+@ESC_WEAPON_t_t6_upkeep_energy 					= 4.56
+@ESC_WEAPON_t_t6_upkeep_alloys 					= 0.912
+
+@ESC_WEAPON_t_t7_cost_alloys 					= 593
+@ESC_WEAPON_t_t7_cost_special 					= 8.79
+@ESC_WEAPON_t_t7_upkeep_energy 					= 5.93
+@ESC_WEAPON_t_t7_upkeep_alloys 					= 1.186
+
+############################################################
+###                 Biological Weapons                   ###
+############################################################
+
+### biological weapons : tier 1
+@ESC_WEAPON_biological_s_t4_cost_alloys			= 10
+@ESC_WEAPON_biological_s_t4_cost_food			= 4
+@ESC_WEAPON_biological_s_t4_upkeep_energy		= 0.20
+@ESC_WEAPON_biological_s_t4_upkeep_food			= 0.068
+
+@ESC_WEAPON_biological_m_t4_cost_alloys			= 20
+@ESC_WEAPON_biological_m_t4_cost_food			= 8
+@ESC_WEAPON_biological_m_t4_upkeep_energy		= 0.40
+@ESC_WEAPON_biological_m_t4_upkeep_food			= 0.136
+
+@ESC_WEAPON_biological_l_t4_cost_alloys			= 40
+@ESC_WEAPON_biological_l_t4_cost_food			= 16
+@ESC_WEAPON_biological_l_t4_upkeep_energy		= 0.80
+@ESC_WEAPON_biological_l_t4_upkeep_food			= 0.272
+
+### biological weapons : tier 2
+@ESC_WEAPON_biological_s_t5_cost_alloys			= 12
+@ESC_WEAPON_biological_s_t5_cost_food			= 5
+@ESC_WEAPON_biological_s_t5_upkeep_energy		= 0.24
+@ESC_WEAPON_biological_s_t5_upkeep_food			= 0.088
+
+@ESC_WEAPON_biological_m_t5_cost_alloys			= 24
+@ESC_WEAPON_biological_m_t5_cost_food			= 10
+@ESC_WEAPON_biological_m_t5_upkeep_energy		= 0.48
+@ESC_WEAPON_biological_m_t5_upkeep_food			= 0.176
+
+@ESC_WEAPON_biological_l_t5_cost_alloys			= 48
+@ESC_WEAPON_biological_l_t5_cost_food			= 20
+@ESC_WEAPON_biological_l_t5_upkeep_energy		= 0.96
+@ESC_WEAPON_biological_l_t5_upkeep_food			= 0.352
+
+### biological weapons : tier 3
+@ESC_WEAPON_biological_s_t6_cost_alloys			= 15
+@ESC_WEAPON_biological_s_t6_cost_food			= 7
+@ESC_WEAPON_biological_s_t6_upkeep_energy		= 0.30
+@ESC_WEAPON_biological_s_t6_upkeep_food			= 0.104
+
+@ESC_WEAPON_biological_m_t6_cost_alloys			= 30
+@ESC_WEAPON_biological_m_t6_cost_food			= 14
+@ESC_WEAPON_biological_m_t6_upkeep_energy		= 0.60
+@ESC_WEAPON_biological_m_t6_upkeep_food			= 0.208
+
+@ESC_WEAPON_biological_l_t6_cost_alloys			= 60
+@ESC_WEAPON_biological_l_t6_cost_food			= 28
+@ESC_WEAPON_biological_l_t6_upkeep_energy		= 1.20
+@ESC_WEAPON_biological_l_t6_upkeep_food			= 0.416
+
+### biological weapons : tier 4
+@ESC_WEAPON_biological_s_t7_cost_alloys			= 18
+@ESC_WEAPON_biological_s_t7_cost_food			= 8
+@ESC_WEAPON_biological_s_t7_upkeep_energy		= 0.36
+@ESC_WEAPON_biological_s_t7_upkeep_food			= 0.148
+
+@ESC_WEAPON_biological_m_t7_cost_alloys			= 36
+@ESC_WEAPON_biological_m_t7_cost_food			= 16
+@ESC_WEAPON_biological_m_t7_upkeep_energy		= 0.72
+@ESC_WEAPON_biological_m_t7_upkeep_food			= 0.296
+
+@ESC_WEAPON_biological_l_t7_cost_alloys			= 72
+@ESC_WEAPON_biological_l_t7_cost_food			= 32
+@ESC_WEAPON_biological_l_t7_upkeep_energy		= 1.44
+@ESC_WEAPON_biological_l_t7_upkeep_food			= 0.592
+
+### extralarge biological weapons
+@ESC_WEAPON_biological_lance_1_cost_alloys		= 100
+@ESC_WEAPON_biological_lance_1_cost_food		= 50
+@ESC_WEAPON_biological_lance_1_upkeep_energy	= 2.00
+@ESC_WEAPON_biological_lance_1_upkeep_food		= 0.912
+
+@ESC_WEAPON_biological_lance_2_cost_alloys		= 150
+@ESC_WEAPON_biological_lance_2_cost_food		= 70
+@ESC_WEAPON_biological_lance_2_upkeep_energy	= 3.00
+@ESC_WEAPON_biological_lance_2_upkeep_food		= 1.186
+
+@ESC_WEAPON_biological_lance_3_cost_alloys		= 200
+@ESC_WEAPON_biological_lance_3_cost_food		= 90
+@ESC_WEAPON_biological_lance_3_upkeep_energy	= 4.00
+@ESC_WEAPON_biological_lance_3_upkeep_food		= 1.482
+
+############################################################
+###                Crystalline Weapons                   ###
+############################################################
+
+### crystalline weapons : tier 1
+@ESC_WEAPON_crystalline_s_t3_cost_alloys		= 7
+@ESC_WEAPON_crystalline_s_t3_cost_crystals		= 0.4
+@ESC_WEAPON_crystalline_s_t3_upkeep_energy		= 0.17
+@ESC_WEAPON_crystalline_s_t3_upkeep_crystals	= 0.01
+
+@ESC_WEAPON_crystalline_m_t3_cost_alloys		= 14
+@ESC_WEAPON_crystalline_m_t3_cost_crystals		= 0.8
+@ESC_WEAPON_crystalline_m_t3_upkeep_energy		= 0.34
+@ESC_WEAPON_crystalline_m_t3_upkeep_crystals	= 0.02
+
+@ESC_WEAPON_crystalline_l_t3_cost_alloys		= 28
+@ESC_WEAPON_crystalline_l_t3_cost_crystals		= 1.6
+@ESC_WEAPON_crystalline_l_t3_upkeep_energy		= 0.68
+@ESC_WEAPON_crystalline_l_t3_upkeep_crystals	= 0.04
+
+### crystalline weapons : tier 2
+@ESC_WEAPON_crystalline_s_t4_cost_alloys		= 9
+@ESC_WEAPON_crystalline_s_t4_cost_crystals		= 0.6
+@ESC_WEAPON_crystalline_s_t4_upkeep_energy		= 0.19
+@ESC_WEAPON_crystalline_s_t4_upkeep_crystals	= 0.015
+
+@ESC_WEAPON_crystalline_m_t4_cost_alloys		= 18
+@ESC_WEAPON_crystalline_m_t4_cost_crystals		= 1.2
+@ESC_WEAPON_crystalline_m_t4_upkeep_energy		= 0.38
+@ESC_WEAPON_crystalline_m_t4_upkeep_crystals	= 0.03
+
+@ESC_WEAPON_crystalline_l_t4_cost_alloys		= 36
+@ESC_WEAPON_crystalline_l_t4_cost_crystals		= 2.4
+@ESC_WEAPON_crystalline_l_t4_upkeep_energy		= 0.76
+@ESC_WEAPON_crystalline_l_t4_upkeep_crystals	= 0.06
+
+### crystalline weapons : tier 3
+@ESC_WEAPON_crystalline_s_t5_cost_alloys		= 11
+@ESC_WEAPON_crystalline_s_t5_cost_crystals		= 0.8
+@ESC_WEAPON_crystalline_s_t5_upkeep_energy		= 0.22
+@ESC_WEAPON_crystalline_s_t5_upkeep_crystals	= 0.02
+
+@ESC_WEAPON_crystalline_m_t5_cost_alloys		= 22
+@ESC_WEAPON_crystalline_m_t5_cost_crystals		= 1.6
+@ESC_WEAPON_crystalline_m_t5_upkeep_energy		= 0.44
+@ESC_WEAPON_crystalline_m_t5_upkeep_crystals	= 0.04
+
+@ESC_WEAPON_crystalline_l_t5_cost_alloys		= 44
+@ESC_WEAPON_crystalline_l_t5_cost_crystals		= 3.2
+@ESC_WEAPON_crystalline_l_t5_upkeep_energy		= 0.88
+@ESC_WEAPON_crystalline_l_t5_upkeep_crystals	= 0.08
+
+### crystalline weapons : tier 4
+@ESC_WEAPON_crystalline_s_t6_cost_alloys		= 13
+@ESC_WEAPON_crystalline_s_t6_cost_crystals		= 1
+@ESC_WEAPON_crystalline_s_t6_upkeep_energy		= 0.26
+@ESC_WEAPON_crystalline_s_t6_upkeep_crystals	= 0.025
+
+@ESC_WEAPON_crystalline_m_t6_cost_alloys		= 26
+@ESC_WEAPON_crystalline_m_t6_cost_crystals		= 2
+@ESC_WEAPON_crystalline_m_t6_upkeep_energy		= 0.52
+@ESC_WEAPON_crystalline_m_t6_upkeep_crystals	= 0.05
+
+@ESC_WEAPON_crystalline_l_t6_cost_alloys		= 52
+@ESC_WEAPON_crystalline_l_t6_cost_crystals		= 4
+@ESC_WEAPON_crystalline_l_t6_upkeep_energy		= 1.04
+@ESC_WEAPON_crystalline_l_t6_upkeep_crystals	= 0.1
+
+### crystalline weapons : tier 5
+@ESC_WEAPON_crystalline_s_t7_cost_alloys		= 16
+@ESC_WEAPON_crystalline_s_t7_cost_crystals		= 1.2
+@ESC_WEAPON_crystalline_s_t7_upkeep_energy		= 0.32
+@ESC_WEAPON_crystalline_s_t7_upkeep_crystals	= 0.03
+
+@ESC_WEAPON_crystalline_m_t7_cost_alloys		= 32
+@ESC_WEAPON_crystalline_m_t7_cost_crystals		= 2.4
+@ESC_WEAPON_crystalline_m_t7_upkeep_energy		= 0.64
+@ESC_WEAPON_crystalline_m_t7_upkeep_crystals	= 0.06
+
+@ESC_WEAPON_crystalline_l_t7_cost_alloys		= 64
+@ESC_WEAPON_crystalline_l_t7_cost_crystals		= 4.8
+@ESC_WEAPON_crystalline_l_t7_upkeep_energy		= 1.28
+@ESC_WEAPON_crystalline_l_t7_upkeep_crystals	= 0.12
+
+### crystalline lances
+@ESC_WEAPON_crystalline_lance_1_cost_alloys		= 96
+@ESC_WEAPON_crystalline_lance_1_cost_crystals	= 6
+@ESC_WEAPON_crystalline_lance_1_upkeep_energy	= 1.92
+@ESC_WEAPON_crystalline_lance_1_upkeep_crystals	= 0.18
+
+@ESC_WEAPON_crystalline_lance_2_cost_alloys		= 144
+@ESC_WEAPON_crystalline_lance_2_cost_crystals	= 7.5
+@ESC_WEAPON_crystalline_lance_2_upkeep_energy	= 2.88
+@ESC_WEAPON_crystalline_lance_2_upkeep_crystals	= 0.225
+
+@ESC_WEAPON_crystalline_lance_3_cost_alloys		= 192
+@ESC_WEAPON_crystalline_lance_3_cost_crystals	= 9
+@ESC_WEAPON_crystalline_lance_3_upkeep_energy	= 3.84
+@ESC_WEAPON_crystalline_lance_3_upkeep_crystals	= 0.27
+
+############################################################
+###                        Armor                         ###
+############################################################
+
+### tier 6
+@ESC_ARMOR_s_t6_str_primary_1 					= 185
+@ESC_ARMOR_s_t6_str_primary_2 					= 140
+@ESC_ARMOR_s_t6_str_primary_3 					= 110
+@ESC_ARMOR_s_t6_str_secondary 					= 85
+@ESC_ARMOR_s_t6_regen_primary_1					= 0.7
+@ESC_ARMOR_s_t6_regen_primary_2					= 0.35
+@ESC_ARMOR_s_t6_regen_secondary_1				= 0.85
+@ESC_ARMOR_s_t6_regen_secondary_2				= 0.425
+
+@ESC_ARMOR_s_t6_cost_alloys_1 					= 29
+@ESC_ARMOR_s_t6_cost_alloys_2 					= 15
+@ESC_ARMOR_s_t6_cost_food 						= 7
+@ESC_ARMOR_s_t6_cost_special 					= 0.333
+@ESC_ARMOR_s_t6_upkeep_energy 					= 0.29
+@ESC_ARMOR_s_t6_upkeep_alloys 					= 0.058
+@ESC_ARMOR_s_t6_upkeep_food 					= 0.116
+
+@ESC_ARMOR_m_t6_str_primary_1 					= 465
+@ESC_ARMOR_m_t6_str_primary_2 					= 365
+@ESC_ARMOR_m_t6_str_primary_3 					= 275
+@ESC_ARMOR_m_t6_str_secondary 					= 215
+@ESC_ARMOR_m_t6_regen_primary_1					= 1.825
+@ESC_ARMOR_m_t6_regen_primary_2					= 0.91
+@ESC_ARMOR_m_t6_regen_secondary_1				= 2.15
+@ESC_ARMOR_m_t6_regen_secondary_2				= 1.075
+
+@ESC_ARMOR_m_t6_cost_alloys_1 					= 58
+@ESC_ARMOR_m_t6_cost_alloys_2 					= 30
+@ESC_ARMOR_m_t6_cost_food 						= 15
+@ESC_ARMOR_m_t6_cost_special 					= 0.666
+@ESC_ARMOR_m_t6_upkeep_energy 					= 0.58
+@ESC_ARMOR_m_t6_upkeep_alloys 					= 0.106
+@ESC_ARMOR_m_t6_upkeep_food 					= 0.232
+
+@ESC_ARMOR_l_t6_str_primary_1 					= 1110
+@ESC_ARMOR_l_t6_str_primary_2 					= 870
+@ESC_ARMOR_l_t6_str_primary_3 					= 660
+@ESC_ARMOR_l_t6_str_secondary 					= 525
+@ESC_ARMOR_l_t6_regen_primary_1					= 4.35
+@ESC_ARMOR_l_t6_regen_primary_2					= 2.175
+@ESC_ARMOR_l_t6_regen_secondary_1				= 5.25
+@ESC_ARMOR_l_t6_regen_secondary_2				= 2.125
+
+@ESC_ARMOR_l_t6_cost_alloys_1 					= 106
+@ESC_ARMOR_l_t6_cost_alloys_2 					= 60
+@ESC_ARMOR_l_t6_cost_food 						= 30
+@ESC_ARMOR_l_t6_cost_special 					= 1.333
+@ESC_ARMOR_l_t6_upkeep_energy 					= 1.16
+@ESC_ARMOR_l_t6_upkeep_alloys 					= 0.212
+@ESC_ARMOR_l_t6_upkeep_food 					= 0.464
+
+### tier 7
+@ESC_ARMOR_s_t7_str_primary_1 					= 240
+@ESC_ARMOR_s_t7_str_primary_2 					= 185
+@ESC_ARMOR_s_t7_str_primary_3 					= 140
+@ESC_ARMOR_s_t7_str_secondary 					= 110
+@ESC_ARMOR_s_t7_regen_primary_1					= 0.925
+@ESC_ARMOR_s_t7_regen_primary_2					= 0.46
+@ESC_ARMOR_s_t7_regen_secondary_1				= 1.1
+@ESC_ARMOR_s_t7_regen_secondary_2				= 0.55
+
+@ESC_ARMOR_s_t7_cost_alloys_1 					= 38
+@ESC_ARMOR_s_t7_cost_alloys_2 					= 19
+@ESC_ARMOR_s_t7_cost_food 						= 9
+@ESC_ARMOR_s_t7_cost_special 					= 0.5
+@ESC_ARMOR_s_t7_upkeep_energy 					= 0.38
+@ESC_ARMOR_s_t7_upkeep_alloys 					= 0.076
+@ESC_ARMOR_s_t7_upkeep_food 					= 0.152
+
+@ESC_ARMOR_m_t7_str_primary_1 					= 600
+@ESC_ARMOR_m_t7_str_primary_2 					= 465
+@ESC_ARMOR_m_t7_str_primary_3 					= 365
+@ESC_ARMOR_m_t7_str_secondary 					= 275
+@ESC_ARMOR_m_t7_regen_primary_1					= 2.325
+@ESC_ARMOR_m_t7_regen_primary_2					= 1.165
+@ESC_ARMOR_m_t7_regen_secondary_1				= 2.75
+@ESC_ARMOR_m_t7_regen_secondary_2				= 1.375
+
+@ESC_ARMOR_m_t7_cost_alloys_1 					= 76
+@ESC_ARMOR_m_t7_cost_alloys_2 					= 38
+@ESC_ARMOR_m_t7_cost_food 						= 19
+@ESC_ARMOR_m_t7_cost_special 					= 1
+@ESC_ARMOR_m_t7_upkeep_energy 					= 0.76
+@ESC_ARMOR_m_t7_upkeep_alloys 					= 0.152
+@ESC_ARMOR_m_t7_upkeep_food 					= 0.304
+
+@ESC_ARMOR_l_t7_str_primary_1 					= 1500
+@ESC_ARMOR_l_t7_str_primary_2 					= 1110
+@ESC_ARMOR_l_t7_str_primary_3 					= 870
+@ESC_ARMOR_l_t7_str_secondary 					= 660
+@ESC_ARMOR_l_t7_regen_primary_1					= 5.55
+@ESC_ARMOR_l_t7_regen_primary_2					= 2.775
+@ESC_ARMOR_l_t7_regen_secondary_1				= 6.6
+@ESC_ARMOR_l_t7_regen_secondary_2				= 3.3
+
+@ESC_ARMOR_l_t7_cost_alloys_1 					= 152
+@ESC_ARMOR_l_t7_cost_alloys_2 					= 76
+@ESC_ARMOR_l_t7_cost_food 						= 38
+@ESC_ARMOR_l_t7_cost_special 					= 2
+@ESC_ARMOR_l_t7_upkeep_energy 					= 1.52
+@ESC_ARMOR_l_t7_upkeep_alloys 					= 0.304
+@ESC_ARMOR_l_t7_upkeep_food 					= 0.608
+
+### tier 8
+@ESC_ARMOR_s_t8_str_primary_1 					= 300
+@ESC_ARMOR_s_t8_str_primary_2 					= 240
+@ESC_ARMOR_s_t8_str_primary_3 					= 185
+@ESC_ARMOR_s_t8_str_secondary 					= 140
+@ESC_ARMOR_s_t8_regen_primary_1					= 1.2
+@ESC_ARMOR_s_t8_regen_primary_2					= 0.6
+@ESC_ARMOR_s_t8_regen_secondary_1				= 1.4
+@ESC_ARMOR_s_t8_regen_secondary_2				= 0.7
+
+@ESC_ARMOR_s_t8_cost_alloys_1 					= 47
+@ESC_ARMOR_s_t8_cost_special 					= 0.666
+@ESC_ARMOR_s_t8_upkeep_energy 					= 0.47
+@ESC_ARMOR_s_t8_upkeep_alloys 					= 0.094
+
+@ESC_ARMOR_m_t8_str_primary_1 					= 750
+@ESC_ARMOR_m_t8_str_primary_2 					= 600
+@ESC_ARMOR_m_t8_str_primary_3 					= 465
+@ESC_ARMOR_m_t8_str_secondary 					= 365
+@ESC_ARMOR_m_t8_regen_primary_1					= 3.0
+@ESC_ARMOR_m_t8_regen_primary_2					= 1.5
+@ESC_ARMOR_m_t8_regen_secondary_1				= 3.65
+@ESC_ARMOR_m_t8_regen_secondary_2				= 1.825
+
+@ESC_ARMOR_m_t8_cost_alloys_1 					= 94
+@ESC_ARMOR_m_t8_cost_special 					= 1.333
+@ESC_ARMOR_m_t8_upkeep_energy 					= 0.94
+@ESC_ARMOR_m_t8_upkeep_alloys 					= 0.188
+
+@ESC_ARMOR_l_t8_str_primary_1 					= 1950
+@ESC_ARMOR_l_t8_str_primary_2 					= 1500
+@ESC_ARMOR_l_t8_str_primary_3 					= 1110
+@ESC_ARMOR_l_t8_str_secondary 					= 870
+@ESC_ARMOR_l_t8_regen_primary_1					= 7.5
+@ESC_ARMOR_l_t8_regen_primary_2					= 3.75
+@ESC_ARMOR_l_t8_regen_secondary_1				= 8.7
+@ESC_ARMOR_l_t8_regen_secondary_2				= 4.35
+
+@ESC_ARMOR_l_t8_cost_alloys_1 					= 188
+@ESC_ARMOR_l_t8_cost_special 					= 2.5
+@ESC_ARMOR_l_t8_upkeep_energy 					= 1.88
+@ESC_ARMOR_l_t8_upkeep_alloys 					= 0.376
+
+############################################################
+###                        Shields                       ###
+############################################################
+
+### tier 6
+@ESC_SHIELD_s_t6_strength						= 185
+@ESC_SHIELD_s_t6_strength_cycl					= 145
+@ESC_SHIELD_s_t6_regen							= 1.85
+@ESC_SHIELD_s_t6_power							= -55
+@ESC_SHIELD_s_t6_cost_alloys					= 16
+@ESC_SHIELD_s_t6_cost_special					= 0.5
+@ESC_SHIELD_s_t6_upkeep_alloys					= 0.032
+@ESC_SHIELD_s_t6_upkeep_energy					= 0.16
+
+@ESC_SHIELD_m_t6_strength						= 465
+@ESC_SHIELD_m_t6_strength_cycl					= 365
+@ESC_SHIELD_m_t6_regen							= 4.65
+@ESC_SHIELD_m_t6_power							= -110
+@ESC_SHIELD_m_t6_cost_alloys					= 29
+@ESC_SHIELD_m_t6_cost_special					= 1.0
+@ESC_SHIELD_m_t6_upkeep_alloys					= 0.058
+@ESC_SHIELD_m_t6_upkeep_energy					= 0.29
+
+@ESC_SHIELD_l_t6_strength						= 1110
+@ESC_SHIELD_l_t6_strength_cycl					= 870
+@ESC_SHIELD_l_t6_regen							= 11.10
+@ESC_SHIELD_l_t6_power							= -220
+@ESC_SHIELD_l_t6_cost_alloys					= 57
+@ESC_SHIELD_l_t6_cost_special					= 2.0
+@ESC_SHIELD_l_t6_upkeep_alloys					= 0.114
+@ESC_SHIELD_l_t6_upkeep_energy					= 0.57
+
+### tier 7
+@ESC_SHIELD_s_t7_strength						= 240
+@ESC_SHIELD_s_t7_strength_cycl					= 185
+@ESC_SHIELD_s_t7_regen							= 2.4
+@ESC_SHIELD_s_t7_power							= -65
+@ESC_SHIELD_s_t7_cost_alloys					= 22
+@ESC_SHIELD_s_t7_cost_special					= 0.666
+@ESC_SHIELD_s_t7_upkeep_alloys					= 0.044
+@ESC_SHIELD_s_t7_upkeep_energy					= 0.22
+
+@ESC_SHIELD_m_t7_strength						= 600
+@ESC_SHIELD_m_t7_strength_cycl					= 465
+@ESC_SHIELD_m_t7_regen							= 6.0
+@ESC_SHIELD_m_t7_power							= -130
+@ESC_SHIELD_m_t7_cost_alloys					= 38
+@ESC_SHIELD_m_t7_cost_special					= 1.333
+@ESC_SHIELD_m_t7_upkeep_alloys					= 0.076
+@ESC_SHIELD_m_t7_upkeep_energy					= 0.38
+
+@ESC_SHIELD_l_t7_strength						= 1440
+@ESC_SHIELD_l_t7_strength_cycl					= 1110
+@ESC_SHIELD_l_t7_regen							= 14.40
+@ESC_SHIELD_l_t7_power							= -260
+@ESC_SHIELD_l_t7_cost_alloys					= 76
+@ESC_SHIELD_l_t7_cost_special					= 2.5
+@ESC_SHIELD_l_t7_upkeep_alloys					= 0.152
+@ESC_SHIELD_l_t7_upkeep_energy					= 0.76
+
+### tier 8
+@ESC_SHIELD_s_t8_strength 						= 280
+@ESC_SHIELD_s_t8_strength_cycl					= 240
+@ESC_SHIELD_s_t8_regen 							= 2.8
+@ESC_SHIELD_s_t8_power 							= -75
+@ESC_SHIELD_s_t8_cost_alloys 					= 26
+@ESC_SHIELD_s_t8_cost_special 					= 0.85
+@ESC_SHIELD_s_t8_upkeep_alloys 					= 0.052
+@ESC_SHIELD_s_t8_upkeep_energy 					= 0.26
+
+@ESC_SHIELD_m_t8_strength 						= 750
+@ESC_SHIELD_m_t8_strength_cycl					= 600
+@ESC_SHIELD_m_t8_regen 							= 7.5
+@ESC_SHIELD_m_t8_power 							= -150
+@ESC_SHIELD_m_t8_cost_alloys 					= 47
+@ESC_SHIELD_m_t8_cost_special 					= 1.7
+@ESC_SHIELD_m_t8_upkeep_alloys 					= 0.094
+@ESC_SHIELD_m_t8_upkeep_energy 					= 0.47
+
+@ESC_SHIELD_l_t8_strength 						= 1750
+@ESC_SHIELD_l_t8_strength_cycl					= 1440
+@ESC_SHIELD_l_t8_regen 							= 17.50
+@ESC_SHIELD_l_t8_power 							= -300
+@ESC_SHIELD_l_t8_cost_alloys 					= 92
+@ESC_SHIELD_l_t8_cost_special 					= 3.4
+@ESC_SHIELD_l_t8_upkeep_alloys 					= 0.184
+@ESC_SHIELD_l_t8_upkeep_energy 					= 0.92
+
+### tier 9
+@ESC_SHIELD_s_t9_strength 						= 350
+@ESC_SHIELD_s_t9_regen 							= 3.50
+@ESC_SHIELD_s_t9_power 							= -85
+@ESC_SHIELD_s_t9_cost_alloys					= 34
+@ESC_SHIELD_s_t9_cost_special 					= 1.1
+@ESC_SHIELD_s_t9_upkeep_alloys 					= 0.068
+@ESC_SHIELD_s_t9_upkeep_energy 					= 0.34
+
+@ESC_SHIELD_m_t9_strength 						= 950
+@ESC_SHIELD_m_t9_regen 							= 9.50
+@ESC_SHIELD_m_t9_power 							= -170
+@ESC_SHIELD_m_t9_cost_alloys 					= 58
+@ESC_SHIELD_m_t9_cost_special 					= 2.2
+@ESC_SHIELD_m_t9_upkeep_alloys 					= 0.116
+@ESC_SHIELD_m_t9_upkeep_energy 					= 0.58
+
+@ESC_SHIELD_l_t9_strength 						= 2000
+@ESC_SHIELD_l_t9_regen 							= 20.00
+@ESC_SHIELD_l_t9_power 							= -340
+@ESC_SHIELD_l_t9_cost_alloys 					= 112
+@ESC_SHIELD_l_t9_cost_special 					= 4.4
+@ESC_SHIELD_l_t9_upkeep_alloys 					= 0.224
+@ESC_SHIELD_l_t9_upkeep_energy 					= 1.12
+
+############################################################
+###                       Reactors                       ###
+############################################################
+
+### tier 6
+@ESC_REACTOR_t6_power_corvette 					= 285
+@ESC_REACTOR_t6_power_destroyer 				= 550
+@ESC_REACTOR_t6_power_cruiser 					= 1100
+@ESC_REACTOR_t6_power_battleship 				= 2000
+@ESC_REACTOR_t6_power_battleship_nsc			= 4000
+@ESC_REACTOR_t6_power_titan 					= 4250
+@ESC_REACTOR_t6_power_titan_nsc 				= 8000
+@ESC_REACTOR_t6_power_platform 					= 750
+@ESC_REACTOR_t6_power_platform2 				= 1500
+@ESC_REACTOR_t6_power_platform3 				= 4000
+@ESC_REACTOR_t6_power_xlcannon 					= 1750
+@ESC_REACTOR_t6_power_starbase 					= 18000
+@ESC_REACTOR_t6_power_strikecruiser 			= 1325
+@ESC_REACTOR_t6_power_battlecruiser 			= 2450
+@ESC_REACTOR_t6_power_carrier 					= 6000
+@ESC_REACTOR_t6_power_dreadnought 				= 8000
+@ESC_REACTOR_t6_power_flagship 					= 15000
+@ESC_REACTOR_t6_power_SCX_Dreadnought 			= 3000
+
+@ESC_REACTOR_t6_cost_corvette 					= 37
+@ESC_REACTOR_t6_cost_destroyer 					= 75
+@ESC_REACTOR_t6_cost_cruiser 					= 150
+@ESC_REACTOR_t6_cost_battleship 				= 300
+@ESC_REACTOR_t6_cost_titan 						= 600
+@ESC_REACTOR_t6_cost_platform 					= 75
+@ESC_REACTOR_t6_cost_platform2 					= 150
+@ESC_REACTOR_t6_cost_platform3 					= 300
+@ESC_REACTOR_t6_cost_xlcannon 					= 150
+@ESC_REACTOR_t6_cost_strikecruiser 				= 180
+@ESC_REACTOR_t6_cost_battlecruiser 				= 220
+@ESC_REACTOR_t6_cost_carrier 					= 400
+@ESC_REACTOR_t6_cost_dreadnought 				= 550
+@ESC_REACTOR_t6_cost_flagship 					= 1000
+@ESC_REACTOR_t6_cost_SCX_Dreadnought 			= 600
+
+@ESC_REACTOR_t6_upkeep_energy_corvette 			= 0.375
+@ESC_REACTOR_t6_upkeep_alloys_corvette 			= 0.037
+@ESC_REACTOR_t6_upkeep_energy_destroyer 		= 0.75
+@ESC_REACTOR_t6_upkeep_alloys_destroyer 		= 0.075
+@ESC_REACTOR_t6_upkeep_energy_cruiser 			= 1.50
+@ESC_REACTOR_t6_upkeep_alloys_cruiser 			= 0.15
+@ESC_REACTOR_t6_upkeep_energy_battleship 		= 3.00
+@ESC_REACTOR_t6_upkeep_alloys_battleship 		= 0.30
+@ESC_REACTOR_t6_upkeep_energy_titan 			= 6.00
+@ESC_REACTOR_t6_upkeep_alloys_titan 			= 0.60
+@ESC_REACTOR_t6_upkeep_energy_platform 			= 0.75
+@ESC_REACTOR_t6_upkeep_alloys_platform 			= 0.075
+@ESC_REACTOR_t6_upkeep_energy_platform2 		= 1.50
+@ESC_REACTOR_t6_upkeep_alloys_platform2 		= 0.15
+@ESC_REACTOR_t6_upkeep_energy_platform3 		= 3.00
+@ESC_REACTOR_t6_upkeep_alloys_platform3 		= 0.30
+@ESC_REACTOR_t6_upkeep_energy_xlcannon 			= 1.50
+@ESC_REACTOR_t6_upkeep_alloys_xlcannon 			= 0.15
+@ESC_REACTOR_t6_upkeep_energy_strikecruiser 	= 1.80
+@ESC_REACTOR_t6_upkeep_alloys_strikecruiser 	= 0.180
+@ESC_REACTOR_t6_upkeep_energy_battlecruiser 	= 2.20
+@ESC_REACTOR_t6_upkeep_alloys_battlecruiser 	= 0.220
+@ESC_REACTOR_t6_upkeep_energy_carrier 			= 4.00
+@ESC_REACTOR_t6_upkeep_alloys_carrier 			= 0.40
+@ESC_REACTOR_t6_upkeep_energy_dreadnought 		= 5.50
+@ESC_REACTOR_t6_upkeep_alloys_dreadnought 		= 0.550
+@ESC_REACTOR_t6_upkeep_energy_flagship 			= 10.0
+@ESC_REACTOR_t6_upkeep_alloys_flagship 			= 1.00
+@ESC_REACTOR_t6_upkeep_energy_SCX_Dreadnought 	= 6.0
+@ESC_REACTOR_t6_upkeep_alloys_SCX_Dreadnought 	= 0.60
+
+### tier 7
+@ESC_REACTOR_t7_power_corvette 					= 375
+@ESC_REACTOR_t7_power_destroyer 				= 750
+@ESC_REACTOR_t7_power_cruiser 					= 1600
+@ESC_REACTOR_t7_power_battleship 				= 2700
+@ESC_REACTOR_t7_power_battleship_nsc 			= 5800
+@ESC_REACTOR_t7_power_titan 					= 5500
+@ESC_REACTOR_t7_power_titan_nsc 				= 10000
+@ESC_REACTOR_t7_power_platform 					= 1250
+@ESC_REACTOR_t7_power_platform2 				= 2000
+@ESC_REACTOR_t7_power_platform3 				= 8000
+@ESC_REACTOR_t7_power_xlcannon 					= 2000
+@ESC_REACTOR_t7_power_starbase 					= 20000
+@ESC_REACTOR_t7_power_strikecruiser 			= 2000
+@ESC_REACTOR_t7_power_battlecruiser 			= 3500
+@ESC_REACTOR_t7_power_carrier 					= 5800
+@ESC_REACTOR_t7_power_dreadnought 				= 10000
+@ESC_REACTOR_t7_power_flagship 					= 20000
+@ESC_REACTOR_t7_power_SCX_Dreadnought 			= 3500
+
+@ESC_REACTOR_t7_cost_corvette 					= 47
+@ESC_REACTOR_t7_cost_destroyer 					= 95
+@ESC_REACTOR_t7_cost_cruiser 					= 190
+@ESC_REACTOR_t7_cost_battleship 				= 375
+@ESC_REACTOR_t7_cost_titan 						= 750
+@ESC_REACTOR_t7_cost_platform 					= 95
+@ESC_REACTOR_t7_cost_platform2 					= 190
+@ESC_REACTOR_t7_cost_platform3 					= 380
+@ESC_REACTOR_t7_cost_xlcannon 					= 190
+@ESC_REACTOR_t7_cost_strikecruiser 				= 240
+@ESC_REACTOR_t7_cost_battlecruiser 				= 290
+@ESC_REACTOR_t7_cost_carrier 					= 480
+@ESC_REACTOR_t7_cost_dreadnought 				= 700
+@ESC_REACTOR_t7_cost_flagship 					= 1300
+@ESC_REACTOR_t7_cost_SCX_Dreadnought 			= 800
+
+@ESC_REACTOR_t7_upkeep_energy_corvette 			= 0.45
+@ESC_REACTOR_t7_upkeep_alloys_corvette 			= 0.045
+@ESC_REACTOR_t7_upkeep_energy_destroyer 		= 0.95
+@ESC_REACTOR_t7_upkeep_alloys_destroyer 		= 0.095
+@ESC_REACTOR_t7_upkeep_energy_cruiser 			= 1.90
+@ESC_REACTOR_t7_upkeep_alloys_cruiser 			= 0.19
+@ESC_REACTOR_t7_upkeep_energy_battleship 		= 3.75
+@ESC_REACTOR_t7_upkeep_alloys_battleship 		= 0.375
+@ESC_REACTOR_t7_upkeep_energy_titan 			= 7.50
+@ESC_REACTOR_t7_upkeep_alloys_titan 			= 0.75
+@ESC_REACTOR_t7_upkeep_energy_platform 			= 0.95
+@ESC_REACTOR_t7_upkeep_alloys_platform 			= 0.095
+@ESC_REACTOR_t7_upkeep_energy_platform2 		= 1.90
+@ESC_REACTOR_t7_upkeep_alloys_platform2 		= 0.19
+@ESC_REACTOR_t7_upkeep_energy_platform3 		= 3.80
+@ESC_REACTOR_t7_upkeep_alloys_platform3 		= 0.38
+@ESC_REACTOR_t7_upkeep_energy_xlcannon 			= 1.90
+@ESC_REACTOR_t7_upkeep_alloys_xlcannon 			= 0.19
+@ESC_REACTOR_t7_upkeep_energy_strikecruiser 	= 2.40
+@ESC_REACTOR_t7_upkeep_alloys_strikecruiser 	= 0.240
+@ESC_REACTOR_t7_upkeep_energy_battlecruiser 	= 2.9
+@ESC_REACTOR_t7_upkeep_alloys_battlecruiser 	= 0.29
+@ESC_REACTOR_t7_upkeep_energy_carrier 			= 4.8
+@ESC_REACTOR_t7_upkeep_alloys_carrier 			= 0.48
+@ESC_REACTOR_t7_upkeep_energy_dreadnought 		= 7.0
+@ESC_REACTOR_t7_upkeep_alloys_dreadnought 		= 0.70
+@ESC_REACTOR_t7_upkeep_energy_flagship 			= 13.0
+@ESC_REACTOR_t7_upkeep_alloys_flagship 			= 1.30
+@ESC_REACTOR_t7_upkeep_energy_SCX_Dreadnought 	= 8.0
+@ESC_REACTOR_t7_upkeep_alloys_SCX_Dreadnought 	= 0.80
+
+### tier 8
+@ESC_REACTOR_t8_power_corvette 					= 520
+@ESC_REACTOR_t8_power_destroyer 				= 1200
+@ESC_REACTOR_t8_power_cruiser 					= 2200
+@ESC_REACTOR_t8_power_battleship 				= 3500
+@ESC_REACTOR_t8_power_battleship_nsc 			= 9000
+@ESC_REACTOR_t8_power_titan 					= 6750
+@ESC_REACTOR_t8_power_titan_nsc 				= 17500
+@ESC_REACTOR_t8_power_platform 					= 1750
+@ESC_REACTOR_t8_power_platform2 				= 2500
+@ESC_REACTOR_t8_power_platform3 				= 11000
+@ESC_REACTOR_t8_power_xlcannon 					= 2500
+@ESC_REACTOR_t8_power_starbase 					= 24000
+@ESC_REACTOR_t8_power_strikecruiser 			= 2800
+@ESC_REACTOR_t8_power_battlecruiser 			= 5250
+@ESC_REACTOR_t8_power_carrier 					= 9000
+@ESC_REACTOR_t8_power_dreadnought 				= 13000
+@ESC_REACTOR_t8_power_flagship 					= 30000
+@ESC_REACTOR_t8_power_SCX_Dreadnought 			= 3750
+
+@ESC_REACTOR_t8_cost_corvette 					= 55
+@ESC_REACTOR_t8_cost_destroyer 					= 110
+@ESC_REACTOR_t8_cost_cruiser 					= 220
+@ESC_REACTOR_t8_cost_battleship 				= 440
+@ESC_REACTOR_t8_cost_titan 						= 880
+@ESC_REACTOR_t8_cost_platform 					= 110
+@ESC_REACTOR_t8_cost_platform2 					= 220
+@ESC_REACTOR_t8_cost_platform3 					= 330
+@ESC_REACTOR_t8_cost_xlcannon 					= 220
+@ESC_REACTOR_t8_cost_strikecruiser 				= 300
+@ESC_REACTOR_t8_cost_battlecruiser 				= 360
+@ESC_REACTOR_t8_cost_carrier 					= 560
+@ESC_REACTOR_t8_cost_dreadnought 				= 800
+@ESC_REACTOR_t8_cost_flagship 					= 1600
+@ESC_REACTOR_t8_cost_SCX_Dreadnought 			= 950
+
+@ESC_REACTOR_t8_upkeep_energy_corvette 			= 0.55
+@ESC_REACTOR_t8_upkeep_alloys_corvette 			= 0.055
+@ESC_REACTOR_t8_upkeep_energy_destroyer 		= 1.10
+@ESC_REACTOR_t8_upkeep_alloys_destroyer 		= 0.110
+@ESC_REACTOR_t8_upkeep_energy_cruiser 			= 2.20
+@ESC_REACTOR_t8_upkeep_alloys_cruiser 			= 0.220
+@ESC_REACTOR_t8_upkeep_energy_battleship 		= 4.40
+@ESC_REACTOR_t8_upkeep_alloys_battleship 		= 0.440
+@ESC_REACTOR_t8_upkeep_energy_titan 			= 8.80
+@ESC_REACTOR_t8_upkeep_alloys_titan 			= 0.880
+@ESC_REACTOR_t8_upkeep_energy_platform 			= 1.10
+@ESC_REACTOR_t8_upkeep_alloys_platform 			= 0.110
+@ESC_REACTOR_t8_upkeep_energy_platform2 		= 2.20
+@ESC_REACTOR_t8_upkeep_alloys_platform2 		= 0.220
+@ESC_REACTOR_t8_upkeep_energy_platform3 		= 3.30
+@ESC_REACTOR_t8_upkeep_alloys_platform3 		= 0.330
+@ESC_REACTOR_t8_upkeep_energy_xlcannon 			= 2.20
+@ESC_REACTOR_t8_upkeep_alloys_xlcannon 			= 0.220
+@ESC_REACTOR_t8_upkeep_energy_strikecruiser 	= 3.0
+@ESC_REACTOR_t8_upkeep_alloys_strikecruiser 	= 0.30
+@ESC_REACTOR_t8_upkeep_energy_battlecruiser 	= 3.60
+@ESC_REACTOR_t8_upkeep_alloys_battlecruiser 	= 0.360
+@ESC_REACTOR_t8_upkeep_energy_carrier 			= 5.60
+@ESC_REACTOR_t8_upkeep_alloys_carrier 			= 0.560
+@ESC_REACTOR_t8_upkeep_energy_dreadnought 		= 8.0
+@ESC_REACTOR_t8_upkeep_alloys_dreadnought 		= 0.80
+@ESC_REACTOR_t8_upkeep_energy_flagship 			= 16.0
+@ESC_REACTOR_t8_upkeep_alloys_flagship 			= 1.60
+@ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought 	= 9.50
+@ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought 	= 0.950
+
+# special cases
+@ESC_REACTOR_power_colossus 					= 15000
+@ESC_REACTOR_power_starbase_nsc 				= 40000
+@ESC_REACTOR_power_headquarters_nsc 			= 50000
+
+@ESC_REACTOR_cost_colossus 						= 0
+@ESC_REACTOR_cost_starbase 						= 0
+@ESC_REACTOR_cost_citadel 						= 0
+
+############################################################
+###                    Strikecraft Vars                  ###
+############################################################
+
+@ESC_STRIKECRAFT_count 							= 8
+@ESC_STRIKECRAFT_regen 							= 1
+@ESC_STRIKECRAFT_launch_time 					= 1.5
+@ESC_STRIKECRAFT_speed_3 						= 650
+@ESC_STRIKECRAFT_speed_4 						= 700
+@ESC_STRIKECRAFT_speed_5 						= 750
+@ESC_STRIKECRAFT_speed_6 						= 800
+
+@ESC_STRIKECRAFT_acceleration_bomber 			= 1
+@ESC_STRIKECRAFT_acceleration_fighter 			= 1.1
+@ESC_STRIKECRAFT_acceleration_creature 			= 0.9
+@ESC_STRIKECRAFT_rot_speed_bomber 				= 0.75
+@ESC_STRIKECRAFT_rot_speed_fighter 				= 0.8
+@ESC_STRIKECRAFT_rot_speed_creature 			= 0.75
+
+@ESC_STRIKECRAFT_shield_penetration_bomber 		= 1
+@ESC_STRIKECRAFT_shield_penetration_fighter 	= 1
+@ESC_STRIKECRAFT_armor_damage_bomber 			= 1.5
+@ESC_STRIKECRAFT_armor_damage_fighter 			= 1.0
+@ESC_STRIKECRAFT_hull_damage_bomber 			= 1.25
+@ESC_STRIKECRAFT_hull_damage_fighter 			= 1.0
+
+@ESC_STRIKECRAFT_engagement_range 				= 100
+@ESC_STRIKECRAFT_attack_range_bomber 			= 10
+@ESC_STRIKECRAFT_attack_range_fighter 			= 12
+
+@ESC_STRIKECRAFT_evasion 						= 0.80
+@ESC_STRIKECRAFT_accuracy 						= 1.0
+@ESC_STRIKECRAFT_tracking_bomber 				= 1.0
+@ESC_STRIKECRAFT_tracking_fighter 				= 1.0
+
+############################################################
+###                    Sensor Parameters                 ###
+############################################################
+
+@ESC_SENSOR_t5_hit_chance						= 17.5
+@ESC_SENSOR_t6_hit_chance 						= 20
+@ESC_SENSOR_t7_hit_chance 						= 22.5
+@ESC_SENSOR_psionic_hit_chance					= 25
+
+@ESC_SENSOR_t5_cost 							= 10
+@ESC_SENSOR_t6_cost 							= 12
+@ESC_SENSOR_t7_cost 							= 14
+
+@ESC_SENSOR_t5_power 							= -25
+@ESC_SENSOR_t6_power 							= -30
+@ESC_SENSOR_t7_power 							= -35
+
+@ESC_SENSOR_t5_sensor_range 					= 4
+@ESC_SENSOR_t6_sensor_range 					= 5
+@ESC_SENSOR_t7_sensor_range 					= 5
+
+@ESC_SENSOR_t5_hyperlane_sight 					= 6
+@ESC_SENSOR_t6_hyperlane_sight 					= 7
+@ESC_SENSOR_t7_hyperlane_sight 					= 8
+
+############################################################
+###                     Aura Parameters                  ###
+############################################################
+
+@ESC_AURA_mirageAuraRange 						= 350
+@ESC_AURA_normalAuraRange 						= 250
+@ESC_AURA_NSC_TitanAuraComponent				= "nsc_titan_aura"
+
+############################################################
+###                    Combat Computers                  ###
+############################################################
+
+@ESC_COMPUTER_cost_alloys						= 20
+@ESC_COMPUTER_cost_special						= 2
+@ESC_COMPUTER_power_dreadnought					= -30
+@ESC_COMPUTER_power_nanite						= -25
+
+############################################################
+###                       Thrusters                      ###
+############################################################
+
+# tier 5 thrusters
+@ESC_THRUSTER_t5_cost_corvette 					= 15
+@ESC_THRUSTER_t5_cost_destroyer 				= 30
+@ESC_THRUSTER_t5_cost_cruiser 					= 60
+@ESC_THRUSTER_t5_cost_battleship 				= 120
+@ESC_THRUSTER_t5_cost_titan 					= 240
+@ESC_THRUSTER_t5_cost_colossus 					= 300
+@ESC_THRUSTER_t5_cost_strikecruiser 			= 75
+@ESC_THRUSTER_t5_cost_battlecruiser 			= 100
+@ESC_THRUSTER_t5_cost_carrier 					= 120
+@ESC_THRUSTER_t5_cost_dreadnought 				= 150
+@ESC_THRUSTER_t5_cost_flagship 					= 300
+
+@ESC_THRUSTER_t5_power_corvette 				= -30
+@ESC_THRUSTER_t5_power_destroyer				= -60
+@ESC_THRUSTER_t5_power_cruiser 					= -120
+@ESC_THRUSTER_t5_power_battleship 				= -240
+@ESC_THRUSTER_t5_power_titan 					= -480
+@ESC_THRUSTER_t5_power_colossus 				= -600
+@ESC_THRUSTER_t5_power_strikecruiser			= -140
+@ESC_THRUSTER_t5_power_battlecruiser 			= -190
+@ESC_THRUSTER_t5_power_carrier 					= -245
+@ESC_THRUSTER_t5_power_dreadnought 				= -260
+@ESC_THRUSTER_t5_power_flagship 				= -500
+
+@ESC_THRUSTER_t6_cost_corvette 					= 18
+@ESC_THRUSTER_t6_cost_destroyer 				= 36
+@ESC_THRUSTER_t6_cost_cruiser 					= 72
+@ESC_THRUSTER_t6_cost_battleship 				= 144
+@ESC_THRUSTER_t6_cost_titan 					= 288
+@ESC_THRUSTER_t6_cost_colossus 					= 360
+@ESC_THRUSTER_t6_cost_strikecruiser 			= 90
+@ESC_THRUSTER_t6_cost_battlecruiser 			= 120
+@ESC_THRUSTER_t6_cost_carrier 					= 144
+@ESC_THRUSTER_t6_cost_dreadnought 				= 180
+@ESC_THRUSTER_t6_cost_flagship 					= 360
+
+@ESC_THRUSTER_t6_power_corvette 				= -35
+@ESC_THRUSTER_t6_power_destroyer 				= -72
+@ESC_THRUSTER_t6_power_cruiser 					= -144
+@ESC_THRUSTER_t6_power_battleship 				= -288
+@ESC_THRUSTER_t6_power_titan 					= -540
+@ESC_THRUSTER_t6_power_colossus 				= -700
+@ESC_THRUSTER_t6_power_strikecruiser 			= -160
+@ESC_THRUSTER_t6_power_battlecruiser 			= -210
+@ESC_THRUSTER_t6_power_carrier 					= -275
+@ESC_THRUSTER_t6_power_dreadnought 				= -300
+@ESC_THRUSTER_t6_power_flagship					= -580
+
+############################################################
+###                      Jump Drives                     ###
+############################################################
+
+@ESC_JUMP_DRIVE_t2_cost 						= 50
+@ESC_JUMP_DRIVE_t3_cost 						= 75
+@ESC_JUMP_DRIVE_t2_power 						= -50
+@ESC_JUMP_DRIVE_t3_power 						= -75
+
+############################################################
+###           Advanced Tech Costs and Weights            ###
+############################################################
+
+@ESC_TECH_weight_core_tech						= 300
+
+@ESC_TECH_tier6_cost1 							= 64000
+@ESC_TECH_tier6_cost2 							= 80000
+@ESC_TECH_tier6_cost3 							= 96000
+
+@ESC_TECH_tier7_cost1 							= 128000
+@ESC_TECH_tier7_cost2 							= 160000
+@ESC_TECH_tier7_cost3 							= 192000
+
+@ESC_TECH_tier6_weight1							= 14
+@ESC_TECH_tier6_weight2							= 12
+@ESC_TECH_tier6_weight3							= 10
+
+@ESC_TECH_tier7_weight1							= 8
+@ESC_TECH_tier7_weight2							= 6
+@ESC_TECH_tier7_weight3							= 4
+
+############################################################
+###            Global flags from other mods              ###
+############################################################
+
+@NSC_active_flag 								= "has_nsc_active"
+@ACOT_active_flag								= "acot_activated"

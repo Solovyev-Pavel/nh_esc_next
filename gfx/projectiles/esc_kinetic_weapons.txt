@@ -1,0 +1,452 @@
+############################################################
+###      Kinetic Weapons' Projectiles : Autocannon 4     ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_autocannon_4_small"
+	color = { 0.53 0.06 0.72 1.0 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 25.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_autocannon_4_medium"
+	color = { 0.53 0.06 0.72 1.0 }
+	hit_entity = "stormfire_auto_cannons_medium_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_medium_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_medium_muzzle_entity"
+
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 25.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+# large
+projectile_gfx_beam = {
+	name = "esc_autocannon_4_large"
+	color = { 0.53 0.06 0.72 1.0 }
+	hit_entity = "stormfire_auto_cannons_large_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_large_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_large_muzzle_entity"
+
+	#beam specific data
+	width = 0.7
+	texture_scroll_speed = 25.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+############################################################
+###      Kinetic Weapons' Projectiles : Autocannon 5     ###
+############################################################
+
+# small
+projectile_gfx_beam = {
+	name = "esc_autocannon_5_small"
+	color = { 0.80 0.06 0.06 1.0 }
+	hit_entity = "stormfire_auto_cannons_small_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_small_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_small_muzzle_entity"
+
+	#beam specific data
+	width = 0.3
+	texture_scroll_speed = 25.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+
+	shield_impact = {
+		size = small
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+# medium
+projectile_gfx_beam = {
+	name = "esc_autocannon_5_medium"
+	color = { 0.80 0.06 0.06 1.0 }
+	hit_entity = "stormfire_auto_cannons_medium_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_medium_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_medium_muzzle_entity"
+
+	#beam specific data
+	width = 0.5
+	texture_scroll_speed = 25.5
+	texture_tiling = 10.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+
+	shield_impact = {
+		size = medium
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+# large
+projectile_gfx_beam = {
+	name = "esc_autocannon_5_large"
+	color = { 0.80 0.06 0.06 1.0 }
+	hit_entity = "stormfire_auto_cannons_large_hit_entity"
+	shield_hit_entity = "stormfire_auto_cannons_large_shield_hit_entity"
+	muzzle_flash_entity = "stormfire_auto_cannons_large_muzzle_entity"
+
+	#beam specific data
+	width = 0.7
+	texture_scroll_speed = 25.5
+	texture_tiling = 12.0
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.2 1.0
+			0.9 1.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/auto_cannon_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		loop_duration = 1.5
+		delay = 0.0
+	}
+}
+
+############################################################
+###    Kinetic Weapons' Projectiles : Asteroid Thrower   ###
+############################################################
+
+projectile_gfx_ballistic = {
+	name = "esc_asteroid_thrower_projectile"
+	color = { 1.0	1.0		1.0		1.0 }
+	hit_entity = "missile_large_hit_entity"
+	shield_hit_entity = "missile_large_shield_hit_entity"
+	muzzle_flash_entity = "scavenger_bot_secondary_muzzle_flash_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+
+	#ballistic specific
+	entity = "esc_asteroid_cannon_projectile_entity"
+	speed = 150.0			#preferred speed of the projectile
+	max_duration = 3.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+############################################################
+###      Kinetic Weapons' Projectiles : MHD cannons      ###
+############################################################
+
+### Ferromagnetic Liquid Cannon
+projectile_gfx_beam = {
+	name = "esc_mhd_cannon_1"
+	color = { 0.95 0.46 0.24 1.0 }
+	hit_entity = "esc_mhd_cannon_1_hit_entity"
+	shield_hit_entity = "esc_mhd_cannon_1_shield_hit_entity"
+	muzzle_flash_entity = "esc_mhd_cannon_1_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_mhd_cannon_1_windup_entity"
+		extra_large_turret = "esc_mhd_cannon_1_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 12.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/esc_metal_lance.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Improved Ferromagentic Liquid Cannon
+projectile_gfx_beam = {
+	name = "esc_mhd_cannon_2"
+	color = { 1.0 0.72 0.21 1.0 }
+	hit_entity = "esc_mhd_cannon_2_hit_entity"
+	shield_hit_entity = "esc_mhd_cannon_2_shield_hit_entity"
+	muzzle_flash_entity = "esc_mhd_cannon_2_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_mhd_cannon_2_windup_entity"
+		extra_large_turret = "esc_mhd_cannon_2_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 10.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/esc_metal_lance.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### MagnetoHydroDynamic Cannon : x-slot
+projectile_gfx_beam = {
+	name = "esc_mhd_cannon_3"
+	color = { 1.0 0.72 0.21 1.0 }
+	hit_entity = "esc_mhd_cannon_2_hit_entity"
+	shield_hit_entity = "esc_mhd_cannon_2_shield_hit_entity"
+	muzzle_flash_entity = "esc_mhd_cannon_2_muzzle_entity"
+	windup_entity = {
+		invisible_extra_large_fixed = "esc_mhd_cannon_2_windup_entity"
+		extra_large_turret = "esc_mhd_cannon_2_turret_windup_entity"
+	}
+
+	#beam specific data
+	width = 8.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/esc_metal_lance.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### MagnetoHydroDynamic Cannon : titanic
+projectile_gfx_beam = {
+	name = "esc_mhd_cannon_3_titanic"
+	color = { 1.0 0.72 0.21 1.0 }
+	hit_entity = "esc_mhd_cannon_2_hit_entity"
+	shield_hit_entity = "esc_mhd_cannon_2_shield_hit_entity"
+	muzzle_flash_entity = "esc_mhd_cannon_2_muzzle_entity"
+	windup_entity = "esc_mhd_cannon_2_titanic_windup_entity"
+
+	#beam specific data
+	width = 8
+	texture_scroll_speed = 0.0
+	stretch_to_fit = yes
+	texture_tiling = 3
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.7 3.0
+			0.9 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			0.05 0.0
+			0.1 30.0
+			0.4 3.0
+			0.6 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/esc_metal_lance.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}

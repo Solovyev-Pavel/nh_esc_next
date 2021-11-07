@@ -1,0 +1,104 @@
+############################################################
+##               Re : Matter Disintegrators               ##
+############################################################
+
+esc_tech_extradimensional_weapon_1 = {
+	area = physics
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { particles }
+	ai_update_type = military
+	weight = 0
+
+	weight_modifier = {
+		factor = 10
+		modifier = {
+			factor = 0
+			NOT = { has_modifier = covenant_end_of_the_cycle }
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_extradimensional_weapon_1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+############################################################
+##                Re : Scourge Strikecrafts               ##
+############################################################
+
+esc_tech_swarm_strike_craft_1 = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	ai_update_type = military
+	weight = 0
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##                  Re : Scourge Missiles                 ##
+############################################################
+
+esc_tech_swarm_missile = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	is_rare = yes
+	category = { biology }
+	ai_update_type = military
+	weight = 0
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}

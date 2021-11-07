@@ -1,0 +1,100 @@
+# particle definitions for nanite weapons
+ObjectTypes = {
+
+############################################################
+###          Nanite Weapons' Particles : Nanites         ###
+############################################################
+
+# muzzle flash
+
+pdxparticle = {
+	name = "esc_nanities_tiny_muzzle_particle"
+	type = "esc_nanities_muzzle_effect"
+	scale = 0.15
+}
+
+pdxparticle = {
+	name = "esc_nanities_small_muzzle_particle"
+	type = "esc_nanities_muzzle_effect"
+	scale = 0.25
+}
+
+pdxparticle = {
+	name = "esc_nanities_medium_muzzle_particle"
+	type = "esc_nanities_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_nanities_large_muzzle_particle"
+	type = "esc_nanities_muzzle_effect"
+	scale = 0.80
+}
+
+# idle paricles
+
+pdxparticle = {
+	name = "esc_nanities_tiny_idle_particle"
+	type = "esc_nanites_idle_effect"
+	scale = 0.33
+}
+pdxparticle = {
+	name = "esc_nanities_tiny_idle_drops_particle"
+	type = "esc_nanites_idle_drops_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_nanities_small_idle_particle"
+	type = "esc_nanites_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "esc_nanities_small_idle_drops_particle"
+	type = "esc_nanites_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_nanities_medium_idle_particle"
+	type = "esc_nanites_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "esc_nanities_medium_idle_drops_particle"
+	type = "esc_nanites_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_nanities_large_idle_particle"
+	type = "esc_nanites_idle_effect"
+	scale = 1.5
+}
+pdxparticle = {
+	name = "esc_nanities_large_idle_drops_particle"
+	type = "esc_nanites_idle_drops_effect"
+	scale = 1.5
+}
+
+# hit effects
+
+pdxparticle = {
+	name = "esc_nanities_small_hit_effect"
+	type = "esc_nanities_hit_effect"
+	scale = 0.35
+}
+
+pdxparticle = {
+	name = "esc_nanities_medium_hit_effect"
+	type = "esc_nanities_hit_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_nanities_large_hit_effect"
+	type = "esc_nanities_hit_effect"
+	scale = 0.8
+}
+
+}

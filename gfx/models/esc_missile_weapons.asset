@@ -1,0 +1,1850 @@
+############################################################
+###   Missile Weapons' Projectiles : Standard Missiles   ###
+############################################################
+
+# Projectile
+
+entity = {
+	name = "esc_missiles_6_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 0.75
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			#particle = "esc_missile_6_idle_particle"
+			particle = medium_missile_idle_particle
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_missile_6_idle_trail_particle"
+			#particle = medium_missile_idle_particle
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "esc_missiles_7_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 0.75
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			#particle = "esc_missile_7_idle_particle"
+			particle = medium_missile_idle_particle
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_missile_7_idle_trail_particle"
+			#particle = medium_missile_idle_particle
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+############################################################
+###     Missile Weapons' Projectiles : Corrosive Torp    ###
+############################################################
+
+### Projectile
+entity = {
+	name = "esc_corrosive_warhead_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 1.25
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_corrosive_warhead_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_corrosive_warhead_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+### Hit effect
+
+entity = {
+	name = "esc_corrosive_warhead_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_corrosive_warhead_hit_effect"
+			sound = { soundeffect = "energy_torpedo_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_corrosive_warhead_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_corrosive_warhead_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+############################################################
+###   Missile Weapons' Projectiles : Plasma Missiles 1   ###
+############################################################
+
+# Muzzle flash
+
+entity = {
+	name = "small_esc_plasma_missile_1_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_1_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_1_muzzle_entity"
+	cull_radius = 1.0
+    	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_1_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "large_esc_plasma_missile_1_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_1_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+# Projectiles
+
+entity = {
+	name = "small_esc_plasma_missile_1_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_1_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_1_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_1_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_1_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_1_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "large_esc_plasma_missile_1_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_1_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_1_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+# Hit effect normal & shield
+
+entity = {
+	name = "small_esc_plasma_missile_1_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "small_esc_plasma_missile_1_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_1_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_esc_plasma_missile_1_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "large_esc_plasma_missile_1_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "large_esc_plasma_missile_1_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "small_esc_plasma_missile_1_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "small_esc_plasma_missile_1_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_small_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_1_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_esc_plasma_missile_1_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_medium_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "large_esc_plasma_missile_1_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "large_esc_plasma_missile_1_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+############################################################
+###   Missile Weapons' Projectiles : Plasma Missiles 2   ###
+############################################################
+
+# Muzzle flash
+
+entity = {
+	name = "small_esc_plasma_missile_2_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_2_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_2_muzzle_entity"
+	cull_radius = 1.0
+    	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_2_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "large_esc_plasma_missile_2_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_2_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+# Projectiles
+
+entity = {
+	name = "small_esc_plasma_missile_2_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_2_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_2_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_2_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_2_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_2_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "large_esc_plasma_missile_2_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_2_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_2_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+# Hit effect normal & shield
+
+entity = {
+	name = "small_esc_plasma_missile_2_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "small_esc_plasma_missile_2_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_2_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_esc_plasma_missile_2_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "large_esc_plasma_missile_2_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "large_esc_plasma_missile_2_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "small_esc_plasma_missile_2_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "small_esc_plasma_missile_2_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_small_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_2_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_esc_plasma_missile_2_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_medium_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "large_esc_plasma_missile_2_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "large_esc_plasma_missile_2_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+############################################################
+###   Missile Weapons' Projectiles : Plasma Missiles 3   ###
+############################################################
+
+# Muzzle flash
+
+entity = {
+	name = "small_esc_plasma_missile_3_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_3_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_3_muzzle_entity"
+	cull_radius = 1.0
+    	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_3_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "large_esc_plasma_missile_3_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_3_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+# Projectiles
+
+entity = {
+	name = "small_esc_plasma_missile_3_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "small_esc_plasma_missile_3_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_3_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "medium_esc_plasma_missile_3_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "large_esc_plasma_missile_3_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "large_esc_plasma_missile_3_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+# Hit effect normal & shield
+
+entity = {
+	name = "small_esc_plasma_missile_3_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "small_esc_plasma_missile_3_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_3_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_esc_plasma_missile_3_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "large_esc_plasma_missile_3_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "large_esc_plasma_missile_3_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	state = {
+		name = "explode_med_shield"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_hit_effect_shield"
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "small_esc_plasma_missile_3_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "small_esc_plasma_missile_3_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_small_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "medium_esc_plasma_missile_3_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "medium_esc_plasma_missile_3_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_medium_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "large_esc_plasma_missile_3_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "large_esc_plasma_missile_3_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+############################################################
+###    Missile Weapons' Projectiles : Swarmer Missiles   ###
+############################################################
+
+### Projectile
+
+entity = {
+	name = "esc_swarmer_missiles_3_entity"
+	pdxmesh = "swarmer_missile_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "start"
+		looping = no
+		next_state = "loop"
+		event = {
+			time = 0
+			node = missile_01
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_02
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_03
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_04
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_05
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_06
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_07
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_08
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "loop"
+		animation = "fly"
+		event = {
+			time = 0
+			node = missile_01
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_02
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_03
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_04
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_05
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_06
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_07
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_08
+			particle = "esc_swarmer_missiles_3_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+	}
+	state = {
+		name = "explode"
+		animation = "fly"
+		animation_speed = 1000
+		looping = no
+	}
+
+	scale = 0.7
+
+	attach = { missile_01 = "arthropoid_01_missle_entity" }
+	attach = { missile_02 = "arthropoid_01_missle_entity" }
+	attach = { missile_03 = "arthropoid_01_missle_entity" }
+	attach = { missile_04 = "arthropoid_01_missle_entity" }
+	attach = { missile_05 = "arthropoid_01_missle_entity" }
+	attach = { missile_06 = "arthropoid_01_missle_entity" }
+	attach = { missile_07 = "arthropoid_01_missle_entity" }
+	attach = { missile_08 = "arthropoid_01_missle_entity" }
+}
+
+entity = {
+	name = "esc_swarmer_missiles_4_entity"
+	pdxmesh = "swarmer_missile_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		animation = "start"
+		looping = no
+		next_state = "loop"
+		event = {
+			time = 0
+			node = missile_01
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_02
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_03
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_04
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_05
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_06
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_07
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = missile_08
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "loop"
+		animation = "fly"
+		event = {
+			time = 0
+			node = missile_01
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_02
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_03
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_04
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_05
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_06
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_07
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+		event = {
+			time = 0
+			node = missile_08
+			particle = "esc_swarmer_missiles_4_idle_particle"
+			keep_particle = yes
+			trigger_once = yes
+		}
+	}
+	state = {
+		name = "explode"
+		animation = "fly"
+		animation_speed = 1000
+		looping = no
+	}
+
+	scale = 0.7
+
+	attach = { missile_01 = "arthropoid_01_missle_entity" }
+	attach = { missile_02 = "arthropoid_01_missle_entity" }
+	attach = { missile_03 = "arthropoid_01_missle_entity" }
+	attach = { missile_04 = "arthropoid_01_missle_entity" }
+	attach = { missile_05 = "arthropoid_01_missle_entity" }
+	attach = { missile_06 = "arthropoid_01_missle_entity" }
+	attach = { missile_07 = "arthropoid_01_missle_entity" }
+	attach = { missile_08 = "arthropoid_01_missle_entity" }
+}
+
+# Hit effects
+
+entity = {
+	name = "esc_swarmer_missiles_3_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_swarmer_missiles_3_hit_effect"
+			sound = { soundeffect = "swarmer_missile_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_swarmer_missile_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_swarmer_missiles_3_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_swarmer_missiles_3_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "missile_medium_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_swarmer_missiles_4_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_swarmer_missiles_4_hit_effect"
+			sound = { soundeffect = "swarmer_missile_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_swarmer_missile_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_swarmer_missiles_4_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_swarmer_missiles_4_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "missile_medium_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+############################################################
+###    Missile Weapons' Projectiles : X-Slot Missiles    ###
+############################################################
+
+### Muzzle
+
+entity = {
+	name = "esc_xmissile1_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_xmissile1_muzzle_effect"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile2_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_xmissile2_muzzle_effect"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile3_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_xmissile3_muzzle_effect"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_fire" }
+		}
+	}
+}
+
+### Projectile
+
+entity = {
+	name = "esc_xmissile1_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 3.0
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_xmissile1_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_xmissile1_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "esc_xmissile2_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 3.0
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_xmissile2_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_xmissile2_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "esc_xmissile3_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 3.0
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_xmissile3_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_xmissile3_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+### Hit effect normal & shield
+
+entity = {
+	name = "esc_xmissile1_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_xmissile1_hit_effect"
+			sound = { soundeffect = "energy_torpedo_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile1_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_xmissile1_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile2_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_xmissile2_hit_effect"
+			sound = { soundeffect = "energy_torpedo_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile2_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_xmissile2_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile3_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_xmissile3_hit_effect"
+			sound = { soundeffect = "energy_torpedo_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_xmissile3_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_xmissile3_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}

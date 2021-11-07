@@ -1,0 +1,1714 @@
+############################################################
+###                  Technologies : core                 ###
+############################################################
+
+# ── Grand Research Initiative								: gateway tech; unlocks Central Research Bureau superlab
+#     ├─ Culture Nexus / Cerebral Node / Network Regulator	: superlab for society research
+#     ├─ Advanced Materials Laboratory						: superlab for engineering research
+#     ├─ Technology Institute								: superlab for physics research
+#     ├─ Gravity Manipulation Techniques					: gateway tech for gravitic stuff; reduces construction costs
+#     │   ├─ Weaponized Gravity								: allows research of gravitic weapons [*] also requires 'New Age Warfare'
+#     │   └─ Space-Time Continuum Manipulation				: opens path to chrono-spatial weapons and more; reduces construction costs, increases construction speeds
+#     │       ├─ Weaponized Reality Warping					: unlocks research of chrono-spatial weapons [*] also requires 'New Age Warfare'
+#     │       └─ Watchers of Eternity						: unlocks late-game superlab
+#     │           ├─ Phase-Shifted Ammunitions				: this tech gives an anti-defense buff to all weapons
+#     │           └─ Time-Dilation Chambers					: this tech buffs leaders and increases army training speed
+#     ├─ Advanced Materials									: gateway tech for late-game armors and nanite techs
+#     │   ├─ Synthetic Lifeform Studies						: unlocks research of nanite weapons and armors; increases construction speeds [*] also requires 'New Age Warfare'
+#     │   ├─ Superconducting Materials						: this tech increases empire's energy production
+#     │   └─ Neutronium Coating								: this tech increases empire's mineral production
+#     ├─ Psionic Weapons									: unlocks research of psionic weapons [*] also requires 'New Age Warfare'
+#     └─ Tesla Weapons										: unlocks research of tesla weapons [*] also requires 'New Age Warfare'
+# ── New Age Warfare										: gateway tech; unlocks research of advanced weapons
+#     └─ Advanced Heavy Weapon Systems						: gateway tech; unlocks research of advanced X and T slot weapons
+# ── Biological Weapons										: unlocks research of biological weapons [*] also requires 'New Age Warfare'
+
+############################################################
+##                Grand Research Initiative               ##
+############################################################
+
+esc_tech_grand_research_initiative = {
+	area = society
+	category = { statecraft }
+	tier = 3
+	cost = @tier3cost2
+	weight = @ESC_TECH_weight_core_tech
+	prerequisites = { "tech_physics_2" "tech_society_2" "tech_engineering_2" }
+	is_rare = yes # purely for cosmetic purposes
+	gateway = ESC_TECHNOLOGIES
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_ADV_RESEARCH_TITLE"
+			desc = "ESC_TECH_UNLOCK_ADV_RESEARCH_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.10
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+
+	ai_weight = { factor = @ESC_AI_tech_weight_multiplier }
+}
+
+############################################################
+##                      Culture Nexus                     ##
+############################################################
+
+esc_tech_culture_nexus = {
+	area = society
+	category = { statecraft }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4cost3
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_society_3" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_culture_nexus }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.9
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_statecraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_culture_nexus }
+			}
+		}
+	}
+}
+
+############################################################
+##               Advanced Materials Laboratory            ##
+############################################################
+
+esc_tech_advanced_materials_lab = {
+	area = engineering
+	category = { materials }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4cost3
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_engineering_3" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_advanced_materials_lab }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_advanced_materials_lab }
+			}
+		}
+	}
+}
+
+############################################################
+##                   Technology Institute                 ##
+############################################################
+
+esc_tech_technology_institute = {
+	area = physics
+	category = { computing }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4cost3
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_physics_3" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_technology_institute }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_computing"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_technology_institute }
+			}
+		}
+	}
+}
+
+############################################################
+##                     New Age Warfare                    ##
+############################################################
+
+esc_tech_new_age_warfare = {
+	area = society
+	category = { military_theory }
+	tier = 4
+	cost = @tier4cost3
+	weight = @ESC_TECH_weight_core_tech
+	is_rare = yes
+	### actual prerequisites are set in weight_modifiers since they are of OR type
+	prerequisites = {}
+	gateway = ESC_WEAPONS
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_ADV_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_ADV_WEAPONS_DESC"
+		}
+	}
+
+	potential = { ESC_TRIGGER_advanced_weapons_enabled = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_lasers_5"
+				has_technology = "tech_mass_drivers_5"
+				has_technology = "tech_missiles_5"
+				has_technology = "esc_tech_crystal_cannon_3"
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_new_age_warfare }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_lasers_5"
+				has_technology = "tech_mass_drivers_5"
+				has_technology = "tech_missiles_5"
+				has_technology = "esc_tech_crystal_cannon_3"
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_new_age_warfare }
+			}
+		}
+	}
+}
+
+############################################################
+##            Advanced Heavy Weapon Systems               ##
+############################################################
+
+esc_tech_advanced_heavy_weapons = {
+	area = society
+	category = { military_theory }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	### this tech has additional prerequisites beyond this one, those are set in modifiers
+	prerequisites = { "esc_tech_new_age_warfare" }
+	is_rare = yes
+	gateway = ESC_SUPERHEAVY_WEAPONS
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_ADV_HEAVY_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_ADV_HEAVY_WEAPONS_DESC"
+		}
+	}
+
+	potential = { ESC_TRIGGER_advanced_heavy_weapons_enabled = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_energy_lance_2"
+				has_technology = "tech_mass_accelerator_2"
+				has_technology = "tech_arc_emitter_2"
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_advanced_heavy_weapons }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_energy_lance_2"
+				has_technology = "tech_mass_accelerator_2"
+				has_technology = "tech_arc_emitter_2"
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.15
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_advanced_heavy_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##             Gravity Manipulation Techniques            ##
+############################################################
+
+esc_tech_gravity_manipulation = {
+	area = physics
+	category = { field_manipulation }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_physics_3" }
+	is_rare = yes # purely for cosmetic purposes
+	gateway = ESC_GRAVITY_MANIPULATION
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_GRAVITY_MANIPULATION_TITLE"
+			desc = "ESC_TECH_UNLOCK_GRAVITY_MANIPULATION_DESC"
+		}
+	}
+
+	modifier = {
+		starbase_buildings_cost_mult = -0.1
+		planet_buildings_cost_mult = -0.1
+		planet_districts_cost_mult = -0.1
+		megastructures_cost_mult = -0.15
+		starbase_upgrade_cost_mult = -0.1
+		starbase_modules_cost_mult = -0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+	}
+}
+
+############################################################
+##                    Weaponized Gravity                  ##
+############################################################
+
+esc_tech_gravity_weapons = {
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	prerequisites = { "esc_tech_new_age_warfare" "esc_tech_gravity_manipulation" }
+	is_rare = yes
+	gateway = ESC_GRAVITIC_WEAPONS
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_GRAV_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_GRAV_WEAPONS_DESC"
+		}
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_gravity_weapons }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_gravity_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##                    Advanced Materials                  ##
+############################################################
+
+esc_tech_advanced_materials = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_engineering_3" }
+	is_rare = yes # purely for cosmetic purposes
+	gateway = ESC_MATERIALS
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_ADV_MATERIALS_TITLE"
+			desc = "ESC_TECH_UNLOCK_ADV_MATERIALS_DESC"
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = 0.1
+		shipclass_military_station_hull_mult = 0.1
+		ship_armor_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+############################################################
+##                Superconducting Materials               ##
+############################################################
+
+esc_tech_superconductors = {
+	area = physics
+	category = { materials }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	prerequisites = { "esc_tech_advanced_materials" }
+	is_rare = yes
+
+	modifier = {
+		country_energy_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_superconductors }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_superconductors }
+			}
+		}
+	}
+}
+
+############################################################
+##              Neutronium-Tipped Powertools              ##
+############################################################
+
+esc_tech_neutronium_tools = {
+	area = engineering
+	category = { materials }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	prerequisites = { "esc_tech_advanced_materials" }
+	is_rare = yes
+
+	modifier = {
+		country_minerals_produces_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_neutronium_tools }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_neutronium_tools }
+			}
+		}
+	}
+}
+
+############################################################
+##                 Synthetic Lifeform Studies             ##
+############################################################
+
+esc_tech_synthetic_lifeform_studies = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_new_age_warfare" "esc_tech_advanced_materials" }
+	is_rare = yes
+	gateway = ESC_NANITE_COMPONENTS
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_NANITIES_TITLE"
+			desc = "ESC_TECH_UNLOCK_NANITIES_DESC"
+		}
+	}
+
+	potential = {
+		#NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_technology_fobidden }
+	}
+
+	modifier = {
+		planet_building_build_speed_mult = 0.10
+		starbase_shipyard_build_speed_mult = 0.10
+		megastructure_build_speed_mult = 0.10
+		starbase_upgrade_speed_mult = 0.15
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			ESC_TRIGGER_may_research_cybernetic_amoeba = yes
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_synthetic_lifeform_studies }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 2
+			ESC_TRIGGER_may_research_cybernetic_amoeba = yes
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_synthetic_lifeform_studies }
+			}
+		}
+	}
+}
+
+############################################################
+##                      Psionic Weapons                   ##
+############################################################
+
+esc_tech_psionic_weapons = {
+    area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	prerequisites = { "esc_tech_new_age_warfare" "esc_tech_grand_research_initiative" }
+	is_rare = yes
+	gateway = ESC_PSIONIC_WEAPONS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_PSI_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_PSI_WEAPONS_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_basic = no
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_weapons }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapons_basic = no
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_psionic_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##                       Bio-Weapons                      ##
+############################################################
+
+esc_tech_biological_weapons = {
+    area = society
+	category = { biology }
+	tier = 3
+	cost = @tier3cost2
+	weight = @tier3weight3
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_gene_tailoring" }
+	is_rare = yes # purely for cosmetic reasons
+	gateway = ESC_BIOLOGICAL_WEAPONS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden }
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_BIO_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_BIO_WEAPONS_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 2
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_biological_weapons }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 2
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_biological_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##                       Tesla Weapons                    ##
+############################################################
+
+esc_tech_tesla_weapons = {
+    area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	prerequisites = { "esc_tech_new_age_warfare" "esc_tech_grand_research_initiative" "tech_power_plant_4" }
+	is_rare = yes
+	gateway = ESC_TESLA_WEAPONS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+	}
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_TESLA_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_TESLA_WEAPONS_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_tesla_weapons = no
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_tesla_weapons }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_tesla_weapons = no
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.1
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_tesla_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##          Time-Space Continuum Manipulation             ##
+############################################################
+
+esc_tech_spacetime_manipulation = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	prerequisites = { "esc_tech_sensors_6" "esc_tech_gravity_manipulation" }
+	is_rare = yes
+	gateway = ESC_SPACETIME_TECH
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_REALITY_ALTER_TITLE"
+			desc = "ESC_TECH_UNLOCK_REALITY_ALTER_DESC"
+		}
+	}
+
+	modifier = {
+		planet_decision_enact_speed_mult = 0.5
+		planet_building_build_speed_mult = 0.1
+		starbase_shipyard_build_speed_mult = 0.1
+		megastructure_build_speed_mult = 0.1
+		starbase_upgrade_speed_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				end_game_years_passed > 0
+				years_passed > 250
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_spacetime_manipulation }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				end_game_years_passed > 0
+				years_passed > 250
+			}
+		}
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.5
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_spacetime_manipulation }
+			}
+		}
+	}
+}
+
+############################################################
+##               Weaponized Reality Warping               ##
+############################################################
+
+esc_tech_chrono_spatial_weapons = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { esc_tech_spacetime_manipulation }
+	is_rare = yes
+	gateway = ESC_CHRONOSPATIAL_WEAPONS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_chrono_spatial_weapons }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_chrono_spatial_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##                   Watcher of Eternity                  ##
+############################################################
+
+esc_tech_watcher_of_eternity = {
+	area = society
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { esc_tech_spacetime_manipulation }
+	is_rare = yes
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_watcher_of_eternity }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		modifier = {
+			factor = 1.15
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_maniacal"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_watcher_of_eternity }
+			}
+		}
+	}
+}
+
+############################################################
+##                Phase-Shifted Ammunition                ##
+############################################################
+
+esc_tech_phase_shifted_ammunition = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { esc_tech_watcher_of_eternity }
+	is_rare = yes
+
+	potential = {
+		NOR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		} # hopefully this will prevent FE/AFE from getting this tech... otherwise, the balance might end up too much in their favor
+	}
+
+	modifier = {
+		ship_shield_penetration_mult = 0.1
+		ship_armor_penetration_mult = 0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_phase_shifted_ammunition }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_phase_shifted_ammunition }
+			}
+		}
+	}
+}
+
+############################################################
+##                 Time-Dilation Chambers                 ##
+############################################################
+
+esc_tech_time_dilation_chambers = {
+	area = physics
+	category = { field_manipulation }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { esc_tech_watcher_of_eternity }
+	is_rare = yes
+
+	modifier = {
+		leader_skill_levels = 1
+		species_leader_exp_gain = 0.50
+		planet_army_build_speed_mult = 0.1
+		army_starting_experience_add = 100
+		ship_starting_experience_add = 100
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 2
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_time_dilation_chambers }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_time_dilation_chambers }
+			}
+		}
+	}
+}

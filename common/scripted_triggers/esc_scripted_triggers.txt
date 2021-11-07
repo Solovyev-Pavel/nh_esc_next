@@ -1,0 +1,492 @@
+############################################################
+###                 ESC Scripted Triggers                ###
+############################################################
+
+### mod planet classes : arcologies
+@PD_Ecocity             = "pc_ecocity"
+@PD_Bioforge            = "pc_bioforge"
+@PD_MachineFactory      = "pc_machine_factory"
+@PD_ShroudCity          = "pc_shroudcity"
+@PD_Necropolis          = "pc_necropolis"
+@PD_NechoHive           = "pc_necrohive"
+@PD_NecropolisMachine   = "pc_machine_necropolis"
+@PD_PalaceWorld         = "pc_palacearc"
+@PD_CapitalWorld        = "pc_capitalarc"
+@PD_HiveCapital         = "pc_biocapital"
+@PD_MachineCapital      = "pc_machine_capital"
+@PD_FortCity            = "pc_milarc"
+@PD_FortCityHive        = "pc_biofort"
+@PD_FortCityMachine     = "pc_machine_fort"
+@PD_FortCityRelic       = "pc_milarc_relic"
+@PD_Crucible            = "pc_crucible"
+@PD_CrucibleShroud      = "pc_shroud_crucible"
+@PD_CrucibleClean       = "pc_clean_crucible"
+### mod planet classes : molten habitats
+@PD_MoltenHabitat       = "pc_pd_molten_hab"
+@AM_MoltenHabitable     = "pc_molten_habitable"
+### mod planet (subclass) modifiers
+@RSNF_VolcanicWorld     = "volcanic_world"
+@RSNF_LavaWorld         = "lava_world"
+@RSNF_InfernalWorld     = "infernal_world"
+### mod district types
+@DO2_AscendedHousing    = "district_ascended_housing"
+
+############################################################
+###                Mantle Mining Facility                ###
+############################################################
+
+# returns 'yes' if a planet is an ecumenopolis type
+ESC_TRIGGER_is_city_planet = {
+    OR = {
+        is_planet_class = pc_city
+        # planet diversity compatibility
+        is_planet_class = @PD_Ecocity
+        is_planet_class = @PD_Bioforge
+        is_planet_class = @PD_MachineFactory
+        is_planet_class = @PD_ShroudCity
+        is_planet_class = @PD_Necropolis
+        is_planet_class = @PD_NechoHive
+        is_planet_class = @PD_NecropolisMachine
+        is_planet_class = @PD_PalaceWorld
+        is_planet_class = @PD_CapitalWorld
+        is_planet_class = @PD_HiveCapital
+        is_planet_class = @PD_MachineCapital
+        is_planet_class = @PD_FortCity
+        is_planet_class = @PD_FortCityHive
+        is_planet_class = @PD_FortCityMachine
+        is_planet_class = @PD_FortCityRelic
+        # district overhaul compatibility
+        AND = {
+            is_planet_class = pc_relic
+            has_district = @DO2_AscendedHousing
+        }
+    }
+}
+
+# returns yes if a planet is molten/volcanic
+ESC_TRIGGER_is_naked_mantle_planet = {
+    OR = {
+        is_planet_class = @AM_MoltenHabitable # Alphamod Molten Habitable
+        is_planet_class = @PD_MoltenHabitat # Planet Diversity molten habitat
+        is_planet_class = @PD_Crucible # Planet Diversity crucible world
+        is_planet_class = @PD_CrucibleShroud # Planet Diversity crucible world
+        is_planet_class = @PD_CrucibleClean # Planet Diversity crucible world
+        has_modifier = @RSNF_VolcanicWorld # New Frontiers volcanic tomb world
+        has_modifier = @RSNF_LavaWorld # New Frontiers planet
+        has_modifier = @RSNF_InfernalWorld # New Frontiers hollow world subclass
+    }
+}
+
+# returns 'yes' if the planet is a valid place for the mantle mining facility
+ESC_TRIGGER_can_host_mantle_miner = {
+    OR = {
+        AND = {
+            ESC_TRIGGER_is_city_planet = yes
+            OR = {
+                free_district_slots > 4 # need at least 5
+                has_deposit = d_esc_large_borehole_1
+            }
+        }
+        ESC_TRIGGER_is_naked_mantle_planet = yes
+    }
+}
+
+# returns 'yes' if the planet is a valid place for the upgraded mantle mining facility
+ESC_TRIGGER_can_host_upgraded_mantle_miner = {
+    OR = {
+        ESC_TRIGGER_is_city_planet = yes
+        ESC_TRIGGER_is_naked_mantle_planet = yes
+    }
+}
+
+# returns 'yes' if a planet is allowed to construct mantle mining facility
+ESC_TRIGGER_can_build_mantle_miner = {
+    OR = {
+        AND = {
+            ESC_TRIGGER_is_city_planet = yes
+            has_major_upgraded_capital = yes
+        }
+        AND = {
+            ESC_TRIGGER_is_naked_mantle_planet = yes
+            has_fully_upgraded_capital = yes
+            num_pops > 49
+        }
+    }
+}
+
+# returns 'yes' if the planets needs a borehole 'feature' upon construction of the mantle mining facility
+ESC_TRIGGER_needs_giant_borehole = {
+    NOR = {
+        has_deposit = d_esc_large_borehole_1
+        ESC_TRIGGER_is_naked_mantle_planet = yes
+    }
+}
+
+############################################################
+###               Playable Empire Detection              ###
+############################################################
+
+# returns yes if the empire is playable type
+ESC_TRIGGER_is_playable_empire = {
+    any_playable_country = {
+        is_same_empire = PREV
+    }
+}
+
+############################################################
+###                 Empire Type Detection                ###
+############################################################
+
+# returns 'yes' if the country is a normal empire or a machine FE/AFE
+ESC_TRIGGER_is_normal_empire_or_machine_fe = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_machine = yes
+    }
+}
+
+# returns 'yes' if the country is a normal empire or a materialist FE/AFE
+ESC_TRIGGER_is_normal_empire_or_materialist_fe = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_materialist = yes
+    }
+}
+
+# returns 'yes' if the country is a normal empire or a spiritualist FE/AFE
+ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_spiritualist = yes
+    }
+}
+
+# returns 'yes' if the country is a normal empire or a xenophile FE/AFE
+ESC_TRIGGER_is_normal_empire_or_xenophile_fe = {
+    OR = {
+        is_fallen_empire = no
+        is_fallen_empire_xenophile = yes
+    }
+}
+
+############################################################
+###                      Weapon Types                    ###
+############################################################
+
+# returns 'yes' if at least one weapon category requiring "New Age Warfare" tech is enabled
+ESC_TRIGGER_advanced_weapons_enabled = {
+    NAND = {
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+
+        has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+
+        has_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+    }
+    ESC_TRIGGER_advanced_heavy_weapons_enabled = yes
+}
+
+# returns 'yes' if at least one extra-large or titanic weapon is enabled
+ESC_TRIGGER_advanced_heavy_weapons_enabled = {
+    NAND = {
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+
+        has_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+
+        has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+    }
+}
+
+############################################################
+###                 Culture Worker Types                 ###
+############################################################
+
+# culture workers
+ESC_TRIGGER_country_uses_culture_workers = {
+    is_megacorp = no
+    is_spiritualist = no
+    is_gestalt = no
+    NOR = {
+        has_valid_civic = civic_death_cult
+		has_valid_civic = civic_death_cult_corporate
+        has_valid_civic = civic_memorialist
+    }
+}
+
+# priests
+ESC_TRIGGER_country_uses_priests = {
+    is_spiritualist = yes
+    is_gestalt = no
+    NOR = {
+        has_valid_civic = civic_death_cult
+		has_valid_civic = civic_death_cult_corporate
+        has_valid_civic = civic_memorialist
+    }
+}
+
+# managers
+ESC_TRIGGER_country_uses_managers = {
+    is_megacorp = yes
+    is_spiritualist = no
+    is_gestalt = no
+    NOR = {
+        has_valid_civic = civic_death_cult
+		has_valid_civic = civic_death_cult_corporate
+        has_valid_civic = civic_memorialist
+    }
+}
+
+# death priests
+ESC_TRIGGER_country_uses_death_priests = {
+    OR = {
+        has_valid_civic = civic_death_cult
+		has_valid_civic = civic_death_cult_corporate
+    }
+}
+
+# death chroniclers
+ESC_TRIGGER_country_uses_memorialists = {
+    is_gestalt = no
+    has_valid_civic = civic_memorialist
+}
+
+# death chronicler drones
+ESC_TRIGGER_country_uses_chronicle_drones = {
+    is_gestalt = yes
+    OR = {
+		has_valid_civic = civic_hive_memorialist
+		has_valid_civic = civic_machine_memorialist
+    }
+}
+
+############################################################
+###            Galactic community resolutions            ###
+############################################################
+
+# checks whether environmental_ordinance_waivers resolution was passed
+ESC_TRIGGER_environment_ordinance_waivers = {
+    OR = {
+        is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
+        is_active_resolution = "resolution_industry_project_cornucopia"
+    }
+}
+
+############################################################
+###                Technology Potentials                 ###
+############################################################
+
+# checks whether Titanic / oversized X-slot weapons can be researched
+ESC_TRIGGER_may_research_oversized_weapons = {
+    OR = {
+        host_has_dlc = "Apocalypse"
+        host_has_dlc = "Federations"
+        # has_nemesis = yes
+    }
+}
+
+# checks whether an empire may research tesla weapons : requires machine or synthetically-ascended empire
+ESC_TRIGGER_may_research_tesla_weapons = {
+    OR = {
+        is_machine_empire = yes
+        NOT = { host_has_dlc = "Utopia" }
+        AND = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_synthetic_evolution
+        }
+    }
+}
+
+# checks whether an empire may research cybernetically-augmented amoeba : requires machine or cybernetic empire
+ESC_TRIGGER_may_research_cybernetic_amoeba = {
+    OR = {
+        is_machine_empire = yes
+        NOT = { host_has_dlc = "Utopia" }
+        AND = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_the_flesh_is_weak
+        }
+    }
+}
+
+# checks whether an empire may research biologically-augmented amoeba : requires biologically-ascended empire
+ESC_TRIGGER_may_research_bioaugmented_amoeba = {
+    OR = {
+        NOT = { host_has_dlc = "Utopia" }
+        AND = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_engineered_evolution
+        }
+    }
+}
+
+# checks whether an empire may reverse-engineer psionic weapons
+ESC_TRIGGER_may_reverse_engineer_biological_weapons = {
+    OR = {
+        is_machine_empire = no
+        has_valid_civic = civic_machine_assimilator
+        has_valid_civic = civic_machine_servitor
+    }
+}
+
+# checks whether an empire may research advanced biological weapons : requires biologically-ascended empire
+ESC_TRIGGER_may_research_biological_weapons_advanced = {
+    OR = {
+        NOT = { host_has_dlc = "Utopia" }
+        AND = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_engineered_evolution
+        }
+    }
+}
+
+# checks whether an empire may research crystalline weapons : requires knowledge of crystalline lifeforms
+ESC_TRIGGER_may_research_crystalline_weapons = {
+    OR = {
+        has_country_flag = crystals_encountered
+		has_country_flag = discovered_lihtoids_arc_site
+		is_lithoid_empire = yes
+    }
+}
+
+@FQ_Ompnipresence       = "ap_omnipresence"
+
+# checks whether a machine empire can do special project to research psionics
+ESC_TRIGGER_can_do_machine_psionics_special_project = {
+     OR = {
+        has_valid_civic = civic_machine_servitor
+        has_valid_civic = civic_machine_assimilator
+    }
+    any_owned_pop = {
+        OR = {
+            has_trait = trait_psionic
+            has_trait = trait_latent_psionic
+        }
+    }
+}
+
+# checks whether an empire may reverse-engineer psionic weapons
+ESC_TRIGGER_may_reverse_engineer_psionic_weapons = {
+    OR = {
+        is_machine_empire = no
+        has_valid_civic = civic_machine_assimilator
+        has_valid_civic = civic_machine_servitor
+    }
+}
+
+# checks whether an empire may research basic psionic weapons : must know about psionics
+ESC_TRIGGER_may_research_psionic_weapons_basic = {
+    OR = {
+        has_technology = tech_psionic_theory
+        is_hive_empire = yes # hive minds are canonically psionic
+        has_country_flag = ESC_COUNTRY_FLAG_machine_psionics
+    }
+}
+
+# checks whether an empire may research advanced psionic weapons : must be psionically ascended
+ESC_TRIGGER_may_research_psionic_weapons_advanced = {
+    OR = {
+        has_ascension_perk = @FQ_Ompnipresence
+        NOT = { host_has_dlc = "Utopia" }
+        AND = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_transcendence
+        }
+    }
+}
+
+# checks whether an empire may research advanced nanite weapons : must be machine or cybernetic
+ESC_TRIGGER_may_research_nanite_weapons_advanced = {
+    # NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_technology_fobidden }
+    OR = {
+        is_machine_empire = yes
+        NOT = { host_has_dlc = "Utopia" }
+        AND = {
+            host_has_dlc = "Utopia"
+            has_ascension_perk = ap_the_flesh_is_weak
+        }
+    }
+}
+
+############################################################
+###             Starbase Modules Potentials              ###
+############################################################
+
+@GIGA_EHOF_Black_hole       = "pc_ehof_black_hole"
+@GIGA_Penrose_Black_hole    = "pc_black_hole_giga"
+@GIGA_Pouchkinn_Black_hole  = "pc_pouchkinn_black_hole"
+@GIGA_Supermassive_BH       = "pc_core_black_hole"
+@GIGA_Supermassive_Quasar   = "pc_core_quasar"
+@RS_Collapsar               = "pc_collapsar"
+@RS_Microquasar_orange      = "pc_microquasar_1"
+@RS_Microquasar_blue        = "pc_microquasar_2"
+
+# checks if any 'planet' in the system is a black hole
+ESC_TRIGGER_system_has_dark_matter = {
+    any_system_planet = {
+        OR = {
+            is_planet_class = pc_black_hole
+            is_planet_class = @GIGA_EHOF_Black_hole
+            is_planet_class = @GIGA_Penrose_Black_hole
+            is_planet_class = @GIGA_Pouchkinn_Black_hole
+            is_planet_class = @GIGA_Supermassive_BH
+            is_planet_class = @GIGA_Supermassive_Quasar
+            is_planet_class = @RS_Collapsar
+            is_planet_class = @RS_Microquasar_orange
+            is_planet_class = @RS_Microquasar_blue
+
+            has_deposit = d_dark_matter_deposit_1
+            has_deposit = d_dark_matter_deposit_2
+            has_deposit = d_dark_matter_deposit_3
+            has_deposit = d_dark_matter_deposit_10
+        }
+    }
+}
+
+# checks if any 'planet' in the system has zro deposit
+ESC_TRIGGER_system_has_zro = {
+    any_system_planet = {
+        OR = {
+            has_deposit = d_zro_deposit_1
+            has_deposit = d_zro_deposit_2
+            has_deposit = d_zro_deposit_3
+            has_deposit = d_zro_deposit_4
+            has_deposit = d_zro_deposit_5
+        }
+    }
+}
+
+# checks if any 'planet' in the system has nanites deposit
+ESC_TRIGGER_system_has_nanites = {
+    any_system_planet = {
+        OR = {
+            is_planet_class = pc_gray_goo
+            has_deposit = d_nanites_deposit
+        }
+    }
+}

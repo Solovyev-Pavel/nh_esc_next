@@ -1,0 +1,116 @@
+# particle definitions for biological weapons
+ObjectTypes = {
+
+############################################################
+###          Bio Weapons' Particles : Acid Spit          ###
+############################################################
+
+# muzzle flash
+
+pdxparticle = {
+	name = "esc_bio_projectile_small_muzzle_particle"
+	type = "esc_bio_cannon_muzzle_effect"
+	scale = 0.25
+}
+
+pdxparticle = {
+	name = "esc_bio_projectile_medium_muzzle_particle"
+	type = "esc_bio_cannon_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_bio_projectile_large_muzzle_particle"
+	type = "esc_bio_cannon_muzzle_effect"
+	scale = 0.80
+}
+
+# idle paricles
+
+pdxparticle = {
+	name = "esc_bio_projectile_small_idle_particle"
+	type = "esc_bio_cannon_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "esc_bio_projectile_small_idle_drops_particle"
+	type = "esc_bio_cannon_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_bio_projectile_medium_idle_particle"
+	type = "esc_bio_cannon_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "esc_bio_projectile_medium_idle_drops_particle"
+	type = "esc_bio_cannon_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_bio_projectile_large_idle_particle"
+	type = "esc_bio_cannon_idle_effect"
+	scale = 1.5
+}
+pdxparticle = {
+	name = "esc_bio_projectile_large_idle_drops_particle"
+	type = "esc_bio_cannon_idle_drops_effect"
+	scale = 1.5
+}
+
+# hit effects
+
+pdxparticle = {
+	name = "esc_bio_projectile_small_hit_effect"
+	type = "esc_bio_cannon_hit_effect"
+	scale = 0.35
+}
+
+pdxparticle = {
+	name = "esc_bio_projectile_medium_hit_effect"
+	type = "esc_bio_cannon_hit_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_bio_projectile_large_hit_effect"
+	type = "esc_bio_cannon_hit_effect"
+	scale = 0.8
+}
+
+############################################################
+###          Bio Weapons' Particles : Acid Spit          ###
+############################################################
+
+# muzzle flash
+
+pdxparticle = {
+	name = "esc_bio_missile_muzzle_particle"
+	type = "esc_bio_missile_muzzle_effect"
+	scale = 1.0
+}
+
+# idle paricles
+
+pdxparticle = {
+	name = "esc_bio_missile_idle_particle"
+	type = "esc_bio_missile_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "esc_bio_missile_idle_drops_particle"
+	type = "esc_bio_missile_idle_drops_effect"
+	scale = 1.0
+}
+
+# hit effects
+
+pdxparticle = {
+	name = "esc_bio_missile_hit_effect"
+	type = "esc_bio_missile_hit_effect"
+	scale = 1.0
+}
+
+}

@@ -1,0 +1,1663 @@
+namespace = esc_options
+
+############################################################
+###               Mod Menu Options Events                ###
+############################################################
+
+### Main window
+country_event = {
+	id = esc_options.1000
+	title = esc_options.title
+	desc = esc_options.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = ESC_GLOBAL_FLAG_MENU_ACTIVE
+	}
+
+	# customize weapons
+	option = {
+		name = esc_options.1000.weapons
+		custom_tooltip = esc_options.1000.weapons.tooltip
+		hidden_effect = { country_event = { id = esc_options.2000 days = 0 } }
+	}
+
+	# utility components
+	option = {
+		name = esc_options.1000.utility
+		custom_tooltip = esc_options.1000.utility.tooltip
+		hidden_effect = { country_event = { id = esc_options.3000 days = 0 } }
+	}
+
+	# customize leviathan and crises rewards
+	option = {
+		name = esc_options.1000.leviathan
+		custom_tooltip = esc_options.1000.leviathan.tooltip
+		hidden_effect = { country_event = { id = esc_options.4000 days = 0 } }
+	}
+
+	# customize buildings
+	option = {
+		name = esc_options.1000.buildings
+		custom_tooltip = esc_options.1000.buildings.tooltip
+		hidden_effect = { country_event = { id = esc_options.5000 days = 0 } }
+	}
+
+	# AI bonuses
+	option = {
+		name = esc_options.1000.ai_boost.easy_scaling
+		custom_tooltip = esc_options.1000.ai_boost.easy_scaling.tooltip
+		trigger = { has_global_flag = ESC_AI_research_boost_easy_scaling }
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+	option = {
+		name = esc_options.1000.ai_boost.easy_static
+		custom_tooltip = esc_options.1000.ai_boost.easy_static.tooltip
+		trigger = { has_global_flag = ESC_AI_research_boost_easy_static }
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+	option = {
+		name = esc_options.1000.ai_boost.moderate_scaling
+		custom_tooltip = esc_options.1000.ai_boost.moderate_scaling.tooltip
+		trigger = { has_global_flag = ESC_AI_research_boost_moderate_scaling }
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+	option = {
+		name = esc_options.1000.ai_boost.moderate_static
+		custom_tooltip = esc_options.1000.ai_boost.moderate_static.tooltip
+		trigger = { has_global_flag = ESC_AI_research_boost_moderate_static }
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+	option = {
+		name = esc_options.1000.ai_boost.challenging_scaling
+		custom_tooltip = esc_options.1000.ai_boost.challenging_scaling.tooltip
+		trigger = { has_global_flag = ESC_AI_research_boost_challenging_scaling }
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+	option = {
+		name = esc_options.1000.ai_boost.challenging_static
+		custom_tooltip = esc_options.1000.ai_boost.challenging_static.tooltip
+		trigger = { has_global_flag = ESC_AI_research_boost_challenging_static }
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+	option = {
+		name = esc_options.1000.ai_boost.disabled
+		custom_tooltip = esc_options.1000.ai_boost.disabled.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_AI_research_boost_easy_scaling
+				has_global_flag = ESC_AI_research_boost_easy_static
+				has_global_flag = ESC_AI_research_boost_moderate_scaling
+				has_global_flag = ESC_AI_research_boost_moderate_static
+				has_global_flag = ESC_AI_research_boost_challenging_scaling
+				has_global_flag = ESC_AI_research_boost_challenging_static
+			}
+		}
+		hidden_effect = { country_event = { id = esc_options.6000 days = 0 } }
+	}
+
+	# crisis
+	option = {
+		name = esc_options.1000.crisis.a
+		custom_tooltip = esc_options.1000.crisis.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+				has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+			country_event = { id = esc_options.1000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.1000.crisis.b
+		custom_tooltip = esc_options.1000.crisis.b.tooltip
+		trigger = {
+			has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+			remove_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+			country_event = { id = esc_options.1000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.1000.crisis.c
+		custom_tooltip = esc_options.1000.crisis.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+			country_event = { id = esc_options.1000 days = 0 }
+		}
+	}
+
+	# mod presets
+	option = {
+		name = esc_options.1000.presets
+		custom_tooltip = esc_options.1000.presets.tooltip
+		hidden_effect = { country_event = { id = esc_options.7000 days = 0 } }
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.exit
+	}
+
+	after = {
+		remove_global_flag = ESC_GLOBAL_FLAG_MENU_ACTIVE
+	}
+}
+
+### Weapons Customization
+country_event = {
+	id = esc_options.2000
+	title = esc_options.weapons_menu.title
+	desc = esc_options.weapons_menu.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# standard vanilla weapons
+	option = {
+		name = esc_options.2000.vanilla_normal
+		custom_tooltip = esc_options.2000.vanilla_normal.tooltip
+		hidden_effect = { country_event = { id = esc_options.2001 days = 0 } }
+	}
+
+	# supersized vanilla weapons
+	option = {
+		name = esc_options.2000.vanilla_xl
+		custom_tooltip = esc_options.2000.vanilla_xl.tooltip
+		hidden_effect = { country_event = { id = esc_options.2002 days = 0 } }
+	}
+
+	# additional weapon types
+	option = {
+		name = esc_options.2000.extras
+		custom_tooltip = esc_options.2000.extras.tooltip
+		hidden_effect = { country_event = { id = esc_options.2003 days = 0 } }
+	}
+
+	# biological weapons
+	option = {
+		name = esc_options.2000.biological.a
+		custom_tooltip = esc_options.2000.biological.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.biological.b
+		custom_tooltip = esc_options.2000.biological.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.biological.c
+		custom_tooltip = esc_options.2000.biological.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+
+	# crystalline weapons
+	option = {
+		name = esc_options.2000.crystal.a
+		custom_tooltip = esc_options.2000.crystal.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.crystal.b
+		custom_tooltip = esc_options.2000.crystal.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.crystal.c
+		custom_tooltip = esc_options.2000.crystal.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+
+	# gravitic weapons
+	option = {
+		name = esc_options.2000.gravitic.a
+		custom_tooltip = esc_options.2000.gravitic.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.gravitic.b
+		custom_tooltip = esc_options.2000.gravitic.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.gravitic.c
+		custom_tooltip = esc_options.2000.gravitic.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+
+	# nanite weapons
+	option = {
+		name = esc_options.2000.nanite.a
+		custom_tooltip = esc_options.2000.nanite.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.nanite.b
+		custom_tooltip = esc_options.2000.nanite.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.nanite.c
+		custom_tooltip = esc_options.2000.nanite.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+
+	# psionic weapons
+	option = {
+		name = esc_options.2000.psionic.a
+		custom_tooltip = esc_options.2000.psionic.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.psionic.b
+		custom_tooltip = esc_options.2000.psionic.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.psionic.c
+		custom_tooltip = esc_options.2000.psionic.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+
+	# tesla weapons
+	option = {
+		name = esc_options.2000.tesla.a
+		custom_tooltip = esc_options.2000.tesla.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.tesla.b
+		custom_tooltip = esc_options.2000.tesla.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2000.tesla.c
+		custom_tooltip = esc_options.2000.tesla.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+			country_event = { id = esc_options.2000 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
+	}
+}
+
+### Weapons Customization : vanilla-type weapons (regular)
+country_event = {
+	id = esc_options.2001
+	title = esc_options.weapons_vanilla.title
+	desc = esc_options.weapons_vanilla.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# kinetic weapons
+	option = {
+		name = esc_options.2001.kinetics.a
+		custom_tooltip = esc_options.2001.kinetics.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2001.kinetics.b
+		custom_tooltip = esc_options.2001.kinetics.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+
+	# energy weapons
+	option = {
+		name = esc_options.2001.energy.a
+		custom_tooltip = esc_options.2001.energy.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2001.energy.b
+		custom_tooltip = esc_options.2001.energy.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+
+	# missile weapons
+	option = {
+		name = esc_options.2001.missiles.a
+		custom_tooltip = esc_options.2001.missiles.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2001.missiles.b
+		custom_tooltip = esc_options.2001.missiles.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+
+	# point defense
+	option = {
+		name = esc_options.2001.pd.a
+		custom_tooltip = esc_options.2001.pd.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2001.pd.b
+		custom_tooltip = esc_options.2001.pd.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+
+	# strikecrafts
+	option = {
+		name = esc_options.2001.strikecraft.a
+		custom_tooltip = esc_options.2001.strikecraft.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2001.strikecraft.b
+		custom_tooltip = esc_options.2001.strikecraft.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+
+	# creature-derived weapons
+	option = {
+		name = esc_options.2001.creature.a
+		custom_tooltip = esc_options.2001.creature.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2001.creature.b
+		custom_tooltip = esc_options.2001.creature.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+			country_event = { id = esc_options.2001 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.2000 days = 0 } }
+	}
+}
+
+### Weapons Customization : vanilla-type weapons (supersized)
+country_event = {
+	id = esc_options.2002
+	title = esc_options.weapons_vanilla_x.title
+	desc = esc_options.weapons_vanilla_x.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# kinetic weapons
+	option = {
+		name = esc_options.2002.kinetics.a
+		custom_tooltip = esc_options.2002.kinetics.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+			country_event = { id = esc_options.2002 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2002.kinetics.b
+		custom_tooltip = esc_options.2002.kinetics.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+			country_event = { id = esc_options.2002 days = 0 }
+		}
+	}
+
+	# particle lance
+	option = {
+		name = esc_options.2002.lance.a
+		custom_tooltip = esc_options.2002.lance.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+			country_event = { id = esc_options.2002 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2002.lance.b
+		custom_tooltip = esc_options.2002.lance.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+			country_event = { id = esc_options.2002 days = 0 }
+		}
+	}
+
+	# arc emitters
+	option = {
+		name = esc_options.2002.arc.a
+		custom_tooltip = esc_options.2002.arc.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+			country_event = { id = esc_options.2002 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2002.arc.b
+		custom_tooltip = esc_options.2002.arc.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+			country_event = { id = esc_options.2002 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.2000 days = 0 } }
+	}
+}
+
+### Weapons Customization : additional weapons
+country_event = {
+	id = esc_options.2003
+	title = esc_options.weapons_extra.title
+	desc = esc_options.weapons_extra.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# plasma missiles
+	option = {
+		name = esc_options.2003.plasma_missiles.a
+		custom_tooltip = esc_options.2003.plasma_missiles.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.plasma_missiles.b
+		custom_tooltip = esc_options.2003.plasma_missiles.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+
+	# chrono-spatial weapons
+	option = {
+		name = esc_options.2003.chrono.a
+		custom_tooltip = esc_options.2003.chrono.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.chrono.b
+		custom_tooltip = esc_options.2003.chrono.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.chrono.c
+		custom_tooltip = esc_options.2003.chrono.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+
+	# x-slot missiles
+	option = {
+		name = esc_options.2003.x_missiles.a
+		custom_tooltip = esc_options.2003.x_missiles.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.x_missiles.b
+		custom_tooltip = esc_options.2003.x_missiles.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+
+	# wave-motion guns
+	option = {
+		name = esc_options.2003.wmg.a
+		custom_tooltip = esc_options.2003.wmg.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.wmg.b
+		custom_tooltip = esc_options.2003.wmg.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+
+	# large autocannons
+	option = {
+		name = esc_options.2003.b_autocannons.a
+		custom_tooltip = esc_options.2003.b_autocannons.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.b_autocannons.b
+		custom_tooltip = esc_options.2003.b_autocannons.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.b_autocannons.c
+		custom_tooltip = esc_options.2003.b_autocannons.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+
+	# magnetohydrodynamic cannons
+	option = {
+		name = esc_options.2003.mhd.a
+		custom_tooltip = esc_options.2003.mhd.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.2003.mhd.b
+		custom_tooltip = esc_options.2003.mhd.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+			country_event = { id = esc_options.2003 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.2000 days = 0 } }
+	}
+}
+
+### Utility component Customization
+country_event = {
+	id = esc_options.3000
+	title = esc_options.utility_menu.title
+	desc = esc_options.utility_menu.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# armor
+	option = {
+		name = esc_options.3000.armor.a
+		custom_tooltip = esc_options.3000.armor.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.armor.b
+		custom_tooltip = esc_options.3000.armor.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# shields
+	option = {
+		name = esc_options.3000.shields.a
+		custom_tooltip = esc_options.3000.shields.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.shields.b
+		custom_tooltip = esc_options.3000.shields.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# sensors
+	option = {
+		name = esc_options.3000.sensor.a
+		custom_tooltip = esc_options.3000.sensor.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.sensor.b
+		custom_tooltip = esc_options.3000.sensor.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# reactors
+	option = {
+		name = esc_options.3000.reactor.a
+		custom_tooltip = esc_options.3000.reactor.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.reactor.b
+		custom_tooltip = esc_options.3000.reactor.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# thrusters
+	option = {
+		name = esc_options.3000.thruster.a
+		custom_tooltip = esc_options.3000.thruster.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.thruster.b
+		custom_tooltip = esc_options.3000.thruster.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# ftl drives
+	option = {
+		name = esc_options.3000.ftl.a
+		custom_tooltip = esc_options.3000.ftl.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.ftl.b
+		custom_tooltip = esc_options.3000.ftl.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# auxiliary components
+	option = {
+		name = esc_options.3000.aux.a
+		custom_tooltip = esc_options.3000.aux.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.3000.aux.b
+		custom_tooltip = esc_options.3000.aux.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+			country_event = { id = esc_options.3000 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
+	}
+}
+
+### Leviathan & crises reward Customization
+country_event = {
+	id = esc_options.4000
+	title = esc_options.leviathan_menu.title
+	desc = esc_options.leviathan_menu.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# leviathans DLC rewards
+	option = {
+		name = esc_options.4000.leviathan_1
+		custom_tooltip = esc_options.4000.leviathan_1.tooltip
+		hidden_effect = { country_event = { id = esc_options.4001 days = 0 } }
+	}
+
+	# distant stars DLC rewards
+	option = {
+		name = esc_options.4000.leviathan_2
+		custom_tooltip = esc_options.4000.leviathan_2.tooltip
+		hidden_effect = { country_event = { id = esc_options.4002 days = 0 } }
+	}
+
+	# crises weapons
+	option = {
+		name = esc_options.4000.crises.a
+		custom_tooltip = esc_options.4000.crises.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+			country_event = { id = esc_options.4000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4000.crises.b
+		custom_tooltip = esc_options.4000.crises.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+			country_event = { id = esc_options.4000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4000.crises.c
+		custom_tooltip = esc_options.4000.crises.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
+			country_event = { id = esc_options.4000 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
+	}
+}
+
+### Leviathan reward Customization : Leviathans DLC
+country_event = {
+	id = esc_options.4001
+	title = esc_options.leviathan_menu_1.title
+	desc = esc_options.leviathan_menu_1.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# ether drake
+	option = {
+		name = esc_options.4001.drake.a
+		custom_tooltip = esc_options.4001.drake.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.drake.b
+		custom_tooltip = esc_options.4001.drake.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# automated dreadnought
+	option = {
+		name = esc_options.4001.dreadnought.a
+		custom_tooltip = esc_options.4001.dreadnought.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.dreadnought.b
+		custom_tooltip = esc_options.4001.dreadnought.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# enigmatic fortress
+	option = {
+		name = esc_options.4001.fortress.a
+		custom_tooltip = esc_options.4001.fortress.a.tooltip
+		trigger = {
+			NOR = {
+				has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+				has_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+			}
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.fortress.b
+		custom_tooltip = esc_options.4001.fortress.b.tooltip
+		trigger = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden }
+			has_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+		}
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.fortress.c
+		custom_tooltip = esc_options.4001.fortress.c.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+			remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# spectral wraith
+	option = {
+		name = esc_options.4001.wraith.a
+		custom_tooltip = esc_options.4001.wraith.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.wraith.b
+		custom_tooltip = esc_options.4001.wraith.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# stellarite devourer
+	option = {
+		name = esc_options.4001.stellarite.a
+		custom_tooltip = esc_options.4001.stellarite.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.stellarite.b
+		custom_tooltip = esc_options.4001.stellarite.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# technosphere
+	option = {
+		name = esc_options.4001.technosphere.a
+		custom_tooltip = esc_options.4001.technosphere.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.technosphere.b
+		custom_tooltip = esc_options.4001.technosphere.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# dimensional horror
+	option = {
+		name = esc_options.4001.horror.a
+		custom_tooltip = esc_options.4001.horror.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4001.horror.b
+		custom_tooltip = esc_options.4001.horror.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+			country_event = { id = esc_options.4001 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.4000 days = 0 } }
+	}
+}
+
+### Leviathan reward Customization : Distant Stars DLC
+country_event = {
+	id = esc_options.4002
+	title = esc_options.leviathan_menu_2.title
+	desc = esc_options.leviathan_menu_2.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# tiyanki matriarch
+	option = {
+		name = esc_options.4002.tiyanki.a
+		custom_tooltip = esc_options.4002.tiyanki.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+			country_event = { id = esc_options.4002 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4002.tiyanki.b
+		custom_tooltip = esc_options.4002.tiyanki.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+			country_event = { id = esc_options.4002 days = 0 }
+		}
+	}
+
+	# scrapper bot
+	option = {
+		name = esc_options.4002.scrapper.a
+		custom_tooltip = esc_options.4002.scrapper.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+			country_event = { id = esc_options.4002 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4002.scrapper.b
+		custom_tooltip = esc_options.4002.scrapper.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+			country_event = { id = esc_options.4002 days = 0 }
+		}
+	}
+
+	# voidspawn
+	option = {
+		name = esc_options.4002.voidspawn.a
+		custom_tooltip = esc_options.4002.voidspawn.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+			country_event = { id = esc_options.4002 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.4002.voidspawn.b
+		custom_tooltip = esc_options.4002.voidspawn.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+			country_event = { id = esc_options.4002 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.4000 days = 0 } }
+	}
+}
+
+### buildings
+country_event = {
+	id = esc_options.5000
+	title = esc_options.buildings_menu.title
+	desc = esc_options.buildings_menu.desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# central research bureau
+	option = {
+		name = esc_options.5000.bureau.a
+		custom_tooltip = esc_options.5000.bureau.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.5000.bureau.b
+		custom_tooltip = esc_options.5000.bureau.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+
+	# culture nexus / cerebral node / network regulator
+	option = {
+		name = esc_options.5000.culture.a
+		custom_tooltip = esc_options.5000.culture.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.5000.culture.b
+		custom_tooltip = esc_options.5000.culture.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+
+	# advanced materials laboratory
+	option = {
+		name = esc_options.5000.materials.a
+		custom_tooltip = esc_options.5000.materials.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.5000.materials.b
+		custom_tooltip = esc_options.5000.materials.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+
+	# technology institute
+	option = {
+		name = esc_options.5000.institute.a
+		custom_tooltip = esc_options.5000.institute.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.5000.institute.b
+		custom_tooltip = esc_options.5000.institute.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+
+	# watcher of eternity
+	option = {
+		name = esc_options.5000.watcher.a
+		custom_tooltip = esc_options.5000.watcher.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.5000.watcher.b
+		custom_tooltip = esc_options.5000.watcher.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+
+	# mantle mining facility
+	option = {
+		name = esc_options.5000.mantle.a
+		custom_tooltip = esc_options.5000.mantle.a.tooltip
+		trigger = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden } }
+		hidden_effect = {
+			set_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+	option = {
+		name = esc_options.5000.mantle.b
+		custom_tooltip = esc_options.5000.mantle.b.tooltip
+		trigger = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
+		hidden_effect = {
+			remove_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+			country_event = { id = esc_options.5000 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
+	}
+}
+
+### AI boost
+country_event = {
+	id = esc_options.6000
+	title = esc_options_ai_boost_title
+	desc = esc_options_ai_boost_title_desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# AI research bonus : easy scaling
+	option = {
+		name = esc_options.6000.ai_easy_scaling
+		custom_tooltip = esc_options.6000.ai_easy_scaling.tooltip
+		allow = {
+			NOT = { has_global_flag = ESC_AI_research_boost_easy_scaling }
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_static
+			remove_global_flag = ESC_AI_research_boost_moderate_scaling
+			remove_global_flag = ESC_AI_research_boost_moderate_static
+			remove_global_flag = ESC_AI_research_boost_challenging_scaling
+			remove_global_flag = ESC_AI_research_boost_challenging_static
+			set_global_flag = ESC_AI_research_boost_easy_scaling
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# AI research bonus : easy static
+	option = {
+		name = esc_options.6000.ai_easy_static
+		custom_tooltip = esc_options.6000.ai_easy_static.tooltip
+		allow = {
+			NOT = { has_global_flag = ESC_AI_research_boost_easy_static }
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_scaling
+			remove_global_flag = ESC_AI_research_boost_moderate_scaling
+			remove_global_flag = ESC_AI_research_boost_moderate_static
+			remove_global_flag = ESC_AI_research_boost_challenging_scaling
+			remove_global_flag = ESC_AI_research_boost_challenging_static
+			set_global_flag = ESC_AI_research_boost_easy_static
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# AI research bonus : moderate scaling
+	option = {
+		name = esc_options.6000.ai_moderate_scaling
+		custom_tooltip = esc_options.6000.ai_moderate_scaling.tooltip
+		allow = {
+			NOT = { has_global_flag = ESC_AI_research_boost_moderate_scaling }
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_scaling
+			remove_global_flag = ESC_AI_research_boost_easy_static
+			remove_global_flag = ESC_AI_research_boost_moderate_static
+			remove_global_flag = ESC_AI_research_boost_challenging_scaling
+			remove_global_flag = ESC_AI_research_boost_challenging_static
+			set_global_flag = ESC_AI_research_boost_moderate_scaling
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# AI research bonus : moderate static
+	option = {
+		name = esc_options.6000.ai_moderate_static
+		custom_tooltip = esc_options.6000.ai_moderate_static.tooltip
+		allow = {
+			NOT = { has_global_flag = ESC_AI_research_boost_moderate_static }
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_scaling
+			remove_global_flag = ESC_AI_research_boost_easy_static
+			remove_global_flag = ESC_AI_research_boost_moderate_scaling
+			remove_global_flag = ESC_AI_research_boost_challenging_scaling
+			remove_global_flag = ESC_AI_research_boost_challenging_static
+			set_global_flag = ESC_AI_research_boost_moderate_static
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# AI research bonus : challenging scaling
+	option = {
+		name = esc_options.6000.ai_challenging_scaling
+		custom_tooltip = esc_options.6000.ai_challenging_scaling.tooltip
+		allow = {
+			NOT = { has_global_flag = ESC_AI_research_boost_challenging_scaling }
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_scaling
+			remove_global_flag = ESC_AI_research_boost_easy_static
+			remove_global_flag = ESC_AI_research_boost_moderate_scaling
+			remove_global_flag = ESC_AI_research_boost_moderate_static
+			remove_global_flag = ESC_AI_research_boost_challenging_static
+			set_global_flag = ESC_AI_research_boost_challenging_scaling
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# AI research bonus : challenging static
+	option = {
+		name = esc_options.6000.ai_challenging_static
+		custom_tooltip = esc_options.6000.ai_challenging_static.tooltip
+		allow = {
+			NOT = { has_global_flag = ESC_AI_research_boost_challenging_static }
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_scaling
+			remove_global_flag = ESC_AI_research_boost_easy_static
+			remove_global_flag = ESC_AI_research_boost_moderate_scaling
+			remove_global_flag = ESC_AI_research_boost_moderate_static
+			remove_global_flag = ESC_AI_research_boost_challenging_scaling
+			set_global_flag = ESC_AI_research_boost_challenging_static
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# AI research bonus : diabled
+	option = {
+		name = esc_options.6000.ai_boost_disabled
+		custom_tooltip = esc_options.6000.ai_boost_disabled.tooltip
+		allow = {
+			OR = {
+				has_global_flag = ESC_AI_research_boost_easy_scaling
+				has_global_flag = ESC_AI_research_boost_easy_static
+				has_global_flag = ESC_AI_research_boost_moderate_scaling
+				has_global_flag = ESC_AI_research_boost_moderate_static
+				has_global_flag = ESC_AI_research_boost_challenging_scaling
+				has_global_flag = ESC_AI_research_boost_challenging_static
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = ESC_AI_research_boost_easy_scaling
+			remove_global_flag = ESC_AI_research_boost_easy_static
+			remove_global_flag = ESC_AI_research_boost_moderate_scaling
+			remove_global_flag = ESC_AI_research_boost_moderate_static
+			remove_global_flag = ESC_AI_research_boost_challenging_static
+			remove_global_flag = ESC_AI_research_boost_challenging_scaling
+
+			every_playable_country = {
+				country_event = { id = esc_events.5000 days = 0 }
+			}
+			country_event = { id = esc_options.6000 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
+	}
+}
+
+### Mod Presets
+country_event = {
+	id = esc_options.7000
+	title = esc_options_presets_title
+	desc = esc_options_presets_title_desc
+	picture = GFX_evt_juggernaut
+	is_triggered_only = yes
+
+	# enable all
+	option = {
+		name = esc_options.7000.enable_all
+		custom_tooltip = esc_options.7000.enable_all.tooltip
+		hidden_effect = {
+			ESC_PRESET_enable_all = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# enable all except buildings
+	option = {
+		name = esc_options.7000.no_buildings
+		custom_tooltip = esc_options.7000.no_buildings.tooltip
+		hidden_effect = {
+			ESC_PRESET_no_special_buildsings = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# enable only advanced vanilla components
+	option = {
+		name = esc_options.7000.vanilla_only
+		custom_tooltip = esc_options.7000.vanilla_only.tooltip
+		hidden_effect = {
+			ESC_PRESET_advanced_vanilla = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# enable only leviathan rewards
+	option = {
+		name = esc_options.7000.leviathan_only
+		custom_tooltip = esc_options.7000.leviathan_only.tooltip
+		hidden_effect = {
+			ESC_PRESET_leviathan_only = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# enable only advanced vanilla components and leviathan rewards
+	option = {
+		name = esc_options.7000.vanilla_leviathan
+		custom_tooltip = esc_options.7000.vanilla_leviathan.tooltip
+		hidden_effect = {
+			ESC_PRESET_advanced_vanilla_and_leviathan = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# enable only special weapon types
+	option = {
+		name = esc_options.7000.new_weapon_types
+		custom_tooltip = esc_options.7000.enable_all.new_weapon_types
+		hidden_effect = {
+			ESC_PRESET_advanced_vanilla_and_leviathan = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# enable only special weapon types
+	option = {
+		name = esc_options.7000.new_and_leviathan
+		custom_tooltip = esc_options.7000.enable_all.new_and_leviathan
+		hidden_effect = {
+			ESC_PRESET_advanced_vanilla_and_leviathan = yes
+			country_event = { id = esc_options.7000 days = 0 }
+		}
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.back
+		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
+	}
+}

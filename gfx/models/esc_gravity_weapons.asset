@@ -1,0 +1,1032 @@
+############################################################
+###      Gravitic Weapons' Assets : Gravitic Cannon      ###
+############################################################
+
+# Muzzle flash
+
+entity = {
+	name = "esc_gravity_cannon_tiny_muzzle_flash_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_tiny_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_cannon_small_muzzle_flash_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_small_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_cannon_medium_muzzle_flash_entity"
+	cull_radius = 1.0
+    	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_medium_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_cannon_large_muzzle_flash_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 7
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_large_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "plasma_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_fire" }
+		}
+	}
+}
+
+# Projectiles
+
+entity = {
+	name = "esc_gravity_cannon_tiny_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_tiny_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_tiny_idle_drops_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_cannon_small_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = { name = "idle"
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_small_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_small_idle_drops_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_cannon_medium_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_medium_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_medium_idle_drops_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_cannon_large_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_large_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			particle = "esc_gravity_cannon_large_idle_drops_particle"
+			keep_particle = yes
+		}
+	}
+}
+
+# Hit effect normal & shield
+
+entity = {
+	name = "esc_gravity_cannon_small_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "esc_gravity_cannon_small_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "esc_gravity_cannon_medium_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "esc_gravity_cannon_medium_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "esc_gravity_cannon_large_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0.0
+			particle = "esc_gravity_cannon_large_hit_effect"
+			sound = { soundeffect = "plasma_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_plasma_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "esc_gravity_cannon_small_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "esc_gravity_cannon_small_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_small_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "esc_gravity_cannon_medium_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "esc_gravity_cannon_medium_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_medium_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+entity = {
+	name = "esc_gravity_cannon_large_shield_hit_entity"
+	cull_radius = 1.0
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			particle = "esc_gravity_cannon_large_hit_effect"
+		}
+		event = {
+			time = 0.0
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	default_state = "explode_med_hp"
+}
+
+############################################################
+###      Gravitic Weapons' Assets : Gravitic Torpedo     ###
+############################################################
+
+### Projectile
+entity = {
+	name = "esc_gravitic_torpedoes_entity"
+	pdxmesh = "arthropoid_01_missile_mesh"
+	scale = 1.25
+	default_state = idle
+	state = {
+		name = "idle"
+		animation = "idle"
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_gravitic_torpedoes_idle_particle"
+			keep_particle = yes
+		}
+		event = {
+			time = 0
+			node = exhaust
+			particle = "esc_gravitic_torpedoes_idle_trail_particle"
+			keep_particle = yes
+		}
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss_reversed"
+		time_offset = { 0 1.4 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+	state = { name = "stop"
+		looping = no
+		chance = 1
+		animation = "miss2_reversed"
+		time_offset = { 0 1 }
+		animation_blend_time = 0.5
+		start_event = { trigger_once = yes time = 0 node = exhaust particle = "medium_torpedo_03_idle_flame_particle" keep_particle = yes }
+	}
+}
+
+### Hit effect normal & shield
+entity = {
+	name = "esc_gravitic_torpedoes_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_gravitic_torpedoes_hit_effect"
+			sound = { soundeffect = "energy_torpedo_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_torpedo_hit" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravitic_torpedoes_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "explode_med_hp"
+	state = {
+		name = "explode_med_hp"
+		state_time = 5
+		looping = no
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "esc_gravitic_torpedoes_hit_effect"
+		}
+		event = {
+			time = 0.0
+			node = "root"
+			particle = "projectile_large_shield_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+}
+
+############################################################
+###       Gravitic Weapons' Assets : Gravitic Lance      ###
+############################################################
+
+### windup
+entity = {
+	name = "esc_gravity_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_8
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_7
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_6
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = xl_windup_5
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_4
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = xl_windup_3
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_gravity_lance_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "esc_gravity_lance_turret_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "humanoid_01_esc_gravity_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "arthropoid_01_esc_gravity_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.8
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = turret_muzzle_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "molluscoid_01_esc_gravity_lance_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = yes
+		state_time = 0.2
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_1
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_windup_2
+			particle = "esc_gravity_lance_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = xl_gun_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+### Muzzle
+entity = {
+	name = "esc_gravity_lance_muzzle_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 0.8
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_gravity_lance_muzzle_particle"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_fire" }
+		}
+	}
+}
+
+### Hit effect normal & shield
+entity = {
+	name = "esc_gravity_lance_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 2
+		looping = no
+		start_event = {
+			particle = "esc_gravity_lance_hit_effect"
+			keep_particle = yes
+			sound = { soundeffect = "energy_lance_hit" }
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_energy_lance_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+entity = {
+	name = "esc_gravity_lance_shield_hit_entity"
+	cull_radius = 1.0
+	default_state = "idle"
+	state = {
+		name = "idle"
+		start_event = {
+			particle = "esc_gravity_lance_hit_effect"
+			sound = { soundeffect = "shield_hit" }
+		}
+		start_event = {
+			particle = "projectile_large_shield_hit_effect"
+		}
+		start_event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_shield_hit" }
+		}
+	}
+	state = {
+		name = "stop"
+		state_time = 0.5
+		looping = no
+	}
+}
+
+############################################################
+###      Gravitic Weapons' Assets : Gravitic Lance T     ###
+############################################################
+
+entity = {
+	name = "esc_gravity_lance_titanic_windup_entity"
+
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack"
+		looping = no
+		next_state = "attack_2"
+		state_time = 0.8
+
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "titan_laser_windup_02" }
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.1
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.1
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.4
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.5
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.5
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.6
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.7
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.7
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "attack_2"
+		looping = no
+		next_state = "attack_3"
+		state_time = 0.6
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.06
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.06
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.18
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.18
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.3
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.36
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.36
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.42
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+		event = {
+			time = 0.42
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_gravity_lance_windup_effect"
+			keep_particle = yes
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+	state = {
+		name = "attack_3"
+		looping = yes
+		state_time = 0.4
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "titan_laser_windup_01" }
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_16
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_windup_15
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.04
+			use_parent_nodes = yes
+			node = titan_windup_14
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.04
+			use_parent_nodes = yes
+			node = titan_windup_13
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.08
+			use_parent_nodes = yes
+			node = titan_windup_12
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.08
+			use_parent_nodes = yes
+			node = titan_windup_11
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_10
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.12
+			use_parent_nodes = yes
+			node = titan_windup_9
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.16
+			use_parent_nodes = yes
+			node = titan_windup_8
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.16
+			use_parent_nodes = yes
+			node = titan_windup_7
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_6
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.2
+			use_parent_nodes = yes
+			node = titan_windup_5
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_4
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.24
+			use_parent_nodes = yes
+			node = titan_windup_3
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.28
+			use_parent_nodes = yes
+			node = titan_windup_2
+			particle = "esc_gravity_lance_windup_effect"
+		}
+		event = {
+			time = 0.28
+			use_parent_nodes = yes
+			node = titan_windup_1
+			particle = "esc_gravity_lance_windup_effect"
+		}
+
+		event = {
+			time = 0.0
+			use_parent_nodes = yes
+			node = titan_gun_01
+			particle = "esc_gravity_lance_muzzle_windup_effect"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}

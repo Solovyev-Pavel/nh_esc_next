@@ -1,0 +1,395 @@
+############################################################
+###                  Kinetic Weapons                     ###
+############################################################
+
+# kinetic weapons
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_mass_driver_6"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mass_driver_6.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_mass_driver_7"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mass_driver_7.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_kinetic_artillery_3"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_kinetic_artillery_3.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_kinetic_artillery_4"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_kinetic_artillery_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_autocannon_4"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_autocannon_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_autocannon_5"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_autocannon_5.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_x_autocannon_1"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_autocannon_x_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_x_autocannon_2"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_autocannon_x_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_x_autocannon_3"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_autocannon_x_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_mass_accelerator_3"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mass_accelerator_3.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_mass_accelerator_4"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mass_accelerator_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_mass_accelerator_titanic"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_rkkv.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_mhd_cannon_1"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mhd_cannon_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_mhd_cannon_2"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mhd_cannon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_mhd_cannon_3"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_mhd_cannon_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_asteroid_cannon"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_asteroid_thrower.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_juggernaut_cannon_1"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_juggernaut_artillery_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_juggernaut_cannon_2"
+		textureFile = "gfx/interface/icons/ship_parts/kinetic/ship_part_esc_juggernaut_artillery_2.dds"
+	}
+}
+
+############################################################
+###                   Energy Weapons                     ###
+############################################################
+
+# energy weapons
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_laser_6"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_laser_6.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_laser_7"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_laser_7.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_disruptor_4"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_disruptor_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_disruptor_5"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_disruptor_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_plasma_cannon_4"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_plasma_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_plasma_cannon_5"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_plasma_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_plasma_missile_1"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_plasma_missile_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_plasma_missile_2"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_plasma_missile_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_plasma_missile_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_plasma_missile_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_energy_launcher_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_energy_torpedo_3.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_energy_launcher_4"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_energy_torpedo_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_juggernaut_laser_1"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_juggernaut_beam_cannon_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_juggernaut_laser_2"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_juggernaut_beam_cannon_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_particle_lance_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_energy_lance_3.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_particle_lance_4"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_energy_lance_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_particle_lance_titanic"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_energy_lance_titanic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_arc_cannon_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_arc_emitter_3.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_arc_cannon_4"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_arc_emitter_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_arc_cannon_titanic"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_arc_emitter_titanic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_mining_laser_2"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_mining_drone_laser_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_mining_laser_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_mining_drone_laser_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_cloud_lightning_2"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_cloud_lightning_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_cloud_lightning_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_cloud_lightning_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_extradimensional_cannon_2"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_extradimensional_weapon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_extradimensional_cannon_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_extradimensional_weapon_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_wave_motion_gun_1"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_wavemotiongun_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_wave_motion_gun_2"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_wavemotiongun_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_wave_motion_gun_3"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_wavemotiongun_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_chrono_cannon"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_chronocannon.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_corrosive_warhead_torpedo"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_torpedo_corrosive.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_arc_en_ciel"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_arcenciel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_mystery_cannon"
+		textureFile = "gfx/interface/icons/ship_parts/energy/ship_part_esc_mystery_cannon.dds"
+	}
+}
+
+############################################################
+###                   Missile Weapons                    ###
+############################################################
+
+# missile weapons
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_missile_6"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_missile_6.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_missile_7"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_missile_7.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_swarmer_missiles_3"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_swarmer_missile_3.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_swarmer_missiles_4"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_swarmer_missile_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_torpedo_4"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_torpedo_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_torpedo_5"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_torpedo_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_x_missiles_1"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_xmissile1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_x_missiles_2"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_xmissile2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_x_missiles_3"
+		textureFile = "gfx/interface/icons/ship_parts/missiles/ship_part_esc_xmissile3.dds"
+	}
+}
+
+############################################################
+###                Point-Defense Weapons                 ###
+############################################################
+
+# point-defense components
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_pd_cannon_4"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_point_defense_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_pd_cannon_5"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_point_defense_5.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_pd_cannon_laser"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_lightstorm_pd.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_flak_cannon_4"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_flak_batteries_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_flak_cannon_5"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_flak_batteries_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_esc_pd_cannon_juggernaut_1"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_juggernaut_pd_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_pd_cannon_juggernaut_2"
+		textureFile = "gfx/interface/icons/ship_parts/pointdefense/ship_part_esc_juggernaut_pd_2.dds"
+	}
+}
+
+############################################################
+###                    Strike Crafts                     ###
+############################################################
+
+# conventional strikecrafts
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_strikecrafts_interceptor_4"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_fighter_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_bomber_4"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_bomber_4.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_interceptor_5"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_fighter_5.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_bomber_5"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_bomber_5.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_interceptor_6"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_fighter_6.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_bomber_6"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_bomber_6.dds"
+	}
+}
+
+# hired strikecrafts
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_strikecrafts_mercenary_1"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_mercenary_1.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_mercenary_2"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_strike_craft_mercenary_2.dds"
+	}
+}
+
+# scourge strikecrafts
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_strikecrafts_scourge_2"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_swarm_strike_craft_2.dds"
+	}
+}
+
+# amoeba strikecrafts
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_strikecrafts_amoeba_2"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_amoeba_2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_amoeba_3_bio"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_amoeba_3b.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_amoeba_4_bio"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_amoeba_4b.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_amoeba_3_cyber"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_amoeba_3c.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_strikecrafts_amoeba_4_cyber"
+		textureFile = "gfx/interface/icons/ship_parts/strikecrafts/ship_part_esc_amoeba_4c.dds"
+	}
+}

@@ -1,0 +1,95 @@
+## ##################################################### ##
+##          Managing AI research speed bonuses           ##
+## ##################################################### ##
+
+### remove active bonuses
+ESC_EFFECT_ai_remove_science_boost = {
+	remove_modifier = esc_ai_early_game_science_boost_easy
+	remove_modifier = esc_ai_mid_game_science_boost_easy
+	remove_modifier = esc_ai_end_game_science_boost_easy
+	remove_modifier = esc_ai_science_boost_easy_static
+	remove_modifier = esc_ai_early_game_science_boost_moderate
+	remove_modifier = esc_ai_mid_game_science_boost_moderate
+	remove_modifier = esc_ai_end_game_science_boost_moderate
+	remove_modifier = esc_ai_science_boost_moderate_static
+	remove_modifier = esc_ai_early_game_science_boost_challenging
+	remove_modifier = esc_ai_mid_game_science_boost_challenging
+	remove_modifier = esc_ai_end_game_science_boost_challenging
+	remove_modifier = esc_ai_science_boost_challenging_static
+}
+
+### set new bonueses
+ESC_EFFECT_ai_set_science_boost = {
+	### EASY SCALING
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_easy_scaling }
+		if = {
+			limit = { NOT = { mid_game_years_passed > 0 } }
+			add_modifier = { modifier = esc_ai_early_game_science_boost_easy days = 35 }
+		}
+		else_if = {
+			limit = {
+				mid_game_years_passed > 0
+				NOT = { end_game_years_passed > 0 }
+			}
+			add_modifier = { modifier = esc_ai_mid_game_science_boost_easy days = 35 }
+		}
+		else_if = {
+			limit = { end_game_years_passed > 0 }
+			add_modifier = { modifier = esc_ai_end_game_science_boost_easy days = 35 }
+		}
+	}
+	### EASY STATIC
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_easy_static }
+		add_modifier = { modifier = esc_ai_science_boost_easy_static days = 35 }
+	}
+	### MODERATE SCALING
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_moderate_scaling }
+		if = {
+			limit = { NOT = { mid_game_years_passed > 0 } }
+			add_modifier = { modifier = esc_ai_early_game_science_boost_moderate days = 35 }
+		}
+		else_if = {
+			limit = {
+				mid_game_years_passed > 0
+				NOT = { end_game_years_passed > 0 }
+			}
+			add_modifier = { modifier = esc_ai_mid_game_science_boost_moderate days = 35 }
+		}
+		else_if = {
+			limit = { end_game_years_passed > 0 }
+			add_modifier = { modifier = esc_ai_end_game_science_boost_moderate days = 35 }
+		}
+	}
+	### MODERATE STATIC
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_moderate_static }
+		add_modifier = { modifier = esc_ai_science_boost_moderate_static days = 35 }
+	}
+	### CHALLENGING SCALING
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_challenging_scaling }
+		if = {
+			limit = { NOT = { mid_game_years_passed > 0 } }
+			add_modifier = { modifier = esc_ai_early_game_science_boost_challenging days = 35 }
+		}
+		else_if = {
+			limit = {
+				mid_game_years_passed > 0
+				NOT = { end_game_years_passed > 0 }
+			}
+			add_modifier = { modifier = esc_ai_mid_game_science_boost_challenging days = 35 }
+		}
+		else_if = {
+			limit = { end_game_years_passed > 0 }
+			add_modifier = { modifier = esc_ai_end_game_science_boost_challenging days = 35 }
+		}
+	}
+	### CHALLENGING STATIC
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_challenging_static }
+		add_modifier = { modifier = esc_ai_science_boost_challenging_static days = 35 }
+	}
+}

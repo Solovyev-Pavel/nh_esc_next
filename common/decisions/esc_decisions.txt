@@ -1,0 +1,78 @@
+### ################################################# ###
+###                     ESC Mod menu                  ###
+### ################################################# ###
+
+decision_esc_mod_menu = {
+	owned_planets_only = yes
+
+	resources = {
+		category = decisions
+		cost = { energy = 0 }
+	}
+
+	potential = {
+		is_capital = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_MENU_ACTIVE }
+		# only human players are allowed to use this
+		exists = owner
+		owner = { is_ai = no }
+		# free use in singleplayer, available only for the first 15 years in multiplayer
+		OR = {
+			is_multiplayer = no
+			AND = {
+				is_multiplayer = yes
+				years_passed < 15
+			}
+		}
+	}
+
+	effect = {
+		owner = {
+			country_event = { id = esc_options.1000 days = 0 }
+		}
+	}
+}
+
+### ################################################# ###
+###          Clone an ether drake hatchling           ###
+### ################################################# ###
+
+decision_esc_clone_dragon = {
+	owned_planets_only = yes
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 3000
+			exotic_gases = 5
+		}
+		cost = {
+			trigger = { owner = { country_uses_food = yes } }
+			food = 6000
+		}
+		cost = {
+			trigger = { owner = { country_uses_food = no } }
+			minerals = 6000
+		}
+		cost = {
+			trigger = { owner = { is_ai = no } }
+			exotic_gases = 20
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = { has_technology = esc_tech_dragon_hatchery }
+		has_active_building = esc_building_dragon_hatchery
+	}
+
+	allow = {
+		exists = owner
+		owner = { NOT = { has_country_flag = ESC_COUNTY_FLAG_drake_clone_requested } }
+	}
+
+	effect = {
+		owner = { set_timed_country_flag = { flag = ESC_COUNTY_FLAG_drake_clone_requested days = 360 } }
+		planet_event = { id = esc_events.2000 days = 360 }
+	}
+}

@@ -1,0 +1,748 @@
+############################################################
+###           ESC TECHNOLOGIES : STRIKE CRAFTS           ###
+############################################################
+
+# ── Assault Strikecrafts					: unlocks tier 4 strikecrafts (both interceptors and bombers)
+#     └─ Siegebreaker Strikecrafts			: unlocks tier 5 strikecrafts (both interceptors and bombers)
+#         └─ Voidstalker Strikecrafts		: unlocks tier 6 strikecrafts (both interceptors and bombers)
+# ── Highbred Amoeba						: unlocks tier 2 amoeba (~tier 4 strikecrafts)
+#     ├─ Genetically-Engineered Amoeba		: unlocks tier 3 amoeba (~tier 5 strikecrafts)
+#     │   └─ Perfect Space Organism			: unlocks tier 4 amoeba (~tier 6 strikecrafts)
+#     └─ Cybernetically-Augmented Amoeba	: unlocks tier 3 amoeba (~tier 5 strikecrafts)
+#         └─ Bionic Amoeba					: unlocks tier 4 amoeba (~tier 6 strikecrafts)
+# ── Mercenary Squadrons					: unlocks tier 3 strikecrafts unique to Corporate Empires (act as a middle ground between interceptors and bombers)
+#     └─ Elite Mercenary Squadrons			: unlocks tier 5 strikecrafts unique to Corporate Empires (act as a middle ground between interceptors and bombers)
+# ── Ravaging Swarmers						: unlocks tier 2 swarmers (~tier 5 strikecrafts)
+
+############################################################
+##                  Assault Strikecrafts                  ##
+############################################################
+
+esc_tech_strikecraft_4 = {
+	area = engineering
+	category = { voidcraft }
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = military
+	prerequisites = { "tech_strike_craft_3" "esc_tech_new_age_warfare" }
+	gateway = ESC_STRIKECRAFTS
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+############################################################
+##               Siegebreaker Strikecrafts                ##
+############################################################
+
+esc_tech_strikecraft_5 = {
+	area = engineering
+	category = { voidcraft }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_strikecraft_4" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_strikecraft_5 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_strikecraft_5 }
+			}
+		}
+	}
+}
+
+############################################################
+##                Voidstalker Strikecrafts                ##
+############################################################
+
+esc_tech_strikecraft_6 = {
+	area = engineering
+	category = { voidcraft }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_strikecraft_5" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_precursor_armaments
+				has_technology = esc_tech_sensors_precursor
+				has_technology = esc_tech_jump_drive_precursor
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_precursor_armaments
+				has_technology = esc_tech_sensors_precursor
+				has_technology = esc_tech_jump_drive_precursor
+			}
+		}
+	}
+}
+
+############################################################
+##                     Highbred Amoeba                    ##
+############################################################
+
+esc_tech_amoeba_2 = {
+	area = society
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	category = { biology }
+	prerequisites = { "tech_amoeba_strike_craft_1" "esc_tech_new_age_warfare" }
+	ai_update_type = military
+	is_rare = yes
+	gateway = ESC_AMOEBA_STRIKECRAFT
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##              Genetically-Engineered Amoeba             ##
+############################################################
+
+esc_tech_amoeba_3b = {
+	area = society
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	category = { biology }
+	prerequisites = { "esc_tech_amoeba_2" "esc_tech_biological_weapons" }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	gateway = ESC_AMOEBA_STRIKECRAFT_BIO
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_bioaugmented_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_3b }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_bioaugmented_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_3b }
+			}
+		}
+	}
+}
+
+############################################################
+##                 Perfect Space Organisms                ##
+############################################################
+
+esc_tech_amoeba_4b = {
+	area = society
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	category = { biology }
+	prerequisites = { "esc_tech_amoeba_3b" }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_bioaugmented_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_4b }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_bioaugmented_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_4b }
+			}
+		}
+	}
+}
+
+############################################################
+##            Cybernetically-Augmented Amoeba             ##
+############################################################
+
+esc_tech_amoeba_3c = {
+	area = engineering
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	category = { voidcraft }
+	prerequisites = { "esc_tech_amoeba_2" "esc_tech_new_age_warfare" }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+	gateway = ESC_AMOEBA_STRIKECRAFT_CYBER
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_cybernetic_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_3c }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_cybernetic_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_3c }
+			}
+		}
+	}
+}
+
+############################################################
+##                     Bionic Amoeba                      ##
+############################################################
+
+esc_tech_amoeba_4c = {
+	area = engineering
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	category = { voidcraft }
+	prerequisites = { "esc_tech_amoeba_3c" }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_cybernetic_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_4c }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_cybernetic_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_amoeba_4c }
+			}
+		}
+	}
+}
+
+############################################################
+##                   Mercenary Squadron                   ##
+############################################################
+
+esc_tech_strikecraft_mercenary_1 = {
+	area = engineering
+	tier = 2
+	cost = @tier2cost3
+	weight = @tier2weight3
+	ai_update_type = military
+	category = { voidcraft }
+	prerequisites = { "tech_strike_craft_1" }
+	is_reverse_engineerable = no
+	gateway = ESC_MERCENARY_CTRIKECRAFT
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				is_megacorp = yes
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				is_megacorp = yes
+				has_valid_civic = civic_corporate_dominion
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+	}
+}
+
+############################################################
+##                   Mercenary Squadron                   ##
+############################################################
+
+esc_tech_strikecraft_mercenary_2 = {
+	area = engineering
+	tier = 4
+	cost = @tier4cost3
+	weight = @tier4weight3
+	ai_update_type = military
+	category = { voidcraft }
+	prerequisites = { "esc_tech_strikecraft_mercenary_1" "esc_tech_new_age_warfare" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_strikecraft_mercenary_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_voidcraft"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_strikecraft_mercenary_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                   Ravaging Swarmers                    ##
+############################################################
+
+esc_tech_swarm_strike_craft_2 = {
+	area = society
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	category = { biology }
+	prerequisites = { "esc_tech_new_age_warfare" }
+	ai_update_type = military
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_technology = tech_swarm_strike_craft_1
+				has_technology = esc_tech_swarm_strike_craft_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_swarm_strike_craft_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.0
+			NOR = {
+				has_technology = tech_swarm_strike_craft_1
+				has_technology = esc_tech_swarm_strike_craft_1
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_swarm_strike_craft_2 }
+			}
+		}
+	}
+}

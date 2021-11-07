@@ -1,0 +1,1663 @@
+############################################################
+##                   ESC NEXT pop jobs                    ##
+############################################################
+
+# >> Nanite Foundry
+#   - Nanite Breeder                      [normal empire]
+#   - Nanite Breeding Drone               [gestalts]
+# >> Crystal Farm
+#   - Crystal Farmer                      [normal empire]
+#   - Crystal Farmer Drone                [gestalts]
+# >> Reprocessing Plant
+#   - Reprocessor Operator                [normal empire]
+#   - Reprocessing Drone                  [gestalts]
+# >> Zro Distillery
+#   - Zro Distiller						  [normal empire]
+#   - Zro Distiller Drone				  [gestalts]
+# >> Dark Matter Drawing Facility
+#   - Dark Matter Shaper				  [normal empire]
+#   - Dark Matter Shaping Drone			  [gestalts]
+# >> Mantle Mining Facility
+#	- Planetary Core Miner				  [normal empire]
+#	- Planetary Core Miner Drone		  [gestalts]
+#	- Borehole Maintainer				  [normal empire]
+#	- Borehole Maintenance Drone		  [gestalts]
+# >> Cerebral Node / Network Regulator
+#   - Mind Walker Drone                   [organic hive mind]
+#   - Network Curator Unit                [machine intelligence]
+
+############################################################
+###                 Nanite Foundry Jobs                  ###
+############################################################
+
+### Nanite Breeder
+esc_nanite_breeder = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_nanite_foundry
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        specialist_job_check_trigger = yes
+        owner = { is_fallen_empire = no }
+    }
+
+    resources = {
+        category = planet_jobs
+        # base production
+        produces = {
+            nanites = @ESC_job_primary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            nanites = @ESC_job_primary_resource_cornucopia_bonus
+        }
+        # base upkeep
+        upkeep = {
+            alloys = @ESC_job_upkeep_primary_resource
+            consumer_goods = @ESC_job_upkeep_secondary_resource
+        }
+        # refinery planet upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_refinery } }
+            alloys = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery habitat upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_habitat_refinery } }
+            alloys = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_cybernetic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_nanite_breeder
+        }
+    }
+}
+
+### Nanite Breeding Drone
+esc_nanite_breeder_drone = {
+    category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_nanite_foundry
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        drone_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_jobs
+        # base production
+        produces = {
+            nanites = @ESC_job_primary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            nanites = @ESC_job_primary_resource_cornucopia_bonus
+        }
+        # base upkeep : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+            alloys = @ESC_job_upkeep_primary_resource
+            food = @ESC_job_upkeep_secondary_resource
+        }
+        # base upkeep : lithoids
+        upkeep = {
+            trigger = { has_trait = trait_lithoid }
+            alloys = @ESC_job_upkeep_primary_resource
+            minerals = @ESC_job_upkeep_secondary_resource
+        }
+        # base upkeep : machines
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+            alloys = @ESC_job_upkeep_primary_resource
+            energy = @ESC_job_upkeep_secondary_resource
+        }
+        # refinery planet upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_refinery }
+            }
+            alloys = @ESC_job_upkeep_primary_resource_discount
+            food = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery planet upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = { colony_type = col_refinery }
+            }
+            alloys = @ESC_job_upkeep_primary_resource_discount
+            minerals = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery planet upkeep reduction : machines
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_refinery }
+            }
+            alloys = @ESC_job_upkeep_primary_resource_discount
+            energy = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery habitat upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_habitat_refinery }
+            }
+            alloys = @ESC_job_upkeep_primary_resource_discount_hab
+            food = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+        # refinery habitat upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = {colony_type = col_habitat_refinery }
+            }
+            alloys = @ESC_job_upkeep_primary_resource_discount_hab
+            minerals = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+        # refinery habitat upkeep reduction : machines
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = {colony_type = col_habitat_refinery }
+            }
+            alloys = @ESC_job_upkeep_primary_resource_discount_hab
+            energy = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_nanite_breeder_drone
+        }
+    }
+}
+
+############################################################
+###                   Crystal Farm Jobs                  ###
+############################################################
+
+### Crystal Farmer
+esc_crystal_farmer = {
+    category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = esc_building_crystal_farm_1
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        specialist_job_check_trigger = yes
+        owner = { is_fallen_empire = no }
+    }
+
+    resources = {
+        category = planet_jobs
+        # resource production
+        produces = {
+            rare_crystals = @ESC_job_primary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            rare_crystals = @ESC_job_primary_resource_cornucopia_bonus
+        }
+        # base upkeep
+        upkeep = {
+            minerals = @ESC_job_upkeep_primary_resource
+            consumer_goods = @ESC_job_upkeep_tertiary_resource
+        }
+        # refinery planet upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_refinery } }
+            minerals = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_tertiary_resource_discount
+        }
+        # refinery habitat upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_habitat_refinery } }
+            minerals = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_tertiary_resource_discount_hab
+        }
+    }
+
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_strong
+                has_trait = trait_very_strong
+                has_trait = trait_agrarian
+                has_trait = trait_industrious
+                has_trait = trait_cybernetic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                has_trait = trait_nerve_stapled
+                has_trait = trait_weak
+            }
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_crystal_farmer
+        }
+    }
+}
+
+### Crystal Farmer Drones
+esc_crystal_farmer_drone = {
+    category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_crystal_farm_1
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        drone_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_jobs
+        # base production
+        produces = {
+            rare_crystals = @ESC_job_primary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            rare_crystals = @ESC_job_primary_resource_cornucopia_bonus
+        }
+        # base upkeep : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+            minerals = @ESC_job_upkeep_primary_resource
+            food = @ESC_job_upkeep_secondary_resource
+        }
+        # base upkeep : lithoids
+        upkeep = {
+            trigger = { has_trait = trait_lithoid }
+            minerals = @ESC_job_upkeep_single_resource
+        }
+        # base upkeep : machines
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+            minerals = @ESC_job_upkeep_primary_resource
+            energy = @ESC_job_upkeep_secondary_resource
+        }
+        # refinery planet upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_refinery }
+            }
+            minerals = @ESC_job_upkeep_primary_resource_discount
+            food = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery planet upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = { colony_type = col_refinery }
+            }
+            minerals = @ESC_job_upkeep_single_resource_discount
+        }
+        # refinery planet upkeep reduction : machines
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_refinery }
+            }
+            minerals = @ESC_job_upkeep_primary_resource_discount
+            energy = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery planet upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_habitat_refinery }
+            }
+            minerals = @ESC_job_upkeep_primary_resource_discount_hab
+            food = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+        # refinery planet upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+                has_trait = trait_lithoid
+                planet = { colony_type = col_habitat_refinery }
+            }
+            minerals = @ESC_job_upkeep_single_resource_discount_hab
+        }
+        # refinery planet upkeep reduction : machines
+        upkeep = {
+            trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_habitat_refinery }
+            }
+            minerals = @ESC_job_upkeep_primary_resource_discount_hab
+            energy = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+    }
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_strong
+                has_trait = trait_very_strong
+                has_trait = trait_agrarian
+                has_trait = trait_industrious
+                has_trait = trait_robot_power_drills
+            }
+        }
+        modifier = {
+            factor = 0.75
+            OR = {
+                has_trait = trait_nerve_stapled
+                has_trait = trait_weak
+            }
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_crystal_farmer_drone
+        }
+    }
+}
+
+############################################################
+###               Reprocessing Plant Jobs                ###
+############################################################
+
+### Reprocessing Plant Operator
+esc_reprocessor = {
+    category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_reprocessing_plant
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_jobs
+        # base production
+        produces = {
+            consumer_goods = 1.5
+            alloys = 1.5
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+			consumer_goods = 0.075
+			alloys = 0.075
+        }
+        # basic upkeep
+        upkeep = {
+            energy = 2
+            minerals = 2
+        }
+        # colony type upkeep reduction
+        upkeep = {
+			trigger = {
+				planet = {
+					OR = {
+						colony_type = col_foundry
+						colony_type = col_factory
+						colony_type = col_ecu_foundry
+						colony_type = col_ecu_factory
+						colony_type = col_habitat_foundry
+						colony_type = col_habitat_factory
+					}
+				}
+			}
+            energy = -0.4
+            minerals = -0.4
+        }
+    }
+
+	planet_modifier = {
+		planet_amenities_add = 2
+	}
+
+    weight = {
+        weight = @specialist_job_weight
+        modifier = {
+            factor = 0.2
+            has_citizenship_rights = no
+        }
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+                has_trait = trait_cybernetic
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_reprocessor
+        }
+    }
+}
+
+### Reprocessing Plant Drone
+esc_reprocessor_drone = {
+    category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_reprocessing_plant
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        drone_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_jobs
+        # base production
+        produces = {
+            alloys = 3
+        }
+        # rogue servitor production modifier
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { has_valid_civic = civic_machine_servitor }
+            }
+            alloys = -1
+            consumer_goods = 1
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+			alloys = 0.15
+        }
+        # environment ordinance waivers produciton bonus for rogue servitors
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+			alloys = -0.05
+            consumer_goods = 0.05
+        }
+        # basic upkeep
+        upkeep = {
+            energy = 2
+            minerals = 2
+        }
+        # colony type upkeep reduction
+        upkeep = {
+			trigger = {
+				planet = {
+					OR = {
+						colony_type = col_foundry
+						colony_type = col_factory
+						colony_type = col_ecu_foundry
+						colony_type = col_ecu_factory
+						colony_type = col_habitat_foundry
+						colony_type = col_habitat_factory
+					}
+				}
+			}
+            energy = -0.4
+            minerals = -0.4
+        }
+    }
+
+	planet_modifier = {
+		planet_amenities_no_happiness_add = 2
+	}
+
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            OR = {
+                has_trait = trait_industrious
+            }
+        }
+        modifier = {
+            factor = 0.75
+            has_trait = trait_nerve_stapled
+        }
+        modifier = {
+            factor = 5
+            has_job = esc_reprocessor_drone
+        }
+    }
+}
+
+############################################################
+###                 Zro Distillery Jobs                  ###
+############################################################
+
+### Zro Distiller
+esc_zro_distiller = {
+	category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_zro_distillery
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_jobs
+		# base production
+        produces = {
+			sr_zro = @ESC_job_secondary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            sr_zro = @ESC_job_secondary_resource_cornucopia_bonus
+        }
+		# base upkeep
+        upkeep = {
+			energy = @ESC_job_upkeep_primary_resource
+			minerals = @ESC_job_upkeep_primary_resource
+			consumer_goods = @ESC_job_upkeep_secondary_resource
+			rare_crystals = @ESC_job_upkeep_tertiary_resource
+			exotic_gases = @ESC_job_upkeep_tertiary_resource
+			volatile_motes = @ESC_job_upkeep_tertiary_resource
+		}
+        # planet colony-type upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_refinery } }
+			energy = @ESC_job_upkeep_primary_resource_discount
+			minerals = @ESC_job_upkeep_primary_resource_discount
+			consumer_goods = @ESC_job_upkeep_secondary_resource_discount
+			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount
+			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount
+			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount
+        }
+        # habitat colony-type upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_habitat_refinery } }
+			energy = @ESC_job_upkeep_primary_resource_discount_hab
+			minerals = @ESC_job_upkeep_primary_resource_discount_hab
+			consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
+			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount_hab
+			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount_hab
+			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount_hab
+        }
+    }
+
+    weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_latent_psionic
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_psionic
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+			has_trait = trait_mechanical
+			has_trait = trait_machine_unit
+		}
+		modifier = {
+			factor = 5
+			has_job = esc_zro_distiller
+		}
+	}
+}
+
+### Zro Distiller Drone
+esc_zro_distiller_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_zro_distillery
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+        drone_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_jobs
+		# base production
+		produces = {
+			sr_zro = @ESC_job_secondary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            sr_zro = @ESC_job_secondary_resource_cornucopia_bonus
+        }
+        # base upkeep : shared
+        upkeep = {
+			rare_crystals = @ESC_job_upkeep_tertiary_resource
+			exotic_gases = @ESC_job_upkeep_tertiary_resource
+			volatile_motes = @ESC_job_upkeep_tertiary_resource
+        }
+		# base upkeep : non-lithoid biologicals
+        upkeep = {
+			trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+			food = @ESC_job_upkeep_secondary_resource
+			energy = @ESC_job_upkeep_primary_resource
+			minerals = @ESC_job_upkeep_primary_resource
+		}
+		# base upkeep : lithoids
+		upkeep = {
+			trigger = { has_trait = trait_lithoid }
+			minerals = @ESC_job_upkeep_single_resource
+			energy = @ESC_job_upkeep_primary_resource
+		}
+		# base upkeep : machines
+		upkeep = {
+			trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+			minerals = @ESC_job_upkeep_primary_resource
+			energy = @ESC_job_upkeep_single_resource
+		}
+        # planet colony-type upkeep reduction : shared
+        upkeep = {
+            trigger = { planet = { colony_type = col_refinery } }
+			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount
+			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount
+			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount
+        }
+        # planet colony-type upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+				NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_refinery }
+			}
+			food = @ESC_job_upkeep_secondary_resource_discount
+			energy = @ESC_job_upkeep_primary_resource_discount
+			minerals = @ESC_job_upkeep_primary_resource_discount
+        }
+        # planet colony-type upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+				has_trait = trait_lithoid
+				planet = { colony_type = col_refinery }
+			}
+			minerals = @ESC_job_upkeep_single_resource_discount
+			energy = @ESC_job_upkeep_primary_resource_discount
+        }
+        # planet colony-type upkeep reduction : machines
+        upkeep = {
+            trigger = {
+				OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+				planet = { colony_type = col_refinery }
+			}
+			minerals = @ESC_job_upkeep_primary_resource_discount
+			energy = @ESC_job_upkeep_single_resource_discount
+        }
+        # habitat colony-type upkeep reduction : shared
+        upkeep = {
+            trigger = { planet = { colony_type = col_habitat_refinery } }
+			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount_hab
+			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount_hab
+			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount_hab
+        }
+        # habitat colony-type upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+				NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+                planet = { colony_type = col_habitat_refinery }
+			}
+			food = @ESC_job_upkeep_secondary_resource_discount_hab
+			energy = @ESC_job_upkeep_primary_resource_discount_hab
+			minerals = @ESC_job_upkeep_primary_resource_discount_hab
+        }
+        # habitat colony-type upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+				has_trait = trait_lithoid
+				planet = { colony_type = col_habitat_refinery }
+			}
+			minerals = @ESC_job_upkeep_single_resource_discount_hab
+			energy = @ESC_job_upkeep_primary_resource_discount_hab
+        }
+        # habitat colony-type upkeep reduction : machines
+        upkeep = {
+            trigger = {
+				OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+				planet = { colony_type = col_habitat_refinery }
+			}
+			minerals = @ESC_job_upkeep_primary_resource_discount_hab
+			energy = @ESC_job_upkeep_single_resource_discount_hab
+        }
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_psionic
+			has_trait = trait_latent_psionic
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_robot_learning_algorithms
+			has_trait = trait_robot_logic_engines
+		}
+		modifier = {
+			factor = 5
+			has_job = esc_zro_distiller_drone
+		}
+	}
+}
+
+############################################################
+###          Dark Matter Drawing Facility Jobs           ###
+############################################################
+
+### Dark Matter Shaper
+esc_dark_matter_shaper = {
+	category = specialist
+    condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_dark_matter_facility
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+    possible = {
+        complex_specialist_job_check_trigger = yes
+    }
+
+    resources = {
+        category = planet_jobs
+		# base production
+        produces = {
+			sr_dark_matter = @ESC_job_secondary_resource_base_production
+			physics_research = @ESC_job_primary_resource_base_production
+        }
+        # environment ordinance waivers produciton bonus
+        produces = {
+            trigger = {
+                exists = owner
+                owner = { is_galactic_community_member = yes }
+                ESC_TRIGGER_environment_ordinance_waivers = yes
+            }
+            sr_dark_matter = @ESC_job_secondary_resource_cornucopia_bonus
+        }
+		# base upkeep
+        upkeep = {
+			energy = @ESC_job_upkeep_primary_resource
+			consumer_goods = @ESC_job_upkeep_secondary_resource
+        }
+        # refinery planet upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_refinery } }
+            energy = @ESC_job_upkeep_primary_resource_discount
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery habitat upkeep reduction
+        upkeep = {
+            trigger = { planet = { colony_type = col_habitat_refinery } }
+            energy = @ESC_job_upkeep_primary_resource_discount_hab
+            consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+    }
+
+    weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_natural_physicists
+			has_trait = trait_intelligent
+			has_trait = trait_erudite
+			has_trait = trait_enigmatic_intelligence_poor
+		}
+		modifier = {
+			factor = 2.5
+			has_trait = trait_enigmatic_intelligence
+		}
+		modifier = {
+			factor = 5
+			has_job = esc_dark_matter_shaper
+		}
+	}
+}
+
+### Dark Matter Shaping Drone
+esc_dark_matter_shaper_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_dark_matter_facility
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+        drone_job_check_trigger = yes
+	}
+
+    resources = {
+        category = planet_jobs
+		# base production
+		produces = {
+			sr_dark_matter = @ESC_job_secondary_resource_base_production
+			physics_research = @ESC_job_primary_resource_base_production
+		}
+        # environment ordinance waivers produciton bonus
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_galactic_community_member = yes }
+				ESC_TRIGGER_environment_ordinance_waivers = yes
+			}
+			sr_dark_matter = @ESC_job_secondary_resource_cornucopia_bonus
+		}
+		# base upkeep : non-lithoid biologicals
+        upkeep = {
+			trigger = {
+                NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+			energy = @ESC_job_upkeep_primary_resource
+			food = @ESC_job_upkeep_secondary_resource
+		}
+        # base upkeep : lithoids
+		upkeep = {
+			trigger = { has_trait = trait_lithoid }
+			energy = @ESC_job_upkeep_primary_resource
+			minerals = @ESC_job_upkeep_secondary_resource
+		}
+        # base upkeep : machines
+		upkeep = {
+			trigger = {
+                OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+            }
+			energy = @ESC_job_upkeep_single_resource
+		}
+        # refinery planet upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+				NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+				planet = { colony_type = col_refinery }
+			}
+			energy = @ESC_job_upkeep_primary_resource_discount
+			food = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery planet upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+				has_trait = trait_lithoid
+				planet = { colony_type = col_refinery }
+			}
+			energy = @ESC_job_upkeep_primary_resource_discount
+			minerals = @ESC_job_upkeep_secondary_resource_discount
+        }
+        # refinery planet upkeep reduction : machines
+        upkeep = {
+            trigger = {
+				OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+				planet = { colony_type = col_refinery }
+			}
+			energy = @ESC_job_upkeep_single_resource_discount
+        }
+        # refinery habitat upkeep reduction : non-lithoid biologicals
+        upkeep = {
+            trigger = {
+				NOR = {
+                    has_trait = trait_lithoid
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+				planet = { colony_type = col_habitat_refinery }
+			}
+			energy = @ESC_job_upkeep_primary_resource_discount_hab
+			food = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+        # refinery habitat upkeep reduction : lithoids
+        upkeep = {
+            trigger = {
+				has_trait = trait_lithoid
+				planet = { colony_type = col_habitat_refinery }
+			}
+			energy = @ESC_job_upkeep_primary_resource_discount_hab
+			minerals = @ESC_job_upkeep_secondary_resource_discount_hab
+        }
+        # refinery habitat upkeep reduction : machines
+        upkeep = {
+            trigger = {
+				OR = {
+                    has_trait = trait_machine_unit
+                    has_trait = trait_mechanical
+                }
+				planet = { colony_type = col_habitat_refinery }
+			}
+			energy = @ESC_job_upkeep_single_resource_discount_hab
+        }
+    }
+
+    weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_natural_physicists
+			has_trait = trait_intelligent
+			has_trait = trait_erudite
+			has_trait = trait_enigmatic_intelligence_poor
+		}
+		modifier = {
+			factor = 2.5
+			has_trait = trait_enigmatic_intelligence
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_robot_learning_algorithms
+			has_trait = trait_robot_logic_engines
+		}
+		modifier = {
+			factor = 5
+			has_job = esc_dark_matter_shaper_drone
+		}
+	}
+}
+
+############################################################
+###             Mantle Mining Facility Jobs              ###
+############################################################
+
+### Planetary Core Miner
+esc_planetary_core_miner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_magmaminer_2
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+        complex_specialist_job_check_trigger = yes
+		hidden_trigger = { exists = owner }
+		owner = {  is_gestalt = no }
+    }
+
+    resources = {
+        category = planet_miners
+        # base production
+        produces = {
+			minerals = 20
+			engineering_research = 5
+		}
+        # extra bonus from purification plant/hub
+        produces = {
+            trigger = {
+                planet = {
+					OR = {
+						has_building = building_mineral_purification_plant
+						has_building = building_mineral_purification_hub
+					}
+				}
+            }
+            minerals = 4
+        }
+        # upkeep : non-lithoid biologicals
+        upkeep = {
+			trigger = {
+				NOR = {
+					has_trait = trait_lithoid
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			food = 5
+			consumer_goods = 5
+			energy = 5
+		}
+        # upkeep : lithoids
+		upkeep = {
+			trigger = { has_trait = trait_lithoid }
+			minerals = 5
+			consumer_goods = 5
+			energy = 5
+		}
+        # upkeep : machines
+		upkeep = {
+			trigger = {
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			consumer_goods = 5
+			energy = 10
+		}
+
+		### AlphaMod resources
+		# produces = {
+		# 	trigger = {
+		# 		has_global_flag = gf_alphamod_activated
+		# 	}
+		# 	sr_actinides = 1
+		# 	sr_precious_stones = 1
+		# 	sr_rare_metals = 1
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = { colony_type = col_mining }
+		# 		has_global_flag = gf_alphamod_activated
+		# 	}
+		# 	sr_actinides = 0.2
+		# 	sr_precious_stones = 0.2
+		# 	sr_rare_metals = 0.2
+		# }
+	}
+
+    weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_strong
+			has_trait = trait_very_strong
+			has_trait = trait_industrious
+			has_trait = trait_resilient
+			has_trait = trait_robot_efficient_processors
+			has_trait = trait_robot_power_drills
+		}
+		modifier = {
+			factor = 1.5
+			has_job = esc_planetary_core_miner
+		}
+	}
+}
+
+### Planetary Core Miner Drone
+esc_planetary_core_miner_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_dark_matter_facility
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+        drone_job_check_trigger = yes
+		hidden_trigger = { exists = owner }
+		owner = {  is_hive_empire = yes }
+	}
+
+    resources = {
+        category = planet_miners
+        # base production
+        produces = {
+			minerals = 20
+			engineering_research = 5
+		}
+        # extra bonus from purification plant/hub
+        produces = {
+            trigger = {
+                planet = {
+					OR = {
+						has_building = building_mineral_purification_plant
+						has_building = building_mineral_purification_hub
+					}
+				}
+            }
+            minerals = 4
+        }
+        # upkeep : non-lithoid biologicals
+        upkeep = {
+			trigger = {
+				NOR = {
+					has_trait = trait_lithoid
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			food = 10
+			energy = 5
+		}
+        # upkeep : lithoids
+		upkeep = {
+			trigger = { has_trait = trait_lithoid }
+			minerals = 10
+			energy = 5
+		}
+        # upkeep : machines
+        upkeep = {
+			trigger = {
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			energy = 10
+			alloys = 2.5
+		}
+
+		### AlphaMod resources
+		# produces = {
+		# 	trigger = {
+		# 		has_global_flag = gf_alphamod_activated
+		# 	}
+		# 	sr_actinides = 1
+		# 	sr_precious_stones = 1
+		# 	sr_rare_metals = 1
+		# }
+		# produces = {
+		# 	trigger = {
+		# 		planet = { colony_type = col_mining }
+		# 		has_global_flag = gf_alphamod_activated
+		# 	}
+		# 	sr_actinides = 0.2
+		# 	sr_precious_stones = 0.2
+		# 	sr_rare_metals = 0.2
+		# }
+	}
+
+    weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 2
+			has_trait = trait_strong
+			has_trait = trait_very_strong
+			has_trait = trait_industrious
+			has_trait = trait_resilient
+            has_trait = trait_robot_power_drills
+		}
+		modifier = {
+			factor = 1.5
+			has_job = esc_planetary_core_miner_drone
+		}
+	}
+}
+
+### Borehole Maintainer
+esc_borehole_maintainer = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+    building_icon = esc_building_magmaminer_2
+	clothes_texture_index = 2
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+        complex_specialist_job_check_trigger = yes
+		hidden_trigger = { exists = owner }
+		owner = {  is_gestalt = no }
+    }
+
+ 	resources = {
+		category = planet_miners
+        # base production
+		produces = {
+			rare_crystals = 1
+			engineering_research = 8
+		}
+        # upkeep : non-lithoid biologicals
+		upkeep = {
+			trigger = {
+				NOR = {
+					has_trait = trait_lithoid
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			consumer_goods = 2
+			food = 1.5
+			alloys = 1
+		}
+        # upkeep : lithoids
+		upkeep = {
+			trigger = { has_trait = trait_lithoid }
+			consumer_goods = 2
+			minerals = 1.5
+			alloys = 1
+		}
+        # upkeep : machines
+		upkeep = {
+			trigger = {
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			consumer_goods = 2
+			energy = 2
+			alloys = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 1.5
+			has_job = esc_borehole_maintainer
+		}
+	}
+}
+
+### Borehole Maintenance Drone
+esc_borehole_maintainer_drone = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = esc_building_dark_matter_facility
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible = {
+        drone_job_check_trigger = yes
+		hidden_trigger = { exists = owner }
+		owner = {  is_hive_empire = yes }
+	}
+
+ 	resources = {
+		category = planet_miners
+        # base production
+		produces = {
+			rare_crystals = 1
+			engineering_research = 8
+		}
+        # upkeep : non-lithoid biologicals
+		upkeep = {
+			trigger = {
+				NOR = {
+					has_trait = trait_lithoid
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			food = 5
+			alloys = 1
+		}
+        # upkeep : lithoids
+		upkeep = {
+			trigger = { has_trait = trait_lithoid }
+			minerals = 5
+			alloys = 1
+		}
+        # upkeep : machines
+        upkeep = {
+			trigger = {
+				OR = {
+					has_trait = trait_mechanical
+					has_trait = trait_machine_unit
+				}
+			}
+			energy = 4
+			alloys = 1.5
+		}
+	}
+
+	weight = {
+		weight = @complex_drone_job_weight
+		modifier = {
+			factor = 1.5
+			has_job = esc_borehole_maintainer_drone
+		}
+	}
+}
+
+############################################################
+###       Cerebral Node / Network Regulator Jobs         ###
+############################################################
+
+### Mind Walker Drone
+esc_mind_walker = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_hive_capital
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		drone_job_check_trigger = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synchronicity_instinctive_synchronization }
+		}
+		modifier = {
+			planet_amenities_no_happiness_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_synapse_drones
+        # base production
+		produces = {
+			unity = 4
+		}
+        # upkeep : non-lighoids
+		upkeep = {
+			trigger = {
+				NOT = { has_trait = trait_lithoid }
+			}
+			food = 2
+			energy = 2
+		}
+        # upkeep : lithoids
+		upkeep = {
+			trigger = {
+				has_trait = trait_lithoid
+			}
+			minerals = 2
+			energy = 2
+		}
+	}
+
+	weight = {
+		weight = @synapse_drone_job_weight
+	}
+}
+
+### Network Curator
+esc_network_curator = {
+	category = complex_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_machine_capital
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		drone_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_evaluators
+		produces = {
+			unity = 4
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @synapse_drone_job_weight
+		modifier = {
+			factor = 0.9
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+}

@@ -1,0 +1,588 @@
+# particle definitions for energy weapons
+ObjectTypes = {
+
+############################################################
+###          Energy Weapons' Particles : Laser 6         ###
+############################################################
+
+# hit effect
+pdxparticle = {
+	name = "esc_laser_6_small_hit_effect"
+	type = "esc_laser_6_hit_effect"
+	scale = 0.5
+}
+
+	pdxparticle = {
+	name = "esc_laser_6_medium_hit_effect"
+	type = "esc_laser_6_hit_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_laser_6_large_hit_effect"
+	type = "esc_laser_6_hit_effect"
+	scale = 1.0
+}
+
+# muzzle effect
+pdxparticle = {
+	name = "esc_laser_6_small_muzzle_particle"
+	type = "esc_laser_6_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_laser_6_medium_muzzle_particle"
+	type = "esc_laser_6_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_laser_6_large_muzzle_particle"
+	type = "esc_laser_6_muzzle_effect"
+	scale = 2.0
+}
+
+############################################################
+###          Energy Weapons' Particles : Laser 7         ###
+############################################################
+
+# hit effect
+pdxparticle = {
+	name = "esc_laser_7_small_hit_effect"
+	type = "esc_laser_7_hit_effect"
+	scale = 0.5
+}
+
+	pdxparticle = {
+	name = "esc_laser_7_medium_hit_effect"
+	type = "esc_laser_7_hit_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_laser_7_large_hit_effect"
+	type = "esc_laser_7_hit_effect"
+	scale = 1.0
+}
+
+# muzzle effect
+pdxparticle = {
+	name = "esc_laser_7_small_muzzle_particle"
+	type = "esc_laser_7_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_laser_7_medium_muzzle_particle"
+	type = "esc_laser_7_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_laser_7_large_muzzle_particle"
+	type = "esc_laser_7_muzzle_effect"
+	scale = 2.0
+}
+
+############################################################
+###     Energy Weapons' Particles : Energy Launcher 3    ###
+############################################################
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_3_hit_effect"
+	type = "esc_energy_torpedoes_3_hit_effect"
+	scale = 1.75
+}
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_3_muzzle_particle"
+	type = "esc_energy_torpedoes_3_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_3_idle_particle"
+	type = "esc_energy_torpedoes_3_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_3_idle_trail_particle"
+	type = "esc_energy_torpedoes_3_idle_drop_effect"
+	scale = 1.0
+}
+
+############################################################
+###     Energy Weapons' Particles : Energy Launcher 4    ###
+############################################################
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_4_hit_effect"
+	type = "esc_energy_torpedoes_4_hit_effect"
+	scale = 1.75
+}
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_4_muzzle_particle"
+	type = "esc_energy_torpedoes_4_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_4_idle_particle"
+	type = "esc_energy_torpedoes_4_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_energy_torpedoes_4_idle_trail_particle"
+	type = "esc_energy_torpedoes_4_idle_drop_effect"
+	scale = 1.0
+}
+
+############################################################
+###        Energy Weapons' Particles : Disruptor 4       ###
+############################################################
+
+pdxparticle = {
+	name = "esc_disruptor_4_small_hit_effect"
+	type = "esc_disruptor_4_hit_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_disruptor_4_medium_hit_effect"
+	type = "esc_disruptor_4_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_disruptor_4_large_hit_effect"
+	type = "esc_disruptor_4_hit_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_disruptor_4_small_muzzle_particle"
+	type = "esc_disruptor_4_muzzle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_disruptor_4_medium_muzzle_particle"
+	type = "esc_disruptor_4_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_disruptor_4_large_muzzle_particle"
+	type = "esc_disruptor_4_muzzle_effect"
+	scale = 1.25
+}
+
+############################################################
+###        Energy Weapons' Particles : Disruptor 5       ###
+############################################################
+
+pdxparticle = {
+	name = "esc_disruptor_5_small_hit_effect"
+	type = "esc_disruptor_5_hit_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_disruptor_5_medium_hit_effect"
+	type = "esc_disruptor_5_hit_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_disruptor_5_large_hit_effect"
+	type = "esc_disruptor_5_hit_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_disruptor_5_small_muzzle_particle"
+	type = "esc_disruptor_5_muzzle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_disruptor_5_medium_muzzle_particle"
+	type = "esc_disruptor_5_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_disruptor_5_large_muzzle_particle"
+	type = "esc_disruptor_5_muzzle_effect"
+	scale = 1.25
+}
+
+############################################################
+###         Energy Weapons' Particles : Plasma 4         ###
+############################################################
+
+pdxparticle = {
+	name = "esc_plasma_4_large_muzzle_particle"
+	type = "esc_plasma_4_muzzle_effect"
+	scale = 0.80
+}
+
+pdxparticle = {
+	name = "esc_plasma_4_medium_muzzle_particle"
+	type = "esc_plasma_4_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_plasma_4_small_muzzle_particle"
+	type = "esc_plasma_4_muzzle_effect"
+	scale = 0.25
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_4_idle_particle"
+	type = "esc_plasma_4_idle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_4_idle_drops_particle"
+	type = "esc_plasma_4_idle_drops_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_4_idle_particle"
+	type = "esc_plasma_4_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "medium_esc_plasma_4_idle_drops_particle"
+	type = "esc_plasma_4_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_4_idle_particle"
+	type = "esc_plasma_4_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "small_esc_plasma_4_idle_drops_particle"
+	type = "esc_plasma_4_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_plasma_4_small_hit_effect"
+	type = "esc_plasma_4_hit_effect"
+	scale = 0.35
+}
+
+pdxparticle = {
+	name = "esc_plasma_4_medium_hit_effect"
+	type = "esc_plasma_4_hit_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_plasma_4_large_hit_effect"
+	type = "esc_plasma_4_hit_effect"
+	scale = 0.8
+}
+
+############################################################
+###         Energy Weapons' Particles : Plasma 5         ###
+############################################################
+
+pdxparticle = {
+	name = "esc_plasma_5_large_muzzle_particle"
+	type = "esc_plasma_5_muzzle_effect"
+	scale = 0.80
+}
+
+pdxparticle = {
+	name = "esc_plasma_5_medium_muzzle_particle"
+	type = "esc_plasma_5_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_plasma_5_small_muzzle_particle"
+	type = "esc_plasma_5_muzzle_effect"
+	scale = 0.25
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_5_idle_particle"
+	type = "esc_plasma_5_idle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "large_esc_plasma_5_idle_drops_particle"
+	type = "esc_plasma_5_idle_drops_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "medium_esc_plasma_5_idle_particle"
+	type = "esc_plasma_5_idle_effect"
+	scale = 1.0
+}
+pdxparticle = {
+	name = "medium_esc_plasma_5_idle_drops_particle"
+	type = "esc_plasma_5_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "small_esc_plasma_5_idle_particle"
+	type = "esc_plasma_5_idle_effect"
+	scale = 0.5
+}
+pdxparticle = {
+	name = "small_esc_plasma_5_idle_drops_particle"
+	type = "esc_plasma_5_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_plasma_5_small_hit_effect"
+	type = "esc_plasma_5_hit_effect"
+	scale = 0.35
+}
+
+pdxparticle = {
+	name = "esc_plasma_5_medium_hit_effect"
+	type = "esc_plasma_5_hit_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_plasma_5_large_hit_effect"
+	type = "esc_plasma_5_hit_effect"
+	scale = 0.8
+}
+
+############################################################
+###   Energy Weapons' Particles : Chrono-Vortex Cannon   ###
+############################################################
+
+pdxparticle = {
+	name = "esc_chronocannon_small_muzzle_particle"
+	type = "esc_chronocannon_muzzle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_medium_muzzle_particle"
+	type = "esc_chronocannon_muzzle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_large_muzzle_particle"
+	type = "esc_chronocannon_muzzle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_small_idle_particle"
+	type = "esc_chronocannon_idle_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_medium_idle_particle"
+	type = "esc_chronocannon_idle_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_large_idle_particle"
+	type = "esc_chronocannon_idle_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_small_idle_drops_particle"
+	type = "esc_chronocannon_idle_drops_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_medium_idle_drops_particle"
+	type = "esc_chronocannon_idle_drops_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_large_idle_drops_particle"
+	type = "esc_chronocannon_idle_drops_effect"
+	scale = 1.0
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_small_hit_effect"
+	type = "esc_chronocannon_hit_effect"
+	scale = 0.5
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_medium_hit_effect"
+	type = "esc_chronocannon_hit_effect"
+	scale = 0.75
+}
+
+pdxparticle = {
+	name = "esc_chronocannon_large_hit_effect"
+	type = "esc_chronocannon_hit_effect"
+	scale = 1.0
+}
+
+############################################################
+###     Energy Weapons' Particles : Particle Lance 3     ###
+############################################################
+
+pdxparticle = {
+	name = "esc_particle_lance_3_windup_effect"
+	type = "esc_particle_lance_3_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_3_muzzle_windup_effect"
+	type = "esc_particle_lance_3_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_3_muzzle_particle"
+	type = "esc_particle_lance_3_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_3_hit_effect"
+	type = "esc_particle_lance_3_hit_effect"
+	scale = 1.15
+}
+
+############################################################
+###     Energy Weapons' Particles : Particle Lance 4     ###
+############################################################
+
+pdxparticle = {
+	name = "esc_particle_lance_4_windup_effect"
+	type = "esc_particle_lance_4_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_4_muzzle_windup_effect"
+	type = "esc_particle_lance_4_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_4_muzzle_particle"
+	type = "esc_particle_lance_4_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_4_hit_effect"
+	type = "esc_particle_lance_4_hit_effect"
+	scale = 1.15
+}
+
+############################################################
+###  Energy Weapons' Particles : Particle Lance Titanic  ###
+############################################################
+
+pdxparticle = {
+	name = "esc_particle_lance_titanic_windup_effect"
+	type = "esc_particle_lance_titanic_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_titanic_muzzle_windup_effect"
+	type = "esc_particle_lance_titanic_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_titanic_muzzle_particle"
+	type = "esc_particle_lance_titanic_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_particle_lance_titanic_hit_effect"
+	type = "esc_particle_lance_titanic_hit_effect"
+	scale = 1.15
+}
+
+############################################################
+###       Energy Weapons' Particles : Arc Emitter 3      ###
+############################################################
+
+pdxparticle = {
+	name = "esc_arc_emitter_3_windup_effect"
+	type = "esc_arc_emitter_3_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_arc_emitter_3_muzzle_windup_effect"
+	type = "esc_arc_emitter_3_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_arc_emitter_3_muzzle_particle"
+	type = "esc_arc_emitter_3_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_arc_emitter_3_hit_effect"
+	type = "esc_arc_emitter_3_hit_effect"
+	scale = 1.15
+}
+
+############################################################
+###       Energy Weapons' Particles : Arc Emitter 4      ###
+############################################################
+
+pdxparticle = {
+	name = "esc_arc_emitter_4_windup_effect"
+	type = "esc_arc_emitter_4_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_arc_emitter_4_muzzle_windup_effect"
+	type = "esc_arc_emitter_4_muzzle_windup_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_arc_emitter_4_muzzle_particle"
+	type = "esc_arc_emitter_4_muzzle_effect"
+	scale = 1.5
+}
+
+pdxparticle = {
+	name = "esc_arc_emitter_4_hit_effect"
+	type = "esc_arc_emitter_4_hit_effect"
+	scale = 1.15
+}
+
+}

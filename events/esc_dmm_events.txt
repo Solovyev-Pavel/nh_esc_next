@@ -1,0 +1,41 @@
+namespace = esc_dmm_integration
+
+## ##################################################### ##
+##            Registering in Dynamic Mod Menu            ##
+## ##################################################### ##
+
+event = {
+	id = esc_dmm_integration.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_global_flag = dmm_installed
+		NOT = { dmm_is_registered_mod = { DMM_FLAG = extra_ship_components_next } }
+	}
+
+	immediate = {
+		dmm_register_mod = {
+			DMM_NAME = esc_next_name_id
+			DMM_FLAG = extra_ship_components_next
+		}
+	}
+}
+
+## ##################################################### ##
+##         Opening Setting via Dynamic Mod Menu          ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_dmm_integration.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FROM = { has_leader_flag = extra_ship_components_next }
+	}
+
+	immediate = {
+		country_event = { id = esc_options.1000 days = 0 }
+	}
+}

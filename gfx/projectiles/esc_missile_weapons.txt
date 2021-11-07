@@ -1,0 +1,281 @@
+############################################################
+###   Missile Weapons' Projectiles : Standard Missiles   ###
+############################################################
+
+### Joker Missiles & Devastator Torpedoes
+projectile_gfx_missile = {
+	name = "esc_missiles_6"
+	color = { 0.63 0.06 0.72 1.0 }
+	hit_entity = "missile_medium_hit_entity"
+	shield_hit_entity = "missile_medium_shield_hit_entity"
+	muzzle_flash_entity = "missile_medium_muzzle_flash_entity"
+
+	entity = "esc_missiles_6_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+### Wraith Missiles & Eradicator Torpedoes
+projectile_gfx_missile = {
+	name = "esc_missiles_7"
+	color = { 0.83 0.06 0.06 1.0 }
+	hit_entity = "missile_medium_hit_entity"
+	shield_hit_entity = "missile_medium_shield_hit_entity"
+	muzzle_flash_entity = "missile_medium_muzzle_flash_entity"
+
+	entity = "esc_missiles_7_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+### Corrosive Warhead Torpedo
+projectile_gfx_missile = {
+	name = "esc_corrosive_warhead_torpedoes"
+	color = { 1.0	0.5	0.0	1.0 }
+	hit_entity = "esc_corrosive_warhead_hit_entity"
+	shield_hit_entity = "esc_corrosive_warhead_shield_hit_entity"
+	muzzle_flash_entity = "torpedo_large_muzzle_entity"
+
+	entity = "esc_corrosive_warhead_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###    Missile Weapons' Projectiles : Plasma Missiles    ###
+############################################################
+
+### Plasma missile
+projectile_gfx_missile = {
+	name = "small_esc_plasma_missile_1"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "small_esc_plasma_missile_1_hit_entity"
+	shield_hit_entity = "small_esc_plasma_missile_1_shield_hit_entity"
+	muzzle_flash_entity = "small_esc_plasma_missile_1_muzzle_entity"
+
+	entity = "small_esc_plasma_missile_1_entity"
+
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	name = "medium_esc_plasma_missile_1"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "medium_esc_plasma_missile_1_hit_entity"
+	shield_hit_entity = "medium_esc_plasma_missile_1_shield_hit_entity"
+	muzzle_flash_entity = "medium_esc_plasma_missile_1_muzzle_entity"
+
+	entity = "medium_esc_plasma_missile_1_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	name = "large_esc_plasma_missile_1"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "large_esc_plasma_missile_1_hit_entity"
+	shield_hit_entity = "large_esc_plasma_missile_1_shield_hit_entity"
+	muzzle_flash_entity = "large_esc_plasma_missile_1_muzzle_entity"
+
+	entity = "large_esc_plasma_missile_1_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+### Improved Plasma missile
+projectile_gfx_missile = {
+	name = "small_esc_plasma_missile_2"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "small_esc_plasma_missile_2_hit_entity"
+	shield_hit_entity = "small_esc_plasma_missile_2_shield_hit_entity"
+	muzzle_flash_entity = "small_esc_plasma_missile_2_muzzle_entity"
+
+	entity = "small_esc_plasma_missile_2_entity"
+
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	name = "medium_esc_plasma_missile_2"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "medium_esc_plasma_missile_2_hit_entity"
+	shield_hit_entity = "medium_esc_plasma_missile_2_shield_hit_entity"
+	muzzle_flash_entity = "medium_esc_plasma_missile_2_muzzle_entity"
+
+	entity = "medium_esc_plasma_missile_2_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	name = "large_esc_plasma_missile_2"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "large_esc_plasma_missile_2_hit_entity"
+	shield_hit_entity = "large_esc_plasma_missile_2_shield_hit_entity"
+	muzzle_flash_entity = "large_esc_plasma_missile_2_muzzle_entity"
+
+	entity = "large_esc_plasma_missile_2_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+### Incinerator missile
+projectile_gfx_missile = {
+	name = "small_esc_plasma_missile_3"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "small_esc_plasma_missile_3_hit_entity"
+	shield_hit_entity = "small_esc_plasma_missile_3_shield_hit_entity"
+	muzzle_flash_entity = "small_esc_plasma_missile_3_muzzle_entity"
+
+	entity = "small_esc_plasma_missile_3_entity"
+
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	name = "medium_esc_plasma_missile_3"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "medium_esc_plasma_missile_3_hit_entity"
+	shield_hit_entity = "medium_esc_plasma_missile_3_shield_hit_entity"
+	muzzle_flash_entity = "medium_esc_plasma_missile_3_muzzle_entity"
+
+	entity = "medium_esc_plasma_missile_3_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+projectile_gfx_missile = {
+	name = "large_esc_plasma_missile_3"
+	color = { 1.0	1.0	1.0	1.0 }
+	hit_entity = "large_esc_plasma_missile_3_hit_entity"
+	shield_hit_entity = "large_esc_plasma_missile_3_shield_hit_entity"
+	muzzle_flash_entity = "large_esc_plasma_missile_3_muzzle_entity"
+
+	entity = "large_esc_plasma_missile_3_entity"
+
+	shield_impact = {
+		size = medium
+		delay = 0.0
+	}
+}
+
+############################################################
+###  Missile Weapons' Projectiles : Whirlwind Missiles   ###
+############################################################
+
+### Typhoon Missiles
+projectile_gfx_missile = {
+	name = "esc_swarmer_missiles_3"
+	color = { 0.63 0.06 0.72 1.0 }
+	hit_entity = "esc_swarmer_missiles_3_hit_entity"
+	shield_hit_entity = "esc_swarmer_missiles_3_hit_entity"
+	muzzle_flash_entity = "swarmer_missiles_muzzle_flash_entity"
+
+	entity = "esc_swarmer_missiles_3_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+### Typhoon Missiles
+projectile_gfx_missile = {
+	name = "esc_swarmer_missiles_4"
+	color = { 0.83 0.06 0.06 1.0 }
+	hit_entity = "esc_swarmer_missiles_4_hit_entity"
+	shield_hit_entity = "esc_swarmer_missiles_4_hit_entity"
+	muzzle_flash_entity = "swarmer_missiles_muzzle_flash_entity"
+
+	entity = "esc_swarmer_missiles_4_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+############################################################
+###    Missile Weapons' Projectiles : X-Slot Missiles    ###
+############################################################
+
+### Exotic Matter Warhead
+projectile_gfx_missile = {
+	name = "esc_xmissile1"
+	color = { 1.0 0.25 0.25 1.0 }
+	hit_entity = "esc_xmissile1_hit_entity"
+	shield_hit_entity = "esc_xmissile1_shield_hit_entity"
+	muzzle_flash_entity = "esc_xmissile1_muzzle_entity"
+
+	entity = "esc_xmissile1_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+### Strange Matter Warhead
+projectile_gfx_missile = {
+	name = "esc_xmissile2"
+	color = { 0.25 0.25 1.0 1.0 }
+	hit_entity = "esc_xmissile2_hit_entity"
+	shield_hit_entity = "esc_xmissile2_shield_hit_entity"
+	muzzle_flash_entity = "esc_xmissile2_muzzle_entity"
+
+	entity = "esc_xmissile2_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}
+
+### Reflex Warhead Launcher
+projectile_gfx_missile = {
+	name = "esc_xmissile3"
+	color = { 1.0 0.25 1.0 1.0 }
+	hit_entity = "esc_xmissile3_hit_entity"
+	shield_hit_entity = "esc_xmissile3_shield_hit_entity"
+	muzzle_flash_entity = "esc_xmissile3_muzzle_entity"
+
+	entity = "esc_xmissile3_entity"
+
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+}

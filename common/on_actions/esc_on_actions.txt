@@ -1,0 +1,74 @@
+############################################################
+###                  On Action triggers                  ###
+############################################################
+
+on_game_start = {
+	events = {
+		esc_events.1 						# set mod-is-in-use flag
+		esc_dmm_integration.1 				# register in dynamic mod menu
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		esc_events.1 						# set mod-is-in-use flag
+		esc_dmm_integration.1 				# register in dynamic mod menu
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		esc_events_crisis.6000				# re: unbidden invasion
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		esc_events.4000						# dark matter technology check
+		esc_events.5000						# ai boost
+		esc_special_projects.1000			# check for machine empires that can learn about psionics
+		esc_special_projects.2000			# checking whether conditions for dreadnought computer access are fulfilled
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		esc_events.3000 					# random boons from mantle mining facility
+		esc_special_projects.3001 			# roll for nanite thought matrix special project
+		esc_events_crisis.3000				# crisis dice roller
+	}
+}
+
+on_tech_increased = {
+	events = {
+		esc_action_tracking.5000			# technology reverse engineering
+		esc_special_projects.3000			# check prerequisites for nanite thought matrix
+		esc_events_crisis.1000				# crisis pre-condition check
+	}
+}
+
+on_ship_destroyed_perp = {
+	events = {
+		esc_action_tracking.1000 			# set a country flag on killing ether drake
+		esc_action_tracking.2000 			# set a country flag on killing stellarite
+		esc_action_tracking.3000			# give automated dreadnought computer tech option to its killer
+	}
+}
+
+on_fleet_destroyed_perp = {
+	events = {
+		esc_action_tracking.4000 			# special project to 'reverse-engineer' nanite thought matrix combat computer
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		esc_events.2001						# gain access to drake-cloning tech after capturing a planet with dragon hatchery
+	}
+}
+
+dmm_mod_selected = {
+	events = {
+		esc_dmm_integration.10 # open mod menu
+	}
+}
