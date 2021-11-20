@@ -240,7 +240,7 @@ esc_tech_zro_distilleries = {
 	is_rare = yes
 
 	potential = {
-		is_machine_empire = no
+		ESC_TRIGGER_may_research_psionic_weapons_basic = yes
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
 
