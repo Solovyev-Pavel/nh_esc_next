@@ -22,6 +22,7 @@ esc_dummy_strike_cruiser = {
 	is_designable = no
 	components_add_to_cost = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_military
 
 	required_component_set = "power_core"
@@ -51,6 +52,7 @@ esc_dummy_battle_cruiser = {
 	is_designable = no
 	components_add_to_cost = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_military
 
 	required_component_set = "power_core"
@@ -80,6 +82,7 @@ esc_dummy_carrier = {
 	is_designable = no
 	components_add_to_cost = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_military
 
 	required_component_set = "power_core"
@@ -109,6 +112,7 @@ esc_dummy_dreadnought = {
 	is_designable = no
 	components_add_to_cost = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_military
 
 	required_component_set = "power_core"
@@ -138,6 +142,7 @@ esc_dummy_flagship = {
 	is_designable = no
 	components_add_to_cost = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_military
 
 	required_component_set = "power_core"
@@ -167,6 +172,7 @@ esc_dummy_scx_dreadnought = {
 	is_designable = no
 	components_add_to_cost = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_military
 
 	required_component_set = "power_core"
@@ -192,6 +198,7 @@ esc_dummy_military_platform = {
 	is_listed = no
 	is_designable = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	prerequisites = { "tech_space_defense_station_1" }
 	class = shipclass_military_station
 	construction_type = starbase_defenses
@@ -222,6 +229,7 @@ esc_dummy_starbase = {
 	can_have_federation_design = no
 
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	class = shipclass_starbase
 
 	required_component_set = "power_core"
@@ -250,6 +258,7 @@ esc_dummy_juggernaut = {
 	can_disable = no
 	can_have_federation_design = no
 	enable_default_design = no	#if yes, countries will have an auto-generated design at start
+	enable_3dview_in_ship_browser = no # do not show ship size in previews
 	icon_frame = 7
 	ship_class_icon_frame = 35
 
