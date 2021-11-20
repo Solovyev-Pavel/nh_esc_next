@@ -9,6 +9,13 @@ on_game_start = {
 	}
 }
 
+on_single_player_save_game_load  = {
+	events = {
+		esc_events.1 						# set mod-is-in-use flag
+		esc_dmm_integration.1 				# register in dynamic mod menu
+	}
+}
+
 on_monthly_pulse = {
 	events = {
 		esc_events.1 						# set mod-is-in-use flag
