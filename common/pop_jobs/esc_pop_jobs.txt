@@ -45,8 +45,9 @@ esc_nanite_breeder = {
 	}
 
     possible = {
-        specialist_job_check_trigger = yes
-        owner = { is_fallen_empire = no }
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
+        complex_specialist_job_check_trigger = yes
     }
 
     resources = {
@@ -122,6 +123,8 @@ esc_nanite_breeder_drone = {
 	}
 
     possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
     }
 
@@ -277,8 +280,9 @@ esc_crystal_farmer = {
 	}
 
     possible = {
-        specialist_job_check_trigger = yes
-        owner = { is_fallen_empire = no }
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
+        complex_specialist_job_check_trigger = yes
     }
 
     resources = {
@@ -360,6 +364,8 @@ esc_crystal_farmer_drone = {
 	}
 
     possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
     }
 
@@ -519,6 +525,8 @@ esc_reprocessor = {
 	}
 
     possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
         complex_specialist_job_check_trigger = yes
     }
 
@@ -606,6 +614,8 @@ esc_reprocessor_drone = {
 	}
 
     possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
     }
 
@@ -709,6 +719,8 @@ esc_zro_distiller = {
 	}
 
     possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
         complex_specialist_job_check_trigger = yes
     }
 
@@ -800,9 +812,11 @@ esc_zro_distiller_drone = {
 		is_sapient = yes
 	}
 
-	possible = {
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
-	}
+    }
 
 	resources = {
 		category = planet_jobs
@@ -979,6 +993,8 @@ esc_dark_matter_shaper = {
 	}
 
     possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
         complex_specialist_job_check_trigger = yes
     }
 
@@ -1056,9 +1072,11 @@ esc_dark_matter_shaper_drone = {
 		is_sapient = yes
 	}
 
-	possible = {
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
-	}
+    }
 
     resources = {
         category = planet_jobs
@@ -1215,10 +1233,10 @@ esc_planetary_core_miner = {
 		is_sapient = yes
 	}
 
-	possible = {
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
         complex_specialist_job_check_trigger = yes
-		hidden_trigger = { exists = owner }
-		owner = {  is_gestalt = no }
     }
 
     resources = {
@@ -1329,11 +1347,11 @@ esc_planetary_core_miner_drone = {
 		is_sapient = yes
 	}
 
-	possible = {
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
-		hidden_trigger = { exists = owner }
-		owner = {  is_hive_empire = yes }
-	}
+    }
 
     resources = {
         category = planet_miners
@@ -1435,10 +1453,10 @@ esc_borehole_maintainer = {
 		is_sapient = yes
 	}
 
-	possible = {
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = no }
         complex_specialist_job_check_trigger = yes
-		hidden_trigger = { exists = owner }
-		owner = {  is_gestalt = no }
     }
 
  	resources = {
@@ -1510,11 +1528,11 @@ esc_borehole_maintainer_drone = {
 		is_sapient = yes
 	}
 
-	possible = {
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_gestalt = yes }
         drone_job_check_trigger = yes
-		hidden_trigger = { exists = owner }
-		owner = {  is_hive_empire = yes }
-	}
+    }
 
  	resources = {
 		category = planet_miners
@@ -1580,9 +1598,11 @@ esc_mind_walker = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		drone_job_check_trigger = yes
-	}
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_hive_empire = yes }
+        drone_job_check_trigger = yes
+    }
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1636,9 +1656,11 @@ esc_network_curator = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		drone_job_check_trigger = yes
-	}
+    possible = {
+        hidden_trigger = { exists = owner }
+        owner = { is_machine_empire = yes }
+        drone_job_check_trigger = yes
+    }
 
 	resources = {
 		category = planet_evaluators
