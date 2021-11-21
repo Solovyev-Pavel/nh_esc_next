@@ -264,11 +264,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_8" }
 	component_set = ESC_SHIELDS_8
 
+	# only normal empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -309,11 +307,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_8" }
 	component_set = ESC_SHIELDS_8
 
+	# only normal empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -354,11 +350,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_8" }
 	component_set = ESC_SHIELDS_8
 
+	# only normal empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -991,11 +985,9 @@ utility_component_template = {
 	component_set = ESC_PSI_SHIELD_2
 	upgrades_to = SMALL_ESC_PSI_SHIELD_3
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1037,11 +1029,9 @@ utility_component_template = {
 	component_set = ESC_PSI_SHIELD_2
 	upgrades_to = MEDIUM_ESC_PSI_SHIELD_3
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1083,11 +1073,9 @@ utility_component_template = {
 	component_set = ESC_PSI_SHIELD_2
 	upgrades_to = LARGE_ESC_PSI_SHIELD_3
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1128,11 +1116,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_psionic_shield_3" }
 	component_set = ESC_PSI_SHIELD_3
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1173,11 +1159,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_psionic_shield_3" }
 	component_set = ESC_PSI_SHIELD_3
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1218,11 +1202,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_psionic_shield_3" }
 	component_set = ESC_PSI_SHIELD_3
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {

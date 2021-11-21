@@ -71,11 +71,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -129,11 +127,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -187,11 +183,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -248,11 +242,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -305,11 +297,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -362,11 +352,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -427,11 +415,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -491,11 +477,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -556,11 +540,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -621,11 +603,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -686,11 +666,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -748,11 +726,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {
@@ -823,11 +799,9 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft }
 
+	# only regular empires and machine FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_machine_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
 	ai_weight = {

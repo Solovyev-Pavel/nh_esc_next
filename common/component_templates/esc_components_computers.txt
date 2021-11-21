@@ -52,11 +52,9 @@ utility_component_template = {
 		ship_speed_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -120,11 +118,9 @@ utility_component_template = {
 		ship_speed_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -187,11 +183,9 @@ utility_component_template = {
 		ship_speed_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -246,11 +240,9 @@ utility_component_template = {
 		ship_speed_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -296,6 +288,11 @@ utility_component_template = {
 	}
 	modifier = {
 		ship_shield_mult = 0.25
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -362,11 +359,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -430,11 +425,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -497,11 +490,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -558,11 +549,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -608,11 +597,9 @@ utility_component_template = {
 		ship_hull_mult = 0.2
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -665,11 +652,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -712,11 +697,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = { weight = 15 } # starbased are upgraded for free
@@ -759,11 +742,9 @@ utility_component_template = {
 		ship_hull_mult = 0.1
 	}
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {

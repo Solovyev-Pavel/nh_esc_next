@@ -112,10 +112,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_reactor_6" }
@@ -159,10 +156,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_6" }
@@ -206,10 +200,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_reactor_6" }
@@ -247,10 +238,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_6" }
@@ -823,10 +811,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_reactor_7" }
@@ -870,10 +855,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_7" }
@@ -917,10 +899,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_reactor_7" }
@@ -958,10 +937,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_7" }
@@ -1531,10 +1507,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_reactor_8" }
@@ -1577,10 +1550,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_8" }
@@ -1623,10 +1593,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_reactor_8" }
@@ -1663,10 +1630,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_8" }
@@ -2264,10 +2228,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
@@ -2323,10 +2284,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
@@ -2382,10 +2340,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
@@ -2435,10 +2390,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
@@ -3212,10 +3164,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
@@ -3270,10 +3219,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
@@ -3328,10 +3274,7 @@ utility_component_template = {
 
 	# enabled when NSC is not active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
@@ -3380,10 +3323,7 @@ utility_component_template = {
 
 	# enabled when NSC is active
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
@@ -4019,10 +3959,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4069,10 +4006,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4115,10 +4049,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4163,17 +4094,10 @@ utility_component_template = {
 		weapon_type_psionic_weapon_damage_mult = 0.25
 	}
 
-	# enabled when NSC is not active
+	# enabled when NSC is not active, and only for regular empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
-		# disallow for fallen empires
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4226,17 +4150,10 @@ utility_component_template = {
 		weapon_type_psionic_weapon_damage_mult = 0.25
 	}
 
-	# enabled when NSC is active
+	# enabled when NSC is active, and only for regular empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
-		# disallow for fallen empires
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		has_global_flag = @NSC_active_flag
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4289,17 +4206,10 @@ utility_component_template = {
 		weapon_type_psionic_weapon_damage_mult = 0.25
 	}
 
-	# enabled when NSC is not active
+	# enabled when NSC is not active, and only for regular empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			has_global_flag = @NSC_active_flag
-		}
-		# disallow for fallen empires
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		NOT = { has_global_flag = @NSC_active_flag }
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4346,17 +4256,10 @@ utility_component_template = {
 		weapon_type_psionic_weapon_damage_mult = 0.25
 	}
 
-	# enabled when NSC is active
+	# enabled when NSC is active, and only for regular empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			NOT = { has_global_flag = @NSC_active_flag }
-		}
-		# disallow for fallen empires
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		has_global_flag = @NSC_active_flag
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4397,10 +4300,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4436,10 +4336,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4490,10 +4387,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4540,10 +4434,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4590,10 +4481,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4642,10 +4530,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4694,10 +4579,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4744,10 +4626,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4791,10 +4670,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4838,10 +4714,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4889,10 +4762,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4940,10 +4810,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -4978,10 +4845,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -5013,10 +4877,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
@@ -5058,10 +4919,7 @@ utility_component_template = {
 
 	# disallow for fallen empires
 	valid_for_country = {
-		modifier = {
-			weight = 0
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }

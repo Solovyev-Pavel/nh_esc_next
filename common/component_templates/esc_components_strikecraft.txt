@@ -307,11 +307,9 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_strikecraft_6" }
 	tags = { weapon_type_strike_craft }
 
+	# only normal empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -379,11 +377,9 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_strikecraft_6" }
 	tags = { weapon_type_strike_craft }
 
+	# only normal empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Materialist FE/AFE should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -515,6 +511,11 @@ strike_craft_component_template = {
 	tags = { weapon_type_strike_craft }
 	upgrades_to = ESC_AMOEBA_BIO_4
 
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -582,6 +583,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_4
 	prerequisites = { "esc_tech_amoeba_4b" }
 	tags = { weapon_type_strike_craft }
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -652,6 +658,11 @@ strike_craft_component_template = {
 	tags = { weapon_type_strike_craft }
 	upgrades_to = ESC_AMOEBA_CYBER_4
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -719,6 +730,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_4
 	prerequisites = { "esc_tech_amoeba_4c" }
 	tags = { weapon_type_strike_craft }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -790,12 +806,12 @@ strike_craft_component_template = {
 	tags = { weapon_type_strike_craft }
 	upgrades_to = ESC_MERCENRY_HANGAR_2
 
+	# only megacorps may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_megacorp = no
-		}
+		is_megacorp = yes
 	}
+
+	ai_weight = { weight = 1 }
 }
 
 ############################################################
@@ -853,12 +869,12 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_strikecraft_mercenary_2" }
 	tags = { weapon_type_strike_craft }
 
+	# only megacorps may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_megacorp = no
-		}
+		is_megacorp = yes
 	}
+
+	ai_weight = { weight = 1 }
 }
 
 ############################################################
@@ -915,11 +931,9 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_swarm_strike_craft_2" }
 	tags = { weapon_type_strike_craft }
 
+	# only normal empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {

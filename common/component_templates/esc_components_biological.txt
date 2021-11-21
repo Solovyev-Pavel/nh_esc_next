@@ -66,11 +66,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = SMALL_ESC_BIO_CANNON_2
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -124,11 +122,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_2
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -182,11 +178,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = LARGE_ESC_BIO_CANNON_2
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -244,11 +238,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = SMALL_ESC_BIO_CANNON_3
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -302,11 +294,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_3
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -360,11 +350,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = LARGE_ESC_BIO_CANNON_3
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -422,11 +410,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = SMALL_ESC_BIO_CANNON_4
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -480,11 +466,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_4
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -538,11 +522,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	upgrades_to = LARGE_ESC_BIO_CANNON_4
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -599,11 +581,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -656,11 +636,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -713,11 +691,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -778,11 +754,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -843,11 +817,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -907,11 +879,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -972,11 +942,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_2
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -1037,11 +1005,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -1102,11 +1068,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -1164,11 +1128,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
+	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {

@@ -152,11 +152,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_sensors_psionic" }
 	component_set = "sensor_components"
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = { weight = 2000 }

@@ -84,11 +84,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -144,11 +142,9 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -204,11 +200,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -269,11 +263,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -334,11 +326,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -396,11 +386,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -456,11 +444,9 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -521,11 +507,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -586,11 +570,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -648,11 +630,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -713,11 +693,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -774,11 +752,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -844,11 +820,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {

@@ -63,11 +63,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_2
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -121,11 +119,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_2
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -179,11 +175,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_2
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -241,11 +235,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_3
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -299,11 +291,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_3
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -357,11 +347,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_3
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -419,11 +407,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_4
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -477,11 +463,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_4
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -535,11 +519,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_4
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -597,11 +579,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_5
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -655,11 +635,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_5
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -713,11 +691,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_5
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -774,11 +750,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_anti_shield }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -831,11 +805,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_anti_shield }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -888,11 +860,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_anti_shield }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -953,11 +923,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -1018,11 +986,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -1083,11 +1049,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {
@@ -1145,11 +1109,9 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
 
+	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Xenophile FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_xenophile_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
 	}
 
 	ai_weight = {

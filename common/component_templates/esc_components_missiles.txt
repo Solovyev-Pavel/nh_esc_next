@@ -835,11 +835,9 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
 
+	# only regular empires may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			is_fallen_empire = yes
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {

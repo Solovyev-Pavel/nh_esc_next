@@ -207,6 +207,11 @@ utility_component_template = {
 	component_set = ESC_BIO_ARMOR_1
 	upgrades_to = SMALL_ESC_BIO_ARMOR_2
 
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -246,6 +251,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_bio_armor_1" }
 	component_set = ESC_BIO_ARMOR_1
 	upgrades_to = MEDIUM_ESC_BIO_ARMOR_2
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -287,6 +297,11 @@ utility_component_template = {
 	component_set = ESC_BIO_ARMOR_1
 	upgrades_to = LARGE_ESC_BIO_ARMOR_2
 
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -325,6 +340,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_bio_armor_2" }
 	component_set = ESC_BIO_ARMOR_2
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -365,6 +385,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_bio_armor_2" }
 	component_set = ESC_BIO_ARMOR_2
 
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -403,6 +428,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_bio_armor_2" }
 	component_set = ESC_BIO_ARMOR_2
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -448,6 +478,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_1
 	upgrades_to = SMALL_ESC_NANO_ARMOR_2
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -487,6 +522,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_nanite_1" }
 	component_set = ESC_NANO_ARMOR_1
 	upgrades_to = MEDIUM_ESC_NANO_ARMOR_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -528,6 +568,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_1
 	upgrades_to = LARGE_ESC_NANO_ARMOR_2
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -567,6 +612,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_nanite_2" }
 	component_set = ESC_NANO_ARMOR_2
 	upgrades_to = SMALL_ESC_DRAGON_NANOARMOR
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -608,6 +658,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_2
 	upgrades_to = MEDIUM_ESC_DRAGON_NANOARMOR
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -648,6 +703,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_2
 	upgrades_to = LARGE_ESC_DRAGON_NANOARMOR
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -686,6 +746,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -726,6 +791,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -764,6 +834,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -809,6 +884,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_1
 	upgrades_to = SMALL_ESC_SHIELD_ARMOR_2
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -848,6 +928,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_shield_1" }
 	component_set = ESC_SHIELD_ARMOR_1
 	upgrades_to = MEDIUM_ESC_SHIELD_ARMOR_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -889,6 +974,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_1
 	upgrades_to = LARGE_ESC_SHIELD_ARMOR_2
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -928,6 +1018,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_shield_2" }
 	component_set = ESC_SHIELD_ARMOR_2
 	upgrades_to = SMALL_ESC_SHIELD_ARMOR_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -969,6 +1064,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_2
 	upgrades_to = MEDIUM_ESC_SHIELD_ARMOR_3
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1009,6 +1109,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_2
 	upgrades_to = LARGE_ESC_SHIELD_ARMOR_3
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1047,6 +1152,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1087,6 +1197,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
 
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1125,6 +1240,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1168,14 +1288,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
 
+	# only normal empires (that have defeated spectral wraith) can use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -1216,14 +1331,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
 
+	# only normal empires (that have defeated spectral wraith) can use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -1264,14 +1374,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
 
+	# only normal empires (that have defeated spectral wraith) can use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -1311,14 +1416,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_horror" }
 	component_set = ESC_HORROR_ARMOR
 
+	# only normal empires (that have defeated dimensional horror) can use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -1358,14 +1458,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_horror" }
 	component_set = ESC_HORROR_ARMOR
 
+	# only normal empires (that have defeated dimensional horror) can use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {
@@ -1405,14 +1500,9 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_horror" }
 	component_set = ESC_HORROR_ARMOR
 
+	# only normal empires (that have defeated dimensional horror) can use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires should use this component
-			OR = {
-				is_country_type = fallen_empire
-				is_country_type = awakened_fallen_empire
-			}
-		}
+		is_fallen_empire = no
 	}
 
 	ai_weight = {

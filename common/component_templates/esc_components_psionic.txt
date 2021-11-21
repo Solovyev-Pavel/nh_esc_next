@@ -76,11 +76,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -134,11 +132,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -192,11 +188,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -253,11 +247,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -310,11 +302,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -367,11 +357,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -429,11 +417,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -487,11 +473,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -545,11 +529,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -606,11 +588,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -663,11 +643,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -720,11 +698,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_hull }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -785,11 +761,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -849,11 +823,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -914,11 +886,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -979,11 +949,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1044,11 +1012,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1106,11 +1072,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
@@ -1181,11 +1145,9 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_psionic_interceptors" }
 	tags = { weapon_type_strike_craft }
 
+	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
-		modifier = {
-			factor = 0 # only normal empires and Spiritualist FE/AFE should use this component
-			ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = no
-		}
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
 	ai_weight = {
