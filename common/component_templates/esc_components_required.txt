@@ -337,7 +337,7 @@ utility_component_template = {
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = esc_psionic_charge }
+			no_resource_for_component = { RESOURCE = sr_zro }
 		}
 	}
 
@@ -376,7 +376,7 @@ utility_component_template = {
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = esc_psionic_charge }
+			no_resource_for_component = { RESOURCE = sr_zro }
 		}
 	}
 
