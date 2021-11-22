@@ -474,10 +474,6 @@ esc_tech_armor_dragonscales_nanite = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0
-			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
-		}
-		modifier = {
 			factor = 1.15
 			OR = {
 				has_ethic = ethic_xenophile
@@ -499,10 +495,6 @@ esc_tech_armor_dragonscales_nanite = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 0
-			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
-		}
 		modifier = {
 			factor = 1.15
 			OR = {
