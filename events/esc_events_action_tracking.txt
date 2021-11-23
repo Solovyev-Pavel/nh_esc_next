@@ -12,9 +12,11 @@ country_event = {
 
 	trigger = {
 		FROMFROMFROM = {
-			is_ship_size = space_dragon_red
-			is_ship_size = space_dragon_blue
-			is_ship_size = space_dragon_origin
+			OR = {
+				is_ship_size = space_dragon_red
+				is_ship_size = space_dragon_blue
+				is_ship_size = space_dragon_origin
+			}
 		}
 		ESC_TRIGGER_is_playable_empire = yes
 	}
