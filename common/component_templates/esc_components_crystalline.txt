@@ -913,7 +913,7 @@ weapon_component_template = {
 	tracking = 0.1
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_crystal_lance_1" }
@@ -976,7 +976,7 @@ weapon_component_template = {
 	tracking = 0.1
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_crystal_lance_2" }
@@ -1040,7 +1040,7 @@ weapon_component_template = {
 	tracking = 0.1
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_crystal_lance_titanic" }
@@ -1099,7 +1099,7 @@ weapon_component_template = {
 	tracking = 0.1
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_crystal_lance_titanic" }

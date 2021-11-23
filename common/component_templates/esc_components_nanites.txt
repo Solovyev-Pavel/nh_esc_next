@@ -504,7 +504,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 	firing_arc = 25.0
-	min_range = 15.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	damage = { min = 1250 max = 3200 }
@@ -570,7 +570,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 	firing_arc = 25.0
-	min_range = 15.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	damage = { min = 1450 max = 3500 }
@@ -637,7 +637,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 	firing_arc = 25.0
-	min_range = 15.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	damage = { min = 1450 max = 3500 }
@@ -699,7 +699,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 	firing_arc = 25.0
-	min_range = 15.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	damage = { min = 1450 max = 3500 }

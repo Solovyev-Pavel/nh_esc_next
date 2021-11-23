@@ -253,7 +253,7 @@ weapon_component_template = {
 	tracking = 0.15
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_enigmatic_lance" }
@@ -317,7 +317,7 @@ weapon_component_template = {
 	tracking = 0.15
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_enigmatic_lance_titanic" }
@@ -376,7 +376,7 @@ weapon_component_template = {
 	tracking = 0.15
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_enigmatic_lance_titanic" }
@@ -497,7 +497,7 @@ weapon_component_template = {
 	tracking = 0.3
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_tiyanki_beam" }
@@ -561,7 +561,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
@@ -620,7 +620,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = 10
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
@@ -779,7 +779,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 	firing_arc = 25.0
-	min_range = 15.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	damage = { min = 1200 max = 2400 }
