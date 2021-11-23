@@ -383,11 +383,10 @@ ESC_TRIGGER_may_research_crystalline_weapons = {
 
 # checks whether a machine empire can do special project to research psionics
 ESC_TRIGGER_can_do_machine_psionics_special_project = {
-     OR = {
-        has_valid_civic = civic_machine_servitor
-        has_valid_civic = civic_machine_assimilator
-    }
+    is_machine_empire = yes
     any_owned_pop = {
+        is_being_purged = no
+        is_enslaved = no
         OR = {
             has_trait = trait_psionic
             has_trait = trait_latent_psionic
