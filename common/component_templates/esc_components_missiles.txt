@@ -66,12 +66,12 @@ weapon_component_template = {
 	damage = { min = 110 max = 144 }
 	windup = { min = 1 max = 15 }
 	total_fire_time = 42
-	range = 100
+	range = @ESC_WEAPON_RANGE_G_2
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.45
 	missile_health = 15
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -30
 
 	resources = {
@@ -124,13 +124,13 @@ weapon_component_template = {
 	damage = { min = 138 max = 180 }
 	windup = { min = 1 max = 15 }
 	total_fire_time = 42
-	range = 100
+	range = @ESC_WEAPON_RANGE_G_2
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.5
 	missile_health = 20
 	missile_shield = 0
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -35
 
 	resources = {
@@ -182,12 +182,12 @@ weapon_component_template = {
 	damage = { min = 24 max = 66 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 65
+	range = @ESC_WEAPON_RANGE_S_4
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 16
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -20
 
 	resources = {
@@ -237,12 +237,12 @@ weapon_component_template = {
 	damage = { min = 60 max = 132 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 80
+	range = @ESC_WEAPON_RANGE_M_5
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 18
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -34
 
 	resources = {
@@ -292,12 +292,12 @@ weapon_component_template = {
 	damage = { min = 148 max = 334 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 100
+	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 20
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -64
 
 	resources = {
@@ -351,12 +351,12 @@ weapon_component_template = {
 	damage = { min = 30 max = 84 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 65
+	range = @ESC_WEAPON_RANGE_S_4
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 18
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -24
 
 	resources = {
@@ -406,12 +406,12 @@ weapon_component_template = {
 	damage = { min = 90 max = 214 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 80
+	range = @ESC_WEAPON_RANGE_M_5
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 20
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -46
 
 	resources = {
@@ -461,12 +461,12 @@ weapon_component_template = {
 	damage = { min = 212 max = 438 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 100
+	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 22
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -90
 
 	resources = {
@@ -520,12 +520,12 @@ weapon_component_template = {
 	damage = { min = 42 max = 104 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 65
+	range = @ESC_WEAPON_RANGE_S_4
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 20
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -28
 
 	resources = {
@@ -574,12 +574,12 @@ weapon_component_template = {
 	damage = { min = 118 max = 246 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 80
+	range = @ESC_WEAPON_RANGE_M_5
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 22
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -52
 
 	resources = {
@@ -628,12 +628,12 @@ weapon_component_template = {
 	damage = { min = 256 max = 508 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
-	range = 100
+	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 24
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -100
 
 	resources = {
@@ -685,12 +685,12 @@ weapon_component_template = {
 	damage = { min = 345 max = 565 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 160
-	range = 80
+	range = @ESC_WEAPON_RANGE_G_1
 	accuracy = 1.0
 	missile_speed = 15
 	missile_evasion = 0.1
 	missile_health = 20
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_1
 	power = -38
 
 	resources = {
@@ -743,13 +743,13 @@ weapon_component_template = {
 	damage = { min = 425 max = 705 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 160
-	range = 80
+	range = @ESC_WEAPON_RANGE_G_1
 	accuracy = 1.0
 	missile_speed = 15
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_armor = 0
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_1
 	power = -44
 
 	resources = {
@@ -801,13 +801,13 @@ weapon_component_template = {
 	damage = { min = 500 max = 1000 }
 	windup = { min = 5 max = 20 }
 	total_fire_time = 100
-	range = 120
+	range = @ESC_WEAPON_RANGE_G_3
 	accuracy = 1.0
 	missile_speed = 17
 	missile_evasion = 0.1
 	missile_health = 30
 	missile_shield = 5
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -65
 
 	resources = {
@@ -864,12 +864,12 @@ weapon_component_template = {
 	damage = { min = 48 max = 68 }
 	windup = { min = 1 max = 15 }
 	total_fire_time = 25
-	range = 100
+	range = @ESC_WEAPON_RANGE_G_2
 	accuracy = 1.0
 	missile_speed = 20
 	missile_evasion = 0.15
 	missile_health = 80
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -35
 
 	resources = {
@@ -922,12 +922,12 @@ weapon_component_template = {
 	damage = { min = 65 max = 90 }
 	windup = { min = 1 max = 15 }
 	total_fire_time = 25
-	range = 100
+	range = @ESC_WEAPON_RANGE_G_2
 	accuracy = 1.0
 	missile_speed = 20
 	missile_evasion = 0.15
 	missile_health = 90
-	missile_retarget_range = 120
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -49
 
 	resources = {
@@ -982,12 +982,12 @@ weapon_component_template = {
 	damage = { min = 1400 max = 2800 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 75
-	range = 200
+	range = @ESC_WEAPON_RANGE_X_5
 	accuracy = 1.0
 	missile_speed = 20
 	missile_evasion = 0.1
 	missile_health = 150
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -300
 
 	resources = {
@@ -1043,12 +1043,12 @@ weapon_component_template = {
 	damage = { min = 1600 max = 3100 }
 	windup = { min = 2 max = 20 }
 	total_fire_time = 75
-	range = 200
+	range = @ESC_WEAPON_RANGE_X_5
 	accuracy = 1.0
 	missile_speed = 20
 	missile_evasion = 0.1
 	missile_health = 150
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -325
 
 	resources = {
@@ -1105,12 +1105,12 @@ weapon_component_template = {
 	damage = { min = 1600 max = 3400 }
 	windup = { min = 15 max = 20 }
 	total_fire_time = 60
-	range = 275
+	range = @ESC_WEAPON_RANGE_T_4
 	accuracy = 1.0
 	missile_speed = 20
 	missile_evasion = 0.1
 	missile_health = 250
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -500
 
 	resources = {
@@ -1162,12 +1162,12 @@ weapon_component_template = {
 	damage = { min = 1600 max = 3400 }
 	windup = { min = 15 max = 20 }
 	total_fire_time = 60
-	range = 225
+	range = @ESC_WEAPON_RANGE_J_4
 	accuracy = 1.0
 	missile_speed = 20
 	missile_evasion = 0.1
 	missile_health = 250
-	missile_retarget_range = 100
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -500
 
 	resources = {

@@ -33,7 +33,7 @@ weapon_component_template = {
 	damage = { min = 8 max = 20 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 50
+	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 	power = -7
 
@@ -89,7 +89,7 @@ weapon_component_template = {
 	damage = { min = 20 max = 50 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 70
+	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 	power = -13
 
@@ -145,7 +145,7 @@ weapon_component_template = {
 	damage = { min = 50 max = 120 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 90
+	range = @ESC_WEAPON_RANGE_L_3
 	accuracy = 0.85
 	power = -25
 
@@ -205,7 +205,7 @@ weapon_component_template = {
 	damage = { min = 10 max = 32 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 50
+	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 	power = -11
 
@@ -261,7 +261,7 @@ weapon_component_template = {
 	damage = { min = 27 max = 78 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 70
+	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 	power = -20
 
@@ -317,7 +317,7 @@ weapon_component_template = {
 	damage = { min = 58 max = 190 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 90
+	range = @ESC_WEAPON_RANGE_L_3
 	accuracy = 0.85
 	power = -40
 
@@ -377,7 +377,7 @@ weapon_component_template = {
 	damage = { min = 14 max = 44 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 50
+	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 	power = -17
 
@@ -433,7 +433,7 @@ weapon_component_template = {
 	damage = { min = 42 max = 86 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 70
+	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 	power = -30
 
@@ -489,7 +489,7 @@ weapon_component_template = {
 	damage = { min = 88 max = 220 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 90
+	range = @ESC_WEAPON_RANGE_L_3
 	accuracy = 0.85
 	power = -58
 
@@ -549,7 +549,7 @@ weapon_component_template = {
 	damage = { min = 18 max = 47 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 50
+	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 	power = -20
 
@@ -605,7 +605,7 @@ weapon_component_template = {
 	damage = { min = 52 max = 108 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 70
+	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 	power = -34
 
@@ -661,7 +661,7 @@ weapon_component_template = {
 	damage = { min = 118 max = 238 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 90
+	range = @ESC_WEAPON_RANGE_L_3
 	accuracy = 0.85
 	power = -64
 
@@ -721,7 +721,7 @@ weapon_component_template = {
 	damage = { min = 22 max = 58 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 50
+	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 	power = -24
 
@@ -776,7 +776,7 @@ weapon_component_template = {
 	damage = { min = 72 max = 162 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 70
+	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 	power = -46
 
@@ -831,7 +831,7 @@ weapon_component_template = {
 	damage = { min = 154 max = 326 }
 	windup = { min = 2 max = 17 }
 	total_fire_time = 25
-	range = 90
+	range = @ESC_WEAPON_RANGE_L_3
 	accuracy = 0.85
 	power = -90
 
@@ -889,7 +889,7 @@ weapon_component_template = {
     damage = { min = 1750 max = 3000 }
 	windup = { min = 2 max = 18 }
 	total_fire_time = 80
-	range = 150
+	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 0.85
 	power = -225
 
@@ -952,7 +952,7 @@ weapon_component_template = {
     damage = { min = 2000 max = 3500 }
 	windup = { min = 2 max = 18 }
 	total_fire_time = 80
-	range = 150
+	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 0.85
 	power = -275
 
@@ -1016,7 +1016,7 @@ weapon_component_template = {
     damage = { min = 5000 max = 9000 }
 	windup = { min = 2 max = 18 }
 	total_fire_time = 160
-	range = 250
+	range = @ESC_WEAPON_RANGE_T_3
 	accuracy = 0.85
 	power = -500
 
@@ -1075,7 +1075,7 @@ weapon_component_template = {
     damage = { min = 5000 max = 9500 }
 	windup = { min = 2 max = 18 }
 	total_fire_time = 155
-	range = 200
+	range = @ESC_WEAPON_RANGE_J_3
 	accuracy = 0.85
 	power = -500
 
