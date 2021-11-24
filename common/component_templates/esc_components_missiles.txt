@@ -1013,7 +1013,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_1
 	projectile_gfx = "esc_xmissile1"
 	upgrades_to = ESC_XMISSILE_2
-	tags = { weapon_type_explosive weapon_type_energy }
+	tags = { weapon_type_energy weapon_type_explosive }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
 	ai_weight = {
@@ -1074,7 +1074,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_2
 	projectile_gfx = "esc_xmissile2"
 	upgrades_to = ESC_XMISSILE_3_JUGGERNAUT
-	tags = { weapon_type_explosive weapon_type_energy }
+	tags = { weapon_type_energy weapon_type_explosive }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
 	ai_weight = {
@@ -1193,7 +1193,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_3_JUGGERNAUT
 	projectile_gfx = "esc_xmissile3"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_explosive weapon_type_energy }
+	tags = { weapon_type_energy weapon_type_explosive }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
 	ai_weight = {

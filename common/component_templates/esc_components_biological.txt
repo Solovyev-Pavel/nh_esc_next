@@ -939,7 +939,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_missile_x_1" }
 	component_set = ESC_BIO_X_MISSILE_1
 	projectile_gfx = "esc_bio_missile"
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_2
 
@@ -1003,7 +1003,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_missile_x_2" }
 	component_set = ESC_BIO_X_MISSILE_2
 	projectile_gfx = "esc_bio_missile"
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 
@@ -1129,7 +1129,7 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 	projectile_gfx = "esc_bio_missile"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
 
 	# only regular empires and xenophile FE may use biological components

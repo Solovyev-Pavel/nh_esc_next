@@ -541,7 +541,7 @@ weapon_component_template = {
 	component_set = ESC_NANITE_XSLOT_1
 	projectile_gfx = "esc_nanite_torpedo"
 	upgrades_to = ESC_NANITE_XSLOT_2
-	tags = { weapon_type_explosive weapon_type_nanite }
+	tags = { weapon_type_kinetic weapon_type_nanite } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
 	# only regular empires and machine FE may use this component
@@ -607,7 +607,7 @@ weapon_component_template = {
 	component_set = ESC_NANITE_XSLOT_2
 	projectile_gfx = "esc_nanite_torpedo"
 	upgrades_to = ESC_NANITE_TSLOT_JUGGERNAUT
-	tags = { weapon_type_explosive weapon_type_nanite }
+	tags = { weapon_type_kinetic weapon_type_nanite } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
 	# only regular empires and machine FE may use this component
@@ -736,7 +736,7 @@ weapon_component_template = {
 	component_set = ESC_NANITE_TSLOT_JUGGERNAUT
 	projectile_gfx = "esc_nanite_torpedo"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_explosive weapon_type_nanite }
+	tags = { weapon_type_kinetic weapon_type_nanite } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
 
 	# only regular empires and machine FE may use this component

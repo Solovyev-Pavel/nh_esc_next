@@ -817,7 +817,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_voidspawn_missile_x" }
 	component_set = ESC_VOIDSPAWN_MISSILE_X
 	projectile_gfx = "voidspawn_missile"
-	tags = { weapon_type_explosive }
+	tags = { weapon_type_kinetic weapon_type_explosive }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
 	# only regular empires may use this component
