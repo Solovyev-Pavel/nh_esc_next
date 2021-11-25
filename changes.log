@@ -6,7 +6,7 @@
     - Now it's any that has 'psionic' pops that aren't purged or enslaved.
     - In theory, this will let modded non-Servitor, non-Assimilator machine empires research psionic techs.
 - Reduce rare crystal upkeep costs of crystalline weapons by 50%.
-- Nanite-Augmented Dragonscale Armor no longer requires the empire to have be able to research advanced nanite technologies.
+- Nanite-Augmented Dragonscale Armor no longer requires the empire to be able to research advanced nanite technologies.
 
 >>> 23.11.2021
 - Fix missing OR in triggering conditions of event that registers space dragon kills.
@@ -15,7 +15,10 @@
 - Move strikecraft-related variables into a separate file for easier overwriting.
 - Move weapon ranges into variables for easier overwriting.
 - Move missile speed into variables for easier overwriting.
-- Fix issue with X-slot turrents for biological and nanite weapons.
+- Fix issue with X-slot turrets for explosive, biological and nanite weapons.
 
 >>> 26.11.2021
-- Moved rare resource upkeep from zro distiller jobs to the zro distillery building. Rare resource cost of the zro distillery building has been increased a bit.
+- Moved rare resource upkeep from zro distiller jobs to the zro distillery building. Rare resource cost of the zro distillery building has been increased.
+- Improved Crystal Farm no longer has rare crystals upkeep since that makes no sense anymore.
+- Empires that do not meet requirements for advanced biological/nanite/psionic research are now allowed to research up to 5 levels of repeatables for those weapon types.
+    - For empires that do meet those requirements, the repeatables are uncapped.
