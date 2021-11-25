@@ -33,12 +33,15 @@ esc_building_zro_distillery = {
         category = planet_buildings
         cost = {
 			minerals = 400
-			rare_crystals = 15
-			exotic_gases = 15
-			volatile_motes = 15
+			rare_crystals = 30
+			exotic_gases = 30
+			volatile_motes = 30
         }
         upkeep = {
 			energy = 5
+			rare_crystals = @ESC_job_upkeep_secondary_resource
+			exotic_gases = @ESC_job_upkeep_secondary_resource
+			volatile_motes = @ESC_job_upkeep_secondary_resource
         }
 	}
 

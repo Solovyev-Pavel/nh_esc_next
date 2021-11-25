@@ -748,9 +748,6 @@ esc_zro_distiller = {
 			energy = @ESC_job_upkeep_primary_resource
 			minerals = @ESC_job_upkeep_primary_resource
 			consumer_goods = @ESC_job_upkeep_secondary_resource
-			rare_crystals = @ESC_job_upkeep_tertiary_resource
-			exotic_gases = @ESC_job_upkeep_tertiary_resource
-			volatile_motes = @ESC_job_upkeep_tertiary_resource
 		}
         # planet colony-type upkeep reduction
         upkeep = {
@@ -758,9 +755,6 @@ esc_zro_distiller = {
 			energy = @ESC_job_upkeep_primary_resource_discount
 			minerals = @ESC_job_upkeep_primary_resource_discount
 			consumer_goods = @ESC_job_upkeep_secondary_resource_discount
-			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount
-			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount
-			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount
         }
         # habitat colony-type upkeep reduction
         upkeep = {
@@ -768,9 +762,6 @@ esc_zro_distiller = {
 			energy = @ESC_job_upkeep_primary_resource_discount_hab
 			minerals = @ESC_job_upkeep_primary_resource_discount_hab
 			consumer_goods = @ESC_job_upkeep_secondary_resource_discount_hab
-			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount_hab
-			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount_hab
-			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount_hab
         }
     }
 
@@ -837,12 +828,6 @@ esc_zro_distiller_drone = {
             }
             sr_zro = @ESC_job_secondary_resource_cornucopia_bonus
         }
-        # base upkeep : shared
-        upkeep = {
-			rare_crystals = @ESC_job_upkeep_tertiary_resource
-			exotic_gases = @ESC_job_upkeep_tertiary_resource
-			volatile_motes = @ESC_job_upkeep_tertiary_resource
-        }
 		# base upkeep : non-lithoid biologicals
         upkeep = {
 			trigger = {
@@ -873,13 +858,6 @@ esc_zro_distiller_drone = {
 			minerals = @ESC_job_upkeep_primary_resource
 			energy = @ESC_job_upkeep_single_resource
 		}
-        # planet colony-type upkeep reduction : shared
-        upkeep = {
-            trigger = { planet = { colony_type = col_refinery } }
-			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount
-			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount
-			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount
-        }
         # planet colony-type upkeep reduction : non-lithoid biologicals
         upkeep = {
             trigger = {
@@ -914,13 +892,6 @@ esc_zro_distiller_drone = {
 			}
 			minerals = @ESC_job_upkeep_primary_resource_discount
 			energy = @ESC_job_upkeep_single_resource_discount
-        }
-        # habitat colony-type upkeep reduction : shared
-        upkeep = {
-            trigger = { planet = { colony_type = col_habitat_refinery } }
-			rare_crystals = @ESC_job_upkeep_tertiary_resource_discount_hab
-			exotic_gases = @ESC_job_upkeep_tertiary_resource_discount_hab
-			volatile_motes = @ESC_job_upkeep_tertiary_resource_discount_hab
         }
         # habitat colony-type upkeep reduction : non-lithoid biologicals
         upkeep = {
