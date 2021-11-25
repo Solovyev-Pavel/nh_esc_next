@@ -49,6 +49,12 @@ on_yearly_pulse_country = {
 on_tech_increased = {
 	events = {
 		esc_action_tracking.5000			# technology reverse engineering
+		esc_action_tracking.6001			# limited repeatables tracking : biological damage
+		esc_action_tracking.6002			# limited repeatables tracking : biological fire rate
+		esc_action_tracking.6003			# limited repeatables tracking : nanite damage
+		esc_action_tracking.6004			# limited repeatables tracking : nanite fire rate
+		esc_action_tracking.6005			# limited repeatables tracking : psionic damage
+		esc_action_tracking.6006			# limited repeatables tracking : psionic fire rate
 		esc_special_projects.3000			# check prerequisites for nanite thought matrix
 		esc_events_crisis.1000				# crisis pre-condition check
 	}

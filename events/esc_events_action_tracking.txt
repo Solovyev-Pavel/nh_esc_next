@@ -104,6 +104,7 @@ country_event = {
 ###              Technology Related Events               ###
 ############################################################
 
+# reverse engineering propogation to lower-tier techs
 country_event = {
 	id = esc_action_tracking.5000
 	is_triggered_only = yes
@@ -111,5 +112,179 @@ country_event = {
 
 	immediate = {
 		ESC_EFFECT_reverse_engineer_techs = yes
+	}
+}
+
+# biological repeatable : damage
+country_event = {
+	id = esc_action_tracking.6001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = esc_tech_repeatable_bio_damage
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_bio_damage_repeatables }
+			}
+			set_variable = {
+				which = ESC_COUNTRY_VARIABLE_bio_damage_repeatables
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ESC_COUNTRY_VARIABLE_bio_damage_repeatables
+				value = 1
+			}
+		}
+	}
+}
+
+# biological repeatable : fire rate
+country_event = {
+	id = esc_action_tracking.6002
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = esc_tech_repeatable_bio_fire_rate
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables }
+			}
+			set_variable = {
+				which = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables
+				value = 1
+			}
+		}
+	}
+}
+
+# nanite repeatable : damage
+country_event = {
+	id = esc_action_tracking.6003
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = esc_tech_repeatable_nanite_damage
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables }
+			}
+			set_variable = {
+				which = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables
+				value = 1
+			}
+		}
+	}
+}
+
+# nanite repeatable : fire rate
+country_event = {
+	id = esc_action_tracking.6004
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = esc_tech_repeatable_nanite_fire_rate
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables }
+			}
+			set_variable = {
+				which = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables
+				value = 1
+			}
+		}
+	}
+}
+
+# psionic repeatable : damage
+country_event = {
+	id = esc_action_tracking.6005
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = esc_tech_repeatable_psionic_damage
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables }
+			}
+			set_variable = {
+				which = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables
+				value = 1
+			}
+		}
+	}
+}
+
+# psionic repeatable : fire rate
+country_event = {
+	id = esc_action_tracking.6006
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		last_increased_tech = esc_tech_repeatable_psionic_fire_rate
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables }
+			}
+			set_variable = {
+				which = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables
+				value = 1
+			}
+		}
+		else = {
+			change_variable = {
+				which = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables
+				value = 1
+			}
+		}
 	}
 }

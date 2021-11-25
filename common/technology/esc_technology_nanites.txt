@@ -701,7 +701,23 @@ esc_tech_repeatable_nanite_damage = {
 		}
 		modifier = {
 			factor = 0
-			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+			ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = no
+		}
+	}
+
+	ai_weight = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_nanite_cannon_1
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_bomber
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = no
 		}
 	}
 }
@@ -740,7 +756,23 @@ esc_tech_repeatable_nanite_fire_rate = {
 		}
 		modifier = {
 			factor = 0
-			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+			ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = no
+		}
+	}
+
+	ai_weight = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_nanite_cannon_1
+				has_technology = esc_tech_nanite_torpedo_1
+				has_technology = esc_tech_nanite_bomber
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = no
 		}
 	}
 }

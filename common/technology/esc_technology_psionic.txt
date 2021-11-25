@@ -874,7 +874,23 @@ esc_tech_repeatable_psionic_damage = {
 		}
 		modifier = {
 			factor = 0
-			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+			ESC_TRIGGER_may_research_psionic_weapon_damage_repeatable = no
+		}
+	}
+
+	ai_weight = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_psionic_cannon_1
+				has_technology = esc_tech_psionic_torpedo_1
+				has_technology = esc_tech_psionic_interceptors
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapon_damage_repeatable = no
 		}
 	}
 }
@@ -913,7 +929,23 @@ esc_tech_repeatable_psionic_fire_rate = {
 		}
 		modifier = {
 			factor = 0
-			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
+			ESC_TRIGGER_may_research_psionic_weapon_fire_rate_repeatable = no
+		}
+	}
+
+	ai_weight = {
+		factor = @repatableTechFactor
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_psionic_cannon_1
+				has_technology = esc_tech_psionic_torpedo_1
+				has_technology = esc_tech_psionic_interceptors
+			}
+		}
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_psionic_weapon_fire_rate_repeatable = no
 		}
 	}
 }
