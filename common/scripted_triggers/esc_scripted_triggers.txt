@@ -347,18 +347,25 @@ ESC_TRIGGER_may_research_bioaugmented_amoeba = {
     }
 }
 
+@MRE_bio_machine_mastery    = "xvcv_mdlc_ap_genetics_mastery"
+@MRA_bio_robot_ap           = "xvcv_mdlc_ap_bio_robot"
+
 # checks whether an empire may reverse-engineer psionic weapons
 ESC_TRIGGER_may_reverse_engineer_biological_weapons = {
     OR = {
         is_machine_empire = no
         has_valid_civic = civic_machine_assimilator
         has_valid_civic = civic_machine_servitor
+        has_ascension_perk = @MRE_bio_machine_mastery
+        has_ascension_perk = @MRA_bio_robot_ap
     }
 }
 
 # checks whether an empire may research advanced biological weapons : requires biologically-ascended empire
 ESC_TRIGGER_may_research_biological_weapons_advanced = {
     OR = {
+        has_ascension_perk = @MRE_bio_machine_mastery
+        has_ascension_perk = @MRA_bio_robot_ap
         AND = {
             NOT = { host_has_dlc = "Utopia" }
             is_machine_empire = no
@@ -404,6 +411,7 @@ ESC_TRIGGER_may_research_crystalline_weapons = {
 }
 
 @FQ_Ompnipresence       = "ap_omnipresence"
+@MRE_psi_machine_ap     = "xvcv_mdlc_ap_abyss"
 
 # checks whether a machine empire can do special project to research psionics
 ESC_TRIGGER_can_do_machine_psionics_special_project = {
@@ -433,6 +441,7 @@ ESC_TRIGGER_may_research_psionic_weapons_basic = {
         has_technology = tech_psionic_theory
         is_hive_empire = yes # hive minds are canonically psionic
         has_country_flag = ESC_COUNTRY_FLAG_machine_psionics
+        has_ascension_perk = @MRE_psi_machine_ap
     }
 }
 
@@ -440,6 +449,7 @@ ESC_TRIGGER_may_research_psionic_weapons_basic = {
 ESC_TRIGGER_may_research_psionic_weapons_advanced = {
     OR = {
         has_ascension_perk = @FQ_Ompnipresence
+        has_ascension_perk = @MRE_psi_machine_ap
         AND = {
             NOT = { host_has_dlc = "Utopia" }
             is_gestalt = no
