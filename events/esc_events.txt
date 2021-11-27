@@ -84,6 +84,42 @@ planet_event = {
 	}
 }
 
+### spawn a hatchling
+planet_event = {
+	id = esc_events.2002
+	is_triggered_only = yes
+	picture = GFX_evt_here_be_dragons
+	location = root
+	show_sound = event_mystic_reveal
+
+	title = esc_events.2002.title
+	desc = esc_events.2002.desc
+
+	immediate = {
+		create_fleet = {
+			name = "NAME_Sky_Dragon_Baby"
+			settings = {
+				can_upgrade = no
+				spawn_debris = no
+			}
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					design = "NAME_Sky_Dragon_Baby"
+					name = "NAME_Sky_Dragon_Baby"
+					prefix = no
+					upgradable = no
+				}
+				set_location = root
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
 ## ##################################################### ##
 ##            Mantle Mining Facility Resources           ##
 ## ##################################################### ##

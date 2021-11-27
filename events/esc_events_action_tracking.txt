@@ -23,6 +23,16 @@ country_event = {
 
 	immediate = {
 		set_country_flag = ESC_COUNTRY_FLAG_killed_ether_drake
+
+		if = {
+			limit = {
+				OR = {
+					FROMFROMFROM = { is_ship_size = space_dragon_origin }
+					has_origin = origin_here_be_dragons
+				}
+			}
+			set_country_flag = ESC_COUNTRY_FLAG_can_clone_sky_dragon
+		}
 	}
 }
 

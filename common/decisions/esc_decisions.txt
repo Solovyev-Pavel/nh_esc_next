@@ -68,11 +68,54 @@ decision_esc_clone_dragon = {
 
 	allow = {
 		exists = owner
-		owner = { NOT = { has_country_flag = ESC_COUNTY_FLAG_drake_clone_requested } }
+		owner = { NOT = { has_country_flag = ESC_COUNTRY_FLAG_drake_clone_requested } }
 	}
 
 	effect = {
-		owner = { set_timed_country_flag = { flag = ESC_COUNTY_FLAG_drake_clone_requested days = 360 } }
+		owner = { set_timed_country_flag = { flag = ESC_COUNTRY_FLAG_drake_clone_requested days = 360 } }
 		planet_event = { id = esc_events.2000 days = 360 }
+	}
+}
+
+decision_esc_clone_sky_dragon = {
+	owned_planets_only = yes
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 3000
+			exotic_gases = 5
+		}
+		cost = {
+			trigger = { owner = { country_uses_food = yes } }
+			food = 6000
+		}
+		cost = {
+			trigger = { owner = { country_uses_food = no } }
+			minerals = 6000
+		}
+		cost = {
+			trigger = { owner = { is_ai = no } }
+			exotic_gases = 20
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = esc_tech_dragon_hatchery
+			has_country_flag = ESC_COUNTRY_FLAG_can_clone_sky_dragon
+		}
+		has_active_building = esc_building_dragon_hatchery
+	}
+
+	allow = {
+		exists = owner
+		owner = { NOT = { has_country_flag = ESC_COUNTRY_FLAG_drake_clone_requested } }
+	}
+
+	effect = {
+		owner = { set_timed_country_flag = { flag = ESC_COUNTRY_FLAG_drake_clone_requested days = 360 } }
+		planet_event = { id = esc_events.2002 days = 360 }
 	}
 }

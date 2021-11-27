@@ -44,6 +44,9 @@ decision_esc_mod_menu_desc: "$edict_esc_mod_control_edict_desc$"
 decision_esc_clone_dragon: "Clone Ether Drake Hatchling"
 decision_esc_clone_dragon_desc: "Our scientific staff will attempt to clone the Ether Drake in order to produce a younger and more malleable drake under our control."
 
+decision_esc_clone_sky_dragon: "Clone Sky Dragon Hatchling"
+decision_esc_clone_sky_dragon_desc: "Our scientific staff will attempt to clone the Sky Dragon in order to produce a young drake that will serve us."
+
 ############################################################
 ###                       Modifiers                      ###
 ############################################################
@@ -146,6 +149,9 @@ esc_special_projects.3004.desc: "Our researchers have successfully developed the
 esc_events.2000.title: "Ether Drake Takes Flight!"
 esc_events.2000.desc: "Our efforts to clone an Ether Drake were successful and a young hatchling was produced. The creature is reasonably docile when in presence of our scientific staff and, according to them, can be guided to lend its already-considerable power to our cause."
 
+esc_events.2002.title: "Sky Dragon Takes Flight!"
+esc_events.2002.desc: "Our efforts to clone a Sky Dragon were successful and a young hatchling was produced. The creature is reasonably docile when in presence of our scientific staff and, according to them, can be guided to lend its already-considerable power to our cause."
+
 esc_events.3001.name: "Mineral Riches"
 esc_events.3001.desc: "Miners on §Y[Root.GetName]§! report that an exceptionally valuable cluster of £minerals£ §Y$minerals$§! had been extracted from the planet's mantle."
 
@@ -209,7 +215,7 @@ esc_ai_dark_matter_boost_desc: "Monthly £sr_dark_matter£ §Y$sr_dark_matter$§
 ###                         Flags                        ###
 ############################################################
 
-ESC_COUNTY_FLAG_drake_clone_requested: "Ether Drake Hatchling Cloning in Progress"
+ESC_COUNTRY_FLAG_drake_clone_requested: "Ether Drake Hatchling Cloning in Progress"
 
 ############################################################
 ###                    Dummy ship sizes                  ###
