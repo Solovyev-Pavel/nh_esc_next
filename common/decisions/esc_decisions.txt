@@ -43,20 +43,21 @@ decision_esc_clone_dragon = {
 	resources = {
 		category = decisions
 		cost = {
-			energy = 3000
-			exotic_gases = 5
+			rare_crystals = 50
+			exotic_gases = 50
 		}
 		cost = {
 			trigger = { owner = { country_uses_food = yes } }
-			food = 6000
+			food = 3000
 		}
 		cost = {
 			trigger = { owner = { country_uses_food = no } }
-			minerals = 6000
+			minerals = 3000
 		}
 		cost = {
 			trigger = { owner = { is_ai = no } }
-			exotic_gases = 20
+			rare_crystals = 450
+			exotic_gases = 450
 		}
 	}
 
@@ -83,20 +84,21 @@ decision_esc_clone_sky_dragon = {
 	resources = {
 		category = decisions
 		cost = {
-			energy = 3000
-			exotic_gases = 5
+			rare_crystals = 50
+			exotic_gases = 50
 		}
 		cost = {
 			trigger = { owner = { country_uses_food = yes } }
-			food = 6000
+			food = 3000
 		}
 		cost = {
 			trigger = { owner = { country_uses_food = no } }
-			minerals = 6000
+			minerals = 3000
 		}
 		cost = {
 			trigger = { owner = { is_ai = no } }
-			exotic_gases = 20
+			rare_crystals = 450
+			exotic_gases = 450
 		}
 	}
 
