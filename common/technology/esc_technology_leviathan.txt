@@ -570,7 +570,10 @@ esc_tech_extradimensional_pd = {
 	weight_modifier = {
 		modifier = {
 			factor = 0
-			NOT = { has_country_flag = horror_killed }
+			NOR = {
+				has_country_flag = horror_killed
+				has_country_flag = ESC_COUNTRY_FLAG_killed_dimensional_horror
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -589,7 +592,10 @@ esc_tech_extradimensional_pd = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 0
-			NOT = { has_country_flag = horror_killed }
+			NOR = {
+				has_country_flag = horror_killed
+				has_country_flag = ESC_COUNTRY_FLAG_killed_dimensional_horror
+			}
 		}
 		modifier = {
 			factor = 1.25

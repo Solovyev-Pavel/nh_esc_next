@@ -38,7 +38,7 @@ country_event = {
 
 ### stellarite devourer killing
 country_event = {
-	id = esc_action_tracking.2000
+	id = esc_action_tracking.1100
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -54,7 +54,7 @@ country_event = {
 
 ### automated dreadnought killing
 country_event = {
-	id = esc_action_tracking.3000
+	id = esc_action_tracking.1200
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -80,9 +80,27 @@ country_event = {
 	}
 }
 
+### elder one killed
+country_event = {
+	id = esc_action_tracking.1300
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FROMFROMFROM = {
+			is_ship_size = dimensional_horror
+			owner = { has_country_flag = eldritch_horror_country }
+		}
+	}
+
+	immediate = {
+		set_country_flag = ESC_COUNTRY_FLAG_killed_dimensional_horror
+	}
+}
+
 ### gray goo fleet killing
 country_event = {
-	id = esc_action_tracking.4000
+	id = esc_action_tracking.2000
 	is_triggered_only = yes
 	hide_window = yes
 

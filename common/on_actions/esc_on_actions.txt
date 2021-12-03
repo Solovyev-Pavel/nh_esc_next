@@ -63,14 +63,15 @@ on_tech_increased = {
 on_ship_destroyed_perp = {
 	events = {
 		esc_action_tracking.1000 			# set a country flag on killing ether drake
-		esc_action_tracking.2000 			# set a country flag on killing stellarite
-		esc_action_tracking.3000			# give automated dreadnought computer tech option to its killer
+		esc_action_tracking.1100 			# set a country flag on killing stellarite
+		esc_action_tracking.1200			# give automated dreadnought computer tech option to its killer
+		esc_action_tracking.1300			# set a country flag on killing the Elder One
 	}
 }
 
 on_fleet_destroyed_perp = {
 	events = {
-		esc_action_tracking.4000 			# special project to 'reverse-engineer' nanite thought matrix combat computer
+		esc_action_tracking.2000 			# special project to 'reverse-engineer' nanite thought matrix combat computer
 	}
 }
 
