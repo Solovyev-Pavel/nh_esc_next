@@ -300,6 +300,32 @@ ESC_TRIGGER_environment_ordinance_waivers = {
 }
 
 ############################################################
+###                Economic Plan Triggers                ###
+############################################################
+
+# checks whether an empire needs extra food production for ship components
+ESC_TRIGGER_needs_food_for_ship_components = {
+    OR = {
+        has_technology = esc_tech_biological_weapons
+        has_technology = esc_tech_amoeba_2
+        has_technology = esc_tech_voidspawn_missile
+        has_technology = esc_tech_swarm_missile
+        has_technology = esc_tech_swarm_strike_craft_1
+    }
+}
+
+# checks whether an empire needs extra dark matter production for ship components
+ESC_TRIGGER_needs_dark_matter_for_ship_components = {
+    OR = {
+        has_technology = esc_tech_gravity_weapons
+        has_technology = esc_tech_enigmatic_energy_harvesting
+        has_technology = esc_tech_chrono_spatial_weapons
+        has_technology = esc_tech_dark_matter_power_core_2
+        has_technology = esc_tech_dark_matter_shields_2
+    }
+}
+
+############################################################
 ###                Technology Potentials                 ###
 ############################################################
 
