@@ -45,3 +45,17 @@
 - Update economic plans for AI. ESC economic plan no longer overwrites vanilla but complements it instead.
 - Give repair drones component a boost to bring it more in-line with vanilla's new regenerative tissue.
 - Integrate Chinese localisation by FlantingCort.
+
+>>> 06.03.2022
+- Add additional country flags that other mods can set in order to give player access to special component types:
+    - ESC_COUNTRY_FLAG_mod_allow_cybernetic_amoeba
+    - ESC_COUNTRY_FLAG_mod_allow_bioaugmented_amoeba
+    - ESC_COUNTRY_FLAG_mod_allow_reverse_engineer_biological_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_basic_biological_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_advanced_biological_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_crystalline_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_reverse_engineer_psionic_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_basic_psionic_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_advanced_psionic_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_advanced_nanite_weapons
+    - ESC_COUNTRY_FLAG_mod_allow_tesla_weapons

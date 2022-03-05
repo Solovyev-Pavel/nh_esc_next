@@ -1113,7 +1113,7 @@ esc_tech_biological_weapons = {
 	tier = 3
 	cost = @tier3cost2
 	weight = @tier3weight3
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_gene_tailoring" }
+	prerequisites = { "esc_tech_grand_research_initiative" }
 	is_rare = yes # purely for cosmetic reasons
 	gateway = ESC_BIOLOGICAL_WEAPONS
 
@@ -1129,6 +1129,10 @@ esc_tech_biological_weapons = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_biological_weapons_basic = no
+		}
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -1171,6 +1175,10 @@ esc_tech_biological_weapons = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_biological_weapons_basic = no
+		}
 		modifier = {
 			factor = 1.5
 			OR = {

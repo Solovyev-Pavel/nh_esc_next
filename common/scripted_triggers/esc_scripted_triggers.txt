@@ -341,6 +341,7 @@ ESC_TRIGGER_may_research_oversized_weapons = {
 # checks whether an empire may research tesla weapons : requires machine or synthetically-ascended empire
 ESC_TRIGGER_may_research_tesla_weapons = {
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_tesla_weapons
         is_machine_empire = yes
         NOT = { host_has_dlc = "Utopia" }
         AND = {
@@ -353,6 +354,7 @@ ESC_TRIGGER_may_research_tesla_weapons = {
 # checks whether an empire may research cybernetically-augmented amoeba : requires machine or cybernetic empire
 ESC_TRIGGER_may_research_cybernetic_amoeba = {
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_cybernetic_amoeba
         is_machine_empire = yes
         NOT = { host_has_dlc = "Utopia" }
         AND = {
@@ -365,6 +367,7 @@ ESC_TRIGGER_may_research_cybernetic_amoeba = {
 # checks whether an empire may research biologically-augmented amoeba : requires biologically-ascended empire
 ESC_TRIGGER_may_research_bioaugmented_amoeba = {
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_bioaugmented_amoeba
         NOT = { host_has_dlc = "Utopia" }
         AND = {
             host_has_dlc = "Utopia"
@@ -384,12 +387,22 @@ ESC_TRIGGER_may_reverse_engineer_biological_weapons = {
         has_valid_civic = civic_machine_servitor
         has_ascension_perk = @MRE_bio_machine_mastery
         has_ascension_perk = @MRA_bio_robot_ap
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_reverse_engineer_biological_weapons
+    }
+}
+
+# checks whether an empire may research advanced biological weapons : requires techs
+ESC_TRIGGER_may_research_biological_weapons_basic = {
+    OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_basic_biological_weapons
+        has_technology = tech_gene_tailoring
     }
 }
 
 # checks whether an empire may research advanced biological weapons : requires biologically-ascended empire
 ESC_TRIGGER_may_research_biological_weapons_advanced = {
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_advanced_biological_weapons
         has_ascension_perk = @MRE_bio_machine_mastery
         has_ascension_perk = @MRA_bio_robot_ap
         AND = {
@@ -430,6 +443,7 @@ ESC_TRIGGER_may_research_bio_weapon_fire_rate_repeatable = {
 # checks whether an empire may research crystalline weapons : requires knowledge of crystalline lifeforms
 ESC_TRIGGER_may_research_crystalline_weapons = {
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_crystalline_weapons
         has_country_flag = crystals_encountered
 		has_country_flag = discovered_lihtoids_arc_site
 		is_lithoid_empire = yes
@@ -458,6 +472,7 @@ ESC_TRIGGER_may_reverse_engineer_psionic_weapons = {
         is_machine_empire = no
         has_valid_civic = civic_machine_assimilator
         has_valid_civic = civic_machine_servitor
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_reverse_engineer_psionic_weapons
     }
 }
 
@@ -468,12 +483,14 @@ ESC_TRIGGER_may_research_psionic_weapons_basic = {
         is_hive_empire = yes # hive minds are canonically psionic
         has_country_flag = ESC_COUNTRY_FLAG_machine_psionics
         has_ascension_perk = @MRE_psi_machine_ap
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_basic_psionic_weapons
     }
 }
 
 # checks whether an empire may research advanced psionic weapons : must be psionically ascended
 ESC_TRIGGER_may_research_psionic_weapons_advanced = {
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_advanced_psionic_weapons
         has_ascension_perk = @FQ_Ompnipresence
         has_ascension_perk = @MRE_psi_machine_ap
         AND = {
@@ -515,6 +532,7 @@ ESC_TRIGGER_may_research_psionic_weapon_fire_rate_repeatable = {
 ESC_TRIGGER_may_research_nanite_weapons_advanced = {
     # NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_technology_fobidden }
     OR = {
+        has_country_flag = ESC_COUNTRY_FLAG_mod_allow_advanced_nanite_weapons
         is_machine_empire = yes
         NOT = { host_has_dlc = "Utopia" }
         AND = {
