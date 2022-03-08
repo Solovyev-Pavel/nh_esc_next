@@ -24,6 +24,7 @@
 ### mod planet classes : molten habitats
 @PD_MoltenHabitat       = "pc_pd_molten_hab"
 @AM_MoltenHabitable     = "pc_molten_habitable"
+@RSPS_MoltenStation     = "pc_molten_station"
 ### mod planet (subclass) modifiers
 @RSNF_VolcanicWorld     = "volcanic_world"
 @RSNF_LavaWorld         = "lava_world"
@@ -71,6 +72,7 @@ ESC_TRIGGER_is_naked_mantle_planet = {
         is_planet_class = @PD_Crucible # Planet Diversity crucible world
         is_planet_class = @PD_CrucibleShroud # Planet Diversity crucible world
         is_planet_class = @PD_CrucibleClean # Planet Diversity crucible world
+        is_planet_class = @RSPS_MoltenStation # Planetary Stations : molten station
         has_modifier = @RSNF_VolcanicWorld # New Frontiers volcanic tomb world
         has_modifier = @RSNF_LavaWorld # New Frontiers planet
         has_modifier = @RSNF_InfernalWorld # New Frontiers hollow world subclass
