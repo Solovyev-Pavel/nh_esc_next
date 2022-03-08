@@ -2,40 +2,265 @@
 # ##                 ESC : AI Economic Plans                ##
 # ############################################################
 
+@rare_resource_target = 4
+@energy_target = 25
+@minerals_target = 30
+@alloy_target = 10
+@machine_empire_alloy_target = 15
+@pops_target = 9000
+@food_target = 10
+@food_target_extra = 20
+@food_target_esc = 50
+@consumer_goods_target = 10
+@research_target = 70
+@scaling_research_target = 25
+@scaling_consumer_goods_target = 1
+@esc_rare_crystals_target = 15
+@esc_rare_resources_target = 10
+
+### ESC modifier economic plan
 esc_economy_plan = {
+	# universal production targets
 	income = {
-		energy = 1 # apparently, economic plan needs a non-conditional goal (or we get a warning)
+		energy = @energy_target
+		minerals = @minerals_target
 	}
 
+	# food production
 	subplan = {
+		set_name = "base food"
+		potential = { country_uses_food = yes }
+
+		income = {
+			food = @food_target
+		}
+	}
+	subplan = {
+		set_name = "extended food"
+		potential = {
+			has_monthly_income = { resource = physics_research value > @research_target }
+			has_monthly_income = { resource = society_research value > @research_target }
+			has_monthly_income = { resource = engineering_research value > @research_target }
+			country_uses_food = yes
+		}
+
+		income = {
+			food = @food_target_extra
+		}
+	}
+	optional_subplan = {
 		set_name = "ESC food production"
 		potential = { ESC_TRIGGER_needs_food_for_ship_components = yes }
-		income = { food = 50 }
+		income = { food = @food_target_esc }
 	}
 
+	# science production
 	subplan = {
+		set_name = "base science organics"
+		potential = {
+			country_uses_consumer_goods = yes
+			has_monthly_income = { resource = consumer_goods value > @consumer_goods_target }
+		}
+		income = {
+			physics_research = @research_target
+			society_research = @research_target
+			engineering_research = @research_target
+		}
+	}
+	subplan = {
+		set_name = "base science hivemind"
+		potential = {
+			is_hive_empire = yes
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+		income = {
+			physics_research = @research_target
+			society_research = @research_target
+			engineering_research = @research_target
+		}
+	}
+	subplan = {
+		set_name = "base science machine empire"
+		potential = {
+			is_machine_empire = yes
+			has_monthly_income = { resource = energy value > @energy_target }
+		}
+		income = {
+			physics_research = @research_target
+			society_research = @research_target
+			engineering_research = @research_target
+		}
+	}
+
+	# consumer goods production
+	subplan = {
+		set_name = "base consumer goods"
+		potential = {
+			country_uses_consumer_goods = yes
+			has_monthly_income = { resource = minerals value > @minerals_target }
+			has_monthly_income = { resource = energy value > @energy_target }
+			if = {
+				limit = {
+					country_uses_food = yes
+				}
+				has_monthly_income = { resource = food value > @food_target }
+			}
+		}
+		income = {
+			consumer_goods = @consumer_goods_target
+		}
+	}
+
+	# alloys :: base :: machine empire
+	subplan = {
+		set_name = "machine empire base alloys"
+		potential = {
+			is_machine_empire = yes
+		}
+
+		income = {
+			alloys = @machine_empire_alloy_target
+		}
+	}
+
+	# population
+	subplan = {
+		set_name = "base pops"
+		potential = {
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+			has_monthly_income = { resource = physics_research value > @research_target }
+			has_monthly_income = { resource = society_research value > @research_target }
+			has_monthly_income = { resource = engineering_research value > @research_target }
+		}
+		pops = @pops_target
+	}
+
+	#### SCALING SUBPLANS HERE ####
+	# Values in the scaling subplans are added to the base plan each time the AI reaches the target
+	# If base alloys = 10 and the AI reaches +12 per month, and it says alloys = 20 in the scaling subplan, the next target becomes alloys = 30
+	# All scaling subplans are cumulative
+
+	scaling_subplan = {
+		set_name = "general scaling"
+		potential = {
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+
+		income = {
+			alloys = 10
+			minerals = 10
+			energy = 10
+			physics_research = @scaling_research_target
+			society_research = @scaling_research_target
+			engineering_research = @scaling_research_target
+			unity = 10
+		}
+	}
+
+	scaling_subplan = {
+		set_name = "general CG scaling"
+		potential = {
+			country_uses_consumer_goods = yes
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+		income = {
+			consumer_goods = @scaling_consumer_goods_target
+		}
+	}
+
+	#### MILITARIST EXTRA ALLOYS ####
+	scaling_subplan = {
+		set_name = "Militarist alloys"
+		potential = {
+			OR = {
+				is_militarist = yes
+				is_homicidal = yes
+			}
+
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+
+		income = {
+			alloys = 15
+		}
+	}
+
+	#### MATERIALIST SCIENCE ####
+	scaling_subplan = {
+		set_name = "Materialist science"
+		potential = {
+			is_materialist = yes
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+
+		income = {
+			physics_research = 15
+			society_research = 15
+			engineering_research = 15
+		}
+	}
+
+	#### SPIRITUALIST UNITY ####
+	scaling_subplan = {
+		set_name = "Spiritualist unity"
+		potential = {
+			is_spiritualist = yes
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+		}
+
+		income = {
+			unity = 15
+		}
+	}
+
+	# Optional subplans don't need to be fulfilled for the other scaling subplans to become active
+	optional_subplan = {
+		set_name = "Rare resources"
+		potential = {
+			always = yes
+		}
+
+		income = {
+			exotic_gases = @rare_resource_target
+			volatile_motes = @rare_resource_target
+			rare_crystals = @rare_resource_target
+		}
+	}
+
+	# rare crystals production by empires that can build crystalline weapons
+	optional_subplan = {
 		set_name = "ESC crystals production"
 		potential = { has_technology = esc_tech_crystal_cannon_1 }
-		income = { rare_crystals = 15 }
+		income = { rare_crystals = @esc_rare_crystals_target }
 	}
 
-	subplan = {
+	# zro production by empires that can build psionic weapons
+	optional_subplan = {
 		set_name = "ESC zro production"
 		potential = { has_technology = esc_tech_psionic_weapons }
-		income = { sr_zro = 10 }
+		income = { sr_zro = @esc_rare_resources_target }
 	}
 
-	subplan = {
+	# dark matter production by empires that can build special weapons that use dark matter
+	optional_subplan = {
 		set_name = "ESC dark matter production"
 		potential = { ESC_TRIGGER_needs_dark_matter_for_ship_components = yes }
-		income = { sr_dark_matter = 10 }
+		income = { sr_dark_matter = @esc_rare_resources_target }
 	}
 
-	subplan = {
+	# nanite production by empires that can build nanite weapons
+	optional_subplan = {
 		set_name = "ESC nanites production"
 		potential = { has_technology = esc_tech_synthetic_lifeform_studies }
-		income = { nanites = 10 }
+		income = { nanites = @esc_rare_resources_target }
 	}
 
+	empire_size = 1.1 #admin cap is fine with being 10% over limit
 	ai_weight = { weight = 10 }
 }
