@@ -331,6 +331,8 @@ ESC_TRIGGER_needs_dark_matter_for_ship_components = {
 ###                Technology Potentials                 ###
 ############################################################
 
+@ACoT_defines_flag = "acot_defines_activated"
+
 # checks whether Titanic / oversized X-slot weapons can be researched
 ESC_TRIGGER_may_research_oversized_weapons = {
     OR = {
@@ -421,24 +423,34 @@ ESC_TRIGGER_may_research_biological_weapons_advanced = {
 # checks whether an empire may research biological repeatables for damage
 ESC_TRIGGER_may_research_bio_weapon_damage_repeatable = {
     OR = {
-        NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_bio_damage_repeatables }
-        check_variable = {
-            which = ESC_COUNTRY_VARIABLE_bio_damage_repeatables
-            value < 5
+        check_variable = { which = ESC_COUNTRY_VARIABLE_bio_damage_repeatables value < 5 }
+        AND = {
+            ESC_TRIGGER_may_research_biological_weapons_advanced = yes
+            OR = {
+                NOT = { has_global_flag = @ACoT_defines_flag }
+                AND = {
+                    has_global_flag = @ACoT_defines_flag
+                    check_variable = { which = ESC_COUNTRY_VARIABLE_bio_damage_repeatables value < 20 }
+                }
+            }
         }
-        ESC_TRIGGER_may_research_biological_weapons_advanced = yes
     }
 }
 
 # checks whether an empire may research biological repeatables for damage
 ESC_TRIGGER_may_research_bio_weapon_fire_rate_repeatable = {
     OR = {
-        NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables }
-        check_variable = {
-            which = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables
-            value < 5
+        check_variable = { which = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables value < 5 }
+        AND = {
+            ESC_TRIGGER_may_research_biological_weapons_advanced = yes
+            OR = {
+                NOT = { has_global_flag = @ACoT_defines_flag }
+                AND = {
+                    has_global_flag = @ACoT_defines_flag
+                    check_variable = { which = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables value < 20 }
+                }
+            }
         }
-        ESC_TRIGGER_may_research_biological_weapons_advanced = yes
     }
 }
 
@@ -509,24 +521,34 @@ ESC_TRIGGER_may_research_psionic_weapons_advanced = {
 # checks whether an empire may research psionic repeatables for damage
 ESC_TRIGGER_may_research_psionic_weapon_damage_repeatable = {
     OR = {
-        NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables }
-        check_variable = {
-            which = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables
-            value < 5
+        check_variable = { which = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables value < 5 }
+        AND = {
+            ESC_TRIGGER_may_research_psionic_weapons_advanced = yes
+            OR = {
+                NOT = { has_global_flag = @ACoT_defines_flag }
+                AND = {
+                    has_global_flag = @ACoT_defines_flag
+                    check_variable = { which = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables value < 20 }
+                }
+            }
         }
-        ESC_TRIGGER_may_research_psionic_weapons_advanced = yes
     }
 }
 
 # checks whether an empire may research psionic repeatables for damage
 ESC_TRIGGER_may_research_psionic_weapon_fire_rate_repeatable = {
     OR = {
-        NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables }
-        check_variable = {
-            which = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables
-            value < 5
+        check_variable = { which = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables value < 5 }
+        AND = {
+            ESC_TRIGGER_may_research_psionic_weapons_advanced = yes
+            OR = {
+                NOT = { has_global_flag = @ACoT_defines_flag }
+                AND = {
+                    has_global_flag = @ACoT_defines_flag
+                    check_variable = { which = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables value < 20 }
+                }
+            }
         }
-        ESC_TRIGGER_may_research_psionic_weapons_advanced = yes
     }
 }
 
@@ -547,24 +569,34 @@ ESC_TRIGGER_may_research_nanite_weapons_advanced = {
 # checks whether an empire may research nanite repeatables for damage
 ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = {
     OR = {
-        NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables }
-        check_variable = {
-            which = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables
-            value < 5
+        check_variable = { which = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables value < 5 }
+        AND = {
+            ESC_TRIGGER_may_research_nanite_weapons_advanced = yes
+            OR = {
+                NOT = { has_global_flag = @ACoT_defines_flag }
+                AND = {
+                    has_global_flag = @ACoT_defines_flag
+                    check_variable = { which = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables value < 20 }
+                }
+            }
         }
-        ESC_TRIGGER_may_research_nanite_weapons_advanced = yes
     }
 }
 
 # checks whether an empire may research nanite repeatables for damage
 ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = {
     OR = {
-        NOT = { is_variable_set = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables }
-        check_variable = {
-            which = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables
-            value < 5
+        check_variable = { which = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables value < 5 }
+        AND = {
+            ESC_TRIGGER_may_research_nanite_weapons_advanced = yes
+            OR = {
+                NOT = { has_global_flag = @ACoT_defines_flag }
+                AND = {
+                    has_global_flag = @ACoT_defines_flag
+                    check_variable = { which = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables value < 20 }
+                }
+            }
         }
-        ESC_TRIGGER_may_research_nanite_weapons_advanced = yes
     }
 }
 
