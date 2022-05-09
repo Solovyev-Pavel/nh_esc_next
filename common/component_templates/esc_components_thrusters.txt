@@ -27,7 +27,7 @@ utility_component_template = {
 	upgrades_to = ESC_THRUSTERS_6
 	size_restriction = {
 		# vanilla ship classes
-		corvette crisis_corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport
+		corvette crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport
 		# EAC ships
 		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
 
@@ -57,7 +57,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_thrusters_5" }
 	component_set = "thruster_components"
 	upgrades_to = DESTROYER_ESC_THRUSTERS_6
-	size_restriction = { destroyer crisis_destroyer }
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
 
 	ai_weight = { weight = 5 }
 }
@@ -87,7 +87,7 @@ utility_component_template = {
 	upgrades_to = CRUISER_ESC_THRUSTERS_6
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor
 		# Realistic ships : cruisers
@@ -123,7 +123,7 @@ utility_component_template = {
 	upgrades_to = BATTLESHIP_ESC_THRUSTERS_6
 	size_restriction = {
 		# vanilla ship classes
-		battleship
+		battleship offspring_battleship
 		# NSC ships
 		@NSC_ExplorationShip
 		# Realsitic ships : dreadnoughts
@@ -393,7 +393,7 @@ utility_component_template = {
 	component_set = "thruster_components"
 	size_restriction = {
 		# vanilla ship classes
-		corvette crisis_corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport
+		corvette crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer constructor science transport
 		# EAC ships
 		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
 
@@ -422,7 +422,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_thrusters_6" }
 	component_set = "thruster_components"
-	size_restriction = { destroyer crisis_destroyer }
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
 
 	ai_weight = { weight = 6 }
 }
@@ -451,7 +451,7 @@ utility_component_template = {
 	component_set = "thruster_components"
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor
 		# Realistic ships : cruisers
@@ -486,7 +486,7 @@ utility_component_template = {
 	component_set = "thruster_components"
 	size_restriction = {
 		# vanilla ship classes
-		battleship
+		battleship offspring_battleship
 		# NSC ships
 		@NSC_ExplorationShip
 		# Realsitic ships : dreadnoughts
