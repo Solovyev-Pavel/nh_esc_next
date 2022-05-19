@@ -26,6 +26,13 @@ esc_psionic_avatar_army = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
 
+	potential_country = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics
+			has_country_flag = ESC_COUNTRY_FLAG_mod_allow_basic_psionic_weapons
+		}
+	}
 	potential = {
 		custom_tooltip = {
 			planet = { is_capital = yes }
@@ -34,6 +41,15 @@ esc_psionic_avatar_army = {
 	}
 
 	prerequisites = { esc_tech_psi_avatar_army }
+
+	ai_weight = {
+		base = 100
+		modifier = {
+			set = 0
+			is_fallen_empire = yes
+			NOT = { has_ethic = ethic_fanatic_spiritualist }
+		}
+	}
 }
 
 ### Erasure Squad : Chrono-spatial weapons' subtree
@@ -63,22 +79,29 @@ esc_erasure_squad_army = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
 		OR = {
 			NOT = { has_authority = auth_machine_intelligence }
-			has_valid_civic = civic_machine_assimilator
 		}
 	}
 
+	potential_country = {
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+	}
 	potential = {
-		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
-		from = { is_sapient = yes }
-		owner = {
-			OR = {
-				NOT = { has_authority = auth_machine_intelligence }
-				has_civic = civic_machine_assimilator
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
 			}
 		}
 	}
 
 	prerequisites = { esc_tech_chrono_spatial_weapons }
+
+	ai_weight = {
+		base = 100
+	}
 }
 
 ### Eradicator Droids : mechanical verions of Erasure Squads
@@ -110,9 +133,11 @@ esc_eradicator_droids_army = {
 		has_authority = auth_machine_intelligence
 	}
 
+	potential_country = {
+		has_authority = auth_machine_intelligence
+	}
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
-		owner = { has_authority = auth_machine_intelligence }
 		from = {
 			OR = {
 				has_trait = trait_machine_unit
@@ -122,6 +147,10 @@ esc_eradicator_droids_army = {
 	}
 
 	prerequisites = { esc_tech_chrono_spatial_weapons }
+
+	ai_weight = {
+		base = 100
+	}
 }
 
 ### Tesla Troopers : organic tesla armies
@@ -150,22 +179,28 @@ esc_tesla_troopers_army = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
 		OR = {
 			NOT = { has_authority = auth_machine_intelligence }
-			has_valid_civic = civic_machine_assimilator
 		}
 	}
 
+	potential_country = {
+		NOT = { has_authority = auth_machine_intelligence }
+	}
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
-		from = { is_sapient = yes }
-		owner = {
-			OR = {
-				NOT = { has_authority = auth_machine_intelligence }
-				has_civic = civic_machine_assimilator
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
 			}
 		}
 	}
 
 	prerequisites = { esc_tech_tesla_weapons }
+
+	ai_weight = {
+		base = 100
+	}
 }
 
 ### Tesla Droids : mechanical tesla armies
@@ -196,9 +231,11 @@ esc_tesla_droids_army = {
 		has_authority = auth_machine_intelligence
 	}
 
+	potential_country = {
+		has_authority = auth_machine_intelligence
+	}
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
-		owner = { has_authority = auth_machine_intelligence }
 		from = {
 			OR = {
 				has_trait = trait_machine_unit
@@ -208,6 +245,10 @@ esc_tesla_droids_army = {
 	}
 
 	prerequisites = { esc_tech_tesla_weapons }
+
+	ai_weight = {
+		base = 100
+	}
 }
 
 ### Bio-Horror Horde : advanced bio-ascension army
@@ -233,12 +274,29 @@ esc_biohorror_army = {
 		}
 	}
 
-	potential = {
-		owner = {
-			ESC_TRIGGER_may_research_biological_weapons_advanced = yes
-		}
+	potential_country = {
+		ESC_TRIGGER_may_research_biological_weapons_advanced = yes
 	}
 
 	prerequisites = { esc_tech_bio_horror_army }
 
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 10
+			is_xenophobe = yes
+		}
+		modifier = {
+			set = 0
+			OR = {
+				is_pacifist = yes
+				is_xenophile = yes
+			}
+		}
+		modifier = {
+			set = 0
+			is_fallen_empire = yes
+			NOT = { has_ethic = ethic_fanatic_xenophobe }
+		}
+	}
 }
