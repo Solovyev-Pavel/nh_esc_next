@@ -135,14 +135,6 @@ esc_eradicator_droids_army = {
 	potential_country = {
 		has_authority = auth_machine_intelligence
 	}
-	potential = {
-		from = {
-			OR = {
-				has_trait = trait_machine_unit
-				has_trait = trait_mechanical
-			}
-		}
-	}
 
 	prerequisites = { esc_tech_chrono_spatial_weapons }
 
@@ -230,14 +222,6 @@ esc_tesla_droids_army = {
 
 	potential_country = {
 		has_authority = auth_machine_intelligence
-	}
-	potential = {
-		from = {
-			OR = {
-				has_trait = trait_machine_unit
-				has_trait = trait_mechanical
-			}
-		}
 	}
 
 	prerequisites = { esc_tech_tesla_weapons }
