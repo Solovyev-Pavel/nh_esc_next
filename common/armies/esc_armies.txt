@@ -36,7 +36,6 @@ esc_psionic_avatar_army = {
 	potential = {
 		custom_tooltip = {
 			planet = { is_capital = yes }
-			NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 		}
 	}
 
@@ -137,7 +136,6 @@ esc_eradicator_droids_army = {
 		has_authority = auth_machine_intelligence
 	}
 	potential = {
-		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
 		from = {
 			OR = {
 				has_trait = trait_machine_unit
@@ -186,7 +184,6 @@ esc_tesla_troopers_army = {
 		NOT = { has_authority = auth_machine_intelligence }
 	}
 	potential = {
-		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
 		from = {
 			NOR = {
 				has_trait = "trait_mechanical"
@@ -235,7 +232,6 @@ esc_tesla_droids_army = {
 		has_authority = auth_machine_intelligence
 	}
 	potential = {
-		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
 		from = {
 			OR = {
 				has_trait = trait_machine_unit
