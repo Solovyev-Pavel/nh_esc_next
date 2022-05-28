@@ -119,12 +119,12 @@ esc_special_projects.2002.option.b: "We don't need to copy from this piece of ju
 ESC_DREADNOUGHT_OBSERVATION: "Automated Dreadnought Observation"
 ESC_DREADNOUGHT_OBSERVATION_DESC: "While it doesn't look like combat systems of the ancient Automated Dreadnought possess any form of true intelligence, they are still extremely advanced and if we can replicate their logic for out own ships, this will without a doubt greatly increase strength of our fleets."
 
-esc_special_projects.2003.name: "Automated Dreadnought Obervation: Report"
-esc_special_projects.2003.desc: "With the data our observation team has collected on the Automated Dreadnought and its combat behavior, our science department is positive that they will be able to replicate at least some of apparent logic behing its combat computers, adapted to our own ship designs, of course."
+esc_special_projects.2003.name: "Automated Dreadnought Observation: Report"
+esc_special_projects.2003.desc: "With the data our observation team has collected on the Automated Dreadnought and its combat behavior, our science department is positive that they will be able to replicate at least some of apparent logic behind its combat computers, adapted to our own ship designs, of course."
 
 ### Nanite Thought Matrix computers
 esc_special_projects.3002.name: "Nanite Thought Matrix Development"
-esc_special_projects.3002.desc: "With our advancements in the fields of nanotechnology and AI some of scientists began contemplating the creation of next generation of AI, one that run on nanite substrate and are capable of mimicing organic minds to an unprecedent degree. Our navy has already expressed interest in adopting such AI for fleet command and are willing to sponsor the research."
+esc_special_projects.3002.desc: "With our advancements in the fields of nanotechnology and AI some of scientists began contemplating the creation of next generation of AI, one that run on nanite substrate and are capable of mimicking organic minds to an unprecedented degree. Our navy has already expressed interest in adopting such AI for fleet command and are willing to sponsor the research."
 esc_special_projects.3002.option.a: "Give researchers a go ahead"
 esc_special_projects.3002.option.b: "We have no need of such technology!"
 
@@ -132,7 +132,7 @@ ESC_NANITE_THOUGHT_MATRIX_DEVELOP: "Nanite Thought Matrix Development"
 ESC_NANITE_THOUGHT_MATRIX_DEVELOP_DESC: "According to some research, an AI running on nanite substrate can be made to perfectly replicate organic thought processes, except with incredible speed and precision of a machine. Such AI, should it ever be developed, would revolutionize many fields, and the admiralty board has displayed a great interest in adopting such AI for the purposes of space warfare. They say that having such an AI on our ships will give them a significant edge over our enemies who are still using simplistic and outdated AI."
 
 esc_special_projects.3003.name: "Intact Tempest Ship Recovered"
-esc_special_projects.3003.desc: "Following a recent battle, we were able to recover a mostly-intact ship belonging to an extragalctic threat known as the Gray Tempest. The preliminary report of our scientists indicates that the ship was controlled by an AI running on a nanite substrate set to mimic an organic mind of some long-extict species. According to the same report, we might be able to replicate the technology behind this advanced AI and use it to improve combat capabilities of our own ships."
+esc_special_projects.3003.desc: "Following a recent battle, we were able to recover a mostly-intact ship belonging to an extragalactic threat known as the Gray Tempest. The preliminary report of our scientists indicates that the ship was controlled by an AI running on a nanite substrate set to mimic an organic mind of some long-extinct species. According to the same report, we might be able to replicate the technology behind this advanced AI and use it to improve combat capabilities of our own ships."
 esc_special_projects.3003.option.a: "Give researchers a go ahead"
 esc_special_projects.3003.option.b: "We have no need of such technology!"
 
@@ -162,7 +162,7 @@ esc_events.3003.name: "Crystalline Gift"
 esc_events.3003.desc: "Miners on §Y[Root.GetName]§! report that several large clusters of valuable £rare_crystals£ §Y$rare_crystals$§! had been extracted from the planet's mantle."
 
 esc_events.3004.name: "Molten Motes"
-esc_events.3004.desc: "Miners on §Y[Root.GetName]§! report that their operations have extracted a large amount of £volataile_motes£ §Y$volatile_motes$§! that were dissolved in molten rocks of the planet's mantle."
+esc_events.3004.desc: "Miners on §Y[Root.GetName]§! report that their operations have extracted a large amount of £volatile_motes£ §Y$volatile_motes$§! that were dissolved in molten rocks of the planet's mantle."
 
 esc_events.3005.name: "Exotic Gases Pocket"
 esc_events.3005.desc: "Miners on §Y[Root.GetName]§! report that a pocket of £exotic_gases£ §Y$exotic_gases$§! had been located within the planet's mantle. Extraction was successful and yielded large amounts of valuable resources."
@@ -172,33 +172,33 @@ esc_events.3005.desc: "Miners on §Y[Root.GetName]§! report that a pocket of £
 ############################################################
 
 # ai research speed boost: easy
-esc_ai_early_game_science_boost_easy: "Exta Ship Components AI research boost (Easy Scaling)"
+esc_ai_early_game_science_boost_easy: "Extra Ship Components AI research boost (Easy Scaling)"
 esc_ai_early_game_science_boost_easy_desc: "AI empires are granted scaling bonus to research speed:\n+§G10§!% in the early game\n+§G25§!% during the mid-game\n+§G50§!% during the late game"
 esc_ai_mid_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
 esc_ai_mid_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
 esc_ai_end_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
 esc_ai_end_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
-esc_ai_science_boost_easy_static: "Exta Ship Components AI research boost (Easy Static)"
+esc_ai_science_boost_easy_static: "Extra Ship Components AI research boost (Easy Static)"
 esc_ai_science_boost_easy_static_desc: "AI empires are granted +§G25§!% research speed bonus throughout the whole game."
 
 # ai research speed boost: moderate
-esc_ai_early_game_science_boost_moderate: "Exta Ship Components AI research boost (Moderate Scaling)"
+esc_ai_early_game_science_boost_moderate: "Extra Ship Components AI research boost (Moderate Scaling)"
 esc_ai_early_game_science_boost_moderate_desc: "AI empires are granted scaling bonus to research speed:\n+§G25§!% in the early game\n+§G50§!% during the mid-game\n+§G100§!% during the late game"
 esc_ai_mid_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
 esc_ai_mid_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
 esc_ai_end_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
 esc_ai_end_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
-esc_ai_science_boost_moderate_static: "Exta Ship Components AI research boost (Moderate Static)"
+esc_ai_science_boost_moderate_static: "Extra Ship Components AI research boost (Moderate Static)"
 esc_ai_science_boost_moderate_static_desc: "AI empires are granted +§G50§!% research speed bonus throughout the whole game."
 
 # ai research speed boost: challenging
-esc_ai_early_game_science_boost_challenging: "Exta Ship Components AI research boost (Challenging Scaling)"
+esc_ai_early_game_science_boost_challenging: "Extra Ship Components AI research boost (Challenging Scaling)"
 esc_ai_early_game_science_boost_challenging_desc: "AI empires are granted scaling bonus to research speed:\n+§G50§!% in the early game\n+§G100§!% during the mid-game\n+§G150§!% during the late game"
 esc_ai_mid_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
 esc_ai_mid_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
 esc_ai_end_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
 esc_ai_end_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
-esc_ai_science_boost_challenging_static: "Exta Ship Components AI research boost (Challenging Static)"
+esc_ai_science_boost_challenging_static: "Extra Ship Components AI research boost (Challenging Static)"
 esc_ai_science_boost_challenging_static_desc: "AI empires are granted +§G100§!% research speed bonus throughout the whole game."
 
 # ai resource boost
@@ -255,6 +255,6 @@ esc_dummy_starbase: "Dummy Starbase"
 esc_dummy_starbase_desc: "$esc_dummy_strike_cruiser_desc$"
 esc_dummy_starbase_plural: "Dummy Starbases"
 
-esc_dummy_juggernaut: "Dummy Jugernaut"
+esc_dummy_juggernaut: "Dummy Juggernaut"
 esc_dummy_juggernaut_desc: "$esc_dummy_strike_cruiser_desc$"
 esc_dummy_juggernaut_plural: "Dummy Juggernauts"
