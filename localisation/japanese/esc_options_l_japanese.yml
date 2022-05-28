@@ -1,0 +1,423 @@
+﻿l_japanese:
+
+### JAPANESE (ACTUALLY ENGLISH) LOCALIZATION
+
+esc_option.exit: "Leave Menu"
+esc_option.back: "Go Back"
+esc_no_hide_disabled_components: "\n\n§HNOTE§!: Already researched components will remain available even if their technologies have been disabled."
+esc_no_disable_buildings: "\n\n§HNOTE§!: Already constructed buildings will not be disabled or demolished."
+esc_other_cat_dependants: "\n\n§RWARNING§!: Some tehcnologies from different categories might become §Runavailable§! for research."
+
+########################################
+###        Options Menu : MAIN       ###
+########################################
+
+esc_options.title: "Extra Ship Components §YNEXT§! Customization Menu"
+esc_options.desc: "Welcome to \"Extra Ship Components §YNEXT§!\" customization menu. Here you can choose which content provided by this mod will be accessible during the gameplay."
+
+esc_options.1000.weapons: "Configure Weapon Components"
+esc_options.1000.weapons.tooltip: "Go to weapon components' customization menu."
+
+esc_options.1000.utility: "Configure Utility Components"
+esc_options.1000.utility.tooltip: "Go to utility components' customization menu."
+
+esc_options.1000.leviathan: "Configure Leviathan & Crises Rewards"
+esc_options.1000.leviathan.tooltip: "Go to leviathan and crises rewards' customization menu."
+
+esc_options.1000.buildings: "Configure Buildings"
+esc_options.1000.buildings.tooltip: "Go to buildings' customization menu."
+
+esc_options.1000.ai_boost.easy_scaling: "Configure AI boost (current: §GEasy Scaling§!)"
+esc_options.1000.ai_boost.easy_scaling.tooltip: "Go to AI boost customization menu"
+esc_options.1000.ai_boost.easy_static: "Configure AI boost (current: §GEasy Static§!)"
+esc_options.1000.ai_boost.easy_static.tooltip: "Go to AI boost customization menu"
+esc_options.1000.ai_boost.moderate_scaling: "Configure AI boost (current: §EModerate Scaling§!)"
+esc_options.1000.ai_boost.moderate_scaling.tooltip: "Go to AI boost customization menu"
+esc_options.1000.ai_boost.moderate_static: "Configure AI boost (current: §EModerate Static§!)"
+esc_options.1000.ai_boost.moderate_static.tooltip: "Go to AI boost customization menu"
+esc_options.1000.ai_boost.challenging_scaling: "Configure AI boost (current: §BChallening Scaling§!)"
+esc_options.1000.ai_boost.challenging_scaling.tooltip: "Go to AI boost customization menu"
+esc_options.1000.ai_boost.challenging_static: "Configure AI boost (current: §BChallening Static§!)"
+esc_options.1000.ai_boost.challenging_static.tooltip: "Go to AI boost customization menu"
+esc_options.1000.ai_boost.disabled: "Configure AI boost (current: §RDisabled§!)"
+esc_options.1000.ai_boost.disabled.tooltip: "Go to AI boost customization menu"
+
+esc_options.1000.presets: "Select a Configuration Preset"
+esc_options.1000.presets.tooltip: "Go to Mod Presets page."
+
+esc_options.1000.crisis.a: "Crisis: §Rdisabled§!"
+esc_options.1000.crisis.a.tooltip: "Unbidden invasions triggered by this mod are §Rdisabled§!\n\nClick to §Genable§! an Unbidden invasion as a response to research of dangerous chrono-spatial technologies."
+esc_options.1000.crisis.b: "Crisis: §Genabled§!"
+esc_options.1000.crisis.b.tooltip: "Unbidden invasion triggered by this mod is §Genabled§! but will happen only once. This crisis will not prevent Prethorin Scourge or Contingency and may happen alongside them.\n\nClick to §Genable§! repeated Unbidden invasions."
+esc_options.1000.crisis.c: "Crisis: §Grepeated invasions enabled§!"
+esc_options.1000.crisis.c.tooltip: "Repeated Unbidden invasions triggered by this mod are §Genabled§!. These invasions will not prevent Prethorin Scourge or Contingency and may happen alongside them.\n\nClick to §Rdisable§! Unbidden invasions triggered by this mod."
+
+########################################
+###      Options Menu : WEAPONS      ###
+########################################
+
+### general screen
+esc_options.weapons_menu.title: "$esc_options.title$"
+esc_options.weapons_menu.desc: "In this menu you can customize which weapon types can be researched during the gameplay."
+
+esc_options.2000.vanilla_normal: "Configure Advanced Vanilla Weapons (Regular)"
+esc_options.2000.vanilla_normal.tooltip: "Go to the customization menu for advanced versions of regular-sized vanilla weapons."
+
+esc_options.2000.vanilla_xl: "Configure Advanced Vanilla Weapons (Spinal-Mounted)"
+esc_options.2000.vanilla_xl.tooltip: "Go to the customization menu for advanced versions of spinal-mounted vanilla weapons."
+
+esc_options.2000.extras: "Configure Additional Weapon Types"
+esc_options.2000.extras.tooltip: "Go to the customization menu for additional weapon types."
+
+esc_options.2000.biological.a: "§GBiological§! Weapons: §Genabled all§!"
+esc_options.2000.biological.a.tooltip: "Click to §Rdisable§! research of spinal-mounted §GBiological§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.biological.b: "§GBiological§! Weapons: §Genabled regular-sized§!"
+esc_options.2000.biological.b.tooltip: "Click to §Rdisable§! research of all §GBiological§! weapons. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.2000.biological.c: "§GBiological§! Weapons: §Rdisabled§!"
+esc_options.2000.biological.c.tooltip: "Click to §Genable§! research of all §GBiological§! weapons."
+
+esc_options.2000.crystal.a: "§LCrystalline§! Weapons: §Genabled all§!"
+esc_options.2000.crystal.a.tooltip: "Click to §Rdisable§! research of spinal-mounted §LCrystalline§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.crystal.b: "§LCrystalline§! Weapons: §Genabled regular-sized§!"
+esc_options.2000.crystal.b.tooltip: "Click to §Rdisable§! research of all §LCrystalline§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.crystal.c: "§LCrystalline§! Weapons: §Rdisabled§!"
+esc_options.2000.crystal.c.tooltip: "Click to §Genable§! research of all §LCrystalline§! weapons."
+
+esc_options.2000.gravitic.a: "§PGravitic§! Weapons: §Genabled all§!"
+esc_options.2000.gravitic.a.tooltip: "Click to §Rdisable§! research of spinal-mounted §PGravitic§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.gravitic.b: "§PGravitic§! Weapons: §Genabled regular-sized§!"
+esc_options.2000.gravitic.b.tooltip: "Click to §Rdisable§! research of all §PGravitic§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.gravitic.c: "§PGravitic§! Weapons: §Rdisabled§!"
+esc_options.2000.gravitic.c.tooltip: "Click to §Genable§! research of all §PGravitic§! weapons."
+
+esc_options.2000.nanite.a: "Nanite Weapons: §Genabled all§!"
+esc_options.2000.nanite.a.tooltip: "Click to §Rdisable§! research of spinal-mounted Nanite weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.nanite.b: "Nanite Weapons: §Genabled regular-sized§!"
+esc_options.2000.nanite.b.tooltip: "Click to §Rdisable§! research of all Nanite weapons. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.2000.nanite.c: "Nanite Weapons: §Rdisabled§!"
+esc_options.2000.nanite.c.tooltip: "Click to §Genable§! research of all Nanite weapons."
+
+esc_options.2000.psionic.a: "§MPsionic§! Weapons: §Genabled all§!"
+esc_options.2000.psionic.a.tooltip: "Click to §Rdisable§! research of spinal-mounted §MPsionic§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.psionic.b: "§MPsionic§! Weapons: §Genabled regular-sized§!"
+esc_options.2000.psionic.b.tooltip: "Click to §Rdisable§! research of all §MPsionic§! weapons. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.2000.psionic.c: "§MPsionic§! Weapons: §Rdisabled§!"
+esc_options.2000.psionic.c.tooltip: "Click to §Genable§! research of all §MPsionic§! weapons."
+
+esc_options.2000.tesla.a: "§YTesla§! Weapons: §Genabled all§!"
+esc_options.2000.tesla.a.tooltip: "Click to §Rdisable§! research of spinal-mounted §YTesla§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.tesla.b: "§YTesla§! Weapons: §Genabled regular-sized§!"
+esc_options.2000.tesla.b.tooltip: "Click to §Rdisable§! research of all §YTesla§! weapons. $esc_no_hide_disabled_components$"
+esc_options.2000.tesla.c: "§YTesla§! Weapons: §Rdisabled§!"
+esc_options.2000.tesla.c.tooltip: "Click to §Genable§! research of all §YTesla§! weapons."
+
+### vanilla weapons screen (normal weapons)
+esc_options.weapons_vanilla.title: "$esc_options.title$"
+esc_options.weapons_vanilla.desc: "In this menu you can customize which advanced versions of regular-sized vanilla weapons can be researched during the gameplay."
+
+esc_options.2001.kinetics.a: "Advanced Kinetic Weapons: §Genabled§!"
+esc_options.2001.kinetics.a.tooltip: "Click to §Rdisable§! research of advanced kinetic weapons. $esc_no_hide_disabled_components$"
+esc_options.2001.kinetics.b: "Advanced Kinetic Weapons: §Rdisabled§!"
+esc_options.2001.kinetics.b.tooltip: "Click to §Genable§! research of advanced kinetic weapons."
+
+esc_options.2001.energy.a: "Advanced Energy Weapons: §Genabled§!"
+esc_options.2001.energy.a.tooltip: "Click to §Rdisable§! research of advanced energy weapons. $esc_no_hide_disabled_components$"
+esc_options.2001.energy.b: "Advanced Energy Weapons: §Rdisabled§!"
+esc_options.2001.energy.b.tooltip: "Click to §Genable§! research of advanced energy weapons."
+
+esc_options.2001.missiles.a: "Advanced Missile Weapons: §Genabled§!"
+esc_options.2001.missiles.a.tooltip: "Click to §Rdisable§! research of advanced missile weapons. $esc_no_hide_disabled_components$"
+esc_options.2001.missiles.b: "Advanced Missile Weapons: §Rdisabled§!"
+esc_options.2001.missiles.b.tooltip: "Click to §Genable§! research of advanced missile weapons."
+
+esc_options.2001.pd.a: "Advanced Point-Defense Weapons: §Genabled§!"
+esc_options.2001.pd.a.tooltip: "Click to §Rdisable§! research of advanced point-defense weapons. $esc_no_hide_disabled_components$"
+esc_options.2001.pd.b: "Advanced Point-Defense Weapons: §Rdisabled§!"
+esc_options.2001.pd.b.tooltip: "Click to §Genable§! research of advanced point-defense weapons."
+
+esc_options.2001.strikecraft.a: "Advanced Strike Crafts: §Genabled§!"
+esc_options.2001.strikecraft.a.tooltip: "Click to §Rdisable§! research of advanced strike crafts. $esc_no_hide_disabled_components$"
+esc_options.2001.strikecraft.b: "Advanced Strike Crafts: §Rdisabled§!"
+esc_options.2001.strikecraft.b.tooltip: "Click to §Genable§! research of advanced strike crafts."
+
+esc_options.2001.creature.a: "Advanced Creature-Derived Weapons: §Genabled§!"
+esc_options.2001.creature.a.tooltip: "Click to §Rdisable§! research of advanced creature-derived weapons. $esc_no_hide_disabled_components$"
+esc_options.2001.creature.b: "Advanced Creature-Derived Weapons: §Rdisabled§!"
+esc_options.2001.creature.b.tooltip: "Click to §Genable§! research of advanced creature-derived weapons."
+
+### vanilla weapons screen (supersized weapons)
+esc_options.weapons_vanilla_x.title: "$esc_options.title$"
+esc_options.weapons_vanilla_x.desc: "In this menu you can customize which advanced versions of spinal-mounted vanilla weapons can be researched during the gameplay."
+
+esc_options.2002.kinetics.a: "Advanced Giga-Cannons: §Genabled§!"
+esc_options.2002.kinetics.a.tooltip: "Click to §Rdisable§! research of advanced giga-cannons. $esc_no_hide_disabled_components$"
+esc_options.2002.kinetics.b: "Advanced Giga-Cannons: §Rdisabled§!"
+esc_options.2002.kinetics.b.tooltip: "Click to §Genable§! research of advanced giga-cannons."
+
+esc_options.2002.lance.a: "Advanced Particle Lances: §Genabled§!"
+esc_options.2002.lance.a.tooltip: "Click to §Rdisable§! research of advanced particle lances. $esc_no_hide_disabled_components$"
+esc_options.2002.lance.b: "Advanced Particle Lances: §Rdisabled§!"
+esc_options.2002.lance.b.tooltip: "Click to §Genable§! research of advanced particle lances."
+
+esc_options.2002.arc.a: "Advanced Arc Emitters: §Genabled§!"
+esc_options.2002.arc.a.tooltip: "Click to §Rdisable§! research of advanced arc emitters. $esc_no_hide_disabled_components$"
+esc_options.2002.arc.b: "Advanced Arc Emitters: §Rdisabled§!"
+esc_options.2002.arc.b.tooltip: "Click to §Genable§! research of advanced arc emitters."
+
+### additional weapons screen
+esc_options.weapons_extra.title: "$esc_options.title$"
+esc_options.weapons_extra.desc: "In this menu you can customize which additional types of weapons can be researched during the gameplay."
+
+esc_options.2003.plasma_missiles.a: "Plasma Missiles: §Genabled§!"
+esc_options.2003.plasma_missiles.a.tooltip: "Click to §Rdisable§! research of plasma missiles. $esc_no_hide_disabled_components$"
+esc_options.2003.plasma_missiles.b: "Plasma Missiles: §Rdisabled§!"
+esc_options.2003.plasma_missiles.b.tooltip: "Click to §Genable§! research of missiles."
+
+esc_options.2003.chrono.a: "Chrono-Spatial Weapons: §Genabled all§!"
+esc_options.2003.chrono.a.tooltip: "Click to §Rdisable§! research of spinal-mounted chrono-spatial weapons. $esc_no_hide_disabled_components$"
+esc_options.2003.chrono.b: "Chrono-Spatial Weapons: §Genabled regular-sized§!"
+esc_options.2003.chrono.b.tooltip: "Click to §Rdisable§! research of all chrono-spatial weapons. $esc_no_hide_disabled_components$"
+esc_options.2003.chrono.c: "Chrono-Spatial Weapons: §Rdisabled§!"
+esc_options.2003.chrono.c.tooltip: "Click to §Genable§! research of all chrono-spatial weapons."
+
+esc_options.2003.x_missiles.a: "Spinal-Mounted Missile Launchers: §Genabled§!"
+esc_options.2003.x_missiles.a.tooltip: "Click to §Rdisable§! research of spinal-mounted missile launchers. $esc_no_hide_disabled_components$"
+esc_options.2003.x_missiles.b: "Spinal-Mounted Missile Launchers: §Rdisabled§!"
+esc_options.2003.x_missiles.b.tooltip: "Click to §Genable§! research of spinal-mounted missile launchers."
+
+esc_options.2003.wmg.a: "Wave-Motion Guns: §Genabled§!"
+esc_options.2003.wmg.a.tooltip: "Click to §Rdisable§! research of Wave-Motion Gun-type weapons. $esc_no_hide_disabled_components$"
+esc_options.2003.wmg.b: "Wave-Motion Guns: §Rdisabled§!"
+esc_options.2003.wmg.b.tooltip: "Click to §Genable§! research of Wave-Motion Gun-type weapons.\n\n§HNOTE§!: these weapons require advanced engines and reactors."
+
+esc_options.2003.b_autocannons.a: "Large Autocannons: §Genabled all§!"
+esc_options.2003.b_autocannons.a.tooltip: "Click to §Rdisable§! research of spinal-mounted autocannons. $esc_no_hide_disabled_components$"
+esc_options.2003.b_autocannons.b: "Large Autocannons: §Genabled regular-sized§!"
+esc_options.2003.b_autocannons.b.tooltip: "Click to §Rdisable§! research of all large autocannons. $esc_no_hide_disabled_components$"
+esc_options.2003.b_autocannons.c: "Large Autocannons: §Rdisabled§!"
+esc_options.2003.b_autocannons.c.tooltip: "Click to §Genable§! research of all large autocannons."
+
+esc_options.2003.mhd.a: "MagnetoHydroDynamic Cannons: §Genabled§!"
+esc_options.2003.mhd.a.tooltip: "Click to §Rdisable§! research of magnetohydrodynamic cannons. $esc_no_hide_disabled_components$"
+esc_options.2003.mhd.b: "MagnetoHydroDynamic Cannons: §Rdisabled§!"
+esc_options.2003.mhd.b.tooltip: "Click to §Genable§! research of magnetohydrodynamic cannons."
+
+########################################
+###      Options Menu : UTILITY      ###
+########################################
+
+esc_options.utility_menu.title: "$esc_options.title$"
+esc_options.utility_menu.desc: "In this menu you can customize which utility components can be researched during the gameplay"
+
+esc_options.3000.armor.a: "Advanced Armor Types: §Genabled§!"
+esc_options.3000.armor.a.tooltip: "Click to §Rdisable§! research of advanced armor types. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.armor.b: "Advanced Armor Types: §Rdisabled§!"
+esc_options.3000.armor.b.tooltip: "Click to §Genable§! research of advanced armor types."
+
+esc_options.3000.shields.a: "Advanced Shield Types: §Genabled§!"
+esc_options.3000.shields.a.tooltip: "Click to §Rdisable§! research of advanced shield types. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.shields.b: "Advanced Shield Types: §Rdisabled§!"
+esc_options.3000.shields.b.tooltip: "Click to §Genable§! research of advanced shield types."
+
+esc_options.3000.sensor.a: "Advanced Sensor Types: §Genabled§!"
+esc_options.3000.sensor.a.tooltip: "Click to §Rdisable§! research of advanced sensor types. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.sensor.b: "Advanced Sensor Types: §Rdisabled§!"
+esc_options.3000.sensor.b.tooltip: "Click to §Genable§! research of advanced sensor types."
+
+esc_options.3000.reactor.a: "Advanced Reactor Types: §Genabled§!"
+esc_options.3000.reactor.a.tooltip: "Click to §Rdisable§! research of advanced reactor types. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.reactor.b: "Advanced Reactor Types: §Rdisabled§!"
+esc_options.3000.reactor.b.tooltip: "Click to §Genable§! research of advanced reactor types."
+
+esc_options.3000.thruster.a: "Advanced Thruster Types: §Genabled§!"
+esc_options.3000.thruster.a.tooltip: "Click to §Rdisable§! research of advanced thruster types. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.thruster.b: "Advanced Thruster Types: §Rdisabled§!"
+esc_options.3000.thruster.b.tooltip: "Click to §Genable§! research of advanced thruster types."
+
+esc_options.3000.ftl.a: "Advanced FTL Drive Types: §Genabled§!"
+esc_options.3000.ftl.a.tooltip: "Click to §Rdisable§! research of advanced FTL drive types. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.ftl.b: "Advanced FTL Drive Types: §Rdisabled§!"
+esc_options.3000.ftl.b.tooltip: "Click to §Genable§! research of advanced FTL drive types."
+
+esc_options.3000.aux.a: "Advanced Auxiliary Components: §Genabled§!"
+esc_options.3000.aux.a.tooltip: "Click to §Rdisable§! research of advanced auxiliary components. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
+esc_options.3000.aux.b: "Advanced Auxiliary Components: §Rdisabled§!"
+esc_options.3000.aux.b.tooltip: "Click to §Genable§! research of advanced auxiliary components."
+
+########################################
+###     Options Menu : LEVIATHAN     ###
+########################################
+
+# general page
+esc_options.leviathan_menu.title: "$esc_options.title$"
+esc_options.leviathan_menu.desc: "In this menu you can configure which rewards for slaying leviathans and/or crises will be available during the gameplay."
+
+esc_options.4000.leviathan_1: "Configure Rewards for the \"Leviathans\" DLC Content"
+esc_options.4000.leviathan_1.tooltip: "Go to the customization menu for rewards associated with leviathans add by the \"Leviathans\" DLC"
+
+esc_options.4000.leviathan_2: "Configure Rewards for the \"Distant Stars\" DLC Content"
+esc_options.4000.leviathan_2.tooltip: "Go to the customization menu for rewards associated with leviathans add by the \"Distant Stars\" DLC"
+
+esc_options.4000.crises.a: "Crises Weapons: §Genabled all§!"
+esc_options.4000.crises.a.tooltip: "Click to §Rdisable§! research of spinal-mounted crises weapons and their derivatives. $esc_no_hide_disabled_components$"
+esc_options.4000.crises.b: "Crises Weapons: §Genabled regular-sized§!"
+esc_options.4000.crises.b.tooltip: "Click to §Rdisable§! research of all crises weapons and their derivatives. $esc_no_hide_disabled_components$"
+esc_options.4000.crises.c: "Crises Weapons: §Rdisabled§!"
+esc_options.4000.crises.c.tooltip: "Click to §Genable§! research of all crises weapons and their derivatives."
+
+# leviathans DLC leviathans page
+esc_options.leviathan_menu_1.title: "$esc_options.title$"
+esc_options.leviathan_menu_1.desc: "In this menu you can configure which rewards for slaying leviathans added by the \"Leviathans\" DLC will be available during the gameplay."
+
+esc_options.4001.drake.a: "Ether Drake Rewards: §Genabled§!"
+esc_options.4001.drake.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Ether Drake. $esc_no_hide_disabled_components$"
+esc_options.4001.drake.b: "Ether Drake Rewards: §Rdisabled§!"
+esc_options.4001.drake.b.tooltip: "Click to §Genable§! rewards associated with killing the Ether Drake. \n\n§HNOTE§!: the Ether Drake requires the \"Leviathan\" DLC."
+
+esc_options.4001.dreadnought.a: "Automated Dreadnought Rewards: §Genabled§!"
+esc_options.4001.dreadnought.a.tooltip: "Click to §Rdisable§! rewards associated with the Automated Dreadnought. $esc_no_hide_disabled_components$"
+esc_options.4001.dreadnought.b: "Automated Dreadnought: §Rdisabled§!"
+esc_options.4001.dreadnought.b.tooltip: "Click to §Genable§! rewards associated with the Automated Dreadnought. \n\n§HNOTE§!: the Automated Dreadnought requires the \"Leviathan\" DLC."
+
+esc_options.4001.fortress.a: "Enigmatic Fortress Weapons: §Genabled all§!"
+esc_options.4001.fortress.a.tooltip: "Click to §Rdisable§! spinal-mounted weapons from the Enigmatic Fortress killing reward. $esc_no_hide_disabled_components$"
+esc_options.4001.fortress.b: "Enigmatic Fortress Weapons: §Genabled regular-sized§!"
+esc_options.4001.fortress.b.tooltip: "Click to §Rdisable§! all rewards associated with killing the Enigmatic Fortress. $esc_no_hide_disabled_components$"
+esc_options.4001.fortress.c: "Enigmatic Fortress Weapons: §Rdisabled§!"
+esc_options.4001.fortress.c.tooltip: "Click to §Genable§! all rewards associated with killing the Enigmatic Fortress.\n\n§HNOTE§!: the Enigmatic Fortress requires the \"Leviathan\" DLC."
+
+esc_options.4001.wraith.a: "Spectral Wraith Rewards: §Genabled§!"
+esc_options.4001.wraith.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Spectral Wraith. $esc_no_hide_disabled_components$"
+esc_options.4001.wraith.b: "Spectral Wraith Rewards: §Rdisabled§!"
+esc_options.4001.wraith.b.tooltip: "Click to §Genable§! rewards associated with killing the Spectral Wraith. \n\n§HNOTE§!: the Spectral Wraith requires the \"Leviathan\" DLC."
+
+esc_options.4001.stellarite.a: "Stellarite Devourer Rewards: §Genabled§!"
+esc_options.4001.stellarite.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Stellarite Devourer. $esc_no_hide_disabled_components$"
+esc_options.4001.stellarite.b: "Stellarite Devourer Rewards: §Rdisabled§!"
+esc_options.4001.stellarite.b.tooltip: "Click to §Genable§! rewards associated with killing the Stellarite Devourer. \n\n§HNOTE§!: the Stellarite Devourer requires the \"Leviathan\" DLC."
+
+esc_options.4001.technosphere.a: "The Infinity Machine Rewards: §Genabled§!"
+esc_options.4001.technosphere.a.tooltip: "Click to §Rdisable§! rewards associated with the Infinity Machine. $esc_no_hide_disabled_components$"
+esc_options.4001.technosphere.b: "The Infinity Machine Rewards: §Rdisabled§!"
+esc_options.4001.technosphere.b.tooltip: "Click to §Genable§! rewards associated with the Infinity Machine. \n\n§HNOTE§!: the Infinity Machine requires the \"Leviathan\" DLC."
+
+esc_options.4001.horror.a: "Dimensional Horror Rewards: §Genabled§!"
+esc_options.4001.horror.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Dimensional Horror. $esc_no_hide_disabled_components$"
+esc_options.4001.horror.b: "Dimensional Horror Rewards: §Rdisabled§!"
+esc_options.4001.horror.b.tooltip: "Click to §Genable§! rewards associated with killing the Dimensional Horror. \n\n§HNOTE§!: the Dimensional Horror requires the \"Leviathan\" DLC."
+
+# distant stars DLC leviathans page
+esc_options.leviathan_menu_2.title: "$esc_options.title$"
+esc_options.leviathan_menu_2.desc: "In this menu you can configure which rewards for slaying leviathans added by the \"Distant Stars\" DLC will be available during the gameplay."
+
+esc_options.4002.tiyanki.a: "Tiyanki Matriarch Rewards: §Genabled§!"
+esc_options.4002.tiyanki.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Tiyanki Matriarch. $esc_no_hide_disabled_components$"
+esc_options.4002.tiyanki.b: "Tiyanki Matriarch Rewards: §Rdisabled§!"
+esc_options.4002.tiyanki.b.tooltip: "Click to §Genable§! rewards associated with killing the Tiyanki Matriarch. \n\n§HNOTE§!: the Tiyanki Matriarch requires the \"Distant Stars\" DLC."
+
+esc_options.4002.scrapper.a: "Scrapper Bot Rewards: §Genabled§!"
+esc_options.4002.scrapper.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Scrapper Bot. $esc_no_hide_disabled_components$"
+esc_options.4002.scrapper.b: "Scrapper Bot Rewards: §Rdisabled§!"
+esc_options.4002.scrapper.b.tooltip: "Click to §Genable§! rewards associated with killing the Scrapper Bot. \n\n§HNOTE§!: the Scrapper Bot requires the \"Distant Stars\" DLC."
+
+esc_options.4002.voidspawn.a: "Voidspawn Rewards: §Genabled§!"
+esc_options.4002.voidspawn.a.tooltip: "Click to §Rdisable§! rewards associated with killing the Voidspawn. $esc_no_hide_disabled_components$"
+esc_options.4002.voidspawn.b: "Voidspawn Rewards: §Rdisabled§!"
+esc_options.4002.voidspawn.b.tooltip: "Click to §Genable§! rewards associated with killing the Voidspawn. \n\n§HNOTE§!: the Voidspawn requires the \"Distant Stars\" DLC."
+
+########################################
+###     Options Menu : BUILDINGS     ###
+########################################
+
+esc_options.buildings_menu.title: "$esc_options.title$"
+esc_options.buildings_menu.desc: "In this menu you can configure which buildings added by the \"Extra Ship Components §YNEXT§!\" mod can be build during the gameplay."
+
+esc_options.5000.bureau.a: "Central Research Bureau: §Genabled§!"
+esc_options.5000.bureau.a.tooltip: "Click to §Rdisable§! construction of the Central Research Bureau building. $esc_no_disable_buildings$"
+esc_options.5000.bureau.b: "Central Research Bureau: §Rdisabled§!"
+esc_options.5000.bureau.b.tooltip: "Click to §Genable§! construction of the Central Research Bureau building."
+
+esc_options.5000.culture.a: "Culture Nexus: §Genabled§!"
+esc_options.5000.culture.a.tooltip: "Click to §Rdisable§! construction of the Culture Nexus building. $esc_no_disable_buildings$"
+esc_options.5000.culture.b: "Culture Nexus: §Rdisabled§!"
+esc_options.5000.culture.b.tooltip: "Click to §Genable§! construction of the Culture Nexus building."
+
+esc_options.5000.materials.a: "Advanced Materials Laboratory: §Genabled§!"
+esc_options.5000.materials.a.tooltip: "Click to §Rdisable§! construction of the Advanced Materials Laboratory building. $esc_no_disable_buildings$"
+esc_options.5000.materials.b: "Advanced Materials Laboratory: §Rdisabled§!"
+esc_options.5000.materials.b.tooltip: "Click to §Genable§! construction of the Advanced Materials Laboratory building."
+
+esc_options.5000.institute.a: "Technology Institute: §Genabled§!"
+esc_options.5000.institute.a.tooltip: "Click to §Rdisable§! construction of the Technology Institute building. $esc_no_disable_buildings$"
+esc_options.5000.institute.b: "Technology Institute: §Rdisabled§!"
+esc_options.5000.institute.b.tooltip: "Click to §Genable§! construction of the Technology Institute building."
+
+esc_options.5000.watcher.a: "Watcher of Eternity: §Genabled§!"
+esc_options.5000.watcher.a.tooltip: "Click to §Rdisable§! construction of the Watcher of Eternity building. $esc_no_disable_buildings$"
+esc_options.5000.watcher.b: "Watcher of Eternity: §Rdisabled§!"
+esc_options.5000.watcher.b.tooltip: "Click to §Genable§! construction of the Watcher of Eternity building."
+
+esc_options.5000.mantle.a: "Mantle Mining Facility: §Genabled§!"
+esc_options.5000.mantle.a.tooltip: "Click to §Rdisable§! construction of the Mantle Mining Facility building. $esc_no_disable_buildings$"
+esc_options.5000.mantle.b: "Mantle Mining Facility: §Rdisabled§!"
+esc_options.5000.mantle.b.tooltip: "Click to §Genable§! construction of the Mantle Mining Facility building."
+
+########################################
+###         Options Menu : AI        ###
+########################################
+
+esc_options_ai_boost_title: "$esc_options.title$"
+esc_options_ai_boost_title_desc: "In this menu you can configure which bonuses AI empires will have while \"Extra Ship Components §YNEXT§!\" mod is active."
+
+esc_options.6000.ai_easy_scaling: "Set AI research speed bonus to §GEasy Scaling§!"
+esc_options.6000.ai_easy_scaling.tooltip: "AI empires will be granted scaling bonus to research speed:\n+§G10§!% in the early game\n+§G25§!% during the mid-game\n+§G50§!% during the late game"
+esc_options.6000.ai_easy_static: "Set AI research speed bonus to §GEasy Static§!"
+esc_options.6000.ai_easy_static.tooltip: "AI empires will be granted +§G25§!% research speed bonus throughout the whole game."
+
+esc_options.6000.ai_moderate_scaling: "Set AI research speed bonus to §EModerate Scaling§!"
+esc_options.6000.ai_moderate_scaling.tooltip: "AI empires will be granted scaling bonus to research speed:\n+§G25§!% in the early game\n+§G50§!% during the mid-game\n+§G100§!% during the late game"
+esc_options.6000.ai_moderate_static: "Set AI research speed bonus to §EModerate Static§!"
+esc_options.6000.ai_moderate_static.tooltip: "AI empires will be granted +§G50§!% research speed bonus throughout the whole game."
+
+esc_options.6000.ai_challenging_scaling: "Set AI research speed bonus to §BChallenging Scaling§!"
+esc_options.6000.ai_challenging_scaling.tooltip: "AI empires will be granted scaling bonus to research speed:\n+§G50§!% in the early game\n+§G100§!% during the mid-game\n+§G150§!% during the late game"
+esc_options.6000.ai_challenging_static: "Set AI research speed bonus to §BChallenging Static§!"
+esc_options.6000.ai_challenging_static.tooltip: "AI empires will be granted +§G100§!% research speed bonus throughout the whole game."
+
+esc_options.6000.ai_boost_disabled: "Set AI research speed bonus to §Rdisabled§!"
+esc_options.6000.ai_boost_disabled.tooltip: "AI empires will not receive any research speed bonuses."
+
+ESC_AI_research_boost_easy_scaling: "AI research bonus: Easy Scaling"
+ESC_AI_research_boost_easy_static: "AI research bonus: Easy Static"
+ESC_AI_research_boost_moderate_scaling: "AI research bonus: Moderate Scaling"
+ESC_AI_research_boost_moderate_static: "AI research bonus: Moderate Static"
+ESC_AI_research_boost_challenging_scaling: "AI research bonus: Challenging Scaling"
+ESC_AI_research_boost_challenging_static: "AI research bonus: Challenging Static"
+
+########################################
+###       Options Menu : Presets     ###
+########################################
+
+esc_options_presets_title: "$esc_options.title$"
+esc_options_presets_title_desc: "Here you can choose one of the configuration presets for the \"Extra Ship Components §YNEXT§!\" mod."
+
+esc_options.7000.enable_all: "Enable Everything"
+esc_options.7000.enable_all.tooltip: "All weapons, utility components, leviathan rewards and buildings added by the \"Extra Ship Components §YNEXT§!\" mod will be enabled and can be researched by any empire that meets the necessary prerequisites."
+
+esc_options.7000.no_buildings: "Enable Everything Except Science Buildings"
+esc_options.7000.no_buildings.tooltip: "Enable everything except for advanced science buildings and the Mantle Mining Facility"
+
+esc_options.7000.vanilla_only: "Advanced Vanilla Components & Derivatives"
+esc_options.7000.vanilla_only.tooltip: "Enable advanced versions of vanilla weapons and utility components as well as their derivatives such as superscale autocannons."
+
+esc_options.7000.leviathan_only: "Only Crises and Leviathan Rewards"
+esc_options.7000.leviathan_only.tooltip: "Enable only components and buildings that are rewards for defeating crises and/or leviathans."
+
+esc_options.7000.vanilla_leviathan: "Advanced Vanilla Components & Leviathan Rewards"
+esc_options.7000.vanilla_leviathan.tooltip: "nable advanced versions of vanilla weapons and utility components as well as their derivatives such as superscale autocannons. Rewards for defeating crises/leviathans will also be enabled."
+
+esc_options.7000.new_weapon_types: "Enable Only New Component Types"
+esc_options.7000.enable_all.new_weapon_types: "Enables the following component types: Biological, Crystalline, Gravitic, Nanite, Psionic, Tesla, Plasma Missiles, Wave-Motion Guns and Chrono-Spatial weapons."
+
+esc_options.7000.new_and_leviathan: "Enable  New Component Types & Leviathan Rewards"
+esc_options.7000.enable_all.new_and_leviathan: "Enables new component types and rewards for defeating crises and/or leviathans."

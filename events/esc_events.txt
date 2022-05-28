@@ -357,3 +357,37 @@ country_event = {
 		}
 	}
 }
+
+## ##################################################### ##
+##   TEST: Grant access to all weapon types to empire    ##
+## ##################################################### ##
+
+country_event = {
+	id = esc_events.9999
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		# biological weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_basic_biological_weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_advanced_biological_weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_reverse_engineer_biological_weapons
+		# amoebas
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_bioaugmented_amoeba
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_cybernetic_amoeba
+		# crystalline weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_crystalline_weapons
+		# nanite weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_advanced_nanite_weapons
+		# psionic weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_basic_psionic_weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_advanced_psionic_weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_reverse_engineer_psionic_weapons
+		# tesla weapons
+		set_country_flag = ESC_COUNTRY_FLAG_mod_allow_tesla_weapons
+	}
+}

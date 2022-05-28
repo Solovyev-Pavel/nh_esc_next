@@ -1,259 +1,147 @@
 ﻿l_simp_chinese:
-
-### SIMPLIFIED CHINESE LOCALIZATION
-# currently copies English localization
-
-############################################################
-###                    Dynamic Mod Menu                  ###
-############################################################
-
-esc_next_name_id: "Extra Ship Components §YNEXT§!"
-
-############################################################
-###                      Weapon Tags                     ###
-############################################################
-
-weapon_type_psionic: "§YPsionic§!"
-weapon_type_nanite: "§YNanite§!"
-weapon_type_biological: "§YBiological§!"
-
-esc_small: "Small"
-esc_medium: "Medium"
-esc_large: "Large"
-
-############################################################
-###                        Deposits                      ###
-############################################################
-
-d_esc_large_borehole_1: "Abyssal Borehole"
-d_esc_large_borehole_1_desc: "A giant borehole that allows for extraction of precious resources straight from the planet's mantle and core."
-
-############################################################
-###                         Edicts                       ###
-############################################################
-
-edict_esc_mod_control_edict: "ESC NEXT Control Panel"
-edict_esc_mod_control_edict_desc: "Open ESC NEXT options menu"
-
-############################################################
-###                       Decisions                      ###
-############################################################
-
-decision_esc_mod_menu: "$edict_esc_mod_control_edict$"
-decision_esc_mod_menu_desc: "$edict_esc_mod_control_edict_desc$"
-
-decision_esc_clone_dragon: "Clone Ether Drake Hatchling"
-decision_esc_clone_dragon_desc: "Our scientific staff will attempt to clone the Ether Drake in order to produce a younger and more malleable drake under our control."
-
-decision_esc_clone_sky_dragon: "Clone Sky Dragon Hatchling"
-decision_esc_clone_sky_dragon_desc: "Our scientific staff will attempt to clone the Sky Dragon in order to produce a young drake that will serve us."
-
-############################################################
-###                       Modifiers                      ###
-############################################################
-
-mod_weapon_type_psionic_weapon_damage_mult: "Psionic Weapon Damage"
-mod_weapon_type_psionic_weapon_fire_rate_mult: "Psionic Weapon Attack Speed"
-mod_weapon_type_nanite_weapon_damage_mult: "Nanite Weapon Damage"
-mod_weapon_type_nanite_weapon_fire_rate_mult: "Nanite Weapon Attack Speed"
-mod_weapon_type_biological_weapon_damage_mult: "Biological Weapon Damage"
-mod_weapon_type_biological_weapon_fire_rate_mult: "Biological Weapon Attack Speed"
-
-############################################################
-###                         Armies                       ###
-############################################################
-
-esc_psionic_avatar_army: "§MPsionic Avatar§!"
-esc_psionic_avatar_army_desc: "An extremely-powerful psionic entity summoned to fight on the behalf of those inhabiting the material plane."
-
-esc_erasure_squad_army: "Erasure Squad"
-esc_erasure_squad_army_desc: "Special forces, armed with weapons capable of erasing their enemies from reality."
-
-esc_eradicator_droids_army: "Eradicator Droid Army"
-esc_eradicator_droids_army_desc: "Advanced mechanical warriors, equipped with weapons capable of erasing their enemies from reality."
-
-esc_tesla_droids_army: "Tesla Droids"
-esc_tesla_droids_army_desc: "Machine army that utilizes powerful tesla weapons to fry its enemies alive."
-
-esc_tesla_troopers_army: "Tesla Troopers"
-esc_tesla_troopers_army_desc: "Sodiers encased in heavy non-conducting armor and wielding powerful tesla weapons."
-
-esc_biohorror_army: "Bio-Horror Horde"
-esc_biohorror_army_desc: "An assault unit consisting of remotely-guided genetically-engineered attack beasts."
-
-############################################################
-###              Starbase Buildings & Modules            ###
-############################################################
-
-sm_esc_starbase_reactor: "Starbase Reactor"
-sm_esc_starbase_reactor_desc: "A massive zero-point reactor capable of providing all the power needed by gigantic space installations."
-
-sm_esc_starbase_dm_orbital_plant: "Dark Matter Orbital Plant"
-sm_esc_starbase_dm_orbital_plant_desc: "A large facility within the starbase, dedicated to production of £sr_dark_matter£ §Y$sr_dark_matter$§!. While it can function anywhere, it will be most effective if there is a natural source of £sr_dark_matter£ §Y$sr_dark_matter$§!, such as a black hole, nearby."
-sm_esc_starbase_zro_orbital_plant: "Zro Orbital Plant"
-sm_esc_starbase_zro_orbital_plant_desc: "A specialized facility to produce synthetic £sr_zro£ §Y$sr_zro$§!. Its efficiency can be boosted if there is a source of natural £sr_zro£ §Y$sr_zro$§! nearby."
-sm_esc_starbase_nanite_factory: "Nanite Orbital Plant"
-sm_esc_starbase_nanite_factory_desc: "A orbital installation for industrial-scale production of £nanites£ §Y$nanites$§!. Having a natural source of £nanites£ §Y$nanites$§! nearby will, undoubtedly, increase it's productivity."
-
-############################################################
-###                   Special Projects                   ###
-############################################################
-
-### Machines learn about psionics
-esc_special_projects.1001.name: "Organics Display Strange Abilities"
-esc_special_projects.1001.desc: "A number of organics existing within our sphere of influence are displaying strange abilities. An investigation into the phenomenon reveals that these abilities are collectively referred to as §MPsionics§! and represent a form of thought-driven energy manipulation. Our $job_calculator$ drones think that these abilities can be refined and turned into a viable weapon for our fleets. Shall they be given a go-ahead with this research avenue?"
-esc_special_projects.1001.a: "We must learn all that we can about this!"
-esc_special_projects.1001.b: "We have better things to research"
-
-ESC_MACHINE_EMPIRE_PSIONICS: "What is §MPsionics§!?"
-ESC_MACHINE_EMPIRE_PSIONICS_DESC: "We must research these strange abilities - §MPsionics§! - that a number of organics within our sphere of influence display. The Guiding Intelligence believes that thought-driven energy manipulation that lays at the core of §MPsionic§! abilities can be refined and turned into viable weapon that can be used by our fleets. Such weapons that seemingly defy known laws of physics, should they prove to be possible, will give us a considerable advantage against our foes."
-
-esc_special_projects.1002.name: "§MPsionics§! Research Complete!"
-esc_special_projects.1002.desc: "After much research and experimentation, our $job_calculator$ drones were able to find a way to control and enhance §MPsionic§! abilities displayed by organics. This should allow us to create weapons for our ships that have unique properties such as an ability to penetrate seemingly endless number of armor layers. §MPsionic§! weapons, however, come with the downside of requiring a number of organics aboard to function and a substance known as £sr_zro£ §Y$sr_zro$§! in order to maximize potency their abilities."
-
-### Automated Dreadnought computers
-esc_special_projects.2002.name: "Automated Dreadnought Observation: Suggestion"
-esc_special_projects.2002.desc: "Automated Dreadnought is a fascinating piece of precursor technology and while it doesn't look like it will let us study its design up close, we can still learn a lot by observing its movements as it forever patrols the system. Perhaps, if we can replicate the logic behind its combat computers, it can be applied to our own ships, greatly boosting their abilities."
-esc_special_projects.2002.option.a: "We will learn what we can"
-esc_special_projects.2002.option.b: "We don't need to copy from this piece of junk!"
-
-ESC_DREADNOUGHT_OBSERVATION: "Automated Dreadnought Observation"
-ESC_DREADNOUGHT_OBSERVATION_DESC: "While it doesn't look like combat systems of the ancient Automated Dreadnought possess any form of true intelligence, they are still extremely advanced and if we can replicate their logic for out own ships, this will without a doubt greatly increase strength of our fleets."
-
-esc_special_projects.2003.name: "Automated Dreadnought Obervation: Report"
-esc_special_projects.2003.desc: "With the data our observation team has collected on the Automated Dreadnought and its combat behavior, our science department is positive that they will be able to replicate at least some of apparent logic behing its combat computers, adapted to our own ship designs, of course."
-
-### Nanite Thought Matrix computers
-esc_special_projects.3002.name: "Nanite Thought Matrix Development"
-esc_special_projects.3002.desc: "With our advancements in the fields of nanotechnology and AI some of scientists began contemplating the creation of next generation of AI, one that run on nanite substrate and are capable of mimicing organic minds to an unprecedent degree. Our navy has already expressed interest in adopting such AI for fleet command and are willing to sponsor the research."
-esc_special_projects.3002.option.a: "Give researchers a go ahead"
-esc_special_projects.3002.option.b: "We have no need of such technology!"
-
-ESC_NANITE_THOUGHT_MATRIX_DEVELOP: "Nanite Thought Matrix Development"
-ESC_NANITE_THOUGHT_MATRIX_DEVELOP_DESC: "According to some research, an AI running on nanite substrate can be made to perfectly replicate organic thought processes, except with incredible speed and precision of a machine. Such AI, should it ever be developed, would revolutionize many fields, and the admiralty board has displayed a great interest in adopting such AI for the purposes of space warfare. They say that having such an AI on our ships will give them a significant edge over our enemies who are still using simplistic and outdated AI."
-
-esc_special_projects.3003.name: "Intact Tempest Ship Recovered"
-esc_special_projects.3003.desc: "Following a recent battle, we were able to recover a mostly-intact ship belonging to an extragalctic threat known as the Gray Tempest. The preliminary report of our scientists indicates that the ship was controlled by an AI running on a nanite substrate set to mimic an organic mind of some long-extict species. According to the same report, we might be able to replicate the technology behind this advanced AI and use it to improve combat capabilities of our own ships."
-esc_special_projects.3003.option.a: "Give researchers a go ahead"
-esc_special_projects.3003.option.b: "We have no need of such technology!"
-
-ESC_NANITE_THOUGHT_MATRIX_RENGINEER: "Nanite Thought Matrix Reverse Engineering"
-ESC_NANITE_THOUGHT_MATRIX_RENGINEER_DESC: "Having recovered a mostly-intact Tempest ship, our scientists have discovered that they are controlled by an advanced form of AI running on a nanite substrate set to mimic an organic mind of some long-extinct species. Having witnessed the power of those ships, it is only natural that we want to copy it for our own fleets."
-
-esc_special_projects.3004.name: "Nanite Thought Matrix"
-esc_special_projects.3004.desc: "Our researchers have successfully developed the necessary technologies to create a nanite-based AI with abilities to perfectly mimic organic minds. This breakthrough marks the dawn of a new era in our technological development."
-
-############################################################
-###                     Event Messages                   ###
-############################################################
-
-esc_events.2000.title: "Ether Drake Takes Flight!"
-esc_events.2000.desc: "Our efforts to clone an Ether Drake were successful and a young hatchling was produced. The creature is reasonably docile when in presence of our scientific staff and, according to them, can be guided to lend its already-considerable power to our cause."
-
-esc_events.2002.title: "Sky Dragon Takes Flight!"
-esc_events.2002.desc: "Our efforts to clone a Sky Dragon were successful and a young hatchling was produced. The creature is reasonably docile when in presence of our scientific staff and, according to them, can be guided to lend its already-considerable power to our cause."
-
-esc_events.3001.name: "Mineral Riches"
-esc_events.3001.desc: "Miners on §Y[Root.GetName]§! report that an exceptionally valuable cluster of £minerals£ §Y$minerals$§! had been extracted from the planet's mantle."
-
-esc_events.3002.name: "Molten Alloys"
-esc_events.3002.desc: "Miners on §Y[Root.GetName]§! report that a large amount of molten £alloys£ §Y$alloys$§! had been recently extracted from the planet's core, alongside with the usual minerals."
-
-esc_events.3003.name: "Crystalline Gift"
-esc_events.3003.desc: "Miners on §Y[Root.GetName]§! report that several large clusters of valuable £rare_crystals£ §Y$rare_crystals$§! had been extracted from the planet's mantle."
-
-esc_events.3004.name: "Molten Motes"
-esc_events.3004.desc: "Miners on §Y[Root.GetName]§! report that their operations have extracted a large amount of £volataile_motes£ §Y$volatile_motes$§! that were dissolved in molten rocks of the planet's mantle."
-
-esc_events.3005.name: "Exotic Gases Pocket"
-esc_events.3005.desc: "Miners on §Y[Root.GetName]§! report that a pocket of £exotic_gases£ §Y$exotic_gases$§! had been located within the planet's mantle. Extraction was successful and yielded large amounts of valuable resources."
-
-############################################################
-###                    Static Modifiers                  ###
-############################################################
-
-# ai research speed boost: easy
-esc_ai_early_game_science_boost_easy: "Exta Ship Components AI research boost (Easy Scaling)"
-esc_ai_early_game_science_boost_easy_desc: "AI empires are granted scaling bonus to research speed:\n+§G10§!% in the early game\n+§G25§!% during the mid-game\n+§G50§!% during the late game"
-esc_ai_mid_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
-esc_ai_mid_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
-esc_ai_end_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
-esc_ai_end_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
-esc_ai_science_boost_easy_static: "Exta Ship Components AI research boost (Easy Static)"
-esc_ai_science_boost_easy_static_desc: "AI empires are granted +§G25§!% research speed bonus throughout the whole game."
-
-# ai research speed boost: moderate
-esc_ai_early_game_science_boost_moderate: "Exta Ship Components AI research boost (Moderate Scaling)"
-esc_ai_early_game_science_boost_moderate_desc: "AI empires are granted scaling bonus to research speed:\n+§G25§!% in the early game\n+§G50§!% during the mid-game\n+§G100§!% during the late game"
-esc_ai_mid_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
-esc_ai_mid_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
-esc_ai_end_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
-esc_ai_end_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
-esc_ai_science_boost_moderate_static: "Exta Ship Components AI research boost (Moderate Static)"
-esc_ai_science_boost_moderate_static_desc: "AI empires are granted +§G50§!% research speed bonus throughout the whole game."
-
-# ai research speed boost: challenging
-esc_ai_early_game_science_boost_challenging: "Exta Ship Components AI research boost (Challenging Scaling)"
-esc_ai_early_game_science_boost_challenging_desc: "AI empires are granted scaling bonus to research speed:\n+§G50§!% in the early game\n+§G100§!% during the mid-game\n+§G150§!% during the late game"
-esc_ai_mid_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
-esc_ai_mid_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
-esc_ai_end_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
-esc_ai_end_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
-esc_ai_science_boost_challenging_static: "Exta Ship Components AI research boost (Challenging Static)"
-esc_ai_science_boost_challenging_static_desc: "AI empires are granted +§G100§!% research speed bonus throughout the whole game."
-
-# ai resource boost
-esc_ai_nanites_boost: "AI Nanites boost"
-esc_ai_nanites_boost_desc: "Monthly £nanites£ §Y$nanites$§!."
-
-esc_ai_zro_boost: "AI Zro boost"
-esc_ai_zro_boost_desc: "Monthly £sr_zro£ §Y$sr_zro$§!."
-
-esc_ai_dark_matter_boost: "AI Dark Matter boost"
-esc_ai_dark_matter_boost_desc: "Monthly £sr_dark_matter£ §Y$sr_dark_matter$§!."
-
-############################################################
-###                         Flags                        ###
-############################################################
-
-ESC_COUNTRY_FLAG_drake_clone_requested: "Ether Drake Hatchling Cloning in Progress"
-
-############################################################
-###                    Dummy ship sizes                  ###
-############################################################
-
-esc_dummy_strike_cruiser: "Dummy Strike Cruiser"
-esc_dummy_strike_cruiser_desc: "This is a dummy ship_size used as a way around the issues with size_restriction failing to restrict components if the list of allowed ship_sizes contains no valid entries. §HYOU SHOULD NOT BE SEEING THIS§Y!!"
-esc_dummy_strike_cruiser_plural: "Dummy Strike Cruisers"
-
-esc_dummy_battle_cruiser: "Dummy Battle Cruiser"
-esc_dummy_battle_cruiser_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_battle_cruiser_plural: "Dummy Battle Cruisers"
-
-esc_dummy_carrier: "Dummy Carrier"
-esc_dummy_carrier_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_carrier_plural: "Dummy Carriers"
-
-esc_dummy_dreadnought: "Dummy Dreadnought"
-esc_dummy_dreadnought_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_dreadnought_plural: "Dummy Dreadnoughts"
-
-esc_dummy_flagship: "Dummy Flagship"
-esc_dummy_flagship_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_flagship_plural: "Dummy Flagships"
-
-esc_dummy_scx_dreadnought: "Dummy Dreadnought"
-esc_dummy_scx_dreadnought_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_scx_dreadnought_plural: "Dummy Dreadnoughts"
-
-esc_dummy_military_platform: "Dummy Defense Platform"
-esc_dummy_military_platform_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_military_platform_plural: "Dummy Defense Platforms"
-
-esc_dummy_starbase: "Dummy Starbase"
-esc_dummy_starbase_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_starbase_plural: "Dummy Starbases"
-
-esc_dummy_juggernaut: "Dummy Jugernaut"
-esc_dummy_juggernaut_desc: "$esc_dummy_strike_cruiser_desc$"
-esc_dummy_juggernaut_plural: "Dummy Juggernauts"
+ esc_next_name_id: "ESC·§YNEXT§!"
+ weapon_type_psionic: "§Y灵能§!"
+ weapon_type_nanite: "§Y纳米机械§!"
+ weapon_type_biological: "§Y生物§!"
+ esc_small: "小型"
+ esc_medium: "中型"
+ esc_large: "大型"
+ d_esc_large_borehole_1: "深渊钻井"
+ d_esc_large_borehole_1_desc: "一个巨大的钻孔，可以直接从星球的地幔和地核提取珍贵的资源。"
+ edict_esc_mod_control_edict: "ESC·NEXT 控制面板"
+ edict_esc_mod_control_edict_desc: "打开ESC·NEXT选项菜单"
+ decision_esc_mod_menu: "$edict_esc_mod_control_edict$"
+ decision_esc_mod_menu_desc: "$edict_esc_mod_control_edict_desc$"
+ decision_esc_clone_dragon: "克隆以太龙雏龙"
+ decision_esc_clone_dragon_desc: "我们的科研人员会尝试克隆以太龙，以便在我们的控制下产生更年轻、更有可塑性的巨龙。"
+ mod_weapon_type_psionic_weapon_damage_mult: "灵能武器伤害"
+ mod_weapon_type_psionic_weapon_fire_rate_mult: "灵能武器攻击速度"
+ mod_weapon_type_nanite_weapon_damage_mult: "纳米武器伤害"
+ mod_weapon_type_nanite_weapon_fire_rate_mult: "纳米武器攻击速度"
+ mod_weapon_type_biological_weapon_damage_mult: "生物武器伤害"
+ mod_weapon_type_biological_weapon_fire_rate_mult: "生物武器攻击速度"
+ esc_psionic_avatar_army: "§M灵能化身§!"
+ esc_psionic_avatar_army_desc: "极其强大的灵能实体，受到召唤，为那些物质界居民的利益而战。"
+ esc_erasure_squad_army: "抹杀小组"
+ esc_erasure_squad_army_desc: "配备了能够将敌人从现实中抹灭的武器的特殊部队。"
+ esc_eradicator_droids_army: "智能人抹杀军"
+ esc_eradicator_droids_army_desc: "配备了能够将敌人从现实中抹灭的武器的先进机械战士。"
+ esc_tesla_droids_army: "特斯拉机器人"
+ esc_tesla_droids_army_desc: "利用强大的特斯拉武器将敌人活生生烤焦的机器军队。"
+ esc_tesla_troopers_army: "特斯拉士兵"
+ esc_tesla_troopers_army_desc: "被沉重的绝缘装甲包裹的士兵，手持强大的特斯拉武器。"
+ esc_biohorror_army: "生物惊惧群"
+ esc_biohorror_army_desc: "一个由远程操控的基因工程突击怪兽组成的突击队。"
+ sm_esc_starbase_reactor: "恒星基地反应堆"
+ sm_esc_starbase_reactor_desc: "一个巨大的零点反应堆，能够为巨型太空设施提供所需的全部能源。"
+ sm_esc_starbase_dm_orbital_plant: "暗物质轨道工厂"
+ sm_esc_starbase_dm_orbital_plant_desc: "一个位于恒星基地内部的大型设施，专门用于生产£sr_dark_matter£§Y$sr_dark_matter$§!。虽然它在任何地方都能运作，但若是附近存在天然的£sr_dark_matter£§Y$sr_dark_matter$§!源，例如一个黑洞，其效率会达到最高。"
+ sm_esc_starbase_zro_orbital_plant: "泽洛轨道工厂"
+ sm_esc_starbase_zro_orbital_plant_desc: "专门用于生产合成£sr_zro£§Y$sr_zro$§!的设施。如果附近存在天然£sr_zro£§Y$sr_zro$§!源，则其效率会被增强。"
+ sm_esc_starbase_nanite_factory: "纳米机械轨道工厂"
+ sm_esc_starbase_nanite_factory_desc: "用于£nanites£§Y$nanites$§!的工业规模生产的轨道设施。若是附近存在天然的£nanites£§Y$nanites$§!源，其生产率无疑会获得提升。"
+ esc_special_projects.1001.name: "有机体展现异能"
+ esc_special_projects.1001.desc: "在我们影响范围内存在的一些有机体正显现出奇怪的能力。对这一现象的调查显示，这些能力被统称为§M灵能§!，其代表一种由意念驱动的能量操纵方式。我们的$job_calculator$子个体认为这些能力可以被改进，并转化为供我们舰队使用的可靠武器。是否应该批准它们对这方面进行研究？"
+ esc_special_projects.1001.a: "我们必须尽我们所能学习这方面的知识！"
+ esc_special_projects.1001.b: "我们还有更重要的研究要做。"
+ ESC_MACHINE_EMPIRE_PSIONICS: "什么是§M灵能§!？"
+ ESC_MACHINE_EMPIRE_PSIONICS_DESC: "我们必须对势力范围内的一些有机体所展现的这些异能——§M灵能§!——进行研究。引导智能认为，精神驱动的能量操纵是§M灵能§!的核心，可以被提炼出来，并转化为我方舰队能够使用的武器。这种看似违反物理规律的武器——一旦被证实为可行——将使我们获得相较于敌人的巨大优势。"
+ esc_special_projects.1002.name: "§M灵能§!研究完毕！"
+ esc_special_projects.1002.desc: "经过大量的研究和实验，我们的$job_calculator$子个体找到了一种方法来控制和加强有机体所展示的§M灵能§!能力。这将使我们能够为我们的飞船创造出具有独特属性——比如穿透看似无尽的装甲的能力——的武器。然而§M灵能§!武器有一个缺点，那就是需要一些有机体在船上才能发挥作用，并且需要一种被称为£sr_zro£§Y$sr_zro$§!的物质以使其威力最大化。"
+ esc_special_projects.2002.name: "自动无畏舰观测：建议"
+ esc_special_projects.2002.desc: "自动无畏舰是一项迷人的技术结晶。尽管看起来它不会允许我们靠近研究，但是，当它在星系中进行永恒的巡航时，通过观察它的移动，我们仍然可以学到许多东西。或许，如果我们能复现它的火力计算机逻辑，这就可以应用到我们自己的舰船之上。"
+ esc_special_projects.2002.option.a: "我们会尽我们所能。"
+ esc_special_projects.2002.option.b: "我们不需要抄袭一块废铁！"
+ ESC_DREADNOUGHT_OBSERVATION: "自动无畏舰观测"
+ ESC_DREADNOUGHT_OBSERVATION_DESC: "尽管古代自动无畏舰的战斗系统看上去并不具备任何形式的真智力，但它们仍然极其先进。如果我们能够把它们的逻辑复制到我们自己的舰船上，这定会大幅增强我们舰队的实力。"
+ esc_special_projects.2003.name: "自动无畏舰观测：报告"
+ esc_special_projects.2003.desc: "有了我们的观测团队从自动无畏舰及其战斗行为中收集到的数据，研究部门确定他们至少可以复现它的火力计算机的一些明显逻辑，当然，适用于我们自己的舰船设计。"
+ esc_special_projects.3002.name: "纳米机械思维矩阵研发"
+ esc_special_projects.3002.desc: "随着我们在AI和纳米技术领域的进步，一些科学家开始考虑创造下一代AI——这种AI会在纳米机械基质上运行，能够以空前的高度对有机思维进行模拟。我们的海军有兴趣在舰队指挥中应用这样的AI，愿意为这项研究提供资金支持。"
+ esc_special_projects.3002.option.a: "给予研究许可。"
+ esc_special_projects.3002.option.b: "我们不需要这样的技术！"
+ ESC_NANITE_THOUGHT_MATRIX_DEVELOP: "纳米机械思维矩阵研发"
+ ESC_NANITE_THOUGHT_MATRIX_DEVELOP_DESC: "根据一些近期的论文，我们可以使运行在纳米机械基质上的AI对有机思维过程进行完美复制，除了机械那难以置信的速度和精度。这样的AI——如果被研制出来——将会为许多领域带来变革，而海军部已经对将这种AI用于太空作战用途表现出了很大的兴趣。他们说，在我们的舰船上配置这种AI，将会使他们获得更大的优势，相较于那些仍在使用简单、落伍的AI的敌人。"
+ esc_special_projects.3003.name: "回收到完整“灰色风暴”舰船"
+ esc_special_projects.3003.desc: "在最近的一次战斗之后，我们成功回收了一艘近乎完好的舰船，属于一个名为“灰色风暴”的系外威胁。我们科学家的初步报告表明，这艘舰船是由一个运行在纳米机械基质上的AI控制的，它模拟了一些长期存在的物种的有机思维。根据同样的报告，我们有可能复制这个先进AI背后的技术，利用它来增强我们自己的舰船的作战能力。"
+ esc_special_projects.3003.option.a: "给予研究许可。"
+ esc_special_projects.3003.option.b: "我们不需要这样的技术！"
+ ESC_NANITE_THOUGHT_MATRIX_RENGINEER: "纳米机械思维矩阵逆向工程"
+ ESC_NANITE_THOUGHT_MATRIX_RENGINEER_DESC: "在回收了一艘近乎完好的“灰色风暴”舰船之后，我们的科学家发现它们由一种先进AI控制，这种AI在纳米机械的基底上运行，可以对有机思维进行模拟。在目睹了这些舰船的威力之后，我们自然也想把它复制给我们自己的舰队。"
+ esc_special_projects.3004.name: "纳米机械思维矩阵"
+ esc_special_projects.3004.desc: "我们的研究人员成功开发出了基于纳米机械的AI——能够完美模拟有机思维——所需的技术。我们距离新时代的曙光只差一步。"
+ esc_events.2000.title: "以太巨龙腾飞！"
+ esc_events.2000.desc: "我们克隆以太龙的尝试非常成功，已经产生了一头年幼的雏龙。当我们的科研人员在场时，这个生物相当温顺。据他们所言，这头雏龙可以受到教导，将它那已经相当庞大的力量贡献给我们的事业。"
+ esc_events.3001.name: "矿物财富"
+ esc_events.3001.desc: "§Y[Root.GetName]§!的采矿者报告说，从行星地幔中开采出了一团非常有价值的£minerals£§Y$minerals$§!。"
+ esc_events.3002.name: "熔融合金"
+ esc_events.3002.desc: "§Y[Root.GetName]§!的采矿者报告说，除了通常的矿物以外，近期还从行星地核中开采出了大量的熔化的£alloys£§Y$alloys$§!。"
+ esc_events.3003.name: "水晶赠礼"
+ esc_events.3003.desc: "§Y[Root.GetName]§!的采矿者报告说，从行星地幔中开采出了几大簇宝贵的£rare_crystals£§Y$rare_crystals$§!。"
+ esc_events.3004.name: "熔化微粒"
+ esc_events.3004.desc: "§Y[Root.GetName]§!的采矿者报告说，他们的采矿作业开采出了大量的£volataile_motes£§Y$volatile_motes$§!，它们溶解在星球地幔的熔化岩石中。"
+ esc_events.3005.name: "异星气穴"
+ esc_events.3005.desc: "§Y[Root.GetName]§!的采矿者报告说，有一个存在于星球地幔中的£exotic_gases£§Y$exotic_gases$§!穴。开采获得成功，出产了大量的宝贵资源。"
+ esc_ai_early_game_science_boost_easy: "ESC的AI研究加成（容易|动态）"
+ esc_ai_early_game_science_boost_easy_desc: "AI帝国的研究速度会获得动态加成：\n游戏早期§G+10%§!\n游戏中期§G+25%§!\n游戏晚期§G+50%§!"
+ esc_ai_mid_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
+ esc_ai_mid_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
+ esc_ai_end_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
+ esc_ai_end_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
+ esc_ai_science_boost_easy_static: "ESC的AI研究加成（容易|静态）"
+ esc_ai_science_boost_easy_static_desc: "整个游戏过程中，AI帝国会获得研究速度§G+25%§!的加成。"
+ esc_ai_early_game_science_boost_moderate: "ESC的AI研究加成（适度|动态）"
+ esc_ai_early_game_science_boost_moderate_desc: "AI帝国的研究速度会获得动态加成：\n游戏早期§G+25%§!\n游戏中期§G+50%§!\n游戏晚期§G+100%§!"
+ esc_ai_mid_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
+ esc_ai_mid_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
+ esc_ai_end_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
+ esc_ai_end_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
+ esc_ai_science_boost_moderate_static: "ESC的AI研究加成（适度|静态）"
+ esc_ai_science_boost_moderate_static_desc: "整个游戏过程中，AI帝国会获得研究速度§G+50%§!的加成。"
+ esc_ai_early_game_science_boost_challenging: "ESC的AI研究加成（挑战性|动态）"
+ esc_ai_early_game_science_boost_challenging_desc: "AI帝国的研究速度会获得动态加成：\n游戏早期§G+50%§!\n游戏中期§G+100%§!\n游戏晚期§G+150%§!"
+ esc_ai_mid_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
+ esc_ai_mid_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
+ esc_ai_end_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
+ esc_ai_end_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
+ esc_ai_science_boost_challenging_static: "ESC的AI研究加成（挑战性|静态）"
+ esc_ai_science_boost_challenging_static_desc: "整个游戏过程中，AI帝国会获得研究速度§G+100%§!的加成。"
+ esc_economy_plan: "ESC NEXT economic plan"
+ esc_ai_nanites_boost: "AI的纳米机械增益"
+ esc_ai_nanites_boost_desc: "每月£nanites£§Y$nanites$§!。"
+ esc_ai_zro_boost: "AI的泽洛尘增益"
+ esc_ai_zro_boost_desc: "每月£sr_zro£§Y$sr_zro$§!。"
+ esc_ai_dark_matter_boost: "AI的暗物质增益"
+ esc_ai_dark_matter_boost_desc: "每月£sr_dark_matter£§Y$sr_dark_matter$§!。"
+ esc_dummy_strike_cruiser: "Dummy Strike Cruiser"
+ esc_dummy_strike_cruiser_desc: "This is a dummy ship_size used as a way around the issues with size_restriction failing to restrict components if the list of allowed ship_sizes contains no valid entries. §HYOU SHOULD NOT BE SEEING THIS§Y!!"
+ esc_dummy_strike_cruiser_plural: "Dummy Strike Cruisers"
+ esc_dummy_battle_cruiser: "Dummy Battle Cruiser"
+ esc_dummy_battle_cruiser_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_battle_cruiser_plural: "Dummy Battle Cruisers"
+ esc_dummy_carrier: "Dummy Carrier"
+ esc_dummy_carrier_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_carrier_plural: "Dummy Carriers"
+ esc_dummy_dreadnought: "Dummy Dreadnought"
+ esc_dummy_dreadnought_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_dreadnought_plural: "Dummy Dreadnoughts"
+ esc_dummy_flagship: "Dummy Flagship"
+ esc_dummy_flagship_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_flagship_plural: "Dummy Flagships"
+ esc_dummy_scx_dreadnought: "Dummy Dreadnought"
+ esc_dummy_scx_dreadnought_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_scx_dreadnought_plural: "Dummy Dreadnoughts"
+ esc_dummy_military_platform: "Dummy Defense Platform"
+ esc_dummy_military_platform_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_military_platform_plural: "Dummy Defense Platforms"
+ esc_dummy_starbase: "Dummy Starbase"
+ esc_dummy_starbase_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_starbase_plural: "Dummy Starbases"
+ esc_dummy_juggernaut: "Dummy Jugernaut"
+ esc_dummy_juggernaut_desc: "$esc_dummy_strike_cruiser_desc$"
+ esc_dummy_juggernaut_plural: "Dummy Juggernauts"
+ decision_esc_clone_sky_dragon: "克隆天龙雏龙"
+ decision_esc_clone_sky_dragon_desc: "我们的科研人员会尝试克隆天龙，以便在我们的控制下产生更年轻、更有可塑性的巨龙。"
+ esc_events.2002.title: "天龙腾飞！"
+ esc_events.2002.desc: "我们克隆天龙的尝试非常成功，已经产生了一头年幼的雏龙。当我们的科研人员在场时，这个生物相当温顺。据他们所言，这头雏龙可以受到教导，将它那已经相当庞大的力量贡献给我们的事业。"
+ ESC_COUNTRY_FLAG_drake_clone_requested: "以太龙克隆正在进行中"
