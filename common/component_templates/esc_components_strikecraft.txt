@@ -808,7 +808,10 @@ strike_craft_component_template = {
 
 	# only megacorps may use this component
 	valid_for_country = {
-		is_megacorp = yes
+		OR = {
+			is_megacorp = yes
+			has_valid_civic = civic_corporate_dominion
+		}
 	}
 
 	ai_weight = { weight = 1 }
@@ -871,7 +874,10 @@ strike_craft_component_template = {
 
 	# only megacorps may use this component
 	valid_for_country = {
-		is_megacorp = yes
+		OR = {
+			is_megacorp = yes
+			has_valid_civic = civic_corporate_dominion
+		}
 	}
 
 	ai_weight = { weight = 1 }
