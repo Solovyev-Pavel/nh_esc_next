@@ -36,7 +36,7 @@ utility_component_template = {
 		# Playable fallen empire ships
 		@PFE_Battlecruiser @PFE_Titan
 		# other...
-		@MISC_Ultrajuggernaut @MISC_Dreadnought_A }
+		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = artillery
 	prerequisites = { "esc_tech_dreadnought_computer" }
@@ -167,7 +167,7 @@ utility_component_template = {
 		# Playable fallen empire ships
 		@PFE_Escort @PFE_Battlecruiser
 		# other...
-		@MISC_Dreadnought_A @MISC_Ultrajuggernaut }
+		@MISC_Dreadnought_A @MISC_Ultrajuggernaut @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = line
 	prerequisites = { "esc_tech_dreadnought_computer" }
@@ -343,7 +343,7 @@ utility_component_template = {
 		# Playable fallen empire ships
 		@PFE_Battlecruiser @PFE_Titan
 		# other...
-		@MISC_Ultrajuggernaut @MISC_Dreadnought_A }
+		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = artillery
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
@@ -474,7 +474,7 @@ utility_component_template = {
 		# Playable fallen empire ships
 		@PFE_Escort @PFE_Battlecruiser
 		# other...
-		@MISC_Dreadnought_A @MISC_Ultrajuggernaut }
+		@MISC_Dreadnought_A @MISC_Ultrajuggernaut @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = line
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
@@ -636,7 +636,9 @@ utility_component_template = {
 		# EAC ships
 		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2
 		# Playable fallen empire ships
-		@PFE_Escort }
+		@PFE_Escort
+		# other...
+		@WACO_EmergencyShip }
 	component_set = "combat_computers"
 	ship_behavior = swarm
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
