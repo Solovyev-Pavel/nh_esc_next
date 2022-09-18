@@ -1515,6 +1515,29 @@ utility_component_template = {
 	}
 }
 
+# automated dradnought armor
+utility_component_template = {
+	key = ESC_DREADNOUGHT_ARMOR
+	size = large
+	icon = GFX_esc_dreadnought_armor
+	icon_frame = 1
+	hidden = yes
+
+	resources = {
+		category = ship_components
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_dreadnought_str
+	}
+
+	component_set = ESC_DREADNOUGHT_ARMOR
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
 ############################################################
 ##                 ESC : Crystalline Armor                ##
 ############################################################

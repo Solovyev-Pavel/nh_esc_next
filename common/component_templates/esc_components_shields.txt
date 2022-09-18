@@ -365,6 +365,31 @@ utility_component_template = {
 	}
 }
 
+# automated dreadnought
+utility_component_template = {
+	key = ESC_SHIELD_DREADNOUGHT
+	size = large
+	icon = GFX_esc_shields_dreadnought
+	icon_frame = 1
+	power = 0
+	hidden = yes
+
+	resources = {
+		category = ship_components
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+
+	component_set = ESC_SHIELD_DREADNOUGHT
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
 ############################################################
 ##            ESC : Cyclonic Shield Components            ##
 ############################################################
