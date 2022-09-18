@@ -3,9 +3,11 @@
 # ############################################################
 
 @rare_resource_target = 4
+@rare_resource_limit = 50
 @energy_target = 25
 @minerals_target = 30
 @alloy_target = 10
+@fleet_cap_alloy_target = 50
 @machine_empire_alloy_target = 15
 @pops_target = 9000
 @food_target = 10
@@ -162,6 +164,21 @@ esc_economy_plan = {
 
 	subplan = {
 		scaling = yes
+		set_name = "naval cap scaling"
+		potential = {
+			num_repeatable_techs > 0 #make sure it isn't messing up the earlier development (this is for the late game)
+			has_monthly_income = { resource = energy value > @energy_target }
+			has_monthly_income = { resource = minerals value > @minerals_target }
+			has_monthly_income = { resource = alloys value > @fleet_cap_alloy_target }
+			used_naval_capacity_percent > 0.95
+			used_starbase_capacity_percent >= 1
+		}
+
+		naval_cap = 50
+	}
+
+	subplan = {
+		scaling = yes
 		set_name = "general CG scaling"
 		potential = {
 			country_uses_consumer_goods = yes
@@ -242,17 +259,35 @@ esc_economy_plan = {
 	subplan = {
 		optional = yes
 		scaling = yes
-		set_name = "Scaling rare resources"
+		set_name = "Scaling exotic gases"
 
 		potential = {
-			always = yes
+			has_monthly_income = { resource = exotic_gases value < @rare_resource_limit }
 		}
 
-		income = {
-			exotic_gases = @scaling_rare_resource_target
-			volatile_motes = @scaling_rare_resource_target
-			rare_crystals = @scaling_rare_resource_target
+		income = { exotic_gases = @scaling_rare_resource_target }
+	}
+	subplan = {
+		optional = yes
+		scaling = yes
+		set_name = "Scaling volatile motes"
+
+		potential = {
+			has_monthly_income = { resource = volatile_motes value < @rare_resource_limit }
 		}
+
+		income = { volatile_motes = @scaling_rare_resource_target }
+	}
+	subplan = {
+		optional = yes
+		scaling = yes
+		set_name = "Scaling rare crystals"
+
+		potential = {
+			has_monthly_income = { resource = rare_crystals value < @rare_resource_limit }
+		}
+
+		income = { rare_crystals = @scaling_rare_resource_target }
 	}
 
 	# rare crystals production by empires that can build crystalline weapons
