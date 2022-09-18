@@ -11,8 +11,21 @@ food_expenditure_ships = {
 		always = yes
 	}
 
-	fraction = {
-		weight = 0.125
+	weight = {
+		weight = 0.3
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_amoeba_strike_craft_1
+				has_technology = tech_swarm_strike_craft_1
+				has_technology = esc_tech_biological_weapons
+				has_technology = esc_tech_voidspawn_missile
+			}
+		}
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
 	}
 }
 
@@ -25,12 +38,25 @@ food_expenditure_ship_upgrades = {
 		always = yes
 	}
 
-	fraction = {
-		weight = 0.125
+	weight = {
+		weight = 0.3
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_amoeba_strike_craft_1
+				has_technology = tech_swarm_strike_craft_1
+				has_technology = esc_tech_biological_weapons
+				has_technology = esc_tech_voidspawn_missile
+			}
+		}
+		modifier = {
+			factor = 2
+			is_at_war = yes
+		}
 	}
 }
 
-food_crystal_upkeep_ships = {
+food_expenditure_upkeep_ships = {
 	resource = food
 	type = upkeep
 	category = ships
@@ -39,7 +65,16 @@ food_crystal_upkeep_ships = {
 		always = yes
 	}
 
-	fraction = {
-		weight = 1
+	weight = {
+		weight = 0.15
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_amoeba_strike_craft_1
+				has_technology = tech_swarm_strike_craft_1
+				has_technology = esc_tech_biological_weapons
+				has_technology = esc_tech_voidspawn_missile
+			}
+		}
 	}
 }
