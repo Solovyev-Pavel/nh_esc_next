@@ -459,7 +459,7 @@ ESC_TRIGGER_may_research_crystalline_weapons = {
     OR = {
         has_country_flag = ESC_COUNTRY_FLAG_mod_allow_crystalline_weapons
         has_country_flag = crystals_encountered
-		has_country_flag = discovered_lihtoids_arc_site
+		has_country_flag = lithoid_crystal_plant # was changed in 3.5 for some reason
 		is_lithoid_empire = yes
     }
 }
