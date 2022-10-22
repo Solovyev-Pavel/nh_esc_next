@@ -777,9 +777,9 @@ strike_craft_component_template = {
 	accuracy = @ESC_STRIKECRAFT_accuracy
 	tracking = @ESC_STRIKECRAFT_tracking_bomber
 
-	health = 70
+	health = 50
 	armor = 10
-	shield = 50
+	shield = 70
 
 	speed = @ESC_STRIKECRAFT_speed_5
 	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
@@ -796,6 +796,7 @@ strike_craft_component_template = {
 	component_set = ESC_GRAVITY_BOMBERS
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft }
+	ai_tags = { carrier weapon_role_anti_hull }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {

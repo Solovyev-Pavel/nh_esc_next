@@ -779,9 +779,9 @@ strike_craft_component_template = {
 	accuracy = @ESC_STRIKECRAFT_accuracy
 	tracking = @ESC_STRIKECRAFT_tracking_fighter
 
-	health = 70
+	health = 50
 	armor = 10
-	shield = 50
+	shield = 70
 
 	speed = @ESC_STRIKECRAFT_speed_5
 	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
@@ -798,6 +798,8 @@ strike_craft_component_template = {
 	component_set = ESC_TESLA_INTERDICTOR
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
