@@ -1046,28 +1046,19 @@ ESC_EFFECT_autocannon_tech_check = {
 		}
 		give_technology = { message = no tech = esc_tech_autocannon_x_1 }
 	}
-	## x autocannon 1 >>> supersized autocannons
+	## x autocannon 1 >>> autocannon 5
 	if = {
 		limit = {
 			has_technology = esc_tech_autocannon_x_1
-			NOT = { has_technology = esc_tech_autocannons_l }
+			NOT = { has_technology = esc_tech_autocannon_5 }
 		}
-		give_technology = { message = no tech = esc_tech_autocannons_l }
-	}
-	if = {
-		limit = {
-			has_technology = esc_tech_autocannons_l
-			NOT = { has_technology = esc_tech_autocannons_m }
-		}
-		give_technology = { message = no tech = esc_tech_autocannons_m }
+		give_technology = { message = no tech = esc_tech_autocannon_5 }
 	}
 	## autocannon 5 >>> autocannon 4
-	## x autocannon 1 >>> autocannon 4
 	if = {
 		limit = {
 			OR = {
 				has_technology = esc_tech_autocannon_5
-				has_technology = esc_tech_autocannon_x_1
 			}
 			NOT = { has_technology = esc_tech_autocannon_4 }
 		}
