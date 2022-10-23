@@ -20,7 +20,7 @@ utility_component_template = {
 
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship titan juggernaut
+		cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship titan juggernaut star_eater
 		# NSC ships
 		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_EscortCarrier @NSC_Carrier @NSC_Dreadnought @NSC_Flagship @NSC_ExplorationShip @Freebooters_Flagship
 		# SCX ships
@@ -40,6 +40,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = artillery
 	prerequisites = { "esc_tech_dreadnought_computer" }
+	ai_tags = { artillery energy_torpedoes }
 
 	ship_modifier = {
 		ship_weapon_damage = 0.2
@@ -105,6 +106,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = carrier
 	prerequisites = { "esc_tech_dreadnought_computer" }
+	ai_tags = { carrier }
 
 	ship_modifier = {
 		ship_weapon_damage = 0.2
@@ -171,6 +173,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = line
 	prerequisites = { "esc_tech_dreadnought_computer" }
+	ai_tags = { gunship }
 
 	ship_modifier = {
 		ship_weapon_damage = 0.2
@@ -228,6 +231,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = picket
 	prerequisites = { "esc_tech_dreadnought_computer" }
+	ai_tags = { screen }
 
 	ship_modifier = {
 		ship_weapon_damage = 0.2
@@ -327,7 +331,7 @@ utility_component_template = {
 
 	size_restriction = {
 		# vanilla ship classes
-		destroyer crisis_destroyer offspring_destroyer cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship titan juggernaut
+		destroyer crisis_destroyer offspring_destroyer cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship titan juggernaut star_eater
 		# NSC ships
 		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_EscortCarrier @NSC_Carrier @NSC_Dreadnought @NSC_Flagship @NSC_ExplorationShip @Freebooters_Flagship
 		# SCX ships
@@ -347,6 +351,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = artillery
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
+	ai_tags = { artillery energy_torpedoes }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -412,6 +417,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = carrier
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
+	ai_tags = { carrier }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -478,6 +484,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = line
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
+	ai_tags = { gunship }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -537,6 +544,7 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = picket
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
+	ai_tags = { screen }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -642,11 +650,63 @@ utility_component_template = {
 	component_set = "combat_computers"
 	ship_behavior = swarm
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
+	ai_tags = { gunship brawler }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
 		ship_weapon_damage = 0.15
 		ship_evasion_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 15
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# Nanite Thought Matrix : Torpedo
+utility_component_template = {
+	key = ESC_NANITE_COMPUTER_TORPEDO
+	size = small
+	icon = GFX_esc_nanite_computer_swarm
+	icon_frame = 1
+	power = @ESC_COMPUTER_power_nanite
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_COMPUTER_cost_alloys
+			nanites = @ESC_COMPUTER_cost_special
+		}
+	}
+
+	size_restriction = {
+		# vanilla ship classes
+		frigate crisis_destroyer cruiser offspring_cruiser }
+	component_set = "combat_computers"
+	ship_behavior = swarm
+	prerequisites = { "esc_tech_nanite_thought_matrix" }
+	ai_tags = { explosive }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_evasion_add = 10
+		weapon_type_explosive_weapon_damage_mult = 0.15
 	}
 	modifier = {
 		ship_shield_mult = 0.1
