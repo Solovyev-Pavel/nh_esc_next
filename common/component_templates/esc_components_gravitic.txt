@@ -67,7 +67,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_small"
 	upgrades_to = SMALL_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -123,7 +123,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_medium"
 	upgrades_to = MEDIUM_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -152,6 +152,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -64
 
@@ -179,7 +180,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_large"
 	upgrades_to = LARGE_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield artillery }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -238,7 +239,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -293,7 +294,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -322,6 +323,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -90
 
@@ -348,7 +350,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield artillery }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -377,6 +379,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 138 max = 358 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_G_2
@@ -385,6 +388,7 @@ weapon_component_template = {
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
 	power = -70
 
 	resources = {
@@ -411,7 +415,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	upgrades_to = ESC_GRAVITY_TORPS_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield weapon_role_artillery }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery energy_torpedoes }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -440,6 +444,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 208 max = 442 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_G_2
@@ -448,6 +453,7 @@ weapon_component_template = {
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
 	power = -80
 
 	resources = {
@@ -473,7 +479,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_TORPS_2
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield weapon_role_artillery }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery energy_torpedoes }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -536,11 +542,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_GRAVITY_LANCE_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -599,11 +610,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_GRAVITY_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -662,11 +678,16 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_TITANIC
 	projectile_gfx = "esc_gravity_lance_titanic"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -722,11 +743,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -795,7 +821,7 @@ strike_craft_component_template = {
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_GRAVITY_BOMBERS
 	prerequisites = { "esc_tech_gravity_bombers" }
-	tags = { weapon_type_strike_craft }
+	tags = { weapon_type_strike_craft carrier }
 	ai_tags = { carrier weapon_role_anti_hull }
 
 	# only regular empires and materialist FE may use this component

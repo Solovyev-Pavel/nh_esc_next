@@ -57,12 +57,14 @@ weapon_component_template = {
 	component_set = ESC_FLAK_CANNON_4
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_FLAK_CANNON_5
 
 	ai_weight = {
 		weight = 1
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -105,11 +107,13 @@ weapon_component_template = {
 	component_set = ESC_FLAK_CANNON_5
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 
 	ai_weight = {
 		weight = 1
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -152,12 +156,14 @@ weapon_component_template = {
 	component_set = ESC_POINT_DEFENSE_4
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_POINT_DEFENSE_5
 
 	ai_weight = {
 		weight = 1
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -200,11 +206,13 @@ weapon_component_template = {
 	component_set = ESC_POINT_DEFENSE_5
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 
 	ai_weight = {
 		weight = 1
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -248,12 +256,14 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_JUGGERNAUT_POINT_DEFENSE_1
 
 	ai_weight = {
 		weight = 1
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -297,11 +307,13 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 
 	ai_weight = {
 		weight = 1
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -345,7 +357,7 @@ weapon_component_template = {
 	component_set = ESC_LIGHTSTORM_PD
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 
 	ai_weight = {
 		weight = 1
@@ -355,4 +367,6 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }

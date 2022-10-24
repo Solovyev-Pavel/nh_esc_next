@@ -133,7 +133,7 @@ strike_craft_component_template = {
 	component_set = ESC_BOMBERS_HANGAR_4
 	prerequisites = { "esc_tech_strikecraft_4" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 	upgrades_to = ESC_BOMBERS_HANGAR_5
 
 	ai_weight = { weight = 1 }
@@ -252,7 +252,7 @@ strike_craft_component_template = {
 	component_set = ESC_BOMBERS_HANGAR_5
 	prerequisites = { "esc_tech_strikecraft_5" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 	upgrades_to = ESC_BOMBERS_HANGAR_6
 
 	ai_weight = { weight = 1 }
@@ -384,7 +384,7 @@ strike_craft_component_template = {
 	component_set = ESC_BOMBERS_HANGAR_6
 	prerequisites = { "esc_tech_strikecraft_6" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 
 	# only normal empires may use this component
 	valid_for_country = {
@@ -453,7 +453,7 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_2
 	prerequisites = { "esc_tech_amoeba_2" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 	upgrades_to = ESC_AMOEBA_BIO_3
 
 	ai_weight = {
@@ -519,7 +519,7 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_3
 	prerequisites = { "esc_tech_amoeba_3b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 	upgrades_to = ESC_AMOEBA_BIO_4
 
 	# only regular empires and xenophile FE may use biological components
@@ -594,7 +594,7 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_4
 	prerequisites = { "esc_tech_amoeba_4b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -668,7 +668,7 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_3
 	prerequisites = { "esc_tech_amoeba_3c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 	upgrades_to = ESC_AMOEBA_CYBER_4
 
 	# only regular empires and machine FE may use this component
@@ -743,7 +743,7 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_4
 	prerequisites = { "esc_tech_amoeba_4c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_shield }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -953,7 +953,7 @@ strike_craft_component_template = {
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_SWARMER_STRIKECRAFT_2
 	prerequisites = { "esc_tech_swarm_strike_craft_2" }
-	tags = { weapon_type_strike_craft }
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna }
 	ai_tags = { weapon_role_point_defense carrier }
 	point_defence_targets = { "strike_craft" }
 

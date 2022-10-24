@@ -210,9 +210,10 @@ weapon_component_template = {
 	icon_frame = 1
 	projectile_gfx = "space_whale_weapon"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull gunship brawler }
 
 	damage = { min = 32.0 max = 82.0 }
+	size_damage_factor = 0.1
 	windup = { min = 2.0 max = 18.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_S_4
@@ -262,9 +263,10 @@ weapon_component_template = {
 	icon_frame = 1
 	projectile_gfx = "space_whale_weapon"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull gunship brawler }
 
 	damage = { min = 98.0 max = 192.0 }
+	size_damage_factor = 0.1
 	windup = { min = 2.0 max = 18.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_M_6
@@ -314,9 +316,10 @@ weapon_component_template = {
 	icon_frame = 1
 	projectile_gfx = "space_whale_weapon"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull artillery }
 
 	damage = { min = 208.0 max = 414.0 }
+	size_damage_factor = 0.15
 	windup = { min = 2.0 max = 18.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_L_5
@@ -367,7 +370,7 @@ weapon_component_template = {
 	icon_frame = 1
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	damage = { min = 75.0 max = 150.0 }
 	windup = { min = 2.0 max = 25.0 }
@@ -403,6 +406,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 196.0 max = 388.0 }
+	size_damage_factor = 0.5
 	windup = { min = 1.0 max = 19.0 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_G_3
@@ -426,7 +430,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	projectile_gfx = "scourge_missile"
-	tags = { weapon_type_explosive }
+	tags = { weapon_type_explosive weapon_swarm weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery }
 	prerequisites = { "esc_tech_swarm_missile" }
 	component_set = ESC_SCOURGE_MISSILE_1
@@ -472,7 +476,7 @@ weapon_component_template = {
 
 	component_set = ESC_SCOURGE_PROJECTILE_WEAPON
 	projectile_gfx = "scourge_projectile_weapon"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic weapon_swarm weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield }
 
 	ai_weight = {
@@ -511,7 +515,7 @@ weapon_component_template = {
 
 	component_set = ESC_SCOURGE_PROJECTILE_WEAPON
 	projectile_gfx = "small_scourge_projectile_weapon"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic weapon_swarm weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield }
 
 	ai_weight = {
@@ -565,7 +569,7 @@ strike_craft_component_template = {
 	component_set = ESC_SWARM_STRIKE_CRAFT_1
 	icon = GFX_ship_part_swarm_strike_craft_1
 	icon_frame = 1
-	tags = { weapon_type_strike_craft }
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna }
 	upgrades_to = ESC_SWARMER_STRIKECRAFT_2
 
 	ai_weight = {

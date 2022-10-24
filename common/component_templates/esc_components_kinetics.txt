@@ -94,7 +94,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_6
 	projectile_gfx = "gauss_cannon_s"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_MASS_DRIVER_7
 
 	ai_weight = {
@@ -145,7 +145,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_6
 	projectile_gfx = "gauss_cannon_m"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship }
 	upgrades_to = MEDIUM_ESC_MASS_DRIVER_7
 
 	ai_weight = {
@@ -170,6 +170,7 @@ weapon_component_template = {
 	windup = { min = 1.0 max = 18.0 }
 	total_fire_time = 25
 	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.75
 	power = -64
 
@@ -196,7 +197,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_6
 	projectile_gfx = "gauss_cannon_l"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = LARGE_ESC_MASS_DRIVER_7
 
 	ai_weight = {
@@ -251,7 +252,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_7
 	projectile_gfx = "gauss_cannon_s"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
 
 	ai_weight = {
 		weight = 1
@@ -301,7 +302,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_7
 	projectile_gfx = "gauss_cannon_m"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship }
 
 	ai_weight = {
 		weight = 1
@@ -325,6 +326,7 @@ weapon_component_template = {
 	windup = { min = 1.0 max = 18.0 }
 	total_fire_time = 25
 	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.75
 	power = -90
 
@@ -351,7 +353,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_7
 	projectile_gfx = "gauss_cannon_l"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship }
 
 	ai_weight = {
 		weight = 1
@@ -405,7 +407,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_4
 	projectile_gfx = "esc_autocannon_4_small"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler }
 	upgrades_to = SMALL_ESC_AUTOCANNON_5
 
 	ai_weight = {
@@ -452,11 +454,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_autocannon_shield_damage
 	tracking = 0.5
 
-	prerequisites = { "esc_tech_autocannon_4" "esc_tech_autocannons_m" }
+	prerequisites = { "esc_tech_autocannon_4" }
 	component_set = ESC_AUTOCANNON_4
 	projectile_gfx = "esc_autocannon_4_medium"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler }
 	upgrades_to = MEDIUM_ESC_AUTOCANNON_5
 
 	ai_weight = {
@@ -503,11 +505,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_autocannon_shield_damage
 	tracking = 0.35
 
-	prerequisites = { "esc_tech_autocannon_4" "esc_tech_autocannons_l" }
+	prerequisites = { "esc_tech_autocannon_4" }
 	component_set = ESC_AUTOCANNON_4
 	projectile_gfx = "esc_autocannon_4_large"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler }
 	upgrades_to = LARGE_ESC_AUTOCANNON_5
 
 	ai_weight = {
@@ -562,7 +564,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_5
 	projectile_gfx = "esc_autocannon_5_small"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler }
 
 	ai_weight = {
 		weight = 1
@@ -608,11 +610,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_autocannon_shield_damage
 	tracking = 0.5
 
-	prerequisites = { "esc_tech_autocannon_5" "esc_tech_autocannons_m" }
+	prerequisites = { "esc_tech_autocannon_5" }
 	component_set = ESC_AUTOCANNON_5
 	projectile_gfx = "esc_autocannon_5_medium"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler }
 
 	ai_weight = {
 		weight = 1
@@ -658,11 +660,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_autocannon_shield_damage
 	tracking = 0.35
 
-	prerequisites = { "esc_tech_autocannon_5" "esc_tech_autocannons_l" }
+	prerequisites = { "esc_tech_autocannon_5" }
 	component_set = ESC_AUTOCANNON_5
 	projectile_gfx = "esc_autocannon_5_large"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield brawler }
 
 	ai_weight = {
 		weight = 1
@@ -689,6 +691,7 @@ weapon_component_template = {
 	windup = { min = 3 max = 25 }
 	total_fire_time = 50
 	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	accuracy = 0.75
 	power = -110
 
@@ -715,7 +718,7 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 	upgrades_to = ESC_ARTILLERY_4
 
 	ai_weight = {
@@ -743,6 +746,7 @@ weapon_component_template = {
 	windup = { min = 3 max = 25 }
 	total_fire_time = 50
 	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	accuracy = 0.75
 	power = -130
 
@@ -769,7 +773,7 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	ai_weight = {
 		weight = 1
@@ -819,19 +823,23 @@ weapon_component_template = {
 	tracking = 0.0
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_giga_cannon_3" }
 	component_set = ESC_MASS_ACCELERATOR_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = ESC_MASS_ACCELERATOR_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
@@ -877,7 +885,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_giga_cannon_4" }
@@ -885,11 +893,15 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	upgrades_to = ESC_MASS_ACCELERATOR_JUGGERNAUT
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
@@ -936,18 +948,22 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_giga_cannon_titanic" }
 	component_set =ESC_MASS_ACCELERATOR_TITANIC
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
@@ -990,7 +1006,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_giga_cannon_titanic" }
@@ -998,11 +1014,15 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
@@ -1254,6 +1274,7 @@ weapon_component_template = {
 	windup = { min = 3 max = 25 }
 	total_fire_time = 50
 	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	accuracy = 0.80
 	power = -110
 
@@ -1281,7 +1302,7 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 	upgrades_to = ESC_JUGGERNAUT_ARTILLERY_2
 
 	ai_weight = {
@@ -1309,6 +1330,7 @@ weapon_component_template = {
 	windup = { min = 3 max = 25 }
 	total_fire_time = 50
 	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	accuracy = 0.8
 	power = -130
 
@@ -1336,7 +1358,7 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	ai_weight = {
 		weight = 1
@@ -1385,14 +1407,19 @@ weapon_component_template = {
 	tracking = 0.0
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	use_ship_kill_target = no
 
 	prerequisites = { "tech_titans" }
 	component_set = ESC_ASTEROID_THROWER
 	projectile_gfx = "esc_asteroid_thrower_projectile"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = { weight = 1 }
 }
@@ -1435,15 +1462,20 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	component_set = ESC_MHD_CANNON_1
 	projectile_gfx = "esc_mhd_cannon_1"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = ESC_MHD_CANNON_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1493,7 +1525,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_mhd_cannon_2" }
@@ -1501,7 +1533,12 @@ weapon_component_template = {
 	projectile_gfx = "esc_mhd_cannon_2"
 	upgrades_to = ESC_MHD_CANNON_JUGGERNAUT
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1559,7 +1596,12 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_TITANIC
 	projectile_gfx = "esc_mhd_cannon_3_titanic"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1614,7 +1656,12 @@ weapon_component_template = {
 	projectile_gfx = "esc_mhd_cannon_3"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1

@@ -104,16 +104,16 @@
 # - Great Reality Eraser			X
 # - Titanic Reality Eraser			T
 
-@ESC_WEAPON_extradimensional_hull_damage = 2.0
+@ESC_WEAPON_extradimensional_hull_damage = 1.75
 @ESC_WEAPON_extradimensional_armor_damage = 1.5
 @ESC_WEAPON_extradimensional_armor_penetration = 0.0
-@ESC_WEAPON_extradimensional_shield_damage = 0.5
+@ESC_WEAPON_extradimensional_shield_damage = 0.33
 @ESC_WEAPON_extradimensional_shield_penetration = 0.0
 
 @ESC_WEAPON_eraser_hull_damage = 2.0
 @ESC_WEAPON_eraser_armor_damage = 1.5
 @ESC_WEAPON_eraser_armor_penetration = 0.0
-@ESC_WEAPON_eraser_shield_damage = 1.0
+@ESC_WEAPON_eraser_shield_damage = 0.5
 @ESC_WEAPON_eraser_shield_penetration = 0.0
 
 ############################################################
@@ -158,7 +158,7 @@ weapon_component_template = {
 	component_set = ESC_LASER_6
 	projectile_gfx = "esc_laser_6_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = SMALL_ESC_LASER_7
 
 	ai_weight = {
@@ -209,7 +209,7 @@ weapon_component_template = {
 	component_set = ESC_LASER_6
 	projectile_gfx = "esc_laser_6_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = MEDIUM_ESC_LASER_7
 
 	ai_weight = {
@@ -260,7 +260,7 @@ weapon_component_template = {
 	component_set = ESC_LASER_6
 	projectile_gfx = "esc_laser_6_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = LARGE_ESC_LASER_7
 
 	ai_weight = {
@@ -315,7 +315,7 @@ weapon_component_template = {
 	component_set = ESC_LASER_7
 	projectile_gfx = "esc_laser_7_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 
 	ai_weight = {
 		weight = 1
@@ -365,7 +365,7 @@ weapon_component_template = {
 	component_set = ESC_LASER_7
 	projectile_gfx = "esc_laser_7_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 
 	ai_weight = {
 		weight = 1
@@ -415,7 +415,7 @@ weapon_component_template = {
 	component_set = ESC_LASER_7
 	projectile_gfx = "esc_laser_7_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 
 	ai_weight = {
 		weight = 1
@@ -469,7 +469,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_4
 	projectile_gfx = "esc_plasma_4_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 	upgrades_to = SMALL_ESC_PLASMA_5
 
@@ -521,7 +521,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_4
 	projectile_gfx = "esc_plasma_4_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 	upgrades_to = MEDIUM_ESC_PLASMA_5
 
@@ -547,6 +547,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 	power = -64
 
@@ -573,7 +574,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_4
 	projectile_gfx = "esc_plasma_4_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 	upgrades_to = LARGE_ESC_PLASMA_5
 
@@ -629,7 +630,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_5
 	projectile_gfx = "esc_plasma_5_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -680,7 +681,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_5
 	projectile_gfx = "esc_plasma_5_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -705,6 +706,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 	power = -90
 
@@ -731,7 +733,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_5
 	projectile_gfx = "esc_plasma_5_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -787,7 +789,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_small"
 	upgrades_to = SMALL_ESC_DISRUPTOR_5
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -839,7 +841,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_medium"
 	upgrades_to = MEDIUM_ESC_DISRUPTOR_5
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -894,7 +896,7 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -945,7 +947,7 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -970,9 +972,12 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 590 max = 1280 }
+	size_damage_factor = 1.0
 	windup = { min = 1 max = 19 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	firing_arc = 25.0
 	accuracy = 0.9
 	power = -105
 
@@ -1000,7 +1005,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = ESC_ENERGY_TORPEDO_4
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -1024,9 +1029,12 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 710 max = 1550 }
+	size_damage_factor = 1.0
 	windup = { min = 1 max = 19 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	firing_arc = 25.0
 	accuracy = 0.9
 	power = -120
 
@@ -1053,7 +1061,7 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -1107,7 +1115,7 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1162,7 +1170,7 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1191,6 +1199,7 @@ weapon_component_template = {
 	windup = { min = 2.0 max = 25.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -120
 
@@ -1217,7 +1226,7 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1273,7 +1282,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_cloud_lightning_2" }
 	component_set = ESC_CLOUD_LIGHTNING_2
 	projectile_gfx = "arc_emitter"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_hull }
 	ai_tag_weight = 5
 	upgrades_to = ESC_CLOUD_LIGHTNING_3
@@ -1325,7 +1334,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_cloud_lightning_3" }
 	component_set = ESC_CLOUD_LIGHTNING_3
 	projectile_gfx = "arc_emitter"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_hull }
 	ai_tag_weight = 5
 
@@ -1378,7 +1387,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_2
 	projectile_gfx = "esc_mining_laser_2_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
 	upgrades_to = SMALL_ESC_MINING_LASER_3
 
 	# only regular empires may use this component
@@ -1426,7 +1435,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_2
 	projectile_gfx = "esc_mining_laser_2_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
 	upgrades_to = MEDIUM_ESC_MINING_LASER_3
 
 	# only regular empires may use this component
@@ -1478,7 +1487,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_3
 	projectile_gfx = "esc_mining_laser_3_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1525,7 +1534,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_3
 	projectile_gfx = "esc_mining_laser_3_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1550,6 +1559,7 @@ weapon_component_template = {
 	windup = { min = 1 max = 19 }
 	total_fire_time = 75
 	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -105
 
@@ -1578,7 +1588,7 @@ weapon_component_template = {
 	upgrades_to = ESC_JUGGERNAUT_BEAM_CANNON_2
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery }
 
 	ai_weight = {
 		weight = 1
@@ -1605,6 +1615,7 @@ weapon_component_template = {
 	windup = { min = 1 max = 19 }
 	total_fire_time = 75
 	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -120
 
@@ -1632,7 +1643,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_juggernaut_beam_cannon_2"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery }
 
 	ai_weight = {
 		weight = 1
@@ -1682,19 +1693,22 @@ weapon_component_template = {
 	tracking = 0.0
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_3" }
 	component_set = ESC_PARTICLE_LANCE_3
 	projectile_gfx = "esc_particle_lance_3"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_PARTICLE_LANCE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -1740,7 +1754,6 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_4" }
@@ -1748,11 +1761,15 @@ weapon_component_template = {
 	projectile_gfx = "esc_particle_lance_4"
 	upgrades_to = ESC_PARTICLE_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -1799,18 +1816,21 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_titanic" }
 	component_set = ESC_PARTICLE_LANCE_TITANIC
 	projectile_gfx = "esc_particle_lance_titanic_big"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -1853,7 +1873,6 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_titanic" }
@@ -1861,11 +1880,15 @@ weapon_component_template = {
 	projectile_gfx = "esc_particle_lance_titanic"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -1919,11 +1942,15 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_3"
 	upgrades_to = ESC_ARC_EMITTER_4
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -1977,11 +2004,15 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_4"
 	upgrades_to = ESC_ARC_EMITTER_JUGGERNAUT
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -2035,11 +2066,15 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_TITANIC
 	projectile_gfx = "esc_arc_emitter_4_titanic"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -2090,11 +2125,15 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_4"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
@@ -2148,19 +2187,23 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_1
 	projectile_gfx = "esc_wavemotiongun_1"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_WAVEMOTIONGUN_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			no_resource_for_component = { RESOURCE = exotic_gases}
 		}
 	}
 }
@@ -2212,18 +2255,22 @@ weapon_component_template = {
 	projectile_gfx = "esc_wavemotiongun_2"
 	upgrades_to = ESC_WAVEMOTIONGUN_JUGGERNAUT
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			no_resource_for_component = { RESOURCE = exotic_gases}
 		}
 	}
 }
@@ -2275,18 +2322,22 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_3
 	projectile_gfx = "esc_wavemotiongun_3_titanic"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			no_resource_for_component = { RESOURCE = exotic_gases}
 		}
 	}
 }
@@ -2335,18 +2386,22 @@ weapon_component_template = {
 	projectile_gfx = "esc_wavemotiongun_3"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
 
 	ai_weight = {
 		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			no_resource_for_component = { RESOURCE = exotic_gases}
 		}
 	}
 }
@@ -2397,11 +2452,16 @@ weapon_component_template = {
 	component_set = ESC_ARC_EN_CIEL
 	projectile_gfx = "esc_arc_en_ciel"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -2460,11 +2520,16 @@ weapon_component_template = {
 	component_set = ESC_ARC_EN_CIEL_TITANIC
 	projectile_gfx = "esc_arc_en_ciel_titanic"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -2520,11 +2585,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_en_ciel"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -2550,6 +2620,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 36 max = 102 }
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 18 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_S_4
@@ -2580,7 +2651,7 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_small"
 	upgrades_to = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2606,6 +2677,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 114 max = 218 }
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 18 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_M_6
@@ -2636,7 +2708,7 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_medium"
 	upgrades_to = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2662,6 +2734,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 228 max = 454 }
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 18 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_L_5
@@ -2692,7 +2765,7 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_large"
 	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2721,6 +2794,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1500 max = 2700 }
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 18 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -2754,13 +2828,18 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_X
 	projectile_gfx = "esc_extradimensional_x_2"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_X
 	# no clean way to enable upgrades both to Juggernaut version and to Reality Eraser, so using only the former
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -2785,6 +2864,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 6000 max = 9000 }
+	size_damage_factor = 0.1
 	windup = { min = 20 max = 60 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_3
@@ -2818,12 +2898,17 @@ weapon_component_template = {
 	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_T
 	projectile_gfx = "esc_extradimensional_t_2"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -2849,6 +2934,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 42 max = 118 }
+	size_damage_factor = 0.15
 	windup = { min = 2 max = 18 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_S_4
@@ -2878,7 +2964,7 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2904,6 +2990,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 128 max = 236 }
+	size_damage_factor = 0.15
 	windup = { min = 2 max = 18 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_M_6
@@ -2933,7 +3020,7 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2959,6 +3046,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 252 max = 488 }
+	size_damage_factor = 0.15
 	windup = { min = 2 max = 18 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_L_5
@@ -2988,7 +3076,7 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -3017,6 +3105,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1700 max = 2850 }
+	size_damage_factor = 0.15
 	windup = { min = 2 max = 18 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -3050,11 +3139,16 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
 	projectile_gfx = "esc_extradimensional_x_3"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -3079,6 +3173,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 7000 max = 9000 }
+	size_damage_factor = 0.15
 	windup = { min = 20 max = 60 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_3
@@ -3112,11 +3207,16 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 	projectile_gfx = "esc_extradimensional_t_3"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {

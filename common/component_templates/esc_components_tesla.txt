@@ -69,7 +69,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_small"
 	upgrades_to = SMALL_ESC_TESLA_COIL_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -125,7 +125,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_medium"
 	upgrades_to = MEDIUM_ESC_TESLA_COIL_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -154,6 +154,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.9
 	power = -64
 
@@ -181,7 +182,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_large"
 	upgrades_to = LARGE_ESC_TESLA_COIL_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull artillery }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -240,7 +241,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -295,7 +296,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -324,6 +325,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.9
 	power = -90
 
@@ -350,7 +352,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull artillery }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -379,6 +381,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 110 max = 210 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_G_2
@@ -387,6 +390,7 @@ weapon_component_template = {
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
 	power = -70
 
 	resources = {
@@ -413,7 +417,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_bomb_1_missile"
 	upgrades_to = ESC_TESLA_BOMB_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -442,6 +446,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 140 max = 260 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_G_2
@@ -450,6 +455,7 @@ weapon_component_template = {
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
 	power = -80
 
 	resources = {
@@ -475,7 +481,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_BOMB_2
 	projectile_gfx = "esc_tesla_bomb_2_missile"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -538,11 +544,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_xl"
 	upgrades_to = ESC_TESLA_CANNON_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -601,11 +612,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_2_xl"
 	upgrades_to = ESC_TESLA_CANNON_JUGGERNAUT
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -664,11 +680,16 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_TITANIC
 	projectile_gfx = "esc_tesla_2_titanic"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -724,11 +745,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_2_xl"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {

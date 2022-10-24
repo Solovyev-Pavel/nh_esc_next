@@ -58,7 +58,7 @@
 
 weapon_component_template = {
 	key = ESC_MISSILE_6
-	size = torpedo
+	size = small
 	icon = GFX_esc_missile_6
 	icon_frame = 1
 	type = missile
@@ -67,7 +67,7 @@ weapon_component_template = {
 	windup = { min = 1 max = 15 }
 	total_fire_time = 42
 	range = @ESC_WEAPON_RANGE_G_2
-	accuracy = 1.0
+	accuracy = 0.85
 	missile_speed = @ESC_MISSILE_SPEED_2
 	missile_evasion = 0.45
 	missile_health = 15
@@ -77,12 +77,12 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			volatile_motes = @ESC_WEAPON_m_t6_cost_special
+			alloys = @ESC_WEAPON_s_t6_cost_alloys
+			volatile_motes = @ESC_WEAPON_s_t6_cost_special
 		}
 		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
+			energy = @ESC_WEAPON_s_t6_upkeep_energy
+			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
 		}
 	}
 
@@ -98,7 +98,8 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_6"
 	upgrades_to = ESC_MISSILE_7
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
 
 	ai_weight = {
 		weight = 1
@@ -116,7 +117,7 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_MISSILE_7
-	size = torpedo
+	size = small
 	icon = GFX_esc_missile_7
 	icon_frame = 1
 	type = missile
@@ -125,7 +126,7 @@ weapon_component_template = {
 	windup = { min = 1 max = 15 }
 	total_fire_time = 42
 	range = @ESC_WEAPON_RANGE_G_2
-	accuracy = 1.0
+	accuracy = 0.85
 	missile_speed = @ESC_MISSILE_SPEED_2
 	missile_evasion = 0.5
 	missile_health = 20
@@ -136,12 +137,12 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			volatile_motes = @ESC_WEAPON_m_t7_cost_special
+			alloys = @ESC_WEAPON_s_t7_cost_alloys
+			volatile_motes = @ESC_WEAPON_s_t7_cost_special
 		}
 		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
+			energy = @ESC_WEAPON_s_t7_upkeep_energy
+			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
 		}
 	}
 
@@ -156,7 +157,8 @@ weapon_component_template = {
 	component_set = ESC_MISSILE_7
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
 
 	ai_weight = {
 		weight = 1
@@ -214,7 +216,7 @@ weapon_component_template = {
 	projectile_gfx = "small_esc_plasma_missile_1"
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -269,7 +271,7 @@ weapon_component_template = {
 	projectile_gfx = "medium_esc_plasma_missile_1"
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -324,7 +326,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_1"
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -383,7 +385,7 @@ weapon_component_template = {
 	projectile_gfx = "small_esc_plasma_missile_2"
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -438,7 +440,7 @@ weapon_component_template = {
 	projectile_gfx = "medium_esc_plasma_missile_2"
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -493,7 +495,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_2"
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -551,7 +553,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "small_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -605,7 +607,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "medium_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -659,7 +661,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "large_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -682,7 +684,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
+	firing_arc = 25.0
+
 	damage = { min = 345 max = 565 }
+	size_damage_factor = 1.0
 	windup = { min = 2 max = 20 }
 	total_fire_time = 160
 	range = @ESC_WEAPON_RANGE_G_1
@@ -717,7 +722,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_6"
 	upgrades_to = ESC_TORPEDO_5
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_anti_shield explosive }
 
 	ai_weight = {
 		weight = 1
@@ -740,7 +745,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
+	firing_arc = 25.0
+
 	damage = { min = 425 max = 705 }
+	size_damage_factor = 1.0
 	windup = { min = 2 max = 20 }
 	total_fire_time = 160
 	range = @ESC_WEAPON_RANGE_G_1
@@ -775,7 +783,7 @@ weapon_component_template = {
 	component_set = ESC_TORPEDO_5
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_anti_shield explosive }
 
 	ai_weight = {
 		weight = 1
@@ -798,7 +806,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
+	firing_arc = 25.0
+
 	damage = { min = 500 max = 1000 }
+	size_damage_factor = 1.0
 	windup = { min = 5 max = 20 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_3
@@ -833,7 +844,7 @@ weapon_component_template = {
 	component_set = ESC_CORROSIVE_WARHEAD
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_anti_shield explosive }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -856,7 +867,7 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_SWARMER_MISSILES_3
-	size = torpedo
+	size = medium
 	icon = GFX_esc_swarmer_missiles_3
 	icon_frame = 1
 	type = missile
@@ -865,7 +876,7 @@ weapon_component_template = {
 	windup = { min = 1 max = 15 }
 	total_fire_time = 25
 	range = @ESC_WEAPON_RANGE_G_2
-	accuracy = 1.0
+	accuracy = 0.85
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.15
 	missile_health = 80
@@ -895,7 +906,7 @@ weapon_component_template = {
 	component_set = ESC_SWARMER_MISSILES_3
 	projectile_gfx = "esc_swarmer_missiles_3"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 	upgrades_to = ESC_SWARMER_MISSILES_4
 
 	ai_weight = {
@@ -914,7 +925,7 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_SWARMER_MISSILES_4
-	size = torpedo
+	size = medium
 	icon = GFX_esc_swarmer_missiles_4
 	icon_frame = 1
 	type = missile
@@ -923,7 +934,7 @@ weapon_component_template = {
 	windup = { min = 1 max = 15 }
 	total_fire_time = 25
 	range = @ESC_WEAPON_RANGE_G_2
-	accuracy = 1.0
+	accuracy = 0.85
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.15
 	missile_health = 90
@@ -953,7 +964,7 @@ weapon_component_template = {
 	component_set = ESC_SWARMER_MISSILES_4
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 
 	ai_weight = {
 		weight = 1
@@ -980,6 +991,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 
 	damage = { min = 1400 max = 2800 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 75
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1014,7 +1026,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile1"
 	upgrades_to = ESC_XMISSILE_2
 	tags = { weapon_type_energy weapon_type_explosive }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
 		weight = 1
@@ -1041,6 +1053,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 
 	damage = { min = 1600 max = 3100 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 75
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1075,7 +1088,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile2"
 	upgrades_to = ESC_XMISSILE_3_JUGGERNAUT
 	tags = { weapon_type_energy weapon_type_explosive }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
 		weight = 1
@@ -1103,6 +1116,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 
 	damage = { min = 1600 max = 3400 }
+	size_damage_factor = 0.5
 	windup = { min = 15 max = 20 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_T_4
@@ -1136,7 +1150,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_3_TITANIC
 	projectile_gfx = "esc_xmissile3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
 		weight = 1
@@ -1160,6 +1174,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 
 	damage = { min = 1600 max = 3400 }
+	size_damage_factor = 0.5
 	windup = { min = 15 max = 20 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_J_4
@@ -1194,7 +1209,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile3"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy weapon_type_explosive }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
 		weight = 1

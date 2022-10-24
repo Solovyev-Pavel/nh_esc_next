@@ -82,7 +82,7 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_AUTOCANNON
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield }
+	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -140,7 +140,7 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LASH
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense weapon_role_anti_shield }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -155,6 +155,8 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -172,6 +174,7 @@ weapon_component_template = {
 	windup = { min = 2.0 max = 20.0 }
 	total_fire_time = 55
 	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_MIN_RANGE_5
 	accuracy = 0.9
 	power = -110
 
@@ -198,7 +201,7 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_CANNON
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -268,6 +271,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -331,6 +339,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -391,6 +404,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -442,7 +460,7 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_PD
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense }
+	ai_tags = { weapon_role_point_defense screen }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -457,6 +475,8 @@ weapon_component_template = {
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
 	}
+
+	point_defence_targets = { "missile" "strike_craft" }
 }
 
 ############################################################
@@ -510,6 +530,11 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -575,6 +600,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -635,6 +665,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -657,6 +692,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 140 max = 190 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 15 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_G_2
@@ -691,7 +727,7 @@ weapon_component_template = {
 	component_set = ESC_JUNK_MINE_LAUNCHER
 	projectile_gfx = "scavenger_bot_secondary_weapon"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery }
+	ai_tags = { weapon_role_artillery explosive }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -715,6 +751,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 300 max = 500 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_G_4
@@ -750,7 +787,7 @@ weapon_component_template = {
 	component_set = ESC_VOIDSPAWN_MISSILE
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -783,6 +820,7 @@ weapon_component_template = {
 	use_ship_kill_target = no
 
 	damage = { min = 1200 max = 2400 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -818,7 +856,7 @@ weapon_component_template = {
 	component_set = ESC_VOIDSPAWN_MISSILE_X
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_kinetic weapon_type_explosive }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive }
 
 	# only regular empires may use this component
 	valid_for_country = {

@@ -74,7 +74,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_small"
 	upgrades_to = SMALL_ESC_PSIONIC_CANNON_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -130,7 +130,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_CANNON_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -159,6 +159,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -64
 
@@ -186,7 +187,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_large"
 	upgrades_to = LARGE_ESC_PSIONIC_CANNON_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -245,7 +246,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_2
 	projectile_gfx = "esc_psionic_cannon_small"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -300,7 +301,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_2
 	projectile_gfx = "esc_psionic_cannon_medium"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -329,6 +330,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 	power = -64
 
@@ -355,7 +357,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_2
 	projectile_gfx = "esc_psionic_cannon_large"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -415,7 +417,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_small"
 	upgrades_to = SMALL_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -471,7 +473,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -500,6 +502,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	accuracy = 0.85
 	power = -64
 
@@ -527,7 +530,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_large"
 	upgrades_to = LARGE_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -586,7 +589,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_small"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -641,7 +644,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_medium"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -670,6 +673,7 @@ weapon_component_template = {
 	windup = { min = 2 max = 20 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_3
 	accuracy = 0.85
 	power = -90
 
@@ -696,7 +700,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_large"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = { weapon_role_anti_hull artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -725,6 +729,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 135 max = 285 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_G_2
@@ -733,6 +738,7 @@ weapon_component_template = {
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
 	power = -70
 
 	resources = {
@@ -759,7 +765,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_torpedo"
 	upgrades_to = ESC_PSIONIC_TORPEDO_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor energy_torpedoes }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -788,6 +794,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 180 max = 378 }
+	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_G_2
@@ -796,6 +803,7 @@ weapon_component_template = {
 	missile_evasion = 0.1
 	missile_health = 25
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
 	power = -80
 
 	resources = {
@@ -821,7 +829,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_TORPEDO_2
 	projectile_gfx = "esc_psionic_torpedo"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor }
+	ai_tags = { weapon_role_anti_armor energy_torpedoes }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -884,11 +892,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_lance"
 	upgrades_to = ESC_PSIONIC_LANCE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -947,11 +960,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_lance"
 	upgrades_to = ESC_PSIONIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -1010,11 +1028,16 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_LANCE_TITANIC
 	projectile_gfx = "esc_psionic_lance"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
@@ -1070,11 +1093,16 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_lance"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
 	}
 
 	ai_weight = {
