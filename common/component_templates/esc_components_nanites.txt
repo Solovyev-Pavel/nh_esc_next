@@ -40,8 +40,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 30 max = 72 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.85
 	power = -20
@@ -96,8 +96,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 70 max = 136 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.85
 	power = -34
@@ -152,8 +152,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 160 max = 334 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_L_2
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
@@ -213,8 +213,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 40 max = 86 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.85
 	power = -24
@@ -268,8 +268,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 100 max = 230 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.85
 	power = -46
@@ -323,8 +323,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 210 max = 440 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_L_2
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
@@ -381,10 +381,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 250 max = 470 }
-	size_damage_factor = 0.5
-	windup = { min = 2 max = 20 }
-	total_fire_time = 90
+	damage = { min = 120 max = 220 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_2
@@ -446,10 +446,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 330 max = 550 }
-	size_damage_factor = 0.5
-	windup = { min = 2 max = 20 }
-	total_fire_time = 90
+	damage = { min = 150 max = 250 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_2
@@ -513,9 +513,9 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
-	damage = { min = 1250 max = 3200 }
-	size_damage_factor = 0.5
-	windup = { min = 2 max = 20 }
+	damage = { min = 350 max = 1100 }
+	size_damage_factor = 1
+	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
 	accuracy = 1.0
@@ -580,9 +580,9 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
-	damage = { min = 1450 max = 3500 }
-	size_damage_factor = 0.5
-	windup = { min = 2 max = 20 }
+	damage = { min = 450 max = 1200 }
+	size_damage_factor = 1
+	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
 	accuracy = 1.0
@@ -648,9 +648,9 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
-	damage = { min = 1450 max = 3500 }
-	size_damage_factor = 0.5
-	windup = { min = 12 max = 20 }
+	damage = { min = 650 max = 1500 }
+	size_damage_factor = 1
+	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_T_4
 	accuracy = 1.0
@@ -711,9 +711,9 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
-	damage = { min = 1450 max = 3500 }
-	size_damage_factor = 0.5
-	windup = { min = 12 max = 20 }
+	damage = { min = 650 max = 1500 }
+	size_damage_factor = 1
+	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_J_4
 	accuracy = 1.0

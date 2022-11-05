@@ -313,7 +313,7 @@ strike_craft_component_template = {
 	prerequisites = { "esc_tech_strikecraft_6" }
 	tags = { weapon_type_strike_craft }
 	ai_tags = { weapon_role_point_defense carrier }
-	point_defence_targets = { "strike_craft" }
+	point_defence_targets = { "missile" "strike_craft" }
 
 	# only normal empires may use this component
 	valid_for_country = {

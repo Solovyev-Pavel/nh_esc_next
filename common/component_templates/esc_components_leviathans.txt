@@ -230,7 +230,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1750 max = 2500 }
-	windup = { min = 2.0 max = 18.0 }
+	windup = { min = 12.0 max = 47.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
 	accuracy = 0.85
@@ -299,8 +299,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 6000 max = 8500 }
-	windup = { min = 20.0 max = 35.0 }
-	total_fire_time = 160
+	windup = { min = 30.0 max = 100.0 }
+	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_4
 	accuracy = 0.85
 	power = -500
@@ -363,8 +363,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 6000 max = 8500 }
-	windup = { min = 20.0 max = 35.0 }
-	total_fire_time = 160
+	windup = { min = 30.0 max = 100.0 }
+	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_4
 	accuracy = 0.85
 	power = -500
@@ -430,7 +430,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = point_defence
 
-	damage = { min = 17.0 max = 22.0 }
+	damage = { min = 20.0 max = 28.0 }
 	windup = { min = 1.0 max = 3.0 }
 	total_fire_time = 8
 	range = @ESC_WEAPON_RANGE_P_4
@@ -819,7 +819,7 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
-	damage = { min = 1200 max = 2400 }
+	damage = { min = 800 max = 1400 }
 	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80

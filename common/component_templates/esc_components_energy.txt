@@ -129,8 +129,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 21 max = 58 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.9
 	power = -20
@@ -180,7 +180,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 53 max = 134 }
-	windup = { min = 2 max = 20 }
+	windup = { min = 6 max = 24 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.9
@@ -231,8 +231,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 132 max = 310 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
 	accuracy = 0.9
 	power = -64
@@ -286,8 +286,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 25 max = 72 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.9
 	power = -24
@@ -336,7 +336,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 65 max = 206 }
-	windup = { min = 2 max = 20 }
+	windup = { min = 6 max = 24 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.9
@@ -386,8 +386,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 184 max = 412 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 35
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_L_2
 	accuracy = 0.9
 	power = -90
@@ -440,8 +440,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 25 max = 53 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 40
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.8
 	power = -20
@@ -491,8 +491,8 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 61 max = 129 }
-	windup = { min = 2 max = 20 }
+	damage = { min = 67 max = 143 }
+	windup = { min = 7 max = 27 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.8
@@ -543,9 +543,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 148 max = 310 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 40
+	damage = { min = 158 max = 323 }
+	windup = { min = 8 max = 30 }
+	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_L_2
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
@@ -601,8 +601,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 30 max = 66 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 40
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.8
 	power = -24
@@ -652,7 +652,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 73 max = 195 }
-	windup = { min = 2 max = 20 }
+	windup = { min = 7 max = 27 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.8
@@ -703,8 +703,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 192 max = 400 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 40
+	windup = { min = 8 max = 30 }
+	total_fire_time = 45
 	range = @ESC_WEAPON_RANGE_L_2
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
@@ -758,9 +758,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 5 max = 35 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 50
+	damage = { min = 5 max = 30 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
 	range = @ESC_WEAPON_RANGE_S_1
 	accuracy = 1.0
 	power = -20
@@ -810,9 +810,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 10 max = 85 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 50
+	damage = { min = 8 max = 85 }
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
 	range = @ESC_WEAPON_RANGE_M_1
 	accuracy = 1.0
 	power = -37
@@ -867,8 +867,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5 max = 43 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 50
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
 	range = @ESC_WEAPON_RANGE_S_1
 	accuracy = 1.0
 	power = -24
@@ -918,8 +918,8 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 10 max = 115 }
-	windup = { min = 2 max = 20 }
-	total_fire_time = 50
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
 	range = @ESC_WEAPON_RANGE_M_1
 	accuracy = 1.0
 	power = -46
@@ -966,14 +966,14 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_ENERGY_TORPEDO_3
-	size = large
+	size = torpedo
 	icon = GFX_esc_energy_launcher_3
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 590 max = 1280 }
+	damage = { min = 76 max = 162 }
 	size_damage_factor = 1.0
-	windup = { min = 1 max = 19 }
+	windup = { min = 25 max = 100 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_L_6
 	min_range = @ESC_WEAPON_MIN_RANGE_5
@@ -1023,14 +1023,14 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_ENERGY_TORPEDO_4
-	size = large
+	size = torpedo
 	icon = GFX_esc_energy_launcher_4
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 710 max = 1550 }
+	damage = { min = 92 max = 195 }
 	size_damage_factor = 1.0
-	windup = { min = 1 max = 19 }
+	windup = { min = 25 max = 100 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_L_6
 	min_range = @ESC_WEAPON_MIN_RANGE_5
@@ -1254,9 +1254,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 10 max = 192 }
-	windup = { min = 1 max = 19 }
-	total_fire_time = 45
+	damage = { min = 10 max = 176 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
 	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1
 	power = -55
@@ -1306,9 +1306,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 20 max = 268 }
-	windup = { min = 1 max = 19 }
-	total_fire_time = 45
+	damage = { min = 20 max = 256 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
 	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1
 	power = -70
@@ -1358,9 +1358,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 20 max = 52 }
-	windup = { min = 1 max = 19 }
-	total_fire_time = 30
+	damage = { min = 14 max = 36 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
 	range = @ESC_WEAPON_RANGE_S_1
 	accuracy = 0.8
 	power = -9
@@ -1406,10 +1406,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 48 max = 128 }
-	windup = { min = 1 max = 19 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_M_2
+	damage = { min = 32 max = 88 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_M_1
 	accuracy = 0.8
 	power = -17
 
@@ -1458,9 +1458,9 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 28 max = 60 }
-	windup = { min = 1 max = 19 }
-	total_fire_time = 30
+	damage = { min = 20 max = 51 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
 	range = @ESC_WEAPON_RANGE_S_1
 	accuracy = 0.85
 	power = -12
@@ -1505,10 +1505,10 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 64 max = 174 }
-	windup = { min = 1 max = 19 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_M_2
+	damage = { min = 44 max = 118 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_M_1
 	accuracy = 0.85
 	power = -20
 
@@ -1667,7 +1667,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1000 max = 2300 }
-	windup = { min = 1 max = 19 }
+	windup = { min = 12 max = 47 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 0.85
@@ -1728,7 +1728,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1250 max = 2600 }
-	windup = { min = 1 max = 19 }
+	windup = { min = 12 max = 47 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 0.85
@@ -1790,7 +1790,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5000 max = 10000 }
-	windup = { min = 30 max = 35 }
+	windup = { min = 30 max = 100 }
 	total_fire_time = 175
 	range = @ESC_WEAPON_RANGE_T_3
 	accuracy = 0.85
@@ -1847,7 +1847,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5000 max = 10000 }
-	windup = { min = 30 max = 35 }
+	windup = { min = 30 max = 100 }
 	total_fire_time = 175
 	range = @ESC_WEAPON_RANGE_J_3
 	accuracy = 0.85
@@ -1908,7 +1908,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 50 max = 2000 }
-	windup = { min = 1 max = 19 }
+	windup = { min = 12 max = 48 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 1.0
@@ -1970,7 +1970,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 100 max = 2300 }
-	windup = { min = 1 max = 19 }
+	windup = { min = 12 max = 48 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 1.0
@@ -2153,7 +2153,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1250 max = 2500 }
-	windup = { min = 2.0 max = 20.0 }
+	windup = { min = 9 max = 28 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_1
 	accuracy = 0.85
@@ -2220,7 +2220,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 1500 max = 2750 }
-	windup = { min = 2.0 max = 20.0 }
+	windup = { min = 9 max = 28 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_1
 	accuracy = 0.85
@@ -2288,7 +2288,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5000 max = 9000 }
-	windup = { min = 20.0 max = 35.0 }
+	windup = { min = 20 max = 100 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_T_2
 	accuracy = 0.85
@@ -2351,7 +2351,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5000 max = 9000 }
-	windup = { min = 20.0 max = 35.0 }
+	windup = { min = 20 max = 100 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_J_2
 	accuracy = 0.85
@@ -2419,7 +2419,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 2000.0 max = 4000.0 }
-	windup = { min = 20.0 max = 40.0 }
+	windup = { min = 20.0 max = 50.0 }
 	total_fire_time = 75
 	range = @ESC_WEAPON_RANGE_X_4
 	accuracy = 1.0
@@ -2487,7 +2487,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5000 max = 10000 }
-	windup = { min = 20.0 max = 40.0 }
+	windup = { min = 20.0 max = 60.0 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_4
 	accuracy = 1.0
@@ -2551,7 +2551,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 5000 max = 10000 }
-	windup = { min = 20.0 max = 40.0 }
+	windup = { min = 20.0 max = 60.0 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_J_4
 	accuracy = 1.0
@@ -2621,9 +2621,9 @@ weapon_component_template = {
 
 	damage = { min = 36 max = 102 }
 	size_damage_factor = 0.1
-	windup = { min = 2 max = 18 }
-	total_fire_time = 35
-	range = @ESC_WEAPON_RANGE_S_4
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.9
 	power = -28
 
@@ -2678,9 +2678,9 @@ weapon_component_template = {
 
 	damage = { min = 114 max = 218 }
 	size_damage_factor = 0.1
-	windup = { min = 2 max = 18 }
-	total_fire_time = 35
-	range = @ESC_WEAPON_RANGE_M_6
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.9
 	power = -52
 
@@ -2735,9 +2735,9 @@ weapon_component_template = {
 
 	damage = { min = 228 max = 454 }
 	size_damage_factor = 0.1
-	windup = { min = 2 max = 18 }
-	total_fire_time = 35
-	range = @ESC_WEAPON_RANGE_L_5
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_2
 	accuracy = 0.9
 	power = -100
 
@@ -2795,8 +2795,8 @@ weapon_component_template = {
 
 	damage = { min = 1500 max = 2700 }
 	size_damage_factor = 0.1
-	windup = { min = 2 max = 18 }
-	total_fire_time = 70
+	windup = { min = 10 max = 35 }
+	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_4
 	accuracy = 0.85
 	power = -280
@@ -2865,7 +2865,7 @@ weapon_component_template = {
 
 	damage = { min = 6000 max = 9000 }
 	size_damage_factor = 0.1
-	windup = { min = 20 max = 60 }
+	windup = { min = 30 max = 70 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_3
 	accuracy = 0.85
@@ -2935,9 +2935,9 @@ weapon_component_template = {
 
 	damage = { min = 42 max = 118 }
 	size_damage_factor = 0.15
-	windup = { min = 2 max = 18 }
-	total_fire_time = 35
-	range = @ESC_WEAPON_RANGE_S_4
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.9
 	power = -34
 
@@ -2991,9 +2991,9 @@ weapon_component_template = {
 
 	damage = { min = 128 max = 236 }
 	size_damage_factor = 0.15
-	windup = { min = 2 max = 18 }
-	total_fire_time = 35
-	range = @ESC_WEAPON_RANGE_M_6
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.9
 	power = -60
 
@@ -3047,9 +3047,9 @@ weapon_component_template = {
 
 	damage = { min = 252 max = 488 }
 	size_damage_factor = 0.15
-	windup = { min = 2 max = 18 }
-	total_fire_time = 35
-	range = @ESC_WEAPON_RANGE_L_5
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_2
 	accuracy = 0.9
 	power = -110
 
@@ -3106,8 +3106,8 @@ weapon_component_template = {
 
 	damage = { min = 1700 max = 2850 }
 	size_damage_factor = 0.15
-	windup = { min = 2 max = 18 }
-	total_fire_time = 70
+	windup = { min = 10 max = 35 }
+	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_4
 	accuracy = 0.85
 	power = -330
@@ -3174,7 +3174,7 @@ weapon_component_template = {
 
 	damage = { min = 7000 max = 9000 }
 	size_damage_factor = 0.15
-	windup = { min = 20 max = 60 }
+	windup = { min = 30 max = 70 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_3
 	accuracy = 0.85
