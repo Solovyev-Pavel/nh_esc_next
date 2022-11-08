@@ -747,7 +747,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 250 max = 375 }
+	damage = { min = 250 max = 350 }
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
@@ -808,7 +808,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 300 max = 500 }
+	damage = { min = 275 max = 450 }
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
@@ -990,7 +990,7 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
-	damage = { min = 500 max = 900 }
+	damage = { min = 190 max = 380 }
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 75
@@ -998,7 +998,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.1
-	missile_health = 150
+	missile_health = 75
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -300
 
@@ -1052,7 +1052,7 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
-	damage = { min = 600 max = 1000 }
+	damage = { min = 220 max = 440 }
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 75
@@ -1060,7 +1060,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.1
-	missile_health = 150
+	missile_health = 80
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -325
 
@@ -1115,7 +1115,7 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
-	damage = { min = 750 max = 1350 }
+	damage = { min = 500 max = 750 }
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1123,7 +1123,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.1
-	missile_health = 250
+	missile_health = 85
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -500
 
@@ -1173,7 +1173,7 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	use_ship_kill_target = no
 
-	damage = { min = 750 max = 1350 }
+	damage = { min = 500 max = 750 }
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1181,7 +1181,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.1
-	missile_health = 250
+	missile_health = 85
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -500
 

@@ -716,12 +716,12 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_BIO_MISSILE_1
-	size = medium
+	size = torpedo
 	icon = GFX_esc_bio_missile_1
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 110 max = 220 }
+	damage = { min = 45 max = 80 }
 	size_damage_factor = 1
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
@@ -780,12 +780,12 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_BIO_MISSILE_2
-	size = medium
+	size = torpedo
 	icon = GFX_esc_bio_missile_2
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 160 max = 270 }
+	damage = { min = 55 max = 95 }
 	size_damage_factor = 1
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
@@ -844,12 +844,12 @@ weapon_component_template = {
 
 weapon_component_template = {
 	key = ESC_BIO_MISSILE_3
-	size = medium
+	size = torpedo
 	icon = GFX_esc_bio_missile_3
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 200 max = 330 }
+	damage = { min = 65 max = 105 }
 	size_damage_factor = 1
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
@@ -912,7 +912,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 550 max = 900 }
+	damage = { min = 75 max = 200 }
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -977,7 +977,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 650 max = 1000 }
+	damage = { min = 100 max = 225 }
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -1043,7 +1043,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 800 max = 1350 }
+	damage = { min = 175 max = 275 }
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1104,7 +1104,7 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 800 max = 1350 }
+	damage = { min = 175 max = 275 }
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
