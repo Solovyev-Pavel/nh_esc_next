@@ -291,7 +291,7 @@ esc_crystal_farmer = {
         category = planet_jobs
         # resource production
         produces = {
-            rare_crystals = @ESC_job_primary_resource_base_production
+            rare_crystals = @ESC_job_crystal_farmer_base_production
         }
         # environment ordinance waivers produciton bonus
         produces = {
@@ -300,7 +300,7 @@ esc_crystal_farmer = {
                 owner = { is_galactic_community_member = yes }
                 ESC_TRIGGER_environment_ordinance_waivers = yes
             }
-            rare_crystals = @ESC_job_primary_resource_cornucopia_bonus
+            rare_crystals = @ESC_job_crystal_farmer_cornucopia_bonus
         }
         # base upkeep
         upkeep = {
@@ -375,7 +375,7 @@ esc_crystal_farmer_drone = {
         category = planet_jobs
         # base production
         produces = {
-            rare_crystals = @ESC_job_primary_resource_base_production
+            rare_crystals = @ESC_job_crystal_farmer_base_production
         }
         # environment ordinance waivers produciton bonus
         produces = {
@@ -384,7 +384,7 @@ esc_crystal_farmer_drone = {
                 owner = { is_galactic_community_member = yes }
                 ESC_TRIGGER_environment_ordinance_waivers = yes
             }
-            rare_crystals = @ESC_job_primary_resource_cornucopia_bonus
+            rare_crystals = @ESC_job_crystal_farmer_cornucopia_bonus
         }
         # base upkeep : non-lithoid biologicals
         upkeep = {
