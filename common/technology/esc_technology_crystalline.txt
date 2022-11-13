@@ -325,18 +325,91 @@ esc_tech_crystal_cannon_5 = {
 	}
 }
 
+
+############################################################
+##                  Crystal Javelin Thrower               ##
+############################################################
+
+esc_tech_crystal_lance_1 = {
+	area = society
+	category = { materials }
+	tier = 4
+	cost = @tier4cost2
+	weight = @tier4weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	gateway = ESC_CRYSTALLINE_LANCE
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_mass_accelerator_1"
+				has_technology = "tech_energy_lance_1"
+				has_technology = "tech_arc_emitter_1"
+			}
+		}
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_mass_accelerator_1"
+				has_technology = "tech_energy_lance_1"
+				has_technology = "tech_arc_emitter_1"
+			}
+		}
+		modifier = {
+			factor = 2
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_lithoid_devouring_swarm = yes
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
 ############################################################
 ##                  Crystal Javelin Cannon                ##
 ############################################################
 
-esc_tech_crystal_lance_1 = {
+esc_tech_crystal_lance_2 = {
 	area = society
 	category = { materials }
 	tier = 5
 	cost = @tier5cost3
 	weight = @tier5weight3
 	ai_update_type = military
-	prerequisites = { "esc_tech_crystal_cannon_5" "esc_tech_advanced_heavy_weapons" }
+	prerequisites = { "esc_tech_crystal_lance_1" "esc_tech_advanced_heavy_weapons" }
 	gateway = ESC_CRYSTALLINE_LANCE
 
 	potential = {
@@ -385,14 +458,14 @@ esc_tech_crystal_lance_1 = {
 ##                  Crystal Lance Cannon                  ##
 ############################################################
 
-esc_tech_crystal_lance_2 = {
+esc_tech_crystal_lance_3 = {
 	area = society
 	category = { materials }
 	tier = 6
 	cost = @ESC_TECH_tier6_cost1
 	weight = @ESC_TECH_tier6_weight1
 	ai_update_type = military
-	prerequisites = { "esc_tech_crystal_lance_1" }
+	prerequisites = { "esc_tech_crystal_lance_2" }
 	is_rare = yes
 	gateway = ESC_CRYSTALLINE_LANCE
 
@@ -473,7 +546,7 @@ esc_tech_crystal_lance_titanic = {
 	cost = @ESC_TECH_tier6_cost2
 	weight = @ESC_TECH_tier6_weight2
 	ai_update_type = military
-	prerequisites = { "esc_tech_crystal_lance_2" }
+	prerequisites = { "esc_tech_crystal_lance_3" }
 	is_rare = yes
 
 	potential = {

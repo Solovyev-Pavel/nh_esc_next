@@ -881,7 +881,7 @@ weapon_component_template = {
 }
 
 ############################################################
-##                 Crystal Javelin Cannon                 ##
+##                 Crystal Javelin Thrower                ##
 ############################################################
 
 weapon_component_template = {
@@ -891,22 +891,22 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-    damage = { min = 1750 max = 3000 }
+    damage = { min = 1250 max = 2000 }
 	windup = { min = 20 max = 60 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_2
 	accuracy = 0.85
-	power = -225
+	power = -175
 
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @ESC_WEAPON_crystalline_lance_1_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_lance_1_cost_crystals
+			alloys = @ESC_WEAPON_crystalline_lance_0_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_lance_0_cost_crystals
 		}
 		upkeep = {
-			energy = @ESC_WEAPON_crystalline_lance_1_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_lance_1_upkeep_crystals
+			energy = @ESC_WEAPON_crystalline_lance_0_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_lance_0_upkeep_crystals
 		}
 	}
 
@@ -944,13 +944,76 @@ weapon_component_template = {
 }
 
 ############################################################
-##                  Crystal Lance Cannon                  ##
+##                 Crystal Javelin Cannon                 ##
 ############################################################
 
 weapon_component_template = {
 	key = ESC_CRYSTAL_LANCE_2
 	size = extra_large
 	icon = GFX_esc_crystal_lance_2
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 1750 max = 3000 }
+	windup = { min = 20 max = 60 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+	power = -225
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_crystalline_lance_1_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_lance_1_cost_crystals
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_crystalline_lance_1_upkeep_energy
+			rare_crystals = @ESC_WEAPON_crystalline_lance_1_upkeep_crystals
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_crystal_lance_2" }
+	component_set = ESC_CRYSTAL_LANCE_2
+	projectile_gfx = "yellow_crystal_ship_projectile"
+	upgrades_to = ESC_CRYSTAL_LANCE_3
+	tags = { weapon_type_kinetic }
+	ai_tags = { weapon_role_artillery artillery }
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Crystal Lance Cannon                  ##
+############################################################
+
+weapon_component_template = {
+	key = ESC_CRYSTAL_LANCE_3
+	size = extra_large
+	icon = GFX_esc_crystal_lance_3
 	icon_frame = 1
 	type = instant
 
@@ -984,8 +1047,8 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	use_ship_kill_target = no
 
-	prerequisites = { "esc_tech_crystal_lance_2" }
-	component_set = ESC_CRYSTAL_LANCE_2
+	prerequisites = { "esc_tech_crystal_lance_3" }
+	component_set = ESC_CRYSTAL_LANCE_3
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	tags = { weapon_type_kinetic }
@@ -1014,7 +1077,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = ESC_CRYSTAL_LANCE_TITANIC
 	size = titanic
-	icon = GFX_esc_crystal_lance_3
+	icon = GFX_esc_crystal_lance_titanic
 	icon_frame = 1
 	type = instant
 
@@ -1073,7 +1136,7 @@ weapon_component_template = {
 weapon_component_template = {
 	key = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	size = extra_large
-	icon = GFX_esc_crystal_lance_3
+	icon = GFX_esc_crystal_lance_titanic
 	icon_frame = 1
 	type = instant
 
