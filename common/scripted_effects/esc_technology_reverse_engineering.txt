@@ -157,6 +157,7 @@ ESC_EFFECT_reverse_engineer_techs = {
 	if = { limit = { last_increased_tech = esc_tech_mining_laser_2 } ESC_EFFECT_mining_drone_tech_check = yes break = yes }
 	### crystalline weapons
 	if = { limit = { last_increased_tech = esc_tech_crystal_lance_titanic } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
+	if = { limit = { last_increased_tech = esc_tech_crystal_lance_3 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
 	if = { limit = { last_increased_tech = esc_tech_crystal_lance_2 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
 	if = { limit = { last_increased_tech = esc_tech_crystal_lance_1 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
 	if = { limit = { last_increased_tech = esc_tech_crystal_cannon_5 } ESC_EFFECT_crystal_cannon_tech_check = yes break = yes }
@@ -1435,10 +1436,18 @@ ESC_EFFECT_shield_recharger_tech_check = {
 ## ##################################################### ##
 
 ESC_EFFECT_crystal_cannon_tech_check = {
-	## crystalline impaler >>> crystal lance 2
+	## crystalline impaler >>> crystal lance 3
 	if = {
 		limit = {
 			has_technology = esc_tech_crystal_lance_titanic
+			NOT = { has_technology = esc_tech_crystal_lance_3 }
+		}
+		give_technology = { message = no tech = esc_tech_crystal_lance_3 }
+	}
+	## crystal lance 3 >>> crystal lance 2
+	if = {
+		limit = {
+			has_technology = esc_tech_crystal_lance_3
 			NOT = { has_technology = esc_tech_crystal_lance_2 }
 		}
 		give_technology = { message = no tech = esc_tech_crystal_lance_2 }
@@ -1451,13 +1460,13 @@ ESC_EFFECT_crystal_cannon_tech_check = {
 		}
 		give_technology = { message = no tech = esc_tech_crystal_lance_1 }
 	}
-	## crystal lance 1 >>> crystal cannon 5
+	## crystal lance 1 >>> crystal cannon 3
 	if = {
 		limit = {
 			has_technology = esc_tech_crystal_lance_1
-			NOT = { has_technology = esc_tech_crystal_cannon_5 }
+			NOT = { has_technology = esc_tech_crystal_cannon_3 }
 		}
-		give_technology = { message = no tech = esc_tech_crystal_cannon_5 }
+		give_technology = { message = no tech = esc_tech_crystal_cannon_3 }
 	}
 	## crystal cannon 5 >>> crystal cannon 4
 	if = {
