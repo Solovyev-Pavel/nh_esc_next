@@ -699,8 +699,9 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_2
 	missile_evasion = 0.1
-	missile_health = 20
-	missile_armor = 0
+	missile_health = 10
+	missile_armor = 15
+	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -20
 
@@ -758,7 +759,9 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_2
 	missile_evasion = 0.1
-	missile_health = 25
+	missile_health = 50
+	missile_armor = 0
+	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -50
 
@@ -827,7 +830,9 @@ weapon_component_template = {
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_2
 	missile_evasion = 0.1
-	missile_health = 80
+	missile_health = 75
+	missile_armor = 0
+	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -330
 
