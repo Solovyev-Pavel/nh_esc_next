@@ -81,6 +81,9 @@ utility_component_template = {
 	ship_modifier = {
 		ship_tracking_add = @ESC_SENSOR_t7_hit_chance
 	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
 
 	prerequisites = { "esc_tech_sensors_7" }
 	component_set = "sensor_components"
@@ -111,6 +114,9 @@ utility_component_template = {
 	ship_modifier = {
 		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
 		ship_accuracy_add = 10
+	}
+	modifier = {
+		ship_cloaking_detection_add = 2
 	}
 
 	prerequisites = { "esc_tech_sensors_precursor" }
@@ -147,6 +153,9 @@ utility_component_template = {
 
 	ship_modifier = {
 		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
 	}
 
 	prerequisites = { "esc_tech_sensors_psionic" }
