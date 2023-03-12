@@ -515,3 +515,75 @@ utility_component_template = {
 		}
 	}
 }
+
+# nanite reactive armor
+utility_component_template = {
+	key = "ESC_NANITE_ARMOR_HARDENER"
+	size = aux
+	icon = "GFX_esc_armor_hardening_3"
+	icon_frame = 1
+	power = -30
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			nanites = 1
+		}
+	}
+
+	prerequisites = { "esc_tech_armor_hardening_3" }
+	component_set = "ESC_NANITE_ARMOR_HARDENER"
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.25
+	}
+
+	ai_weight = {
+		weight = 12
+
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+# citadel shield hardener
+utility_component_template = {
+	key = "ESC_SHIELD_HARDENER_3"
+	size = aux
+	icon = "GFX_esc_shield_hardening_3"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			exotic_gases = 2
+		}
+	}
+
+	prerequisites = { "esc_tech_shield_hardening_3" }
+	component_set = "ESC_SHIELD_HARDENER_3"
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.25
+	}
+
+	ai_weight = {
+		weight = 12
+
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}

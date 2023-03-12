@@ -16,6 +16,8 @@
 # ── Structural Reinforcement					: auxiliary component that increases hull strength
 # ── Reapir Drones								: auxiliary component for automatic ship repair
 # ── Temporal Displacer							: adds a bit of evasion and large emergency ftl boost
+# ── Nanite Reactive Armor						: auxiliary component for armor hardening
+# ── Citadel Shield Hardener					: auxiliary component for shield hardening
 
 ############################################################
 ##            Advanced Fire Control Systems               ##
@@ -767,6 +769,120 @@ esc_tech_temporal_displacer = {
 				has_federation_perk = rare_tech_boost
 				any_member = { has_technology = esc_tech_temporal_displacer }
 			}
+		}
+	}
+}
+
+############################################################
+##                  Nanite Reactive Armor                 ##
+############################################################
+
+esc_tech_armor_hardening_3 = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = all
+	prerequisites = { "tech_armor_hardeners_1" "esc_tech_synthetic_lifeform_studies" }
+	is_rare = yes
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                Citadel Shield Hardener                 ##
+############################################################
+
+esc_tech_shield_hardening_3 = {
+	area = physics
+	category = { field_manipulation }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = all
+	prerequisites = { "tech_shield_hardeners_1" "esc_tech_advanced_shield_capacitors" }
+	is_rare = yes
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 }
