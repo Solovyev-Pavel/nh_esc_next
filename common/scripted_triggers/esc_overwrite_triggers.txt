@@ -1,0 +1,81 @@
+############################################################
+###           ESC Scripted Triggers (Overwrites)         ###
+############################################################
+
+has_non_psionic_shields = {
+	OR = {
+		# vanilla tier 1
+		has_component = SMALL_SHIELD_1
+		has_component = MEDIUM_SHIELD_1
+		has_component = LARGE_SHIELD_1
+		# vanilla tier 2
+		has_component = SMALL_SHIELD_2
+		has_component = MEDIUM_SHIELD_2
+		has_component = LARGE_SHIELD_2
+		# vanilla tier 3
+		has_component = MEDIUM_SHIELD_3
+		has_component = LARGE_SHIELD_3
+		has_component = SMALL_SHIELD_3
+		# vanilla tier 4
+		has_component = MEDIUM_SHIELD_4
+		has_component = LARGE_SHIELD_4
+		has_component = SMALL_SHIELD_4
+		# vanilla tier 5
+		has_component = MEDIUM_SHIELD_5
+		has_component = LARGE_SHIELD_5
+		has_component = SMALL_SHIELD_5
+		# vanilla dark matter tier 1
+		has_component = SMALL_DARK_MATTER_DEFLECTOR
+		has_component = MEDIUM_DARK_MATTER_DEFLECTOR
+		has_component = LARGE_DARK_MATTER_DEFLECTOR
+		# vanilla archeo shields
+		has_component = SMALL_ARCHAEO_SHIELD
+		has_component = MEDIUM_ARCHAEO_SHIELD
+		has_component = LARGE_ARCHAEO_SHIELD
+
+		# esc tier 6
+		has_component = SMALL_ESC_SHIELDS_6
+		has_component = MEDIUM_ESC_SHIELDS_6
+		has_component = LARGE_ESC_SHIELDS_6
+		# esc tier 7
+		has_component = SMALL_ESC_SHIELDS_7
+		has_component = MEDIUM_ESC_SHIELDS_7
+		has_component = LARGE_ESC_SHIELDS_7
+		# esc tier 8
+		has_component = SMALL_ESC_SHIELDS_8
+		has_component = MEDIUM_ESC_SHIELDS_8
+		has_component = LARGE_ESC_SHIELDS_8
+		# esc dark matter tier 2
+		has_component = SMALL_ESC_ENIGMATIC_SHIELD_2
+		has_component = MEDIUM_ESC_ENIGMATIC_SHIELD_2
+		has_component = LARGE_ESC_ENIGMATIC_SHIELD_2
+		# esc dark matter tier 3
+		has_component = SMALL_ESC_ENIGMATIC_SHIELD_3
+		has_component = MEDIUM_ESC_ENIGMATIC_SHIELD_3
+		has_component = LARGE_ESC_ENIGMATIC_SHIELD_3
+		# esc cyclonic tier 1
+		has_component = SMALL_ESC_CYCLONIC_SHIELDS_1
+		has_component = MEDIUM_ESC_CYCLONIC_SHIELDS_1
+		has_component = LARGE_ESC_CYCLONIC_SHIELDS_1
+		# esc cyclonic tier 2
+		has_component = SMALL_ESC_CYCLONIC_SHIELDS_2
+		has_component = MEDIUM_ESC_CYCLONIC_SHIELDS_2
+		has_component = LARGE_ESC_CYCLONIC_SHIELDS_2
+		# esc cyclonic tier 3
+		has_component = SMALL_ESC_CYCLONIC_SHIELDS_3
+		has_component = MEDIUM_ESC_CYCLONIC_SHIELDS_3
+		has_component = LARGE_ESC_CYCLONIC_SHIELDS_3
+		# esc shielding armor tier 1
+		has_component = SMALL_ESC_SHIELD_ARMOR_1
+		has_component = MEDIUM_ESC_SHIELD_ARMOR_1
+		has_component = LARGE_ESC_SHIELD_ARMOR_1
+		# esc shielding armor tier 2
+		has_component = SMALL_ESC_SHIELD_ARMOR_2
+		has_component = MEDIUM_ESC_SHIELD_ARMOR_2
+		has_component = LARGE_ESC_SHIELD_ARMOR_2
+		# esc shielding armor tier 3
+		has_component = SMALL_ESC_SHIELD_ARMOR_3
+		has_component = MEDIUM_ESC_SHIELD_ARMOR_3
+		has_component = LARGE_ESC_SHIELD_ARMOR_3
+	}
+}
