@@ -417,7 +417,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	upgrades_to = ESC_GRAVITY_TORPS_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield weapon_role_artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -483,7 +483,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_TORPS_2
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield weapon_role_artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {

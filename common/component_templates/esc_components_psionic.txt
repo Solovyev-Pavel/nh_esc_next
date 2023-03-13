@@ -417,7 +417,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_small"
 	upgrades_to = SMALL_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -473,7 +473,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -530,7 +530,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_large"
 	upgrades_to = LARGE_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -589,7 +589,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_small"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -644,7 +644,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_medium"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -700,7 +700,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_large"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -767,7 +767,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_torpedo"
 	upgrades_to = ESC_PSIONIC_TORPEDO_2
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -833,7 +833,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_TORPEDO_2
 	projectile_gfx = "esc_psionic_torpedo"
 	tags = { weapon_type_energy weapon_type_psionic }
-	ai_tags = { weapon_role_anti_armor energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {

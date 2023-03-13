@@ -82,7 +82,7 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_AUTOCANNON
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -728,7 +728,7 @@ weapon_component_template = {
 	component_set = ESC_JUNK_MINE_LAUNCHER
 	projectile_gfx = "scavenger_bot_secondary_weapon"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery explosive }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -790,7 +790,7 @@ weapon_component_template = {
 	component_set = ESC_VOIDSPAWN_MISSILE
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive explosive_stealth artillery artillery_stealth }
 
 	# only regular empires may use this component
 	valid_for_country = {

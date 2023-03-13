@@ -419,7 +419,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_bomb_1_missile"
 	upgrades_to = ESC_TESLA_BOMB_2
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -485,7 +485,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_BOMB_2
 	projectile_gfx = "esc_tesla_bomb_2_missile"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
