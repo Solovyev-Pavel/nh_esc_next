@@ -32,11 +32,15 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_SHIELDS_7
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -71,11 +75,15 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_SHIELDS_7
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -110,11 +118,15 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_SHIELDS_7
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -149,11 +161,15 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_SHIELDS_8
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -188,11 +204,15 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_SHIELDS_8
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -227,11 +247,15 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_SHIELDS_8
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -270,11 +294,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -313,11 +341,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -356,11 +388,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -424,11 +460,15 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_CYCLONIC_SHIELDS_2
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -463,11 +503,15 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_CYCLONIC_SHIELDS_2
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -502,11 +546,15 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_CYCLONIC_SHIELDS_2
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -541,11 +589,15 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_CYCLONIC_SHIELDS_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -580,11 +632,15 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_CYCLONIC_SHIELDS_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -619,11 +675,15 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_CYCLONIC_SHIELDS_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -657,11 +717,15 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -695,11 +759,15 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -733,11 +801,15 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -776,11 +848,15 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_ENIGMATIC_SHIELD_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -815,11 +891,15 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_ENIGMATIC_SHIELD_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -854,11 +934,15 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_ENIGMATIC_SHIELD_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -892,11 +976,15 @@ utility_component_template = {
 	component_set = ESC_ENIGMATIC_SHIELD_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -930,11 +1018,15 @@ utility_component_template = {
 	component_set = ESC_ENIGMATIC_SHIELD_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -968,11 +1060,15 @@ utility_component_template = {
 	component_set = ESC_ENIGMATIC_SHIELD_3
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -1016,11 +1112,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -1060,11 +1160,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -1104,11 +1208,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -1147,11 +1255,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -1190,11 +1302,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
@@ -1233,11 +1349,15 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 0
 		}
 	}
 }
