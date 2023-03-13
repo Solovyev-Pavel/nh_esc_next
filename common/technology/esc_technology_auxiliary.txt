@@ -17,7 +17,9 @@
 # ── Reapir Drones								: auxiliary component for automatic ship repair
 # ── Temporal Displacer							: adds a bit of evasion and large emergency ftl boost
 # ── Nanite Reactive Armor						: auxiliary component for armor hardening
+# ── Living Absorption Plating					: auxiliary component for armor hardening
 # ── Citadel Shield Hardener					: auxiliary component for shield hardening
+# ── Shroud-Enhanced Shield Hardener			: auxiliary component for shield hardening
 
 ############################################################
 ##            Advanced Fire Control Systems               ##
@@ -838,6 +840,70 @@ esc_tech_armor_hardening_3 = {
 }
 
 ############################################################
+##                Living Absorption Plating               ##
+############################################################
+
+esc_tech_armor_hardening_lm_2 = {
+	area = engineering
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = all
+	prerequisites = { "tech_armor_hardeners_2" }
+	is_rare = yes
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.15
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
 ##                Citadel Shield Hardener                 ##
 ############################################################
 
@@ -878,6 +944,56 @@ esc_tech_shield_hardening_3 = {
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##            Shroud-Enhanced Shield Hardener             ##
+############################################################
+
+esc_tech_shield_hardening_psi_2 = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = all
+	prerequisites = { "tech_shield_hardeners_2" "esc_tech_psionic_weapons" }
+	is_rare = yes
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_psionics"
 			}
 		}
 		modifier = {

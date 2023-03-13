@@ -552,6 +552,43 @@ utility_component_template = {
 	}
 }
 
+# living absorption plates
+utility_component_template = {
+	key = "ESC_ARMOR_HARDENER_LMETAL_2"
+	size = aux
+	icon = "GFX_esc_armor_hardening_lm_2"
+	icon_frame = 1
+	power = -40
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 40
+			sr_living_metal = 2
+		}
+	}
+
+	prerequisites = { "esc_tech_armor_hardening_lm_2" }
+	component_set = ESC_ARMOR_HARDENER_LMETAL_2
+
+	ship_modifier = {
+		ship_armor_hardening_add = 0.33
+		ship_armor_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 15
+
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
 # citadel shield hardener
 utility_component_template = {
 	key = "ESC_SHIELD_HARDENER_3"
@@ -580,6 +617,43 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			is_ai = yes
+		}
+	}
+}
+
+# citadel shield hardener
+utility_component_template = {
+	key = "ESC_SHIELD_HARDENER_PSI_2"
+	size = aux
+	icon = "GFX_esc_shield_hardening_psi_2"
+	icon_frame = 1
+	power = -35
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			sr_zro = 2
+		}
+	}
+
+	prerequisites = { "esc_tech_shield_hardening_psi_2" }
+	component_set = ESC_SHIELD_HARDENER_PSI_2
+
+	ship_modifier = {
+		ship_shield_hardening_add = 0.33
+		ship_shield_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 15
+
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
 		}
 		modifier = {
 			factor = 0.0
