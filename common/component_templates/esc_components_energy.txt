@@ -789,7 +789,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_small"
 	upgrades_to = SMALL_ESC_DISRUPTOR_5
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull brawler }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -841,7 +841,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_medium"
 	upgrades_to = MEDIUM_ESC_DISRUPTOR_5
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull brawler }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -896,7 +896,7 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull brawler }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -947,7 +947,7 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_hull brawler }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
 	ai_weight = {
@@ -1005,7 +1005,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = ESC_ENERGY_TORPEDO_4
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -1061,7 +1061,7 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -1387,7 +1387,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_2
 	projectile_gfx = "esc_mining_laser_2_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 	upgrades_to = SMALL_ESC_MINING_LASER_3
 
 	# only regular empires may use this component
@@ -1435,7 +1435,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_2
 	projectile_gfx = "esc_mining_laser_2_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 	upgrades_to = MEDIUM_ESC_MINING_LASER_3
 
 	# only regular empires may use this component
@@ -1487,7 +1487,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_3
 	projectile_gfx = "esc_mining_laser_3_small"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1534,7 +1534,7 @@ weapon_component_template = {
 	component_set = ESC_MINING_LASER_3
 	projectile_gfx = "esc_mining_laser_3_medium"
 	tags = { weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler  }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 
 	# only regular empires may use this component
 	valid_for_country = {

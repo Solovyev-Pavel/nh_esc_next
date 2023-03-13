@@ -100,7 +100,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_6"
 	upgrades_to = ESC_MISSILE_7
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0
 
 	ai_weight = {
@@ -160,7 +160,7 @@ weapon_component_template = {
 	component_set = ESC_MISSILE_7
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0
 
 	ai_weight = {
@@ -221,7 +221,7 @@ weapon_component_template = {
 	projectile_gfx = "small_esc_plasma_missile_1"
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -278,7 +278,7 @@ weapon_component_template = {
 	projectile_gfx = "medium_esc_plasma_missile_1"
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -335,7 +335,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_1"
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -396,7 +396,7 @@ weapon_component_template = {
 	projectile_gfx = "small_esc_plasma_missile_2"
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -453,7 +453,7 @@ weapon_component_template = {
 	projectile_gfx = "medium_esc_plasma_missile_2"
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -510,7 +510,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_2"
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -570,7 +570,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "small_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -626,7 +626,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "medium_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -682,7 +682,7 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "large_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -745,7 +745,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_6"
 	upgrades_to = ESC_TORPEDO_5
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_anti_shield explosive }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -807,7 +807,7 @@ weapon_component_template = {
 	component_set = ESC_TORPEDO_5
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_anti_shield explosive }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -869,7 +869,7 @@ weapon_component_template = {
 	component_set = ESC_CORROSIVE_WARHEAD
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy }
-	ai_tags = { weapon_role_anti_shield explosive }
+	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -900,7 +900,7 @@ weapon_component_template = {
 	damage = { min = 85 max = 120 }
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_G_2
+	range = @ESC_WEAPON_RANGE_G_3
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.15
@@ -933,7 +933,7 @@ weapon_component_template = {
 	component_set = ESC_SWARMER_MISSILES_3
 	projectile_gfx = "esc_swarmer_missiles_3"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = ESC_SWARMER_MISSILES_4
 
 	ai_weight = {
@@ -960,7 +960,7 @@ weapon_component_template = {
 	damage = { min = 120 max = 150 }
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_G_2
+	range = @ESC_WEAPON_RANGE_G_3
 	accuracy = 1.0
 	missile_speed = @ESC_MISSILE_SPEED_3
 	missile_evasion = 0.15
@@ -993,7 +993,7 @@ weapon_component_template = {
 	component_set = ESC_SWARMER_MISSILES_4
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	ai_weight = {
 		weight = 1

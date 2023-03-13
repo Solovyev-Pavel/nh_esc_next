@@ -94,7 +94,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_6
 	projectile_gfx = "gauss_cannon_s"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_MASS_DRIVER_7
 
 	ai_weight = {
@@ -252,7 +252,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_7
 	projectile_gfx = "gauss_cannon_s"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
 
 	ai_weight = {
 		weight = 1
@@ -407,7 +407,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_4
 	projectile_gfx = "esc_autocannon_4_small"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = SMALL_ESC_AUTOCANNON_5
 
 	ai_weight = {
@@ -458,7 +458,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_4
 	projectile_gfx = "esc_autocannon_4_medium"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = MEDIUM_ESC_AUTOCANNON_5
 
 	ai_weight = {
@@ -509,7 +509,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_4
 	projectile_gfx = "esc_autocannon_4_large"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = LARGE_ESC_AUTOCANNON_5
 
 	ai_weight = {
@@ -564,7 +564,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_5
 	projectile_gfx = "esc_autocannon_5_small"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -614,7 +614,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_5
 	projectile_gfx = "esc_autocannon_5_medium"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -664,7 +664,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_5
 	projectile_gfx = "esc_autocannon_5_large"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_anti_shield brawler }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 
 	ai_weight = {
 		weight = 1
@@ -718,7 +718,7 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
 	upgrades_to = ESC_ARTILLERY_4
 
 	ai_weight = {
@@ -773,7 +773,7 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
 
 	ai_weight = {
 		weight = 1
