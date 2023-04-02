@@ -358,6 +358,23 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = esc_events.5001
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_country_type = enclave_mercenary
+	}
+
+	immediate = {
+		if = {
+			limit = { NOT = { has_modifier = esc_mercenary_boost } }
+			add_modifier = { modifier = esc_mercenary_boost days = -1 }
+		}
+	}
+}
+
 ## ##################################################### ##
 ##   TEST: Grant access to all weapon types to empire    ##
 ## ##################################################### ##
