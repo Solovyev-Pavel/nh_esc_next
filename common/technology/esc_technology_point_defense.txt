@@ -45,13 +45,6 @@ esc_tech_flak_cannon_4 = {
 			factor = 1.1
 			has_ethic = ethic_fanatic_militarist
 		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_propulsion"
-			}
-		}
 	}
 
 	ai_weight = {
@@ -71,13 +64,6 @@ esc_tech_flak_cannon_4 = {
 		modifier = {
 			factor = 1.1
 			has_ethic = ethic_fanatic_militarist
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_propulsion"
-			}
 		}
 	}
 }
@@ -118,13 +104,6 @@ esc_tech_flak_cannon_5 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_propulsion"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -155,13 +134,6 @@ esc_tech_flak_cannon_5 = {
 		modifier = {
 			factor = 1.1
 			has_ethic = ethic_fanatic_militarist
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_propulsion"
-			}
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -197,24 +169,10 @@ esc_tech_point_defense_4 = {
 	}
 
 	weight_modifier = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 }
 
@@ -238,13 +196,6 @@ esc_tech_point_defense_5 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -260,13 +211,6 @@ esc_tech_point_defense_5 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
@@ -309,13 +253,6 @@ esc_tech_juggernaut_pd_1 = {
 				has_technology = esc_tech_flak_cannon_4
 			}
 		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 	}
 
 	ai_weight = {
@@ -325,13 +262,6 @@ esc_tech_juggernaut_pd_1 = {
 			NOR = {
 				has_technology = esc_tech_point_defense_4
 				has_technology = esc_tech_flak_cannon_4
-			}
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
 			}
 		}
 	}
@@ -358,13 +288,6 @@ esc_tech_juggernaut_pd_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -380,13 +303,6 @@ esc_tech_juggernaut_pd_2 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_computing"
-			}
-		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
@@ -422,13 +338,6 @@ esc_tech_point_defense_laser = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -444,13 +353,6 @@ esc_tech_point_defense_laser = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
-		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy

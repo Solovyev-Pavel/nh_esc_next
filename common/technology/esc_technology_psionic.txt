@@ -38,35 +38,16 @@ esc_tech_psionic_cannon_1 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 	}
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
 	}
 }
 
@@ -93,22 +74,10 @@ esc_tech_psionic_cannon_2 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -127,13 +96,6 @@ esc_tech_psionic_cannon_2 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
@@ -177,22 +139,10 @@ esc_tech_psionic_strike_1 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -214,13 +164,6 @@ esc_tech_psionic_strike_1 = {
 		modifier = {
 			factor = 0
 			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -264,22 +207,10 @@ esc_tech_psionic_strike_2 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -301,13 +232,6 @@ esc_tech_psionic_strike_2 = {
 		modifier = {
 			factor = 0
 			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -347,35 +271,16 @@ esc_tech_psionic_torpedo_1 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 	}
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
 	}
 }
 
@@ -402,22 +307,10 @@ esc_tech_psionic_torpedo_2 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -436,13 +329,6 @@ esc_tech_psionic_torpedo_2 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
@@ -486,22 +372,10 @@ esc_tech_psionic_lance_1 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -523,13 +397,6 @@ esc_tech_psionic_lance_1 = {
 		modifier = {
 			factor = 0
 			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -574,22 +441,10 @@ esc_tech_psionic_lance_2 = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -611,13 +466,6 @@ esc_tech_psionic_lance_2 = {
 		modifier = {
 			factor = 0
 			ESC_TRIGGER_may_research_psionic_weapons_advanced = no
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -669,22 +517,10 @@ esc_tech_psionic_lance_titanic = {
 		modifier = {
 			factor = 0.75
 			NOR = {
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_expertise_psionics"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_curator"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_spark_of_genius"
-				}
-				research_leader = {
-					area = society
-					has_trait = "leader_trait_maniacal"
-				}
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
 			}
 		}
 		modifier = {
@@ -712,13 +548,6 @@ esc_tech_psionic_lance_titanic = {
 			NOR = {
 				has_technology = tech_titans
 				has_technology = tech_juggernaut
-			}
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
 			}
 		}
 		modifier = {
@@ -776,13 +605,6 @@ esc_tech_psionic_interceptors = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
-		}
-		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
@@ -817,13 +639,6 @@ esc_tech_psionic_interceptors = {
 		modifier = {
 			factor = 1.2
 			has_ethic = ethic_fanatic_militarist
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_psionics"
-			}
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
