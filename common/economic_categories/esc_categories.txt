@@ -1,16 +1,5 @@
 ### fix megastructures modifiers
 
-country = {
-	hidden = yes
-	generate_mult_modifiers = {
-		produces
-	}
-
-	generate_add_modifiers = {
-		produces
-	}
-}
-
 megastructures = {
 	use_for_ai_budget = yes
 	ai_use_parent_for_resources_upkeep = {
@@ -18,6 +7,8 @@ megastructures = {
 		consumer_goods
 	}
 	parent = country
+	modifier_category = megastructure
+
     generate_mult_modifiers = {
 		cost
         produces
