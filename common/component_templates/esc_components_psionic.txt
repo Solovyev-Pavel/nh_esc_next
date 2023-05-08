@@ -73,7 +73,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_1
 	projectile_gfx = "esc_psionic_cannon_small"
 	upgrades_to = SMALL_ESC_PSIONIC_CANNON_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -129,7 +129,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_1
 	projectile_gfx = "esc_psionic_cannon_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_CANNON_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -186,7 +186,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_1
 	projectile_gfx = "esc_psionic_cannon_large"
 	upgrades_to = LARGE_ESC_PSIONIC_CANNON_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
@@ -245,7 +245,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_cannon_2" }
 	component_set = ESC_PSIONIC_CANNON_2
 	projectile_gfx = "esc_psionic_cannon_small"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -300,7 +300,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_cannon_2" }
 	component_set = ESC_PSIONIC_CANNON_2
 	projectile_gfx = "esc_psionic_cannon_medium"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -356,7 +356,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_cannon_2" }
 	component_set = ESC_PSIONIC_CANNON_2
 	projectile_gfx = "esc_psionic_cannon_large"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
@@ -416,7 +416,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_1
 	projectile_gfx = "esc_psionic_strike_small"
 	upgrades_to = SMALL_ESC_PSIONIC_STRIKE_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -472,7 +472,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_1
 	projectile_gfx = "esc_psionic_strike_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_STRIKE_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -529,7 +529,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_1
 	projectile_gfx = "esc_psionic_strike_large"
 	upgrades_to = LARGE_ESC_PSIONIC_STRIKE_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
@@ -588,7 +588,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_strike_2" }
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_small"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -643,7 +643,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_strike_2" }
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_medium"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and spiritualist FE may use this component
@@ -699,7 +699,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_strike_2" }
 	component_set = ESC_PSIONIC_STRIKE_2
 	projectile_gfx = "esc_psionic_strike_large"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
@@ -766,7 +766,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_TORPEDO_1
 	projectile_gfx = "esc_psionic_torpedo"
 	upgrades_to = ESC_PSIONIC_TORPEDO_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic g_slot }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
@@ -832,7 +832,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_torpedo_2" }
 	component_set = ESC_PSIONIC_TORPEDO_2
 	projectile_gfx = "esc_psionic_torpedo"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic g_slot }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and spiritualist FE may use this component
@@ -895,7 +895,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_LANCE_1
 	projectile_gfx = "esc_psionic_lance"
 	upgrades_to = ESC_PSIONIC_LANCE_2
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic x_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
@@ -963,7 +963,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_LANCE_2
 	projectile_gfx = "esc_psionic_lance"
 	upgrades_to = ESC_PSIONIC_LANCE_JUGGERNAUT
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic x_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
@@ -1031,7 +1031,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_psionic_lance_titanic" }
 	component_set = ESC_PSIONIC_LANCE_TITANIC
 	projectile_gfx = "esc_psionic_lance"
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic t_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component
@@ -1096,7 +1096,7 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_psionic_lance"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_energy weapon_type_psionic }
+	tags = { weapon_type_energy weapon_type_psionic x_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	# only regular empires and spiritualist FE may use this component

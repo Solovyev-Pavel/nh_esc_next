@@ -62,7 +62,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_1" }
 	component_set = ESC_BIO_CANNON_1
 	projectile_gfx = "esc_bio_projectile_small"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_BIO_CANNON_2
 
@@ -118,7 +118,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_1" }
 	component_set = ESC_BIO_CANNON_1
 	projectile_gfx = "esc_bio_projectile_medium"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_2
 
@@ -175,7 +175,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_1" }
 	component_set = ESC_BIO_CANNON_1
 	projectile_gfx = "esc_bio_projectile_large"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_2
 
@@ -235,7 +235,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_2" }
 	component_set = ESC_BIO_CANNON_2
 	projectile_gfx = "esc_bio_projectile_small"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_BIO_CANNON_3
 
@@ -291,7 +291,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_2" }
 	component_set = ESC_BIO_CANNON_2
 	projectile_gfx = "esc_bio_projectile_medium"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_3
 
@@ -348,7 +348,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_2" }
 	component_set = ESC_BIO_CANNON_2
 	projectile_gfx = "esc_bio_projectile_large"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_3
 
@@ -408,7 +408,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_3" }
 	component_set = ESC_BIO_CANNON_3
 	projectile_gfx = "esc_bio_projectile_small"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_BIO_CANNON_4
 
@@ -464,7 +464,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_3" }
 	component_set = ESC_BIO_CANNON_3
 	projectile_gfx = "esc_bio_projectile_medium"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_4
 
@@ -521,7 +521,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_3" }
 	component_set = ESC_BIO_CANNON_3
 	projectile_gfx = "esc_bio_projectile_large"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_4
 
@@ -581,7 +581,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_4" }
 	component_set = ESC_BIO_CANNON_4
 	projectile_gfx = "esc_bio_projectile_small"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and xenophile FE may use biological components
@@ -636,7 +636,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_4" }
 	component_set = ESC_BIO_CANNON_4
 	projectile_gfx = "esc_bio_projectile_medium"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
 	# only regular empires and xenophile FE may use biological components
@@ -692,7 +692,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_cannon_4" }
 	component_set = ESC_BIO_CANNON_4
 	projectile_gfx = "esc_bio_projectile_large"
-	tags = { weapon_type_kinetic weapon_type_biological }
+	tags = { weapon_type_kinetic weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 
 	# only regular empires and xenophile FE may use biological components
@@ -758,7 +758,7 @@ weapon_component_template = {
 	component_set = ESC_BIO_MISSILE_1
 	projectile_gfx = "esc_bio_missile"
 	upgrades_to = ESC_BIO_MISSILE_2
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and xenophile FE may use biological components
@@ -824,7 +824,7 @@ weapon_component_template = {
 	component_set = ESC_BIO_MISSILE_2
 	projectile_gfx = "esc_bio_missile"
 	upgrades_to = ESC_BIO_MISSILE_3
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and xenophile FE may use biological components
@@ -889,7 +889,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_missile_3" }
 	component_set = ESC_BIO_MISSILE_3
 	projectile_gfx = "esc_bio_missile"
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and xenophile FE may use biological components
@@ -955,7 +955,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_missile_x_1" }
 	component_set = ESC_BIO_X_MISSILE_1
 	projectile_gfx = "esc_bio_missile"
-	tags = { weapon_type_kinetic weapon_type_biological } # no explosive x-slot turrets
+	tags = { weapon_type_kinetic weapon_type_biological x_slot } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_2
 
@@ -1022,7 +1022,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_missile_x_2" }
 	component_set = ESC_BIO_X_MISSILE_2
 	projectile_gfx = "esc_bio_missile"
-	tags = { weapon_type_kinetic weapon_type_biological } # no explosive x-slot turrets
+	tags = { weapon_type_kinetic weapon_type_biological x_slot } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 
@@ -1090,7 +1090,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_bio_missile_titanic" }
 	component_set = ESC_BIO_X_MISSILE_3_TITAN
 	projectile_gfx = "esc_bio_missile"
-	tags = { weapon_type_explosive weapon_type_biological }
+	tags = { weapon_type_explosive weapon_type_biological t_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 
 	# only regular empires and xenophile FE may use biological components
@@ -1154,7 +1154,7 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 	projectile_gfx = "esc_bio_missile"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic weapon_type_biological } # no explosive x-slot turrets
+	tags = { weapon_type_kinetic weapon_type_biological x_slot } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 
 	# only regular empires and xenophile FE may use biological components

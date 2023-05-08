@@ -68,7 +68,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_1
 	projectile_gfx = "esc_tesla_1_small"
 	upgrades_to = SMALL_ESC_TESLA_COIL_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
@@ -124,7 +124,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_1
 	projectile_gfx = "esc_tesla_1_medium"
 	upgrades_to = MEDIUM_ESC_TESLA_COIL_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
@@ -181,7 +181,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_1
 	projectile_gfx = "esc_tesla_1_large"
 	upgrades_to = LARGE_ESC_TESLA_COIL_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_hull artillery }
 
 	# only regular empires and machine FE may use this component
@@ -240,7 +240,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_coil_2" }
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_small"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
@@ -295,7 +295,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_coil_2" }
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_medium"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull brawler gunship }
 
 	# only regular empires and machine FE may use this component
@@ -351,7 +351,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_coil_2" }
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_large"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_hull artillery }
 
 	# only regular empires and machine FE may use this component
@@ -418,7 +418,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_BOMB_1
 	projectile_gfx = "esc_tesla_bomb_1_missile"
 	upgrades_to = ESC_TESLA_BOMB_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and machine FE may use this component
@@ -484,7 +484,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_bomb_2" }
 	component_set = ESC_TESLA_BOMB_2
 	projectile_gfx = "esc_tesla_bomb_2_missile"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
 	# only regular empires and machine FE may use this component
@@ -547,7 +547,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_1
 	projectile_gfx = "esc_tesla_1_xl"
 	upgrades_to = ESC_TESLA_CANNON_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
@@ -615,7 +615,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_2
 	projectile_gfx = "esc_tesla_2_xl"
 	upgrades_to = ESC_TESLA_CANNON_JUGGERNAUT
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
@@ -683,7 +683,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_cannon_titanic" }
 	component_set = ESC_TESLA_CANNON_TITANIC
 	projectile_gfx = "esc_tesla_2_titanic"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy t_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component
@@ -748,7 +748,7 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_tesla_2_xl"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
 	# only regular empires and machine FE may use this component

@@ -59,7 +59,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_1
 	projectile_gfx = red_crystal_ship_projectile
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_2
 
@@ -115,7 +115,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_2
 
@@ -172,7 +172,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_2
 
@@ -232,7 +232,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_3
 
@@ -288,7 +288,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_3
 
@@ -345,7 +345,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_3
 
@@ -405,7 +405,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_4
 
@@ -461,7 +461,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_4
 
@@ -518,7 +518,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_4
 
@@ -578,7 +578,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_5
 
@@ -634,7 +634,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_5
 
@@ -691,7 +691,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_5
 
@@ -751,7 +751,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 
 	# only regular empires and xenophile FE should use this component
@@ -806,7 +806,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 
 	# only regular empires and xenophile FE should use this component
@@ -862,7 +862,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -925,7 +925,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_1
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_2
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -988,7 +988,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_2
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_3
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -1051,7 +1051,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_3
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_JUGGERNAUT
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -1114,7 +1114,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_lance_titanic" }
 	component_set = ESC_CRYSTAL_LANCE_TITANIC
 	projectile_gfx = "yellow_crystal_ship_projectile"
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic t_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -1174,7 +1174,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic }
+	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component

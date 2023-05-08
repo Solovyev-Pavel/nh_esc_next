@@ -66,7 +66,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_1
 	projectile_gfx = "esc_gravity_cannon_small"
 	upgrades_to = SMALL_ESC_GRAVITY_CANNON_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
@@ -122,7 +122,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_1
 	projectile_gfx = "esc_gravity_cannon_medium"
 	upgrades_to = MEDIUM_ESC_GRAVITY_CANNON_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
@@ -179,7 +179,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_1
 	projectile_gfx = "esc_gravity_cannon_large"
 	upgrades_to = LARGE_ESC_GRAVITY_CANNON_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 
 	# only regular empires and materialist FE may use this component
@@ -238,7 +238,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_cannon_2" }
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_small"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
@@ -293,7 +293,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_cannon_2" }
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_medium"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
 
 	# only regular empires and materialist FE may use this component
@@ -349,7 +349,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_cannon_2" }
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_large"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 
 	# only regular empires and materialist FE may use this component
@@ -416,7 +416,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_TORPS_1
 	projectile_gfx = "esc_gravitic_torpedoes"
 	upgrades_to = ESC_GRAVITY_TORPS_2
-	tags = { weapon_type_explosive weapon_type_energy }
+	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and materialist FE may use this component
@@ -482,7 +482,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_torpedo_2" }
 	component_set = ESC_GRAVITY_TORPS_2
 	projectile_gfx = "esc_gravitic_torpedoes"
-	tags = { weapon_type_explosive weapon_type_energy }
+	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	# only regular empires and materialist FE may use this component
@@ -545,7 +545,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_1
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_GRAVITY_LANCE_2
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
@@ -613,7 +613,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_2
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_GRAVITY_LANCE_JUGGERNAUT
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
@@ -681,7 +681,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_lance_titanic" }
 	component_set = ESC_GRAVITY_LANCE_TITANIC
 	projectile_gfx = "esc_gravity_lance_titanic"
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy t_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
@@ -746,7 +746,7 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_gravity_lance"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_energy }
+	tags = { weapon_type_energy x_slot }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and materialist FE may use this component
