@@ -2953,17 +2953,17 @@ weapon_component_template = {
 		}
 	}
 
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	hull_damage = @ESC_WEAPON_eraser_hull_damage
+	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
+	armor_damage = @ESC_WEAPON_eraser_armor_damage
+	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
+	shield_damage = @ESC_WEAPON_eraser_shield_damage
 	tracking = 0.6
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_small"
-	tags = { weapon_type_energy s_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -3009,17 +3009,17 @@ weapon_component_template = {
 		}
 	}
 
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	hull_damage = @ESC_WEAPON_eraser_hull_damage
+	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
+	armor_damage = @ESC_WEAPON_eraser_armor_damage
+	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
+	shield_damage = @ESC_WEAPON_eraser_shield_damage
 	tracking = 0.3
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_medium"
-	tags = { weapon_type_energy m_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -3065,17 +3065,17 @@ weapon_component_template = {
 		}
 	}
 
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	hull_damage = @ESC_WEAPON_eraser_hull_damage
+	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
+	armor_damage = @ESC_WEAPON_eraser_armor_damage
+	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
+	shield_damage = @ESC_WEAPON_eraser_shield_damage
 	tracking = 0.05
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_large"
-	tags = { weapon_type_energy l_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -3124,11 +3124,11 @@ weapon_component_template = {
 		}
 	}
 
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	hull_damage = @ESC_WEAPON_eraser_hull_damage
+	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
+	armor_damage = @ESC_WEAPON_eraser_armor_damage
+	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
+	shield_damage = @ESC_WEAPON_eraser_shield_damage
 	tracking = 0.0
 
 	firing_arc = 25.0
@@ -3138,7 +3138,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_extradimensional_weapon_3_x" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
 	projectile_gfx = "esc_extradimensional_x_3"
-	tags = { weapon_type_energy x_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -3192,11 +3192,11 @@ weapon_component_template = {
 		}
 	}
 
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	hull_damage = @ESC_WEAPON_eraser_hull_damage
+	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
+	armor_damage = @ESC_WEAPON_eraser_armor_damage
+	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
+	shield_damage = @ESC_WEAPON_eraser_shield_damage
 	tracking = 0.0
 
 	firing_arc = 25.0
@@ -3206,7 +3206,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_extradimensional_weapon_3_t" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 	projectile_gfx = "esc_extradimensional_t_3"
-	tags = { weapon_type_energy t_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna t_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
 	# only regular empires may use this component
