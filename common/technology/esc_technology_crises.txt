@@ -34,19 +34,16 @@ esc_tech_extradimensional_weapon_1 = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
+			factor = 0
+			NOT = { has_modifier = covenant_end_of_the_cycle }
+		}
+		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
 		}
 		modifier = {
 			factor = 1.5
 			has_ethic = ethic_fanatic_militarist
-		}
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = physics
-				has_trait = "leader_trait_expertise_particles"
-			}
 		}
 	}
 }
