@@ -1,0 +1,1139 @@
+############################################################
+###         ESC TECHNOLOGIES : ARCHAEO WEAPONS          ###
+############################################################
+
+# ── Tech-Synthetic Beam Cannon					: tier 2 archaeo laser weapon
+#     └─ Adv. Tech-Synthetic Beam Cannon		: tier 3 archaeo laser weapon
+# ── Tech-Synthetic Batteries					: tier 2 archaeo mass driver weapon
+#     └─ Advanced Tech-Synthetic Batteries		: tier 3 archaeo mass driver weapon
+# ── Tech-Synthetic Artillery					: tier 2 archaeo mass accelerator weapon
+#     └─ Advanced Tech-Synthetic Artillery		: tier 3 archaeo mass accelerator weapon
+# ── Tech-Synthetic Nano-Missiles				: tier 2 archaeo missile weapon
+#     └─ Advanced Tech-Synthetic Nano-Missiles	: tier 3 archaeo missile weapon
+# ── Tech-Synthetic Drone Crafts				: tier 2 archaeo strikecrafts
+#     └─ Advanced Tech-Synthetic Drone Crafts	: tier 3 archaeo strikecrafts
+# ── Tech-Synthetic CIWS						: tier 2 archaeo point defense system
+#     └─ Advanced Tech-Synthetic CIWS			: tier 3 archaeo point defense system
+# ── Tech-Synthetic Ruinator					: tier 2 archaeo titanic weapon
+#     └─ Advanced Tech-Synthetic Ruinator		: tier 3 archaeo titanic weapon
+#
+# ── Tech-Synthetic Armor						: tier 2 archaeo armor component
+#     └─ Advanced Tech-Synthetic Armor			: tier 3 archaeo armor component
+# ── Tech-Synthetic Shields						: tier 2 archaeo shield component
+#     └─ Advanced Tech-Synthetic Shields		: tier 3 archaeo shield component
+
+############################################################
+##               Tech-Synthetic Beam Cannon               ##
+############################################################
+esc_tech_archaeo_laser_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_lasers" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##           Advanced Tech-Synthetic Beam Cannon          ##
+############################################################
+esc_tech_archaeo_laser_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_laser_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##               Tech-Synthetic Batteries               ##
+############################################################
+esc_tech_archaeo_mass_driver_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_mass_drivers" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##            Advanced Tech-Synthetic Batteries           ##
+############################################################
+esc_tech_archaeo_mass_driver_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_mass_driver_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##               Tech-Synthetic Artillery               ##
+############################################################
+esc_tech_archaeo_mass_accelerator_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_mass_accelerator" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##            Advanced Tech-Synthetic Artillery           ##
+############################################################
+esc_tech_archaeo_mass_accelerator_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_mass_accelerator_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##              Tech-Synthetic Nano-Missiles              ##
+############################################################
+esc_tech_archaeo_missiles_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_missiles" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##          Advanced Tech-Synthetic Nano-Missiles         ##
+############################################################
+esc_tech_archaeo_missiles_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_missiles_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##              Tech-Synthetic Drone Crafts               ##
+############################################################
+esc_tech_archaeo_strikecraft_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_strike_crafts" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##          Advanced Tech-Synthetic Drone Crafts          ##
+############################################################
+esc_tech_archaeo_strikecraft_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_strikecraft_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##                  Tech-Synthetic CIWS                   ##
+############################################################
+esc_tech_archaeo_point_defense_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_point_defence" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##              Advanced Tech-Synthetic CIWS              ##
+############################################################
+esc_tech_archaeo_point_defense_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_point_defense_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##                Tech-Synthetic Ruinator                 ##
+############################################################
+esc_tech_archaeo_titanic_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeo_titan_beam" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##            Advanced Tech-Synthetic Ruinator            ##
+############################################################
+esc_tech_archaeo_titanic_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeo_titanic_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##                 Tech-Synthetic Armor                   ##
+############################################################
+esc_tech_archaeoarmor_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeoarmor" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##             Advanced Tech-Synthetic Armor              ##
+############################################################
+esc_tech_archaeoarmor_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##                Tech-Synthetic Shields                  ##
+############################################################
+esc_tech_archaeoshield_2 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "tech_archaeoshield" "esc_tech_synthesis_tech_age" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}
+
+############################################################
+##            Advanced Tech-Synthetic Shields             ##
+############################################################
+esc_tech_archaeoshield_3 = {
+	area = society
+	category = { archaeostudies }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_archaeoshield_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+	ai_update_type = all
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = 0.1
+			num_buildings = {
+				type = building_archaeostudies_faculty
+				value < 1
+				disabled = no
+				in_construction = no
+			}
+		}
+		modifier = {
+			factor = 0.3
+			NOT = {
+				has_ascension_perk = ap_archaeoengineers
+			}
+		}
+	}
+}

@@ -20,7 +20,8 @@
 #     ├─ Psionic Weapons									: unlocks research of psionic weapons [*] also requires 'New Age Warfare'
 #     └─ Tesla Weapons										: unlocks research of tesla weapons [*] also requires 'New Age Warfare'
 # ── New Age Warfare										: gateway tech; unlocks research of advanced weapons
-#     └─ Advanced Heavy Weapon Systems						: gateway tech; unlocks research of advanced X and T slot weapons
+#     ├─ Advanced Heavy Weapon Systems						: gateway tech; unlocks research of advanced X and T slot weapons
+#     └─ Synthesis of Technological Ages					: gateway tech; unlocks advanced archeotech components
 # ── Biological Weapons										: unlocks research of biological weapons [*] also requires 'New Age Warfare'
 
 ############################################################
@@ -356,6 +357,7 @@ esc_tech_advanced_heavy_weapons = {
 				has_technology = "tech_mass_accelerator_2"
 				has_technology = "tech_arc_emitter_2"
 				has_technology = "esc_tech_crystal_lance_1"
+				has_technology = "tech_archaeo_mass_accelerator"
 			}
 		}
 		modifier = {
@@ -397,6 +399,7 @@ esc_tech_advanced_heavy_weapons = {
 				has_technology = "tech_mass_accelerator_2"
 				has_technology = "tech_arc_emitter_2"
 				has_technology = "esc_tech_crystal_lance_1"
+				has_technology = "tech_archaeo_mass_accelerator"
 			}
 		}
 		modifier = {
@@ -425,6 +428,85 @@ esc_tech_advanced_heavy_weapons = {
 			federation = {
 				has_federation_perk = rare_tech_boost
 				any_member = { has_technology = esc_tech_advanced_heavy_weapons }
+			}
+		}
+	}
+}
+
+############################################################
+##           Synthesis of Technological Ages              ##
+############################################################
+
+esc_tech_synthesis_tech_age = {
+	area = society
+	category = { military_theory }
+	tier = 5
+	cost = @ESC_TECH_tier6_cost1
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_new_age_warfare" "tech_archaeostudies" }
+	is_rare = yes
+	gateway = ESC_ARCHEOTECH_WEAPONS
+
+	prereqfor_desc = {
+		custom = {
+			title = "ESC_TECH_UNLOCK_ADV_ARCHEO_WEAPONS_TITLE"
+			desc = "ESC_TECH_UNLOCK_ADV_ARCHEO_WEAPONS_DESC"
+		}
+	}
+
+	potential = { has_ancrel = yes }
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_archaeo_mass_accelerator"
+				has_technology = "tech_archaeo_mass_drivers"
+				has_technology = "tech_archaeo_lasers"
+				has_technology = "tech_archaeo_missiles"
+				has_technology = "tech_archaeo_point_defence"
+				has_technology = "tech_archaeo_strike_crafts"
+				has_technology = "tech_archaeo_titan_beam"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_synthesis_tech_age }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = "tech_archaeo_mass_accelerator"
+				has_technology = "tech_archaeo_mass_drivers"
+				has_technology = "tech_archaeo_lasers"
+				has_technology = "tech_archaeo_missiles"
+				has_technology = "tech_archaeo_point_defence"
+				has_technology = "tech_archaeo_strike_crafts"
+				has_technology = "tech_archaeo_titan_beam"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_synthesis_tech_age }
 			}
 		}
 	}
