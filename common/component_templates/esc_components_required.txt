@@ -166,7 +166,7 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = { weight = 2000 }
+	ai_weight = { weight = 2250 }
 }
 
 # Shroud Eye
@@ -346,7 +346,7 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 6
+		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
@@ -386,7 +386,7 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 6
+		weight = 7
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0
@@ -424,7 +424,7 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 6
+		weight = 7
 	}
 
 	class_restriction = { shipclass_military}
