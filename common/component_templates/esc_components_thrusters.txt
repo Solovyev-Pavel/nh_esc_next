@@ -57,7 +57,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_thrusters_5" }
 	component_set = "thruster_components"
 	upgrades_to = DESTROYER_ESC_THRUSTERS_6
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 
 	ai_weight = { weight = 5 }
 }
@@ -93,7 +93,9 @@ utility_component_template = {
 		# Realistic ships : cruisers
 		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
 		# Playable fallen empire ships
-		@PFE_Escort }
+		@PFE_Escort
+		# Great Khan Expanded
+		@MISC_MarauderCorvette }
 
 	ai_weight = { weight = 5 }
 }
@@ -163,6 +165,8 @@ utility_component_template = {
 		titan
 		# Playable fallen empire ships
 		@PFE_Titan
+		# Great Khan Expanded
+		@MISC_PirateGalleon @MISC_MarauderGalleon
 		# Deadly tempest
 		graygoo_mothership }
 
@@ -422,7 +426,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_thrusters_6" }
 	component_set = "thruster_components"
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 
 	ai_weight = { weight = 6 }
 }
@@ -457,7 +461,9 @@ utility_component_template = {
 		# Realistic ships : cruisers
 		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
 		# Playable fallen empire ships
-		@PFE_Escort }
+		@PFE_Escort
+		# Great Khan Expanded
+		@MISC_MarauderCorvette }
 
 	ai_weight = { weight = 6 }
 }
@@ -525,6 +531,8 @@ utility_component_template = {
 		titan
 		# Playable fallen empire ships
 		@PFE_Titan
+		# Great Khan Expanded
+		@MISC_PirateGalleon @MISC_MarauderGalleon
 		# Deadly tempest
 		graygoo_mothership }
 

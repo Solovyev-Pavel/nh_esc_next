@@ -35,6 +35,8 @@ utility_component_template = {
 		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
 		# Playable fallen empire ships
 		@PFE_Battlecruiser @PFE_Titan
+		# Great Khan Expanded
+		@MISC_PirateGalleon @MISC_MarauderGalleon
 		# other...
 		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @WACO_FlotillaShip }
 	component_set = "combat_computers"
@@ -101,6 +103,8 @@ utility_component_template = {
 		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
 		# Playable fallen empire ships
 		@PFE_Battlecruiser @PFE_Titan
+		# Great Khan Expanded
+		@MISC_PirateGalleon @MISC_MarauderGalleon
 		# other...
 		@MISC_Ultrajuggernaut }
 	component_set = "combat_computers"
@@ -168,6 +172,8 @@ utility_component_template = {
 		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
 		# Playable fallen empire ships
 		@PFE_Escort @PFE_Battlecruiser
+		# Great Khan Expanded
+		@MISC_MarauderCorvette
 		# other...
 		@MISC_Dreadnought_A @MISC_Ultrajuggernaut @WACO_FlotillaShip }
 	component_set = "combat_computers"
@@ -227,7 +233,9 @@ utility_component_template = {
 		# Realistic ships : cruisers
 		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
 		# Playable fallen empire ships
-		@PFE_Escort }
+		@PFE_Escort
+		# Great Khan Expanded
+		@MISC_MarauderCorvette }
 	component_set = "combat_computers"
 	ship_behavior = picket
 	prerequisites = { "esc_tech_dreadnought_computer" }
@@ -346,6 +354,8 @@ utility_component_template = {
 		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
 		# Playable fallen empire ships
 		@PFE_Battlecruiser @PFE_Titan
+		# Great Khan Expanded
+		@MISC_PirateCorvette @MISC_PirateGalleon @MISC_MarauderGalleon
 		# other...
 		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @WACO_FlotillaShip }
 	component_set = "combat_computers"
@@ -412,6 +422,8 @@ utility_component_template = {
 		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
 		# Playable fallen empire ships
 		@PFE_Battlecruiser @PFE_Titan
+		# Great Khan Expanded
+		@MISC_PirateGalleon @MISC_MarauderGalleon
 		# other...
 		@MISC_Ultrajuggernaut }
 	component_set = "combat_computers"
@@ -479,6 +491,8 @@ utility_component_template = {
 		@RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
 		# Playable fallen empire ships
 		@PFE_Escort @PFE_Battlecruiser
+		# Great Khan Expanded
+		@MISC_PirateCorvette @MISC_MarauderCorvette
 		# other...
 		@MISC_Dreadnought_A @MISC_Ultrajuggernaut @WACO_FlotillaShip }
 	component_set = "combat_computers"
@@ -540,7 +554,9 @@ utility_component_template = {
 		# EAC ships
 		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2
 		# Playable fallen empire ships
-		@PFE_Escort }
+		@PFE_Escort
+		# Great Khan Expanded
+		@MISC_PirateCorvette @MISC_MarauderCorvette }
 	component_set = "combat_computers"
 	ship_behavior = picket
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
@@ -645,6 +661,8 @@ utility_component_template = {
 		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2
 		# Playable fallen empire ships
 		@PFE_Escort
+		# Great Khan Expanded
+		@MISC_MarauderCorvette
 		# other...
 		@WACO_EmergencyShip }
 	component_set = "combat_computers"
