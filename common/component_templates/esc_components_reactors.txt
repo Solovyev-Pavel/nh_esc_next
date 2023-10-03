@@ -62,7 +62,7 @@ utility_component_template = {
 	ai_weight = { weight = 6 }
 }
 
-# cruisers
+# cruisers (vanilla)
 utility_component_template = {
 	key = CRUISER_ESC_REACTOR_6
 	size = small
@@ -81,6 +81,11 @@ utility_component_template = {
 		}
 	}
 
+	# enabled when NSC is not active
+	valid_for_country = {
+		NOT = { has_global_flag = @NSC_active_flag }
+	}
+
 	prerequisites = { "esc_tech_reactor_6" }
 	size_restriction = {
 		# vanilla ship classes
@@ -89,6 +94,42 @@ utility_component_template = {
 		graygoo_interdictor }
 	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_REACTOR_7
+
+	ai_weight = { weight = 6 }
+}
+
+# cruisers (NSC3)
+utility_component_template = {
+	key = CRUISER_ESC_REACTOR_6_NSC
+	size = small
+	icon = GFX_esc_reactor_6
+	icon_frame = 1
+	power = @ESC_REACTOR_t6_power_cruiser_nsc
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_REACTOR_t6_cost_cruiser
+		}
+		upkeep = {
+			energy = @ESC_REACTOR_t6_upkeep_energy_cruiser
+			alloys = @ESC_REACTOR_t6_upkeep_alloys_cruiser
+		}
+	}
+
+	# enabled when NSC is active
+	valid_for_country = {
+		has_global_flag = @NSC_active_flag
+	}
+
+	prerequisites = { "esc_tech_reactor_6" }
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser offspring_cruiser
+		# Deadly tempest
+		graygoo_interdictor }
+	component_set = "power_core"
+	upgrades_to = CRUISER_ESC_REACTOR_7_NSC
 
 	ai_weight = { weight = 6 }
 }
@@ -771,7 +812,7 @@ utility_component_template = {
 	ai_weight = { weight = 7 }
 }
 
-# cruisers
+# cruisers (vanilla)
 utility_component_template = {
 	key = CRUISER_ESC_REACTOR_7
 	size = small
@@ -790,6 +831,11 @@ utility_component_template = {
 		}
 	}
 
+	# enabled when NSC is NOT active
+	valid_for_country = {
+		NOT = { has_global_flag = @NSC_active_flag }
+	}
+
 	prerequisites = { "esc_tech_reactor_7" }
 	size_restriction = {
 		# vanilla ship classes
@@ -798,6 +844,42 @@ utility_component_template = {
 		graygoo_interdictor }
 	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_REACTOR_8
+
+	ai_weight = { weight = 7 }
+}
+
+# cruisers (NSC)
+utility_component_template = {
+	key = CRUISER_ESC_REACTOR_7_NSC
+	size = small
+	icon = GFX_esc_reactor_7
+	icon_frame = 1
+	power = @ESC_REACTOR_t7_power_cruiser_nsc
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_REACTOR_t7_cost_cruiser
+		}
+		upkeep = {
+			energy = @ESC_REACTOR_t7_upkeep_energy_cruiser
+			alloys = @ESC_REACTOR_t7_upkeep_alloys_cruiser
+		}
+	}
+
+	# enabled when NSC is active
+	valid_for_country = {
+		has_global_flag = @NSC_active_flag
+	}
+
+	prerequisites = { "esc_tech_reactor_7" }
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser offspring_cruiser
+		# Deadly tempest
+		graygoo_interdictor }
+	component_set = "power_core"
+	upgrades_to = CRUISER_ESC_REACTOR_8_NSC
 
 	ai_weight = { weight = 7 }
 }
@@ -1478,7 +1560,7 @@ utility_component_template = {
 	ai_weight = { weight = 8 }
 }
 
-# cruisers
+# cruisers (vanilla)
 utility_component_template = {
 	key = CRUISER_ESC_REACTOR_8
 	size = small
@@ -1495,6 +1577,46 @@ utility_component_template = {
 			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
 			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 		}
+	}
+
+	# enabled when NSC is not active
+	valid_for_country = {
+		NOT = { has_global_flag = @NSC_active_flag }
+	}
+
+	prerequisites = { "esc_tech_reactor_8" }
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser offspring_cruiser
+		# Deadly tempest
+		graygoo_interdictor }
+	component_set = "power_core"
+
+	ai_weight = { weight = 8 }
+}
+
+# cruisers (NSC)
+utility_component_template = {
+	key = CRUISER_ESC_REACTOR_8_NSC
+	size = small
+	icon = GFX_esc_reactor_8
+	icon_frame = 1
+	power = @ESC_REACTOR_t8_power_cruiser_nsc
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_REACTOR_t8_cost_cruiser
+		}
+		upkeep = {
+			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
+			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
+		}
+	}
+
+	# enabled when NSC is active
+	valid_for_country = {
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_reactor_8" }
@@ -2191,7 +2313,7 @@ utility_component_template = {
 	}
 }
 
-# cruisers
+# cruisers (vanilla)
 utility_component_template = {
 	key = CRUISER_ESC_DARK_MATTER_CORE_2
 	size = small
@@ -2215,6 +2337,11 @@ utility_component_template = {
 		ships_upkeep_mult = -0.05
 	}
 
+	# enabled when NSC is not active
+	valid_for_country = {
+		NOT = { has_global_flag = @NSC_active_flag }
+	}
+
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
 	size_restriction = {
 		# vanilla ship classes
@@ -2223,6 +2350,54 @@ utility_component_template = {
 		graygoo_interdictor }
 	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_DARK_MATTER_CORE_3
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# cruisers (NSC)
+utility_component_template = {
+	key = CRUISER_ESC_DARK_MATTER_CORE_2_NSC
+	size = small
+	icon = GFX_esc_dark_matter_reactor_2
+	icon_frame = 1
+	power = @ESC_REACTOR_t7_power_cruiser_nsc
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_REACTOR_t7_cost_cruiser
+			sr_dark_matter = 6
+		}
+		upkeep = {
+			energy = @ESC_REACTOR_t7_upkeep_energy_cruiser
+			alloys = @ESC_REACTOR_t7_upkeep_alloys_cruiser
+		}
+	}
+
+	ship_modifier = {
+		ships_upkeep_mult = -0.05
+	}
+
+	# enabled when NSC is active
+	valid_for_country = {
+		has_global_flag = @NSC_active_flag
+	}
+
+	prerequisites = { "esc_tech_dark_matter_power_core_2" }
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser offspring_cruiser
+		# Deadly tempest
+		graygoo_interdictor }
+	component_set = "power_core"
+	upgrades_to = CRUISER_ESC_DARK_MATTER_CORE_3_NSC
 
 	ai_weight = {
 		weight = 10
@@ -3138,7 +3313,7 @@ utility_component_template = {
 	}
 }
 
-# cruisers
+# cruisers (vanilla)
 utility_component_template = {
 	key = CRUISER_ESC_DARK_MATTER_CORE_3
 	size = small
@@ -3160,6 +3335,58 @@ utility_component_template = {
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
+	}
+
+	# enabled when NSC is not active
+	valid_for_country = {
+		NOT = { has_global_flag = @NSC_active_flag }
+	}
+
+	prerequisites = { "esc_tech_dark_matter_power_core_3" }
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser offspring_cruiser
+		# Deadly tempest
+		graygoo_interdictor }
+	component_set = "power_core"
+
+	ai_weight = {
+		weight = 12
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# cruisers (NCS)
+utility_component_template = {
+	key = CRUISER_ESC_DARK_MATTER_CORE_3_NSC
+	size = small
+	icon = GFX_esc_dark_matter_reactor_3
+	icon_frame = 1
+	power = @ESC_REACTOR_t8_power_cruiser_nsc
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_REACTOR_t8_cost_cruiser
+			sr_dark_matter = 6
+		}
+		upkeep = {
+			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
+			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
+		}
+	}
+
+	ship_modifier = {
+		ships_upkeep_mult = -0.10
+	}
+
+	# enabled when NSC is active
+	valid_for_country = {
+		has_global_flag = @NSC_active_flag
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
@@ -4075,7 +4302,7 @@ utility_component_template = {
 	}
 }
 
-# cruisers
+# cruisers (vanilla)
 utility_component_template = {
 	key = CRUISER_ESC_REACTOR_PSIONIC
 	size = small
@@ -4099,8 +4326,57 @@ utility_component_template = {
 		weapon_type_psionic_weapon_damage_mult = 0.25
 	}
 
-	# disallow for fallen empires
+	# enabled when NSC is not active, and only for regular empires
 	valid_for_country = {
+		NOT = { has_global_flag = @NSC_active_flag }
+		is_fallen_empire = no
+	}
+
+	prerequisites = { "esc_tech_reactor_psionic" }
+	size_restriction = {
+		# vanilla ship classes
+		cruiser crisis_cruiser offspring_cruiser
+		# Deadly tempest
+		graygoo_interdictor }
+	component_set = "power_core"
+
+	ai_weight = {
+		weight = 12
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# cruisers (NSC)
+utility_component_template = {
+	key = CRUISER_ESC_REACTOR_PSIONIC_NSC
+	size = small
+	icon = GFX_esc_psionic_reactor
+	icon_frame = 1
+	power = @ESC_REACTOR_t8_power_cruiser_nsc
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_REACTOR_t8_cost_cruiser
+			sr_zro = 6
+		}
+		upkeep = {
+			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
+			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
+		}
+	}
+
+	ship_modifier = {
+		weapon_type_psionic_weapon_damage_mult = 0.25
+	}
+
+	# enabled when NSC is active, and only for regular empires
+	valid_for_country = {
+		has_global_flag = @NSC_active_flag
 		is_fallen_empire = no
 	}
 
