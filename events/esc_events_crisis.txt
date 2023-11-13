@@ -161,16 +161,19 @@ country_event = {
 		set_global_flag = extradimensional_invasion_happened
 		random_system = {
 			limit = {
-				NOT = {
-					any_country = {
-						OR = {
-							is_country_type = fallen_empire
-							is_country_type = awakened_fallen_empire
-						}
-						any_system_within_border = {
-							is_same_value = prev
+				NOR = {
+					is_star_class = sc_pulsar
+					is_star_class = sc_binary_1
+					AND = {
+						exists = owner
+						owner = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
 						}
 					}
+					has_star_flag = crisis_spawn_exclude
 				}
 			}
 			set_star_flag = extradimensional_origin_system
@@ -185,7 +188,7 @@ country_event = {
 						name = "NAME_Unbidden"
 						class = EXD
 						namelist = Extradimensional
-						portrait = exd1
+						portrait = exd1_leader
 						traits = random
 						effect = { save_event_target_as = extradimensional_species }
 					}
