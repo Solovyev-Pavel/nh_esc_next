@@ -1858,12 +1858,14 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_S4
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_SMALL_ARCHAEO_ARMOR_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S2
 	}
 
 	resources = {
@@ -1927,12 +1929,14 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_M4
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_MEDIUM_ARCHAEO_ARMOR_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M2
 	}
 
 	resources = {
@@ -1996,12 +2000,14 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_L4
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_LARGE_ARCHAEO_ARMOR_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L2
 	}
 
 	resources = {
@@ -2072,12 +2078,14 @@ utility_component_template = {
 		ship_armor_hardening_add = 0.05
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_SMALL_ARCHAEO_ARMOR_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S3
 	}
 
 	resources = {
@@ -2143,12 +2151,14 @@ utility_component_template = {
 		ship_armor_hardening_add = 0.05
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_MEDIUM_ARCHAEO_ARMOR_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_M3
+		ship_shield_regen_add_static = @regen_M3
 	}
 
 	resources = {
@@ -2214,12 +2224,14 @@ utility_component_template = {
 		ship_armor_hardening_add = 0.05
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_LARGE_ARCHAEO_ARMOR_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
 	}
 
 	resources = {
@@ -2300,12 +2312,14 @@ utility_component_template = {
 		ship_shield_hardening_add = 0.15
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_SMALL_ARCHAEO_SHIELD_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S2
 	}
 
 	prerequisites = { "esc_tech_archaeoshield_2" }
@@ -2371,12 +2385,14 @@ utility_component_template = {
 		ship_shield_hardening_add = 0.15
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_MEDIUM_ARCHAEO_SHIELD_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M2
 	}
 
 	prerequisites = { "esc_tech_archaeoshield_2" }
@@ -2443,12 +2459,13 @@ utility_component_template = {
 	}
 
 	custom_tooltip = tt_LARGE_ARCHAEO_SHIELD_AP
-	triggered_ship_modifier = {
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L2
 	}
 
 	prerequisites = { "esc_tech_archaeoshield_2" }
@@ -2487,7 +2504,7 @@ utility_component_template = {
 }
 
 ############################################################
-##                Tech-Synthetic Shields                  ##
+##           Advanced Tech-Synthetic Shields              ##
 ############################################################
 
 # small
@@ -2518,12 +2535,14 @@ utility_component_template = {
 		ship_shield_hardening_add = 0.15
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_SMALL_ARCHAEO_SHIELD_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S3
 	}
 
 	prerequisites = { "esc_tech_archaeoshield_3" }
@@ -2588,12 +2607,14 @@ utility_component_template = {
 		ship_shield_hardening_add = 0.15
 	}
 
-	triggered_ship_modifier = {
+	custom_tooltip = tt_MEDIUM_ARCHAEO_SHIELD_AP
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
-		ship_shield_add = @shield_M3
+		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M2
 	}
 
 	prerequisites = { "esc_tech_archaeoshield_3" }
@@ -2659,12 +2680,13 @@ utility_component_template = {
 	}
 
 	custom_tooltip = tt_LARGE_ARCHAEO_SHIELD_AP
-	triggered_ship_modifier = {
+	triggered_ship_design_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_archaeoengineers }
+			exists = from
+			from = { has_ascension_perk = ap_archaeoengineers }
 		}
 		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
 	}
 
 	prerequisites = { "esc_tech_archaeoshield_3" }
