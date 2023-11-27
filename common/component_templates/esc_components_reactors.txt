@@ -567,7 +567,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_reactor_6" }
 	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium }
+	size_restriction = { military_station_medium @MISC_DF_Medium }
 	component_set = "power_core"
 	upgrades_to = PLATFORM2_ESC_REACTOR_7
 
@@ -598,8 +598,8 @@ utility_component_template = {
 	size_restriction = {
 		# vanilla ship size
 		military_station_large
-		# EAC platforms
-		@EAC_Platform }
+		# Other military platforms
+		@EAC_Platform @MISC_DF_Large }
 	component_set = "power_core"
 	upgrades_to = PLATFORM3_ESC_REACTOR_7
 
@@ -1317,7 +1317,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_reactor_7" }
 	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium }
+	size_restriction = { military_station_medium @MISC_DF_Medium }
 	component_set = "power_core"
 	upgrades_to = PLATFORM2_ESC_REACTOR_8
 
@@ -1348,8 +1348,8 @@ utility_component_template = {
 	size_restriction = {
 		# vanilla ship size
 		military_station_large
-		# EAC platforms
-		@EAC_Platform }
+		# Other military platforms
+		@EAC_Platform @MISC_DF_Large }
 	component_set = "power_core"
 	upgrades_to = PLATFORM3_ESC_REACTOR_8
 
@@ -2051,7 +2051,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_reactor_8" }
 	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium }
+	size_restriction = { military_station_medium @MISC_DF_Medium }
 	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
@@ -2081,8 +2081,8 @@ utility_component_template = {
 	size_restriction = {
 		# vanilla ship size
 		military_station_large
-		# EAC platforms
-		@EAC_Platform }
+		# Other military platforms
+		@EAC_Platform @MISC_DF_Large }
 	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
@@ -2983,7 +2983,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
 	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium }
+	size_restriction = { military_station_medium @MISC_DF_Medium }
 	component_set = "power_core"
 	upgrades_to = PLATFORM2_ESC_DARK_MATTER_CORE_3
 
@@ -3026,8 +3026,8 @@ utility_component_template = {
 	size_restriction = {
 		# vanilla ship size
 		military_station_large
-		# EAC platforms
-		@EAC_Platform }
+		# Other military platforms
+		@EAC_Platform @MISC_DF_Large }
 	component_set = "power_core"
 	upgrades_to = PLATFORM3_ESC_DARK_MATTER_CORE_3
 
@@ -3969,7 +3969,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
 	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium }
+	size_restriction = { military_station_medium @MISC_DF_Medium }
 	component_set = "power_core"
 
 	ai_weight = {
@@ -4011,8 +4011,8 @@ utility_component_template = {
 	size_restriction = {
 		# vanilla ship size
 		military_station_large
-		# EAC platforms
-		@EAC_Platform }
+		# Other military platforms
+		@EAC_Platform @MISC_DF_Large }
 	component_set = "power_core"
 
 	ai_weight = {
@@ -5009,7 +5009,7 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_reactor_psionic" }
 	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium }
+	size_restriction = { military_station_medium @MISC_DF_Medium }
 	component_set = "power_core"
 
 	ai_weight = {
@@ -5056,8 +5056,8 @@ utility_component_template = {
 	size_restriction = {
 		# vanilla ship size
 		military_station_large
-		# EAC platforms
-		@EAC_Platform }
+		# Other military platforms
+		@EAC_Platform @MISC_DF_Large }
 	component_set = "power_core"
 
 	ai_weight = {
