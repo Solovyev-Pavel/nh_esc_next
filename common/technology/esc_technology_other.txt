@@ -455,7 +455,7 @@ esc_tech_dragon_hatchery = {
 	cost = @tier5cost3
 	weight = @ESC_TECH_tier6_weight1
 	is_rare = yes
-	prerequisites = { "tech_society_3" }
+	prerequisites = { "tech_cloning" "tech_gene_tailoring" }
 
 	potential = {
 		#NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }

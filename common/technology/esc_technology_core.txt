@@ -34,7 +34,7 @@ esc_tech_grand_research_initiative = {
 	tier = 3
 	cost = @tier3cost2
 	weight = @ESC_TECH_weight_core_tech
-	prerequisites = { "tech_physics_2" "tech_society_2" "tech_engineering_2" }
+	prerequisites = { "tech_basic_science_lab_3" "tech_colonial_centralization" "tech_self_aware_logic" }
 	is_rare = yes # purely for cosmetic purposes
 	gateway = ESC_TECHNOLOGIES
 
@@ -68,7 +68,7 @@ esc_tech_culture_nexus = {
 	tier = 4
 	cost = @tier4cost3
 	weight = @tier4cost3
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_society_3" }
+	prerequisites = { "esc_tech_grand_research_initiative" }
 	is_rare = yes
 
 	potential = {
@@ -131,7 +131,7 @@ esc_tech_advanced_materials_lab = {
 	tier = 4
 	cost = @tier4cost3
 	weight = @tier4cost3
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_engineering_3" }
+	prerequisites = { "esc_tech_grand_research_initiative" }
 	is_rare = yes
 
 	potential = {
@@ -180,7 +180,7 @@ esc_tech_technology_institute = {
 	tier = 4
 	cost = @tier4cost3
 	weight = @tier4cost3
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_physics_3" }
+	prerequisites = { "esc_tech_grand_research_initiative" }
 	is_rare = yes
 
 	potential = {
@@ -522,7 +522,7 @@ esc_tech_gravity_manipulation = {
 	tier = 4
 	cost = @tier4cost3
 	weight = @tier4weight3
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_physics_3" }
+	prerequisites = { "esc_tech_grand_research_initiative" "tech_sensors_4" }
 	is_rare = yes # purely for cosmetic purposes
 	gateway = ESC_GRAVITY_MANIPULATION
 
@@ -683,7 +683,7 @@ esc_tech_advanced_materials = {
 	tier = 5
 	cost = @tier5cost1
 	weight = @tier5weight1
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_engineering_3" }
+	prerequisites = { "esc_tech_grand_research_initiative" }
 	is_rare = yes # purely for cosmetic purposes
 	gateway = ESC_MATERIALS
 
