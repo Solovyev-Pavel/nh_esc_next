@@ -717,7 +717,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_kinetic_artillery_3" }
 	component_set = ESC_ARTILLERY_3
 	projectile_gfx = "adv_kinetic_artillery"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
 	upgrades_to = ESC_ARTILLERY_4
 
@@ -772,7 +772,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_kinetic_artillery_4" }
 	component_set = ESC_ARTILLERY_4
 	projectile_gfx = "adv_kinetic_artillery"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
 
 	ai_weight = {
@@ -829,7 +829,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_giga_cannon_3" }
 	component_set = ESC_MASS_ACCELERATOR_3
 	projectile_gfx = "adv_kinetic_artillery"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = ESC_MASS_ACCELERATOR_4
 
@@ -892,7 +892,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_4
 	projectile_gfx = "adv_kinetic_artillery"
 	upgrades_to = ESC_MASS_ACCELERATOR_JUGGERNAUT
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	target_weights = {
@@ -954,7 +954,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_giga_cannon_titanic" }
 	component_set =ESC_MASS_ACCELERATOR_TITANIC
 	projectile_gfx = "adv_kinetic_artillery"
-	tags = { weapon_type_kinetic t_slot }
+	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	target_weights = {
@@ -1013,7 +1013,7 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_JUGGERNAUT
 	projectile_gfx = "adv_kinetic_artillery"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	target_weights = {
@@ -1074,7 +1074,7 @@ weapon_component_template = {
 	prerequisites = { esc_tech_autocannon_x_1 }
 	component_set = ESC_AUTOCANNON_X_1
 	projectile_gfx = "esc_autocannon_5_large"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = ESC_AUTOCANNON_X_2
 
@@ -1133,7 +1133,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_X_2
 	projectile_gfx = "stormfire_auto_cannons_l"
 	upgrades_to = ESC_AUTOCANNON_J
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield }
 
 	ai_weight = {
@@ -1191,7 +1191,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_autocannon_titanic" }
 	component_set = ESC_AUTOCANNON_T
 	projectile_gfx = "esc_autocannon_4_large"
-	tags = { weapon_type_kinetic t_slot }
+	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
 
 	ai_weight = {
@@ -1246,7 +1246,7 @@ weapon_component_template = {
 	component_set = ESC_AUTOCANNON_J
 	projectile_gfx = "esc_autocannon_4_large"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
 
 	ai_weight = {
@@ -1301,7 +1301,7 @@ weapon_component_template = {
 	component_set = ESC_JUGGERNAUT_ARTILLERY_1
 	projectile_gfx = "adv_kinetic_artillery"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 	upgrades_to = ESC_JUGGERNAUT_ARTILLERY_2
 
@@ -1357,7 +1357,7 @@ weapon_component_template = {
 	component_set = ESC_JUGGERNAUT_ARTILLERY_2
 	projectile_gfx = "adv_kinetic_artillery"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	ai_weight = {
@@ -1413,7 +1413,7 @@ weapon_component_template = {
 	prerequisites = { "tech_titans" }
 	component_set = ESC_ASTEROID_THROWER
 	projectile_gfx = "esc_asteroid_thrower_projectile"
-	tags = { weapon_type_kinetic t_slot }
+	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	target_weights = {
@@ -1468,7 +1468,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	component_set = ESC_MHD_CANNON_1
 	projectile_gfx = "esc_mhd_cannon_1"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = ESC_MHD_CANNON_2
 
@@ -1532,7 +1532,7 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_2
 	projectile_gfx = "esc_mhd_cannon_2"
 	upgrades_to = ESC_MHD_CANNON_JUGGERNAUT
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	target_weights = {
@@ -1595,7 +1595,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_mhd_cannon_titanic" }
 	component_set = ESC_MHD_CANNON_TITANIC
 	projectile_gfx = "esc_mhd_cannon_3_titanic"
-	tags = { weapon_type_kinetic t_slot }
+	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	target_weights = {
@@ -1655,7 +1655,7 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_mhd_cannon_3"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	target_weights = {

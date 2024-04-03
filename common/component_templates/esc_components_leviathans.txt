@@ -200,7 +200,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_enigmatic_cannon" }
 	component_set = ESC_ENIGMATIC_CANNON
 	projectile_gfx = "esc_enigmatic_cannon_large"
-	tags = { weapon_type_energy l_slot }
+	tags = { weapon_type_energy l_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -263,7 +263,7 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LANCE
 	projectile_gfx = "esc_enigmatic_lance"
 	upgrades_to = ESC_ENIGMATIC_LANCE_JUGGERNAUT
-	tags = { weapon_type_energy x_slot }
+	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -331,7 +331,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_enigmatic_lance_titanic" }
 	component_set = ESC_ENIGMATIC_LANCE_TITANIC
 	projectile_gfx = "esc_enigmatic_lance_titanic"
-	tags = { weapon_type_energy t_slot }
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -396,7 +396,7 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_enigmatic_lance"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_energy x_slot }
+	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -524,7 +524,7 @@ weapon_component_template = {
 	component_set = ESC_TIYANKI_CANNON
 	projectile_gfx = "esc_tiyanki_lance"
 	upgrades_to = ESC_TIYANKI_CANNON_JUGGERNAUT
-	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -592,7 +592,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
 	component_set = ESC_TIYANKI_CANNON_TITANIC
 	projectile_gfx = "esc_tiyanki_lance_titanic"
-	tags = { weapon_type_energy weapon_type_space_fauna t_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -657,7 +657,7 @@ weapon_component_template = {
 	component_set = ESC_TIYANKI_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_tiyanki_lance"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
 
 	# only regular empires may use this component
@@ -860,7 +860,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_voidspawn_missile_x" }
 	component_set = ESC_VOIDSPAWN_MISSILE_X
 	projectile_gfx = "voidspawn_missile"
-	tags = { weapon_type_kinetic weapon_type_explosive weapon_type_space_fauna x_slot }
+	tags = { weapon_type_kinetic weapon_type_explosive weapon_type_space_fauna x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive }
 
 	# only regular empires may use this component

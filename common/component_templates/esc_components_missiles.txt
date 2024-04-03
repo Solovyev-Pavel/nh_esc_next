@@ -868,7 +868,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_corrosive_warhead_torpedo" }
 	component_set = ESC_CORROSIVE_WARHEAD
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
-	tags = { weapon_type_explosive weapon_type_energy g_slot }
+	tags = { weapon_type_explosive weapon_type_energy g_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
 
 	# only regular empires may use this component
@@ -1056,7 +1056,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_1
 	projectile_gfx = "esc_xmissile1"
 	upgrades_to = ESC_XMISSILE_2
-	tags = { weapon_type_energy weapon_type_explosive x_slot }
+	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
@@ -1120,7 +1120,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_2
 	projectile_gfx = "esc_xmissile2"
 	upgrades_to = ESC_XMISSILE_3_JUGGERNAUT
-	tags = { weapon_type_energy weapon_type_explosive x_slot }
+	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
@@ -1184,7 +1184,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_xmissile_titanic" }
 	component_set = ESC_XMISSILE_3_TITANIC
 	projectile_gfx = "esc_xmissile3"
-	tags = { weapon_type_explosive weapon_type_energy t_slot }
+	tags = { weapon_type_explosive weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {
@@ -1245,7 +1245,7 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_3_JUGGERNAUT
 	projectile_gfx = "esc_xmissile3"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_energy weapon_type_explosive x_slot }
+	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	ai_weight = {

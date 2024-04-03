@@ -925,7 +925,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_1
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_2
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -988,7 +988,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_2
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_3
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -1051,7 +1051,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_3
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_JUGGERNAUT
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -1114,7 +1114,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_lance_titanic" }
 	component_set = ESC_CRYSTAL_LANCE_TITANIC
 	projectile_gfx = "yellow_crystal_ship_projectile"
-	tags = { weapon_type_kinetic t_slot }
+	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
@@ -1174,7 +1174,7 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	# only regular empires and xenophile FE should use this component
