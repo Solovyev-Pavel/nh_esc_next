@@ -30,7 +30,10 @@ esc_tech_psionic_cannon_1 = {
 	gateway = ESC_PSIONIC_CANNONS
 
 	potential = {
-		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		OR = {
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+			ESC_TRIGGER_may_research_psionic_weapons_basic = yes
+		}
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
 
@@ -66,7 +69,10 @@ esc_tech_psionic_cannon_2 = {
 	is_rare = yes
 
 	potential = {
-		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		OR = {
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+			ESC_TRIGGER_may_research_psionic_weapons_basic = yes
+		}
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
 
@@ -263,7 +269,10 @@ esc_tech_psionic_torpedo_1 = {
 	gateway = ESC_PSIONIC_TORPEDOES
 
 	potential = {
-		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		OR = {
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+			ESC_TRIGGER_may_research_psionic_weapons_basic = yes
+		}
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
 
@@ -299,7 +308,10 @@ esc_tech_psionic_torpedo_2 = {
 	is_rare = yes
 
 	potential = {
-		ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+		OR = {
+			ESC_TRIGGER_may_reverse_engineer_psionic_weapons = yes
+			ESC_TRIGGER_may_research_psionic_weapons_basic = yes
+		}
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
 
