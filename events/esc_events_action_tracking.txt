@@ -138,6 +138,10 @@ country_event = {
 	is_triggered_only = yes
 	hide_window = yes
 
+	trigger = {
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
 	immediate = {
 		ESC_EFFECT_reverse_engineer_techs = yes
 	}
