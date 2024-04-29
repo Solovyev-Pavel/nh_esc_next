@@ -1569,7 +1569,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_titanic_2" }
 	component_set = ESC_ARCHAEO_TITANLASER_2
 	projectile_gfx = "perdition_beam"
-	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery }
+	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_ARCHAEO_TITANLASER_3
 
@@ -1728,7 +1728,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_titanic_3" }
 	component_set = ESC_ARCHAEO_TITANLASER_3
 	projectile_gfx = "perdition_beam"
-	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery }
+	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	target_weights = {
@@ -1862,7 +1862,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_S2
 		ship_shield_regen_add_static = @regen_S2
@@ -1933,7 +1938,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_M2
 		ship_shield_regen_add_static = @regen_M2
@@ -2004,7 +2014,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_L2
 		ship_shield_regen_add_static = @regen_L2
@@ -2082,7 +2097,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_S3
 		ship_shield_regen_add_static = @regen_S3
@@ -2155,7 +2175,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_M3
 		ship_shield_regen_add_static = @regen_M3
@@ -2228,7 +2253,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_L3
 		ship_shield_regen_add_static = @regen_L3
@@ -2316,7 +2346,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_S2
 		ship_shield_regen_add_static = @regen_S2
@@ -2389,7 +2424,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_M2
 		ship_shield_regen_add_static = @regen_M2
@@ -2462,7 +2502,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_L2
 		ship_shield_regen_add_static = @regen_L2
@@ -2539,7 +2584,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_S3
 		ship_shield_regen_add_static = @regen_S3
@@ -2611,7 +2661,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_M2
 		ship_shield_regen_add_static = @regen_M2
@@ -2683,7 +2738,12 @@ utility_component_template = {
 	triggered_ship_design_modifier = {
 		potential = {
 			exists = from
-			from = { has_ascension_perk = ap_archaeoengineers }
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
 		}
 		ship_shield_add = @shield_L3
 		ship_shield_regen_add_static = @regen_L3
