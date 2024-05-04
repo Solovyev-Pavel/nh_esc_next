@@ -1,0 +1,518 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_esc_modmenu_header"
+		textureFile = "gfx/interface/esc_mod_menu/esc_mod_menu_header.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_nav_button_background"
+		textureFile = "gfx/interface/esc_mod_menu/esc_mod_menu_nav_button_background.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_nav_button_small_background"
+		textureFile = "gfx/interface/esc_mod_menu/esc_mod_menu_nav_button_small_background.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_components_subpage_links"
+		textureFile = "gfx/interface/esc_mod_menu/esc_mod_menu_components_subpage_links.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_blank"
+		textureFile = "gfx/interface/esc_mod_menu/esc_mod_menu_blank.dds"
+	}
+	# presets
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_everything_on"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_everything_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_everything_off"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_everything_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_buildings_off"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_buildings_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_leviathan_only"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_leviathan_only.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_vanilla_only"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_vanilla_only.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_vanilla_leviathan"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_vanilla_leviathan.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_new_types_only"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_new_weapons_only.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_preset_new_types_leviathan"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_new_weapons_leviathans.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_invasion_on"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_invasion_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_invasion_on2"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_invasion_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_invasion_off"
+		textureFile = "gfx/interface/esc_mod_menu/presets/esc_mod_menu_invasion_off.dds"
+	}
+	# components :: vanilla weapons
+	spriteType = {
+		name = "GFX_esc_modmenu_kinetic_1_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_kinetic1_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_kinetic_1_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_kinetic1_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_kinetic_2_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_kinetic2_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_kinetic_2_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_kinetic2_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_energy_1_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_energy1_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_energy_1_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_energy1_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_energy_2_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_energy2_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_energy_2_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_energy2_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_energy_3_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_energy3_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_energy_3_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_energy3_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_missiles_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_missiles_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_missiles_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_missiles_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_pd_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_pd_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_pd_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_pd_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_strikecrafts_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_strikecrafts_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_strikecrafts_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_strikecrafts_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_creature_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_creature_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_creature_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_creature_off.dds"
+	}
+	# components :: utility
+	spriteType = {
+		name = "GFX_esc_modmenu_reactors_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_reactors_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_reactors_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_reactors_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_armor_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_armor_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_armor_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_armor_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_shields_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_shields_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_shields_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_shields_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_sensors_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_sensors_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_sensors_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_sensors_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_thrusters_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_thrusters_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_thrusters_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_thrusters_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_ftl_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_ftl_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_ftl_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_ftl_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_aux_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_aux_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_aux_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_aux_off.dds"
+	}
+	# components :: esc kinetic / energy / missile
+	spriteType = {
+		name = "GFX_esc_modmenu_xl_autocannons_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_xl_autocannons_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_xl_autocannons_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_xl_autocannons_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_mhd_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_mhd_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_mhd_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_mhd_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_plasma_missiles_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_plasma_missiles_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_plasma_missiles_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_plasma_missiles_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_wmg_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_wmg_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_wmg_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_wmg_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_xl_missiles_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_xl_missiles_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_xl_missiles_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_xl_missiles_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_chrono_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_chrono_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_chrono_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_chrono_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_chrono_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_chrono_off.dds"
+	}
+	# components :: esc new types
+	spriteType = {
+		name = "GFX_esc_modmenu_biological_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_biological_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_biological_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_biological_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_biological_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_biological_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_crystal_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_crystal_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_crystal_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_crystal_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_crystal_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_crystal_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_gravitic_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_gravitic_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_gravitic_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_gravitic_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_gravitic_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_gravitic_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_nanite_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_nanite_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_nanite_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_nanite_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_nanite_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_nanite_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_psionic_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_psionic_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_psionic_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_psionic_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_psionic_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_psionic_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_tesla_on"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_tesla_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_tesla_on2"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_tesla_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_tesla_off"
+		textureFile = "gfx/interface/esc_mod_menu/components/esc_mod_menu_tesla_off.dds"
+	}
+	# components :: leviathans
+	spriteType = {
+		name = "GFX_esc_modmenu_drake_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_drake_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_drake_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_drake_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_dreadnought_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_dreadnought_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_dreadnought_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_dreadnought_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_fortress_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_fortress_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_fortress_on2"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_fortress_on2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_fortress_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_fortress_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_wraith_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_wraith_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_wraith_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_wraith_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_stellarite_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_stellarite_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_stellarite_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_stellarite_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_technosphere_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_technosphere_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_technosphere_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_technosphere_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_horror_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_horror_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_horror_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_horror_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_matriarch_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_matriarch_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_matriarch_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_matriarch_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_scrapper_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_scrapper_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_scrapper_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_scrapper_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_voidspawn_on"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_voidspawn_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_voidspawn_off"
+		textureFile = "gfx/interface/esc_mod_menu/leviathans/esc_mod_menu_voidspawn_off.dds"
+	}
+
+	# buildings
+	spriteType = {
+		name = "GFX_esc_modmenu_buildings_header"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_buildings_header.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_research_bureau_on"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_bureau_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_research_bureau_off"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_bureau_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_culture_nexus_on"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_culture_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_culture_nexus_off"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_culture_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_materials_lab_on"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_matlab_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_materials_lab_off"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_matlab_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_tech_institute_on"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_institute_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_tech_institute_off"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_institute_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_eternity_watcher_on"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_watcher_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_eternity_watcher_off"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_watcher_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_mantle_miner_on"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_mantle_on.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_mantle_miner_off"
+		textureFile = "gfx/interface/esc_mod_menu/buildings/esc_mod_menu_building_mantle_off.dds"
+	}
+	# ai boost headers
+	spriteType = {
+		name = "GFX_esc_modmenu_research_boost_header"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_research_boost_header.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_eco_boost_header"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_eco_boost_header.dds"
+	}
+	# eco boost options
+	spriteType = {
+		name = "GFX_esc_modmenu_eco_boost_button_disabled"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_eco_boost_off.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_eco_boost_button_enabled"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_eco_boost_on.dds"
+	}
+	# tall arrows
+	spriteType = {
+		name = "GFX_esc_modmenu_arrow_left_tall"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_arrow_left_big.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_arrow_right_tall"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_arrow_right_big.dds"
+	}
+	# research boost options
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_none"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_no_boost.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_small"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_easy.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_small_scaling"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_easy2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_medium"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_moderate.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_medium_scaling"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_moderate2.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_big"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_challenging.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_modmenu_science_boost_big_scaling"
+		textureFile = "gfx/interface/esc_mod_menu/ai_boost/esc_mod_menu_difficulty_opt_challenging2.dds"
+	}
+}

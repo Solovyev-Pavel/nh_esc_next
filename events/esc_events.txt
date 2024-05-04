@@ -355,6 +355,13 @@ country_event = {
 			limit = { is_ai = yes }
 			ESC_EFFECT_ai_set_science_boost = yes
 		}
+		# remove AI economic modifiers
+		ESC_EFFECT_ai_remove_economic_boost = yes
+		# if is AI, set bonus modifiers
+		if = {
+			limit = { is_ai = yes }
+			ESC_EFFECT_ai_set_economic_boost = yes
+		}
 	}
 }
 

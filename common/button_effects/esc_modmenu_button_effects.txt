@@ -1,0 +1,1515 @@
+############################################################
+###             ESC Mod menu button effects              ###
+############################################################
+
+# close button
+esc_modmenu_close_button_effect = {
+    potential = { always = yes }
+    allow = { always = yes }
+    effect = {
+        custom_tooltip = CLOSE_TITLE
+    }
+}
+
+######################## Game presets ######################
+
+# presets page "button
+esc_mod_menu_presets_page_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+}
+
+# presets page button >>> effect = goto presets page
+esc_mod_menu_presets_page_button_unselected = {
+    potential = { NOT = { has_global_flag = ESC_MENU_presets_page_selected } }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_presets_effect = yes } }
+}
+
+# presets : enable everything
+esc_mod_menu_presets_enable_all_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_enable_everything = yes } }
+}
+
+# presets : disable everything
+esc_mod_menu_presets_disable_all_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_disable_everything = yes } }
+}
+
+# presets : enable everything except buildings
+esc_mod_menu_presets_enable_not_buildings_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_everything_but_buildings = yes } }
+}
+
+# presets : enable leviathan only
+esc_mod_menu_presets_enable_leviathan_only_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_leviathan_only = yes } }
+}
+
+# presets : enable vanilla only
+esc_mod_menu_presets_enable_vanilla_only_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_vanilla_only = yes } }
+}
+
+# presets : enable vanilla and leviathan
+esc_mod_menu_presets_enable_vanilla_leviathan_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_vanilla_leviathan = yes } }
+}
+
+# presets : enable new types only
+esc_mod_menu_presets_enable_new_only_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_new_types_only = yes } }
+}
+
+# presets : enable new types and leviathan
+esc_mod_menu_presets_enable_new_leviathan_button_selected = {
+    potential = { has_global_flag = ESC_MENU_presets_page_selected }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_preset_new_types_leviathan = yes } }
+}
+
+######################### Components #######################
+
+# components page "button"
+esc_mod_menu_components_page_button_selected = {
+    potential = { has_global_flag = ESC_MENU_components_page_selected }
+    allow = { always = yes }
+}
+
+# components page button >>> effect = goto components page
+esc_mod_menu_components_page_button_unselected = {
+    potential = { NOT = { has_global_flag = ESC_MENU_components_page_selected } }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_components_effect = yes } }
+}
+
+############## Components : subpage navigation #############
+
+# vanilla weapons subpage "button"
+esc_mod_menu_components_vanilla_weapons_subpage_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+    }
+    allow = { always = yes }
+}
+
+# vanilla weapons subpage button >>> effect = goto vanilla weapons subpage
+esc_mod_menu_components_vanilla_weapons_subpage_button_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        NOT = { has_global_flag = ESC_MENU_components_vanilla_selected }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_vanilla_weapons_effect = yes } }
+}
+
+# utility components subpage "button"
+esc_mod_menu_components_utility_subpage_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+    }
+    allow = { always = yes }
+}
+
+# utility components subpage button >>> effect = goto utility components subpage
+esc_mod_menu_components_utility_subpage_button_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        NOT = { has_global_flag = ESC_MENU_components_utility_selected }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_utility_components_effect = yes } }
+}
+
+# esc weapons subpage "button"
+esc_mod_menu_components_esc_weapons_subpage_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+    }
+    allow = { always = yes }
+}
+
+# esc weapons subpage button >>> effect = goto esc weapons subpage
+esc_mod_menu_components_esc_weapons_subpage_button_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        NOT = { has_global_flag = ESC_MENU_components_esc_selected }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_esc_weapons_effect = yes } }
+}
+
+# leviathan weapons subpage "button"
+esc_mod_menu_components_leviathan_weapons_subpage_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+    }
+    allow = { always = yes }
+}
+
+# leviathan weapons subpage button >>> effect = goto leviathan weapons subpage
+esc_mod_menu_components_leviathan_weapons_subpage_button_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        NOT = { has_global_flag = ESC_MENU_components_leviathan_selected }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_leviathan_weapons_effect = yes } }
+}
+
+################ Components : vanilla weapons ##############
+
+# small kinetic weapons >>> effect = enable
+esc_mod_menu_components_kinetic_1_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_kinetic1_enabled_effect = yes } }
+}
+
+# small kinetic weapons >>> effect = disable
+esc_mod_menu_components_kinetic_1_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_kinetic1_disabled_effect = yes } }
+}
+
+# xl kinetic weapons >>> effect = enable
+esc_mod_menu_components_kinetic_2_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_kinetic2_enabled_effect = yes } }
+}
+
+# xl kinetic weapons >>> effect = disable
+esc_mod_menu_components_kinetic_2_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_kinetic2_disabled_effect = yes } }
+}
+
+# small energy weapons >>> effect = enable
+esc_mod_menu_components_energy_1_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_energy1_enabled_effect = yes } }
+}
+
+# small energy weapons >>> effect = disable
+esc_mod_menu_components_energy_1_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_energy1_disabled_effect = yes } }
+}
+
+# particle lance weapons >>> effect = enable
+esc_mod_menu_components_energy_2_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_energy2_enabled_effect = yes } }
+}
+
+# particle lance weapons >>> effect = disable
+esc_mod_menu_components_energy_2_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_energy2_disabled_effect = yes } }
+}
+
+# arc emitter weapons >>> effect = enable
+esc_mod_menu_components_energy_3_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_energy3_enabled_effect = yes } }
+}
+
+# arc emitter weapons >>> effect = disable
+esc_mod_menu_components_energy_3_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_energy3_disabled_effect = yes } }
+}
+
+# missile weapons >>> effect = enable
+esc_mod_menu_components_missile_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_missile_enabled_effect = yes } }
+}
+
+# missile weapons >>> effect = disable
+esc_mod_menu_components_missile_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_missile_disabled_effect = yes } }
+}
+
+# point defense weapons >>> effect = enable
+esc_mod_menu_components_pd_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_pd_enabled_effect = yes } }
+}
+
+# point defense weapons >>> effect = disable
+esc_mod_menu_components_pd_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_pd_disabled_effect = yes } }
+}
+
+# strikecrafts >>> effect = enable
+esc_mod_menu_components_strikecrafts_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_strikecrafts_enabled_effect = yes } }
+}
+
+# strikecrafts >>> effect = disable
+esc_mod_menu_components_strikecrafts_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_strikecrafts_disabled_effect = yes } }
+}
+
+# creature weapons >>> effect = enable
+esc_mod_menu_components_creature_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_creature_enabled_effect = yes } }
+}
+
+# creature weapons >>> effect = disable
+esc_mod_menu_components_creature_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_creature_disabled_effect = yes } }
+}
+
+#################### Components : utility ##################
+
+# reactors >>> effect = enable
+esc_mod_menu_components_reactors_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_reactors_enabled_effect = yes } }
+}
+
+# reactors >>> effect = disable
+esc_mod_menu_components_reactors_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_reactors_disabled_effect = yes } }
+}
+
+# armor >>> effect = enable
+esc_mod_menu_components_armor_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_armor_enabled_effect = yes } }
+}
+
+# armor >>> effect = disable
+esc_mod_menu_components_armor_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_armor_disabled_effect = yes } }
+}
+
+# shields >>> effect = enable
+esc_mod_menu_components_shields_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_shields_enabled_effect = yes } }
+}
+
+# shields >>> effect = disable
+esc_mod_menu_components_shields_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_shields_disabled_effect = yes } }
+}
+
+# sensors >>> effect = enable
+esc_mod_menu_components_sensors_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_sensors_enabled_effect = yes } }
+}
+
+# sensors >>> effect = disable
+esc_mod_menu_components_sensors_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_sensors_disabled_effect = yes } }
+}
+
+# thrusters >>> effect = enable
+esc_mod_menu_components_thrusters_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_thrusters_enabled_effect = yes } }
+}
+
+# thrusters >>> effect = disable
+esc_mod_menu_components_thrusters_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_thrusters_disabled_effect = yes } }
+}
+
+# ftl drives >>> effect = enable
+esc_mod_menu_components_ftl_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_ftl_enabled_effect = yes } }
+}
+
+# ftl drives >>> effect = disable
+esc_mod_menu_components_ftl_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_flt_disabled_effect = yes } }
+}
+
+# auxiliary components >>> effect = enable
+esc_mod_menu_components_aux_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_aux_enabled_effect = yes } }
+}
+
+# auxiliary components >>> effect = disable
+esc_mod_menu_components_aux_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_utility_selected
+        has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_aux_disabled_effect = yes } }
+}
+
+############### Components : ESC regular types #############
+
+# xl autocannons >>> effect = enable
+esc_mod_menu_components_xl_autocannons_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_xl_autocannons_enabled_effect = yes } }
+}
+
+# xl autocannons >>> effect = disable
+esc_mod_menu_components_xl_autocannons_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_xl_autocannons_disabled_effect = yes } }
+}
+
+# magnetohydrodynamic cannons >>> effect = enable
+esc_mod_menu_components_mhd_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_mhd_enabled_effect = yes } }
+}
+
+# magnetohydrodynamic cannons >>> effect = disable
+esc_mod_menu_components_mhd_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_mhd_disabled_effect = yes } }
+}
+
+# wave-motion gun >>> effect = enable
+esc_mod_menu_components_wmg_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_wmg_enabled_effect = yes } }
+}
+
+# wave-motion gun >>> effect = disable
+esc_mod_menu_components_wmg_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_wmg_disabled_effect = yes } }
+}
+
+# chrono-spatial weapons >>> effect = enable all
+esc_mod_menu_components_chrono_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_chrono_enabled2_effect = yes } }
+}
+
+# chrono-spatial weapons >>> effect = enable small
+esc_mod_menu_components_chrono_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_chrono_enabled_effect = yes } }
+}
+
+# chrono-spatial weapons >>> effect = disable
+esc_mod_menu_components_chrono_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_chrono_disabled_effect = yes } }
+}
+
+# plasma missiles >>> effect = enable
+esc_mod_menu_components_plasma_missiles_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_plasma_missiles_enabled_effect = yes } }
+}
+
+# plasma missiles >>> effect = disable
+esc_mod_menu_components_plasma_missiles_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_plasma_missiles_disabled_effect = yes } }
+}
+
+# xl missiles >>> effect = enable
+esc_mod_menu_components_xl_missiles_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_xl_missiles_enabled_effect = yes } }
+}
+
+# xl missiles >>> effect = disable
+esc_mod_menu_components_xl_missiles_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_xl_missiles_disabled_effect = yes } }
+}
+
+################# Components : ESC new types ###############
+
+# biological weapons >>> effect = enable all
+esc_mod_menu_components_biological_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_biological_enabled2_effect = yes } }
+}
+
+# biological weapons >>> effect = enable small
+esc_mod_menu_components_biological_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_biological_enabled_effect = yes } }
+}
+
+# biological weapons >>> effect = disable
+esc_mod_menu_components_biological_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_biological_disabled_effect = yes } }
+}
+
+# crystalline weapons >>> effect = enable all
+esc_mod_menu_components_crystal_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_crystal_enabled2_effect = yes } }
+}
+
+# crystalline weapons >>> effect = enable small
+esc_mod_menu_components_crystal_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_crystal_enabled_effect = yes } }
+}
+
+# crystalline weapons >>> effect = disable
+esc_mod_menu_components_crystal_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_crystal_disabled_effect = yes } }
+}
+
+# gravitic weapons >>> effect = enable all
+esc_mod_menu_components_gravitic_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_gravitic_enabled2_effect = yes } }
+}
+
+# gravitic weapons >>> effect = enable small
+esc_mod_menu_components_gravitic_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_gravitic_enabled_effect = yes } }
+}
+
+# gravitic weapons >>> effect = disable
+esc_mod_menu_components_gravitic_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_gravitic_disabled_effect = yes } }
+}
+
+# nanite weapons >>> effect = enable all
+esc_mod_menu_components_nanite_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_nanite_enabled2_effect = yes } }
+}
+
+# nanite weapons >>> effect = enable small
+esc_mod_menu_components_nanite_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_nanite_enabled_effect = yes } }
+}
+
+# nanite weapons >>> effect = disable
+esc_mod_menu_components_nanite_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_nanite_disabled_effect = yes } }
+}
+
+# psionic weapons >>> effect = enable all
+esc_mod_menu_components_psionic_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_psionic_enabled2_effect = yes } }
+}
+
+# psionic weapons >>> effect = enable small
+esc_mod_menu_components_psionic_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_psionic_enabled_effect = yes } }
+}
+
+# psionic weapons >>> effect = disable
+esc_mod_menu_components_psionic_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_psionic_disabled_effect = yes } }
+}
+
+# tesla weapons >>> effect = enable all
+esc_mod_menu_components_tesla_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_tesla_enabled2_effect = yes } }
+}
+
+# tesla weapons >>> effect = enable small
+esc_mod_menu_components_tesla_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_tesla_enabled_effect = yes } }
+}
+
+# tesla weapons >>> effect = disable
+esc_mod_menu_components_tesla_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_esc_selected
+        has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_tesla_disabled_effect = yes } }
+}
+
+################## Components : leviathans #################
+
+# ether drake >>> effect = enable
+esc_mod_menu_components_drake_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_drake_enabled_effect = yes } }
+}
+
+# ether drake >>> effect = disable
+esc_mod_menu_components_drake_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_drake_disabled_effect = yes } }
+}
+
+# automated dreadnought >>> effect = enable
+esc_mod_menu_components_dreadnought_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_dreadnought_enabled_effect = yes } }
+}
+
+# automated dreadnought >>> effect = disable
+esc_mod_menu_components_dreadnought_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_dreadnought_disabled_effect = yes } }
+}
+
+# enigmatic fortress >>> effect = enable all
+esc_mod_menu_components_fortress_selected2 = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOR = {
+            has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+            has_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+        }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_fortress_enabled2_effect = yes } }
+}
+
+# enigmatic fortress >>> effect = enable small
+esc_mod_menu_components_fortress_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_fortress_enabled_effect = yes } }
+}
+
+# enigmatic fortress >>> effect = disable
+esc_mod_menu_components_fortress_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+        has_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_fortress_disabled_effect = yes } }
+}
+
+# spectral wraith >>> effect = enable
+esc_mod_menu_components_wraith_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_wraith_enabled_effect = yes } }
+}
+
+# spectral wraith >>> effect = disable
+esc_mod_menu_components_wraith_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_wraith_disabled_effect = yes } }
+}
+
+# stellarite devourer >>> effect = enable
+esc_mod_menu_components_stellarite_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_stellarite_enabled_effect = yes } }
+}
+
+# stellarite devourer >>> effect = disable
+esc_mod_menu_components_stellarite_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_stellarite_disabled_effect = yes } }
+}
+
+# technosphere >>> effect = enable
+esc_mod_menu_components_technosphere_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_technosphere_enabled_effect = yes } }
+}
+
+# technosphere >>> effect = disable
+esc_mod_menu_components_technosphere_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_technosphere_disabled_effect = yes } }
+}
+
+# dimensional horror >>> effect = enable
+esc_mod_menu_components_horror_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_horror_enabled_effect = yes } }
+}
+
+# dimensional horror >>> effect = disable
+esc_mod_menu_components_horror_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_horror_disabled_effect = yes } }
+}
+
+# tiyanki matriarch >>> effect = enable
+esc_mod_menu_components_matriarch_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_matriarch_enabled_effect = yes } }
+}
+
+# tiyanki matriarch >>> effect = disable
+esc_mod_menu_components_matriarch_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_matriarch_disabled_effect = yes } }
+}
+
+# scrapper bot >>> effect = enable
+esc_mod_menu_components_scrapper_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_scrapper_enabled_effect = yes } }
+}
+
+# scrapper bot >>> effect = disable
+esc_mod_menu_components_scrapper_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_scrapper_disabled_effect = yes } }
+}
+
+# voidspawn >>> effect = enable
+esc_mod_menu_components_voidspawn_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_voidspawn_enabled_effect = yes } }
+}
+
+# voidspawn >>> effect = disable
+esc_mod_menu_components_voidspawn_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_leviathan_selected
+        has_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_voidspawn_disabled_effect = yes } }
+}
+
+######################### Buildings ########################
+
+# buildings page "button"
+esc_mod_menu_buildings_page_button_selected = {
+    potential = { has_global_flag = ESC_MENU_buildings_page_selected }
+    allow = { always = yes }
+}
+
+# buildings page button >>> effect = goto buildings page
+esc_mod_menu_buildings_page_button_unselected = {
+    potential = { NOT = { has_global_flag = ESC_MENU_buildings_page_selected } }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_buildings_effect = yes } }
+}
+
+# central research bureau button >>> effect = disable
+esc_mod_menu_buildings_research_bureau_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_bureau_enabled_effect = yes } }
+}
+
+# central research bureau button >>> effect = enable
+esc_mod_menu_buildings_research_bureau_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_bureau_disabled_effect = yes } }
+}
+
+# technology institute button >>> effect = disable
+esc_mod_menu_buildings_tech_institute_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_tech_institute_enabled_effect = yes } }
+}
+
+# technology institute button >>> effect = enable
+esc_mod_menu_buildings_tech_institute_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_tech_institute_disabled_effect = yes } }
+}
+
+# culture nexus button >>> effect = disable
+esc_mod_menu_buildings_culture_nexus_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_culture_enabled_effect = yes } }
+}
+
+# culture nexus button >>> effect = enable
+esc_mod_menu_buildings_culture_nexus_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_culture_disabled_effect = yes } }
+}
+
+# advanced materials laboratory button >>> effect = disable
+esc_mod_menu_buildings_mat_laboratory_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_matlab_enabled_effect = yes } }
+}
+
+# advanced materials laboratory button >>> effect = enable
+esc_mod_menu_buildings_mat_laboratory_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_matlab_disabled_effect = yes } }
+}
+
+# watcher of eternity button >>> effect = disable
+esc_mod_menu_buildings_watcher_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_watcher_enabled_effect = yes } }
+}
+
+# watcher of eternity button >>> effect = enable
+esc_mod_menu_buildings_watcher_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_watcher_disabled_effect = yes } }
+}
+
+# mantle mining facility button >>> effect = disable
+esc_mod_menu_buildings_mantle_miner_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_mantle_miner_enabled_effect = yes } }
+}
+
+# mantle mining facility button >>> effect = enable
+esc_mod_menu_buildings_mantle_miner_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_buildings_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_building_mantle_miner_disabled_effect = yes } }
+}
+
+######################## AI settings #######################
+
+# ai_boost page "button"
+esc_mod_menu_ai_boost_page_button_selected = {
+    potential = { has_global_flag = ESC_MENU_ai_boost_page_selected }
+    allow = { always = yes }
+}
+
+# ai_boost page button >>> effect = goto ai_boost page
+esc_mod_menu_ai_boost_page_button_unselected = {
+    potential = { NOT = { has_global_flag = ESC_MENU_ai_boost_page_selected } }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_ai_boost_effect = yes } }
+}
+
+################ AI settings : research boost ##############
+
+# ai research boost selector arrow left
+esc_mod_menu_ai_boost_icon_arrow_left = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        OR = {
+            has_global_flag = ESC_AI_research_boost_easy_static
+            has_global_flag = ESC_AI_research_boost_easy_scaling
+            has_global_flag = ESC_AI_research_boost_moderate_static
+            has_global_flag = ESC_AI_research_boost_moderate_scaling
+            has_global_flag = ESC_AI_research_boost_challenging_static
+            has_global_flag = ESC_AI_research_boost_challenging_scaling
+        }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_boost_arrow_left_effect = yes } }
+}
+
+# ai research boost selector arrow right
+esc_mod_menu_ai_boost_icon_arrow_right = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        NOT = { has_global_flag = ESC_AI_research_boost_challenging_scaling }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_boost_arrow_right_effect = yes } }
+}
+
+# ai boost research >>> disabled
+esc_mod_menu_ai_boost_icon_none = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        NOR = {
+            has_global_flag = ESC_AI_research_boost_easy_static
+            has_global_flag = ESC_AI_research_boost_easy_scaling
+            has_global_flag = ESC_AI_research_boost_moderate_static
+            has_global_flag = ESC_AI_research_boost_moderate_scaling
+            has_global_flag = ESC_AI_research_boost_challenging_static
+            has_global_flag = ESC_AI_research_boost_challenging_scaling
+        }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_off_effect = yes } }
+}
+
+# ai boost research >>> easy
+esc_mod_menu_ai_boost_icon_easy = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_research_boost_easy_static
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_easy_effect = yes } }
+}
+
+# ai boost research >>> easy scaling
+esc_mod_menu_ai_boost_icon_easy_scaling = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_research_boost_easy_scaling
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_easy2_effect = yes } }
+}
+
+# ai boost research >>> moderate
+esc_mod_menu_ai_boost_icon_moderate = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_research_boost_moderate_static
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_moderate_effect = yes } }
+}
+
+# ai boost research >>> moderate scaling
+esc_mod_menu_ai_boost_icon_moderate_scaling = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_research_boost_moderate_scaling
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_moderate2_effect = yes } }
+}
+
+# ai boost research >>> challenging
+esc_mod_menu_ai_boost_icon_challenging = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_research_boost_challenging_static
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_hard_effect = yes } }
+}
+
+# ai boost research >>> challenging scaling
+esc_mod_menu_ai_boost_icon_challenging_scaling = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_research_boost_challenging_scaling
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_research_boost_hard2_effect = yes } }
+}
+
+################ AI settings : economic boost ##############
+
+# ai boost economics >>> left arrow
+esc_mod_menu_ai_boost_eco_arrow_left = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_economic_boost
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_eco_boost_arrow_left_effect = yes } }
+}
+
+# ai boost economics >>> arrow right
+esc_mod_menu_ai_boost_eco_arrow_right = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        NOT = { has_global_flag = ESC_AI_economic_boost }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_ai_eco_boost_arrow_right_effect = yes } }
+}
+
+# ai boost economics >>> disabled state
+esc_mod_menu_ai_boost_eco_button_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        NOT = { has_global_flag = ESC_AI_economic_boost }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_disabled_ai_eco_boost_effect = yes } }
+}
+
+# ai boost economics >>> enabled state
+esc_mod_menu_ai_boost_eco_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_ai_boost_page_selected
+        has_global_flag = ESC_AI_economic_boost
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_enabled_ai_eco_boost_effect = yes } }
+}
+
+########################## Unbidden ########################
+
+# crisis page "button"
+esc_mod_menu_crisis_page_button_selected = {
+    potential = { has_global_flag = ESC_MENU_crisis_page_selected }
+    allow = { always = yes }
+}
+
+# crisis page button >>> effect = goto crisis page
+esc_mod_menu_crisis_page_button_unselected = {
+    potential = { NOT = { has_global_flag = ESC_MENU_crisis_page_selected } }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_goto_crisis_effect = yes } }
+}
+
+# extradimensional invasion >>> left arrow
+esc_mod_menu_crisis_arrow_left = {
+    potential = {
+        has_global_flag = ESC_MENU_crisis_page_selected
+        OR = {
+            has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+            has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+        }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_crisis_arrow_left_effect = yes } }
+}
+
+# extradimensional invasion >>> arrow right
+esc_mod_menu_crisis_arrow_right = {
+    potential = {
+        has_global_flag = ESC_MENU_crisis_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_crisis_arrow_right_effect = yes } }
+}
+
+# extradimensional invasion >>> disabled state
+esc_mod_menu_crisis_button_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_crisis_page_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled }
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+    }
+    allow = { always = yes }
+}
+
+# extradimensional invasion >>> enabled state
+esc_mod_menu_crisis_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_crisis_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+    }
+    allow = { always = yes }
+}
+
+# extradimensional invasion >>> enabled repeated state
+esc_mod_menu_crisis_repeated_button_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_crisis_page_selected
+        has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+    }
+    allow = { always = yes }
+}

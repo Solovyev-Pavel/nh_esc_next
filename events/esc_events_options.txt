@@ -1661,3 +1661,34 @@ country_event = {
 		hidden_effect = { country_event = { id = esc_options.1000 days = 0 } }
 	}
 }
+
+############################################################
+###                Mod Menu Options v2.0                 ###
+############################################################
+
+### Main window
+country_event = {
+	id = esc_options.10000
+	title = ESC_NULL_STRING
+	desc = ESC_NULL_STRING
+	is_triggered_only = yes
+	diplomatic = yes
+
+	immediate = {
+		set_global_flag = ESC_GLOBAL_FLAG_MENU_ACTIVE
+		esc_mod_menu_clear_page_flags = yes
+		esc_mod_menu_clear_component_subpage_flags = yes
+		set_global_flag = ESC_MENU_presets_page_selected
+		set_global_flag = ESC_MENU_components_vanilla_selected
+	}
+
+	picture_event_data = { portrait = root.ruler } # needed to prevent '[portraitobject.cpp:493]: Failed to find portrait selector' error
+
+	custom_gui = esc_mod_menu_gui
+
+	option = { name = esc_option.exit }
+
+	after = {
+		remove_global_flag = ESC_GLOBAL_FLAG_MENU_ACTIVE
+	}
+}

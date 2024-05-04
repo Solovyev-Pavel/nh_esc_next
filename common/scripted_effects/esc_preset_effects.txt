@@ -81,7 +81,7 @@ ESC_PRESET_enable_all = {
 }
 
 # disable all mod's content
-ESC_PRESET_diable_all = {
+ESC_PRESET_disable_all = {
 	# kinetic weapons
 	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
 	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
@@ -174,7 +174,7 @@ ESC_PRESET_no_special_buildsings = {
 
 # only leviathan rewards
 ESC_PRESET_leviathan_only = {
-	ESC_PRESET_diable_all = yes
+	ESC_PRESET_disable_all = yes
 	# crisis & leviathans
 	remove_global_flag = ESC_GLOBAL_FLAG_crisis_weapons_forbidden
 	remove_global_flag = ESC_GLOBAL_FLAG_crisis_x_weapons_forbidden
@@ -198,12 +198,12 @@ ESC_PRESET_advanced_vanilla = {
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
 	remove_global_flag = ESC_GLOBAL_FLAG_big_autocannons_forbidden
 	remove_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
-	remove_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
 	# energy weapons
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
-	remove_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+	set_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
 	set_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
 	set_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
 	set_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden

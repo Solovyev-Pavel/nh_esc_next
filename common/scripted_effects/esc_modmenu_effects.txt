@@ -1,0 +1,1085 @@
+############################################################
+###            ESC Mod menu scripted effects             ###
+############################################################
+
+# effect for clearing mod menu page flags
+esc_mod_menu_clear_page_flags = {
+	optimize_memory
+	if = {
+		limit = { has_global_flag = ESC_MENU_presets_page_selected }
+		remove_global_flag = ESC_MENU_presets_page_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_components_page_selected }
+		remove_global_flag = ESC_MENU_components_page_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_buildings_page_selected }
+		remove_global_flag = ESC_MENU_buildings_page_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_ai_boost_page_selected }
+		remove_global_flag = ESC_MENU_ai_boost_page_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_crisis_page_selected }
+		remove_global_flag = ESC_MENU_crisis_page_selected
+	}
+}
+
+# effect for switching to Presets page
+esc_mod_menu_goto_presets_effect = {
+	optimize_memory
+	esc_mod_menu_clear_page_flags = yes
+	custom_tooltip = esc_options_page_presets_tooltip
+	set_global_flag = ESC_MENU_presets_page_selected
+}
+
+# effect for switching to Components page
+esc_mod_menu_goto_components_effect = {
+	optimize_memory
+	esc_mod_menu_clear_page_flags = yes
+	custom_tooltip = esc_options_page_components_tooltip
+	set_global_flag = ESC_MENU_components_page_selected
+}
+
+# effect for switching to Buildings page
+esc_mod_menu_goto_buildings_effect = {
+	optimize_memory
+	esc_mod_menu_clear_page_flags = yes
+	custom_tooltip = esc_options_page_buildings_tooltip
+	set_global_flag = ESC_MENU_buildings_page_selected
+}
+
+# effect for switching to AI Boost page
+esc_mod_menu_goto_ai_boost_effect = {
+	optimize_memory
+	esc_mod_menu_clear_page_flags = yes
+	custom_tooltip = esc_options_page_ai_boost_tooltip
+	set_global_flag = ESC_MENU_ai_boost_page_selected
+}
+
+# effect for switching to crisis page
+esc_mod_menu_goto_crisis_effect = {
+	optimize_memory
+	esc_mod_menu_clear_page_flags = yes
+	custom_tooltip = esc_options_page_crisis_tooltip
+	set_global_flag = ESC_MENU_crisis_page_selected
+}
+
+############################################################
+
+# presets : everything on
+esc_mod_menu_preset_enable_everything = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_enable_everything
+	ESC_PRESET_enable_all = yes
+}
+
+# presets : everything off
+esc_mod_menu_preset_disable_everything = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_disable_everything
+	ESC_PRESET_disable_all = yes
+}
+
+# presets : everything except buildings
+esc_mod_menu_preset_everything_but_buildings = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_everything_but_buildings
+	ESC_PRESET_no_special_buildsings = yes
+}
+
+# presets : leviathan only
+esc_mod_menu_preset_leviathan_only = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_leviathan_only
+	ESC_PRESET_leviathan_only = yes
+}
+
+# presets : advanced vanilla weapons only
+esc_mod_menu_preset_vanilla_only = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_vanilla_only
+	ESC_PRESET_advanced_vanilla = yes
+}
+
+# presets : advanced vanilla weapons + leviathans
+esc_mod_menu_preset_vanilla_leviathan = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_vanilla_leviathans
+	ESC_PRESET_advanced_vanilla_and_leviathan = yes
+}
+
+# presets : new weapon types only
+esc_mod_menu_preset_new_types_only = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_new_weapon_types
+	ESC_PRESET_new_weapons_only = yes
+}
+
+# presets : new weapon types + leviathan
+esc_mod_menu_preset_new_types_leviathan = {
+	optimize_memory
+	custom_tooltip = esc_options_preset_new_weapon_leviathan
+	ESC_PRESET_new_and_leviathan_weapons = yes
+}
+
+############################################################
+
+# effect for clearing mod menu components' subpage flags
+esc_mod_menu_clear_component_subpage_flags = {
+	optimize_memory
+	if = {
+		limit = { has_global_flag = ESC_MENU_components_vanilla_selected }
+		remove_global_flag = ESC_MENU_components_vanilla_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_components_utility_selected }
+		remove_global_flag = ESC_MENU_components_utility_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_components_esc_selected }
+		remove_global_flag = ESC_MENU_components_esc_selected
+	}
+	if = {
+		limit = { has_global_flag = ESC_MENU_components_leviathan_selected }
+		remove_global_flag = ESC_MENU_components_leviathan_selected
+	}
+}
+
+# effect for switching to vanilla weapons subpage
+esc_mod_menu_goto_vanilla_weapons_effect = {
+	optimize_memory
+	esc_mod_menu_clear_component_subpage_flags = yes
+	custom_tooltip = esc_options_subpage_vanilla_weapons_tooltip
+	set_global_flag = ESC_MENU_components_vanilla_selected
+}
+
+# effect for switching to utility component subpage
+esc_mod_menu_goto_utility_components_effect = {
+	optimize_memory
+	esc_mod_menu_clear_component_subpage_flags = yes
+	custom_tooltip = esc_options_subpage_utility_components_tooltip
+	set_global_flag = ESC_MENU_components_utility_selected
+}
+
+# effect for switching to ESC weapons subpage
+esc_mod_menu_goto_esc_weapons_effect = {
+	optimize_memory
+	esc_mod_menu_clear_component_subpage_flags = yes
+	custom_tooltip = esc_options_subpage_esc_weapons_tooltip
+	set_global_flag = ESC_MENU_components_esc_selected
+}
+
+# effect for switching to leviathan weapons subpage
+esc_mod_menu_goto_leviathan_weapons_effect = {
+	optimize_memory
+	esc_mod_menu_clear_component_subpage_flags = yes
+	custom_tooltip = esc_options_subpage_special_components_tooltip
+	set_global_flag = ESC_MENU_components_leviathan_selected
+}
+
+############################################################
+
+# small vanilla kinetic weapons: state - enabled
+esc_mod_menu_component_kinetic1_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_kinetic_small_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+}
+
+# small vanilla kinetic weapons: state - disabled
+esc_mod_menu_component_kinetic1_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_kinetic_small_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden
+}
+
+# xl vanilla kinetic weapons: state - enabled
+esc_mod_menu_component_kinetic2_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_kinetic_xl_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+}
+
+# xl vanilla kinetic weapons: state - disabled
+esc_mod_menu_component_kinetic2_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_kinetic_xl_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden
+}
+
+# small vanilla energy weapons: state - enabled
+esc_mod_menu_component_energy1_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_energy_small_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+}
+
+# small vanilla energy weapons: state - disabled
+esc_mod_menu_component_energy1_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_energy_small_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden
+}
+
+# particle lance weapons: state - enabled
+esc_mod_menu_component_energy2_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_lances_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+}
+
+# particle lance weapons: state - disabled
+esc_mod_menu_component_energy2_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_lances_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden
+}
+
+# arc emitter weapons: state - enabled
+esc_mod_menu_component_energy3_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_arc_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+}
+
+# arc emitter weapons: state - disabled
+esc_mod_menu_component_energy3_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_arc_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden
+}
+
+# missile weapons: state - enabled
+esc_mod_menu_component_missile_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_missile_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+}
+
+# missile weapons: state - disabled
+esc_mod_menu_component_missile_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_missile_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden
+}
+
+# point defense weapons: state - enabled
+esc_mod_menu_component_pd_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_point_defense_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+}
+
+# point defense weapons: state - disabled
+esc_mod_menu_component_pd_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_point_defense_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden
+}
+
+# strikecrafts: state - enabled
+esc_mod_menu_component_strikecrafts_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_strikecrafts_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+}
+
+# strikecrafts: state - disabled
+esc_mod_menu_component_strikecrafts_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_strikecrafts_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
+}
+
+# creature weapons: state - enabled
+esc_mod_menu_component_creature_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_creature_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+}
+
+# creature weapons: state - disabled
+esc_mod_menu_component_creature_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_creature_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+}
+
+############################################################
+
+# reactors: state - enabled
+esc_mod_menu_component_reactors_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_reactors_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+}
+
+# reactors: state - disabled
+esc_mod_menu_component_reactors_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_reactors_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
+}
+
+# armor: state - enabled
+esc_mod_menu_component_armor_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_armor_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+}
+
+# armor: state - disabled
+esc_mod_menu_component_armor_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_armor_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_armor_forbidden
+}
+
+# shields: state - enabled
+esc_mod_menu_component_shields_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_shields_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+}
+
+# shields: state - disabled
+esc_mod_menu_component_shields_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_shields_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_shields_forbidden
+}
+
+# sensors: state - enabled
+esc_mod_menu_component_sensors_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_sensors_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+}
+
+# sensors: state - disabled
+esc_mod_menu_component_sensors_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_sensors_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden
+}
+
+# thrusters: state - enabled
+esc_mod_menu_component_thrusters_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_thrusters_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+}
+
+# thrusters: state - disabled
+esc_mod_menu_component_thrusters_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_thrusters_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_thrusters_forbidden
+}
+
+# ftl drives: state - enabled
+esc_mod_menu_component_ftl_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_ftl_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+}
+
+# ftl drives: state - disabled
+esc_mod_menu_component_flt_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_ftl_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden
+}
+
+# auxiliary: state - enabled
+esc_mod_menu_component_aux_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_aux_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+}
+
+# auxiliary: state - disabled
+esc_mod_menu_component_aux_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_aux_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+}
+
+############################################################
+
+# xl autocannons: state - enabled
+esc_mod_menu_component_xl_autocannons_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_xl_autocannons_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+}
+
+# xl autocannons: state - disabled
+esc_mod_menu_component_xl_autocannons_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_xl_autocannons_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden
+}
+
+# magnetohydrodynamic cannons: state - enabled
+esc_mod_menu_component_mhd_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_mhd_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+}
+
+# magnetohydrodynamic cannons: state - disabled
+esc_mod_menu_component_mhd_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_mhd_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden
+}
+
+# wave-motion cannons: state - enabled
+esc_mod_menu_component_wmg_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_wmg_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+}
+
+# wave-motion cannons: state - disabled
+esc_mod_menu_component_wmg_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_wmg_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden
+}
+
+# chronospatial weapons : state - enabled full
+esc_mod_menu_component_chrono_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_chrono_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+}
+
+# chronospatial weapons: state - enabled small only
+esc_mod_menu_component_chrono_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_chrono_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+}
+
+# chronospatial weapons: state - disabled
+esc_mod_menu_component_chrono_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_chrono_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_arcenciel_forbidden
+}
+
+# plasma missiles: state - enabled
+esc_mod_menu_component_plasma_missiles_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_plasma_missiles_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+}
+
+# plasma missiles cannons: state - disabled
+esc_mod_menu_component_plasma_missiles_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_plasma_missiles_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_plasma_missiles_forbidden
+}
+
+# xl missiles: state - enabled
+esc_mod_menu_component_xl_missiles_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_xl_missiles_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+}
+
+# xl missiles cannons: state - disabled
+esc_mod_menu_component_xl_missiles_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_xl_missiles_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden
+}
+
+############################################################
+
+# biological weapons : state - enabled full
+esc_mod_menu_component_biological_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_biological_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+}
+
+# biological weapons: state - enabled small only
+esc_mod_menu_component_biological_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_biological_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+}
+
+# biological weapons: state - disabled
+esc_mod_menu_component_biological_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_biological_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_biological_x_weapons_forbidden
+}
+
+# crystalline weapons : state - enabled full
+esc_mod_menu_component_crystal_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_crystal_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+}
+
+# crystalline weapons: state - enabled small only
+esc_mod_menu_component_crystal_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_crystal_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+}
+
+# crystalline weapons: state - disabled
+esc_mod_menu_component_crystal_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_crystal_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_crystalline_x_weapons_forbidden
+}
+
+# gravitic weapons : state - enabled full
+esc_mod_menu_component_gravitic_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_gravitic_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+}
+
+# gravitic weapons: state - enabled small only
+esc_mod_menu_component_gravitic_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_gravitic_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+}
+
+# gravitic weapons: state - disabled
+esc_mod_menu_component_gravitic_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_gravitic_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_gravitic_x_weapons_forbidden
+}
+
+# nanite weapons : state - enabled full
+esc_mod_menu_component_nanite_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_nanite_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+}
+
+# nanite weapons: state - enabled small only
+esc_mod_menu_component_nanite_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_nanite_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+}
+
+# nanite weapons: state - disabled
+esc_mod_menu_component_nanite_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_nanite_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden
+}
+
+# psionic weapons : state - enabled full
+esc_mod_menu_component_psionic_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_psionic_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+}
+
+# psionic weapons: state - enabled small only
+esc_mod_menu_component_psionic_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_psionic_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+}
+
+# psionic weapons: state - disabled
+esc_mod_menu_component_psionic_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_psionic_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_psionic_x_weapons_forbidden
+}
+
+# tesla weapons : state - enabled full
+esc_mod_menu_component_tesla_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_tesla_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+}
+
+# tesla weapons: state - enabled small only
+esc_mod_menu_component_tesla_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_tesla_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+}
+
+# tesla weapons: state - disabled
+esc_mod_menu_component_tesla_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_tesla_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_tesla_x_weapons_forbidden
+}
+
+############################################################
+
+# ether drake: state - enabled
+esc_mod_menu_component_drake_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_drake_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+}
+
+# ether drake: state - disabled
+esc_mod_menu_component_drake_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_drake_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden
+}
+
+# automated dreadnought: state - enabled
+esc_mod_menu_component_dreadnought_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_dreadnought_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+}
+
+# automated dreadnought: state - disabled
+esc_mod_menu_component_dreadnought_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_dreadnought_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+}
+
+# enigmatic fortress : state - enabled full
+esc_mod_menu_component_fortress_enabled2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_fortress_enabled2
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+}
+
+# enigmatic fortress: state - enabled small only
+esc_mod_menu_component_fortress_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_fortress_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+}
+
+# enigmatic fortress: state - disabled
+esc_mod_menu_component_fortress_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_fortress_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+	remove_global_flag = ESC_GLOBAL_FLAG_enigmatic_x_weapons_forbidden
+}
+
+# spectral wraith: state - enabled
+esc_mod_menu_component_wraith_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_wraith_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+}
+
+# spectral wraith: state - disabled
+esc_mod_menu_component_wraith_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_wraith_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden
+}
+
+# stellarite devourer: state - enabled
+esc_mod_menu_component_stellarite_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_stellarite_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+}
+
+# stellarite devourer: state - disabled
+esc_mod_menu_component_stellarite_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_stellarite_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden
+}
+
+# technosphere: state - enabled
+esc_mod_menu_component_technosphere_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_technosphere_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+}
+
+# technosphere: state - disabled
+esc_mod_menu_component_technosphere_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_technosphere_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden
+}
+
+# extradimensional horror: state - enabled
+esc_mod_menu_component_horror_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_horror_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+}
+
+# extradimensional horror: state - disabled
+esc_mod_menu_component_horror_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_horror_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_horror_tech_forbidden
+}
+
+# tiyakni matriarch: state - enabled
+esc_mod_menu_component_matriarch_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_matriarch_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+}
+
+# tiyakni matriarch: state - disabled
+esc_mod_menu_component_matriarch_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_matriarch_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden
+}
+
+# scrapper bot: state - enabled
+esc_mod_menu_component_scrapper_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_scrapper_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+}
+
+# scrapper bot: state - disabled
+esc_mod_menu_component_scrapper_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_scrapper_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_scrapper_tech_forbidden
+}
+
+# voidspawn: state - enabled
+esc_mod_menu_component_voidspawn_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_voidspawn_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+}
+
+# voidspawn: state - disabled
+esc_mod_menu_component_voidspawn_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_voidspawn_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_voidspawn_tech_forbidden
+}
+
+############################################################
+
+# Central Research Bureau: state - enabled
+esc_mod_menu_building_bureau_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_bureau_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+}
+
+# Central Research Bureau: state - disabled
+esc_mod_menu_building_bureau_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_bureau_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden
+}
+
+# Technology Institute: state - enabled
+esc_mod_menu_building_tech_institute_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_institute_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+}
+
+# Technology Institute: state - disabled
+esc_mod_menu_building_tech_institute_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_institute_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden
+}
+
+# Culture Nexus: state - enabled
+esc_mod_menu_building_culture_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_nexus_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+}
+
+# Culture Nexus: state - disabled
+esc_mod_menu_building_culture_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_nexus_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden
+}
+
+# Materials Laboratory: state - enabled
+esc_mod_menu_building_matlab_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_laboratory_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+}
+
+# Materials Laboratory: state - disabled
+esc_mod_menu_building_matlab_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_laboratory_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden
+}
+
+# Watcher of Eternity: state - enabled
+esc_mod_menu_building_watcher_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_watcher_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+}
+
+# Watcher of Eternity: state - disabled
+esc_mod_menu_building_watcher_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_watcher_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden
+}
+
+# Mantle Mining Facility: state - enabled
+esc_mod_menu_building_mantle_miner_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_mantle_miner_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+# Mantle Mining Facility: state - disabled
+esc_mod_menu_building_mantle_miner_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_buildings_mantle_miner_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden
+}
+
+############################################################
+
+# AI research boost arrow left
+esc_mod_menu_ai_boost_arrow_left_effect = {
+	optimize_memory
+	custom_tooltip = PREV
+
+	if = {
+		limit = { has_global_flag = ESC_AI_research_boost_easy_static }
+		remove_global_flag = ESC_AI_research_boost_easy_static
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_easy_scaling }
+		remove_global_flag = ESC_AI_research_boost_easy_scaling
+		set_global_flag = ESC_AI_research_boost_easy_static
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_moderate_static }
+		remove_global_flag = ESC_AI_research_boost_moderate_static
+		set_global_flag = ESC_AI_research_boost_easy_scaling
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_moderate_scaling }
+		remove_global_flag = ESC_AI_research_boost_moderate_scaling
+		set_global_flag = ESC_AI_research_boost_moderate_static
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_challenging_static }
+		remove_global_flag = ESC_AI_research_boost_challenging_static
+		set_global_flag = ESC_AI_research_boost_moderate_scaling
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_challenging_scaling }
+		remove_global_flag = ESC_AI_research_boost_challenging_scaling
+		set_global_flag = ESC_AI_research_boost_challenging_static
+	}
+
+	every_playable_country = {
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}
+
+# AI research boost arrow right
+esc_mod_menu_ai_boost_arrow_right_effect = {
+	optimize_memory
+	custom_tooltip = NEXT
+
+	if = {
+		limit = {
+			NOR = {
+				has_global_flag = ESC_AI_research_boost_easy_static
+				has_global_flag = ESC_AI_research_boost_easy_scaling
+				has_global_flag = ESC_AI_research_boost_moderate_static
+				has_global_flag = ESC_AI_research_boost_moderate_scaling
+				has_global_flag = ESC_AI_research_boost_challenging_static
+				has_global_flag = ESC_AI_research_boost_challenging_scaling
+			}
+		}
+		set_global_flag = ESC_AI_research_boost_easy_static
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_easy_static }
+		remove_global_flag = ESC_AI_research_boost_easy_static
+		set_global_flag = ESC_AI_research_boost_easy_scaling
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_easy_scaling }
+		remove_global_flag = ESC_AI_research_boost_easy_scaling
+		set_global_flag = ESC_AI_research_boost_moderate_static
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_moderate_static }
+		remove_global_flag = ESC_AI_research_boost_moderate_static
+		set_global_flag = ESC_AI_research_boost_moderate_scaling
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_moderate_scaling }
+		remove_global_flag = ESC_AI_research_boost_moderate_scaling
+		set_global_flag = ESC_AI_research_boost_challenging_static
+	}
+	else_if = {
+		limit = { has_global_flag = ESC_AI_research_boost_challenging_static }
+		remove_global_flag = ESC_AI_research_boost_challenging_static
+		set_global_flag = ESC_AI_research_boost_challenging_scaling
+	}
+
+	every_playable_country = {
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}
+
+# effect of disabled AI research speed boost
+esc_mod_menu_ai_research_boost_off_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_no_research_boost
+}
+
+# effect of easy static AI research speed boost
+esc_mod_menu_ai_research_boost_easy_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_easy_research_boost
+}
+
+# effect of easy scaling AI research speed boost
+esc_mod_menu_ai_research_boost_easy2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_easy_scaling_research_boost
+}
+
+# effect of moderate static AI research speed boost
+esc_mod_menu_ai_research_boost_moderate_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_moderate_research_boost
+}
+
+# effect of moderate scaling AI research speed boost
+esc_mod_menu_ai_research_boost_moderate2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_moderate_scaling_research_boost
+}
+
+# effect of challenging static AI research speed boost
+esc_mod_menu_ai_research_boost_hard_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_hard_research_boost
+}
+
+# effect of challenging scaling AI research speed boost
+esc_mod_menu_ai_research_boost_hard2_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_hard_scaling_research_boost
+}
+
+############################################################
+
+# AI economic boost arrow left
+esc_mod_menu_ai_eco_boost_arrow_left_effect = {
+	optimize_memory
+	custom_tooltip = PREV
+	remove_global_flag = ESC_AI_economic_boost
+	every_playable_country = {
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}
+
+# AI economic boost arrow right
+esc_mod_menu_ai_eco_boost_arrow_right_effect = {
+	optimize_memory
+	custom_tooltip = NEXT
+	set_global_flag = ESC_AI_economic_boost
+	every_playable_country = {
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}
+
+# effect of disabled AI economic boost
+esc_mod_menu_disabled_ai_eco_boost_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_disable_eco_boost
+}
+
+# effect enabled AI economic boost
+esc_mod_menu_enabled_ai_eco_boost_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_page_ai_enable_eco_boost
+}
+
+############################################################
+
+# extradimensional invasion arrow left
+esc_mod_menu_crisis_arrow_left_effect = {
+	optimize_memory
+	custom_tooltip = PREV
+
+	if = {
+		limit = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+		remove_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+	}
+	else_if = {
+		limit = {
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+			has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+		}
+		remove_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+	}
+
+	every_playable_country = {
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}
+
+# extradimensional invasion arrow right
+esc_mod_menu_crisis_arrow_right_effect = {
+	optimize_memory
+	custom_tooltip = NEXT
+
+	if = {
+		limit = {
+			has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+			NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled }
+		}
+		set_global_flag = ESC_GLOBAL_FLAG_crisis_repeated_enabled
+	}
+	else_if = {
+		limit = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_crisis_enabled } }
+		set_global_flag = ESC_GLOBAL_FLAG_crisis_enabled
+	}
+	every_playable_country = {
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}

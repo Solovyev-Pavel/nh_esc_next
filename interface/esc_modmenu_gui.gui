@@ -1,0 +1,1407 @@
+############################################################
+###               ESC Mod menu custom GUI                ###
+############################################################
+
+guiTypes = {
+
+	@offscreen_pos = -10000
+	@esc_modmenu_width = 800
+	@esc_modmenu_height = 600
+	@esc_modmenu_main_width = 780
+	@esc_modmenu_main_height = 1850
+	@esc_close_button_height = 15
+
+	containerWindowType = {
+		name = "esc_mod_menu_gui"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = @esc_modmenu_width height = @esc_modmenu_height }
+
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_outliner_bg"
+		}
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= -42 y = 12 }
+			orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		iconType = {
+			name = "esc_modmenu_title"
+			spriteType = "GFX_esc_modmenu_header"
+			position = { x = 10 y = 15 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "esc_modmenu_main"
+			position = { x = 10 y = 105 }
+			size = {
+				width = @esc_modmenu_main_width
+				height = 480
+			}
+			#verticalScrollBar = "right_vertical_slider" #required for the scrollbar to function
+			clipping = yes #required for the scrollbar to function
+			background = {
+				name = "esc_modmenu_main_background"
+				quadTextureSprite = "GFX_invisible" }
+			gridBoxType = {
+				name = "esc_modmenu_main_box"
+				size = {
+					width = @esc_modmenu_main_width
+					height = @esc_modmenu_main_height
+				}
+				# slotSize = {
+				# 	width = @esc_modmenu_main_width
+				# 	height = @esc_modmenu_main_height
+				# } #required for the scrollbar to function
+				format = UPPER_LEFT
+			}
+
+			@esc_modmenu_navigation_button_y_position = 15
+			@esc_modmenu_subnavigation_button_y_position = 75
+
+			# MOD menu navigation buttons
+			containerWindowType = {
+				name = "esc_modmenu_navitation_buttons"
+
+				# preset page buttons
+				effectbuttonType = {
+					name = "esc_modmenu_presets_page_button_selected"
+					position = { x = 15 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_presets_selected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_presets_page_button_selected"
+					clicksound = "back_click"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_presets_page_button"
+					position = { x = 15 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_presets_unselected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_presets_page_button_unselected"
+					clicksound = "back_click"
+				}
+
+				# components page buttons
+				effectbuttonType = {
+					name = "esc_modmenu_components_page_button_selected"
+					position = { x = 165 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_components_selected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_components_page_button_selected"
+					clicksound = "back_click"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_components_page_button"
+					position = { x = 165 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_components_unselected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_components_page_button_unselected"
+					clicksound = "back_click"
+				}
+
+				# buildings page buttons
+				effectbuttonType = {
+					name = "esc_modmenu_buildings_page_button_selected"
+					position = { x = 315 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_buildings_selected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_buildings_page_button_selected"
+					clicksound = "back_click"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_buildings_page_button"
+					position = { x = 315 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_buildings_unselected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_buildings_page_button_unselected"
+					clicksound = "back_click"
+				}
+
+				# ai boost page buttons
+				effectbuttonType = {
+					name = "esc_modmenu_ai_boost_page_button_selected"
+					position = { x = 465 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_ai_options_selected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_ai_boost_page_button_selected"
+					clicksound = "back_click"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_ai_boost_page_button"
+					position = { x = 465 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_ai_options_unselected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_ai_boost_page_button_unselected"
+					clicksound = "back_click"
+				}
+
+				# crisis page buttons
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_page_button_selected"
+					position = { x = 615 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_invasion_selected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_crisis_page_button_selected"
+					clicksound = "back_click"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_page_button"
+					position = { x = 615 y = @esc_modmenu_navigation_button_y_position }
+					spriteType = "GFX_esc_modmenu_nav_button_small_background"
+					text = esc_options_page_invasion_unselected
+					font = "malgun_goth_24"
+					#vertical_alignment = center
+					effect = "esc_mod_menu_crisis_page_button_unselected"
+					clicksound = "back_click"
+				}
+			}
+
+			# presets
+			containerWindowType = {
+				name = "esc_modmenu_presets_page"
+
+				# enable everything
+				effectbuttonType = {
+					name = "esc_modmenu_preset_everything_on"
+					position = { x = 80 y = 90 }
+					spriteType = "GFX_esc_modmenu_preset_everything_on"
+					effect = "esc_mod_menu_presets_enable_all_button_selected"
+					clicksound = "back_click"
+				}
+				# disable everything
+				effectbuttonType = {
+					name = "esc_modmenu_preset_everything_off"
+					position = { x = 80 y = 195 }
+					spriteType = "GFX_esc_modmenu_preset_everything_off"
+					effect = "esc_mod_menu_presets_disable_all_button_selected"
+					clicksound = "back_click"
+				}
+				# everything except buildings
+				effectbuttonType = {
+					name = "esc_modmenu_preset_everything_except_buildings"
+					position = { x = 235 y = 90 }
+					spriteType = "GFX_esc_modmenu_preset_buildings_off"
+					effect = "esc_mod_menu_presets_enable_not_buildings_button_selected"
+					clicksound = "back_click"
+				}
+				# leviathan rewards only
+				effectbuttonType = {
+					name = "esc_modmenu_preset_leviathan_only"
+					position = { x = 235 y = 195 }
+					spriteType = "GFX_esc_modmenu_preset_leviathan_only"
+					effect = "esc_mod_menu_presets_enable_leviathan_only_button_selected"
+					clicksound = "back_click"
+				}
+				# vanilla weapons only
+				effectbuttonType = {
+					name = "esc_modmenu_preset_vanilla_only"
+					position = { x = 390 y = 90 }
+					spriteType = "GFX_esc_modmenu_preset_vanilla_only"
+					effect = "esc_mod_menu_presets_enable_vanilla_only_button_selected"
+					clicksound = "back_click"
+				}
+				# vanilla weapons + leviathan
+				effectbuttonType = {
+					name = "esc_modmenu_preset_vanilla_leviathan"
+					position = { x = 390 y = 195 }
+					spriteType = "GFX_esc_modmenu_preset_vanilla_leviathan"
+					effect = "esc_mod_menu_presets_enable_vanilla_leviathan_button_selected"
+					clicksound = "back_click"
+				}
+				# new weapons only
+				effectbuttonType = {
+					name = "esc_modmenu_preset_new_weapons"
+					position = { x = 545 y = 90 }
+					spriteType = "GFX_esc_modmenu_preset_new_types_only"
+					effect = "esc_mod_menu_presets_enable_new_only_button_selected"
+					clicksound = "back_click"
+				}
+				# new weapons + leviathan
+				effectbuttonType = {
+					name = "esc_modmenu_preset_new_weapons_leviathan"
+					position = { x = 545 y = 195 }
+					spriteType = "GFX_esc_modmenu_preset_new_types_leviathan"
+					effect = "esc_mod_menu_presets_enable_new_leviathan_button_selected"
+					clicksound = "back_click"
+				}
+			}
+
+			# components
+			containerWindowType = {
+				name = "esc_modmenu_components_page"
+
+				# subpage navigation
+				containerWindowType = {
+					name = "esc_modmenu_navitation_components_buttons"
+
+					effectbuttonType = {
+						name = "esc_modmenu_components_subpage_links"
+						position = { x = 15 y = 55 }
+						spriteType = "GFX_esc_modmenu_components_subpage_links"
+						effect = "esc_mod_menu_components_page_button_selected"
+						alwaysTransparent = yes
+					}
+
+					# vanilla weapons subpage buttons
+					effectbuttonType = {
+						name = "esc_modmenu_vanilla_weapons_subpage_button_selected"
+						position = { x = 15 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_vanilla_weapons_selected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_vanilla_weapons_subpage_button_selected"
+						clicksound = "back_click"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_vanilla_weapons_subpage_button"
+						position = { x = 15 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_vanilla_weapons_unselected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_vanilla_weapons_subpage_button_unselected"
+						clicksound = "back_click"
+					}
+					# utility components subpage buttons
+					effectbuttonType = {
+						name = "esc_modmenu_utility_components_subpage_button_selected"
+						position = { x = 205 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_utility_components_selected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_utility_subpage_button_selected"
+						clicksound = "back_click"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_utility_components_subpage_button"
+						position = { x = 205 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_utility_components_unselected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_utility_subpage_button_unselected"
+						clicksound = "back_click"
+					}
+					# esc components subpage buttons
+					effectbuttonType = {
+						name = "esc_modmenu_esc_components_subpage_button_selected"
+						position = { x = 395 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_esc_weapons_selected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_esc_weapons_subpage_button_selected"
+						clicksound = "back_click"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_esc_components_subpage_button"
+						position = { x = 395 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_esc_weapons_unselected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_esc_weapons_subpage_button_unselected"
+						clicksound = "back_click"
+					}
+					# leviathan components subpage buttons
+					effectbuttonType = {
+						name = "esc_modmenu_leviathan_components_subpage_button_selected"
+						position = { x = 585 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_special_components_selected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_leviathan_weapons_subpage_button_selected"
+						clicksound = "back_click"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_leviathan_components_subpage_button"
+						position = { x = 585 y = @esc_modmenu_subnavigation_button_y_position }
+						spriteType = "GFX_esc_modmenu_nav_button_background"
+						text = esc_options_subpage_special_components_unselected
+						font = "malgun_goth_24"
+						#vertical_alignment = center
+						effect = "esc_mod_menu_components_leviathan_weapons_subpage_button_unselected"
+						clicksound = "back_click"
+					}
+				}
+
+				# vanilla weapons
+				containerWindowType = {
+					name = "esc_modmenu_vanilla_weapons_subpage"
+
+					# small kinetic
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_kinetic_1_on"
+						position = { x = 75 y = 140 }
+						spriteType = "GFX_esc_modmenu_kinetic_1_on"
+						effect = "esc_mod_menu_components_kinetic_1_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_kinetic_1_off"
+						position = { x = 75 y = 140 }
+						spriteType = "GFX_esc_modmenu_kinetic_1_off"
+						effect = "esc_mod_menu_components_kinetic_1_unselected"
+					}
+					# xl kinetic
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_kinetic_2_on"
+						position = { x = 75 y = 245 }
+						spriteType = "GFX_esc_modmenu_kinetic_2_on"
+						effect = "esc_mod_menu_components_kinetic_2_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_kinetic_2_off"
+						position = { x = 75 y = 245 }
+						spriteType = "GFX_esc_modmenu_kinetic_2_off"
+						effect = "esc_mod_menu_components_kinetic_2_unselected"
+					}
+					# small energy
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_energy_1_on"
+						position = { x = 180 y = 140 }
+						spriteType = "GFX_esc_modmenu_energy_1_on"
+						effect = "esc_mod_menu_components_energy_1_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_energy_1_off"
+						position = { x = 180 y = 140 }
+						spriteType = "GFX_esc_modmenu_energy_1_off"
+						effect = "esc_mod_menu_components_energy_1_unselected"
+					}
+					# particle lances
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_energy_2_on"
+						position = { x = 180 y = 245 }
+						spriteType = "GFX_esc_modmenu_energy_2_on"
+						effect = "esc_mod_menu_components_energy_2_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_energy_2_off"
+						position = { x = 180 y = 245 }
+						spriteType = "GFX_esc_modmenu_energy_2_off"
+						effect = "esc_mod_menu_components_energy_2_unselected"
+					}
+					# arc emitters
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_energy_3_on"
+						position = { x = 180 y = 350 }
+						spriteType = "GFX_esc_modmenu_energy_3_on"
+						effect = "esc_mod_menu_components_energy_3_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_energy_3_off"
+						position = { x = 180 y = 350 }
+						spriteType = "GFX_esc_modmenu_energy_3_off"
+						effect = "esc_mod_menu_components_energy_3_unselected"
+					}
+					# missiles
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_missile_on"
+						position = { x = 285 y = 140 }
+						spriteType = "GFX_esc_modmenu_missiles_on"
+						effect = "esc_mod_menu_components_missile_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_missile_off"
+						position = { x = 285 y = 140 }
+						spriteType = "GFX_esc_modmenu_missiles_off"
+						effect = "esc_mod_menu_components_missile_unselected"
+					}
+					# point defense
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_pd_on"
+						position = { x = 390 y = 140 }
+						spriteType = "GFX_esc_modmenu_pd_on"
+						effect = "esc_mod_menu_components_pd_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_pd_off"
+						position = { x = 390 y = 140 }
+						spriteType = "GFX_esc_modmenu_pd_off"
+						effect = "esc_mod_menu_components_pd_unselected"
+					}
+					# strikecrafts
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_strikecrafts_on"
+						position = { x = 495 y = 140 }
+						spriteType = "GFX_esc_modmenu_strikecrafts_on"
+						effect = "esc_mod_menu_components_strikecrafts_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_strikecrafts_off"
+						position = { x = 495 y = 140 }
+						spriteType = "GFX_esc_modmenu_strikecrafts_off"
+						effect = "esc_mod_menu_components_strikecrafts_unselected"
+					}
+					# creature weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_creature_on"
+						position = { x = 600 y = 140 }
+						spriteType = "GFX_esc_modmenu_creature_on"
+						effect = "esc_mod_menu_components_creature_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_creature_off"
+						position = { x = 600 y = 140 }
+						spriteType = "GFX_esc_modmenu_creature_off"
+						effect = "esc_mod_menu_components_creature_unselected"
+					}
+				}
+				# utility comonents
+				containerWindowType = {
+					name = "esc_modmenu_utility_components_subpage"
+
+					# reactors
+					effectbuttonType = {
+						name = "esc_modmenu_component_reactors_on"
+						position = { x = 75 y = 140 }
+						spriteType = "GFX_esc_modmenu_reactors_on"
+						effect = "esc_mod_menu_components_reactors_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_reactors_off"
+						position = { x = 75 y = 140 }
+						spriteType = "GFX_esc_modmenu_reactors_off"
+						effect = "esc_mod_menu_components_reactors_unselected"
+					}
+					# armor
+					effectbuttonType = {
+						name = "esc_modmenu_component_armor_on"
+						position = { x = 180 y = 140 }
+						spriteType = "GFX_esc_modmenu_armor_on"
+						effect = "esc_mod_menu_components_armor_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_armor_off"
+						position = { x = 180 y = 140 }
+						spriteType = "GFX_esc_modmenu_armor_off"
+						effect = "esc_mod_menu_components_armor_unselected"
+					}
+					# shields
+					effectbuttonType = {
+						name = "esc_modmenu_component_shields_on"
+						position = { x = 285 y = 140 }
+						spriteType = "GFX_esc_modmenu_shields_on"
+						effect = "esc_mod_menu_components_shields_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_shields_off"
+						position = { x = 285 y = 140 }
+						spriteType = "GFX_esc_modmenu_shields_off"
+						effect = "esc_mod_menu_components_shields_unselected"
+					}
+					# sensors
+					effectbuttonType = {
+						name = "esc_modmenu_component_sensors_on"
+						position = { x = 390 y = 140 }
+						spriteType = "GFX_esc_modmenu_sensors_on"
+						effect = "esc_mod_menu_components_sensors_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_sensors_off"
+						position = { x = 390 y = 140 }
+						spriteType = "GFX_esc_modmenu_sensors_off"
+						effect = "esc_mod_menu_components_sensors_unselected"
+					}
+					# thrusters
+					effectbuttonType = {
+						name = "esc_modmenu_component_thruster_on"
+						position = { x = 495 y = 140 }
+						spriteType = "GFX_esc_modmenu_thrusters_on"
+						effect = "esc_mod_menu_components_thrusters_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_thruster_off"
+						position = { x = 495 y = 140 }
+						spriteType = "GFX_esc_modmenu_thrusters_off"
+						effect = "esc_mod_menu_components_thrusters_unselected"
+					}
+					# ftl
+					effectbuttonType = {
+						name = "esc_modmenu_component_ftl_on"
+						position = { x = 495 y = 245 }
+						spriteType = "GFX_esc_modmenu_ftl_on"
+						effect = "esc_mod_menu_components_ftl_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_ftloff"
+						position = { x = 495 y = 245 }
+						spriteType = "GFX_esc_modmenu_ftl_off"
+						effect = "esc_mod_menu_components_ftl_unselected"
+					}
+					# auxiliary
+					effectbuttonType = {
+						name = "esc_modmenu_component_aux_on"
+						position = { x = 600 y = 140 }
+						spriteType = "GFX_esc_modmenu_aux_on"
+						effect = "esc_mod_menu_components_aux_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_component_aux_off"
+						position = { x = 600 y = 140 }
+						spriteType = "GFX_esc_modmenu_aux_off"
+						effect = "esc_mod_menu_components_aux_unselected"
+					}
+				}
+				# esc weapons :: energy / kinetic / missile
+				containerWindowType = {
+					name = "esc_modmenu_esc_weapons_subpage_regular"
+
+					# xl autocannons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_xl_autocannons_on"
+						position = { x = 65 y = 140 }
+						spriteType = "GFX_esc_modmenu_xl_autocannons_on"
+						effect = "esc_mod_menu_components_xl_autocannons_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_xl_autocannons_off"
+						position = { x = 65 y = 140 }
+						spriteType = "GFX_esc_modmenu_xl_autocannons_off"
+						effect = "esc_mod_menu_components_xl_autocannons_unselected"
+					}
+					# mhd cannon
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_mhd_on"
+						position = { x = 65 y = 245 }
+						spriteType = "GFX_esc_modmenu_mhd_on"
+						effect = "esc_mod_menu_components_mhd_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_mhd_off"
+						position = { x = 65 y = 245 }
+						spriteType = "GFX_esc_modmenu_mhd_off"
+						effect = "esc_mod_menu_components_mhd_unselected"
+					}
+					# wave motion gun
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_wmg_on"
+						position = { x = 170 y = 140 }
+						spriteType = "GFX_esc_modmenu_wmg_on"
+						effect = "esc_mod_menu_components_wmg_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_wmg_off"
+						position = { x = 170 y = 140 }
+						spriteType = "GFX_esc_modmenu_wmg_off"
+						effect = "esc_mod_menu_components_wmg_unselected"
+					}
+					# chrono-spatial weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_chrono_on2"
+						position = { x = 170 y = 245 }
+						spriteType = "GFX_esc_modmenu_chrono_on2"
+						effect = "esc_mod_menu_components_chrono_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_chrono_on"
+						position = { x = 170 y = 245 }
+						spriteType = "GFX_esc_modmenu_chrono_on"
+						effect = "esc_mod_menu_components_chrono_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_chrono_off"
+						position = { x = 170 y = 245 }
+						spriteType = "GFX_esc_modmenu_chrono_off"
+						effect = "esc_mod_menu_components_chrono_unselected"
+					}
+					# plasma missiles
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_plasma_missiles_on"
+						position = { x = 275 y = 140 }
+						spriteType = "GFX_esc_modmenu_plasma_missiles_on"
+						effect = "esc_mod_menu_components_plasma_missiles_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_plasma_missiles_off"
+						position = { x = 275 y = 140 }
+						spriteType = "GFX_esc_modmenu_plasma_missiles_off"
+						effect = "esc_mod_menu_components_plasma_missiles_unselected"
+					}
+					# xl missiles
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_xl_missiles_on"
+						position = { x = 275 y = 245 }
+						spriteType = "GFX_esc_modmenu_xl_missiles_on"
+						effect = "esc_mod_menu_components_xl_missiles_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_xl_missiles_off"
+						position = { x = 275 y = 245 }
+						spriteType = "GFX_esc_modmenu_xl_missiles_off"
+						effect = "esc_mod_menu_components_xl_missiles_unselected"
+					}
+				}
+				# esc weapons :: new types
+				containerWindowType = {
+					name = "esc_modmenu_esc_weapons_subpage_newtype"
+
+					# biological weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_biological_on2"
+						position = { x = 400 y = 140 }
+						spriteType = "GFX_esc_modmenu_biological_on2"
+						effect = "esc_mod_menu_components_biological_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_biological_on"
+						position = { x = 400 y = 140 }
+						spriteType = "GFX_esc_modmenu_biological_on"
+						effect = "esc_mod_menu_components_biological_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_biological_off"
+						position = { x = 400 y = 140 }
+						spriteType = "GFX_esc_modmenu_biological_off"
+						effect = "esc_mod_menu_components_biological_unselected"
+					}
+					# crystalline weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_crystal_on2"
+						position = { x = 400 y = 245 }
+						spriteType = "GFX_esc_modmenu_crystal_on2"
+						effect = "esc_mod_menu_components_crystal_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_crystal_on"
+						position = { x = 400 y = 245 }
+						spriteType = "GFX_esc_modmenu_crystal_on"
+						effect = "esc_mod_menu_components_crystal_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_crystal_off"
+						position = { x = 400 y = 245 }
+						spriteType = "GFX_esc_modmenu_crystal_off"
+						effect = "esc_mod_menu_components_crystal_unselected"
+					}
+					# gravitic weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_gravitic_on2"
+						position = { x = 505 y = 140 }
+						spriteType = "GFX_esc_modmenu_gravitic_on2"
+						effect = "esc_mod_menu_components_gravitic_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_gravitic_on"
+						position = { x = 505 y = 140 }
+						spriteType = "GFX_esc_modmenu_gravitic_on"
+						effect = "esc_mod_menu_components_gravitic_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_gravitic_off"
+						position = { x = 505 y = 140 }
+						spriteType = "GFX_esc_modmenu_gravitic_off"
+						effect = "esc_mod_menu_components_gravitic_unselected"
+					}
+					# nanite weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_nanite_on2"
+						position = { x = 505 y = 245 }
+						spriteType = "GFX_esc_modmenu_nanite_on2"
+						effect = "esc_mod_menu_components_nanite_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_nanite_on"
+						position = { x = 505 y = 245 }
+						spriteType = "GFX_esc_modmenu_nanite_on"
+						effect = "esc_mod_menu_components_nanite_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_nanite_off"
+						position = { x = 505 y = 245 }
+						spriteType = "GFX_esc_modmenu_nanite_off"
+						effect = "esc_mod_menu_components_nanite_unselected"
+					}
+					# psionic weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_psionic_on2"
+						position = { x = 610 y = 140 }
+						spriteType = "GFX_esc_modmenu_psionic_on2"
+						effect = "esc_mod_menu_components_psionic_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_psionic_on"
+						position = { x = 610 y = 140 }
+						spriteType = "GFX_esc_modmenu_psionic_on"
+						effect = "esc_mod_menu_components_psionic_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_psionic_off"
+						position = { x = 610 y = 140 }
+						spriteType = "GFX_esc_modmenu_psionic_off"
+						effect = "esc_mod_menu_components_psionic_unselected"
+					}
+					# tesla weapons
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_tesla_on2"
+						position = { x = 610 y = 245 }
+						spriteType = "GFX_esc_modmenu_tesla_on2"
+						effect = "esc_mod_menu_components_tesla_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_tesla_on"
+						position = { x = 610 y = 245 }
+						spriteType = "GFX_esc_modmenu_tesla_on"
+						effect = "esc_mod_menu_components_tesla_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_tesla_off"
+						position = { x = 610 y = 245 }
+						spriteType = "GFX_esc_modmenu_tesla_off"
+						effect = "esc_mod_menu_components_tesla_unselected"
+					}
+				}
+				# leviathan rewards
+				containerWindowType = {
+					name = "esc_modmenu_esc_weapons_subpage_leviathan"
+
+					# ether drake
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_drake_on"
+						position = { x = 80 y = 140 }
+						spriteType = "GFX_esc_modmenu_drake_on"
+						effect = "esc_mod_menu_components_drake_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_drake_off"
+						position = { x = 80 y = 140 }
+						spriteType = "GFX_esc_modmenu_drake_off"
+						effect = "esc_mod_menu_components_drake_unselected"
+					}
+					# automated dreadnought
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_dreadnought_on"
+						position = { x = 80 y = 245 }
+						spriteType = "GFX_esc_modmenu_dreadnought_on"
+						effect = "esc_mod_menu_components_dreadnought_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_dreadnought_off"
+						position = { x = 80 y = 245 }
+						spriteType = "GFX_esc_modmenu_dreadnought_off"
+						effect = "esc_mod_menu_components_dreadnought_unselected"
+					}
+					# enigmatic fortress
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_fortress_on2"
+						position = { x = 235 y = 140 }
+						spriteType = "GFX_esc_modmenu_fortress_on2"
+						effect = "esc_mod_menu_components_fortress_selected2"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_fortress_on"
+						position = { x = 235 y = 140 }
+						spriteType = "GFX_esc_modmenu_fortress_on"
+						effect = "esc_mod_menu_components_fortress_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_fortress_off"
+						position = { x = 235 y = 140 }
+						spriteType = "GFX_esc_modmenu_fortress_off"
+						effect = "esc_mod_menu_components_fortress_unselected"
+					}
+					# spectral wraith
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_wraith_on"
+						position = { x = 235 y = 245 }
+						spriteType = "GFX_esc_modmenu_wraith_on"
+						effect = "esc_mod_menu_components_wraith_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_wraith_off"
+						position = { x = 235 y = 245 }
+						spriteType = "GFX_esc_modmenu_wraith_off"
+						effect = "esc_mod_menu_components_wraith_unselected"
+					}
+					# stellarite devourer
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_stellarite_on"
+						position = { x = 235 y = 350 }
+						spriteType = "GFX_esc_modmenu_stellarite_on"
+						effect = "esc_mod_menu_components_stellarite_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_stellarite_off"
+						position = { x = 235 y = 350 }
+						spriteType = "GFX_esc_modmenu_stellarite_off"
+						effect = "esc_mod_menu_components_stellarite_unselected"
+					}
+					# technosphere
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_technosphere_on"
+						position = { x = 390 y = 140 }
+						spriteType = "GFX_esc_modmenu_technosphere_on"
+						effect = "esc_mod_menu_components_technosphere_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_technosphere_off"
+						position = { x = 390 y = 140 }
+						spriteType = "GFX_esc_modmenu_technosphere_off"
+						effect = "esc_mod_menu_components_technosphere_unselected"
+					}
+					# dimensional horror
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_horror_on"
+						position = { x = 390 y = 245 }
+						spriteType = "GFX_esc_modmenu_horror_on"
+						effect = "esc_mod_menu_components_horror_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_horror_off"
+						position = { x = 390 y = 245 }
+						spriteType = "GFX_esc_modmenu_horror_off"
+						effect = "esc_mod_menu_components_horror_unselected"
+					}
+					# tiyanki matriarch
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_matriarch_on"
+						position = { x = 390 y = 350 }
+						spriteType = "GFX_esc_modmenu_matriarch_on"
+						effect = "esc_mod_menu_components_matriarch_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_matriarch_off"
+						position = { x = 390 y = 350 }
+						spriteType = "GFX_esc_modmenu_matriarch_off"
+						effect = "esc_mod_menu_components_matriarch_unselected"
+					}
+					# scrapper bot
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_scrapper_on"
+						position = { x = 545 y = 140 }
+						spriteType = "GFX_esc_modmenu_scrapper_on"
+						effect = "esc_mod_menu_components_scrapper_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_scrapper_off"
+						position = { x = 545 y = 140 }
+						spriteType = "GFX_esc_modmenu_scrapper_off"
+						effect = "esc_mod_menu_components_scrapper_unselected"
+					}
+					# voidspawn
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_voidspawn_on"
+						position = { x = 545 y = 245 }
+						spriteType = "GFX_esc_modmenu_voidspawn_on"
+						effect = "esc_mod_menu_components_voidspawn_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_rewards_voidspawn_off"
+						position = { x = 545 y = 245 }
+						spriteType = "GFX_esc_modmenu_voidspawn_off"
+						effect = "esc_mod_menu_components_voidspawn_unselected"
+					}
+				}
+			}
+
+			# buildings
+			containerWindowType = {
+				name = "esc_modmenu_buildings_page"
+
+				effectbuttonType = {
+					name = "esc_modmenu_buildings_header"
+					position = { x = 155 y = 75 }
+					spriteType = "GFX_esc_modmenu_buildings_header"
+					effect = "esc_mod_menu_buildings_page_button_selected"
+					alwaysTransparent = yes
+				}
+
+				# central research bureau
+				effectbuttonType = {
+					name = "esc_modmenu_reseach_bureau_on"
+					position = { x = 75 y = 120 }
+					spriteType = "GFX_esc_modmenu_research_bureau_on"
+					effect = "esc_mod_menu_buildings_research_bureau_selected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_reseach_bureau_off"
+					position = { x = 75 y = 120 }
+					spriteType = "GFX_esc_modmenu_research_bureau_off"
+					effect = "esc_mod_menu_buildings_research_bureau_unselected"
+				}
+				# technology institute
+				effectbuttonType = {
+					name = "esc_modmenu_tech_institute_on"
+					position = { x = 180 y = 120 }
+					spriteType = "GFX_esc_modmenu_tech_institute_on"
+					effect = "esc_mod_menu_buildings_tech_institute_selected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_tech_institute_off"
+					position = { x = 180 y = 120 }
+					spriteType = "GFX_esc_modmenu_tech_institute_off"
+					effect = "esc_mod_menu_buildings_tech_institute_unselected"
+				}
+				# culture nexus
+				effectbuttonType = {
+					name = "esc_modmenu_culture_nexus_on"
+					position = { x = 285 y = 120 }
+					spriteType = "GFX_esc_modmenu_culture_nexus_on"
+					effect = "esc_mod_menu_buildings_culture_nexus_selected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_culture_nexus_off"
+					position = { x = 285 y = 120 }
+					spriteType = "GFX_esc_modmenu_culture_nexus_off"
+					effect = "esc_mod_menu_buildings_culture_nexus_unselected"
+				}
+				# advanced materials laboratory
+				effectbuttonType = {
+					name = "esc_modmenu_materials_laboratory_on"
+					position = { x = 390 y = 120 }
+					spriteType = "GFX_esc_modmenu_materials_lab_on"
+					effect = "esc_mod_menu_buildings_mat_laboratory_selected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_materials_laboratory_off"
+					position = { x = 390 y = 120 }
+					spriteType = "GFX_esc_modmenu_materials_lab_off"
+					effect = "esc_mod_menu_buildings_mat_laboratory_unselected"
+				}
+				# watcher of eternity
+				effectbuttonType = {
+					name = "esc_modmenu_watcher_of_eternity_on"
+					position = { x = 495 y = 120 }
+					spriteType = "GFX_esc_modmenu_eternity_watcher_on"
+					effect = "esc_mod_menu_buildings_watcher_selected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_watcher_of_eternity_off"
+					position = { x = 495 y = 120 }
+					spriteType = "GFX_esc_modmenu_eternity_watcher_off"
+					effect = "esc_mod_menu_buildings_watcher_unselected"
+				}
+				# mantle mining facility
+				effectbuttonType = {
+					name = "esc_modmenu_mantle_miner_on"
+					position = { x = 600 y = 120 }
+					spriteType = "GFX_esc_modmenu_mantle_miner_on"
+					effect = "esc_mod_menu_buildings_mantle_miner_selected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_mantle_miner_off"
+					position = { x = 600 y = 120 }
+					spriteType = "GFX_esc_modmenu_mantle_miner_off"
+					effect = "esc_mod_menu_buildings_mantle_miner_unselected"
+				}
+			}
+
+			# ai boost
+			containerWindowType = {
+				name = "esc_modmenu_ai_options_page"
+
+				# reseach boost header
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_header"
+					position = { x = 265 y = 75 }
+					spriteType = "GFX_esc_modmenu_research_boost_header"
+					effect = "esc_mod_menu_ai_boost_page_button_selected"
+					alwaysTransparent = yes
+				}
+				# research boost selector arrows
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_arrow_left"
+					position = { x = 210 y = 120 }
+					spriteType = "GFX_esc_modmenu_arrow_left_tall"
+					effect = "esc_mod_menu_ai_boost_icon_arrow_left"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_arrow_right"
+					position = { x = 545 y = 120 }
+					spriteType = "GFX_esc_modmenu_arrow_right_tall"
+					effect = "esc_mod_menu_ai_boost_icon_arrow_right"
+				}
+				# research boost selector options
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_none"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_none"
+					effect = "esc_mod_menu_ai_boost_icon_none"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_easy"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_small"
+					effect = "esc_mod_menu_ai_boost_icon_easy"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_easy_scaling"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_small_scaling"
+					effect = "esc_mod_menu_ai_boost_icon_easy_scaling"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_moderate"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_medium"
+					effect = "esc_mod_menu_ai_boost_icon_moderate"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_moderate_scaling"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_medium_scaling"
+					effect = "esc_mod_menu_ai_boost_icon_moderate_scaling"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_challenging"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_big"
+					effect = "esc_mod_menu_ai_boost_icon_challenging"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_research_boost_challenging_scaling"
+					position = { x = 240 y = 120 }
+					spriteType = "GFX_esc_modmenu_science_boost_big_scaling"
+					effect = "esc_mod_menu_ai_boost_icon_challenging_scaling"
+				}
+
+				# eco boost header
+				effectbuttonType = {
+					name = "esc_modmenu_eco_boost_header"
+					position = { x = 265 y = 275 }
+					spriteType = "GFX_esc_modmenu_eco_boost_header"
+					effect = "esc_mod_menu_ai_boost_page_button_selected"
+					alwaysTransparent = yes
+				}
+				# eco boost selector arrows
+				effectbuttonType = {
+					name = "esc_modmenu_eco_boost_arrow_left"
+					position = { x = 210 y = 320 }
+					spriteType = "GFX_esc_modmenu_arrow_left_tall"
+					effect = "esc_mod_menu_ai_boost_eco_arrow_left"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_eco_boost_arrow_right"
+					position = { x = 545 y = 320 }
+					spriteType = "GFX_esc_modmenu_arrow_right_tall"
+					effect = "esc_mod_menu_ai_boost_eco_arrow_right"
+				}
+				# eco boost options
+				effectbuttonType = {
+					name = "esc_modmenu_eco_boost_disabled_button"
+					position = { x = 240 y = 320 }
+					spriteType = "GFX_esc_modmenu_eco_boost_button_disabled"
+					effect = "esc_mod_menu_ai_boost_eco_button_unselected"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_eco_boost_enabled_button"
+					position = { x = 240 y = 320 }
+					spriteType = "GFX_esc_modmenu_eco_boost_button_enabled"
+					effect = "esc_mod_menu_ai_boost_eco_button_selected"
+				}
+			}
+
+			# crisis settings
+			containerWindowType = {
+				name = "esc_modmenu_crisis_options_page"
+
+				# selector arrows
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_arrow_left"
+					position = { x = 210 y = 90 }
+					spriteType = "GFX_esc_modmenu_arrow_left_tall"
+					effect = "esc_mod_menu_crisis_arrow_left"
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_arrow_right"
+					position = { x = 545 y = 90 }
+					spriteType = "GFX_esc_modmenu_arrow_right_tall"
+					effect = "esc_mod_menu_crisis_arrow_right"
+				}
+				# options
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_button"
+					position = { x = 240 y = 90 }
+					spriteType = "GFX_esc_modmenu_invasion_off"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled_button"
+					position = { x = 240 y = 90 }
+					spriteType = "GFX_esc_modmenu_invasion_on"
+					effect = "esc_mod_menu_crisis_button_selected"
+					alwaysTransparent = yes
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled2_button"
+					position = { x = 240 y = 90 }
+					spriteType = "GFX_esc_modmenu_invasion_on2"
+					effect = "esc_mod_menu_crisis_repeated_button_selected"
+					alwaysTransparent = yes
+				}
+				# descriptions :: no crisis
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_desc1"
+					position = { x = 90 y = 240 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_no_crisis_tooltip_1
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_desc21"
+					position = { x = 90 y = 280 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_no_crisis_tooltip_21
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_desc22"
+					position = { x = 90 y = 305 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_no_crisis_tooltip_22
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_desc23"
+					position = { x = 90 y = 330 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_no_crisis_tooltip_23
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_desc31"
+					position = { x = 90 y = 395 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_no_crisis_tooltip_31
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_disabled_desc32"
+					position = { x = 90 y = 420 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_unselected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_no_crisis_tooltip_32
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				# descriptions :: crisis singular
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled_desc1"
+					position = { x = 90 y = 240 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_tooltip_1
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled_desc21"
+					position = { x = 90 y = 280 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_tooltip_21
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled_desc22"
+					position = { x = 90 y = 305 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_tooltip_22
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled_desc23"
+					position = { x = 90 y = 330 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_tooltip_23
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled_desc24"
+					position = { x = 90 y = 355 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_tooltip_24
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				# descriptions :: crisis repeating
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled2_desc1"
+					position = { x = 90 y = 240 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_repeated_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_repeated_tooltip_1
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled2_desc21"
+					position = { x = 90 y = 280 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_repeated_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_repeated_tooltip_21
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled2_desc22"
+					position = { x = 90 y = 305 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_repeated_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_repeated_tooltip_22
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled2_desc23"
+					position = { x = 90 y = 330 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_repeated_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_repeated_tooltip_23
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+				effectbuttonType = {
+					name = "esc_modmenu_crisis_enabled2_desc24"
+					position = { x = 90 y = 355 }
+					spriteType = "GFX_esc_modmenu_blank"
+					effect = "esc_mod_menu_crisis_repeated_button_selected"
+					alwaysTransparent = yes
+					text = esc_mod_menu_crisis_repeated_tooltip_24
+					font = "malgun_goth_24"
+					vertical_alignment = top
+				}
+			}
+		}
+
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+
+		buttonType = { name = "focus_button" position = { x = @offscreen_pos y = @offscreen_pos } spriteType = "GFX_fleetview_focus" } # hidden
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = @offscreen_pos y = @offscreen_pos } } # hidden
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = @offscreen_pos y = @offscreen_pos } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait_background"
+			position = { x = @offscreen_pos y = @offscreen_pos }
+			size = { width = 0 height = 0 } 	# hide portrait window
+			iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+			iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+		}
+		containerWindowType = {
+			name = "portrait"
+			position = { x = @offscreen_pos y = @offscreen_pos }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType = { name = "empire_name" font = "malgun_goth_24" } # hidden
+		instantTextBoxType = { name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType = { name = "empire_personality_type" font = "cg_16b" } # hidden
+		overlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = @offscreen_pos y = @offscreen_pos } } # hidden
+		iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = @offscreen_pos y = @offscreen_pos } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = @offscreen_pos y = @offscreen_pos }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = @offscreen_pos y =@offscreen_pos }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = @offscreen_pos y = @offscreen_pos }
+			#size = { width = 563 height = 220 }
+			moveable = no
+
+			instantTextBoxType = {
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = @offscreen_pos y = @offscreen_pos }
+				maxWidth = 200
+				alwaysTransparent = yes
+			}
+			instantTextBoxType = {
+				name = "action_desc"
+				font = "malgun_goth_24"
+				position = { x = @offscreen_pos y = @offscreen_pos }
+				maxWidth = 500
+				maxHeight = 180
+				orientation = "UPPER_LEFT"
+				format = center
+				alwaysTransparent = yes
+				text_color_code = "H"
+			}
+			listboxType = { name = "option_list" position = { x = @offscreen_pos y = @offscreen_pos } } # hidden option list
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = @offscreen_pos y = @offscreen_pos }
+			maxWidth = 465
+			maxHeight = 220
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+	}
+}

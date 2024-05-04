@@ -93,3 +93,41 @@ ESC_EFFECT_ai_set_science_boost = {
 		add_modifier = { modifier = esc_ai_science_boost_challenging_static days = 35 }
 	}
 }
+
+## ##################################################### ##
+##            Managing AI economics bonuses              ##
+## ##################################################### ##
+
+### remove active bonuses
+ESC_EFFECT_ai_remove_economic_boost = {
+	remove_modifier = esc_ai_nanites_boost
+	remove_modifier = esc_ai_zro_boost
+	remove_modifier = esc_ai_dark_matter_boost
+}
+
+### set new bonuses
+ESC_EFFECT_ai_set_economic_boost = {
+	if = {
+		limit = { has_global_flag = ESC_AI_economic_boost }
+		# dark matter
+		if = {
+			limit = { has_technology = tech_mine_dark_matter }
+			add_modifier = { modifier = esc_ai_dark_matter_boost days = -1 }
+		}
+		# nanites
+		if = {
+			limit = { has_technology = esc_tech_synthetic_lifeform_studies }
+			add_modifier = { modifier = esc_ai_nanites_boost days = -1 }
+		}
+		# zro
+		if = {
+			limit = {
+				OR = {
+					has_technology = esc_tech_psionic_weapons
+					has_technology = tech_mine_zro
+				}
+			}
+			add_modifier = { modifier = esc_ai_zro_boost days = -1 }
+		}
+	}
+}
