@@ -24,7 +24,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_6" }
 	size_restriction = {
 		# vanilla ship classes
-		corvette frigate crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
+		corvette frigate crisis_corvette offspring_corvette nanite_swarmer colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
 		# WACO ships
 		@WACO_FlotillaShip @WACO_EmergencyShip
 		# EAC ships
@@ -55,7 +55,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 	component_set = "power_core"
 	upgrades_to = DESTROYER_ESC_REACTOR_7
 
@@ -89,7 +89,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_6" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -125,7 +125,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_6" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -774,7 +774,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_7" }
 	size_restriction = {
 		# vanilla ship classes
-		corvette frigate crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
+		corvette frigate crisis_corvette offspring_corvette nanite_swarmer colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
 		# WACO ships
 		@WACO_FlotillaShip @WACO_EmergencyShip
 		# EAC ships
@@ -805,7 +805,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 	component_set = "power_core"
 	upgrades_to = DESTROYER_ESC_REACTOR_8
 
@@ -839,7 +839,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_7" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -875,7 +875,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_7" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -1524,7 +1524,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_8" }
 	size_restriction = {
 		# vanilla ship classes
-		corvette frigate crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
+		corvette frigate crisis_corvette offspring_corvette nanite_swarmer colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
 		# WACO ships
 		@WACO_FlotillaShip @WACO_EmergencyShip
 		# EAC ships
@@ -1554,7 +1554,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
@@ -1587,7 +1587,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_8" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -1622,7 +1622,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_8" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -2256,7 +2256,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
 	size_restriction = {
 		# vanilla ship classes
-		corvette frigate crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
+		corvette frigate crisis_corvette offspring_corvette nanite_swarmer colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
 		# WACO ships
 		@WACO_FlotillaShip @WACO_EmergencyShip
 		# EAC ships
@@ -2299,7 +2299,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 	component_set = "power_core"
 	upgrades_to = DESTROYER_ESC_DARK_MATTER_CORE_3
 
@@ -2345,7 +2345,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -2393,7 +2393,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_power_core_2" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -3258,7 +3258,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
 	size_restriction = {
 		# vanilla ship classes
-		corvette frigate crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
+		corvette frigate crisis_corvette offspring_corvette nanite_swarmer colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
 		# WACO ships
 		@WACO_FlotillaShip @WACO_EmergencyShip
 		# EAC ships
@@ -3300,7 +3300,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 	component_set = "power_core"
 
 	ai_weight = {
@@ -3345,7 +3345,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -3392,7 +3392,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_power_core_3" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -4242,7 +4242,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_psionic" }
 	size_restriction = {
 		# vanilla ship classes
-		corvette frigate crisis_corvette offspring_corvette colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
+		corvette frigate crisis_corvette offspring_corvette nanite_swarmer colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport
 		# WACO ships
 		@WACO_FlotillaShip @WACO_EmergencyShip
 		# EAC ships
@@ -4289,7 +4289,7 @@ utility_component_template = {
 	}
 
 	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
 	component_set = "power_core"
 
 	ai_weight = {
@@ -4335,7 +4335,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_psionic" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
@@ -4383,7 +4383,7 @@ utility_component_template = {
 	prerequisites = { "esc_tech_reactor_psionic" }
 	size_restriction = {
 		# vanilla ship classes
-		cruiser crisis_cruiser cosmo_crisis_destroyer offspring_cruiser
+		cruiser crisis_cruiser offspring_cruiser
 		# Deadly tempest
 		graygoo_interdictor }
 	component_set = "power_core"
