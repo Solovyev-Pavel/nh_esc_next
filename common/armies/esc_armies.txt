@@ -76,14 +76,16 @@ esc_erasure_squad_army = {
 
 	show_tech_unlock_if = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
-		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+		NOR = {
+			has_authority = auth_machine_intelligence
+			is_individual_machine = yes
 		}
 	}
 
 	potential_country = {
-		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+		NOR = {
+			has_authority = auth_machine_intelligence
+			is_individual_machine = yes
 		}
 	}
 	potential = {
@@ -130,12 +132,14 @@ esc_eradicator_droids_army = {
 	show_tech_unlock_if = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
 		has_authority = auth_machine_intelligence
+		is_individual_machine = yes
 	}
 
 	potential_country = {
 		OR = {
 			has_authority = auth_machine_intelligence
 			has_tradition = tr_synthetics_transubstatiation_synthesis
+			is_individual_machine = yes
 		}
 	}
 
@@ -170,13 +174,17 @@ esc_tesla_troopers_army = {
 
 	show_tech_unlock_if = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
-		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+		NOR = {
+			has_authority = auth_machine_intelligence
+			is_individual_machine = yes
 		}
 	}
 
 	potential_country = {
-		NOT = { has_authority = auth_machine_intelligence }
+		NOR = {
+			has_authority = auth_machine_intelligence
+			is_individual_machine = yes
+		}
 	}
 	potential = {
 		from = {
@@ -221,12 +229,14 @@ esc_tesla_droids_army = {
 	show_tech_unlock_if = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tesla_weapons_forbidden }
 		has_authority = auth_machine_intelligence
+		is_individual_machine = yes
 	}
 
 	potential_country = {
 		OR = {
 			has_authority = auth_machine_intelligence
 			has_tradition = tr_synthetics_transubstatiation_synthesis
+			is_individual_machine = yes
 		}
 	}
 
