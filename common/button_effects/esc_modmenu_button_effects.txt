@@ -375,6 +375,28 @@ esc_mod_menu_components_creature_unselected = {
     effect = { hidden_effect = { esc_mod_menu_component_creature_disabled_effect = yes } }
 }
 
+# archaeotech weapons >>> effect = enable
+esc_mod_menu_components_archaeotech_selected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+   }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_archaeotech_enabled_effect = yes } }
+}
+
+# archaeotech weapons >>> effect = disable
+esc_mod_menu_components_archaeotech_unselected = {
+    potential = {
+        has_global_flag = ESC_MENU_components_page_selected
+        has_global_flag = ESC_MENU_components_vanilla_selected
+        has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden
+    }
+    allow = { always = yes }
+    effect = { hidden_effect = { esc_mod_menu_component_archaeotech_disabled_effect = yes } }
+}
+
 #################### Components : utility ##################
 
 # reactors >>> effect = enable

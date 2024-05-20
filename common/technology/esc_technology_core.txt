@@ -454,7 +454,10 @@ esc_tech_synthesis_tech_age = {
 		}
 	}
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {

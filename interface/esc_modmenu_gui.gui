@@ -474,6 +474,19 @@ guiTypes = {
 						spriteType = "GFX_esc_modmenu_creature_off"
 						effect = "esc_mod_menu_components_creature_unselected"
 					}
+					# archaeotech componenets
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_archaeotech_on"
+						position = { x = 600 y = 350 }
+						spriteType = "GFX_esc_modmenu_archaeotech_on"
+						effect = "esc_mod_menu_components_archaeotech_selected"
+					}
+					effectbuttonType = {
+						name = "esc_modmenu_weapons_archaeotech_off"
+						position = { x = 600 y = 350 }
+						spriteType = "GFX_esc_modmenu_archaeotech_off"
+						effect = "esc_mod_menu_components_archaeotech_unselected"
+					}
 				}
 				# utility comonents
 				containerWindowType = {

@@ -27,6 +27,8 @@ ESC_PRESET_enable_all = {
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
 	# creature weapons
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+	# archaeotech components
+	remove_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden
 
 	# biological weapons
 	remove_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
@@ -105,6 +107,8 @@ ESC_PRESET_disable_all = {
 	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
 	# creature weapons
 	set_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+	# archaeotech components
+	set_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden
 
 	# biological weapons
 	set_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden
@@ -216,6 +220,8 @@ ESC_PRESET_advanced_vanilla = {
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_strikecrafts_forbidden
 	# creature weapons
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
+	# archaeotech components
+	remove_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden
 
 	# biological weapons
 	set_global_flag = ESC_GLOBAL_FLAG_biological_weapons_forbidden

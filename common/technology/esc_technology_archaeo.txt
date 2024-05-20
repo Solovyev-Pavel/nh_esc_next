@@ -36,7 +36,10 @@ esc_tech_archaeo_laser_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -98,7 +101,10 @@ esc_tech_archaeo_laser_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -160,7 +166,10 @@ esc_tech_archaeo_mass_driver_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -222,7 +231,10 @@ esc_tech_archaeo_mass_driver_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -284,7 +296,10 @@ esc_tech_archaeo_mass_accelerator_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -346,7 +361,10 @@ esc_tech_archaeo_mass_accelerator_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -408,7 +426,10 @@ esc_tech_archaeo_missiles_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -470,7 +491,10 @@ esc_tech_archaeo_missiles_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -532,7 +556,10 @@ esc_tech_archaeo_strikecraft_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -594,7 +621,10 @@ esc_tech_archaeo_strikecraft_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -656,7 +686,10 @@ esc_tech_archaeo_point_defense_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -718,7 +751,10 @@ esc_tech_archaeo_point_defense_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -780,7 +816,10 @@ esc_tech_archaeo_titanic_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -842,7 +881,10 @@ esc_tech_archaeo_titanic_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -904,7 +946,10 @@ esc_tech_archaeoarmor_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -966,7 +1011,10 @@ esc_tech_archaeoarmor_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -1028,7 +1076,10 @@ esc_tech_archaeoshield_2 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {
@@ -1090,7 +1141,10 @@ esc_tech_archaeoshield_3 = {
 	is_reverse_engineerable = no
 	ai_update_type = all
 
-	potential = { has_ancrel = yes }
+	potential = {
+		has_ancrel = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden }
+	}
 
 	weight_modifier = {
 		modifier = {

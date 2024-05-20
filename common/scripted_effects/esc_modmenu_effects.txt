@@ -308,6 +308,20 @@ esc_mod_menu_component_creature_disabled_effect = {
 	remove_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden
 }
 
+# archaeotech weapons: state - enabled
+esc_mod_menu_component_archaeotech_enabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_archaeotech_enabled
+	set_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden
+}
+
+# archaeotech weapons: state - disabled
+esc_mod_menu_component_archaeotech_disabled_effect = {
+	optimize_memory
+	custom_tooltip = esc_options_components_archaeotech_disabled
+	remove_global_flag = ESC_GLOBAL_FLAG_archaeotech_forbidden
+}
+
 ############################################################
 
 # reactors: state - enabled
