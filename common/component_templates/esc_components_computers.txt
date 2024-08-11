@@ -38,7 +38,7 @@ utility_component_template = {
 		# Great Khan Expanded
 		@MISC_PirateGalleon @MISC_MarauderGalleon
 		# other...
-		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @WACO_FlotillaShip }
+		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @MISC_Dreadnought_PLR @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = artillery
 	prerequisites = { "esc_tech_dreadnought_computer" }
@@ -175,7 +175,7 @@ utility_component_template = {
 		# Great Khan Expanded
 		@MISC_MarauderCorvette
 		# other...
-		@MISC_Dreadnought_A @MISC_Ultrajuggernaut @WACO_FlotillaShip }
+		@MISC_Dreadnought_A @MISC_Dreadnought_PLR @MISC_Ultrajuggernaut @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = line
 	prerequisites = { "esc_tech_dreadnought_computer" }
@@ -357,7 +357,7 @@ utility_component_template = {
 		# Great Khan Expanded
 		@MISC_PirateCorvette @MISC_PirateGalleon @MISC_MarauderGalleon
 		# other...
-		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @WACO_FlotillaShip }
+		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @MISC_Dreadnought_PLR @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = artillery
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
@@ -494,7 +494,7 @@ utility_component_template = {
 		# Great Khan Expanded
 		@MISC_PirateCorvette @MISC_MarauderCorvette
 		# other...
-		@MISC_Dreadnought_A @MISC_Ultrajuggernaut @WACO_FlotillaShip }
+		@MISC_Dreadnought_A @MISC_Dreadnought_PLR @MISC_Ultrajuggernaut @WACO_FlotillaShip }
 	component_set = "combat_computers"
 	ship_behavior = line
 	prerequisites = { "esc_tech_nanite_thought_matrix" }
