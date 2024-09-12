@@ -16,6 +16,7 @@ country_event = {
 			has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden
 			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics_queued
 			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics
+			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics_accepted
 			has_country_flag = ESC_COUNTRY_FLAG_machine_psionics_declined
 		}
 		ESC_TRIGGER_can_do_machine_psionics_special_project = yes
@@ -47,6 +48,7 @@ country_event = {
 
 	option = {
 		name = esc_special_projects.1001.a
+		set_country_flag = ESC_COUNTRY_FLAG_machine_psionics_accepted
 		capital_scope = {
 			enable_special_project = {
 				name = ESC_MACHINE_EMPIRE_PSIONICS
