@@ -2,53 +2,102 @@
 ##           Component Sets: Biological Weapons           ##
 ############################################################
 
-# bile spitter
+# bile spitter (ships + creatures)
 component_set = {
 	key = ESC_BIO_CANNON_1
 	icon = GFX_esc_bio_cannon_1
 	icon_frame = 1
 }
 
-# vile bile spitter
+component_set = {
+	key = ESC_BIO_CANNON_CREATURE_1
+	icon = GFX_esc_bio_cannon_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# vile bile spitter (ships + creatures)
 component_set = {
 	key = ESC_BIO_CANNON_2
 	icon = GFX_esc_bio_cannon_2
 	icon_frame = 1
 }
 
-# acid spitter
+component_set = {
+	key = ESC_BIO_CANNON_CREATURE_2
+	icon = GFX_esc_bio_cannon_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# acid spitter (ships + creatures)
 component_set = {
 	key = ESC_BIO_CANNON_3
 	icon = GFX_esc_bio_cannon_3
 	icon_frame = 1
 }
 
-# acid erucator
+component_set = {
+	key = ESC_BIO_CANNON_CREATURE_3
+	icon = GFX_esc_bio_cannon_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# acid erucator (ships + creatures)
 component_set = {
 	key = ESC_BIO_CANNON_4
 	icon = GFX_esc_bio_cannon_4
 	icon_frame = 1
 }
 
-# acid blob bomb
+component_set = {
+	key = ESC_BIO_CANNON_CREATURE_4
+	icon = GFX_esc_bio_cannon_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# acid blob bomb (ships + creatures)
 component_set = {
 	key = ESC_BIO_MISSILE_1
 	icon = GFX_esc_bio_missile_1
 	icon_frame = 1
 }
 
-# vile acid blob bomb
+component_set = {
+	key = ESC_BIO_MISSILE_CREATURE_1
+	icon = GFX_esc_bio_missile_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# vile acid blob bomb (ships + creatures)
 component_set = {
 	key = ESC_BIO_MISSILE_2
 	icon = GFX_esc_bio_missile_2
 	icon_frame = 1
 }
 
-# devouring acid blob bomb
+component_set = {
+	key = ESC_BIO_MISSILE_CREATURE_2
+	icon = GFX_esc_bio_missile_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# devouring acid blob bomb (ships + creatures)
 component_set = {
 	key = ESC_BIO_MISSILE_3
 	icon = GFX_esc_bio_missile_3
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_MISSILE_CREATURE_3
+	icon = GFX_esc_bio_missile_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # acid blob barrage

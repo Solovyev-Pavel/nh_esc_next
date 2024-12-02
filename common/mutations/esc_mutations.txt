@@ -1,0 +1,117 @@
+############################################################
+##         ESC : Biological Weapons : Space Fauna         ##
+############################################################
+
+# Bile Spitter
+esc_bio_cannon_creature_1 = {
+	type = offensive
+	icon = GFX_esc_bio_cannon_1
+	ship_components = {
+		small = SMALL_ESC_BIO_CANNON_CREATURE_1
+		medium = MEDIUM_ESC_BIO_CANNON_CREATURE_1
+		large = LARGE_ESC_BIO_CANNON_CREATURE_1
+		extra_large = XL_ESC_BIO_CANNON_CREATURE_1
+	}
+	upgrades_to = "esc_bio_cannon_creature_2"
+}
+
+# Vile Bile Spitter
+esc_bio_cannon_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_cannon_2
+	ship_components = {
+		small = SMALL_ESC_BIO_CANNON_CREATURE_2
+		medium = MEDIUM_ESC_BIO_CANNON_CREATURE_2
+		large = LARGE_ESC_BIO_CANNON_CREATURE_2
+		extra_large = XL_ESC_BIO_CANNON_CREATURE_2
+	}
+	upgrades_to = "esc_bio_cannon_creature_3"
+}
+
+# Acid Spitter
+esc_bio_cannon_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_cannon_3
+	ship_components = {
+		small = SMALL_ESC_BIO_CANNON_CREATURE_3
+		medium = MEDIUM_ESC_BIO_CANNON_CREATURE_3
+		large = LARGE_ESC_BIO_CANNON_CREATURE_3
+		extra_large = XL_ESC_BIO_CANNON_CREATURE_3
+	}
+	upgrades_to = "esc_bio_cannon_creature_4"
+}
+
+# Acid Erucator
+esc_bio_cannon_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_cannon_4
+	ship_components = {
+		small = SMALL_ESC_BIO_CANNON_CREATURE_4
+		medium = MEDIUM_ESC_BIO_CANNON_CREATURE_4
+		large = LARGE_ESC_BIO_CANNON_CREATURE_4
+		extra_large = XL_ESC_BIO_CANNON_CREATURE_4
+	}
+}
+
+# Acid Blob Bomb
+esc_bio_missile_creature_1 = {
+	type = offensive
+	icon = GFX_esc_bio_missile_1
+	ship_components = {
+		small = SMALL_ESC_BIO_MISSILE_CREATURE_1
+		medium = MEDIUM_ESC_BIO_MISSILE_CREATURE_1
+		large = LARGE_ESC_BIO_MISSILE_CREATURE_1
+		extra_large = XL_ESC_BIO_MISSILE_CREATURE_1
+	}
+	upgrades_to = "esc_bio_missile_creature_2"
+}
+
+# Vile Acid Blob Bomb
+esc_bio_missile_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_missile_2
+	ship_components = {
+		small = SMALL_ESC_BIO_MISSILE_CREATURE_2
+		medium = MEDIUM_ESC_BIO_MISSILE_CREATURE_2
+		large = LARGE_ESC_BIO_MISSILE_CREATURE_2
+		extra_large = XL_ESC_BIO_MISSILE_CREATURE_2
+	}
+	upgrades_to = "esc_bio_missile_creature_3"
+}
+
+# Devouring Acid Blob Bomb
+esc_bio_missile_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_missile_3
+	ship_components = {
+		small = SMALL_ESC_BIO_MISSILE_CREATURE_3
+		medium = MEDIUM_ESC_BIO_MISSILE_CREATURE_3
+		large = LARGE_ESC_BIO_MISSILE_CREATURE_3
+		extra_large = XL_ESC_BIO_MISSILE_CREATURE_3
+	}
+}
+
+# bio-material armor
+esc_bio_armor_creature_1 = {
+	type = defensive
+	icon = GFX_esc_bio_armor_1
+	ship_components = {
+		small = SMALL_ESC_BIO_ARMOR_CREATURE_1
+		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_1
+		large = LARGE_ESC_BIO_ARMOR_CREATURE_1
+		extra_large = XL_ESC_BIO_ARMOR_CREATURE_1
+	}
+	upgrades_to = "esc_bio_armor_creature_2"
+}
+
+# improved bio-material armor
+esc_bio_armor_creature_2 = {
+	type = defensive
+	icon = GFX_esc_bio_armor_2
+	ship_components = {
+		small = SMALL_ESC_BIO_ARMOR_CREATURE_2
+		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_2
+		large = LARGE_ESC_BIO_ARMOR_CREATURE_2
+		extra_large = XL_ESC_BIO_ARMOR_CREATURE_2
+	}
+}

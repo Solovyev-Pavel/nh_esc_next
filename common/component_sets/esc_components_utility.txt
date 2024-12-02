@@ -16,18 +16,32 @@ component_set = {
 	icon_frame = 1
 }
 
-# bio-material armor
+# bio-material armor (ships + creatures)
 component_set = {
 	key = ESC_BIO_ARMOR_1
 	icon = GFX_esc_bio_armor_1
 	icon_frame = 1
 }
 
-# improved bio-material armor
+component_set = {
+	key = ESC_BIO_ARMOR_CREATURE_1
+	icon = GFX_esc_bio_armor_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# improved bio-material armor (ships + creatures)
 component_set = {
 	key = ESC_BIO_ARMOR_2
 	icon = GFX_esc_bio_armor_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ARMOR_CREATURE_2
+	icon = GFX_esc_bio_armor_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # nanomaterial armor
