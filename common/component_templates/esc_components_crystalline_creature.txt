@@ -1,0 +1,1441 @@
+############################################################
+##        ESC : Crystalline Weapons : Space Fauna         ##
+############################################################
+
+# - Crystal Shard Thrower 				S/M/L/X
+# - Improved Crystal Shard Thrower		S/M/L/X
+# - Crystal Spike Thrower				S/M/L/X
+# - Improved Crystal Spike Thrower		S/M/L/X
+# - Crystal Spear Cannon				S/M/L/X
+
+@ESC_WEAPON_crystalline_hull_damage = 1.0
+@ESC_WEAPON_crystalline_armor_damage = 1.0
+@ESC_WEAPON_crystalline_armor_penetration = 0.0
+@ESC_WEAPON_crystalline_shields_damage = 1.0
+@ESC_WEAPON_crystalline_shields_penetration = 0.0
+
+
+############################################################
+##                 Crystal Shard Thrower                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_CREATURE_1
+	size = small
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 8 max = 20 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_s_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t3_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_s_t3_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
+	projectile_gfx = red_crystal_ship_projectile
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_1
+	size = medium
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 50 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_m_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t3_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_m_t3_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_CREATURE_1
+	size = large
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 50 max = 120 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t3_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CRYSTAL_CANNON_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 98 max = 240 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t3_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t3_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_crystal_cannon_1" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##             Improved Crystal Shard Thrower             ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_CREATURE_2
+	size = small
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 32 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_s_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t4_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_s_t4_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_2
+	size = medium
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 27 max = 78 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_m_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t4_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_m_t4_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_CREATURE_2
+	size = large
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 58 max = 190 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t4_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CRYSTAL_CANNON_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 118 max = 356 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t4_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t4_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_crystal_cannon_2" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
+	projectile_gfx = "red_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Crystal Spike Thrower                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_CREATURE_3
+	size = small
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 14 max = 44 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_s_t5_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_s_t5_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_3
+	size = medium
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 42 max = 86 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_m_t5_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t5_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_m_t5_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_CREATURE_3
+	size = large
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 88 max = 220 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t5_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t5_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CRYSTAL_CANNON_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 174 max = 428 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t5_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t5_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_crystal_cannon_3" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##             Improved Crystal Spike Thrower             ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_CREATURE_4
+	size = small
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 18 max = 47 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_s_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t6_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_s_t6_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_4
+	size = medium
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 52 max = 108 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_m_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t6_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_m_t6_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_CREATURE_4
+	size = large
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 118 max = 238 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t6_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CRYSTAL_CANNON_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 226 max = 472 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t6_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t6_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_crystal_cannon_4" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
+	projectile_gfx = "crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Crystal Spear Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CRYSTAL_CANNON_CREATURE_5
+	size = small
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 22 max = 58 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_s_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_s_t7_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_s_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic s_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_5
+	size = medium
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 72 max = 162 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_m_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_m_t7_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_m_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic m_slot }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CRYSTAL_CANNON_CREATURE_5
+	size = large
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 154 max = 326 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t7_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic l_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CRYSTAL_CANNON_CREATURE_5
+	size = extra_large
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 336 max = 648 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @ESC_WEAPON_crystalline_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_crystalline_l_t7_cost_crystals
+		}
+		upkeep = {
+			minerals = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_crystal_cannon_5" }
+	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
+	projectile_gfx = "green_crystal_ship_projectile"
+	size_restriction = {
+		# only crystalline entities can equip this
+		crystal_ship_small_blue crystal_ship_small_blue_elite
+		crystal_ship_medium_blue crystal_ship_medium_blue_elite
+		crystal_ship_large_blue crystal_ship_large_blue_elite
+		crystal_ship_small_green crystal_ship_small_green_elite
+		crystal_ship_medium_green crystal_ship_medium_green_elite
+		crystal_ship_large_green crystal_ship_large_green_elite
+		crystal_ship_small_red crystal_ship_small_red_elite
+		crystal_ship_medium_red crystal_ship_medium_red_elite
+		crystal_ship_large_red crystal_ship_large_red_elite
+		crystal_ship_small_yellow crystal_ship_small_yellow_elite
+		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
+		crystal_ship_large_yellow crystal_ship_large_yellow_elite
+		crystal_splitter_ship_large_blue crystal_station_large
+	}
+	tags = { weapon_type_kinetic x_slot }
+	ai_tags = { weapon_role_anti_shield artillery }
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

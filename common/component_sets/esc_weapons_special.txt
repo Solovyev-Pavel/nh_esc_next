@@ -132,39 +132,74 @@ component_set = {
 ##          Component Sets: Crystalline Weapons           ##
 ############################################################
 
-# crystal shard thrower
+# crystal shard thrower (ships + creatures)
 component_set = {
 	key = ESC_CRYSTAL_CANNON_1
 	icon = GFX_esc_crystal_cannon_1
 	icon_frame = 1
 }
 
-# improved crystal shard thrower
+component_set = {
+	key = ESC_CRYSTAL_CANNON_CREATURE_1
+	icon = GFX_esc_crystal_cannon_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# improved crystal shard thrower (ships + creatures)
 component_set = {
 	key = ESC_CRYSTAL_CANNON_2
 	icon = GFX_esc_crystal_cannon_2
 	icon_frame = 1
 }
 
-# crystal spike thrower
+component_set = {
+	key = ESC_CRYSTAL_CANNON_CREATURE_2
+	icon = GFX_esc_crystal_cannon_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# crystal spike thrower (ships + creatures)
 component_set = {
 	key = ESC_CRYSTAL_CANNON_3
 	icon = GFX_esc_crystal_cannon_3
 	icon_frame = 1
 }
 
-# improved crystal spike thrower
+component_set = {
+	key = ESC_CRYSTAL_CANNON_CREATURE_3
+	icon = GFX_esc_crystal_cannon_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# improved crystal spike thrower (ships + creatures)
 component_set = {
 	key = ESC_CRYSTAL_CANNON_4
 	icon = GFX_esc_crystal_cannon_4
 	icon_frame = 1
 }
 
-# crystal spear cannon
+component_set = {
+	key = ESC_CRYSTAL_CANNON_CREATURE_4
+	icon = GFX_esc_crystal_cannon_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# crystal spear cannon (ships + creatures)
 component_set = {
 	key = ESC_CRYSTAL_CANNON_5
 	icon = GFX_esc_crystal_cannon_5
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CRYSTAL_CANNON_CREATURE_5
+	icon = GFX_esc_crystal_cannon_5
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # crystal javelin thrower

@@ -1,5 +1,5 @@
 ############################################################
-##         ESC : Biological Weapons : Space Fauna         ##
+##       ESC : Biological Components : Space Fauna        ##
 ############################################################
 
 # Bile Spitter
@@ -113,5 +113,73 @@ esc_bio_armor_creature_2 = {
 		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_2
 		large = LARGE_ESC_BIO_ARMOR_CREATURE_2
 		extra_large = XL_ESC_BIO_ARMOR_CREATURE_2
+	}
+}
+
+############################################################
+##        ESC : Crystalline Weapons : Space Fauna         ##
+############################################################
+
+# Crystal Shard Thrower
+esc_crystal_cannon_creature_1 = {
+	type = offensive
+	icon = GFX_esc_crystal_cannon_1
+	ship_components = {
+		small = SMALL_ESC_CRYSTAL_CANNON_CREATURE_1
+		medium = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_1
+		large = LARGE_ESC_CRYSTAL_CANNON_CREATURE_1
+		extra_large = XL_ESC_CRYSTAL_CANNON_CREATURE_1
+	}
+	upgrades_to = "esc_crystal_cannon_creature_2"
+}
+
+# Improved Crystal Shard Thrower
+esc_crystal_cannon_creature_2 = {
+	type = offensive
+	icon = GFX_esc_crystal_cannon_2
+	ship_components = {
+		small = SMALL_ESC_CRYSTAL_CANNON_CREATURE_2
+		medium = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_2
+		large = LARGE_ESC_CRYSTAL_CANNON_CREATURE_2
+		extra_large = XL_ESC_CRYSTAL_CANNON_CREATURE_2
+	}
+	upgrades_to = "esc_crystal_cannon_creature_3"
+}
+
+# Crystal Spike Thrower
+esc_crystal_cannon_creature_3 = {
+	type = offensive
+	icon = GFX_esc_crystal_cannon_3
+	ship_components = {
+		small = SMALL_ESC_CRYSTAL_CANNON_CREATURE_3
+		medium = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_3
+		large = LARGE_ESC_CRYSTAL_CANNON_CREATURE_3
+		extra_large = XL_ESC_CRYSTAL_CANNON_CREATURE_3
+	}
+	upgrades_to = "esc_crystal_cannon_creature_4"
+}
+
+# Improved Crystal Spike Thrower
+esc_crystal_cannon_creature_4 = {
+	type = offensive
+	icon = GFX_esc_crystal_cannon_4
+	ship_components = {
+		small = SMALL_ESC_CRYSTAL_CANNON_CREATURE_4
+		medium = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_4
+		large = LARGE_ESC_CRYSTAL_CANNON_CREATURE_4
+		extra_large = XL_ESC_CRYSTAL_CANNON_CREATURE_4
+	}
+	upgrades_to = "esc_crystal_cannon_creature_5"
+}
+
+# Crystal Spear Cannon
+esc_crystal_cannon_creature_5 = {
+	type = offensive
+	icon = GFX_esc_crystal_cannon_5
+	ship_components = {
+		small = SMALL_ESC_CRYSTAL_CANNON_CREATURE_5
+		medium = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_5
+		large = LARGE_ESC_CRYSTAL_CANNON_CREATURE_5
+		extra_large = XL_ESC_CRYSTAL_CANNON_CREATURE_5
 	}
 }
