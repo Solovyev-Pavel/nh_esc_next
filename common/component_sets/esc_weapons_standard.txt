@@ -65,18 +65,32 @@ component_set = {
 	icon_frame = 1
 }
 
-# amplified cloud lightning
+# amplified cloud lightning (ships + creatures)
 component_set = {
 	key = ESC_CLOUD_LIGHTNING_2
 	icon = GFX_esc_cloud_lightning_2
 	icon_frame = 1
 }
 
-# thunderstorm generator
+component_set = {
+	key = ESC_CLOUD_LIGHTNING_CREATURE_2
+	icon = GFX_esc_cloud_lightning_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# thunderstorm generator (ships + creatures)
 component_set = {
 	key = ESC_CLOUD_LIGHTNING_3
 	icon = GFX_esc_cloud_lightning_3
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CLOUD_LIGHTNING_CREATURE_3
+	icon = GFX_esc_cloud_lightning_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # plasma cutter
@@ -85,6 +99,7 @@ component_set = {
 	icon = GFX_esc_mining_laser_2
 	icon_frame = 1
 }
+
 # advanced plasma cutter
 component_set = {
 	key = ESC_MINING_LASER_3

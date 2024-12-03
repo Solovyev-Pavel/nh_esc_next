@@ -1,0 +1,393 @@
+############################################################
+##           ESC : Energy Weapons : Space Fauna           ##
+############################################################
+
+# - Amplified Cloud Lightning		S/M/L/X
+# - Thunderstorm Generator			S/M/L/X
+
+@ESC_WEAPON_lightning_hull_damage_2 = 1.0
+@ESC_WEAPON_lightning_hull_damage_3 = 1.15
+@ESC_WEAPON_lightning_armor_damage = 1.0
+@ESC_WEAPON_lightning_armor_penetration = 1.0
+@ESC_WEAPON_lightning_shield_damage = 1.0
+@ESC_WEAPON_lightning_shield_penetration = 1.0
+
+############################################################
+##               Amplified Cloud Lightning                ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_2
+	size = small
+	icon = GFX_esc_cloud_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 54 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_M_5
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t6_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_s_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_2" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+	upgrades_to = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_2
+	size = medium
+	icon = GFX_esc_cloud_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 92 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t6_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_m_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_2" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+	upgrades_to = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_2
+	size = large
+	icon = GFX_esc_cloud_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 176 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_2" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+	upgrades_to = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CLOUD_LIGHTNING_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_cloud_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 40 max = 352 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_l_t6_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_2" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+	upgrades_to = XL_ESC_CLOUD_LIGHTNING_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                 Thunderstorm Generator                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_3
+	size = small
+	icon = GFX_esc_cloud_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 76 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_M_5
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t7_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_s_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_3" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_3
+	size = medium
+	icon = GFX_esc_cloud_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 138 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t7_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_m_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_3" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_3
+	size = large
+	icon = GFX_esc_cloud_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 256 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t7_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_3" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CLOUD_LIGHTNING_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_cloud_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 80 max = 506 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t7_cost_alloys
+		}
+		upkeep = {
+			food = @ESC_WEAPON_l_t7_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
+	armor_penetration = @ESC_WEAPON_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_cloud_lightning_3" }
+	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_hull }
+	ai_tag_weight = 5
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
