@@ -2,6 +2,8 @@
 ###                       Sensors                        ###
 ############################################################
 
+@NSC_TITAN_AURA = "nsc_titan_aura"
+
 ### Advanced Tachyon Sensors
 utility_component_template = {
 	key = ESC_SENSOR_5
@@ -487,7 +489,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -300
 
-	component_set = "nsc_titan_aura"
+	component_set = @NSC_TITAN_AURA
 	prerequisites = { esc_tech_aura_mirage_system }
 
 	hostile_aura = {
@@ -529,7 +531,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -300
 
-	component_set = "nsc_titan_aura"
+	component_set = @NSC_TITAN_AURA
 	prerequisites = { tech_titans } # FIXME
 
 	hostile_aura = {
@@ -640,7 +642,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -300
 
-	component_set = "nsc_titan_aura"
+	component_set = @NSC_TITAN_AURA
 	prerequisites = { esc_tech_aura_nanite_swarm }
 
 	hostile_aura = {
@@ -726,7 +728,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = -300
 
-	component_set = "nsc_titan_aura"
+	component_set = @NSC_TITAN_AURA
 	prerequisites = { esc_tech_aura_space_distortion }
 
 	hostile_aura = {
