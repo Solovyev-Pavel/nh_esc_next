@@ -664,3 +664,109 @@ utility_component_template = {
 		}
 	}
 }
+
+# dead hand switch : kill command
+utility_component_template = {
+	key = ESC_AUX_DEAD_HAND_KILL_CMD_1
+	size = aux
+	icon = GFX_esc_dead_hand_kill_1
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+
+	ship_modifier = {
+		damage_random_nearby_enemy_on_death = 0.25
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_kill_1" }
+	component_set = ESC_AUX_DEAD_HAND_KILL_CMD_1
+	upgrades_to = ESC_AUX_DEAD_HAND_KILL_CMD_2
+
+	ai_weight = { weight = 5 }
+}
+
+# dead hand switch : annihilate command
+utility_component_template = {
+	key = ESC_AUX_DEAD_HAND_KILL_CMD_2
+	size = aux
+	icon = GFX_esc_dead_hand_kill_2
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+
+	ship_modifier = {
+		esc_damage_enemy_ship_on_death = 0.50
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_kill_2" }
+	component_set = ESC_AUX_DEAD_HAND_KILL_CMD_2
+
+	ai_weight = { weight = 5 }
+}
+
+# dead hand switch : repair ally command
+utility_component_template = {
+	key = ESC_AUX_DEAD_HAND_HEAL_CMD_1
+	size = aux
+	icon = GFX_esc_dead_hand_heal_1
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+
+	ship_modifier = {
+		esc_repair_allied_ship_on_death = 0.25
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_heal_1" }
+	component_set = ESC_AUX_DEAD_HAND_HEAL_CMD_1
+	upgrades_to = ESC_AUX_DEAD_HAND_HEAL_CMD_2
+
+	ai_weight = { weight = 5 }
+}
+
+# dead hand switch : support ally command
+utility_component_template = {
+	key = ESC_AUX_DEAD_HAND_HEAL_CMD_2
+	size = aux
+	icon = GFX_esc_dead_hand_heal_2
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+
+	ship_modifier = {
+		esc_repair_allied_ship_on_death = 0.5
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_heal_2" }
+	component_set = ESC_AUX_DEAD_HAND_HEAL_CMD_2
+
+	ai_weight = { weight = 5 }
+}

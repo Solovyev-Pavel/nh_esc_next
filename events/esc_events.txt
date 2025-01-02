@@ -382,6 +382,100 @@ country_event = {
 	}
 }
 
+
+## ##################################################### ##
+##               Component-related events                ##
+## ##################################################### ##
+
+# repair random allied ship on death
+country_event = {
+	id = esc_events.6001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = local_heal_value
+			value = fromfrom.value:scripted_modifier_add|MODIFIER|esc_repair_allied_ship_on_death|
+		}
+		if = {
+			limit = { check_variable = { which = local_heal_value value > 0 } }
+
+			fromfrom.fleet = {
+				random_controlled_ship = {
+					limit = {
+						NOT = { is_same_value = fromfrom }
+						has_hp_percentage < 1.0
+					}
+					repair_percentage = root.local_heal_value
+					repair_armor_percentage = root.local_heal_value
+				}
+			}
+		}
+
+		#log = "ESC TEST LOG: On-death ally healing activated!"
+	}
+}
+
+# famage random enemy ship on death
+country_event = {
+	id = esc_events.6002
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		set_variable = {
+			which = local_damage_percentage
+			value = fromfrom.value:scripted_modifier_add|MODIFIER|esc_damage_enemy_ship_on_death|
+		}
+		if = {
+			limit = {
+				check_variable = { which = local_damage_percentage value > 0 }
+			}
+			fromfrom.solar_system = {
+				random_ship_in_system = {
+					limit = {
+						owner = {
+							is_same_value = root.from
+						}
+						distance = {
+							source = root.fromfrom
+							max_distance <= 45
+							same_solar_system = yes
+						}
+					}
+
+					root.fromfrom = {
+						export_trigger_value_to_variable = {
+							trigger = has_max_hp
+							variable = local_max_hp
+						}
+						export_trigger_value_to_variable = {
+							trigger = has_max_armor_hp
+							variable = local_max_armor_hp
+						}
+					}
+					change_variable = {
+						which = local_damage_value
+						value = local_max_hp
+					}
+					change_variable = {
+						which = local_damage_value
+						value = local_max_armor_hp
+					}
+					multiply_variable = {
+						which = local_damage_value
+						value = local_damage_percentage
+					}
+					damage_ship = local_damage_value
+				}
+			}
+		}
+
+		#log = "ESC TEST LOG: On-death enemy damage activated!"
+	}
+}
+
 ## ##################################################### ##
 ##   TEST: Grant access to all weapon types to empire    ##
 ## ##################################################### ##

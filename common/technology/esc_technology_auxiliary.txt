@@ -20,6 +20,10 @@
 # ── Living Absorption Plating					: auxiliary component for armor hardening
 # ── Citadel Shield Hardener					: auxiliary component for shield hardening
 # ── Shroud-Enhanced Shield Hardener			: auxiliary component for shield hardening
+# ── Dead Hand Switch: Kill Command				: tier 1 damaging self-destruct
+#     └─ Dead Hand Switch: Annihilate Command	: tier 2 damaging self-destruct
+# ── Dead Hand Switch: Repair Command			: tier 1 repairing self-destruct
+#     └─ Dead Hand Switch: Support Command		: tier 2 repairing self-destruct
 
 ############################################################
 ##            Advanced Fire Control Systems               ##
@@ -758,5 +762,101 @@ esc_tech_shield_hardening_psi_2 = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
 		}
+	}
+}
+
+############################################################
+##            Dead Hand Switch: Kill Command              ##
+############################################################
+
+esc_tech_dead_hand_switch_kill_1 = {
+	area = society
+	category = { military_theory }
+	tier = 2
+	cost = @tier2cost2
+	weight = @tier2cost2
+	ai_update_type = all
+	prerequisites = { "tech_interstellar_fleet_traditions" }
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+	}
+}
+
+############################################################
+##         Dead Hand Switch: Annihilate Command           ##
+############################################################
+
+esc_tech_dead_hand_switch_kill_2 = {
+	area = society
+	category = { military_theory }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = all
+	prerequisites = { "esc_tech_dead_hand_switch_kill_1" "esc_tech_new_age_warfare" }
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+	}
+}
+
+############################################################
+##        Dead Hand Switch: Repair Allies Command         ##
+############################################################
+
+esc_tech_dead_hand_switch_heal_1 = {
+	area = society
+	category = { military_theory }
+	tier = 2
+	cost = @tier2cost2
+	weight = @tier2cost2
+	ai_update_type = all
+	prerequisites = { "tech_interstellar_fleet_traditions" }
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+	}
+}
+
+############################################################
+##       Dead Hand Switch: Support Allies Command         ##
+############################################################
+
+esc_tech_dead_hand_switch_heal_2 = {
+	area = society
+	category = { military_theory }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = all
+	prerequisites = { "esc_tech_dead_hand_switch_heal_1" "esc_tech_new_age_warfare" }
+
+	potential = {
+		NOT = {
+			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
 	}
 }

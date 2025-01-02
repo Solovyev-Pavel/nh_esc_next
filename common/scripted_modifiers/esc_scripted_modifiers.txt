@@ -1,0 +1,17 @@
+############################################################
+###                 ESC Scripted Modifiers               ###
+############################################################
+
+esc_repair_allied_ship_on_death = {
+	icon = mod_component_lifesteal_add
+	good = yes
+	percentage = yes
+	category = ship
+}
+
+esc_damage_enemy_ship_on_death = {
+	icon = mod_space_fauna_ship_damage_mult
+	good = yes
+	percentage = yes
+	category = ship
+}

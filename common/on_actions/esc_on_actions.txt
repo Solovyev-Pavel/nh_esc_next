@@ -70,6 +70,13 @@ on_ship_destroyed_perp = {
 	}
 }
 
+on_ship_destroyed_victim = {
+	events = {
+		esc_events.6001						# repair allied ship on death
+		esc_events.6002						# damage enemy ship on death
+	}
+}
+
 on_fleet_destroyed_perp = {
 	events = {
 		esc_action_tracking.2000 			# special project to 'reverse-engineer' nanite thought matrix combat computer
