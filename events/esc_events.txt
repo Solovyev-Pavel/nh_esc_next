@@ -382,7 +382,6 @@ country_event = {
 	}
 }
 
-
 ## ##################################################### ##
 ##               Component-related events                ##
 ## ##################################################### ##
@@ -411,13 +410,13 @@ country_event = {
 					repair_armor_percentage = root.local_heal_value
 				}
 			}
-		}
 
-		#log = "ESC TEST LOG: On-death ally healing activated!"
+			#log = "ESC TEST LOG: On-death ally healing activated!"
+		}
 	}
 }
 
-# famage random enemy ship on death
+# damage every enemy ship on death
 country_event = {
 	id = esc_events.6002
 	hide_window = yes
@@ -433,14 +432,14 @@ country_event = {
 				check_variable = { which = local_damage_percentage value > 0 }
 			}
 			fromfrom.solar_system = {
-				random_ship_in_system = {
+				every_ship_in_system = {
 					limit = {
 						owner = {
 							is_same_value = root.from
 						}
 						distance = {
 							source = root.fromfrom
-							max_distance <= 45
+							max_distance <= 30
 							same_solar_system = yes
 						}
 					}
@@ -470,9 +469,9 @@ country_event = {
 					damage_ship = local_damage_value
 				}
 			}
-		}
 
-		#log = "ESC TEST LOG: On-death enemy damage activated!"
+			#log = "ESC TEST LOG: On-death enemy damage activated!"
+		}
 	}
 }
 
