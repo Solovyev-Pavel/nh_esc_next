@@ -4,6 +4,7 @@
 
 # ── Nanite Cannon									: tier 1 nanite cannon
 #     └─ Improved Nanite Cannon						: tier 2 nanite cannon
+# ── Nanite Reconstruction Beam						: special weapon
 # ── Nanite Warhead Torpedo							: tier 1 nanite torpedo
 #     └─ Gray Goo Torpedo							: tier 2 nanite torpedo
 #         └─ Nanite Warhead Missile Launcher		: tier 1 nanile XL weapon
@@ -60,6 +61,81 @@ esc_tech_nanite_cannon_1 = {
 ############################################################
 
 esc_tech_nanite_cannon_2 = {
+	area = society
+	category = { materials }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_nanite_cannon_1" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_nanite_cannon_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_nanite_cannon_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##                Nanite Reconstruction Beam              ##
+############################################################
+
+esc_tech_nanite_reconstructor = {
 	area = society
 	category = { materials }
 	tier = 5
