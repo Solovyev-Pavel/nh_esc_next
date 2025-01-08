@@ -1,0 +1,23 @@
+### inline for colossi and similar ships' thrusters
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+	}
+}
+
+modifier = {
+	ship_base_speed_mult = $SPEED_MULTIPLIER$
+	ship_evasion_add = $EVASION_MODIFIER$
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla ship classes
+	colossus star_eater juggernaut
+	# other ship classes...
+	@MISC_WarJuggernaut }
+component_set = "thruster_components"

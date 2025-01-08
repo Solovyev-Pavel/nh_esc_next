@@ -1,0 +1,23 @@
+### inline for destroyer thrusters
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+	}
+}
+
+modifier = {
+	ship_base_speed_mult = $SPEED_MULTIPLIER$
+	ship_evasion_add = $EVASION_MODIFIER$
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla ship sizes
+	destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer
+	# other ship sizes
+	@VSE_Artemis @VSE_ATT @VSE_Conquistador @MISC_PirateCorvette }
+component_set = "thruster_components"

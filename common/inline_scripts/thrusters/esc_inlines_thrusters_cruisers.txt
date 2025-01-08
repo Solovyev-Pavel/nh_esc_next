@@ -1,0 +1,29 @@
+### inline for cruiser thrusters
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+	}
+}
+
+modifier = {
+	ship_base_speed_mult = $SPEED_MULTIPLIER$
+	ship_evasion_add = $EVASION_MODIFIER$
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla ship classes
+	cruiser crisis_cruiser offspring_cruiser
+	# Deadly tempest
+	graygoo_interdictor
+	# Realistic ships : cruisers
+	@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
+	# Playable fallen empire ships
+	@PFE_Escort
+	# Great Khan Expanded
+	@MISC_MarauderCorvette }
+component_set = "thruster_components"
