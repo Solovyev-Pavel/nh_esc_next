@@ -1,0 +1,28 @@
+### inline for titan reactors
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		sr_dark_matter = $DARK_MATTER_COST$
+		sr_zro = $ZRO_COST$
+	}
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla ship classes
+	titan cosmo_crisis_titan payback_warship
+	# Deadly tempest
+	graygoo_mothership
+	# Playable fallen empire ships
+	@PFE_Titan
+	# Great Khan Expanded
+	@MISC_PirateGalleon @MISC_MarauderGalleon }
+component_set = "power_core"

@@ -8,30 +8,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_corvette
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_corvette
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_corvette
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_corvette
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_corvettes
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_corvette
+		ALLOY_COST = @ESC_REACTOR_t6_cost_corvette
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_corvette
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_corvette
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		corvette frigate colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport crisis_corvette offspring_corvette nanite_swarmer gravity_snare
-		# WACO ships
-		@WACO_FlotillaShip @WACO_EmergencyShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
-	component_set = "power_core"
 	upgrades_to = CORVETTE_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -41,24 +30,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_destroyer
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_destroyer
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_destroyer
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_destroyer
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_destroyers
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_destroyer
+		ALLOY_COST = @ESC_REACTOR_t6_cost_destroyer
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_destroyer
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_destroyer
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
-	component_set = "power_core"
 	upgrades_to = DESTROYER_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -68,17 +52,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_cruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_cruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_cruiser
+		ALLOY_COST = @ESC_REACTOR_t6_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_cruiser
 	}
 
 	# enabled when NSC is not active
@@ -86,15 +69,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -104,17 +79,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_cruiser_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_cruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_cruiser_nsc
+		ALLOY_COST = @ESC_REACTOR_t6_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_cruiser
 	}
 
 	# enabled when NSC is active
@@ -122,15 +96,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_REACTOR_7_NSC
-
 	ai_weight = { weight = 6 }
 }
 
@@ -140,17 +106,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_battleship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_battleship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t6_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_battleship
+		ALLOY_COST = @ESC_REACTOR_t6_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_battleship
 	}
 
 	# enabled when NSC is not active
@@ -158,23 +123,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 	upgrades_to = BATTLESHIP_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -184,17 +133,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_battleship_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_battleship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t6_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_battleship_nsc
+		ALLOY_COST = @ESC_REACTOR_t6_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_battleship
 	}
 
 	# enabled when NSC is active
@@ -202,23 +150,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 	upgrades_to = BATTLESHIP_ESC_REACTOR_NSC_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -228,17 +160,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_titan
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_titan
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_titan
+		ALLOY_COST = @ESC_REACTOR_t6_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_titan
 	}
 
 	# enabled when NSC is not active
@@ -246,19 +177,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 	upgrades_to = TITAN_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -268,17 +187,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_titan_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_titan
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_titan_nsc
+		ALLOY_COST = @ESC_REACTOR_t6_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_titan
 	}
 
 	# enabled when NSC is active
@@ -286,19 +204,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 	upgrades_to = TITAN_ESC_REACTOR_NSC_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -308,17 +214,14 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_power_colossus
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_colossi
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_power_colossus
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = { colossus star_eater }
-	component_set = "power_core"
 	upgrades_to = COLOSSUS_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -328,34 +231,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_strikecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_strikecruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_strikecruiser
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_strikecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_strikecruisers
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_strikecruiser
+		ALLOY_COST = @ESC_REACTOR_t6_cost_strikecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_strikecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_strikecruiser
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_strike_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette  }
-	component_set = "power_core"
 	upgrades_to = STRIKECRUISER_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -365,28 +253,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_battlecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_battlecruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_battlecruiser
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_battlecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battlecruisers
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_battlecruiser
+		ALLOY_COST = @ESC_REACTOR_t6_cost_battlecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_battlecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_battlecruiser
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_battle_cruiser
-		# NSC ships
-		@NSC_BattleCruiser @NSC_ExplorationShip }
-	component_set = "power_core"
 	upgrades_to = BATTLECRUISER_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -396,28 +275,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_carrier
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_carrier
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_carrier
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_carrier
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_carriers
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_carrier
+		ALLOY_COST = @ESC_REACTOR_t6_cost_carrier
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_carrier
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_carrier
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_carrier
-		# NSC ships
-		@NSC_Carrier }
-	component_set = "power_core"
 	upgrades_to = CARRIER_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -427,30 +297,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_dreadnought
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_dreadnought
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_dreadnoughts
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_dreadnought
+		ALLOY_COST = @ESC_REACTOR_t6_cost_dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_dreadnought
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_dreadnought
-		# NSC ships
-		@NSC_Dreadnought
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
-	component_set = "power_core"
 	upgrades_to = DREADNOUGHT_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -460,30 +319,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_flagship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_flagship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_flagship
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_flagship
+		ALLOY_COST = @ESC_REACTOR_t6_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_flagship
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_flagship
-		# NSC ships
-		@NSC_Flagship @Freebooters_Flagship
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "power_core"
 	upgrades_to = FLAGSHIP_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -493,28 +341,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_SCX_Dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_SCX_Dreadnought
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_SCX_Dreadnought
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_SCX_Dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_scx_dreadnought
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_SCX_Dreadnought
+		ALLOY_COST = @ESC_REACTOR_t6_cost_SCX_Dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_SCX_Dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_SCX_Dreadnought
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_scx_dreadnought
-		# SCX ships
-		@SCX_Dreadnought }
-	component_set = "power_core"
 	upgrades_to = SCX_DREADNOUGHT_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -524,25 +363,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_platform
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_platform
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_platform
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_platform
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_1
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_platform
+		ALLOY_COST = @ESC_REACTOR_t6_cost_platform
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_platform
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_platform
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_small }
-	component_set = "power_core"
 	upgrades_to = PLATFORM_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -552,25 +385,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_platform2
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_2
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t6_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_platform2
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium @MISC_DF_Medium }
-	component_set = "power_core"
 	upgrades_to = PLATFORM2_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -580,29 +407,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_platform3
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_platform3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_platform3
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_platform3
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_3
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_platform3
+		ALLOY_COST = @ESC_REACTOR_t6_cost_platform3
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_platform3
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_platform3
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# vanilla ship size
-		military_station_large
-		# Other military platforms
-		@EAC_Platform @MISC_DF_Large }
-	component_set = "power_core"
 	upgrades_to = PLATFORM3_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -612,29 +429,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_xlcannon
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_xlcannon
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_xlcannon
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_xlcannon
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_xl
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_xlcannon
+		ALLOY_COST = @ESC_REACTOR_t6_cost_xlcannon
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_xlcannon
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_xlcannon
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_military_platform
-		# NSC ships
-		@NSC_AnnihilatorCannon }
-	component_set = "power_core"
 	upgrades_to = XLCANNON_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -644,24 +451,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t6_cost_platform2
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t6_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t6_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_t
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t6_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_platform2
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	component_set = "power_core"
-	size_restriction = { ion_cannon }
 	upgrades_to = ION_CANNON_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -671,23 +473,14 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_t6_power_starbase
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_s
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_t6_power_starbase
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# vanilla starbases
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel juggernaut
-		# orbital rings
-		orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
-		# other starbases
-		@MISC_Battlefortress @MISC_WarJuggernaut }
-	component_set = "power_core"
 	upgrades_to = STARBASE_ESC_REACTOR_7
-
 	ai_weight = { weight = 6 }
 }
 
@@ -697,23 +490,14 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_power_starbase_nsc
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_m
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_power_starbase_nsc
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_starbase
-		# NSC starbases
-		@NSC_GrandCitadel @NSC_SolarStronghold
-		# other starbases
-		@MISC_Bastion }
-	component_set = "power_core"
 	upgrades_to = STARBASE_NSC_ESC_REACTOR_7
-
 	ai_weight = { weight = 15000 }
 }
 
@@ -723,28 +507,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_6
 	icon_frame = 1
-	power = @ESC_REACTOR_power_headquarters_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_hq
+		PREREQUISITES = "esc_tech_reactor_6"
+		POWER = @ESC_REACTOR_power_headquarters_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
-	prerequisites = { "esc_tech_reactor_6" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "power_core"
 	upgrades_to = HEADQUARTERS_NSC_ESC_REACTOR_7
-
 	ai_weight = { weight = 15000 }
 }
 
@@ -758,30 +533,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_corvette
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_corvette
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_corvette
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_corvette
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_corvettes
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_corvette
+		ALLOY_COST = @ESC_REACTOR_t7_cost_corvette
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_corvette
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_corvette
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		corvette frigate colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport crisis_corvette offspring_corvette nanite_swarmer gravity_snare
-		# WACO ships
-		@WACO_FlotillaShip @WACO_EmergencyShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
-	component_set = "power_core"
 	upgrades_to = CORVETTE_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -791,24 +555,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_destroyer
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_destroyer
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_destroyer
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_destroyer
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_destroyers
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_destroyer
+		ALLOY_COST = @ESC_REACTOR_t7_cost_destroyer
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_destroyer
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_destroyer
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
-	component_set = "power_core"
 	upgrades_to = DESTROYER_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -818,17 +577,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_cruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_cruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_cruiser
+		ALLOY_COST = @ESC_REACTOR_t7_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_cruiser
 	}
 
 	# enabled when NSC is NOT active
@@ -836,15 +594,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -854,17 +604,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_cruiser_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_cruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_cruiser_nsc
+		ALLOY_COST = @ESC_REACTOR_t7_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_cruiser
 	}
 
 	# enabled when NSC is active
@@ -872,15 +621,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_REACTOR_8_NSC
-
 	ai_weight = { weight = 7 }
 }
 
@@ -890,17 +631,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_battleship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_battleship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t7_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_battleship
+		ALLOY_COST = @ESC_REACTOR_t7_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
 	}
 
 	# enabled when NSC is not active
@@ -908,23 +648,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 	upgrades_to = BATTLESHIP_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -934,17 +658,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_battleship_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_battleship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t7_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_battleship_nsc
+		ALLOY_COST = @ESC_REACTOR_t7_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
 	}
 
 	# enabled when NSC is active
@@ -952,23 +675,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 	upgrades_to = BATTLESHIP_ESC_REACTOR_NSC_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -978,17 +685,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_titan
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_titan
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_titan
+		ALLOY_COST = @ESC_REACTOR_t7_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_titan
 	}
 
 	# enabled when NSC is not active
@@ -996,19 +702,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 	upgrades_to = TITAN_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1018,17 +712,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_titan_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_titan
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_titan_nsc
+		ALLOY_COST = @ESC_REACTOR_t7_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_titan
 	}
 
 	# enabled when NSC is active
@@ -1036,19 +729,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 	upgrades_to = TITAN_ESC_REACTOR_NSC_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1058,17 +739,14 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_power_colossus
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_colossi
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_power_colossus
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = { colossus star_eater }
-	component_set = "power_core"
 	upgrades_to = COLOSSUS_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1078,34 +756,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_strikecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_strikecruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_strikecruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_strikecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_strikecruisers
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_strikecruiser
+		ALLOY_COST = @ESC_REACTOR_t7_cost_strikecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_strikecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_strikecruiser
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_strike_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette  }
-	component_set = "power_core"
 	upgrades_to = STRIKECRUISER_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1115,28 +778,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_battlecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_battlecruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_battlecruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_battlecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battlecruisers
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_battlecruiser
+		ALLOY_COST = @ESC_REACTOR_t7_cost_battlecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battlecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_battlecruiser
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_battle_cruiser
-		# NSC ships
-		@NSC_BattleCruiser @NSC_ExplorationShip }
-	component_set = "power_core"
 	upgrades_to = BATTLECRUISER_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1146,28 +800,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_carrier
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_carrier
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_carrier
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_carrier
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_carriers
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_carrier
+		ALLOY_COST = @ESC_REACTOR_t7_cost_carrier
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_carrier
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_carrier
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_carrier
-		# NSC ships
-		@NSC_Carrier }
-	component_set = "power_core"
 	upgrades_to = CARRIER_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1177,30 +822,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_dreadnought
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_dreadnought
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_dreadnoughts
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_dreadnought
+		ALLOY_COST = @ESC_REACTOR_t7_cost_dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_dreadnought
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_dreadnought
-		# NSC ships
-		@NSC_Dreadnought
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
-	component_set = "power_core"
 	upgrades_to = DREADNOUGHT_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1210,30 +844,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_flagship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_flagship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_flagship
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_flagship
+		ALLOY_COST = @ESC_REACTOR_t7_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_flagship
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_flagship
-		# NSC ships
-		@NSC_Flagship @Freebooters_Flagship
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "power_core"
 	upgrades_to = FLAGSHIP_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1243,28 +866,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_SCX_Dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_SCX_Dreadnought
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_SCX_Dreadnought
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_SCX_Dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_scx_dreadnought
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_SCX_Dreadnought
+		ALLOY_COST = @ESC_REACTOR_t7_cost_SCX_Dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_SCX_Dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_SCX_Dreadnought
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_scx_dreadnought
-		# SCX ships
-		@SCX_Dreadnought }
-	component_set = "power_core"
 	upgrades_to = SCX_DREADNOUGHT_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1274,25 +888,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_1
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_platform
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_small }
-	component_set = "power_core"
 	upgrades_to = PLATFORM_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1302,25 +910,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform2
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_2
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform2
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium @MISC_DF_Medium }
-	component_set = "power_core"
 	upgrades_to = PLATFORM2_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1330,29 +932,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform3
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform3
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform3
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_3
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_platform3
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform3
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform3
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform3
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# vanilla ship size
-		military_station_large
-		# Other military platforms
-		@EAC_Platform @MISC_DF_Large }
-	component_set = "power_core"
 	upgrades_to = PLATFORM3_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1362,29 +954,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_xlcannon
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_xlcannon
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_xlcannon
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_xlcannon
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_xl
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_xlcannon
+		ALLOY_COST = @ESC_REACTOR_t7_cost_xlcannon
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_xlcannon
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_xlcannon
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_military_platform
-		# NSC ships
-		@NSC_AnnihilatorCannon }
-	component_set = "power_core"
 	upgrades_to = XLCANNON_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1394,24 +976,19 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform2
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_t
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform2
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	component_set = "power_core"
-	size_restriction = { ion_cannon }
 	upgrades_to = ION_CANNON_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1421,23 +998,14 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_starbase
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_s
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_t7_power_starbase
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# vanilla starbases
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel juggernaut
-		# orbital rings
-		orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
-		# other starbases
-		@MISC_Battlefortress @MISC_WarJuggernaut }
-	component_set = "power_core"
 	upgrades_to = STARBASE_ESC_REACTOR_8
-
 	ai_weight = { weight = 7 }
 }
 
@@ -1447,23 +1015,14 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_power_starbase_nsc
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_m
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_power_starbase_nsc
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_starbase
-		# NSC starbases
-		@NSC_GrandCitadel @NSC_SolarStronghold
-		# other starbases
-		@MISC_Bastion }
-	component_set = "power_core"
 	upgrades_to = STARBASE_NSC_ESC_REACTOR_8
-
 	ai_weight = { weight = 15000 }
 }
 
@@ -1473,28 +1032,19 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_7
 	icon_frame = 1
-	power = @ESC_REACTOR_power_headquarters_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_hq
+		PREREQUISITES = "esc_tech_reactor_7"
+		POWER = @ESC_REACTOR_power_headquarters_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
-	prerequisites = { "esc_tech_reactor_7" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "power_core"
 	upgrades_to = HEADQUARTERS_NSC_ESC_REACTOR_8
-
 	ai_weight = { weight = 15000 }
 }
 
@@ -1508,28 +1058,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_corvette
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_corvette
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_corvette
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_corvette
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_corvettes
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_corvette
+		ALLOY_COST = @ESC_REACTOR_t8_cost_corvette
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_corvette
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_corvette
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		corvette frigate colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport crisis_corvette offspring_corvette nanite_swarmer gravity_snare
-		# WACO ships
-		@WACO_FlotillaShip @WACO_EmergencyShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1540,22 +1079,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_destroyer
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_destroyer
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_destroyer
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_destroyer
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_destroyers
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_destroyer
+		ALLOY_COST = @ESC_REACTOR_t8_cost_destroyer
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_destroyer
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_destroyer
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1566,31 +1100,22 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_cruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_cruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_cruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 	}
 
 	# enabled when NSC is not active
 	valid_for_country = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1601,31 +1126,22 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_cruiser_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_cruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_cruiser_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 	}
 
 	# enabled when NSC is active
 	valid_for_country = {
 		has_global_flag = @NSC_active_flag
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1636,39 +1152,22 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battleship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battleship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t8_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_battleship
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
 	}
 
 	# enabled when NSC is not active
 	valid_for_country = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1679,39 +1178,22 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battleship_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battleship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t8_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_battleship_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
 	}
 
 	# enabled when NSC is active
 	valid_for_country = {
 		has_global_flag = @NSC_active_flag
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1722,35 +1204,22 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_titan
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_titan
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_titan
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	# enabled when NSC is not active
 	valid_for_country = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1761,35 +1230,22 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_titan_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_titan
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_titan_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	# enabled when NSC is active
 	valid_for_country = {
 		has_global_flag = @NSC_active_flag
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1800,15 +1256,12 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_power_colossus
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_colossi
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_power_colossus
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = { colossus star_eater }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1819,32 +1272,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_strikecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_strikecruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_strikecruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_strikecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_strikecruisers
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_strikecruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_strikecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_strikecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_strikecruiser
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_strike_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette  }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1855,26 +1293,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battlecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battlecruiser
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battlecruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_battlecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battlecruisers
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_battlecruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battlecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battlecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_battlecruiser
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_battle_cruiser
-		# NSC ships
-		@NSC_BattleCruiser @NSC_ExplorationShip }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1885,26 +1314,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_carrier
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_carrier
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_carrier
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_carrier
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_carriers
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_carrier
+		ALLOY_COST = @ESC_REACTOR_t8_cost_carrier
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_carrier
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_carrier
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_carrier
-		# NSC ships
-		@NSC_Carrier }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1915,28 +1335,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_dreadnought
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_dreadnought
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_dreadnoughts
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_dreadnought
+		ALLOY_COST = @ESC_REACTOR_t8_cost_dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_dreadnought
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_dreadnought
-		# NSC ships
-		@NSC_Dreadnought
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1947,28 +1356,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_flagship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_flagship
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_flagship
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_flagship
-		# NSC ships
-		@NSC_Flagship @Freebooters_Flagship
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -1979,26 +1377,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_SCX_Dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_SCX_Dreadnought
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_scx_dreadnought
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_SCX_Dreadnought
+		ALLOY_COST = @ESC_REACTOR_t8_cost_SCX_Dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_scx_dreadnought
-		# SCX ships
-		@SCX_Dreadnought }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -2009,23 +1398,17 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_1
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_platform
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_small }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -2036,23 +1419,17 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform2
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_2
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform2
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium @MISC_DF_Medium }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -2063,27 +1440,17 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform3
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform3
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform3
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_3
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_platform3
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform3
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform3
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform3
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# vanilla ship size
-		military_station_large
-		# Other military platforms
-		@EAC_Platform @MISC_DF_Large }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -2094,27 +1461,17 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_xlcannon
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_xlcannon
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_xlcannon
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_xlcannon
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_xl
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_xlcannon
+		ALLOY_COST = @ESC_REACTOR_t8_cost_xlcannon
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_xlcannon
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_xlcannon
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_military_platform
-		# NSC ships
-		@NSC_AnnihilatorCannon }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -2125,22 +1482,17 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform2
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_t
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform2
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	component_set = "power_core"
-	size_restriction = { ion_cannon }
 
 	ai_weight = { weight = 8 }
 }
@@ -2151,21 +1503,12 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_starbase
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_s
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_t8_power_starbase
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# vanilla starbases
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel juggernaut
-		# orbital rings
-		orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
-		# other starbases
-		@MISC_Battlefortress @MISC_WarJuggernaut }
-	component_set = "power_core"
 
 	ai_weight = { weight = 8 }
 }
@@ -2176,21 +1519,12 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_power_starbase_nsc
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_m
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_power_starbase_nsc
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_starbase
-		# NSC starbases
-		@NSC_GrandCitadel @NSC_SolarStronghold
-		# other starbases
-		@MISC_Bastion }
-	component_set = "power_core"
 
 	ai_weight = { weight = 15000 }
 }
@@ -2201,26 +1535,17 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_reactor_8
 	icon_frame = 1
-	power = @ESC_REACTOR_power_headquarters_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_hq
+		PREREQUISITES = "esc_tech_reactor_8"
+		POWER = @ESC_REACTOR_power_headquarters_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
-
-	prerequisites = { "esc_tech_reactor_8" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "power_core"
 
 	ai_weight = { weight = 15000 }
 }
@@ -2235,35 +1560,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_corvette
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_corvette
-			sr_dark_matter = 1.5
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_corvette
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_corvette
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_corvettes
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_corvette
+		ALLOY_COST = @ESC_REACTOR_t7_cost_corvette
+		DARK_MATTER_COST = 1.5
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_corvette
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_corvette
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		corvette frigate colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport crisis_corvette offspring_corvette nanite_swarmer gravity_snare
-		# WACO ships
-		@WACO_FlotillaShip @WACO_EmergencyShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
-	component_set = "power_core"
 	upgrades_to = CORVETTE_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2280,29 +1593,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_destroyer
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_destroyer
-			sr_dark_matter = 3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_destroyer
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_destroyer
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_destroyers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_destroyer
+		ALLOY_COST = @ESC_REACTOR_t7_cost_destroyer
+		DARK_MATTER_COST = 3
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_destroyer
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_destroyer
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
-	component_set = "power_core"
 	upgrades_to = DESTROYER_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2319,18 +1626,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_cruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_cruiser
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_cruiser
+		ALLOY_COST = @ESC_REACTOR_t7_cost_cruiser
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_cruiser
 	}
 
 	ship_modifier = {
@@ -2342,15 +1647,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2367,18 +1664,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_cruiser_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_cruiser
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_cruiser_nsc
+		ALLOY_COST = @ESC_REACTOR_t7_cost_cruiser
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_cruiser
 	}
 
 	ship_modifier = {
@@ -2390,15 +1685,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 	upgrades_to = CRUISER_ESC_DARK_MATTER_CORE_3_NSC
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2415,18 +1702,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_battleship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_battleship
-			sr_dark_matter = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t7_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_battleship
+		ALLOY_COST = @ESC_REACTOR_t7_cost_battleship
+		DARK_MATTER_COST = 12
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
 	}
 
 	ship_modifier = {
@@ -2438,23 +1723,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 	upgrades_to = BATTLESHIP_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2471,18 +1740,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_battleship_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_battleship
-			sr_dark_matter = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t7_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_battleship_nsc
+		ALLOY_COST = @ESC_REACTOR_t7_cost_battleship
+		DARK_MATTER_COST = 12
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battleship
 	}
 
 	ship_modifier = {
@@ -2494,23 +1761,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 	upgrades_to = BATTLESHIP_ESC_DARK_MATTER_CORE_NSC_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2527,18 +1778,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_titan
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_titan
-			sr_dark_matter = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_titan
+		ALLOY_COST = @ESC_REACTOR_t7_cost_titan
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -2550,19 +1799,7 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 	upgrades_to = TITAN_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2579,18 +1816,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_titan_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_titan
-			sr_dark_matter = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_titan_nsc
+		ALLOY_COST = @ESC_REACTOR_t7_cost_titan
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -2602,19 +1837,7 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 	upgrades_to = TITAN_ESC_DARK_MATTER_CORE_NSC_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2631,21 +1854,18 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_power_colossus
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_colossi
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_power_colossus
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = { colossus star_eater }
-	component_set = "power_core"
 	upgrades_to = COLOSSUS_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = { weight = 10 }
 }
 
@@ -2655,39 +1875,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_strikecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_strikecruiser
-			sr_dark_matter = 9
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_strikecruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_strikecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_strikecruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_strikecruiser
+		ALLOY_COST = @ESC_REACTOR_t7_cost_strikecruiser
+		DARK_MATTER_COST = 9
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_strikecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_strikecruiser
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_strike_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette  }
-	component_set = "power_core"
 	upgrades_to = STRIKECRUISER_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2704,33 +1908,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_battlecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_battlecruiser
-			sr_dark_matter = 9
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_battlecruiser
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_battlecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battlecruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_battlecruiser
+		ALLOY_COST = @ESC_REACTOR_t7_cost_battlecruiser
+		DARK_MATTER_COST = 9
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_battlecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_battlecruiser
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_battle_cruiser
-		# NSC ships
-		@NSC_BattleCruiser @NSC_ExplorationShip }
-	component_set = "power_core"
 	upgrades_to = BATTLECRUISER_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2747,33 +1941,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_carrier
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_carrier
-			sr_dark_matter = 18
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_carrier
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_carrier
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_carriers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_carrier
+		ALLOY_COST = @ESC_REACTOR_t7_cost_carrier
+		DARK_MATTER_COST = 18
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_carrier
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_carrier
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_carrier
-		# NSC ships
-		@NSC_Carrier }
-	component_set = "power_core"
 	upgrades_to = CARRIER_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2790,35 +1974,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_dreadnought
-			sr_dark_matter = 21
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_dreadnought
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_dreadnoughts
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_dreadnought
+		ALLOY_COST = @ESC_REACTOR_t7_cost_dreadnought
+		DARK_MATTER_COST = 21
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_dreadnought
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_dreadnought
-		# NSC ships
-		@NSC_Dreadnought
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
-	component_set = "power_core"
 	upgrades_to = DREADNOUGHT_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2835,35 +2007,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_flagship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_flagship
-			sr_dark_matter = 30
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_flagship
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_flagship
+		ALLOY_COST = @ESC_REACTOR_t7_cost_flagship
+		DARK_MATTER_COST = 30
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_flagship
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_flagship
-		# NSC ships
-		@NSC_Flagship @Freebooters_Flagship
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "power_core"
 	upgrades_to = FLAGSHIP_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2880,33 +2040,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_SCX_Dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_SCX_Dreadnought
-			sr_dark_matter = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_SCX_Dreadnought
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_SCX_Dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_scx_dreadnought
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_SCX_Dreadnought
+		ALLOY_COST = @ESC_REACTOR_t7_cost_SCX_Dreadnought
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_SCX_Dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_SCX_Dreadnought
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_scx_dreadnought
-		# SCX ships
-		@SCX_Dreadnought }
-	component_set = "power_core"
 	upgrades_to = SCX_DREADNOUGHT_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2923,30 +2073,23 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform
-			sr_dark_matter = 3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_1
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_platform
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform
+		DARK_MATTER_COST = 3
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_small }
-	component_set = "power_core"
 	upgrades_to = PLATFORM_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -2963,30 +2106,23 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform2
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_2
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform2
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform2
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium @MISC_DF_Medium }
-	component_set = "power_core"
 	upgrades_to = PLATFORM2_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3003,34 +2139,23 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform3
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform3
-			sr_dark_matter = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform3
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform3
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_3
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_platform3
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform3
+		DARK_MATTER_COST = 12
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform3
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform3
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# vanilla ship size
-		military_station_large
-		# Other military platforms
-		@EAC_Platform @MISC_DF_Large }
-	component_set = "power_core"
 	upgrades_to = PLATFORM3_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3047,34 +2172,23 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_xlcannon
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_xlcannon
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_xlcannon
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_xlcannon
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_xl
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_xlcannon
+		ALLOY_COST = @ESC_REACTOR_t7_cost_xlcannon
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_xlcannon
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_xlcannon
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_military_platform
-		# NSC ships
-		@NSC_AnnihilatorCannon }
-	component_set = "power_core"
 	upgrades_to = XLCANNON_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3091,29 +2205,23 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t7_cost_platform2
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t7_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t7_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_t
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t7_cost_platform2
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_platform2
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	component_set = "power_core"
-	size_restriction = { ion_cannon }
 	upgrades_to = ION_CANNON_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3130,27 +2238,18 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_t7_power_starbase
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_s
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_t7_power_starbase
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# vanilla starbases
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel juggernaut
-		# orbital rings
-		orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
-		# other starbases
-		@MISC_Battlefortress @MISC_WarJuggernaut }
-	component_set = "power_core"
 	upgrades_to = STARBASE_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = { weight = 10 }
 }
 
@@ -3160,27 +2259,18 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_power_starbase_nsc
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_m
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_power_starbase_nsc
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_starbase
-		# NSC starbases
-		@NSC_GrandCitadel @NSC_SolarStronghold
-		# other starbases
-		@MISC_Bastion }
-	component_set = "power_core"
 	upgrades_to = STARBASE_NSC_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = { weight = 20000 }
 }
 
@@ -3190,33 +2280,23 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_2
 	icon_frame = 1
-	power = @ESC_REACTOR_power_headquarters_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-			sr_dark_matter = 30
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_hq
+		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		POWER = @ESC_REACTOR_power_headquarters_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 30
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
 	}
 
-	prerequisites = { "esc_tech_dark_matter_power_core_2" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "power_core"
 	upgrades_to = HEADQUARTERS_NSC_ESC_DARK_MATTER_CORE_3
-
 	ai_weight = {
 		weight = 20000
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3237,33 +2317,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_corvette
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_corvette
-			sr_dark_matter = 1.5
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_corvette
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_corvette
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_corvettes
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_corvette
+		ALLOY_COST = @ESC_REACTOR_t8_cost_corvette
+		DARK_MATTER_COST = 1.5
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_corvette
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_corvette
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		corvette frigate colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport crisis_corvette offspring_corvette nanite_swarmer gravity_snare
-		# WACO ships
-		@WACO_FlotillaShip @WACO_EmergencyShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3281,27 +2349,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_destroyer
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_destroyer
-			sr_dark_matter = 3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_destroyer
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_destroyer
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_destroyers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_destroyer
+		ALLOY_COST = @ESC_REACTOR_t8_cost_destroyer
+		DARK_MATTER_COST = 3
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_destroyer
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_destroyer
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3319,18 +2381,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_cruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_cruiser
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_cruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_cruiser
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 	}
 
 	ship_modifier = {
@@ -3341,14 +2401,6 @@ utility_component_template = {
 	valid_for_country = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3366,18 +2418,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_cruiser_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_cruiser
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_cruiser_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_cruiser
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 	}
 
 	ship_modifier = {
@@ -3388,14 +2438,6 @@ utility_component_template = {
 	valid_for_country = {
 		has_global_flag = @NSC_active_flag
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3413,18 +2455,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battleship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battleship
-			sr_dark_matter = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t8_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_battleship
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battleship
+		DARK_MATTER_COST = 12
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
 	}
 
 	ship_modifier = {
@@ -3435,22 +2475,6 @@ utility_component_template = {
 	valid_for_country = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3468,18 +2492,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battleship_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battleship
-			sr_dark_matter = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t8_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_battleship_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battleship
+		DARK_MATTER_COST = 12
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
 	}
 
 	ship_modifier = {
@@ -3490,22 +2512,6 @@ utility_component_template = {
 	valid_for_country = {
 		has_global_flag = @NSC_active_flag
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3523,18 +2529,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_titan
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_titan
-			sr_dark_matter = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_titan
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -3545,18 +2549,6 @@ utility_component_template = {
 	valid_for_country = {
 		NOT = { has_global_flag = @NSC_active_flag }
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3574,18 +2566,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_titan_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_titan
-			sr_dark_matter = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_titan_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -3596,18 +2586,6 @@ utility_component_template = {
 	valid_for_country = {
 		has_global_flag = @NSC_active_flag
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3625,19 +2603,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_power_colossus
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_colossi
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_power_colossus
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = { colossus star_eater }
-	component_set = "power_core"
 
 	ai_weight = { weight = 12 }
 }
@@ -3648,37 +2623,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_strikecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_strikecruiser
-			sr_dark_matter = 9
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_strikecruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_strikecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_strikecruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_strikecruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_strikecruiser
+		DARK_MATTER_COST = 9
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_strikecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_strikecruiser
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_strike_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette  }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3696,31 +2655,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battlecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battlecruiser
-			sr_dark_matter = 9
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battlecruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_battlecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battlecruisers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_battlecruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battlecruiser
+		DARK_MATTER_COST = 9
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battlecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_battlecruiser
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_battle_cruiser
-		# NSC ships
-		@NSC_BattleCruiser @NSC_ExplorationShip }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3738,31 +2687,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_carrier
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_carrier
-			sr_dark_matter = 18
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_carrier
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_carrier
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_carriers
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_carrier
+		ALLOY_COST = @ESC_REACTOR_t8_cost_carrier
+		DARK_MATTER_COST = 18
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_carrier
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_carrier
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_carrier
-		# NSC ships
-		@NSC_Carrier }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3780,33 +2719,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_dreadnought
-			sr_dark_matter = 21
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_dreadnought
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_dreadnoughts
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_dreadnought
+		ALLOY_COST = @ESC_REACTOR_t8_cost_dreadnought
+		DARK_MATTER_COST = 21
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_dreadnought
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_dreadnought
-		# NSC ships
-		@NSC_Dreadnought
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3824,33 +2751,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_flagship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-			sr_dark_matter = 30
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_flagship
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_flagship
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 30
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_flagship
-		# NSC ships
-		@NSC_Flagship @Freebooters_Flagship
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3868,31 +2783,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_SCX_Dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_SCX_Dreadnought
-			sr_dark_matter = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_scx_dreadnought
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_SCX_Dreadnought
+		ALLOY_COST = @ESC_REACTOR_t8_cost_SCX_Dreadnought
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_scx_dreadnought
-		# SCX ships
-		@SCX_Dreadnought }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3910,28 +2815,21 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform
-			sr_dark_matter = 3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_1
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_platform
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform
+		DARK_MATTER_COST = 3
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_small }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3949,28 +2847,21 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform2
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_2
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform2
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform2
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium @MISC_DF_Medium }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -3988,32 +2879,21 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform3
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform3
-			sr_dark_matter = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform3
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform3
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_3
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_platform3
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform3
+		DARK_MATTER_COST = 12
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform3
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform3
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# vanilla ship size
-		military_station_large
-		# Other military platforms
-		@EAC_Platform @MISC_DF_Large }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4031,32 +2911,21 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_xlcannon
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_xlcannon
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_xlcannon
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_xlcannon
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_xl
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_xlcannon
+		ALLOY_COST = @ESC_REACTOR_t8_cost_xlcannon
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_xlcannon
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_xlcannon
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_military_platform
-		# NSC ships
-		@NSC_AnnihilatorCannon }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4074,27 +2943,21 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform2
-			sr_dark_matter = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_t
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform2
+		DARK_MATTER_COST = 6
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform2
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	component_set = "power_core"
-	size_restriction = { ion_cannon }
 
 	ai_weight = {
 		weight = 12
@@ -4112,25 +2975,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_starbase
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_s
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_t8_power_starbase
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# vanilla starbases
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel juggernaut
-		# orbital rings
-		orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
-		# other starbases
-		@MISC_Battlefortress @MISC_WarJuggernaut }
-	component_set = "power_core"
 
 	ai_weight = { weight = 12 }
 }
@@ -4141,25 +2995,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_power_starbase_nsc
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_m
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_power_starbase_nsc
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_starbase
-		# NSC starbases
-		@NSC_GrandCitadel @NSC_SolarStronghold
-		# other starbases
-		@MISC_Bastion }
-	component_set = "power_core"
 
 	ai_weight = { weight = 20000 }
 }
@@ -4170,31 +3015,21 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_dark_matter_reactor_3
 	icon_frame = 1
-	power = @ESC_REACTOR_power_headquarters_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-			sr_dark_matter = 30
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_hq
+		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		POWER = @ESC_REACTOR_power_headquarters_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 30
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
-
-	prerequisites = { "esc_tech_dark_matter_power_core_3" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 25000
@@ -4216,18 +3051,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_corvette
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_corvette
-			sr_zro = 1.5
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_corvette
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_corvette
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_corvettes
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_corvette
+		ALLOY_COST = @ESC_REACTOR_t8_cost_corvette
+		DARK_MATTER_COST = 0
+		ZRO_COST = 1.5
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_corvette
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_corvette
 	}
 
 	ship_modifier = {
@@ -4238,16 +3071,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		corvette frigate colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel constructor engineer_vessel science explorer_vessel transport crisis_corvette offspring_corvette nanite_swarmer gravity_snare
-		# WACO ships
-		@WACO_FlotillaShip @WACO_EmergencyShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4265,18 +3088,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_destroyer
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_destroyer
-			sr_zro = 3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_destroyer
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_destroyer
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_destroyers
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_destroyer
+		ALLOY_COST = @ESC_REACTOR_t8_cost_destroyer
+		DARK_MATTER_COST = 0
+		ZRO_COST = 3
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_destroyer
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_destroyer
 	}
 
 	ship_modifier = {
@@ -4287,10 +3108,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer @MISC_PirateCorvette }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4308,18 +3125,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_cruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_cruiser
-			sr_zro = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_cruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 6
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 	}
 
 	ship_modifier = {
@@ -4331,14 +3146,6 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4356,18 +3163,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_cruiser_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_cruiser
-			sr_zro = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_cruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_cruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_cruisers
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_cruiser_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_cruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 6
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_cruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_cruiser
 	}
 
 	ship_modifier = {
@@ -4379,14 +3184,6 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# Deadly tempest
-		graygoo_interdictor }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4404,18 +3201,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battleship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battleship
-			sr_zro = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t8_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_battleship
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 12
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
 	}
 
 	ship_modifier = {
@@ -4427,22 +3222,6 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4460,18 +3239,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battleship_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battleship
-			sr_zro = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battleship
-			alloys = @ESC_REACTOR_t8_upkeep_energy_battleship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battleships
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_battleship_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battleship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 12
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battleship
 	}
 
 	ship_modifier = {
@@ -4483,22 +3260,6 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_EscortCarrier
-		# SCX ships
-		@SCX_Carrier
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4516,18 +3277,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_titan
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_titan
-			sr_zro = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_titan
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 24
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -4539,18 +3298,6 @@ utility_component_template = {
 		NOT = { has_global_flag = @NSC_active_flag }
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4568,18 +3315,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_titan_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_titan
-			sr_zro = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_titan
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_titan
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_titans
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_titan_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 24
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -4591,18 +3336,6 @@ utility_component_template = {
 		has_global_flag = @NSC_active_flag
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla ship classes
-		titan cosmo_crisis_titan payback_warship
-		# Deadly tempest
-		graygoo_mothership
-		# Playable fallen empire ships
-		@PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4620,10 +3353,11 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_power_colossus
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_colossi
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_power_colossus
 	}
 
 	ship_modifier = {
@@ -4634,10 +3368,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = { colossus star_eater }
-	component_set = "power_core"
 
 	ai_weight = { weight = 12 }
 }
@@ -4648,18 +3378,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_strikecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_strikecruiser
-			sr_zro = 9
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_strikecruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_strikecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_strikecruisers
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_strikecruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_strikecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 9
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_strikecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_strikecruiser
 	}
 
 	ship_modifier = {
@@ -4670,20 +3398,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_strike_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette  }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4701,18 +3415,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_battlecruiser
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_battlecruiser
-			sr_zro = 9
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_battlecruiser
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_battlecruiser
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_battlecruisers
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_battlecruiser
+		ALLOY_COST = @ESC_REACTOR_t8_cost_battlecruiser
+		DARK_MATTER_COST = 0
+		ZRO_COST = 9
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_battlecruiser
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_battlecruiser
 	}
 
 	ship_modifier = {
@@ -4723,14 +3435,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_battle_cruiser
-		# NSC ships
-		@NSC_BattleCruiser @NSC_ExplorationShip }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4748,18 +3452,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_carrier
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_carrier
-			sr_zro = 18
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_carrier
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_carrier
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_carriers
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_carrier
+		ALLOY_COST = @ESC_REACTOR_t8_cost_carrier
+		DARK_MATTER_COST = 0
+		ZRO_COST = 18
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_carrier
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_carrier
 	}
 
 	ship_modifier = {
@@ -4770,14 +3472,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_carrier
-		# NSC ships
-		@NSC_Carrier }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4795,18 +3489,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_dreadnought
-			sr_zro = 21
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_dreadnought
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_dreadnoughts
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_dreadnought
+		ALLOY_COST = @ESC_REACTOR_t8_cost_dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 21
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_dreadnought
 	}
 
 	ship_modifier = {
@@ -4817,16 +3509,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_dreadnought
-		# NSC ships
-		@NSC_Dreadnought
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4844,18 +3526,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_flagship
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-			sr_zro = 30
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_flagship
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_flagship
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 30
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
 	ship_modifier = {
@@ -4866,16 +3546,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_flagship
-		# NSC ships
-		@NSC_Flagship @Freebooters_Flagship
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4893,18 +3563,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_SCX_Dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_SCX_Dreadnought
-			sr_zro = 24
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_scx_dreadnought
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_SCX_Dreadnought
+		ALLOY_COST = @ESC_REACTOR_t8_cost_SCX_Dreadnought
+		DARK_MATTER_COST = 0
+		ZRO_COST = 24
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_SCX_Dreadnought
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_SCX_Dreadnought
 	}
 
 	ship_modifier = {
@@ -4915,14 +3583,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_scx_dreadnought
-		# SCX ships
-		@SCX_Dreadnought }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4940,18 +3600,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform
-			sr_zro = 3
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_1
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_platform
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform
+		DARK_MATTER_COST = 0
+		ZRO_COST = 3
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform
 	}
 
 	ship_modifier = {
@@ -4962,11 +3620,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_small }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -4984,18 +3637,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform2
-			sr_zro = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_2
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 6
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform2
 	}
 
 	ship_modifier = {
@@ -5006,11 +3657,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = { military_station_medium @MISC_DF_Medium }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -5028,18 +3674,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform3
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform3
-			sr_zro = 12
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform3
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform3
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_3
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_platform3
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform3
+		DARK_MATTER_COST = 0
+		ZRO_COST = 12
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform3
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform3
 	}
 
 	ship_modifier = {
@@ -5050,15 +3694,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# vanilla ship size
-		military_station_large
-		# Other military platforms
-		@EAC_Platform @MISC_DF_Large }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -5076,18 +3711,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_xlcannon
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_xlcannon
-			sr_zro = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_xlcannon
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_xlcannon
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_xl
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_xlcannon
+		ALLOY_COST = @ESC_REACTOR_t8_cost_xlcannon
+		DARK_MATTER_COST = 0
+		ZRO_COST = 6
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_xlcannon
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_xlcannon
 	}
 
 	ship_modifier = {
@@ -5098,15 +3731,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	class_restriction = { shipclass_military_station }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_military_platform
-		# NSC ships
-		@NSC_AnnihilatorCannon }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 12
@@ -5124,18 +3748,16 @@ utility_component_template = {
 	size = small
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_platform2
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_platform2
-			sr_zro = 6
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_platform2
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_platform2
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_platform_t
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_platform2
+		ALLOY_COST = @ESC_REACTOR_t8_cost_platform2
+		DARK_MATTER_COST = 0
+		ZRO_COST = 6
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_platform2
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_platform2
 	}
 
 	ship_modifier = {
@@ -5146,10 +3768,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	component_set = "power_core"
-	size_restriction = { ion_cannon }
 
 	ai_weight = {
 		weight = 12
@@ -5167,10 +3785,11 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_t8_power_starbase
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_s
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_t8_power_starbase
 	}
 
 	ship_modifier = {
@@ -5181,16 +3800,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# vanilla starbases
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel juggernaut
-		# orbital rings
-		orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
-		# other starbases
-		@MISC_Battlefortress @MISC_WarJuggernaut }
-	component_set = "power_core"
 
 	ai_weight = { weight = 12 }
 }
@@ -5201,10 +3810,11 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_power_starbase_nsc
 
-	resources = {
-		category = ship_components
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_m
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_power_starbase_nsc
 	}
 
 	ship_modifier = {
@@ -5215,16 +3825,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_starbase
-		# NSC starbases
-		@NSC_GrandCitadel @NSC_SolarStronghold
-		# other starbases
-		@MISC_Bastion }
-	component_set = "power_core"
 
 	ai_weight = { weight = 20000 }
 }
@@ -5235,18 +3835,16 @@ utility_component_template = {
 	size = large
 	icon = GFX_esc_psionic_reactor
 	icon_frame = 1
-	power = @ESC_REACTOR_power_headquarters_nsc
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_REACTOR_t8_cost_flagship
-			sr_zro = 30
-		}
-		upkeep = {
-			energy = @ESC_REACTOR_t8_upkeep_energy_flagship
-			alloys = @ESC_REACTOR_t8_upkeep_alloys_flagship
-		}
+	inline_script = {
+		script = reactors/esc_inlines_reactors_starbase_hq
+		PREREQUISITES = "esc_tech_reactor_psionic"
+		POWER = @ESC_REACTOR_power_headquarters_nsc
+		ALLOY_COST = @ESC_REACTOR_t8_cost_flagship
+		DARK_MATTER_COST = 0
+		ZRO_COST = 30
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_flagship
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_flagship
 	}
 
 	ship_modifier = {
@@ -5257,14 +3855,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	prerequisites = { "esc_tech_reactor_psionic" }
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "power_core"
 
 	ai_weight = {
 		weight = 25000

@@ -1,0 +1,24 @@
+### inline for destroyer reactors
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		sr_dark_matter = $DARK_MATTER_COST$
+		sr_zro = $ZRO_COST$
+	}
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla ship classes
+	destroyer crisis_destroyer offspring_destroyer
+	# other ships
+	@MISC_PirateCorvette }
+component_set = "power_core"

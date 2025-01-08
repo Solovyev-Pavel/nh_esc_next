@@ -1,0 +1,30 @@
+### inline for strikecruiser reactors
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		sr_dark_matter = $DARK_MATTER_COST$
+		sr_zro = $ZRO_COST$
+	}
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# dummy ship class to sidestep 'bugs' with size_restriction
+	esc_dummy_strike_cruiser
+	# NSC ships
+	@NSC_StrikeCruiser
+	# Realistic ships : cruisers
+	@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
+	# Playable fallen empire ships
+	@PFE_Escort
+	# Great Khan Expanded
+	@MISC_MarauderCorvette }
+component_set = "power_core"

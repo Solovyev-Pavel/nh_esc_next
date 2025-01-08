@@ -1,0 +1,18 @@
+### inline for small starbase reactors
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla starbases
+	starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel
+	juggernaut
+	# orbital rings
+	orbital_ring_tier_1 orbital_ring_tier_2 orbital_ring_tier_3
+	# other starbases
+	@MISC_Battlefortress @MISC_WarJuggernaut }
+component_set = "power_core"

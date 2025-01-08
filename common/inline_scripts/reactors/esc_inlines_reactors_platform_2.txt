@@ -1,0 +1,26 @@
+### inline for medium defense platform reactors
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		sr_dark_matter = $DARK_MATTER_COST$
+		sr_zro = $ZRO_COST$
+	}
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+class_restriction = { shipclass_military_station }
+size_restriction = {
+	# vanilla platforms
+	military_station_medium
+	# other platforms...
+	@MISC_DF_Medium
+}
+component_set = "power_core"

@@ -1,0 +1,30 @@
+### inline for corvette reactors
+
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		sr_dark_matter = $DARK_MATTER_COST$
+		sr_zro = $ZRO_COST$
+	}
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+size_restriction = {
+	# vanilla ship classes
+	corvette frigate crisis_corvette offspring_corvette
+	colonizer lithoid_colonizer sponsored_colonizer guided_sapience_colonizer colony_vessel
+	constructor engineer_vessel science explorer_vessel
+	transport
+	nanite_swarmer gravity_snare
+	# WACO ships
+	@WACO_FlotillaShip @WACO_EmergencyShip
+	# EAC ships
+	@EAC_PatrolCraft_1 @EAC_PatrolCraft_2 }
+component_set = "power_core"
