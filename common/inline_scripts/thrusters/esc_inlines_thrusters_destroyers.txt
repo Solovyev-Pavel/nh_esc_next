@@ -18,6 +18,8 @@ prerequisites = { $PREREQUISITES$ }
 size_restriction = {
 	# vanilla ship sizes
 	destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer
+	# VSE ships
+	@VSE_Artemis @VSE_ATT @VSE_Conquistador @VSE_Ironclad
 	# other ship sizes
-	@VSE_Artemis @VSE_ATT @VSE_Conquistador @MISC_PirateCorvette }
+	@MISC_PirateCorvette }
 component_set = "thruster_components"

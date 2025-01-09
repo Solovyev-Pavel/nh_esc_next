@@ -18,11 +18,13 @@ resources = {
 prerequisites = { $PREREQUISITES$ }
 size_restriction = {
 	# vanilla ship classes
-	titan cosmo_crisis_titan payback_warship
+	titan cosmo_crisis_titan payback_warship synth_queen_titan
 	# Deadly tempest
 	graygoo_mothership
 	# Playable fallen empire ships
 	@PFE_Titan
+	# VSE ships
+	@VSE_Ironclad
 	# Great Khan Expanded
 	@MISC_PirateGalleon @MISC_MarauderGalleon }
 component_set = "power_core"
