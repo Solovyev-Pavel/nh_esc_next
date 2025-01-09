@@ -1,4 +1,4 @@
-### inline for carrier reactors
+### inline for juggernaut reactors (NSC overwrites)
 
 power = $POWER$
 
@@ -17,8 +17,8 @@ resources = {
 
 prerequisites = { $PREREQUISITES$ }
 size_restriction = {
-	# dummy ship class to sidestep 'bugs' with size_restriction
-	esc_dummy_carrier
-	# NSC ships
-	@NSC_Carrier  }
+	# vanilla ship classes
+	juggernaut colossus star_eater synth_queen_titan cosmo_crisis_titan
+	# other juggernauts
+	@MISC_Battlefortress @MISC_WarJuggernaut  }
 component_set = "power_core"

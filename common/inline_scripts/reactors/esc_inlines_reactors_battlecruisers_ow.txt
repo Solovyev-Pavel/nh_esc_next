@@ -1,4 +1,4 @@
-### inline for carrier reactors
+### inline for battlecruiser reactors (NSC overwrites)
 
 power = $POWER$
 
@@ -18,7 +18,13 @@ resources = {
 prerequisites = { $PREREQUISITES$ }
 size_restriction = {
 	# dummy ship class to sidestep 'bugs' with size_restriction
-	esc_dummy_carrier
+	esc_dummy_battle_cruiser
 	# NSC ships
-	@NSC_Carrier  }
+	@NSC_BattleCruiser @NSC_ExplorationShip
+	# Realistic ships : cruisers
+	@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
+	# Playable fallen empire ships
+	@PFE_Escort
+	# Great Khan Expanded
+	@MISC_MarauderCorvette }
 component_set = "power_core"

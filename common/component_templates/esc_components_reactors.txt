@@ -208,7 +208,7 @@ utility_component_template = {
 	ai_weight = { weight = 6 }
 }
 
-# colossi
+# colossi & juggernauts
 utility_component_template = {
 	key = COLOSSUS_ESC_REACTOR_6
 	size = small
@@ -216,9 +216,14 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = reactors/esc_inlines_reactors_colossi
+		script = reactors/esc_inlines_reactors_juggernauts
 		PREREQUISITES = "esc_tech_reactor_6"
 		POWER = @ESC_REACTOR_power_colossus
+		ALLOY_COST = @ESC_REACTOR_t6_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t6_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t6_upkeep_alloys_titan
 	}
 
 	upgrades_to = COLOSSUS_ESC_REACTOR_7
@@ -733,7 +738,7 @@ utility_component_template = {
 	ai_weight = { weight = 7 }
 }
 
-# colossi
+# colossi & juggernauts
 utility_component_template = {
 	key = COLOSSUS_ESC_REACTOR_7
 	size = small
@@ -741,9 +746,14 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = reactors/esc_inlines_reactors_colossi
+		script = reactors/esc_inlines_reactors_juggernauts
 		PREREQUISITES = "esc_tech_reactor_7"
 		POWER = @ESC_REACTOR_power_colossus
+		ALLOY_COST = @ESC_REACTOR_t7_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_titan
 	}
 
 	upgrades_to = COLOSSUS_ESC_REACTOR_8
@@ -1250,7 +1260,7 @@ utility_component_template = {
 	ai_weight = { weight = 8 }
 }
 
-# colossi
+# colossi & juggernauts
 utility_component_template = {
 	key = COLOSSUS_ESC_REACTOR_8
 	size = small
@@ -1258,9 +1268,14 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = reactors/esc_inlines_reactors_colossi
+		script = reactors/esc_inlines_reactors_juggernauts
 		PREREQUISITES = "esc_tech_reactor_8"
 		POWER = @ESC_REACTOR_power_colossus
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ai_weight = { weight = 8 }
@@ -1848,7 +1863,7 @@ utility_component_template = {
 	}
 }
 
-# colossi
+# colossi & juggernauts
 utility_component_template = {
 	key = COLOSSUS_ESC_DARK_MATTER_CORE_2
 	size = small
@@ -1856,9 +1871,14 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = reactors/esc_inlines_reactors_colossi
+		script = reactors/esc_inlines_reactors_juggernauts
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		POWER = @ESC_REACTOR_power_colossus
+		ALLOY_COST = @ESC_REACTOR_t7_cost_titan
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t7_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t7_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -1866,7 +1886,14 @@ utility_component_template = {
 	}
 
 	upgrades_to = COLOSSUS_ESC_DARK_MATTER_CORE_3
-	ai_weight = { weight = 10 }
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
 }
 
 # strikecruisers
@@ -2597,7 +2624,7 @@ utility_component_template = {
 	}
 }
 
-# colossi
+# colossi & juggernauts
 utility_component_template = {
 	key = COLOSSUS_ESC_DARK_MATTER_CORE_3
 	size = small
@@ -2605,16 +2632,28 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = reactors/esc_inlines_reactors_colossi
+		script = reactors/esc_inlines_reactors_juggernauts
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		POWER = @ESC_REACTOR_power_colossus
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 24
+		ZRO_COST = 0
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
 	}
 
-	ai_weight = { weight = 12 }
+	ai_weight = {
+		weight = 12
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
 }
 
 # strikecruisers
@@ -3347,7 +3386,7 @@ utility_component_template = {
 	}
 }
 
-# colossi
+# colossi & juggernauts
 utility_component_template = {
 	key = COLOSSUS_ESC_REACTOR_PSIONIC
 	size = small
@@ -3355,9 +3394,14 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = reactors/esc_inlines_reactors_colossi
+		script = reactors/esc_inlines_reactors_juggernauts
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		POWER = @ESC_REACTOR_power_colossus
+		ALLOY_COST = @ESC_REACTOR_t8_cost_titan
+		DARK_MATTER_COST = 0
+		ZRO_COST = 24
+		ENERGY_UPKEEP = @ESC_REACTOR_t8_upkeep_energy_titan
+		ALLOYS_UPKEEP = @ESC_REACTOR_t8_upkeep_alloys_titan
 	}
 
 	ship_modifier = {
@@ -3369,7 +3413,14 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 12 }
+	ai_weight = {
+		weight = 12
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
 }
 
 # strikecruisers

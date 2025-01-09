@@ -1,4 +1,4 @@
-### inline for carrier reactors
+### inline for dreadnought reactors (NSC overwrites)
 
 power = $POWER$
 
@@ -18,7 +18,11 @@ resources = {
 prerequisites = { $PREREQUISITES$ }
 size_restriction = {
 	# dummy ship class to sidestep 'bugs' with size_restriction
-	esc_dummy_carrier
+	esc_dummy_dreadnought
 	# NSC ships
-	@NSC_Carrier  }
+	@NSC_Dreadnought
+	# SCX ships
+	@SCX_Dreadnought
+	# other...
+	@MISC_Dreadnought_A @MISC_Dreadnought_PLR }
 component_set = "power_core"
