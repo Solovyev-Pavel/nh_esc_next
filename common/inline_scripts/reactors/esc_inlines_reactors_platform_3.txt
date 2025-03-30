@@ -6,8 +6,7 @@ resources = {
 	category = ship_components
 	cost = {
 		alloys = $ALLOY_COST$
-		sr_dark_matter = $DARK_MATTER_COST$
-		sr_zro = $ZRO_COST$
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
 	}
 	upkeep = {
 		energy = $ENERGY_UPKEEP$
