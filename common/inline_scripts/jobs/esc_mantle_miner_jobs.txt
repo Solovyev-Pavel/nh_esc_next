@@ -1,0 +1,75 @@
+# regular empire
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_esc_planetary_core_miner_add = $CORE_MINERS_AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = esc_planetary_core_miner_effect_regular_1
+}
+
+# regular empire + arcology planet
+triggered_planet_modifier = {
+	potential = {
+		ESC_TRIGGER_is_city_planet = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_esc_borehole_maintainer_add = $BOREHOLE_MAINTAINER_AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		ESC_TRIGGER_is_city_planet = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = esc_planetary_core_miner_effect_regular_2
+}
+
+# gestalt empire
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_esc_planetary_core_miner_drone_add = $CORE_MINERS_AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = esc_planetary_core_miner_effect_gestalt_1
+}
+
+# gestalt empire + arcology planet
+triggered_planet_modifier = {
+	potential = {
+		ESC_TRIGGER_is_city_planet = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_esc_borehole_maintainer_drone_add = $BOREHOLE_MAINTAINER_AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		ESC_TRIGGER_is_city_planet = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = esc_planetary_core_miner_effect_gestalt_2
+}

@@ -1,0 +1,84 @@
+### non-spiritualist non-megacorp empires without death cult/memorialist civics -> culture workers
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
+	}
+	job_culture_worker_add = $CULTURE_WORKER_COUNT$
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
+	}
+	text = job_culture_worker_effect_desc
+}
+
+### spiritualist empires without death cult/memorialist civics -> priests
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_priests = yes }
+	}
+	job_priest_add = $CULTURE_WORKER_COUNT$
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_priests = yes }
+	}
+	text = job_priest_effect_desc
+}
+
+### non-spiritualist megacorp empires without death cult/memorialist civics -> manager
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_managers = yes }
+	}
+	job_manager_add = $CULTURE_WORKER_COUNT$
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_managers = yes }
+	}
+	text = job_manager_effect_desc
+}
+
+### death cult empires -> death priests + mortal initiates
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_death_priests = yes }
+	}
+	modifier = {
+		job_death_priest_add = $DEATH_PRIEST_COUNT$
+		job_mortal_initiate_add = $DEATH_PRIEST_COUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_death_priests = yes }
+	}
+	text = esc_culture_nexus_effect_death_priests
+}
+
+### memorialist empires -> death chroniclers
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_memorialists = yes }
+	}
+	modifier = {
+		job_death_chronicler_add = $CULTURE_WORKER_COUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { ESC_TRIGGER_country_uses_memorialists = yes }
+	}
+	text = job_death_chronicler_effect_desc
+}

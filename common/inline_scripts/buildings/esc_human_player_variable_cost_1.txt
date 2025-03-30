@@ -1,0 +1,34 @@
+### Some esc buildings have variable cost depending on whether the player
+### building it is human or AI
+
+resources = {
+	category = planet_buildings
+	# base cost
+	cost = {
+		minerals = $BASE_COST_MINERALS$
+	}
+	# human player cost modifier
+	cost = {
+		trigger = {
+			exists = owner
+			owner = { is_ai = no }
+		}
+		influence = $HUMAN_PLAYER_INFLUENCE_COST$
+		$HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE$ = $HUMAN_PLAYER_RARE_RESOURCE_COST$
+	}
+	# base upkeep
+	upkeep = {
+		energy = $BASE_UPKEEP_ENERGY$
+	}
+	# human player upkeep modifier
+	upkeep = {
+		trigger = {
+			exists = owner
+			owner = { is_ai = no }
+		}
+		$HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE$ = $HUMAN_PLAYER_RARE_RESOURCE_UPKEEP$
+	}
+	produces = {
+		$PRODUCED_RESOURCE$ = $RESOURCE_PRODUCTION$
+	}
+}

@@ -1,0 +1,114 @@
+### Regular empires get both head researchers and normal researchers
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_physicist_add = $RESEARCHER_AMOUNT$
+		job_biologist_add = $RESEARCHER_AMOUNT$
+		job_engineer_add = $RESEARCHER_AMOUNT$
+		job_head_researcher_add = $HEAD_RESEARCHER_AMOUNT$
+	}
+}
+### apparently, you can only add one text per block....
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = job_physicist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = job_biologist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = job_engineer_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = job_head_researcher_effect_desc
+}
+
+### hive mind empires don't have job equivalent to head reseacher,
+### so they get only regular brain drones, but in higher amount
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	modifier = {
+		job_brain_drone_physicist_add = $GESTALT_RESEARCHER_AMOUNT$
+		job_brain_drone_biologist_add = $GESTALT_RESEARCHER_AMOUNT$
+		job_brain_drone_engineer_add = $GESTALT_RESEARCHER_AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	text = job_brain_drone_physicist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	text = job_brain_drone_biologist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	text = job_brain_drone_engineer_effect_desc
+}
+
+### machine empires don't don't have job equivalent to head reseacher,
+### so they get regular calculators, but in higher amount
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	modifier = {
+		job_calculator_physicist_add = $GESTALT_RESEARCHER_AMOUNT$
+		job_calculator_biologist_add = $GESTALT_RESEARCHER_AMOUNT$
+		job_calculator_engineer_add = $GESTALT_RESEARCHER_AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	text = job_calculator_physicist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	text = job_calculator_biologist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	text = job_calculator_engineer_effect_desc
+}
+
+### primitives get nothing

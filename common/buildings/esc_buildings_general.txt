@@ -33,41 +33,32 @@ esc_building_central_research_bureau = {
 		has_major_upgraded_capital = yes
 	}
 
-	resources = {
-		category = planet_buildings
-		# base cost
-		cost = {
-			minerals = 750
-		}
-		# human player cost modifier
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			influence = 15
-			rare_crystals = 25
-			volatile_motes = 25
-			exotic_gases = 25
-		}
-		# base upkeep
-		upkeep = {
-			energy = 10
-		}
-		# human player upkeep modifier
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			rare_crystals = 1
-			volatile_motes = 1
-			exotic_gases = 1
-		}
+	# resources cost / upkeep / production
+	inline_script = {
+		script = buildings/esc_human_player_variable_cost_3
+		BASE_COST_MINERALS = 750
+		HUMAN_PLAYER_INFLUENCE_COST = 15
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE_1 = exotic_gases
+		HUMAN_PLAYER_RARE_RESOURCE_COST_1 = 25
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE_2 = volatile_motes
+		HUMAN_PLAYER_RARE_RESOURCE_COST_2 = 25
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE_3 = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_COST_3 = 25
+		BASE_UPKEEP_ENERGY = 10
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE_1 = exotic_gases
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_1 = 1
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE_2 = volatile_motes
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_2 = 1
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE_3 = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_3 = 1
+		PRODUCED_RESOURCE = influence
+		RESOURCE_PRODUCTION = 0.25
 	}
 
 	planet_modifier = {
-		planet_researchers_produces_mult = 0.20 # 20% more science from researchers
+		planet_physicists_physics_research_produces_add = 2
+		planet_biologists_society_research_produces_add = 2
+		planet_engineers_engineering_research_produces_add = 2
 	}
 
 	country_modifier = {
@@ -75,59 +66,12 @@ esc_building_central_research_bureau = {
 		num_tech_alternatives_add = 1
 	}
 
-	# regular empire jobs
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_head_researcher_add = 1
-			job_researcher_add = 4
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = esc_central_research_bureau_effect_regular
-	}
-
-	# hive minds
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = 7
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	# machine empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = 7
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
+	# jobs
+	inline_script = {
+		script = jobs/esc_multitype_researcher_add
+		RESEARCHER_AMOUNT = @ESC_job_count_4
+		HEAD_RESEARCHER_AMOUNT = @ESC_job_count_1
+		GESTALT_RESEARCHER_AMOUNT = @ESC_job_count_7
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden } }
@@ -161,36 +105,18 @@ esc_building_culture_nexus = {
 		esc_building_network_regulator
 	}
 
-	resources = {
-		category = planet_buildings
-		# base cost
-		cost = {
-			minerals = 750
-		}
-		# human player cost modifier
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			influence = 15
-			rare_crystals = 25
-		}
-		# base upkeep
-		upkeep = {
-			energy = 10
-		}
-		# human player upkeep modifier
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			rare_crystals = 1
-		}
-		produces = {
-			influence = 0.5
-		}
+	# resources cost / upkeep / production
+	inline_script = {
+		script = buildings/esc_human_player_variable_cost_1
+		BASE_COST_MINERALS = 750
+		HUMAN_PLAYER_INFLUENCE_COST = 15
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_COST = 25
+		BASE_UPKEEP_ENERGY = 10
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP = 1
+		PRODUCED_RESOURCE = influence
+		RESOURCE_PRODUCTION = 0.25
 	}
 
 	country_modifier = {
@@ -201,92 +127,14 @@ esc_building_culture_nexus = {
 
 	planet_modifier = {
 		pop_happiness = 0.05
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
+		planet_jobs_unity_produces_mult = 0.15
 	}
 
-	### non-spiritualist non-megacorp empires without death cult/memorialist civics -> culture workers
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
-		}
-		job_culture_worker_add = 5
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
-		}
-		text = job_culture_worker_effect_desc
-	}
-
-	### spiritualist empires without death cult/memorialist civics -> priests
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_priests = yes }
-		}
-		job_priest_add = 5
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_priests = yes }
-		}
-		text = job_priest_effect_desc
-	}
-
-	### non-spiritualist megacorp empires without death cult/memorialist civics -> manager
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_managers = yes }
-		}
-		job_manager_add = 5
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_managers = yes }
-		}
-		text = job_manager_effect_desc
-	}
-
-	### death cult empires -> death priests + mortal initiates
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_death_priests = yes }
-		}
-		modifier = {
-			job_death_priest_add = 3
-			job_mortal_initiate_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_death_priests = yes }
-		}
-		text = esc_culture_nexus_effect_death_priests
-	}
-
-	### memorialist empires -> death chroniclers
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_memorialists = yes }
-		}
-		modifier = {
-			job_death_chronicler_add = 5
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { ESC_TRIGGER_country_uses_memorialists = yes }
-		}
-		text = job_death_chronicler_effect_desc
+	inline_script = {
+		script = jobs/esc_culture_worker_jobs
+		CULTURE_WORKER_COUNT = @ESC_job_count_5
+		DEATH_PRIEST_COUNT = @ESC_job_count_3
 	}
 
 	show_tech_unlock_if = {
@@ -324,36 +172,18 @@ esc_building_cerebral_node = {
 		esc_building_network_regulator
 	}
 
-	resources = {
-		category = planet_buildings
-		# base cost
-		cost = {
-			minerals = 750
-		}
-		# human player cost modifier
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			influence = 15
-			rare_crystals = 25
-		}
-		# base upkeep
-		upkeep = {
-			energy = 10
-		}
-		# human player upkeep modifier
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			rare_crystals = 1
-		}
-		produces = {
-			influence = 0.5
-		}
+	# resources cost / upkeep / production
+	inline_script = {
+		script = buildings/esc_human_player_variable_cost_1
+		BASE_COST_MINERALS = 750
+		HUMAN_PLAYER_INFLUENCE_COST = 15
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_COST = 25
+		BASE_UPKEEP_ENERGY = 10
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP = 1
+		PRODUCED_RESOURCE = influence
+		RESOURCE_PRODUCTION = 0.25
 	}
 
 	country_modifier = {
@@ -363,7 +193,8 @@ esc_building_cerebral_node = {
 	}
 
 	planet_modifier = {
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
+		planet_jobs_unity_produces_mult = 0.15
 	}
 
 	### non-chronicler biological hives
@@ -372,8 +203,8 @@ esc_building_cerebral_node = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
 		}
-		job_esc_mind_walker_add = 5
-		job_maintenance_drone_add = 2
+		job_esc_mind_walker_add = @ESC_job_count_5
+		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
 		trigger = {
@@ -389,8 +220,8 @@ esc_building_cerebral_node = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
 		}
-		job_chronicle_drone_add = 5
-		job_maintenance_drone_add = 2
+		job_chronicle_drone_add = @ESC_job_count_5
+		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
 		trigger = {
@@ -434,36 +265,18 @@ esc_building_network_regulator = {
 		esc_building_cerebral_node
 	}
 
-	resources = {
-		category = planet_buildings
-		# base cost
-		cost = {
-			minerals = 750
-		}
-		# human player cost modifier
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			influence = 15
-			rare_crystals = 25
-		}
-		# base upkeep
-		upkeep = {
-			energy = 10
-		}
-		# human player upkeep modifier
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			rare_crystals = 1
-		}
-		produces = {
-			influence = 0.5
-		}
+	# resources cost / upkeep / production
+	inline_script = {
+		script = buildings/esc_human_player_variable_cost_1
+		BASE_COST_MINERALS = 750
+		HUMAN_PLAYER_INFLUENCE_COST = 15
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_COST = 25
+		BASE_UPKEEP_ENERGY = 10
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE = rare_crystals
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP = 1
+		PRODUCED_RESOURCE = influence
+		RESOURCE_PRODUCTION = 0.25
 	}
 
 	country_modifier = {
@@ -472,7 +285,8 @@ esc_building_network_regulator = {
 	}
 
 	planet_modifier = {
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
+		planet_jobs_unity_produces_mult = 0.15
 	}
 
 	### non-chronicler machines
@@ -481,8 +295,8 @@ esc_building_network_regulator = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
 		}
-		job_evaluator_add = 5
-		job_maintenance_drone_add = 2
+		job_evaluator_add = @ESC_job_count_5
+		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
 		trigger = {
@@ -498,8 +312,8 @@ esc_building_network_regulator = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
 		}
-		job_chronicle_drone_add = 5
-		job_maintenance_drone_add = 2
+		job_chronicle_drone_add = @ESC_job_count_5
+		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
 		trigger = {
@@ -536,36 +350,18 @@ esc_building_materials_laboratory = {
 		has_major_upgraded_capital = yes
 	}
 
-	resources = {
-		category = planet_buildings
-		# base cost
-		cost = {
-			minerals = 750
-		}
-		# human player cost modifier
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			influence = 15
-			volatile_motes = 25
-		}
-		# base upkeep
-		upkeep = {
-			energy = 10
-		}
-		# human player upkeep modifier
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			volatile_motes = 1
-		}
-		produces = {
-			influence = 0.5
-		}
+	# resources cost / upkeep / production
+	inline_script = {
+		script = buildings/esc_human_player_variable_cost_1
+		BASE_COST_MINERALS = 750
+		HUMAN_PLAYER_INFLUENCE_COST = 15
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE = volatile_motes
+		HUMAN_PLAYER_RARE_RESOURCE_COST = 25
+		BASE_UPKEEP_ENERGY = 10
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE = volatile_motes
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP = 1
+		PRODUCED_RESOURCE = influence
+		RESOURCE_PRODUCTION = 0.25
 	}
 
 	country_modifier = {
@@ -573,58 +369,10 @@ esc_building_materials_laboratory = {
 		country_engineering_tech_research_speed = 0.05
 	}
 
-	# regular empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_researcher_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_researcher_effect_desc
-	}
-
-	# hive minds
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	# machine empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
+	# jobs
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @ESC_job_count_3
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden } }
@@ -651,36 +399,18 @@ esc_building_technology_institute = {
 		has_major_upgraded_capital = yes
 	}
 
-	resources = {
-		category = planet_buildings
-		# base cost
-		cost = {
-			minerals = 750
-		}
-		# human player cost modifier
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			influence = 15
-			exotic_gases = 25
-		}
-		# base upkeep
-		upkeep = {
-			energy = 10
-		}
-		# human player upkeep modifier
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_ai = no }
-			}
-			exotic_gases = 1
-		}
-		produces = {
-			influence = 0.5
-		}
+	# resources cost / upkeep / production
+	inline_script = {
+		script = buildings/esc_human_player_variable_cost_1
+		BASE_COST_MINERALS = 750
+		HUMAN_PLAYER_INFLUENCE_COST = 15
+		HUMAN_PLAYER_RARE_RESOURCE_COST_TYPE = exotic_gases
+		HUMAN_PLAYER_RARE_RESOURCE_COST = 25
+		BASE_UPKEEP_ENERGY = 10
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP_TYPE = exotic_gases
+		HUMAN_PLAYER_RARE_RESOURCE_UPKEEP = 1
+		PRODUCED_RESOURCE = influence
+		RESOURCE_PRODUCTION = 0.25
 	}
 
 	country_modifier = {
@@ -688,58 +418,10 @@ esc_building_technology_institute = {
 		country_physics_tech_research_speed = 0.05
 	}
 
-	# regular empire
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_researcher_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_researcher_effect_desc
-	}
-
-	# hive minds
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	# machine empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = 3
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
+	# jobs
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @ESC_job_count_3
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden } }
@@ -787,64 +469,17 @@ esc_building_watcher = {
 	}
 
 	planet_modifier = {
-		planet_jobs_physics_research_produces_mult = 0.20
-		planet_jobs_society_research_produces_mult = 0.20
-		planet_jobs_engineering_research_produces_mult = 0.20
+		planet_physicists_physics_research_produces_add = 2
+		planet_biologists_society_research_produces_add = 2
+		planet_engineers_engineering_research_produces_add = 2
 	}
 
-	# regular empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_head_researcher_add = 1
-			job_researcher_add = 4
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = esc_watcher_of_eternity_effect_regular
-	}
-
-	# hive minds
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = 5
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	# machine empire
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = 5
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
+	# jobs
+	inline_script = {
+		script = jobs/esc_multitype_researcher_add
+		RESEARCHER_AMOUNT = @ESC_job_count_4
+		HEAD_RESEARCHER_AMOUNT = @ESC_job_count_1
+		GESTALT_RESEARCHER_AMOUNT = @ESC_job_count_7
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden } }
@@ -897,8 +532,8 @@ esc_building_stellar_energy_tower = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 1
-			job_technician_add = 1
+			job_researcher_add = @ESC_job_count_1
+			job_technician_add = @ESC_job_count_1
 			job_technician_per_pop = 0.05
 		}
 	}
@@ -917,8 +552,8 @@ esc_building_stellar_energy_tower = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = 1
-			job_technician_drone_add = 1
+			job_brain_drone_add = @ESC_job_count_1
+			job_technician_drone_add = @ESC_job_count_1
 			job_technician_drone_per_pop = 0.05
 		}
 	}
@@ -937,8 +572,8 @@ esc_building_stellar_energy_tower = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = 1
-			job_technician_drone_add = 1
+			job_calculator_add = @ESC_job_count_1
+			job_technician_drone_add = @ESC_job_count_1
 			job_technician_drone_per_pop = 0.05
 		}
 	}
@@ -993,61 +628,15 @@ esc_building_quantum_node = {
 	}
 
 	planet_modifier = {
-		planet_researchers_produces_mult = 0.2
+		planet_physicists_physics_research_produces_add = 2
+		planet_biologists_society_research_produces_add = 2
+		planet_engineers_engineering_research_produces_add = 2
 	}
 
-	# regular empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_researcher_add = 4
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_researcher_effect_desc
-	}
-
-	# hive minds
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_brain_drone_add = 4
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	# machine empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_calculator_add = 4
-		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
+	# jobs
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @ESC_job_count_3
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden } }
@@ -1134,52 +723,10 @@ esc_building_dragon_hatchery = {
 		planet_jobs_society_research_produces_mult = 0.20
 	}
 
-	# regular empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		job_researcher_add = 2
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		text = job_researcher_effect_desc
-	}
-
-	# hive minds
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		job_brain_drone_add = 2
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_brain_drone_effect_desc
-	}
-
-	# machine empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		job_calculator_add = 2
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_calculator_effect_desc
+	# jobs
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @ESC_job_count_2
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden } }

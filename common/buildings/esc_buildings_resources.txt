@@ -52,7 +52,7 @@ esc_building_zro_distillery = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_zro_distiller_add = 2
+			job_esc_zro_distiller_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -70,7 +70,7 @@ esc_building_zro_distillery = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_zro_distiller_drone_add = 2
+			job_esc_zro_distiller_drone_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -133,7 +133,7 @@ esc_building_dark_matter_facility = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_dark_matter_shaper_add = 2
+			job_esc_dark_matter_shaper_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -151,7 +151,7 @@ esc_building_dark_matter_facility = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_dark_matter_shaper_drone_add = 2
+			job_esc_dark_matter_shaper_drone_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -211,7 +211,7 @@ esc_building_nanite_foundry = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_nanite_breeder_add = 2
+			job_esc_nanite_breeder_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -229,7 +229,7 @@ esc_building_nanite_foundry = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_nanite_breeder_drone_add = 2
+			job_esc_nanite_breeder_drone_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -284,7 +284,7 @@ esc_building_crystal_farm_1 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_add = 2
+			job_esc_crystal_farmer_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -302,7 +302,7 @@ esc_building_crystal_farm_1 = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_drone_add = 2
+			job_esc_crystal_farmer_drone_add = @ESC_job_count_2
 		}
 	}
 	triggered_desc = {
@@ -357,7 +357,7 @@ esc_building_crystal_farm_2 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_add = 4
+			job_esc_crystal_farmer_add = @ESC_job_count_4
 		}
 	}
 	triggered_desc = {
@@ -375,7 +375,7 @@ esc_building_crystal_farm_2 = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_drone_add = 4
+			job_esc_crystal_farmer_drone_add = @ESC_job_count_4
 		}
 	}
 	triggered_desc = {
@@ -437,7 +437,7 @@ esc_building_reprocessing_plant = {
 		modifier = {
 			planet_pops_consumer_goods_upkeep_mult = -0.1
 			pop_amenities_usage_mult = -0.1
-			job_esc_reprocessor_add = 1
+			job_esc_reprocessor_add = @ESC_job_count_1
 			job_esc_reprocessor_per_pop = 0.05
 		}
 	}
@@ -457,7 +457,7 @@ esc_building_reprocessing_plant = {
 		}
 		modifier = {
 			pop_amenities_usage_no_happiness_mult = -0.2
-			job_esc_reprocessor_drone_add = 1
+			job_esc_reprocessor_drone_add = @ESC_job_count_1
 			job_esc_reprocessor_drone_per_pop = 0.05
 		}
 	}
@@ -521,82 +521,11 @@ esc_building_magmaminer_1 = {
         }
 	}
 
-	# regular empire
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_esc_planetary_core_miner_add = 2
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = no
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = esc_planetary_core_miner_effect_regular_1
-	}
-
-	# regular empire + arcology planet
-	triggered_planet_modifier = {
-		potential = {
-			ESC_TRIGGER_is_city_planet = yes
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_esc_borehole_maintainer_add = 1
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = yes
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = esc_planetary_core_miner_effect_regular_2
-	}
-
-	# gestalt empire
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_esc_planetary_core_miner_drone_add = 2
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = no
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = esc_planetary_core_miner_effect_gestalt_1
-	}
-
-	# gestalt empire + arcology planet
-	triggered_planet_modifier = {
-		potential = {
-			ESC_TRIGGER_is_city_planet = yes
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_esc_borehole_maintainer_drone_add = 1
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = yes
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = esc_planetary_core_miner_effect_gestalt_2
+	### jobs
+	inline_script = {
+		script = jobs/esc_mantle_miner_jobs
+		CORE_MINERS_AMOUNT = @ESC_job_count_2
+		BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_1
 	}
 
 	prerequisites = { "esc_tech_magmaminer_1" }
@@ -668,82 +597,11 @@ esc_building_magmaminer_2 = {
         }
 	}
 
-	# regular empire
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_esc_planetary_core_miner_add = 5
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = no
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = esc_planetary_core_miner_effect_regular_1
-	}
-
-	# regular empire + arcology planet
-	triggered_planet_modifier = {
-		potential = {
-			ESC_TRIGGER_is_city_planet = yes
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_esc_borehole_maintainer_add = 2
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = yes
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = esc_planetary_core_miner_effect_regular_2
-	}
-
-	# gestalt empire
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_esc_planetary_core_miner_drone_add = 5
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = no
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = esc_planetary_core_miner_effect_gestalt_1
-	}
-
-	# gestalt empire + arcology planet
-	triggered_planet_modifier = {
-		potential = {
-			ESC_TRIGGER_is_city_planet = yes
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_esc_borehole_maintainer_drone_add = 2
-		}
-	}
-	triggered_desc = {
-        trigger = {
-			ESC_TRIGGER_is_city_planet = yes
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = esc_planetary_core_miner_effect_gestalt_2
+	### jobs
+	inline_script = {
+		script = jobs/esc_mantle_miner_jobs
+		CORE_MINERS_AMOUNT = @ESC_job_count_5
+		BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_2
 	}
 
 	prerequisites = { "esc_tech_magmaminer_2" }
