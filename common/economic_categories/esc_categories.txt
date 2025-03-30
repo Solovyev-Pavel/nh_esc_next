@@ -14,9 +14,10 @@ megastructures = {
         produces
         upkeep
 	}
-    generate_add_modifiers = {
-		cost
-        produces
-        upkeep
-	}
+	### apparently in 3.99.0-5 this no longer works and causes game to crash
+    # generate_add_modifiers = {
+	# 	cost
+	# 	produces
+	# 	upkeep
+	# }
 }
