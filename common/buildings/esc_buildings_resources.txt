@@ -45,24 +45,17 @@ esc_building_zro_distillery = {
         }
 	}
 
-	# regular empires
+	# resgular empires
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_zro_distiller_add = @ESC_job_count_2
+			planet_researchers_sr_zro_produces_add = 1
+			planet_researchers_consumer_goods_upkeep_add = 2
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = job_esc_zro_distiller_effect_desc
-	}
-
 	# gestalt empires
 	triggered_planet_modifier = {
 		potential = {
@@ -70,16 +63,46 @@ esc_building_zro_distillery = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_zro_distiller_drone_add = @ESC_job_count_2
+			planet_researchers_sr_zro_produces_add = 1
+			planet_researchers_energy_upkeep_add = 4
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_hive_empire = yes }
-        }
-        text = job_esc_zro_distiller_drone_effect_desc
-	}
+
+	# regular empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_zro_distiller_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_regular_empire = yes }
+    #     }
+    #     text = job_esc_zro_distiller_effect_desc
+	# }
+
+	# gestalt empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_zro_distiller_drone_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_hive_empire = yes }
+    #     }
+    #     text = job_esc_zro_distiller_drone_effect_desc
+	# }
 
 	prerequisites = { "esc_tech_zro_distilleries" }
 
@@ -126,41 +149,65 @@ esc_building_dark_matter_facility = {
         }
 	}
 
-	# regular empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
+		# resgular empires
+		triggered_planet_modifier = {
+			potential = {
+				exists = owner
+				owner = { is_regular_empire = yes }
+			}
+			modifier = {
+				planet_researchers_sr_dark_matter_produces_add = 1
+				planet_researchers_consumer_goods_upkeep_add = 2
+				planet_researchers_energy_upkeep_add = 2
+			}
 		}
-		modifier = {
-			job_esc_dark_matter_shaper_add = @ESC_job_count_2
+		# gestalt empires
+		triggered_planet_modifier = {
+			potential = {
+				exists = owner
+				owner = { is_gestalt = yes }
+			}
+			modifier = {
+				planet_researchers_sr_dark_matter_produces_add = 1
+				planet_researchers_energy_upkeep_add = 6
+			}
 		}
-	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = job_esc_dark_matter_shaper_effect_desc
-	}
 
-	# gestalt empires
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_esc_dark_matter_shaper_drone_add = @ESC_job_count_2
-		}
-	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = job_esc_dark_matter_shaper_drone_effect_desc
-	}
+	# # regular empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_dark_matter_shaper_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_regular_empire = yes }
+    #     }
+    #     text = job_esc_dark_matter_shaper_effect_desc
+	# }
+
+	# # gestalt empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_dark_matter_shaper_drone_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_gestalt = yes }
+    #     }
+    #     text = job_esc_dark_matter_shaper_drone_effect_desc
+	# }
 
 	prerequisites = { "esc_tech_dark_matter_facilities" }
 
@@ -204,24 +251,18 @@ esc_building_nanite_foundry = {
         }
 	}
 
-	# regular empires
+	# resgular empires
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_nanite_breeder_add = @ESC_job_count_2
+			planet_metallurgists_nanites_produces_add = 1
+			planet_metallurgists_minerals_upkeep_add = 3
+			planet_metallurgists_consumer_goods_upkeep_add = 1
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = job_esc_nanite_breeder_effect_desc
-	}
-
 	# gestalt empires
 	triggered_planet_modifier = {
 		potential = {
@@ -229,16 +270,47 @@ esc_building_nanite_foundry = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_nanite_breeder_drone_add = @ESC_job_count_2
+			planet_metallurgists_nanites_produces_add = 1
+			planet_metallurgists_minerals_upkeep_add = 3
+			planet_metallurgists_energy_upkeep_add = 2
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = job_esc_nanite_breeder_drone_effect_desc
-	}
+
+	# # regular empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_nanite_breeder_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_regular_empire = yes }
+    #     }
+    #     text = job_esc_nanite_breeder_effect_desc
+	# }
+
+	# # gestalt empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_nanite_breeder_drone_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_gestalt = yes }
+    #     }
+    #     text = job_esc_nanite_breeder_drone_effect_desc
+	# }
 
 	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 
@@ -277,24 +349,19 @@ esc_building_crystal_farm_1 = {
 
 	upgrades = { esc_building_crystal_farm_2 }
 
-	# regular empires
+	# resgular empires
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_add = @ESC_job_count_2
+			planet_farmers_food_produces_add = -1
+			planet_farmers_rare_crystals_produces_add = 0.5
+			planet_farmers_minerals_upkeep_add = 1
+			planet_farmers_consumer_goods_upkeep_add = 0.5
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = job_esc_crystal_farmer_effect_desc
-	}
-
 	# gestalt empires
 	triggered_planet_modifier = {
 		potential = {
@@ -302,16 +369,48 @@ esc_building_crystal_farm_1 = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_drone_add = @ESC_job_count_2
+			planet_farmers_food_produces_add = -1
+			planet_farmers_rare_crystals_produces_add = 0.5
+			planet_farmers_minerals_upkeep_add = 1
+			planet_farmers_energy_upkeep_add = 1
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = job_esc_crystal_farmer_drone_effect_desc
-	}
+
+	# # regular empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_crystal_farmer_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_regular_empire = yes }
+    #     }
+    #     text = job_esc_crystal_farmer_effect_desc
+	# }
+
+	# # gestalt empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_crystal_farmer_drone_add = @ESC_job_count_2
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_gestalt = yes }
+    #     }
+    #     text = job_esc_crystal_farmer_drone_effect_desc
+	# }
 
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 
@@ -350,24 +449,19 @@ esc_building_crystal_farm_2 = {
         }
     }
 
-	# regular empires
+	# resgular empires
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_add = @ESC_job_count_4
+			planet_farmers_food_produces_add = -1
+			planet_farmers_rare_crystals_produces_add = 1
+			planet_farmers_minerals_upkeep_add = 2
+			planet_farmers_consumer_goods_upkeep_add = 1
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        text = job_esc_crystal_farmer_effect_desc
-	}
-
 	# gestalt empires
 	triggered_planet_modifier = {
 		potential = {
@@ -375,16 +469,48 @@ esc_building_crystal_farm_2 = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_esc_crystal_farmer_drone_add = @ESC_job_count_4
+			planet_farmers_food_produces_add = -1
+			planet_farmers_rare_crystals_produces_add = 1
+			planet_farmers_minerals_upkeep_add = 2
+			planet_farmers_energy_upkeep_add = 2
 		}
 	}
-	triggered_desc = {
-        trigger = {
-            exists = owner
-            owner = { is_gestalt = yes }
-        }
-        text = job_esc_crystal_farmer_drone_effect_desc
-	}
+
+	# # regular empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_regular_empire = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_crystal_farmer_add = @ESC_job_count_4
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_regular_empire = yes }
+    #     }
+    #     text = job_esc_crystal_farmer_effect_desc
+	# }
+
+	# # gestalt empires
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { is_gestalt = yes }
+	# 	}
+	# 	modifier = {
+	# 		job_esc_crystal_farmer_drone_add = @ESC_job_count_4
+	# 	}
+	# }
+	# triggered_desc = {
+    #     trigger = {
+    #         exists = owner
+    #         owner = { is_gestalt = yes }
+    #     }
+    #     text = job_esc_crystal_farmer_drone_effect_desc
+	# }
 
 	prerequisites = { "esc_tech_improved_crystal_farm" }
 

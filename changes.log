@@ -242,3 +242,31 @@
 
 >>> 17.11.2024
 - Rearrange computers in the file to at least reduce the number of fake rows produced in the new UI.
+
+>>> 05.12.2024
+- Add biological components for all domesticated space fauna.
+- Add crystalline weapons for crystalline domesticated space fauna.
+- Add cloud lightning weapon for all domesticated space fauna.
+- Tweak ESC economic plan so that - hopefully - AI empires have enough food production to hatch space creatures.
+- Fix wrong upgrades_to for Juggernaut point defense.
+- Fix description of bio-material armor.
+
+>>> 05.01.2025
+- Add 'Dead Hand Switch: Kill Command' and 'Dead Hand Switch: Annihilate Command' aux components that mimic effects of Catalytic Bladded (damage enemy on death) for normal ships.
+- Add 'Dead Hand Switch: Repair Ally Command' and 'Dead Hand Switch: Support Ally Command' aux components that mimic effects of Restorative Enzymes (heal allied ship on death) for normal ships.
+- Add 'Nanite Reconstruction Beam' aux component that allows ships to repair themselves by damaging enemies.
+
+>>> 11.01.2025
+- Add scripted variables to indicate that the mod is present.
+- Add Vengeance Sections Expanded and Kurosections Expanded support.
+- Update Chinese localisation.
+- Housekeeping for reactor and thruster components.
+
+>>> 04.03.2025
+- Updated for Stellaris 3.99.6 beta
+- Technology Institute, Advanced Materials Laboratory and Culture Nexus (or substitutes) have had their influence production reduced to 0.25 per month.
+- Central Research Bureau now produces 0.25 infulence per month.
+- Adjusted job count for gestals in several research buildings.
+- Strategic resource jobs have been deprecated. Buildings that previously hosted them now make standard jobs produce strategic resources and increase their upkeep accordingly.
+- Adjust economic plan. It is now fully implemented as subplans for basic economic plan (vanilla).
+- Futher code clean up for reactors and their inlines.
