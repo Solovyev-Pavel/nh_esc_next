@@ -84,10 +84,10 @@ ESC_TRIGGER_can_host_mantle_miner = {
     OR = {
         AND = {
             ESC_TRIGGER_is_city_planet = yes
-            OR = {
-                free_district_slots > 4 # need at least 5
-                has_deposit = d_esc_large_borehole_1
-            }
+            # OR = {
+            #     free_district_slots > 4 # need at least 5
+            #     has_deposit = d_esc_large_borehole_1
+            # }
         }
         ESC_TRIGGER_is_naked_mantle_planet = yes
     }
@@ -111,7 +111,7 @@ ESC_TRIGGER_can_build_mantle_miner = {
         AND = {
             ESC_TRIGGER_is_naked_mantle_planet = yes
             has_fully_upgraded_capital = yes
-            num_pops > 49
+            #num_pops > 49
         }
     }
 }

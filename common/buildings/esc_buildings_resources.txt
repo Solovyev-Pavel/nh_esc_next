@@ -54,6 +54,7 @@ esc_building_zro_distillery = {
 		modifier = {
 			planet_researchers_sr_zro_produces_add = 1
 			planet_researchers_consumer_goods_upkeep_add = 2
+			planet_researchers_energy_upkeep_add = 3
 		}
 	}
 	# gestalt empires
@@ -64,7 +65,7 @@ esc_building_zro_distillery = {
 		}
 		modifier = {
 			planet_researchers_sr_zro_produces_add = 1
-			planet_researchers_energy_upkeep_add = 4
+			planet_researchers_energy_upkeep_add = 7
 		}
 	}
 
@@ -327,7 +328,7 @@ esc_building_nanite_foundry = {
 esc_building_crystal_farm_1 = {
     base_buildtime = 360
 	icon = esc_building_crystal_farm_1
-	category = manufacturing
+	category = resource
 
 	potential = {
 		NOT = { has_modifier = resort_colony }
@@ -427,7 +428,7 @@ esc_building_crystal_farm_1 = {
 esc_building_crystal_farm_2 = {
     base_buildtime = 360
 	icon = esc_building_crystal_farm_2
-	category = manufacturing
+	category = resource
 	can_build = no
 
 	potential = {
@@ -647,12 +648,45 @@ esc_building_magmaminer_1 = {
         }
 	}
 
-	### jobs
-	inline_script = {
-		script = jobs/esc_mantle_miner_jobs
-		CORE_MINERS_AMOUNT = @ESC_job_count_2
-		BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_1
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 16
+			planet_miners_engineering_research_produces_add = 10
+			planet_miners_rare_crystals_produces_add = 1
+			planet_miners_consumer_goods_upkeep_add = 5
+			planet_miners_energy_upkeep_add = 7.5
+			planet_miners_alloys_upkeep_add = 1
+		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 16
+			planet_miners_engineering_research_produces_add = 10
+			planet_miners_rare_crystals_produces_add = 1
+			planet_miners_energy_upkeep_add = 15
+			planet_miners_alloys_upkeep_add = 1
+		}
+	}
+
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @ESC_job_count_10
+	}
+
+	### jobs
+	# inline_script = {
+	# 	script = jobs/esc_mantle_miner_jobs
+	# 	CORE_MINERS_AMOUNT = @ESC_job_count_2
+	# 	BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_1
+	# }
 
 	prerequisites = { "esc_tech_magmaminer_1" }
 
@@ -723,12 +757,45 @@ esc_building_magmaminer_2 = {
         }
 	}
 
-	### jobs
-	inline_script = {
-		script = jobs/esc_mantle_miner_jobs
-		CORE_MINERS_AMOUNT = @ESC_job_count_5
-		BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_2
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 16
+			planet_miners_engineering_research_produces_add = 10
+			planet_miners_rare_crystals_produces_add = 1
+			planet_miners_consumer_goods_upkeep_add = 5
+			planet_miners_energy_upkeep_add = 7.5
+			planet_miners_alloys_upkeep_add = 1
+		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 16
+			planet_miners_engineering_research_produces_add = 10
+			planet_miners_rare_crystals_produces_add = 1
+			planet_miners_energy_upkeep_add = 15
+			planet_miners_alloys_upkeep_add = 1
+		}
+	}
+
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @ESC_job_count_15
+	}
+
+	### jobs
+	# inline_script = {
+	# 	script = jobs/esc_mantle_miner_jobs
+	# 	CORE_MINERS_AMOUNT = @ESC_job_count_5
+	# 	BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_2
+	# }
 
 	prerequisites = { "esc_tech_magmaminer_2" }
 

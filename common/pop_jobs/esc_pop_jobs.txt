@@ -515,9 +515,12 @@
 ### Reprocessing Plant Operator
 esc_reprocessor = {
     category = specialist
-    condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = esc_building_reprocessing_plant
-	clothes_texture_index = 2
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = esc_building_reprocessing_plant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -595,18 +598,18 @@ esc_reprocessor = {
             factor = 0.75
             has_trait = trait_nerve_stapled
         }
-        modifier = {
-            factor = 5
-            has_job = esc_reprocessor
-        }
     }
 }
 
 ### Reprocessing Plant Drone
 esc_reprocessor_drone = {
     category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = esc_building_reprocessing_plant
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = esc_building_reprocessing_plant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -695,10 +698,6 @@ esc_reprocessor_drone = {
         modifier = {
             factor = 0.75
             has_trait = trait_nerve_stapled
-        }
-        modifier = {
-            factor = 5
-            has_job = esc_reprocessor_drone
         }
     }
 }
@@ -1196,368 +1195,269 @@ esc_reprocessor_drone = {
 ############################################################
 
 ### Planetary Core Miner
-esc_planetary_core_miner = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = esc_building_magmaminer_2
-	clothes_texture_index = 2
+# esc_planetary_core_miner = {
+# 	category = specialist
+# 	swappable_data = {
+# 		default = {
+# 			condition_string = SPECIALIST_JOB_TRIGGER
+# 			building_icon = esc_building_magmaminer_2
+# 		}
+# 	}
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-    possible_precalc = can_fill_specialist_job
-    possible = {
-        hidden_trigger = { exists = owner }
-        owner = { is_gestalt = no }
-        complex_specialist_job_check_trigger = yes
-    }
+#     possible_precalc = can_fill_specialist_job
+#     possible = {
+#         hidden_trigger = { exists = owner }
+#         owner = { is_gestalt = no }
+#         complex_specialist_job_check_trigger = yes
+#     }
 
-    resources = {
-        category = planet_miners
-        # base production
-        produces = {
-			minerals = 20
-			engineering_research = 5
-		}
-        # extra bonus from purification plant/hub
-        produces = {
-            trigger = {
-                planet = {
-					OR = {
-						has_building = building_mineral_purification_plant
-						has_building = building_mineral_purification_hub
-					}
-				}
-            }
-            minerals = 4
-        }
-        # upkeep : non-lithoid biologicals
-        upkeep = {
-			trigger = {
-				NOR = {
-					has_trait = trait_lithoid
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			food = 5
-			consumer_goods = 5
-			energy = 5
-		}
-        # upkeep : lithoids
-		upkeep = {
-			trigger = { has_trait = trait_lithoid }
-			minerals = 5
-			consumer_goods = 5
-			energy = 5
-		}
-        # upkeep : machines
-		upkeep = {
-			trigger = {
-				OR = {
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			consumer_goods = 5
-			energy = 10
-		}
+#     resources = {
+#         category = planet_miners
+#         # base production
+#         produces = {
+# 			minerals = 20
+# 			engineering_research = 5
+# 		}
+#         # extra bonus from purification plant/hub
+#         produces = {
+#             trigger = {
+#                 planet = {
+# 					OR = {
+# 						has_building = building_mineral_purification_plant
+# 						has_building = building_mineral_purification_hub
+# 					}
+# 				}
+#             }
+#             minerals = 4
+#         }
+#         # upkeep
+#         upkeep = {
+# 			consumer_goods = 5
+# 			energy = 7
+# 		}
 
-		### AlphaMod resources
-		# produces = {
-		# 	trigger = {
-		# 		has_global_flag = gf_alphamod_activated
-		# 	}
-		# 	sr_actinides = 1
-		# 	sr_precious_stones = 1
-		# 	sr_rare_metals = 1
-		# }
-		# produces = {
-		# 	trigger = {
-		# 		planet = { colony_type = col_mining }
-		# 		has_global_flag = gf_alphamod_activated
-		# 	}
-		# 	sr_actinides = 0.2
-		# 	sr_precious_stones = 0.2
-		# 	sr_rare_metals = 0.2
-		# }
-	}
+# 		### AlphaMod resources
+# 		# produces = {
+# 		# 	trigger = {
+# 		# 		has_global_flag = gf_alphamod_activated
+# 		# 	}
+# 		# 	sr_actinides = 1
+# 		# 	sr_precious_stones = 1
+# 		# 	sr_rare_metals = 1
+# 		# }
+# 		# produces = {
+# 		# 	trigger = {
+# 		# 		planet = { colony_type = col_mining }
+# 		# 		has_global_flag = gf_alphamod_activated
+# 		# 	}
+# 		# 	sr_actinides = 0.2
+# 		# 	sr_precious_stones = 0.2
+# 		# 	sr_rare_metals = 0.2
+# 		# }
+# 	}
 
-    weight = {
-		weight = @specialist_job_weight
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 2
-			has_trait = trait_strong
-			has_trait = trait_very_strong
-			has_trait = trait_industrious
-			has_trait = trait_resilient
-			has_trait = trait_robot_efficient_processors
-			has_trait = trait_robot_power_drills
-		}
-		modifier = {
-			factor = 1.5
-			has_job = esc_planetary_core_miner
-		}
-	}
-}
+#     weight = {
+# 		weight = @specialist_job_weight
+# 		modifier = {
+# 			factor = 0.2
+# 			has_citizenship_rights = no
+# 			NOT = { has_trait = trait_mechanical }
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			has_trait = trait_strong
+# 			has_trait = trait_very_strong
+# 			has_trait = trait_industrious
+# 			has_trait = trait_resilient
+# 			has_trait = trait_robot_efficient_processors
+# 			has_trait = trait_robot_power_drills
+# 		}
+# 	}
+# }
 
 ### Planetary Core Miner Drone
-esc_planetary_core_miner_drone = {
-	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = esc_building_dark_matter_facility
+# esc_planetary_core_miner_drone = {
+# 	category = complex_drone
+# 	swappable_data = {
+# 		default = {
+# 			condition_string = DRONE_JOB_TRIGGER
+# 			building_icon = esc_building_dark_matter_facility
+# 		}
+# 	}
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_drone_job
-    possible = {
-        hidden_trigger = { exists = owner }
-        owner = { is_gestalt = yes }
-    }
+# 	possible_precalc = can_fill_drone_job
+#     possible = {
+#         hidden_trigger = { exists = owner }
+#         owner = { is_gestalt = yes }
+#     }
 
-    resources = {
-        category = planet_miners
-        # base production
-        produces = {
-			minerals = 20
-			engineering_research = 5
-		}
-        # extra bonus from purification plant/hub
-        produces = {
-            trigger = {
-                planet = {
-					OR = {
-						has_building = building_mineral_purification_plant
-						has_building = building_mineral_purification_hub
-					}
-				}
-            }
-            minerals = 4
-        }
-        # upkeep : non-lithoid biologicals
-        upkeep = {
-			trigger = {
-				NOR = {
-					has_trait = trait_lithoid
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			food = 10
-			energy = 5
-		}
-        # upkeep : lithoids
-		upkeep = {
-			trigger = { has_trait = trait_lithoid }
-			minerals = 10
-			energy = 5
-		}
-        # upkeep : machines
-        upkeep = {
-			trigger = {
-				OR = {
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			energy = 10
-			alloys = 2.5
-		}
+#     resources = {
+#         category = planet_miners
+#         # base production
+#         produces = {
+# 			minerals = 20
+# 			engineering_research = 5
+# 		}
+#         # extra bonus from purification plant/hub
+#         produces = {
+#             trigger = {
+#                 planet = {
+# 					OR = {
+# 						has_building = building_mineral_purification_plant
+# 						has_building = building_mineral_purification_hub
+# 					}
+# 				}
+#             }
+#             minerals = 4
+#         }
+#         # upkeep
+#         upkeep = {
+# 			alloys = 1
+# 			energy = 10
+# 		}
 
-		### AlphaMod resources
-		# produces = {
-		# 	trigger = {
-		# 		has_global_flag = gf_alphamod_activated
-		# 	}
-		# 	sr_actinides = 1
-		# 	sr_precious_stones = 1
-		# 	sr_rare_metals = 1
-		# }
-		# produces = {
-		# 	trigger = {
-		# 		planet = { colony_type = col_mining }
-		# 		has_global_flag = gf_alphamod_activated
-		# 	}
-		# 	sr_actinides = 0.2
-		# 	sr_precious_stones = 0.2
-		# 	sr_rare_metals = 0.2
-		# }
-	}
+# 		### AlphaMod resources
+# 		# produces = {
+# 		# 	trigger = {
+# 		# 		has_global_flag = gf_alphamod_activated
+# 		# 	}
+# 		# 	sr_actinides = 1
+# 		# 	sr_precious_stones = 1
+# 		# 	sr_rare_metals = 1
+# 		# }
+# 		# produces = {
+# 		# 	trigger = {
+# 		# 		planet = { colony_type = col_mining }
+# 		# 		has_global_flag = gf_alphamod_activated
+# 		# 	}
+# 		# 	sr_actinides = 0.2
+# 		# 	sr_precious_stones = 0.2
+# 		# 	sr_rare_metals = 0.2
+# 		# }
+# 	}
 
-    weight = {
-		weight = @complex_drone_job_weight
-		modifier = {
-			factor = 2
-			has_trait = trait_strong
-			has_trait = trait_very_strong
-			has_trait = trait_industrious
-			has_trait = trait_resilient
-            has_trait = trait_robot_power_drills
-		}
-		modifier = {
-			factor = 1.5
-			has_job = esc_planetary_core_miner_drone
-		}
-	}
-}
+#     weight = {
+# 		weight = @complex_drone_job_weight
+# 		modifier = {
+# 			factor = 2
+# 			has_trait = trait_strong
+# 			has_trait = trait_very_strong
+# 			has_trait = trait_industrious
+# 			has_trait = trait_resilient
+#             has_trait = trait_robot_power_drills
+# 		}
+# 	}
+# }
 
 ### Borehole Maintainer
-esc_borehole_maintainer = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-    building_icon = esc_building_magmaminer_2
-	clothes_texture_index = 2
+# esc_borehole_maintainer = {
+# 	category = specialist
+# 	swappable_data = {
+# 		default = {
+# 			condition_string = SPECIALIST_JOB_TRIGGER
+# 			building_icon = esc_building_magmaminer_2
+# 		}
+# 	}
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-    possible_precalc = can_fill_specialist_job
-    possible = {
-        hidden_trigger = { exists = owner }
-        owner = { is_gestalt = no }
-        complex_specialist_job_check_trigger = yes
-    }
+#     possible_precalc = can_fill_specialist_job
+#     possible = {
+#         hidden_trigger = { exists = owner }
+#         owner = { is_gestalt = no }
+#         complex_specialist_job_check_trigger = yes
+#     }
 
- 	resources = {
-		category = planet_miners
-        # base production
-		produces = {
-			rare_crystals = 1
-			engineering_research = 8
-		}
-        # upkeep : non-lithoid biologicals
-		upkeep = {
-			trigger = {
-				NOR = {
-					has_trait = trait_lithoid
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			consumer_goods = 2
-			food = 1.5
-			alloys = 1
-		}
-        # upkeep : lithoids
-		upkeep = {
-			trigger = { has_trait = trait_lithoid }
-			consumer_goods = 2
-			minerals = 1.5
-			alloys = 1
-		}
-        # upkeep : machines
-		upkeep = {
-			trigger = {
-				OR = {
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			consumer_goods = 2
-			energy = 2
-			alloys = 1
-		}
-	}
+#  	resources = {
+# 		category = planet_miners
+#         # base production
+# 		produces = {
+# 			rare_crystals = 1
+# 			engineering_research = 8
+# 		}
+#         # upkeep
+# 		upkeep = {
+# 			consumer_goods = 2
+# 			alloys = 1
+# 		}
+# 	}
 
-	weight = {
-		weight = @specialist_job_weight
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 1.5
-			has_job = esc_borehole_maintainer
-		}
-	}
-}
+# 	weight = {
+# 		weight = @specialist_job_weight
+# 		modifier = {
+# 			factor = 0.2
+# 			has_citizenship_rights = no
+# 			NOT = { has_trait = trait_mechanical }
+# 		}
+# 	}
+# }
 
 ### Borehole Maintenance Drone
-esc_borehole_maintainer_drone = {
-	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = esc_building_dark_matter_facility
+# esc_borehole_maintainer_drone = {
+# 	category = complex_drone
+# 	swappable_data = {
+# 		default = {
+# 			condition_string = DRONE_JOB_TRIGGER
+# 			building_icon = esc_building_dark_matter_facility
+# 		}
+# 	}
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_drone_job
-    possible = {
-        hidden_trigger = { exists = owner }
-        owner = { is_gestalt = yes }
-    }
+# 	possible_precalc = can_fill_drone_job
+#     possible = {
+#         hidden_trigger = { exists = owner }
+#         owner = { is_gestalt = yes }
+#     }
 
- 	resources = {
-		category = planet_miners
-        # base production
-		produces = {
-			rare_crystals = 1
-			engineering_research = 8
-		}
-        # upkeep : non-lithoid biologicals
-		upkeep = {
-			trigger = {
-				NOR = {
-					has_trait = trait_lithoid
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			food = 5
-			alloys = 1
-		}
-        # upkeep : lithoids
-		upkeep = {
-			trigger = { has_trait = trait_lithoid }
-			minerals = 5
-			alloys = 1
-		}
-        # upkeep : machines
-        upkeep = {
-			trigger = {
-				OR = {
-					has_trait = trait_mechanical
-					has_trait = trait_machine_unit
-				}
-			}
-			energy = 4
-			alloys = 1.5
-		}
-	}
+#  	resources = {
+# 		category = planet_miners
+#         # base production
+# 		produces = {
+# 			rare_crystals = 1
+# 			engineering_research = 8
+# 		}
+#         # upkeep
+# 		upkeep = {
+# 			energy = 4
+# 			alloys = 1
+# 		}
+# 	}
 
-	weight = {
-		weight = @complex_drone_job_weight
-		modifier = {
-			factor = 1.5
-			has_job = esc_borehole_maintainer_drone
-		}
-	}
-}
+# 	weight = {
+# 		weight = @complex_drone_job_weight
+# 		modifier = {
+# 			factor = 1.5
+# 			has_job = esc_borehole_maintainer_drone
+# 		}
+# 	}
+# }
 
 ############################################################
 ###       Cerebral Node / Network Regulator Jobs         ###
@@ -1566,8 +1466,12 @@ esc_borehole_maintainer_drone = {
 ### Mind Walker Drone
 esc_mind_walker = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_hive_capital
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_hive_capital
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1598,21 +1502,9 @@ esc_mind_walker = {
 		produces = {
 			unity = 4
 		}
-        # upkeep : non-lighoids
+        # upkeep
 		upkeep = {
-			trigger = {
-				NOT = { has_trait = trait_lithoid }
-			}
-			food = 2
-			energy = 2
-		}
-        # upkeep : lithoids
-		upkeep = {
-			trigger = {
-				has_trait = trait_lithoid
-			}
-			minerals = 2
-			energy = 2
+			energy = 3
 		}
 	}
 
@@ -1624,8 +1516,12 @@ esc_mind_walker = {
 ### Network Curator
 esc_network_curator = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_machine_capital
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_machine_capital
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
