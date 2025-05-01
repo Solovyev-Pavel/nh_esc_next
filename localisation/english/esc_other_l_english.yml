@@ -66,6 +66,9 @@ mod_planet_metallurgists_consumer_goods_upkeep_add: "£consumer_goods£ $consume
 mod_planet_researchers_sr_zro_produces_add: "£sr_zro£ $sr_zro$ from £job_researcher£ $job_researcher_plural$"
 mod_planet_miners_alloys_upkeep_add: "£alloys£ $alloys$ Upkeep of £job_miner£ $job_miner_plural$"
 
+mod_esc_weapon_effect_healing: "Repairs some $HITPOINTS$ or $ARMOR$ when dealing damage to the targets"
+mod_esc_weapon_effect_critical_damage: "This weapon can sometimes deal critical hits that do increased damage to the targte"
+
 ############################################################
 ###                         Armies                       ###
 ############################################################
@@ -225,6 +228,32 @@ esc_ai_dark_matter_boost_desc: "Monthly £sr_dark_matter£ §Y$sr_dark_matter$§
 
 esc_mercenary_boost: "Mercenary Enclave boost"
 esc_mercenary_boost_desc: "Monthly strategic resources for the mercenary enclave"
+
+# on-hit weapon effects
+esc_biological_weapon_armor_hardening_debuff_1: "Corrosive substances"
+esc_biological_weapon_armor_hardening_debuff_1_desc: "Accidic and corrosive substances in the bile of the weaponized space creatures sticks to ship hulls and causes damage to the outer layers of armor, reducing its structural integrity"
+esc_biological_weapon_armor_hardening_debuff_2: "$esc_biological_weapon_armor_hardening_debuff_1$"
+esc_biological_weapon_armor_hardening_debuff_2_desc: "$esc_biological_weapon_armor_hardening_debuff_1_desc$"
+
+esc_gravitic_weapon_movement_speed_debuff_1: "Lingering Gravitic Anomaly"
+esc_gravitic_weapon_movement_speed_debuff_1_desc: "Gravitic anomaly left in the wake of microsingularity's explosive evaporation creates issues for ship movement, reducing their speed and maneuverability."
+esc_gravitic_weapon_movement_speed_debuff_2: "$esc_gravitic_weapon_movement_speed_debuff_1$"
+esc_gravitic_weapon_movement_speed_debuff_2_desc: "$esc_gravitic_weapon_movement_speed_debuff_1_desc$"
+
+esc_nanite_weapons_armor_damage_debuff_1: "Aggressive Disassembly Nanobots"
+esc_nanite_weapons_armor_damage_debuff_1_desc: "These nanites are programmed to aggressively disassemble any matter they find themselves latched on, resulting in continuous damage to the targets they were used against."
+esc_nanite_weapons_armor_damage_debuff_2: "$esc_nanite_weapons_armor_damage_debuff_1$"
+esc_nanite_weapons_armor_damage_debuff_2_desc: "$esc_nanite_weapons_armor_damage_debuff_1_desc$"
+
+esc_psionic_weapons_accuracy_debuff_1: "Thought Disruption"
+esc_psionic_weapons_accuracy_debuff_1_desc: "Lingering effects of psionic attacks that make it harder for minds to focus on tasks."
+esc_psionic_weapons_accuracy_debuff_2: "$esc_psionic_weapons_accuracy_debuff_1$"
+esc_psionic_weapons_accuracy_debuff_2_desc: "$esc_psionic_weapons_accuracy_debuff_1_desc$"
+
+esc_tesla_weapons_fire_rate_debuff_1: "Power Surges"
+esc_tesla_weapons_fire_rate_debuff_1_desc: "Extreme powers of Tesla weapons cause lasting power surges in target ships' energy grids, leading to subpar performance of their weapons."
+esc_tesla_weapons_fire_rate_debuff_2: "$esc_tesla_weapons_fire_rate_debuff_1$"
+esc_tesla_weapons_fire_rate_debuff_2_desc: "$esc_tesla_weapons_fire_rate_debuff_1_desc$"
 
 ############################################################
 ###                         Flags                        ###
