@@ -69,6 +69,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
 
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
@@ -124,6 +129,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -181,6 +191,11 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -241,6 +256,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
 
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
@@ -295,6 +315,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_medium"
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler }
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -351,6 +376,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_large"
 	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -419,6 +449,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
@@ -485,6 +520,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
@@ -513,7 +553,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 1300 max = 2600 }
 	windup = { min = 12 max = 47 }
@@ -548,6 +588,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
@@ -581,7 +626,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 1600 max = 2800 }
 	windup = { min = 12 max = 47 }
@@ -615,6 +660,11 @@ weapon_component_template = {
 	upgrades_to = ESC_GRAVITY_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -650,7 +700,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 5000 max = 9500 }
 	windup = { min = 30 max = 100 }
@@ -684,6 +734,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
@@ -714,7 +769,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 5000 max = 9500 }
 	windup = { min = 30 max = 100 }
@@ -748,6 +803,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -821,6 +881,11 @@ strike_craft_component_template = {
 	armor_damage = @ESC_WEAPON_gravitic_bombers_armor_damage
 	shield_penetration = @ESC_WEAPON_gravitic_bombers_shield_penetration
 	shield_damage = @ESC_WEAPON_gravitic_bombers_shield_damage
+
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_GRAVITY_BOMBERS

@@ -69,6 +69,11 @@ strike_craft_component_template = {
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
 
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_FIGHTERS_HANGAR_4
 	prerequisites = { "esc_tech_strikecraft_4" }
@@ -129,6 +134,11 @@ strike_craft_component_template = {
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
 
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_BOMBERS_HANGAR_4
 	prerequisites = { "esc_tech_strikecraft_4" }
@@ -187,6 +197,11 @@ strike_craft_component_template = {
 	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_FIGHTERS_HANGAR_5
@@ -248,6 +263,11 @@ strike_craft_component_template = {
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
 
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_BOMBERS_HANGAR_5
 	prerequisites = { "esc_tech_strikecraft_5" }
@@ -307,6 +327,11 @@ strike_craft_component_template = {
 	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_FIGHTERS_HANGAR_6
@@ -379,6 +404,11 @@ strike_craft_component_template = {
 	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_BOMBERS_HANGAR_6
@@ -814,6 +844,11 @@ strike_craft_component_template = {
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
 
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_MERCENRY_HANGAR_1
 	prerequisites = { "esc_tech_strikecraft_mercenary_1" }
@@ -882,6 +917,11 @@ strike_craft_component_template = {
 	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
 	armor_damage = @ESC_STRIKECRAFT_armor_damage_fighter
 	shield_penetration = @ESC_STRIKECRAFT_shield_penetration_fighter
+
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_MERCENRY_HANGAR_2

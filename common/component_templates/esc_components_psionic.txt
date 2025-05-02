@@ -76,6 +76,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
 
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -131,6 +136,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PSIONIC_CANNON_2
 	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -188,6 +198,11 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PSIONIC_CANNON_2
 	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -248,6 +263,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
 
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -302,6 +322,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_medium"
 	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_armor brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -358,6 +383,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_large"
 	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -419,6 +449,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -474,6 +509,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -531,6 +571,11 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PSIONIC_STRIKE_2
 	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -591,6 +636,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -645,6 +695,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_medium"
 	tags = { weapon_type_energy weapon_type_psionic m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -701,6 +756,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_large"
 	tags = { weapon_type_energy weapon_type_psionic l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -769,6 +829,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic g_slot }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -835,6 +900,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic g_slot }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -889,7 +959,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_psionic_lance_1" }
 	component_set = ESC_PSIONIC_LANCE_1
@@ -897,6 +967,11 @@ weapon_component_template = {
 	upgrades_to = ESC_PSIONIC_LANCE_2
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -957,7 +1032,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_psionic_lance_2" }
 	component_set = ESC_PSIONIC_LANCE_2
@@ -965,6 +1040,11 @@ weapon_component_template = {
 	upgrades_to = ESC_PSIONIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -1026,13 +1106,18 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_psionic_lance_titanic" }
 	component_set = ESC_PSIONIC_LANCE_TITANIC
 	projectile_gfx = "esc_psionic_lance"
 	tags = { weapon_type_energy weapon_type_psionic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -1090,7 +1175,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_psionic_lance_titanic" }
 	component_set = ESC_PSIONIC_LANCE_JUGGERNAUT
@@ -1098,6 +1183,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -1172,6 +1262,11 @@ strike_craft_component_template = {
 	shield_penetration = @ESC_WEAPON_psionic_strikecraft_shield_penetration
 	shield_damage = @ESC_WEAPON_psionic_strikecraft_shield_damage
 
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_PSIONIC_INTERCEPTORS
 	prerequisites = { "esc_tech_psionic_interceptors" }
@@ -1230,4 +1325,9 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_psionic }
 	ai_tags = { weapon_role_anti_armor }
 	hidden = yes
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
 }

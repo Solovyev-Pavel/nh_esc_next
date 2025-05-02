@@ -72,6 +72,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
 	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -127,6 +132,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -184,6 +194,11 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -244,6 +259,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -298,6 +318,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -354,6 +379,211 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+############################################################
+##                  Nanite Reconstructor                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_NANITE_RECONSTRUCTOR
+	size = small
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 40 max = 76 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.85
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_s_t8_cost_alloys
+			nanites = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_s_t8_upkeep_energy
+			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR
+	projectile_gfx = "esc_nanities_small"
+	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
+	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 30
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_NANITE_RECONSTRUCTOR
+	size = medium
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 100 max = 210 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.85
+	power = -34
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_m_t8_cost_alloys
+			nanites = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_m_t8_upkeep_energy
+			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR
+	projectile_gfx = "esc_nanities_medium"
+	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
+	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 75
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_NANITE_RECONSTRUCTOR
+	size = large
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 210 max = 390 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+	power = -64
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @ESC_WEAPON_l_t8_cost_alloys
+			nanites = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			energy = @ESC_WEAPON_l_t8_upkeep_energy
+			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR
+	projectile_gfx = "esc_nanities_large"
+	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 150
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -422,6 +652,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_nanite g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -488,6 +723,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_nanite g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -515,7 +755,7 @@ weapon_component_template = {
 	type = missile
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 160 max = 280 }
 	size_damage_factor = 1
@@ -557,6 +797,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -584,7 +829,7 @@ weapon_component_template = {
 	type = missile
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 190 max = 310 }
 	size_damage_factor = 1
@@ -626,6 +871,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -654,7 +904,7 @@ weapon_component_template = {
 	type = missile
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 300 max = 450 }
 	size_damage_factor = 1
@@ -695,6 +945,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_nanite t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 2
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -719,7 +974,7 @@ weapon_component_template = {
 	type = missile
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	damage = { min = 300 max = 450 }
 	size_damage_factor = 1
@@ -760,6 +1015,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 2
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -828,6 +1088,11 @@ strike_craft_component_template = {
 	armor_penetration = @ESC_WEAPON_nanite_bombers_armor_penetration
 	shield_damage = @ESC_WEAPON_nanite_bombers_shield_damage
 	shield_penetration = @ESC_WEAPON_nanite_bombers_shield_penetration
+
+	inline_script = {
+		script = ship_components_general/esc_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ship_behavior = "bombers_behavior"
 	component_set = ESC_NANITE_BOMBERS
