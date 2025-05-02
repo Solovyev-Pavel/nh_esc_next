@@ -1,0 +1,19 @@
+# critical damage weapon effect
+
+use_ship_main_target = yes
+target_type = target_enemies
+target_focus = spread
+on_hit = {
+	hidden_effect = {
+		if = {
+			limit = {
+				exists = this
+			}
+		 	random_list = {
+				$CRITICAL_HIT_CHANCE$ = { damage_ship = $CRITICAL_DAMAGE_AMOUNT$ }
+				$NORMAL_HIT_CHANCE$ = { }
+			}
+		}
+	}
+	custom_tooltip = "mod_esc_weapon_effect_critical_damage"
+}

@@ -14,7 +14,6 @@
 @ESC_WEAPON_crystalline_shields_damage = 1.0
 @ESC_WEAPON_crystalline_shields_penetration = 0.0
 
-
 ############################################################
 ##                 Crystal Shard Thrower                  ##
 ############################################################
@@ -53,26 +52,17 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
-	projectile_gfx = red_crystal_ship_projectile
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
+	projectile_gfx = "red_crystal_ship_projectile"
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 14 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -124,25 +114,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 35 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -195,25 +176,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 85 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -266,25 +238,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_2
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 170 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -340,25 +303,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 21 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -410,25 +364,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 53 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -481,25 +426,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 124 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -552,25 +488,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_3
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 237 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -625,25 +552,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 27 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -695,25 +613,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 64 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -766,25 +675,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 154 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -837,25 +737,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_4
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 301 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -911,25 +802,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 32 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -981,25 +863,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 80 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -1052,25 +925,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 176 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -1123,25 +987,16 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_5
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 349 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -1197,24 +1052,15 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 40 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -1266,24 +1112,15 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 127 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -1336,24 +1173,15 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 240 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {
@@ -1406,24 +1234,15 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	size_restriction = {
-		# only crystalline entities can equip this
-		crystal_ship_small_blue crystal_ship_small_blue_elite
-		crystal_ship_medium_blue crystal_ship_medium_blue_elite
-		crystal_ship_large_blue crystal_ship_large_blue_elite
-		crystal_ship_small_green crystal_ship_small_green_elite
-		crystal_ship_medium_green crystal_ship_medium_green_elite
-		crystal_ship_large_green crystal_ship_large_green_elite
-		crystal_ship_small_red crystal_ship_small_red_elite
-		crystal_ship_medium_red crystal_ship_medium_red_elite
-		crystal_ship_large_red crystal_ship_large_red_elite
-		crystal_ship_small_yellow crystal_ship_small_yellow_elite
-		crystal_ship_medium_yellow crystal_ship_medium_yellow_elite
-		crystal_ship_large_yellow crystal_ship_large_yellow_elite
-		crystal_splitter_ship_large_blue crystal_station_large
-	}
 	tags = { weapon_type_kinetic x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 20
+		NORMAL_HIT_CHANCE = 80
+		CRITICAL_DAMAGE_AMOUNT = 490 # (min damage + max damage) / 2
+	}
 
 	# only regular empires and xenophile FE should use this component
 	valid_for_country = {

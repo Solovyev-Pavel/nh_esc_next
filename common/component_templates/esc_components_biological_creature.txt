@@ -63,6 +63,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_BIO_CANNON_CREATURE_2
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -115,6 +120,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_CREATURE_2
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -170,6 +180,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_CREATURE_2
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -223,6 +238,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = XL_ESC_BIO_CANNON_CREATURE_2
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -281,6 +301,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_BIO_CANNON_CREATURE_3
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -333,6 +358,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_CREATURE_3
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -388,6 +418,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_CREATURE_3
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -441,6 +476,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_CREATURE_3
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -499,6 +539,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = SMALL_ESC_BIO_CANNON_CREATURE_4
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -551,6 +596,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_CREATURE_4
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -606,6 +656,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = LARGE_ESC_BIO_CANNON_CREATURE_4
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -659,6 +714,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 	upgrades_to = XL_ESC_BIO_CANNON_CREATURE_4
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -716,6 +776,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -767,6 +832,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_projectile_medium"
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -821,6 +891,11 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -873,6 +948,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_projectile_large"
 	tags = { weapon_type_kinetic weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -938,6 +1018,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -997,6 +1082,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_BIO_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -1058,6 +1148,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -1117,6 +1212,11 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_BIO_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -1182,6 +1282,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -1241,6 +1346,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_BIO_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -1302,6 +1412,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -1361,6 +1476,11 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_BIO_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -1425,6 +1545,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological s_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -1483,6 +1608,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological m_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -1543,6 +1673,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_biological l_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
@@ -1601,6 +1736,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 1
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {

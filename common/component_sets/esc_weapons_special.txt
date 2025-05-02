@@ -385,12 +385,20 @@ component_set = {
 	icon_frame = 1
 }
 
-# voidspawn missile
+# voidspawn missile  (ships + creatures)
 component_set = {
 	key = ESC_VOIDSPAWN_MISSILE
 	icon = GFX_esc_voidspawn_missile_1
 	icon_frame = 1
 }
+
+component_set = {
+	key = ESC_VOIDSPAWN_MISSILE_CREATURE
+	icon = GFX_esc_voidspawn_missile_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 
 # voidspawn missile barrage
 component_set = {
@@ -484,32 +492,60 @@ component_set = {
 ##             Component Sets: Psionic Weapons            ##
 ############################################################
 
-# psionic energy projector
+# psionic energy projector (ships + creatures)
 component_set = {
 	key = ESC_PSIONIC_CANNON_1
 	icon = GFX_esc_psionic_cannon_1
 	icon_frame = 1
 }
 
-# psionic beam cannon
+component_set = {
+	key = ESC_PSIONIC_CANNON_CREATURE_1
+	icon = GFX_esc_psionic_cannon_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# psionic beam cannon (ships + creatures)
 component_set = {
 	key = ESC_PSIONIC_CANNON_2
 	icon = GFX_esc_psionic_cannon_2
 	icon_frame = 1
 }
 
-# shroud strike
+component_set = {
+	key = ESC_PSIONIC_CANNON_CREATURE_2
+	icon = GFX_esc_psionic_cannon_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# shroud strike (ships + creatures)
 component_set = {
 	key = ESC_PSIONIC_STRIKE_1
 	icon = GFX_esc_psionic_strike_1
 	icon_frame = 1
 }
 
-# shroud wrath
+component_set = {
+	key = ESC_PSIONIC_STRIKE_CREATURE_1
+	icon = GFX_esc_psionic_strike_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# shroud wrath (ships + creatures)
 component_set = {
 	key = ESC_PSIONIC_STRIKE_2
 	icon = GFX_esc_psionic_strike_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_STRIKE_CREATURE_2
+	icon = GFX_esc_psionic_strike_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # psi-blast torpedo
