@@ -21,6 +21,12 @@ esc_building_zro_distillery = {
 	icon = esc_building_zro_distillery
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -122,6 +128,13 @@ esc_building_dark_matter_facility = {
 	base_cap_amount = 1
 	icon = esc_building_dark_matter_facility
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+		research
+	}
 
 	potential = {
 		NOT = { has_modifier = resort_colony }
@@ -227,6 +240,12 @@ esc_building_nanite_foundry = {
 	icon = esc_building_nanite_foundry
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -330,6 +349,10 @@ esc_building_crystal_farm_1 = {
 	icon = esc_building_crystal_farm_1
 	category = resource
 
+	building_sets = {
+		farming
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -431,6 +454,10 @@ esc_building_crystal_farm_2 = {
 	category = resource
 	can_build = no
 
+	building_sets = {
+		farming
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -531,6 +558,11 @@ esc_building_reprocessing_plant = {
 	icon = esc_building_reprocessing_plant
 	category = manufacturing
 
+	building_sets = {
+		industrial
+		urban
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -623,6 +655,11 @@ esc_building_magmaminer_1 = {
 	base_cap_amount = 1
 	icon = esc_building_magmaminer_1
 	category = resource
+
+	building_sets = {
+		mining
+		urban
+	}
 
 	potential = {
 		ESC_TRIGGER_can_host_mantle_miner = yes
@@ -732,6 +769,11 @@ esc_building_magmaminer_2 = {
 	can_build = no # upgrade
 	icon = esc_building_magmaminer_2
 	category = resource
+
+	building_sets = {
+		mining
+		urban
+	}
 
 	potential = {
 		ESC_TRIGGER_can_host_upgraded_mantle_miner = yes

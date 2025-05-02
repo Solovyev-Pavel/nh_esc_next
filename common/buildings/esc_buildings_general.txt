@@ -23,6 +23,12 @@ esc_building_central_research_bureau = {
 	icon = esc_building_centralresearchbureau
 	empire_limit = { base = 1 }
 
+	building_sets = {
+		research
+		government
+		urban
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -86,8 +92,13 @@ esc_building_culture_nexus = {
 	base_buildtime = 360
 	icon = esc_building_culture_nexus
 	category = unity
-
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		unity
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = slave_colony }
@@ -153,8 +164,13 @@ esc_building_cerebral_node = {
 	base_buildtime = 360
 	icon = esc_building_culture_nexus
 	category = unity
-
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		unity
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = slave_colony }
@@ -246,8 +262,13 @@ esc_building_network_regulator = {
 	base_buildtime = 360
 	icon = esc_building_culture_nexus
 	category = unity
-
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		unity
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = slave_colony }
@@ -338,8 +359,13 @@ esc_building_materials_laboratory = {
 	base_buildtime = 360
 	icon = esc_building_materials_laboratory
 	category = research
-
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		research
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = slave_colony }
@@ -387,8 +413,13 @@ esc_building_technology_institute = {
 	base_buildtime = 360
 	icon = esc_building_technology_institute
 	category = research
-
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		research
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = slave_colony }
@@ -436,8 +467,13 @@ esc_building_watcher = {
 	base_buildtime = 540
 	icon = esc_building_watcher
 	category = research
-
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		research
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = resort_colony }
@@ -495,6 +531,11 @@ esc_building_stellar_energy_tower = {
 	base_cap_amount = 1
 	icon = esc_building_stellar_energy_tower
 	category = resource
+
+	building_sets = {
+		farming
+		urban
+	}
 
 	potential = {
 		NOT = { has_modifier = resort_colony }
@@ -599,6 +640,11 @@ esc_building_quantum_node = {
 	icon = esc_building_quantum_node
 	category = research
 
+	building_sets = {
+		research
+		urban
+	}
+
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
@@ -652,6 +698,11 @@ esc_building_dragon_hatchery = {
 	icon = esc_building_dragon_hatchery
 	category = army
 	empire_limit = { base = 1 }
+
+	building_sets = {
+		government
+		urban
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }

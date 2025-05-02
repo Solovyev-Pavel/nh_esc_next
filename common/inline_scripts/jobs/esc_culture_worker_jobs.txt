@@ -6,13 +6,13 @@ triggered_planet_modifier = {
 	}
 	job_culture_worker_add = $CULTURE_WORKER_COUNT$
 }
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
-	}
-	text = job_culture_worker_effect_desc
-}
+# triggered_desc = {
+# 	trigger = {
+# 		exists = owner
+# 		owner = { ESC_TRIGGER_country_uses_culture_workers = yes }
+# 	}
+# 	text = job_culture_worker_effect_desc
+# }
 
 ### spiritualist empires without death cult/memorialist civics -> priests
 triggered_planet_modifier = {
