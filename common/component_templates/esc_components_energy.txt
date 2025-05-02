@@ -1354,6 +1354,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull }
 	ai_tag_weight = 5
 
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -1709,7 +1714,7 @@ weapon_component_template = {
 	tracking = 0.0
 
 	firing_arc = 25.0
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_3" }
 	component_set = ESC_PARTICLE_LANCE_3
@@ -1770,7 +1775,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_4" }
 	component_set =ESC_PARTICLE_LANCE_4
@@ -1832,7 +1837,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_titanic" }
 	component_set = ESC_PARTICLE_LANCE_TITANIC
@@ -1889,7 +1894,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	firing_arc = 25.0
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_titanic" }
 	component_set = ESC_PARTICLE_LANCE_JUGGERNAUT
@@ -1951,7 +1956,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arc_emitter_3" }
 	component_set = ESC_ARC_EMITTER_3
@@ -2013,7 +2018,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arc_emitter_4" }
 	component_set = ESC_ARC_EMITTER_4
@@ -2025,6 +2030,11 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
 	}
 
 	ai_weight = {
@@ -2076,7 +2086,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arc_emitter_titanic" }
 	component_set = ESC_ARC_EMITTER_TITANIC
@@ -2087,6 +2097,11 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
 	}
 
 	ai_weight = {
@@ -2134,7 +2149,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arc_emitter_titanic" }
 	component_set = ESC_ARC_EMITTER_JUGGERNAUT
@@ -2146,6 +2161,11 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
 	}
 
 	ai_weight = {
@@ -2197,7 +2217,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_wave_motion_gun_1" }
 	component_set = ESC_WAVEMOTIONGUN_1
@@ -2264,7 +2284,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_wave_motion_gun_2" }
 	component_set = ESC_WAVEMOTIONGUN_2
@@ -2332,7 +2352,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_wave_motion_gun_titanic" }
 	component_set = ESC_WAVEMOTIONGUN_3
@@ -2395,7 +2415,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_wave_motion_gun_titanic" }
 	component_set = ESC_WAVEMOTIONGUN_JUGGERNAUT
@@ -2462,7 +2482,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arcenciel" }
 	component_set = ESC_ARC_EN_CIEL
@@ -2530,7 +2550,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arcenciel_titanic" }
 	component_set = ESC_ARC_EN_CIEL_TITANIC
@@ -2594,7 +2614,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arcenciel_titanic" }
 	component_set = ESC_ARC_EN_CIEL_JUGGERNAUT
@@ -2838,7 +2858,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_extradimensional_weapon_2_x" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_X
@@ -2908,7 +2928,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_extradimensional_weapon_2_t" }
 	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_T
@@ -3149,7 +3169,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3_x" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
@@ -3217,7 +3237,7 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_3
-	use_ship_kill_target = no
+	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3_t" }
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
