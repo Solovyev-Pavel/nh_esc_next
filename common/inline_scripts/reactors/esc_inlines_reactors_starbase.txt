@@ -1,0 +1,29 @@
+### generalized inline for reactors (starbases)
+
+size = large
+icon = $REACTOR_ICON$
+icon_frame = 1
+power = @ESC_REACTOR_t$REACTOR_TIER$_power_starbase
+
+resources = {
+	category = ship_components
+}
+
+potential = {
+	ESC_ship_starbase_components = yes
+	from = {
+		country_uses_bio_ships = no
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+component_set = "power_core"
+
+ai_weight = {
+	weight = 1
+	factor = $COMPONENT_WEIGHT$
+	modifier = {
+		has_global_flag = @ACOT_active_flag
+		factor = $WEIGHT_MULT_ACOT$
+	}
+}

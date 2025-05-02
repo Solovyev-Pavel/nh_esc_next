@@ -3,16 +3,17 @@
 size = small
 icon = $REACTOR_ICON$
 icon_frame = 1
-power = @ESC_REACTOR_t$REACTOR_TIER$_power_juggernaut
+power = $POWER$
 
 resources = {
 	category = ship_components
 	cost = {
-		alloys = @ESC_REACTOR_t$REACTOR_TIER$_cost_juggernaut
+		alloys = $ALLOY_COST$
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
 	}
 	upkeep = {
-		energy = @ESC_REACTOR_t$REACTOR_TIER$_upkeep_energy_juggernaut
-		alloys = @ESC_REACTOR_t$REACTOR_TIER$_upkeep_alloys_juggernaut
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
 	}
 }
 
@@ -33,14 +34,18 @@ ai_weight = {
 		has_global_flag = @ACOT_active_flag
 		factor = $WEIGHT_MULT_ACOT$
 	}
+	### AI shouldn't use this component if it can't afford at least some upgrades right away
+	modifier = {
+		factor = 0.0
+		no_resource_for_component = { RESOURCE = $STRATEGIC_RESOURCE_TYPE$ }
+	}
 }
 
 friendly_aura = {
 	name = "juggernaut_logistics"
 	system_wide = yes
 
-	stack_info = {
-		#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+	stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
 		id = juggernaut_logistics
 		priority = 1
 	}

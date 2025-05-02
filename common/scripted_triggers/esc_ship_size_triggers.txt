@@ -1,0 +1,284 @@
+############################################################
+###           ESC Scripted Triggers (Ship Sizes)         ###
+############################################################
+
+###
+### Vanilla trigger substitutes
+###
+
+# ESC overwrite for ship_sizes that use starbase components
+ESC_ship_uses_starbase_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_starbase_components = yes
+		is_ship_size = starbase_deep_space_citadel_1
+		is_ship_size = starbase_deep_space_citadel_2
+		is_ship_size = starbase_deep_space_citadel_3
+		# NSC starbases
+		is_ship_size = @NSC_GrandCitadel
+		is_ship_size = @NSC_SolarStronghold
+		# NSC ships
+		is_ship_size = @NSC_Headquarters
+		# other starbases
+		is_ship_size = @MISC_Battlefortress
+		is_ship_size = @MISC_Bastion
+	}
+}
+
+# ESC overwrite for ship_sizes that use corvette components
+ESC_ship_uses_corvette_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_corvette_components = yes
+		# WACO ships
+		is_ship_size = @WACO_FlotillaShip
+		is_ship_size = @WACO_EmergencyShip
+		# EAC ships
+		is_ship_size = @EAC_PatrolCraft_1
+		is_ship_size = @EAC_PatrolCraft_2
+	}
+}
+
+# ESC overwrite for ship_sizes that use destroyer components
+ESC_ship_uses_destroyer_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_destroyer_components = yes
+		# VSE ships
+		is_ship_size = @VSE_Artemis
+		# other ships
+		is_ship_size = @MISC_PirateCorvette
+	}
+}
+
+# ESC overwrite for ship_sizes that use cruiser components
+ESC_ship_uses_cruiser_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_cruiser_components = yes
+		# VSE ships
+		is_ship_size = @VSE_ATT
+		is_ship_size = @VSE_Conquistador
+		# Deadly tempest
+		is_ship_size = graygoo_interdictor
+	}
+}
+# special overwrite for the purposes of inline-scripting
+ESC_ship_uses_cruiser_nsc_components = {
+	OR = {
+		ESC_ship_uses_cruiser_components = yes
+	}
+}
+
+# ESC overwrite for ship_sizes that use battleship components
+ESC_ship_uses_battleship_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_battleship_reactors = yes
+		is_ship_size = nanite_interdictor
+		# NSC ships
+		is_ship_size = @NSC_EscortCarrier
+		# SCX ships
+		is_ship_size = @SCX_Carrier
+		# Realsitic ships : dreadnoughts
+		is_ship_size = @RS_Dreadnought
+		is_ship_size = @RS_HeavyDreadnought
+		is_ship_size = @RS_HDreadnought_ART
+		is_ship_size = @RS_HDreadnought_MAM
+		is_ship_size = @RS_HDreadnought_MOL
+		is_ship_size = @RS_HDreadnought_AVI
+		is_ship_size = @RS_HDreadnought_REP
+		is_ship_size = @RS_HDreadnought_FUN
+		is_ship_size = @RS_HDreadnought_PLA
+		is_ship_size = @RS_HDreadnought_HUM
+		is_ship_size = @RS_HDreadnought_LIT
+		is_ship_size = @RS_HDreadnought_NEC
+		is_ship_size = @RS_HDreadnought_NEM
+		is_ship_size = @RS_HDreadnought_AQU
+		is_ship_size = @RS_HDreadnought_TOX
+		is_ship_size = @RS_HDreadnought_MCH
+		is_ship_size = @RS_HDreadnought_CYB
+		is_ship_size = @RS_HDreadnought_STRG
+		is_ship_size = @RS_HDreadnought_TW
+		is_ship_size = @RS_HDreadnought_FE
+		is_ship_size = @RS_HDreadnought_FE1
+		is_ship_size = @RS_HDreadnought_FE2
+		is_ship_size = @RS_HDreadnought_FE3
+		# Playable fallen empire ships
+		is_ship_size = @PFE_Battlecruiser
+	}
+}
+# special overwrite for the purposes of inline-scripting
+ESC_ship_uses_battleship_nsc_components = {
+	OR = {
+		ESC_ship_uses_battleship_components = yes
+	}
+}
+
+# ESC overwrite for ship_sizes that use titan components
+ESC_ship_uses_titan_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_titan_reactors = yes
+		# Deadly tempest
+		is_ship_size = graygoo_mothership
+		# Playable fallen empire ships
+		is_ship_size = @PFE_Titan
+		# VSE ships
+		is_ship_size = @VSE_Ironclad
+		# Great Khan Expanded
+		is_ship_size = @MISC_PirateGalleon
+		is_ship_size = @MISC_MarauderGalleon
+	}
+}
+# special overwrite for the purposes of inline-scripting
+ESC_ship_uses_titan_nsc_components = {
+	OR = {
+		ESC_ship_uses_titan_components = yes
+	}
+}
+
+# ESC overwrite for ship_sizes that use juggernaut components
+ESC_ship_uses_juggernaut_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_juggernaut_reactors = yes
+		# other juggernauts
+		is_ship_size = @MISC_Battlefortress
+		is_ship_size = @MISC_WarJuggernaut
+	}
+}
+
+###
+### ESC gives different reactors to different size of platforms...
+###
+
+# ESC custom trigger for ship_sizes equivalent to small defense platform
+ESC_ship_uses_platform_components = {
+	OR = {
+		# vanilla platforms
+		is_ship_size = military_station_small
+	}
+}
+
+# ESC custom trigger for ship_sizes equivalent to medium defense platform
+ESC_ship_uses_platform2_components = {
+	OR = {
+		# vanilla platforms
+		is_ship_size = military_station_medium
+		# NSC ships
+		is_ship_size = @NSC_AnnihilatorCannon
+		# other platforms...
+		is_ship_size = @MISC_DF_Medium
+	}
+}
+
+# ESC custom trigger for ship_sizes equivalent to large defense platform
+ESC_ship_uses_platform3_components = {
+	OR = {
+		# vanilla platforms
+		is_ship_size = military_station_large
+		# other platforms...
+		is_ship_size = @EAC_Platform
+		is_ship_size = @MISC_DF_Large
+	}
+}
+
+# ESC custom trigger for ship_sizes equivalent to the ion cannon
+ESC_ship_uses_ion_cannon_components = {
+	OR = {
+		# vanilla platforms
+		is_ship_size = ion_cannon
+	}
+}
+
+###
+### mod-only ship_sizes
+###
+
+# ESC custom trigger for ship_sizes that use strikecruiser components
+ESC_ship_uses_strikecruiser_components = {
+	OR = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		is_ship_size = esc_dummy_strike_cruiser
+		# NSC ships
+		is_ship_size = @NSC_StrikeCruiser
+		# Realistic ships : cruisers
+		is_ship_size = @RS_SupportCruiser
+		is_ship_size = @RS_ElectronicCruiser
+		is_ship_size = @RS_BattleCruiser
+		# Playable fallen empire ships
+		is_ship_size = @PFE_Escort
+		# Great Khan Expanded
+		is_ship_size = @MISC_MarauderCorvette
+	}
+}
+
+# ESC custom trigger for ship_sizes that use battlecruiser components
+ESC_ship_uses_battlecruiser_components = {
+	OR = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		is_ship_size = esc_dummy_battle_cruiser
+		# NSC ships
+		is_ship_size = @NSC_BattleCruiser
+		is_ship_size = @NSC_ExplorationShip
+		# Realistic ships : cruisers
+		is_ship_size = @RS_SupportCruiser
+		is_ship_size = @RS_ElectronicCruiser
+		is_ship_size = @RS_BattleCruiser
+		# Playable fallen empire ships
+		is_ship_size = @PFE_Escort
+		# Great Khan Expanded
+		is_ship_size = @MISC_MarauderCorvette
+	}
+}
+
+# ESC custom trigger for ship_sizes that use carrier components
+ESC_ship_uses_carrier_components = {
+	OR = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		is_ship_size = esc_dummy_carrier
+		# NSC ships
+		is_ship_size = @NSC_Carrier
+	}
+}
+
+# ESC custom trigger for ship_sizes that use dreadnought components
+ESC_ship_uses_dreadnought_components = {
+	OR = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		is_ship_size = esc_dummy_dreadnought
+		# NSC ships
+		is_ship_size = @NSC_Dreadnought
+		# SCX ships
+		is_ship_size = @SCX_Dreadnought
+		# other...
+		is_ship_size = @MISC_Dreadnought_A
+		is_ship_size = @MISC_Dreadnought_PLR
+	}
+}
+
+# ESC custom trigger for ship_sizes that use flagship components
+ESC_ship_uses_flagship_components = {
+	OR = {
+		# dummy ship class to sidestep 'bugs' with size_restriction
+		is_ship_size = esc_dummy_flagship
+		# NSC ships
+		is_ship_size = @NSC_Flagship
+		is_ship_size = @Freebooters_Flagship
+		# other...
+		is_ship_size = @MISC_Ultrajuggernaut
+	}
+}
+
+###
+### Extra triggers for NSC overwrites
+###
+
+# ESC custom trigger for ship_sizes that use dreadnought or carrer components (NSC overwrites)
+ESC_ship_uses_dreadnought_carrier_components = {
+	OR = {
+		ESC_ship_uses_dreadnought_components = yes
+		ESC_ship_uses_carrier_components = yes
+	}
+}

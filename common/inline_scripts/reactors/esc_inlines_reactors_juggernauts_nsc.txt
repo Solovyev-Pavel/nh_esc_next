@@ -3,16 +3,16 @@
 size = small
 icon = $REACTOR_ICON$
 icon_frame = 1
-power = @ESC_REACTOR_t$REACTOR_TIER$_power_juggernaut
+power = $POWER$
 
 resources = {
 	category = ship_components
 	cost = {
-		alloys = @ESC_REACTOR_t$REACTOR_TIER$_cost_juggernaut
+		alloys = $ALLOY_COST$
 	}
 	upkeep = {
-		energy = @ESC_REACTOR_t$REACTOR_TIER$_upkeep_energy_juggernaut
-		alloys = @ESC_REACTOR_t$REACTOR_TIER$_upkeep_alloys_juggernaut
+		energy = $ENERGY_UPKEEP$
+		alloys = $ALLOYS_UPKEEP$
 	}
 }
 

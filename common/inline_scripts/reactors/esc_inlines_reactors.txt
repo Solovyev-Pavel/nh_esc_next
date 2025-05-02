@@ -1,0 +1,36 @@
+### generalized inline for reactors
+
+size = small
+icon = $REACTOR_ICON$
+icon_frame = 1
+power = @ESC_REACTOR_t$REACTOR_TIER$_power_$SHIP_SIZE_GROUP$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = @ESC_REACTOR_t$REACTOR_TIER$_cost_$SHIP_SIZE_GROUP$
+	}
+	upkeep = {
+		energy = @ESC_REACTOR_t$REACTOR_TIER$_upkeep_energy_$SHIP_SIZE_GROUP$
+		alloys = @ESC_REACTOR_t$REACTOR_TIER$_upkeep_alloys_$SHIP_SIZE_GROUP$
+	}
+}
+
+potential = {
+	ESC_ship_uses_$SHIP_SIZE_GROUP$_components = yes
+	from = {
+		country_uses_bio_ships = no
+	}
+}
+
+prerequisites = { $PREREQUISITES$ }
+component_set = "power_core"
+
+ai_weight = {
+	weight = 1
+	factor = $COMPONENT_WEIGHT$
+	modifier = {
+		has_global_flag = @ACOT_active_flag
+		factor = $WEIGHT_MULT_ACOT$
+	}
+}
