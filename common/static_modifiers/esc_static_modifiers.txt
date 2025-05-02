@@ -92,3 +92,70 @@ esc_mercenary_boost = {
 	country_base_exotic_gases_produces_add = 20
 	country_base_volatile_motes_produces_add = 20
 }
+
+############################################################
+##                  ESC static modifiers                  ##
+##                  weapon on-hit effects                 ##
+############################################################
+
+# biological weapons : armor hardening debuff lvl 1
+esc_biological_weapon_armor_hardening_debuff_1 = {
+	ship_armor_hardening_add = -15
+	ship_armor_regen_add_static = -10
+	ship_speed_mult = -0.05
+}
+
+# biological weapons : armor hardening debuff lvl 2
+esc_biological_weapon_armor_hardening_debuff_2 = {
+	ship_armor_hardening_add = -25
+	ship_armor_regen_add_static = -15
+	ship_speed_mult = -0.05
+}
+
+# gravitic weapons : movement speed penalty lvl 1
+esc_gravitic_weapon_movement_speed_debuff_1 = {
+	ship_speed_mult = -0.15
+	ship_evasion_add = -15
+	#ship_target_weight_mult = 0.25
+}
+
+# gravitic weapons : movement speed penalty lvl 2
+esc_gravitic_weapon_movement_speed_debuff_2 = {
+	ship_speed_mult = -0.25
+	ship_evasion_add = -0.25
+	#ship_target_weight_mult = 0.25
+}
+
+# nanite weapons : damage over time to armor lvl 1
+esc_nanite_weapons_armor_damage_debuff_1 = {
+	ship_armor_regen_add_static = -20
+}
+
+# nanite weapons : damage over time to armor lvl 2
+esc_nanite_weapons_armor_damage_debuff_1 = {
+	ship_armor_regen_add_static = -30
+}
+
+# psionic weapons : accuracy debuff lvl 1
+esc_psionic_weapons_accuracy_debuff_1 = {
+	ship_accuracy_mult = -0.15
+	ship_tracking_mult = -0.15
+}
+
+# psionic weapons : accuracy debuff lvl 2
+esc_psionic_weapons_accuracy_debuff_2 = {
+	ship_accuracy_mult = -0.25
+	ship_tracking_mult = -0.25
+}
+
+# tesla weapons : fire rate debuff lvl 1
+esc_tesla_weapons_fire_rate_debuff_1 = {
+	ship_fire_rate_mult = -0.15
+	ship_weapon_range_mult = -0.15
+}
+
+# tesla weapons : fire rate debuff lvl 2
+esc_tesla_weapons_fire_rate_debuff_2 = {
+	ship_fire_rate_mult = -0.20
+	ship_weapon_range_mult = -0.20
+}
