@@ -11,35 +11,20 @@
 # Nanite Thought Matrix : Swarm
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_SWARM
-	size = small
-	icon = GFX_esc_nanite_computer_swarm
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_swarm
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = swarm
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		corvette crisis_corvette offspring_corvette nanite_swarmer
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_ExplorationShip
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette
-		# other...
-		@WACO_EmergencyShip }
-	component_set = "combat_computers"
 	ship_behavior = swarm
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 	ai_tags = { gunship brawler }
 
 	ship_modifier = {
@@ -57,15 +42,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-	}
 }
 
 ############################################################
@@ -74,25 +50,20 @@ utility_component_template = {
 # Nanite Thought Matrix : Torpedo
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_TORPEDO
-	size = small
-	icon = GFX_esc_nanite_computer_swarm
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_swarm
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = torpedo
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		frigate crisis_destroyer cruiser offspring_cruiser }
-	component_set = "combat_computers"
 	ship_behavior = torpedo
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 	ai_tags = { explosive }
 
 	ship_modifier = {
@@ -111,15 +82,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-	}
 }
 
 ############################################################
@@ -128,35 +90,20 @@ utility_component_template = {
 # Automated Dreadnought Compute : Picket
 utility_component_template = {
 	key = ESC_DREADNOUGHT_COMPUTER_PICKET
-	size = small
-	icon = GFX_esc_dreadnought_computer_picket
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			rare_crystals = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_dreadnought_computer_picket
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = picket
+		PREREQUISITE = esc_tech_dreadnought_computer
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_ExplorationShip
-		# Deadly tempest
-		graygoo_interdictor
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_MarauderCorvette }
-	component_set = "combat_computers"
 	ship_behavior = picket
-	prerequisites = { "esc_tech_dreadnought_computer" }
 	ai_tags = { screen }
 
 	ship_modifier = {
@@ -174,51 +121,25 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
 }
 
 # Nanite Thought Matrix : Picket
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_PICKET
-	size = small
-	icon = GFX_esc_nanite_computer_picket
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_picket
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = picket
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		corvette crisis_corvette offspring_corvette nanite_swarmer destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer cruiser crisis_cruiser offspring_cruiser
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_ExplorationShip
-		# Deadly tempest
-		graygoo_interdictor
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# EAC ships
-		@EAC_PatrolCraft_1 @EAC_PatrolCraft_2
-		# Playable fallen empire ships
-		@PFE_Escort
-		# Great Khan Expanded
-		@MISC_PirateCorvette @MISC_MarauderCorvette }
-	component_set = "combat_computers"
 	ship_behavior = picket
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 	ai_tags = { screen }
 
 	ship_modifier = {
@@ -235,15 +156,6 @@ utility_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
 	}
 }
 
@@ -253,45 +165,20 @@ utility_component_template = {
 # Automated Dreadnought Compute : Line
 utility_component_template = {
 	key = ESC_DREADNOUGHT_COMPUTER_LINE
-	size = small
-	icon = GFX_esc_dreadnought_computer_line
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			rare_crystals = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_dreadnought_computer_line
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = line
+		PREREQUISITE = esc_tech_dreadnought_computer
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_EscortCarrier @NSC_Dreadnought @NSC_Flagship @NSC_ExplorationShip @Freebooters_Flagship
-		# SCX ships
-		@SCX_Dreadnought
-		# Deadly tempest
-		graygoo_interdictor graygoo_mothership
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Escort @PFE_Battlecruiser
-		# Great Khan Expanded
-		@MISC_MarauderCorvette
-		# VSE ships
-		@VSE_Ironclad
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR @MISC_Ultrajuggernaut @WACO_FlotillaShip }
-	component_set = "combat_computers"
 	ship_behavior = line
-	prerequisites = { "esc_tech_dreadnought_computer" }
 	ai_tags = { gunship }
 
 	ship_modifier = {
@@ -309,59 +196,25 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
 }
 
 # Nanite Thought Matrix : Line
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_LINE
-	size = small
-	icon = GFX_esc_nanite_computer_line
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_line
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = line
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_EscortCarrier @NSC_Dreadnought @NSC_Flagship @NSC_ExplorationShip @Freebooters_Flagship
-		# SCX ships
-		@SCX_Dreadnought
-		# Deadly tempest
-		graygoo_interdictor graygoo_mothership
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Escort @PFE_Battlecruiser
-		# Great Khan Expanded
-		@MISC_PirateCorvette @MISC_MarauderCorvette
-		# VSE ships
-		@VSE_Artemis @VSE_Ironclad
-		# other...
-		@MISC_Dreadnought_A @MISC_Dreadnought_PLR @MISC_Ultrajuggernaut @WACO_FlotillaShip }
-	component_set = "combat_computers"
 	ship_behavior = line
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 	ai_tags = { gunship }
 
 	ship_modifier = {
@@ -378,15 +231,6 @@ utility_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
 	}
 }
 
@@ -396,45 +240,20 @@ utility_component_template = {
 # Automated Dreadnought Computers : Artillery
 utility_component_template = {
 	key = ESC_DREADNOUGHT_COMPUTER_ARTILLERY
-	size = small
-	icon = GFX_esc_dreadnought_computer_artillery
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			rare_crystals = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_dreadnought_computer_artillery
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = artillery
+		PREREQUISITE = esc_tech_dreadnought_computer
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor titan cosmo_crisis_titan payback_warship juggernaut star_eater synth_queen_titan
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_EscortCarrier @NSC_Carrier @NSC_Dreadnought @NSC_Flagship @NSC_ExplorationShip @Freebooters_Flagship
-		# SCX ships
-		@SCX_Carrier @SCX_Dreadnought
-		# Deadly tempest
-		graygoo_interdictor graygoo_mothership
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser @PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon
-		# VSE ships
-		@VSE_Ironclad
-		# other...
-		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @MISC_Dreadnought_PLR @WACO_FlotillaShip }
-	component_set = "combat_computers"
 	ship_behavior = artillery
-	prerequisites = { "esc_tech_dreadnought_computer" }
 	ai_tags = { artillery energy_torpedoes }
 
 	ship_modifier = {
@@ -452,59 +271,25 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
 }
 
 # Nanite Thought Matrix : Artillery
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_ARTILLERY
-	size = small
-	icon = GFX_esc_nanite_computer_artillery
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_artillery
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = artillery
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		frigate destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor titan cosmo_crisis_titan payback_warship juggernaut star_eater synth_queen_titan
-		# NSC ships
-		@NSC_StrikeCruiser @NSC_BattleCruiser @NSC_EscortCarrier @NSC_Carrier @NSC_Dreadnought @NSC_Flagship @NSC_ExplorationShip @Freebooters_Flagship
-		# SCX ships
-		@SCX_Carrier @SCX_Dreadnought
-		# Deadly tempest
-		graygoo_interdictor graygoo_mothership
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser @PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateCorvette @MISC_PirateGalleon @MISC_MarauderGalleon
-		# VSE ships
-		@VSE_Artemis @VSE_Ironclad
-		# other...
-		@MISC_Ultrajuggernaut @MISC_Dreadnought_A @MISC_Dreadnought_PLR @WACO_FlotillaShip }
-	component_set = "combat_computers"
 	ship_behavior = artillery
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 	ai_tags = { artillery energy_torpedoes }
 
 	ship_modifier = {
@@ -521,15 +306,6 @@ utility_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
 	}
 }
 
@@ -539,45 +315,20 @@ utility_component_template = {
 # Automated Dreadnought Computers : Carrier
 utility_component_template = {
 	key = ESC_DREADNOUGHT_COMPUTER_CARRIER
-	size = small
-	icon = GFX_esc_dreadnought_computer_carrier
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			rare_crystals = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_dreadnought_computer_carrier
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = carrier
+		PREREQUISITE = esc_tech_dreadnought_computer
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor titan cosmo_crisis_titan payback_warship juggernaut
-		# NSC ships
-		@NSC_EscortCarrier @NSC_Carrier @NSC_Flagship @Freebooters_Flagship
-		# SCX ships
-		@SCX_Carrier
-		# Deadly tempest
-		graygoo_interdictor graygoo_mothership
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser @PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon
-		# VSE ships
-		@VSE_Ironclad
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "combat_computers"
 	ship_behavior = carrier
-	prerequisites = { "esc_tech_dreadnought_computer" }
 	ai_tags = { carrier }
 
 	ship_modifier = {
@@ -596,59 +347,25 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
 }
 
 # Nanite Thought Matrix : Carrier
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_CARRIER
-	size = small
-	icon = GFX_esc_nanite_computer_carrier
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_carrier
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = carrier
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	size_restriction = {
-		# vanilla ship classes
-		cruiser crisis_cruiser offspring_cruiser battleship offspring_battleship cosmo_crisis_battlecruiser nanite_interdictor titan cosmo_crisis_titan payback_warship juggernaut
-		# NSC ships
-		@NSC_EscortCarrier @NSC_Carrier @NSC_Flagship @Freebooters_Flagship
-		# SCX ships
-		@SCX_Carrier
-		# Deadly tempest
-		graygoo_interdictor graygoo_mothership
-		# Realistic ships : cruisers
-		@RS_SupportCruiser @RS_ElectronicCruiser @RS_BattleCruiser
-		# Realsitic ships : dreadnoughts
-		@RS_Dreadnought @RS_HeavyDreadnought @RS_HDreadnought_ART @RS_HDreadnought_MAM @RS_HDreadnought_MOL @RS_HDreadnought_AVI @RS_HDreadnought_REP
-		@RS_HDreadnought_FUN @RS_HDreadnought_PLA @RS_HDreadnought_HUM @RS_HDreadnought_LIT @RS_HDreadnought_NEC @RS_HDreadnought_NEM @RS_HDreadnought_AQU @RS_HDreadnought_TOX
-		@RS_HDreadnought_MCH @RS_HDreadnought_CYB @RS_HDreadnought_STRG @RS_HDreadnought_TW @RS_HDreadnought_FE @RS_HDreadnought_FE1 @RS_HDreadnought_FE2 @RS_HDreadnought_FE3
-		# Playable fallen empire ships
-		@PFE_Battlecruiser @PFE_Titan
-		# Great Khan Expanded
-		@MISC_PirateGalleon @MISC_MarauderGalleon
-		# VSE ships
-		@VSE_Ironclad
-		# other...
-		@MISC_Ultrajuggernaut }
-	component_set = "combat_computers"
 	ship_behavior = carrier
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 	ai_tags = { carrier }
 
 	ship_modifier = {
@@ -667,15 +384,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-	}
 }
 
 ############################################################
@@ -684,23 +392,20 @@ utility_component_template = {
 # Nanite Thought Matrix : Platform
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_PLATFORM
-	size = small
-	icon = GFX_esc_nanite_computer_platform
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_platform
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = platform
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
 	}
 
-	class_restriction = { shipclass_military_station }
-	component_set = "combat_computers"
 	ship_behavior = platform
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -718,15 +423,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-	}
 }
 
 ############################################################
@@ -735,20 +431,20 @@ utility_component_template = {
 # Nanite Thought Matrix : Starbase
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_STARBASE
-	size = small
-	icon = GFX_esc_nanite_computer_starbase
-	icon_frame = 1
-	power = 0
 
-	class_restriction = { shipclass_starbase }
-	size_restriction = {
-		# vanilla starbase classes
-		starbase_outpost starbase_starport starbase_starhold starbase_starfortress starbase_citadel
-		# other starbase classes
-		@NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
-	component_set = "combat_computers"
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_starbase
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = starbase
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 16
+	}
+
 	ship_behavior = platform
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -766,8 +462,6 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = { weight = 15 } # starbased are upgraded for free
 }
 
 ############################################################
@@ -776,27 +470,20 @@ utility_component_template = {
 # Automated Dreadnought Computer : NSC Headquarters
 utility_component_template = {
 	key = ESC_DREADNOUGHT_COMPUTER_HQ
-	size = small
-	icon = GFX_esc_dreadnought_computer
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_dreadnought
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			rare_crystals = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_dreadnought_computer
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = NSC_headquarters
+		PREREQUISITE = esc_tech_dreadnought_computer
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 20
 	}
 
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = combat_computers
 	ship_behavior = platform
-	prerequisites = { "esc_tech_dreadnought_computer" }
 
 	ship_modifier = {
 		ship_weapon_damage = 0.2
@@ -812,41 +499,25 @@ utility_component_template = {
 	valid_for_country = {
 		is_fallen_empire = no
 	}
-
-	ai_weight = {
-		weight = 20
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
 }
 
 # Nanite Thought Matrix : NSC Headquarters
 utility_component_template = {
 	key = ESC_NANITE_COMPUTER_HQ
-	size = small
-	icon = GFX_esc_nanite_computer_starbase
-	icon_frame = 1
-	power = @ESC_COMPUTER_power_nanite
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_COMPUTER_cost_alloys
-			nanites = @ESC_COMPUTER_cost_special
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_starbase
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = NSC_headquarters
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		ALLOY_COST = @ESC_COMPUTER_cost_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_COMPUTER_cost_special
+		COMPONENT_WEIGHT = 20
 	}
 
-	size_restriction = {
-		# dummy ship class to sidestep 'bugs' with size_restriction
-		esc_dummy_juggernaut
-		# NSC ships
-		@NSC_Headquarters }
-	component_set = "combat_computers"
 	ship_behavior = platform
-	prerequisites = { "esc_tech_nanite_thought_matrix" }
 
 	ship_modifier = {
 		ship_fire_rate_mult = 0.15
@@ -863,14 +534,5 @@ utility_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 15
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
 	}
 }

@@ -1,0 +1,33 @@
+# inline script that generalizes some code for combat computers
+
+size = small
+icon = $COMPUTER_ICON$
+icon_frame = 1
+power = $POWER$
+
+potential = {
+	ESC_ship_uses_$SHIP_COMBAT_ROLE$_computers = yes
+	from = {
+		country_uses_bio_ships = no
+	}
+}
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
+	}
+}
+
+component_set = "combat_computers"
+prerequisites = { "$PREREQUISITE$" }
+
+ai_weight = {
+	weight = $COMPONENT_WEIGHT$
+	### AI shouldn't use this component if it can't afford at least some upgrades right away
+	modifier = {
+		factor = 0.0
+		no_resource_for_component = { RESOURCE = $STRATEGIC_RESOURCE_TYPE$ }
+	}
+}
