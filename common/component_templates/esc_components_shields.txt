@@ -31,6 +31,11 @@ utility_component_template = {
 	component_set = ESC_SHIELDS_6
 	upgrades_to = SMALL_ESC_SHIELDS_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -73,6 +78,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_6" }
 	component_set = ESC_SHIELDS_6
 	upgrades_to = MEDIUM_ESC_SHIELDS_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -117,6 +127,11 @@ utility_component_template = {
 	component_set = ESC_SHIELDS_6
 	upgrades_to = LARGE_ESC_SHIELDS_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -159,6 +174,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_7" }
 	component_set = ESC_SHIELDS_7
 	upgrades_to = SMALL_ESC_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -203,6 +223,11 @@ utility_component_template = {
 	component_set = ESC_SHIELDS_7
 	upgrades_to = MEDIUM_ESC_SHIELDS_8
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -246,6 +271,11 @@ utility_component_template = {
 	component_set = ESC_SHIELDS_7
 	upgrades_to = LARGE_ESC_SHIELDS_8
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -287,6 +317,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_shields_8" }
 	component_set = ESC_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only normal empires may use this component
 	valid_for_country = {
@@ -335,6 +370,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_8" }
 	component_set = ESC_SHIELDS_8
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only normal empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -381,6 +421,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_shields_8" }
 	component_set = ESC_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only normal empires may use this component
 	valid_for_country = {
@@ -459,6 +504,11 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_1
 	upgrades_to = SMALL_ESC_CYCLONIC_SHIELDS_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -501,6 +551,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_cyclonic_1" }
 	component_set = ESC_CYCLONIC_SHIELDS_1
 	upgrades_to = MEDIUM_ESC_CYCLONIC_SHIELDS_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -545,6 +600,11 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_1
 	upgrades_to = LARGE_ESC_CYCLONIC_SHIELDS_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -587,6 +647,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_cyclonic_2" }
 	component_set = ESC_CYCLONIC_SHIELDS_2
 	upgrades_to = SMALL_ESC_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -631,6 +696,11 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_2
 	upgrades_to = MEDIUM_ESC_CYCLONIC_SHIELDS_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -674,6 +744,11 @@ utility_component_template = {
 	component_set = ESC_CYCLONIC_SHIELDS_2
 	upgrades_to = LARGE_ESC_CYCLONIC_SHIELDS_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -715,6 +790,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
 	component_set = ESC_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -758,6 +838,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
 	component_set = ESC_CYCLONIC_SHIELDS_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -799,6 +884,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
 	component_set = ESC_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -847,6 +937,11 @@ utility_component_template = {
 	component_set = ESC_ENIGMATIC_SHIELD_2
 	upgrades_to = SMALL_ESC_ENIGMATIC_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -889,6 +984,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_shields_2" }
 	component_set = ESC_ENIGMATIC_SHIELD_2
 	upgrades_to = MEDIUM_ESC_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -933,6 +1033,11 @@ utility_component_template = {
 	component_set = ESC_ENIGMATIC_SHIELD_2
 	upgrades_to = LARGE_ESC_ENIGMATIC_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -974,6 +1079,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
 	component_set = ESC_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight
@@ -1017,6 +1127,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
 	component_set = ESC_ENIGMATIC_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T5_weight
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1058,6 +1173,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
 	component_set = ESC_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T5_weight

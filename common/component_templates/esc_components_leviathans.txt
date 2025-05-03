@@ -84,6 +84,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -141,6 +146,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -208,6 +218,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy l_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -270,6 +285,11 @@ weapon_component_template = {
 	upgrades_to = ESC_ENIGMATIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -339,6 +359,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -404,6 +429,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -466,6 +496,11 @@ weapon_component_template = {
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense screen }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -802,6 +837,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -876,6 +916,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires may use this component

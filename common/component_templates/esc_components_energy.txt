@@ -161,6 +161,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = SMALL_ESC_LASER_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -212,6 +217,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = MEDIUM_ESC_LASER_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -262,6 +272,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = LARGE_ESC_LASER_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -317,6 +332,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -367,6 +387,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -416,6 +441,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_laser_7_large"
 	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -473,6 +503,11 @@ weapon_component_template = {
 	ai_tag_weight = 3
 	upgrades_to = SMALL_ESC_PLASMA_5
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -524,6 +559,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 	upgrades_to = MEDIUM_ESC_PLASMA_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -577,6 +617,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 	upgrades_to = LARGE_ESC_PLASMA_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -637,6 +682,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -687,6 +737,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -739,6 +794,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 	ai_tag_weight = 3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -800,6 +860,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -851,6 +916,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -907,6 +977,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -957,6 +1032,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1014,6 +1094,11 @@ weapon_component_template = {
 	upgrades_to = ESC_ENERGY_TORPEDO_4
 	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1075,6 +1160,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1126,6 +1216,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
 	shield_damage = @ESC_WEAPON_chrono_shield_damage
 	tracking = 0.3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	prerequisites = { "esc_tech_chrono_cannon" }
 	component_set = ESC_CHRONO_CANNON
@@ -1182,6 +1277,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_chrono_shield_damage
 	tracking = 0.15
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_chrono_cannon" }
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_medium"
@@ -1237,6 +1337,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
 	shield_damage = @ESC_WEAPON_chrono_shield_damage
 	tracking = 0.05
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	prerequisites = { "esc_tech_chrono_cannon" }
 	component_set = ESC_CHRONO_CANNON
@@ -1411,6 +1516,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 	upgrades_to = SMALL_ESC_MINING_LASER_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -1458,6 +1568,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 	upgrades_to = MEDIUM_ESC_MINING_LASER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1510,6 +1625,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -1556,6 +1676,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_mining_laser_3_medium"
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1611,6 +1736,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1665,6 +1795,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1722,6 +1857,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_PARTICLE_LANCE_4
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -1784,6 +1924,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -1845,6 +1990,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -1902,6 +2052,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -1965,6 +2120,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2026,6 +2186,11 @@ weapon_component_template = {
 	upgrades_to = ESC_ARC_EMITTER_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -2094,6 +2259,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2157,6 +2327,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -2226,6 +2401,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_WAVEMOTIONGUN_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2292,6 +2472,11 @@ weapon_component_template = {
 	upgrades_to = ESC_WAVEMOTIONGUN_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -2360,6 +2545,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2423,6 +2613,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -2495,6 +2690,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2563,6 +2763,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2628,6 +2833,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2689,6 +2899,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_hull }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -2746,6 +2961,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -2802,6 +3022,11 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_hull }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2873,6 +3098,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -2942,6 +3172,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -3007,6 +3242,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3063,6 +3303,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -3117,6 +3362,11 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	ai_weight = {
@@ -3180,6 +3430,11 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	target_weights = {
@@ -3248,6 +3503,11 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	target_weights = {

@@ -27,6 +27,11 @@ utility_component_template = {
 	component_set = ESC_ARMOR_6
 	upgrades_to = SMALL_ESC_ARMOR_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T6_weight
 		inline_script = {
@@ -60,6 +65,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_6" }
 	component_set = ESC_ARMOR_6
 	upgrades_to = MEDIUM_ESC_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T6_weight
@@ -95,11 +105,16 @@ utility_component_template = {
 	component_set = ESC_ARMOR_6
 	upgrades_to = LARGE_ESC_ARMOR_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T6_weight
 		inline_script = {
 			script = ship_components/weights/roles_stealth
-			MULT = 2
+			MULT = 0
 		}
 	}
 }
@@ -127,6 +142,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T6_weight
@@ -161,6 +181,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_7
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = @T6_weight
 		inline_script = {
@@ -193,6 +218,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = @T6_weight
@@ -532,6 +562,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_1
 	upgrades_to = SMALL_ESC_NANO_ARMOR_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -580,6 +615,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_nanite_1" }
 	component_set = ESC_NANO_ARMOR_1
 	upgrades_to = MEDIUM_ESC_NANO_ARMOR_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -630,6 +670,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_1
 	upgrades_to = LARGE_ESC_NANO_ARMOR_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -678,6 +723,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_nanite_2" }
 	component_set = ESC_NANO_ARMOR_2
 	upgrades_to = SMALL_ESC_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -728,6 +778,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_2
 	upgrades_to = MEDIUM_ESC_DRAGON_NANOARMOR
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -777,6 +832,11 @@ utility_component_template = {
 	component_set = ESC_NANO_ARMOR_2
 	upgrades_to = LARGE_ESC_DRAGON_NANOARMOR
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -824,6 +884,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -873,6 +938,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -920,6 +990,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -974,6 +1049,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_1
 	upgrades_to = SMALL_ESC_SHIELD_ARMOR_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1022,6 +1102,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_shield_1" }
 	component_set = ESC_SHIELD_ARMOR_1
 	upgrades_to = MEDIUM_ESC_SHIELD_ARMOR_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1072,6 +1157,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_1
 	upgrades_to = LARGE_ESC_SHIELD_ARMOR_2
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1120,6 +1210,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_shield_2" }
 	component_set = ESC_SHIELD_ARMOR_2
 	upgrades_to = SMALL_ESC_SHIELD_ARMOR_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1170,6 +1265,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_2
 	upgrades_to = MEDIUM_ESC_SHIELD_ARMOR_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1219,6 +1319,11 @@ utility_component_template = {
 	component_set = ESC_SHIELD_ARMOR_2
 	upgrades_to = LARGE_ESC_SHIELD_ARMOR_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1266,6 +1371,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1315,6 +1425,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1362,6 +1477,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1414,6 +1534,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only normal empires (that have defeated spectral wraith) can use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -1461,6 +1586,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only normal empires (that have defeated spectral wraith) can use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -1507,6 +1637,11 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only normal empires (that have defeated spectral wraith) can use this component
 	valid_for_country = {

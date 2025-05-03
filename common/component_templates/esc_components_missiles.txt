@@ -103,6 +103,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -163,6 +168,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -215,6 +225,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_plasma_missile_shield_damage
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	prerequisites = { "esc_tech_plasma_missiles_1" }
 	component_set = ESC_PLASMA_MISSILE_1
@@ -273,6 +288,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_plasma_missiles_1" }
 	component_set = ESC_PLASMA_MISSILE_1
 	projectile_gfx = "medium_esc_plasma_missile_1"
@@ -329,6 +349,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_plasma_missile_shield_damage
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	prerequisites = { "esc_tech_plasma_missiles_1" }
 	component_set = ESC_PLASMA_MISSILE_1
@@ -391,6 +416,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_plasma_missiles_2" }
 	component_set = ESC_PLASMA_MISSILE_2
 	projectile_gfx = "small_esc_plasma_missile_2"
@@ -448,6 +478,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_plasma_missiles_2" }
 	component_set = ESC_PLASMA_MISSILE_2
 	projectile_gfx = "medium_esc_plasma_missile_2"
@@ -504,6 +539,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_plasma_missile_shield_damage
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	prerequisites = { "esc_tech_plasma_missiles_2" }
 	component_set = ESC_PLASMA_MISSILE_2
@@ -566,6 +606,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_plasma_missiles_3" }
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "small_esc_plasma_missile_3"
@@ -622,6 +667,11 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_plasma_missiles_3" }
 	component_set = ESC_PLASMA_MISSILE_3
 	projectile_gfx = "medium_esc_plasma_missile_3"
@@ -677,6 +727,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_plasma_missile_shield_damage
 	shield_penetration = @ESC_WEAPON_plasma_missile_shield_penetration
 	tracking = 0.1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	prerequisites = { "esc_tech_plasma_missiles_3" }
 	component_set = ESC_PLASMA_MISSILE_3
@@ -747,6 +802,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -809,6 +869,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -870,6 +935,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy g_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1059,6 +1129,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1122,6 +1197,11 @@ weapon_component_template = {
 	upgrades_to = ESC_XMISSILE_3_JUGGERNAUT
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1187,6 +1267,11 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1247,6 +1332,11 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	ai_weight = {
 		weight = 1

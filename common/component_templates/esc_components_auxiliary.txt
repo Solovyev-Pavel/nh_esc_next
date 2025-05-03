@@ -58,6 +58,11 @@ utility_component_template = {
 	prerequisites = { "esc_tech_afterburners_3" }
 	component_set = ESC_AFTERBURNER_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	ai_weight = {
 		weight = 15
 		modifier = {
@@ -257,6 +262,11 @@ utility_component_template = {
 		ship_evasion_add = 15
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	class_restriction = { shipclass_military shipclass_science_ship }
 	prerequisites = { "esc_tech_aux_maneuver_thrusters" }
 	component_set = ESC_AUX_THRUSTERS
@@ -369,6 +379,11 @@ utility_component_template = {
 		ship_armor_hardening_add = 0.1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_structural_reinforcement" }
 	component_set = ESC_STRUCTURAL_REINFORCEMENT
 
@@ -403,6 +418,11 @@ utility_component_template = {
 		ship_armor_regen_add_perc = 0.125
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_repair_drones" }
 	component_set = ESC_REPAIR_DRONES
 
@@ -435,6 +455,11 @@ utility_component_template = {
 	modifier = {
 		ship_evasion_add = 5
 		ship_disengage_chance_mult = 0.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	prerequisites = { "esc_tech_temporal_displacer" }
@@ -685,6 +710,11 @@ utility_component_template = {
 		damage_random_nearby_enemy_on_death = 0.15
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_dead_hand_switch_kill_1" }
 	component_set = ESC_AUX_DEAD_HAND_KILL_CMD_1
 	upgrades_to = ESC_AUX_DEAD_HAND_KILL_CMD_2
@@ -710,6 +740,11 @@ utility_component_template = {
 
 	ship_modifier = {
 		esc_damage_enemy_ship_on_death = 0.30
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	prerequisites = { "esc_tech_dead_hand_switch_kill_2" }
@@ -738,6 +773,11 @@ utility_component_template = {
 		esc_repair_allied_ship_on_death = 0.25
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_dead_hand_switch_heal_1" }
 	component_set = ESC_AUX_DEAD_HAND_HEAL_CMD_1
 	upgrades_to = ESC_AUX_DEAD_HAND_HEAL_CMD_2
@@ -763,6 +803,11 @@ utility_component_template = {
 
 	ship_modifier = {
 		esc_repair_allied_ship_on_death = 0.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	prerequisites = { "esc_tech_dead_hand_switch_heal_2" }

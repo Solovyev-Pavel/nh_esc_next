@@ -76,6 +76,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -135,6 +140,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -197,6 +207,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -263,6 +278,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -321,6 +341,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -382,6 +407,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -456,6 +486,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -527,6 +562,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -593,6 +633,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
 		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -668,6 +713,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -741,6 +791,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -809,6 +864,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
 		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -885,7 +945,7 @@ strike_craft_component_template = {
 	shield_damage = @ESC_WEAPON_tesla_interdictor_shield_damage
 
 	inline_script = {
-		script = ship_components_general/esc_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
 	}
 

@@ -73,6 +73,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
 
 	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
 		EFFECT_LEVEL = 1
 	}
@@ -132,6 +137,11 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -194,6 +204,11 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -260,6 +275,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
 
 	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
 		EFFECT_LEVEL = 1
 	}
@@ -318,6 +338,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -379,6 +404,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -443,6 +473,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
 	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -510,6 +545,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
 
 	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
 		EFFECT_LEVEL = 1
 	}
@@ -574,6 +614,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -657,6 +702,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -726,6 +776,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -802,6 +857,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -874,6 +934,11 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
 		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -950,6 +1015,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1021,6 +1091,11 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
@@ -1090,7 +1165,7 @@ strike_craft_component_template = {
 	shield_penetration = @ESC_WEAPON_nanite_bombers_shield_penetration
 
 	inline_script = {
-		script = ship_components_general/esc_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
 	}
 
