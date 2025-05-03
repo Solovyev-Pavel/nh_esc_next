@@ -1,5 +1,8 @@
-### inline for colossi and similar ships' thrusters
+### generalized inline for ship thrusters
 
+size = small
+icon = $THRUSTER_ICON$
+icon_frame = 1
 power = $POWER$
 
 resources = {
@@ -15,9 +18,15 @@ modifier = {
 }
 
 prerequisites = { $PREREQUISITES$ }
-size_restriction = {
-	# vanilla ship classes
-	colossus star_eater juggernaut
-	# other ship classes...
-	@MISC_WarJuggernaut }
 component_set = "thruster_components"
+
+potential = {
+	ESC_ship_uses_$SHIP_SIZE_GROUP$_components = yes
+	from = {
+		country_uses_bio_ships = no
+	}
+}
+
+ai_weight = {
+	weight = $COMPONENT_WEIGHT$
+}
