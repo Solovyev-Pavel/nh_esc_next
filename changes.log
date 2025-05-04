@@ -262,11 +262,25 @@
 - Update Chinese localisation.
 - Housekeeping for reactor and thruster components.
 
->>> 04.03.2025
-- Updated for Stellaris 3.99.6 beta
+>>> 05.04.2025
+- Updated for Stellaris 3.99.7 beta
 - Technology Institute, Advanced Materials Laboratory and Culture Nexus (or substitutes) have had their influence production reduced to 0.25 per month.
 - Central Research Bureau now produces 0.25 infulence per month.
 - Adjusted job count for gestals in several research buildings.
 - Strategic resource jobs have been deprecated. Buildings that previously hosted them now make standard jobs produce strategic resources and increase their upkeep accordingly.
 - Adjust economic plan. It is now fully implemented as subplans for basic economic plan (vanilla).
 - Futher code clean up for reactors and their inlines.
+
+>>>
+- Updated for Stellaris 4.0.*
+- Add building_sets for all ESC buildings.
+- Nanite reconstructor is now a weapon rather than auxiliary component. And provides ship repairs using on-hit mechanic.
+- Psionic weapons now have versions for spaceborn creatures.
+- Due to move to potential for allowed ship_sizes, destroyers now have access to Automated Dreadnought computers.
+- Weapons of special types now have additional effects:
+--- biological weapons apply armor hardening and small movement speed debuff
+--- crystalline weapons have a chance to deal additional damage
+--- gravitic weapons apply movement speed penalty
+--- nanite weapons cause DoT damage to armor
+--- psionic weapons apply accuracy debuff
+--- tesla weapons apply fire rate debuff
