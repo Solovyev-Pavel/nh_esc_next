@@ -1,0 +1,38 @@
+### generalized inline for ship thrusters
+
+size = small
+icon = $THRUSTER_ICON$
+icon_frame = 1
+power = $POWER$
+
+resources = {
+	category = ship_components
+	cost = {
+		alloys = $ALLOY_COST$
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
+	}
+}
+
+modifier = {
+	ship_base_speed_mult = $SPEED_MULTIPLIER$
+	ship_evasion_add = $EVASION_MODIFIER$
+}
+
+prerequisites = { $PREREQUISITES$ }
+component_set = "thruster_components"
+
+potential = {
+	ESC_ship_uses_$SHIP_SIZE_GROUP$_components = yes
+	from = {
+		country_uses_bio_ships = no
+	}
+}
+
+ai_weight = {
+	weight = $COMPONENT_WEIGHT$
+	### AI shouldn't use this component if it can't afford at least some upgrades right away
+	modifier = {
+		factor = 0.0
+		no_resource_for_component = { RESOURCE = $STRATEGIC_RESOURCE_TYPE$ }
+	}
+}
