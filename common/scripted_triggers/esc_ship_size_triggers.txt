@@ -349,9 +349,8 @@ ESC_ship_uses_carrier_computers = {
 }
 
 # ESC custom trigger for artillery combat computers
-ESC_ship_uses_artillery_computers = {
+ESC_ship_uses_artillery_adc_computers = {
 	OR = {
-		ESC_ship_uses_destroyer_components = yes
 		ESC_ship_uses_cruiser_components = yes
 		ESC_ship_uses_strikecruiser_components = yes
 		ESC_ship_uses_battlecruiser_components = yes
@@ -364,13 +363,18 @@ ESC_ship_uses_artillery_computers = {
 		# other juggernauts
 		is_ship_size = @MISC_Battlefortress
 		is_ship_size = @MISC_WarJuggernaut
+	}
+}
+ESC_ship_uses_artillery_computers = {
+	OR = {
+		ESC_ship_uses_destroyer_components = yes
+		ESC_ship_uses_artillery_adc_computers = yes
 	}
 }
 
 # ESC custom trigger for line combat computers
-ESC_ship_uses_line_computers = {
+ESC_ship_uses_line_adc_computers = {
 	OR = {
-		ESC_ship_uses_destroyer_components = yes
 		ESC_ship_uses_cruiser_components = yes
 		ESC_ship_uses_strikecruiser_components = yes
 		ESC_ship_uses_battlecruiser_components = yes
@@ -385,14 +389,25 @@ ESC_ship_uses_line_computers = {
 		is_ship_size = @MISC_WarJuggernaut
 	}
 }
-
-# ESC custom trigger for picket combat computers
-ESC_ship_uses_picket_computers = {
+ESC_ship_uses_line_computers = {
 	OR = {
 		ESC_ship_uses_destroyer_components = yes
+		ESC_ship_uses_line_adc_computers = yes
+	}
+}
+
+# ESC custom trigger for picket combat computers
+ESC_ship_uses_picket_adc_computers = {
+	OR = {
 		ESC_ship_uses_cruiser_components = yes
 		ESC_ship_uses_strikecruiser_components = yes
 		ESC_ship_uses_battlecruiser_components = yes
+	}
+}
+ESC_ship_uses_picket_computers = {
+	OR = {
+		ESC_ship_uses_destroyer_components = yes
+		ESC_ship_uses_picket_adc_computers = yes
 	}
 }
 

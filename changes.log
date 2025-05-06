@@ -276,7 +276,6 @@
 - Add building_sets for all ESC buildings.
 - Nanite reconstructor is now a weapon rather than auxiliary component. And provides ship repairs using on-hit mechanic.
 - Psionic weapons now have versions for spaceborn creatures.
-- Due to move to potential for allowed ship_sizes, destroyers now have access to Automated Dreadnought computers.
 - Weapons of special types now have additional effects:
 --- biological weapons apply armor hardening and small movement speed debuff
 --- crystalline weapons have a chance to deal additional damage
@@ -284,3 +283,4 @@
 --- nanite weapons cause DoT damage to armor
 --- psionic weapons apply accuracy debuff
 --- tesla weapons apply fire rate debuff
+- Use even more PDX code magic.
