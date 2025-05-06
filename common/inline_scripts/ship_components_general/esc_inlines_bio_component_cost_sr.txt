@@ -1,0 +1,55 @@
+### inline script to handle components costs for biological ships
+
+resources = {
+	category = ship_components
+	cost = {
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
+	}
+	cost = {
+		trigger = {
+			from = {
+				is_lithoid = no
+				is_mechanical_empire = no
+				is_cyborg_empire = no
+			}
+		}
+		food = $COMPONENT_COST$
+	}
+	cost = {
+		trigger = {
+			from = {
+				OR = {
+					is_lithoid = yes
+					is_mechanical_empire = yes
+					is_cyborg_empire = yes
+				}
+			}
+		}
+		minerals = $COMPONENT_COST$
+	}
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+	}
+	upkeep = {
+		trigger = {
+			from = {
+				is_lithoid = no
+				is_mechanical_empire = no
+				is_cyborg_empire = no
+			}
+		}
+		food = $COMPONENT_UPKEEP_COST$
+	}
+	upkeep = {
+		trigger = {
+			from = {
+				OR = {
+					is_lithoid = yes
+					is_mechanical_empire = yes
+					is_cyborg_empire = yes
+				}
+			}
+		}
+		minerals = $COMPONENT_UPKEEP_COST$
+	}
+}

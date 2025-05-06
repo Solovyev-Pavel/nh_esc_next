@@ -30,14 +30,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_5
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_s_t6_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
@@ -77,14 +74,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_m_t6_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
@@ -124,14 +118,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t6_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
@@ -171,14 +162,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_L_5
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t6_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
@@ -222,14 +210,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_5
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_s_t7_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
@@ -268,14 +253,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_m_t7_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
@@ -314,14 +296,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_L_4
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t7_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
@@ -360,14 +339,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_L_5
 	accuracy = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t7_cost_alloys
-		}
-		upkeep = {
-			food = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_3

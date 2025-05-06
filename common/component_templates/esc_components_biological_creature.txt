@@ -39,14 +39,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t4_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t4_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -97,14 +94,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t4_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t4_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -156,14 +150,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t4_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t4_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -215,14 +206,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t4_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t4_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -277,14 +265,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -335,14 +320,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -394,14 +376,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -453,14 +432,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -515,14 +491,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -573,14 +546,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -632,14 +602,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -691,14 +658,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_lt6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -753,14 +717,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -810,14 +771,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -868,14 +826,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -926,14 +881,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -994,14 +946,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1059,14 +1008,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1124,14 +1070,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1189,14 +1132,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t5_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t5_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1258,14 +1198,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1323,14 +1260,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1388,14 +1322,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1453,14 +1384,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1522,14 +1450,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_s_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_s_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_s_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_s_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1586,14 +1511,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_m_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_m_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_m_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_m_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1650,14 +1572,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1714,14 +1633,11 @@ weapon_component_template = {
 	missile_shield = 0
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_biological_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_WEAPON_biological_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1768,14 +1684,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_1
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_s_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_s_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t6_upkeep_food
 	}
 
 	modifier = {
@@ -1810,14 +1723,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_1
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_m_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_m_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t6_upkeep_food
 	}
 
 	modifier = {
@@ -1852,14 +1762,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_1
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t6_upkeep_food
 	}
 
 	modifier = {
@@ -1894,14 +1801,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_1
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t6_upkeep_food
 	}
 
 	modifier = {
@@ -1940,14 +1844,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_2
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_s_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_s_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t7_upkeep_food
 	}
 
 	modifier = {
@@ -1981,14 +1882,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_2
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_m_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_m_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t7_upkeep_food
 	}
 
 	modifier = {
@@ -2022,14 +1920,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_2
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t7_upkeep_food
 	}
 
 	modifier = {
@@ -2063,14 +1958,11 @@ utility_component_template = {
 	icon = GFX_esc_bio_armor_2
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_ARMOR_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_food
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t7_upkeep_food
 	}
 
 	modifier = {

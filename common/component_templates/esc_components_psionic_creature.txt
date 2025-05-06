@@ -36,16 +36,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_s_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			food = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_s_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -96,16 +93,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_m_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			food = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -157,16 +151,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			food = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -218,16 +209,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			food = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -282,16 +270,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_s_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t8_upkeep_energy
-			food = @ESC_WEAPON_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_s_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -341,16 +326,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_m_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			food = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_m_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -401,16 +383,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			food = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -461,16 +440,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t9_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t9_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t9_upkeep_energy
-			food = @ESC_WEAPON_l_t9_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -524,16 +500,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_s_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			food = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_s_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -584,16 +557,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_m_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			food = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -645,16 +615,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			food = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -706,16 +673,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			food = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -770,16 +734,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_s_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t8_upkeep_energy
-			food = @ESC_WEAPON_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_s_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -829,16 +790,13 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_m_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			food = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_m_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -889,16 +847,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			food = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -949,16 +904,13 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			food = @ESC_WEAPON_l_t9_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t9_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t9_upkeep_energy
-			food = @ESC_WEAPON_l_t9_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
