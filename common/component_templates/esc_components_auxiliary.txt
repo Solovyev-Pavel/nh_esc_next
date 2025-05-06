@@ -817,29 +817,29 @@ utility_component_template = {
 }
 
 # nanite reconstruction beam
-utility_component_template = {
-	key = ESC_NANITE_RECONSTRUCTOR
-	size = aux
-	icon = GFX_esc_nanite_reconstructor
-	icon_frame = 1
-	power = -50
-	ship_limit = 1
-	hidden = yes # replaced by actual weapon with on-hit effect
-
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 20
-			nanites = 5
-		}
-	}
-
-	ship_modifier = {
-		component_lifesteal_add = 0.25
-	}
-
-	prerequisites = { "esc_tech_nanite_reconstructor" }
-	component_set = ESC_NANITE_RECONSTRUCTOR
-
-	ai_weight = { weight = 0 }
-}
+# utility_component_template = {
+# 	key = ESC_NANITE_RECONSTRUCTOR
+# 	size = aux
+# 	icon = GFX_esc_nanite_reconstructor
+# 	icon_frame = 1
+# 	power = -50
+# 	ship_limit = 1
+# 	hidden = yes # replaced by actual weapon with on-hit effect
+#
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			alloys = 20
+# 			nanites = 5
+# 		}
+# 	}
+#
+# 	ship_modifier = {
+# 		component_lifesteal_add = 0.25
+# 	}
+#
+# 	prerequisites = { "esc_tech_nanite_reconstructor" }
+# 	component_set = ESC_NANITE_RECONSTRUCTOR
+#
+# 	ai_weight = { weight = 0 }
+# }
