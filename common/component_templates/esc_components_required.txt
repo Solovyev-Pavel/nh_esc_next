@@ -4,7 +4,7 @@
 
 @NSC_TITAN_AURA = "nsc_titan_aura"
 
-### Advanced Tachyon Sensors
+### Advanced Tachyon Sensors :: standard ships
 utility_component_template = {
 	key = ESC_SENSOR_5
 	size = medium
@@ -17,6 +17,11 @@ utility_component_template = {
 		cost = {
 			alloys = @ESC_SENSOR_t5_cost
 		}
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	sensor_range = @ESC_SENSOR_t5_sensor_range
@@ -33,7 +38,70 @@ utility_component_template = {
 	ai_weight = { weight = 1000 }
 }
 
-# String Sensors
+### Advanced Tachyon Sensors :: bio ships
+utility_component_template = {
+	key = ESC_BIO_SENSOR_5
+	size = medium
+	icon = GFX_esc_bio_sensors_5
+	icon_frame = 1
+	power = @ESC_SENSOR_t5_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t5_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t5_sensor_range
+	hyperlane_range = @ESC_SENSOR_t5_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t5_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_5" }
+	component_set = "sensor_components"
+
+	upgrades_to = ESC_BIO_SENSOR_6
+	ai_weight = { weight = 1000 }
+}
+
+### Advanced Tachyon Sensors :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_SENSOR_5
+	size = medium
+	icon = GFX_esc_bioship_sensors_5
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t5_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	sensor_range = @ESC_SENSOR_t5_sensor_range
+	hyperlane_range = @ESC_SENSOR_t5_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t5_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_5" "tech_sensors_bio_integration" }
+	component_set = "sensor_components_bio"
+
+	upgrades_to = ESC_BIOSHIP_SENSOR_6
+	ai_weight = { weight = 1000 }
+}
+
+# String Sensors :: standard ships
 utility_component_template = {
 	key = ESC_SENSOR_6
 	size = medium
@@ -46,6 +114,11 @@ utility_component_template = {
 		cost = {
 			alloys = @ESC_SENSOR_t6_cost
 		}
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	sensor_range = @ESC_SENSOR_t6_sensor_range
@@ -62,7 +135,70 @@ utility_component_template = {
 	ai_weight = { weight = 1500 }
 }
 
-# Advanced String Sensors
+# String Sensors :: bio ships
+utility_component_template = {
+	key = ESC_BIO_SENSOR_6
+	size = medium
+	icon = GFX_esc_bio_sensors_6
+	icon_frame = 1
+	power = @ESC_SENSOR_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t6_sensor_range
+	hyperlane_range = @ESC_SENSOR_t6_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t6_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_6" }
+	component_set = "sensor_components"
+
+	upgrades_to = ESC_BIO_SENSOR_7
+	ai_weight = { weight = 1500 }
+}
+
+### String Sensors :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_SENSOR_6
+	size = medium
+	icon = GFX_esc_bioship_sensors_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	sensor_range = @ESC_SENSOR_t6_sensor_range
+	hyperlane_range = @ESC_SENSOR_t6_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t6_hit_chance
+	}
+
+	prerequisites = { "esc_tech_sensors_6" "tech_sensors_bio_integration" }
+	component_set = "sensor_components_bio"
+
+	upgrades_to = ESC_BIOSHIP_SENSOR_7
+	ai_weight = { weight = 1000 }
+}
+
+# Advanced String Sensors :: standard ships
 utility_component_template = {
 	key = ESC_SENSOR_7
 	size = medium
@@ -75,6 +211,11 @@ utility_component_template = {
 		cost = {
 			alloys = @ESC_SENSOR_t7_cost
 		}
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	sensor_range = @ESC_SENSOR_t7_sensor_range
@@ -94,7 +235,76 @@ utility_component_template = {
 	ai_weight = { weight = 2000 }
 }
 
-# Precursor Sensor Arrays
+# Advanced String Sensors :: bio ships
+utility_component_template = {
+	key = ESC_BIO_SENSOR_7
+	size = medium
+	icon = GFX_esc_bio_sensors_7
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t7_hit_chance
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
+
+	prerequisites = { "esc_tech_sensors_7" }
+	component_set = "sensor_components"
+	upgrades_to = ESC_BIO_SENSOR_PRECURSOR
+
+	ai_weight = { weight = 2000 }
+}
+
+# Advanced String Sensors :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_SENSOR_7
+	size = medium
+	icon = GFX_esc_bioship_sensors_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_t7_hit_chance
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
+
+	prerequisites = { "esc_tech_sensors_7" "tech_sensors_bio_integration" }
+	component_set = "sensor_components_bio"
+	upgrades_to = ESC_BIOSHIP_SENSOR_PRECURSOR
+
+	ai_weight = { weight = 2000 }
+}
+
+# Precursor Sensor Arrays :: standard ships
 utility_component_template = {
 	key = ESC_SENSOR_PRECURSOR
 	size = medium
@@ -108,6 +318,11 @@ utility_component_template = {
 			alloys = @ESC_SENSOR_t6_cost
 			sr_dark_matter = 1
 		}
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	sensor_range = @ESC_SENSOR_t7_sensor_range
@@ -134,7 +349,85 @@ utility_component_template = {
 	}
 }
 
-# psionic sensors
+# Precursor Sensor Arrays :: bio ships
+utility_component_template = {
+	key = ESC_BIO_SENSOR_PRECURSOR
+	size = medium
+	icon = GFX_esc_bio_sensors_precursor
+	icon_frame = 1
+	power = @ESC_SENSOR_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+		ship_accuracy_add = 10
+	}
+	modifier = {
+		ship_cloaking_detection_add = 2
+	}
+
+	prerequisites = { "esc_tech_sensors_precursor" }
+	component_set = "sensor_components"
+
+	ai_weight = {
+		weight = 2500
+		# AI shouldn't use it if there is no dark matter income
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Precursor Sensor Arrays :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_SENSOR_PRECURSOR
+	size = medium
+	icon = GFX_esc_bioship_sensors_precursor
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+		ship_accuracy_add = 10
+	}
+	modifier = {
+		ship_cloaking_detection_add = 2
+	}
+
+	prerequisites = { "esc_tech_sensors_precursor" "tech_sensors_bio_integration" }
+	component_set = "sensor_components_bio"
+
+	ai_weight = { weight = 2000 }
+}
+
+# psionic sensors :: standard ships
 utility_component_template = {
 	key = ESC_SENSOR_PSIONIC
 	size = medium
@@ -150,6 +443,11 @@ utility_component_template = {
 		}
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	sensor_range = @ESC_SENSOR_t7_sensor_range
 	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
 
@@ -162,6 +460,92 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_sensors_psionic" }
 	component_set = "sensor_components"
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = { weight = 2250 }
+}
+
+# psionic sensors :: bio ships
+utility_component_template = {
+	key = ESC_BIO_SENSOR_PSIONIC
+	size = medium
+	icon = GFX_esc_psionic_bio_sensors
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
+
+	prerequisites = { "esc_tech_sensors_psionic" }
+	component_set = "sensor_components"
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = { weight = 2250 }
+}
+
+# psionic sensors :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_SENSOR_PSIONIC
+	size = medium
+	icon = GFX_esc_psionic_bioship_sensors
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
+
+	prerequisites = { "esc_tech_sensors_psionic" "tech_sensors_bio_integration" }
+	component_set = "sensor_components_bio"
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
@@ -203,7 +587,7 @@ utility_component_template = {
 ###                      FTL Drives                      ###
 ############################################################
 
-# Improved Jump Drive
+# Improved Jump Drive :: standard ships
 utility_component_template = {
 	key = ESC_JUMP_DRIVE_2
 	size = small
@@ -221,12 +605,21 @@ utility_component_template = {
 		}
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = no
+	}
+
 	ship_modifier = {
 		ship_windup_mult = -0.825
 		ship_jumpdrive_cooldown_mult = -0.125
 		ship_ftl_jumpdrive_range_mult = 0.25
 		ship_disengage_opportunities_add = 1
 	}
+
+	prerequisites = { esc_tech_jump_drive_2 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_JUMP_DRIVE_3
 
 	ai_weight = {
 		weight = 6
@@ -236,14 +629,94 @@ utility_component_template = {
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
 	}
-
-	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
-	prerequisites = { esc_tech_jump_drive_2 }
-	component_set = "ftl_components"
-	upgrades_to = ESC_JUMP_DRIVE_3
 }
 
-# Supercharged Jump Drive
+# Improved Jump Drive :: bio ships
+utility_component_template = {
+	key = ESC_BIO_JUMP_DRIVE_2
+	size = small
+	icon = GFX_esc_bio_jump_drive_2
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t2_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 1.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = yes
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.825
+		ship_jumpdrive_cooldown_mult = -0.125
+		ship_ftl_jumpdrive_range_mult = 0.25
+		ship_disengage_opportunities_add = 1
+	}
+
+	prerequisites = { esc_tech_jump_drive_2 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_BIO_JUMP_DRIVE_3
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Improved Jump Drive :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_JUMP_DRIVE_2
+	size = small
+	icon = GFX_esc_bioship_jump_drive_2
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 1.5
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.825
+		ship_jumpdrive_cooldown_mult = -0.125
+		ship_ftl_jumpdrive_range_mult = 0.25
+		ship_disengage_opportunities_add = 1
+	}
+
+	prerequisites = { "esc_tech_jump_drive_2" "tech_hyper_drive_bio_integration" }
+	component_set = "ftl_components_bio"
+	upgrades_to = ESC_BIOSHIP_JUMP_DRIVE_3
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Supercharged Jump Drive :: standard ships
 utility_component_template = {
 	key = ESC_JUMP_DRIVE_3
 	size = small
@@ -261,12 +734,21 @@ utility_component_template = {
 		}
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = no
+	}
+
 	ship_modifier = {
 		ship_windup_mult = -0.9
 		ship_jumpdrive_cooldown_mult = -0.25
 		ship_ftl_jumpdrive_range_mult = 0.5
 		ship_disengage_opportunities_add = 2
 	}
+
+	prerequisites = { esc_tech_jump_drive_3 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_JUMP_DRIVE_PRECURSOR
 
 	ai_weight = {
 		weight = 6
@@ -276,14 +758,94 @@ utility_component_template = {
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
 	}
-
-	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
-	prerequisites = { esc_tech_jump_drive_3 }
-	component_set = "ftl_components"
-	upgrades_to = ESC_JUMP_DRIVE_PRECURSOR
 }
 
-# Precursor Jump Drive
+# Supercharged Jump Drive :: bio ships
+utility_component_template = {
+	key = ESC_BIO_JUMP_DRIVE_3
+	size = small
+	icon = GFX_esc_bio_jump_drive_3
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t3_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = yes
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.9
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 0.5
+		ship_disengage_opportunities_add = 2
+	}
+
+	prerequisites = { esc_tech_jump_drive_3 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_BIO_JUMP_DRIVE_PRECURSOR
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Supercharged Jump Drive :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_JUMP_DRIVE_3
+	size = small
+	icon = GFX_esc_bioship_jump_drive_3
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_power
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 2
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.9
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 0.5
+		ship_disengage_opportunities_add = 2
+	}
+
+	prerequisites = { "esc_tech_jump_drive_3" "tech_hyper_drive_bio_integration" }
+	component_set = "ftl_components_bio"
+	upgrades_to = ESC_BIOSHIP_JUMP_DRIVE_PRECURSOR
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Precursor Jump Drive :: standard ships
 utility_component_template = {
 	key = ESC_JUMP_DRIVE_PRECURSOR
 	size = small
@@ -301,12 +863,20 @@ utility_component_template = {
 		}
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = no
+	}
+
 	ship_modifier = {
 		ship_windup_mult = -0.95
 		ship_jumpdrive_cooldown_mult = -0.5
 		ship_ftl_jumpdrive_range_mult = 1
 		ship_disengage_opportunities_add = 3
 	}
+
+	prerequisites = { esc_tech_jump_drive_precursor }
+	component_set = "ftl_components"
 
 	ai_weight = {
 		weight = 6
@@ -316,13 +886,92 @@ utility_component_template = {
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
 	}
-
-	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
-	prerequisites = { esc_tech_jump_drive_precursor }
-	component_set = "ftl_components"
 }
 
-# Improved Psionic Jump Drive
+# Precursor Jump Drive :: bio ships
+utility_component_template = {
+	key = ESC_BIO_JUMP_DRIVE_PRECURSOR
+	size = small
+	icon = GFX_esc_bio_jump_drive_precursor
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t3_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 2.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = yes
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.5
+		ship_ftl_jumpdrive_range_mult = 1
+		ship_disengage_opportunities_add = 3
+	}
+
+	prerequisites = { esc_tech_jump_drive_precursor }
+	component_set = "ftl_components"
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Precursor Jump Drive :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_JUMP_DRIVE_PRECURSOR
+	size = small
+	icon = GFX_esc_bioship_jump_drive_precursor
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 2.5
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.5
+		ship_ftl_jumpdrive_range_mult = 1
+		ship_disengage_opportunities_add = 3
+	}
+
+	prerequisites = { "esc_tech_jump_drive_precursor" "tech_hyper_drive_bio_integration" }
+	component_set = "ftl_components_bio"
+
+	ai_weight = {
+		weight = 6
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# Improved Psionic Jump Drive :: standard ships
 utility_component_template = {
 	key = ESC_PSI_JUMP_DRIVE_2
 	size = small
@@ -340,12 +989,21 @@ utility_component_template = {
 		}
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = no
+	}
+
 	ship_modifier = {
 		ship_windup_mult = -0.875
 		ship_jumpdrive_cooldown_mult = -0.125
 		ship_ftl_jumpdrive_range_mult = 0.75
 		ship_disengage_opportunities_add = 2
 	}
+
+	prerequisites = { esc_tech_psi_jump_drive_2 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_PSI_JUMP_DRIVE_3
 
 	ai_weight = {
 		weight = 10
@@ -355,14 +1013,94 @@ utility_component_template = {
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
 	}
-
-	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
-	prerequisites = { esc_tech_psi_jump_drive_2 }
-	component_set = "ftl_components"
-	upgrades_to = ESC_PSI_JUMP_DRIVE_3
 }
 
-# Shroud Guide
+# Improved Psionic Jump Drive :: bio ships
+utility_component_template = {
+	key = ESC_BIO_PSI_JUMP_DRIVE_2
+	size = small
+	icon = GFX_esc_bio_psi_jump_drive_2
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t2_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = 1.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = yes
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.875
+		ship_jumpdrive_cooldown_mult = -0.125
+		ship_ftl_jumpdrive_range_mult = 0.75
+		ship_disengage_opportunities_add = 2
+	}
+
+	prerequisites = { esc_tech_psi_jump_drive_2 }
+	component_set = "ftl_components"
+	upgrades_to = ESC_BIO_PSI_JUMP_DRIVE_3
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# Improved Psionic Jump Drive :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_PSI_JUMP_DRIVE_2
+	size = small
+	icon = GFX_esc_bioship_psi_jump_drive_2
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = 1.5
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.875
+		ship_jumpdrive_cooldown_mult = -0.125
+		ship_ftl_jumpdrive_range_mult = 0.75
+		ship_disengage_opportunities_add = 2
+	}
+
+	prerequisites = { "esc_tech_psi_jump_drive_2" "tech_hyper_drive_bio_integration" }
+	component_set = "ftl_components_bio"
+	upgrades_to = ESC_BIOSHIP_PSI_JUMP_DRIVE_3
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# Shroud Guide :: standard ships
 utility_component_template = {
 	key = ESC_PSI_JUMP_DRIVE_3
 	size = small
@@ -378,6 +1116,11 @@ utility_component_template = {
 			alloys = @ESC_JUMP_DRIVE_t3_cost
 			sr_zro = 2
 		}
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = no
 	}
 
 	ship_modifier = {
@@ -396,9 +1139,91 @@ utility_component_template = {
 		}
 	}
 
-	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }
 	prerequisites = { esc_tech_psi_jump_drive_3 }
 	component_set = "ftl_components"
+}
+
+# Shroud Guide :: bio ships
+utility_component_template = {
+	key = ESC_BIO_PSI_JUMP_DRIVE_3
+	size = small
+	icon = GFX_esc_bio_psi_jump_drive_3
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = @ESC_JUMP_DRIVE_t3_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		EVAL_TARGET = yes
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 1
+		ship_disengage_opportunities_add = 3
+	}
+
+	ai_weight = {
+		weight = 7
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+
+	prerequisites = { esc_tech_psi_jump_drive_3 }
+	component_set = "ftl_components"
+}
+
+# Shroud Guide :: domesticated space fauna
+utility_component_template = {
+	key = ESC_BIOSHIP_PSI_JUMP_DRIVE_3
+	size = small
+	icon = GFX_esc_bioship_psi_jump_drive_3
+	icon_frame = 1
+	ftl = yes
+	jumpdrive = yes
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = 2
+	}
+
+	ship_modifier = {
+		ship_windup_mult = -0.95
+		ship_jumpdrive_cooldown_mult = -0.25
+		ship_ftl_jumpdrive_range_mult = 1
+		ship_disengage_opportunities_add = 3
+	}
+
+	prerequisites = { "esc_tech_psi_jump_drive_3" "tech_hyper_drive_bio_integration" }
+	component_set = "ftl_components_bio"
+
+	ai_weight = {
+		weight = 7
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
 }
 
 # Shroud Gate

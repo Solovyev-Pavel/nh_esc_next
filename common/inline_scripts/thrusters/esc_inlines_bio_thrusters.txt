@@ -1,0 +1,32 @@
+### generalized inline for bioship thrusters
+
+size = small
+icon = $THRUSTER_ICON$
+icon_frame = 1
+power = $POWER$
+
+inline_script = {
+	script = ship_components_general/esc_inlines_bio_component_cost
+	COMPONENT_COST = $COMPONENT_COST$
+	ENERGY_UPKEEP = 0
+	COMPONENT_UPKEEP_COST = 0
+}
+
+modifier = {
+	ship_base_speed_mult = $SPEED_MULTIPLIER$
+	ship_evasion_add = $EVASION_MODIFIER$
+}
+
+prerequisites = { $PREREQUISITES$ }
+component_set = "thruster_components"
+
+potential = {
+	ESC_ship_uses_$SHIP_SIZE_GROUP$_thrusters_bio = yes
+	from = {
+		country_uses_bio_ships = yes
+	}
+}
+
+ai_weight = {
+	weight = $COMPONENT_WEIGHT$
+}

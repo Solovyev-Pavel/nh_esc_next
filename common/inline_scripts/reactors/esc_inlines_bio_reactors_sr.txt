@@ -1,0 +1,42 @@
+### generalized inline for reactors
+
+size = small
+icon = $REACTOR_ICON$
+icon_frame = 1
+power = @ESC_REACTOR_t$REACTOR_TIER$_power_$SHIP_SIZE_GROUP$
+
+inline_script = {
+	script = ship_components_general/esc_inlines_bio_component_cost_sr
+	COMPONENT_COST = @ESC_REACTOR_t$REACTOR_TIER$_cost_$SHIP_SIZE_GROUP$
+	ENERGY_UPKEEP = 0
+	COMPONENT_UPKEEP_COST = 0
+	STRATEGIC_RESOURCE_TYPE = $STRATEGIC_RESOURCE_TYPE$
+	STRATEGIC_RESOURCE_COST = $STRATEGIC_RESOURCE_COST$
+}
+
+potential = {
+	ESC_ship_uses_$SHIP_SIZE_GROUP$_components = yes
+	from = {
+		country_uses_bio_ships = yes
+	}
+}
+show_tech_unlock_if = {
+	country_uses_bio_ships = yes
+}
+
+prerequisites = { $PREREQUISITES$ }
+component_set = "power_core"
+
+ai_weight = {
+	weight = 1
+	factor = $COMPONENT_WEIGHT$
+	modifier = {
+		has_global_flag = @ACOT_active_flag
+		factor = $WEIGHT_MULT_ACOT$
+	}
+	### AI shouldn't use this component if it can't afford at least some upgrades right away
+	modifier = {
+		factor = 0.0
+		no_resource_for_component = { RESOURCE = $STRATEGIC_RESOURCE_TYPE$ }
+	}
+}
