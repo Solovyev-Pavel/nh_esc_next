@@ -1,5 +1,5 @@
 ############################################################
-##             Component: Auxiliary components            ##
+##    Components : Auxiliary components : Fire Control    ##
 ############################################################
 
 # Advanced Auxiliary Fire Control
@@ -33,6 +33,10 @@ utility_component_template = {
 		}
 	}
 }
+
+############################################################
+##    Components : Auxiliary components : Afterburners    ##
+############################################################
 
 # pulsed plasma afterburners
 utility_component_template = {
@@ -76,7 +80,11 @@ utility_component_template = {
 	}
 }
 
-# auxiliary zero-point reactor
+############################################################
+##    Components : Auxiliary components : Aux reactors    ##
+############################################################
+
+# auxiliary zero-point reactor :: standard ships
 utility_component_template = {
 	key = ESC_REACTOR_BOOSTER_4
 	size = aux
@@ -103,7 +111,34 @@ utility_component_template = {
 	ai_weight = { weight = 5 }
 }
 
-# auxiliary singularity reactor
+# auxiliary zero-point reactor :: bioships
+utility_component_template = {
+	key = ESC_BIO_REACTOR_BOOSTER_4
+	size = aux
+	icon = GFX_esc_aux_bio_reactor_4
+	icon_frame = 1
+	power = 200
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = 20
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_reactor_booster_4" }
+	component_set = ESC_BIO_REACTOR_BOOSTER_4
+	upgrades_to = ESC_BIO_REACTOR_BOOSTER_5
+
+	ai_weight = { weight = 5 }
+}
+
+# auxiliary singularity reactor :: standard ships
 utility_component_template = {
 	key = ESC_REACTOR_BOOSTER_5
 	size = aux
@@ -130,6 +165,38 @@ utility_component_template = {
 		weight = 10
 	}
 }
+
+# auxiliary singularity reactor :: bioships
+utility_component_template = {
+	key = ESC_BIO_REACTOR_BOOSTER_5
+	size = aux
+	icon = GFX_esc_aux_bio_reactor_5
+	icon_frame = 1
+	power = 400
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = 25
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_reactor_booster_5" }
+	component_set = ESC_BIO_REACTOR_BOOSTER_5
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+############################################################
+## Components : Auxiliary components : Shield Capacitors  ##
+############################################################
 
 # improved shield capacitors
 utility_component_template = {
@@ -251,6 +318,10 @@ utility_component_template = {
 		}
 	}
 }
+
+############################################################
+##    Components : Auxiliary components : Miscellaneous   ##
+############################################################
 
 # auxiliary maneuver thrusters
 utility_component_template = {
@@ -554,6 +625,10 @@ utility_component_template = {
 	}
 }
 
+############################################################
+##      Components : Auxiliary components : Hardeners     ##
+############################################################
+
 # nanite reactive armor
 utility_component_template = {
 	key = "ESC_NANITE_ARMOR_HARDENER"
@@ -699,6 +774,10 @@ utility_component_template = {
 		}
 	}
 }
+
+############################################################
+##     Components : Auxiliary components : On-killed      ##
+############################################################
 
 # dead hand switch : kill command
 utility_component_template = {
