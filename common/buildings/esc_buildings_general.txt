@@ -74,11 +74,16 @@ esc_building_central_research_bureau = {
 
 	# jobs
 	inline_script = {
-		script = jobs/esc_multitype_researcher_add
-		RESEARCHER_AMOUNT = @ESC_job_count_4
-		HEAD_RESEARCHER_AMOUNT = @ESC_job_count_1
-		GESTALT_RESEARCHER_AMOUNT = @ESC_job_count_7
+		script = jobs/researchers_add
+		AMOUNT = @building_static_jobs_very_high_3
+		LARGE_AMOUNT = @building_static_jobs
 	}
+	# inline_script = {
+	# 	script = jobs/esc_multitype_researcher_add
+	# 	RESEARCHER_AMOUNT = @ESC_job_count_4
+	# 	HEAD_RESEARCHER_AMOUNT = @ESC_job_count_1
+	# 	GESTALT_RESEARCHER_AMOUNT = @ESC_job_count_7
+	# }
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden } }
 	prerequisites = { "esc_tech_grand_research_initiative" }
@@ -143,10 +148,20 @@ esc_building_culture_nexus = {
 	}
 
 	inline_script = {
-		script = jobs/esc_culture_worker_jobs
-		CULTURE_WORKER_COUNT = @ESC_job_count_5
-		DEATH_PRIEST_COUNT = @ESC_job_count_3
+		script = jobs/entertainers_add
+		AMOUNT = @ESC_job_count_1
 	}
+
+	inline_script = {
+		script = jobs/unity_jobs_add
+		AMOUNT = @ESC_job_count_2
+	}
+
+	# inline_script = {
+	# 	script = jobs/esc_culture_worker_jobs
+	# 	CULTURE_WORKER_COUNT = @ESC_job_count_5
+	# 	DEATH_PRIEST_COUNT = @ESC_job_count_3
+	# }
 
 	show_tech_unlock_if = {
 		owner = { is_regular_empire = yes }
@@ -219,7 +234,7 @@ esc_building_cerebral_node = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
 		}
-		job_esc_mind_walker_add = @ESC_job_count_5
+		job_esc_mind_walker_add = @ESC_job_count_3
 		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
@@ -236,7 +251,7 @@ esc_building_cerebral_node = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
 		}
-		job_chronicle_drone_add = @ESC_job_count_5
+		job_chronicle_drone_add = @ESC_job_count_3
 		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
@@ -316,7 +331,7 @@ esc_building_network_regulator = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = no }
 		}
-		job_evaluator_add = @ESC_job_count_5
+		job_evaluator_add = @ESC_job_count_3
 		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
@@ -333,7 +348,7 @@ esc_building_network_regulator = {
 			exists = owner
 			owner = { ESC_TRIGGER_country_uses_chronicle_drones = yes }
 		}
-		job_chronicle_drone_add = @ESC_job_count_5
+		job_chronicle_drone_add = @ESC_job_count_3
 		job_maintenance_drone_add = @ESC_job_count_2
 	}
 	triggered_desc = {
@@ -398,7 +413,7 @@ esc_building_materials_laboratory = {
 	# jobs
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = @ESC_job_count_3
+		AMOUNT = @ESC_job_count_2
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden } }
@@ -452,7 +467,7 @@ esc_building_technology_institute = {
 	# jobs
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = @ESC_job_count_3
+		AMOUNT = @ESC_job_count_2
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden } }
@@ -512,11 +527,17 @@ esc_building_watcher = {
 
 	# jobs
 	inline_script = {
-		script = jobs/esc_multitype_researcher_add
-		RESEARCHER_AMOUNT = @ESC_job_count_4
-		HEAD_RESEARCHER_AMOUNT = @ESC_job_count_1
-		GESTALT_RESEARCHER_AMOUNT = @ESC_job_count_7
+		script = jobs/researchers_add
+		AMOUNT = @building_static_jobs_very_high_3
+		LARGE_AMOUNT = @building_static_jobs
 	}
+
+	# inline_script = {
+	# 	script = jobs/esc_multitype_researcher_add
+	# 	RESEARCHER_AMOUNT = @ESC_job_count_4
+	# 	HEAD_RESEARCHER_AMOUNT = @ESC_job_count_1
+	# 	GESTALT_RESEARCHER_AMOUNT = @ESC_job_count_7
+	# }
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden } }
 	prerequisites = { "esc_tech_watcher_of_eternity" }
@@ -682,7 +703,7 @@ esc_building_quantum_node = {
 	# jobs
 	inline_script = {
 		script = jobs/researchers_add
-		AMOUNT = @ESC_job_count_3
+		AMOUNT = @ESC_job_count_2
 	}
 
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_technosphere_tech_forbidden } }
