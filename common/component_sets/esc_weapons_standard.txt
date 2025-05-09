@@ -2,32 +2,84 @@
 ##             Component Sets: Energy Weapons             ##
 ############################################################
 
-# advanced combat laser
+# advanced combat laser (ships + creatures)
 component_set = {
 	key = ESC_LASER_6
 	icon = GFX_esc_laser_6
 	icon_frame = 1
 }
 
-# aurora laser
+component_set = {
+	key = ESC_BIO_LASER_6
+	icon = GFX_esc_bio_laser_6
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_LASER_CREATURE_6
+	icon = GFX_esc_bio_laser_6
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# aurora laser (ships + creatures)
 component_set = {
 	key = ESC_LASER_7
 	icon = GFX_esc_laser_7
 	icon_frame = 1
 }
 
-# advanced plasma cannon
+component_set = {
+	key = ESC_BIO_LASER_7
+	icon = GFX_esc_bio_laser_7
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_LASER_CREATURE_7
+	icon = GFX_esc_bio_laser_7
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# advanced plasma cannon (ships + creatures)
 component_set = {
 	key = ESC_PLASMA_4
 	icon = GFX_esc_plasma_cannon_4
 	icon_frame = 1
 }
 
-# dragonbreath cannon
+component_set = {
+	key = ESC_BIO_PLASMA_4
+	icon = GFX_esc_bio_plasma_cannon_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PLASMA_CREATURE_4
+	icon = GFX_esc_bio_plasma_cannon_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# dragonbreath cannon (ships + creatures)
 component_set = {
 	key = ESC_PLASMA_5
 	icon = GFX_esc_plasma_cannon_5
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PLASMA_5
+	icon = GFX_esc_bio_plasma_cannon_5
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PLASMA_CREATURE_5
+	icon = GFX_esc_bio_plasma_cannon_5
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # tachyon disruptor

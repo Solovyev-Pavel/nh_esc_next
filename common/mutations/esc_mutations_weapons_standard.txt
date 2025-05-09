@@ -1,0 +1,78 @@
+############################################################
+##          ESC : Energy weapons : Space Fauna            ##
+############################################################
+
+# Advanced Combat Eye-beam
+esc_laser_creature_6 = {
+	type = offensive
+	icon = GFX_esc_bio_laser_6
+	ship_components = {
+		small = SMALL_ESC_LASER_CREATURE_6
+		medium = MEDIUM_ESC_LASER_CREATURE_6
+		large = LARGE_ESC_LASER_CREATURE_6
+		extra_large = XL_ESC_LASER_CREATURE_6
+	}
+	upgrades_to = "esc_laser_creature_7"
+}
+
+# Aurora Eye-beam
+esc_laser_creature_7 = {
+	type = offensive
+	icon = GFX_esc_bio_laser_7
+	ship_components = {
+		small = SMALL_ESC_LASER_CREATURE_7
+		medium = MEDIUM_ESC_LASER_CREATURE_7
+		large = LARGE_ESC_LASER_CREATURE_7
+		extra_large = XL_ESC_LASER_CREATURE_7
+	}
+}
+
+# Advanced Bio-plasma Cannon
+esc_plasma_creature_4 = {
+	type = offensive
+	icon = GFX_esc_plasma_cannon_4
+	ship_components = {
+		small = SMALL_ESC_PLASMA_CREATURE_4
+		medium = MEDIUM_ESC_PLASMA_CREATURE_4
+		large = LARGE_ESC_PLASMA_CREATURE_4
+		extra_large = XL_ESC_PLASMA_CREATURE_4
+	}
+	upgrades_to = "esc_plasma_creature_5"
+}
+
+# Dragonbreath Bio-plasma Cannon
+esc_plasma_creature_5 = {
+	type = offensive
+	icon = GFX_esc_plasma_cannon_5
+	ship_components = {
+		small = SMALL_ESC_PLASMA_CREATURE_5
+		medium = MEDIUM_ESC_PLASMA_CREATURE_5
+		large = LARGE_ESC_PLASMA_CREATURE_5
+		extra_large = XL_ESC_PLASMA_CREATURE_5
+	}
+}
+
+# Amplified Cloud Lightning
+esc_cloud_lightning_creature_2 = {
+	type = offensive
+	icon = GFX_esc_cloud_lightning_2
+	ship_components = {
+		small = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_2
+		medium = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_2
+		large = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_2
+		extra_large = XL_ESC_CLOUD_LIGHTNING_CREATURE_2
+	}
+	upgrades_to = "esc_cloud_lightning_creature_3"
+}
+
+# Thunderstorm Generator
+esc_cloud_lightning_creature_3 = {
+	type = offensive
+	icon = GFX_esc_cloud_lightning_3
+	ship_components = {
+		small = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_3
+		medium = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_3
+		large = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_3
+		extra_large = XL_ESC_CLOUD_LIGHTNING_CREATURE_3
+	}
+}

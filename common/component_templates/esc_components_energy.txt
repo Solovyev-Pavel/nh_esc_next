@@ -176,6 +176,58 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_LASER_6
+	size = small
+	icon = GFX_esc_bio_laser_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 21 max = 58 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.9
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_laser_6" }
+	component_set = ESC_BIO_LASER_6
+	projectile_gfx = "esc_laser_6_small"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	upgrades_to = SMALL_ESC_BIO_LASER_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # medium
 weapon_component_template = {
 	key = MEDIUM_ESC_LASER_6
@@ -232,6 +284,58 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_LASER_6
+	size = medium
+	icon = GFX_esc_bio_laser_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 53 max = 134 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+	power = -34
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_laser_6" }
+	component_set = ESC_BIO_LASER_6
+	projectile_gfx = "esc_laser_6_medium"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	upgrades_to = MEDIUM_ESC_BIO_LASER_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # large
 weapon_component_template = {
 	key = LARGE_ESC_LASER_6
@@ -276,6 +380,58 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_LASER_6
+	size = large
+	icon = GFX_esc_bio_laser_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 132 max = 310 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.9
+	power = -64
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_laser_6" }
+	component_set = ESC_BIO_LASER_6
+	projectile_gfx = "esc_laser_6_large"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	upgrades_to = LARGE_ESC_BIO_LASER_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -347,6 +503,57 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_LASER_7
+	size = small
+	icon = GFX_esc_bio_laser_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25 max = 72 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.9
+	power = -24
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_laser_7" }
+	component_set = ESC_BIO_LASER_7
+	projectile_gfx = "esc_laser_7_small"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # medium
 weapon_component_template = {
 	key = MEDIUM_ESC_LASER_7
@@ -402,6 +609,57 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_LASER_7
+	size = medium
+	icon = GFX_esc_bio_laser_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 65 max = 206 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+	power = -46
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_laser_7" }
+	component_set = ESC_BIO_LASER_7
+	projectile_gfx = "esc_laser_7_medium"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # large
 weapon_component_template = {
 	key = LARGE_ESC_LASER_7
@@ -445,6 +703,57 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_LASER_7
+	size = large
+	icon = GFX_esc_bio_laser_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 184 max = 412 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.9
+	power = -90
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_laser_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_laser_7" }
+	component_set = ESC_BIO_LASER_7
+	projectile_gfx = "esc_laser_7_large"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -518,6 +827,59 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_PLASMA_4
+	size = small
+	icon = GFX_esc_bio_plasma_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 27 max = 62 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.8
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.4
+
+	prerequisites = { "esc_tech_plasma_4" }
+	component_set = ESC_BIO_PLASMA_4
+	projectile_gfx = "esc_plasma_4_small"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 3
+	upgrades_to = SMALL_ESC_BIO_PLASMA_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
 # medium
 weapon_component_template = {
 	key = MEDIUM_ESC_PLASMA_4
@@ -563,6 +925,59 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_PLASMA_4
+	size = medium
+	icon = GFX_esc_bio_plasma_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 71 max = 160 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.8
+	power = -34
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_plasma_4" }
+	component_set = ESC_BIO_PLASMA_4
+	projectile_gfx = "esc_plasma_4_medium"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 3
+	upgrades_to = MEDIUM_ESC_BIO_PLASMA_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -621,6 +1036,64 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_PLASMA_4
+	size = large
+	icon = GFX_esc_bio_plasma_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 170 max = 356 }
+	windup = { min = 8 max = 30 }
+	total_fire_time = 45
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+	power = -64
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_plasma_4" }
+	component_set = ESC_BIO_PLASMA_4
+	projectile_gfx = "esc_plasma_4_large"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 3
+	upgrades_to = LARGE_ESC_BIO_PLASMA_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -697,6 +1170,58 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_PLASMA_5
+	size = small
+	icon = GFX_esc_bio_plasma_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 31 max = 72 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.8
+	power = -24
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.4
+
+	prerequisites = { "esc_tech_plasma_5" }
+	component_set = ESC_BIO_PLASMA_5
+	projectile_gfx = "esc_plasma_5_small"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
 # medium
 weapon_component_template = {
 	key = MEDIUM_ESC_PLASMA_5
@@ -741,6 +1266,58 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_PLASMA_5
+	size = medium
+	icon = GFX_esc_bio_plasma_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 79 max = 195 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.8
+	power = -46
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_plasma_5" }
+	component_set = ESC_BIO_PLASMA_5
+	projectile_gfx = "esc_plasma_5_medium"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -798,6 +1375,63 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_PLASMA_5
+	size = large
+	icon = GFX_esc_bio_plasma_cannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 192 max = 400 }
+	windup = { min = 8 max = 30 }
+	total_fire_time = 45
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.8
+	power = -90
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_plasma_hull_damage
+	armor_penetration = @ESC_WEAPON_plasma_armor_penetration
+	armor_damage = @ESC_WEAPON_plasma_armor_damage
+	shield_penetration = @ESC_WEAPON_plasma_shield_penetration
+	shield_damage = @ESC_WEAPON_plasma_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_plasma_5" }
+	component_set = ESC_BIO_PLASMA_5
+	projectile_gfx = "esc_plasma_5_large"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tag_weight = 3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {

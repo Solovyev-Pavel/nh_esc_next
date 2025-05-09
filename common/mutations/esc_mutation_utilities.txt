@@ -1,0 +1,28 @@
+############################################################
+##          ESC : Armor Components : Space Fauna          ##
+############################################################
+
+# bio-material armor
+esc_bio_armor_creature_1 = {
+	type = defensive
+	icon = GFX_esc_bio_armor_1
+	ship_components = {
+		small = SMALL_ESC_BIO_ARMOR_CREATURE_1
+		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_1
+		large = LARGE_ESC_BIO_ARMOR_CREATURE_1
+		extra_large = XL_ESC_BIO_ARMOR_CREATURE_1
+	}
+	upgrades_to = "esc_bio_armor_creature_2"
+}
+
+# improved bio-material armor
+esc_bio_armor_creature_2 = {
+	type = defensive
+	icon = GFX_esc_bio_armor_2
+	ship_components = {
+		small = SMALL_ESC_BIO_ARMOR_CREATURE_2
+		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_2
+		large = LARGE_ESC_BIO_ARMOR_CREATURE_2
+		extra_large = XL_ESC_BIO_ARMOR_CREATURE_2
+	}
+}

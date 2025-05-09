@@ -1,5 +1,5 @@
 ############################################################
-##       ESC : Biological Components : Space Fauna        ##
+##        ESC : Biological Weapons : Space Fauna          ##
 ############################################################
 
 # Bile Spitter
@@ -88,31 +88,6 @@ esc_bio_missile_creature_3 = {
 		medium = MEDIUM_ESC_BIO_MISSILE_CREATURE_3
 		large = LARGE_ESC_BIO_MISSILE_CREATURE_3
 		extra_large = XL_ESC_BIO_MISSILE_CREATURE_3
-	}
-}
-
-# bio-material armor
-esc_bio_armor_creature_1 = {
-	type = defensive
-	icon = GFX_esc_bio_armor_1
-	ship_components = {
-		small = SMALL_ESC_BIO_ARMOR_CREATURE_1
-		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_1
-		large = LARGE_ESC_BIO_ARMOR_CREATURE_1
-		extra_large = XL_ESC_BIO_ARMOR_CREATURE_1
-	}
-	upgrades_to = "esc_bio_armor_creature_2"
-}
-
-# improved bio-material armor
-esc_bio_armor_creature_2 = {
-	type = defensive
-	icon = GFX_esc_bio_armor_2
-	ship_components = {
-		small = SMALL_ESC_BIO_ARMOR_CREATURE_2
-		medium = MEDIUM_ESC_BIO_ARMOR_CREATURE_2
-		large = LARGE_ESC_BIO_ARMOR_CREATURE_2
-		extra_large = XL_ESC_BIO_ARMOR_CREATURE_2
 	}
 }
 
@@ -239,34 +214,8 @@ esc_psionic_strike_2 = {
 }
 
 ############################################################
-##           ESC : Energy Weapons : Space Fauna           ##
+##         ESC : LEviathan Weapons : Space Fauna          ##
 ############################################################
-
-# Amplified Cloud Lightning
-esc_cloud_lightning_creature_2 = {
-	type = offensive
-	icon = GFX_esc_cloud_lightning_2
-	ship_components = {
-		small = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_2
-		medium = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_2
-		large = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_2
-		extra_large = XL_ESC_CLOUD_LIGHTNING_CREATURE_2
-	}
-	upgrades_to = "esc_cloud_lightning_creature_3"
-}
-
-# Thunderstorm Generator
-esc_cloud_lightning_creature_3 = {
-	type = offensive
-	icon = GFX_esc_cloud_lightning_3
-	ship_components = {
-		small = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_3
-		medium = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_3
-		large = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_3
-		extra_large = XL_ESC_CLOUD_LIGHTNING_CREATURE_3
-	}
-}
-
 
 # Voidspawn Missile Launcher
 esc_voidspawn_missile_creature = {

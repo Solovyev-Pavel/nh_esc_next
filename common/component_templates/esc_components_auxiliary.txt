@@ -91,6 +91,11 @@ utility_component_template = {
 		}
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_reactor_booster_4" }
 	component_set = ESC_REACTOR_BOOSTER_4
 	upgrades_to = ESC_REACTOR_BOOSTER_5
@@ -111,6 +116,11 @@ utility_component_template = {
 		cost = {
 			alloys = 25
 		}
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
 	}
 
 	prerequisites = { "esc_tech_reactor_booster_5" }
