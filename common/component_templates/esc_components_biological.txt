@@ -40,16 +40,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -11
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_s_t4_cost_alloys
-			food = @ESC_WEAPON_biological_s_t4_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_s_t4_upkeep_energy
-			food = @ESC_WEAPON_biological_s_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_s_t4_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_s_t4_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_s_t4_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_s_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -101,16 +102,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_m_t4_cost_alloys
-			food = @ESC_WEAPON_biological_m_t4_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_m_t4_upkeep_energy
-			food = @ESC_WEAPON_biological_m_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_m_t4_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_m_t4_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_m_t4_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_m_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -163,16 +165,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -40
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t4_cost_alloys
-			food = @ESC_WEAPON_biological_l_t4_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t4_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t4_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t4_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t4_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t4_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t4_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -228,16 +231,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -11
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_s_t5_cost_alloys
-			food = @ESC_WEAPON_biological_s_t5_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_s_t5_upkeep_energy
-			food = @ESC_WEAPON_biological_s_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_s_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_s_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_s_t5_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_s_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -289,16 +293,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_m_t5_cost_alloys
-			food = @ESC_WEAPON_biological_m_t5_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_m_t5_upkeep_energy
-			food = @ESC_WEAPON_biological_m_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_m_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_m_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_m_t5_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_m_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -351,16 +356,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -40
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t5_cost_alloys
-			food = @ESC_WEAPON_biological_l_t5_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t5_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t5_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -416,16 +422,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -11
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_s_t6_cost_alloys
-			food = @ESC_WEAPON_biological_s_t6_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_s_t6_upkeep_energy
-			food = @ESC_WEAPON_biological_s_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_s_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_s_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_s_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_s_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -477,16 +484,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_m_t6_cost_alloys
-			food = @ESC_WEAPON_biological_m_t6_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_m_t6_upkeep_energy
-			food = @ESC_WEAPON_biological_m_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_m_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_m_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_m_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_m_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -539,16 +547,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -40
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t6_cost_alloys
-			food = @ESC_WEAPON_biological_l_t6_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t6_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -604,16 +613,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -11
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_s_t7_cost_alloys
-			food = @ESC_WEAPON_biological_s_t7_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_s_t7_upkeep_energy
-			food = @ESC_WEAPON_biological_s_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_s_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_s_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_s_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_s_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -664,16 +674,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_m_t7_cost_alloys
-			food = @ESC_WEAPON_biological_m_t7_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_m_t7_upkeep_energy
-			food = @ESC_WEAPON_biological_m_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_m_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_m_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_m_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_m_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -725,16 +736,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -40
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t4_cost_alloys
-			food = @ESC_WEAPON_biological_l_t7_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t7_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -795,16 +807,17 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -30
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t5_cost_alloys
-			food = @ESC_WEAPON_biological_l_t5_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t5_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t5_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t5_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t5_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -824,6 +837,12 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_conditional_potential
+		CONDITION = "ship_uses_mauler_components"
+		CONDITION_VALUE = no
 	}
 
 	# only regular empires and xenophile FE may use biological components
@@ -866,16 +885,17 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -60
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t6_cost_alloys
-			food = @ESC_WEAPON_biological_l_t6_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t6_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t6_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -895,6 +915,12 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_conditional_potential
+		CONDITION = "ship_uses_mauler_components"
+		CONDITION_VALUE = no
 	}
 
 	# only regular empires and xenophile FE may use biological components
@@ -937,16 +963,17 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_l_t7_cost_alloys
-			food = @ESC_WEAPON_biological_l_t7_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_l_t7_upkeep_energy
-			food = @ESC_WEAPON_biological_l_t7_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_l_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_l_t7_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -965,6 +992,12 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
 		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_conditional_potential
+		CONDITION = "ship_uses_mauler_components"
+		CONDITION_VALUE = no
 	}
 
 	# only regular empires and xenophile FE may use biological components
@@ -1008,16 +1041,17 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	power = -275
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_lance_1_cost_alloys
-			food = @ESC_WEAPON_biological_lance_1_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_lance_1_upkeep_energy
-			food = @ESC_WEAPON_biological_lance_1_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_lance_1_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_lance_1_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_lance_1_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_lance_1_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1080,16 +1114,17 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	power = -325
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_lance_2_cost_alloys
-			food = @ESC_WEAPON_biological_lance_2_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_lance_2_upkeep_energy
-			food = @ESC_WEAPON_biological_lance_2_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_lance_2_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_lance_2_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_lance_2_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_lance_2_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1153,16 +1188,17 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_lance_3_cost_alloys
-			food = @ESC_WEAPON_biological_lance_3_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_lance_3_upkeep_energy
-			food = @ESC_WEAPON_biological_lance_3_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_lance_3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_lance_3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_lance_3_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_lance_3_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage
@@ -1221,16 +1257,17 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_biological_lance_3_cost_alloys
-			food = @ESC_WEAPON_biological_lance_3_cost_food
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_biological_lance_3_upkeep_energy
-			food = @ESC_WEAPON_biological_lance_3_upkeep_food
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_biological_lance_3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_biological_lance_3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_biological_lance_3_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_WEAPON_biological_lance_3_upkeep_food
 	}
 
 	hull_damage = @ESC_WEAPON_biological_hull_damage

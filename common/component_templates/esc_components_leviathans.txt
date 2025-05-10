@@ -537,16 +537,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -290
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
@@ -606,16 +607,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
@@ -670,16 +672,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
@@ -770,6 +773,12 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_conditional_potential
+		CONDITION = "ship_uses_mauler_components"
+		CONDITION_VALUE = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -805,18 +814,17 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -50
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			food = @ESC_WEAPON_m_t7_cost_alloys
-			volatile_motes = @ESC_WEAPON_l_t9_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-			food = @ESC_WEAPON_l_t9_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t9_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
@@ -838,8 +846,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_conditional_potential
+		CONDITION = "ship_uses_mauler_components"
+		CONDITION_VALUE = no
 	}
 
 	# only regular empires may use this component
@@ -886,18 +895,17 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -330
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t9_cost_alloys
-			food = @ESC_WEAPON_m_t9_cost_alloys
-			volatile_motes = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t9_upkeep_energy
-			alloys = @ESC_WEAPON_m_t9_upkeep_alloys
-			food = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t9_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t9_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t9_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
