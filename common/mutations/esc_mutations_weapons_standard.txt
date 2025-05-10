@@ -52,6 +52,31 @@ esc_plasma_creature_5 = {
 	}
 }
 
+# Tachyon Bio-disruptors
+esc_disruptor_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_disruptor_4
+	ship_components = {
+		small = SMALL_ESC_DISRUPTOR_CREATURE_4
+		medium = MEDIUM_ESC_DISRUPTOR_CREATURE_4
+		large = LARGE_ESC_DISRUPTOR_CREATURE_4
+		extra_large = XL_ESC_DISRUPTOR_CREATURE_4
+	}
+	upgrades_to = "esc_disruptor_creature_5"
+}
+
+# Bio-disruptor lance
+esc_disruptor_creature_5 = {
+	type = offensive
+	icon = GFX_esc_bio_disruptor_5
+	ship_components = {
+		small = SMALL_ESC_DISRUPTOR_CREATURE_5
+		medium = MEDIUM_ESC_DISRUPTOR_CREATURE_5
+		large = LARGE_ESC_DISRUPTOR_CREATURE_5
+		extra_large = XL_ESC_DISRUPTOR_CREATURE_5
+	}
+}
+
 # Amplified Cloud Lightning
 esc_cloud_lightning_creature_2 = {
 	type = offensive

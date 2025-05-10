@@ -82,18 +82,44 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# tachyon disruptor
+# tachyon disruptor (ships + creatures)
 component_set = {
 	key = ESC_DISRUPTOR_4
 	icon = GFX_esc_disruptor_4
 	icon_frame = 1
 }
 
-# disruptor lance
+component_set = {
+	key = ESC_BIO_DISRUPTOR_4
+	icon = GFX_esc_bio_disruptor_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_DISRUPTOR_CREATURE_4
+	icon = GFX_esc_bio_disruptor_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# disruptor lance (ships + creatures)
 component_set = {
 	key = ESC_DISRUPTOR_5
 	icon = GFX_esc_disruptor_5
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_DISRUPTOR_5
+	icon = GFX_esc_bio_disruptor_5
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_DISRUPTOR_CREATURE_5
+	icon = GFX_esc_bio_disruptor_5
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # muon launcher

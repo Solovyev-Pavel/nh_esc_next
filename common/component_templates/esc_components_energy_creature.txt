@@ -6,6 +6,8 @@
 # - Aurora Laser					S/M/L/X
 # - Advanced Plasma Cannon			S/M/L/X
 # - Dragonbreath Cannon				S/M/L/X
+# - Tachyon Disruptor				S/M/L/X
+# - Disruptor Lance					S/M/L/X
 # - Amplified Cloud Lightning		S/M/L/X
 # - Thunderstorm Generator			S/M/L/X
 
@@ -20,6 +22,12 @@
 @ESC_WEAPON_plasma_armor_penetration = 0.0
 @ESC_WEAPON_plasma_shield_damage = 0.25
 @ESC_WEAPON_plasma_shield_penetration = 0.0
+
+@ESC_WEAPON_disruptor_hull_damage = 1.0
+@ESC_WEAPON_disruptor_armor_damage = 1.0
+@ESC_WEAPON_disruptor_armor_penetration = 1.0
+@ESC_WEAPON_disruptor_shield_damage = 1.0
+@ESC_WEAPON_disruptor_shield_penetration = 1.0
 
 @ESC_WEAPON_lightning_hull_damage_2 = 1.0
 @ESC_WEAPON_lightning_hull_damage_3 = 1.15
@@ -812,6 +820,394 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_gravity_ai_weight_factor
 			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                    Tachyon Disruptor                   ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_DISRUPTOR_CREATURE_4
+	size = small
+	icon = GFX_esc_bio_disruptor_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5 max = 30 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_disruptors_4" }
+	component_set = ESC_DISRUPTOR_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_small"
+	upgrades_to = SMALL_ESC_DISRUPTOR_CREATURE_5
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_DISRUPTOR_CREATURE_4
+	size = medium
+	icon = GFX_esc_bio_disruptor_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 8 max = 85 }
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_4" }
+	component_set = ESC_DISRUPTOR_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_medium"
+	upgrades_to = MEDIUM_ESC_DISRUPTOR_CREATURE_5
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_DISRUPTOR_CREATURE_4
+	size = large
+	icon = GFX_esc_bio_disruptor_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 13 max = 170 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_4" }
+	component_set = ESC_DISRUPTOR_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_medium"
+	upgrades_to = LARGE_ESC_DISRUPTOR_CREATURE_5
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_DISRUPTOR_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_bio_disruptor_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 18 max = 345 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_3
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_4" }
+	component_set = ESC_DISRUPTOR_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_medium"
+	upgrades_to = XL_ESC_DISRUPTOR_CREATURE_5
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                     Disruptor Lance                    ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_DISRUPTOR_CREATURE_5
+	size = small
+	icon = GFX_esc_bio_disruptor_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5 max = 43 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_disruptors_5" }
+	component_set = ESC_DISRUPTOR_CREATURE_5
+	projectile_gfx = "esc_disruptor_5_small"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_DISRUPTOR_CREATURE_5
+	size = medium
+	icon = GFX_esc_bio_disruptor_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 115 }
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_5" }
+	component_set = ESC_DISRUPTOR_CREATURE_5
+	projectile_gfx = "esc_disruptor_5_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_DISRUPTOR_CREATURE_5
+	size = large
+	icon = GFX_esc_bio_disruptor_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 15 max = 230 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_5" }
+	component_set = ESC_DISRUPTOR_CREATURE_5
+	projectile_gfx = "esc_disruptor_5_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_DISRUPTOR_CREATURE_5
+	size = extra_large
+	icon = GFX_esc_bio_disruptor_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 480 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_3
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_disruptor_hull_damage
+	armor_penetration = @ESC_WEAPON_disruptor_armor_penetration
+	armor_damage = @ESC_WEAPON_disruptor_armor_damage
+	shield_penetration = @ESC_WEAPON_disruptor_shield_penetration
+	shield_damage = @ESC_WEAPON_disruptor_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_disruptors_5" }
+	component_set = ESC_DISRUPTOR_CREATURE_5
+	projectile_gfx = "esc_disruptor_5_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tag_weight = 5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
 	}
 }
