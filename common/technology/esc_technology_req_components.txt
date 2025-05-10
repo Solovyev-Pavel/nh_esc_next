@@ -15,7 +15,10 @@
 # ── Improved Tachyon Sensors					: tier 5 sensors for ships and stations
 #     └─ String Theory							: tier 6 sensors for ships and stations
 #         ├─ String Fluctuation Analysis		: tier 7 sensors for ships and stations
-#         └─ Psionic Sensors					: tier 7 sensors for ships and stations
+#         ├─ Psionic Sensors					: tier 7 sensors for ships and stations
+#         └─ Eyes Clarivoyancy					: special tier 7 sensor for bioships
+#             └─ Superior Eyes Clarivoyancy		: special tier 8 sensor for bioships
+#                 └─ God-eye					: special tier 9 sensor for bioships
 # ── Precursor Sensor Arrays					: tier 8 sensors
 #
 # ── Antimatter Thrusters						: tier 5 thrusters for ships
@@ -765,6 +768,168 @@ esc_tech_sensors_psionic = {
 			federation = {
 				has_federation_perk = rare_tech_boost
 				any_member = { has_technology = esc_tech_sensors_psionic }
+			}
+		}
+	}
+}
+
+############################################################
+##                    Eye of Clarivoyancy                 ##
+############################################################
+
+esc_tech_clairvoyancy_eyes_1 = {
+	area = society
+	category = { biology }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	prerequisites = { "esc_tech_sensors_6" }
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		country_uses_bio_ships = yes
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_clairvoyancy_eyes_1 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_clairvoyancy_eyes_1 }
+			}
+		}
+	}
+}
+
+############################################################
+##               Superior Eye of Clarivoyancy             ##
+############################################################
+
+esc_tech_clairvoyancy_eyes_2 = {
+	area = society
+	category = { biology }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	prerequisites = { "esc_tech_clairvoyancy_eyes_1" }
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		country_uses_bio_ships = yes
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_clairvoyancy_eyes_2 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_clairvoyancy_eyes_2 }
+			}
+		}
+	}
+}
+
+############################################################
+##               Superior Eye of Clarivoyancy             ##
+############################################################
+
+esc_tech_clairvoyancy_eyes_3 = {
+	area = society
+	category = { biology }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	prerequisites = { "esc_tech_clairvoyancy_eyes_2" }
+	ai_update_type = all
+	is_rare = yes
+
+	potential = {
+		country_uses_bio_ships = yes
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_sensors_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_clairvoyancy_eyes_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_clairvoyancy_eyes_3 }
 			}
 		}
 	}

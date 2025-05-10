@@ -555,6 +555,143 @@ utility_component_template = {
 	ai_weight = { weight = 2250 }
 }
 
+# Eye of Clairvoyancy :: bio ships
+utility_component_template = {
+	key = ESC_SENSOR_CLAIRVOYANT_EYE_1
+	size = medium
+	icon = GFX_esc_bio_sensors_clairvoyancy_1
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 1.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t6_sensor_range
+	hyperlane_range = @ESC_SENSOR_t5_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+		ship_accuracy_add = 15
+		ship_evasion_add = 10
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
+
+	prerequisites = { "esc_tech_clairvoyancy_eyes_1" }
+	component_set = "sensor_components"
+	upgrades_to = ESC_SENSOR_CLAIRVOYANT_EYE_2
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 2250 }
+}
+
+# Superior Eye of Clairvoyancy :: bio ships
+utility_component_template = {
+	key = ESC_SENSOR_CLAIRVOYANT_EYE_2
+	size = medium
+	icon = GFX_esc_bio_sensors_clairvoyancy_2
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t6_sensor_range
+	hyperlane_range = @ESC_SENSOR_t6_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+		ship_accuracy_add = @ESC_SENSOR_t5_hit_chance
+		ship_evasion_add = 12.5
+	}
+	modifier = {
+		ship_cloaking_detection_add = 1
+	}
+
+	prerequisites = { "esc_tech_clairvoyancy_eyes_2" }
+	component_set = "sensor_components"
+	upgrades_to = ESC_SENSOR_CLAIRVOYANT_EYE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 2250 }
+}
+
+# God-eye :: bio ships
+utility_component_template = {
+	key = ESC_SENSOR_CLAIRVOYANT_EYE_3
+	size = medium
+	icon = GFX_esc_bio_sensors_clairvoyancy_3
+	icon_frame = 1
+	power = @ESC_SENSOR_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SENSOR_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = 2.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	sensor_range = @ESC_SENSOR_t7_sensor_range
+	hyperlane_range = @ESC_SENSOR_t7_hyperlane_sight
+
+	ship_modifier = {
+		ship_tracking_add = @ESC_SENSOR_psionic_hit_chance
+		ship_accuracy_add = @ESC_SENSOR_t6_hit_chance
+		ship_evasion_add = 15
+	}
+	modifier = {
+		ship_cloaking_detection_add = 2
+	}
+
+	prerequisites = { "esc_tech_clairvoyancy_eyes_3" }
+	component_set = "sensor_components"
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 2250 }
+}
+
 # Shroud Eye
 utility_component_template = {
 	key = ESC_SENSOR_AVATAR
