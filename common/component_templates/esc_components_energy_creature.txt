@@ -8,6 +8,8 @@
 # - Dragonbreath Cannon				S/M/L/X
 # - Tachyon Disruptor				S/M/L/X
 # - Disruptor Lance					S/M/L/X
+# - Muon Launcher					S/M/L/X
+# - Antimatter Launcher				S/M/L/X
 # - Amplified Cloud Lightning		S/M/L/X
 # - Thunderstorm Generator			S/M/L/X
 
@@ -29,12 +31,27 @@
 @ESC_WEAPON_disruptor_shield_damage = 1.0
 @ESC_WEAPON_disruptor_shield_penetration = 1.0
 
+@ESC_WEAPON_energy_launcher_hull_damage = 1.75
+@ESC_WEAPON_energy_launcher_armor_damage = 1.5
+@ESC_WEAPON_energy_launcher_armor_penetration = 0.0
+@ESC_WEAPON_energy_launcher_shield_damage = 0.5
+@ESC_WEAPON_energy_launcher_shield_penetration = 0.0
+
 @ESC_WEAPON_lightning_hull_damage_2 = 1.0
 @ESC_WEAPON_lightning_hull_damage_3 = 1.15
 @ESC_WEAPON_lightning_armor_damage = 1.0
 @ESC_WEAPON_lightning_armor_penetration = 1.0
 @ESC_WEAPON_lightning_shield_damage = 1.0
 @ESC_WEAPON_lightning_shield_penetration = 1.0
+
+# - Improved Tachyon Lance				S/M/L/X
+# - Hypercharged Tachyon Lance			S/M/L/X
+
+@ESC_WEAPON_particle_lance_hull_damage = 1.5
+@ESC_WEAPON_particle_lance_armor_damage = 2.0
+@ESC_WEAPON_particle_lance_armor_penetration = 0.0
+@ESC_WEAPON_particle_lance_shield_damage = 0.5
+@ESC_WEAPON_particle_lance_shield_penetration = 0.0
 
 ############################################################
 ##                  Advanced Combat Laser                 ##
@@ -956,7 +973,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_disruptors_4" }
 	component_set = ESC_DISRUPTOR_CREATURE_4
-	projectile_gfx = "esc_disruptor_4_medium"
+	projectile_gfx = "esc_disruptor_4_large"
 	upgrades_to = LARGE_ESC_DISRUPTOR_CREATURE_5
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
@@ -1004,7 +1021,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_disruptors_4" }
 	component_set = ESC_DISRUPTOR_CREATURE_4
-	projectile_gfx = "esc_disruptor_4_medium"
+	projectile_gfx = "esc_disruptor_4_large"
 	upgrades_to = XL_ESC_DISRUPTOR_CREATURE_5
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
@@ -1208,6 +1225,442 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                      Muon Launcher                     ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ENERGY_TORPEDO_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_energy_launcher_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 38 max = 81 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_3" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_3
+	projectile_gfx = "esc_energy_torpedoes_3"
+	upgrades_to = SMALL_ESC_ENERGY_TORPEDO_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_energy_launcher_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 76 max = 162 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_3" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_3
+	projectile_gfx = "esc_energy_torpedoes_3"
+	upgrades_to = MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ENERGY_TORPEDO_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_energy_launcher_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 152 max = 324 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_RANGE_X_3
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_3" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_3
+	projectile_gfx = "esc_energy_torpedoes_3"
+	upgrades_to = LARGE_ESC_ENERGY_TORPEDO_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ENERGY_TORPEDO_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_energy_launcher_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 304 max = 648 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_RANGE_X_3
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_3" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_3
+	projectile_gfx = "esc_energy_torpedoes_3"
+	upgrades_to = XL_ESC_ENERGY_TORPEDO_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                   Antimatter Launcher                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ENERGY_TORPEDO_CREATURE_4
+	size = small
+	icon = GFX_esc_bio_energy_launcher_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 46 max = 98 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_3
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_4" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
+	projectile_gfx = "esc_energy_torpedoes_4"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_4
+	size = medium
+	icon = GFX_esc_bio_energy_launcher_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 92 max = 195 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_4" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
+	projectile_gfx = "esc_energy_torpedoes_4"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ENERGY_TORPEDO_CREATURE_4
+	size = large
+	icon = GFX_esc_bio_energy_launcher_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 184 max = 390 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_RANGE_X_3
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_4" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
+	projectile_gfx = "esc_energy_torpedoes_4"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ENERGY_TORPEDO_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_bio_energy_launcher_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 368 max = 780 }
+	size_damage_factor = 1.0
+	windup = { min = 25 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_RANGE_X_3
+	firing_arc = 25.0
+	accuracy = 0.9
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
+	armor_penetration = @ESC_WEAPON_energy_launcher_armor_penetration
+	armor_damage = @ESC_WEAPON_energy_launcher_armor_damage
+	shield_penetration = @ESC_WEAPON_energy_launcher_shield_penetration
+	shield_damage = @ESC_WEAPON_energy_launcher_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_energy_torpedo_4" }
+	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
+	projectile_gfx = "esc_energy_torpedoes_4"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
 		}
 	}
 }
@@ -1566,4 +2019,464 @@ weapon_component_template = {
 	}
 
 	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                 Improved Tachyon Lance                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PARTICLE_LANCE_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_particle_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 125 max = 285 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_3" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_3
+	projectile_gfx = "esc_disruptor_4_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = SMALL_ESC_PARTICLE_LANCE_CREATURE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_particle_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 250 max = 575 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_3" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_3
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PARTICLE_LANCE_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_particle_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 500 max = 1150 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_3" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_3
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = LARGE_ESC_PARTICLE_LANCE_CREATURE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra large
+weapon_component_template = {
+	key = XL_ESC_PARTICLE_LANCE_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_particle_lance_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 2300 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_3" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_3
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = XL_ESC_PARTICLE_LANCE_CREATURE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                 Hyperdimensional Lance                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PARTICLE_LANCE_CREATURE_4
+	size = small
+	icon = GFX_esc_bio_particle_lance_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 155 max = 325 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_4" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4
+	size = medium
+	icon = GFX_esc_bio_particle_lance_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 315 max = 650 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_4" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PARTICLE_LANCE_CREATURE_4
+	size = large
+	icon = GFX_esc_bio_particle_lance_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 625 max = 1300 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_4" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra large
+weapon_component_template = {
+	key = XL_ESC_PARTICLE_LANCE_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_bio_particle_lance_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1250 max = 2600 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_xl_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_4" }
+	component_set = ESC_PARTICLE_LANCE_CREATURE_4
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
 }

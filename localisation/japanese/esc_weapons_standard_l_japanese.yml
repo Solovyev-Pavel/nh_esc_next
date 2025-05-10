@@ -182,9 +182,37 @@ XL_ESC_DISRUPTOR_CREATURE_5_DESC: "$ESC_BIO_DISRUPTOR_5_DESC$"
 ESC_ENERGY_TORPEDO_3: "Muon Launcher"
 ESC_ENERGY_TORPEDO_3_DESC: "This energy launcher utilizes unstable and rather short-lived muon as its main damage dealing agent. It is very effective."
 
+ESC_BIO_ENERGY_TORPEDO_3: "Biological Muon Launcher"
+ESC_BIO_ENERGY_TORPEDO_3_DESC: "This specialized organ can generate and launch unstable and rather short-lived muons, which are very effective as a damage-dealing agent."
+
+ESC_ENERGY_TORPEDO_CREATURE_3: "$ESC_BIO_ENERGY_TORPEDO_3$"
+ESC_ENERGY_TORPEDO_CREATURE_3_DESC: "$ESC_BIO_ENERGY_TORPEDO_3_DESC$"
+SMALL_ESC_ENERGY_TORPEDO_CREATURE_3: "$esc_small$ $ESC_BIO_ENERGY_TORPEDO_3$"
+SMALL_ESC_ENERGY_TORPEDO_CREATURE_3_DESC: "$ESC_BIO_ENERGY_TORPEDO_3_DESC$"
+MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_3: "$esc_medium$ $ESC_BIO_ENERGY_TORPEDO_3$"
+MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_3_DESC: "$ESC_BIO_ENERGY_TORPEDO_3_DESC$"
+LARGE_ESC_ENERGY_TORPEDO_CREATURE_3: "$esc_large$ $ESC_BIO_ENERGY_TORPEDO_3$"
+LARGE_ESC_ENERGY_TORPEDO_CREATURE_3_DESC: "$ESC_BIO_ENERGY_TORPEDO_3_DESC$"
+XL_ESC_ENERGY_TORPEDO_CREATURE_3: "$esc_extra_large$ $ESC_BIO_ENERGY_TORPEDO_3$"
+XL_ESC_ENERGY_TORPEDO_CREATURE_3_DESC: "$ESC_BIO_ENERGY_TORPEDO_3_DESC$"
+
 # Antimatter Launcher
 ESC_ENERGY_TORPEDO_4: "Antimatter Launcher"
 ESC_ENERGY_TORPEDO_4_DESC: "Antimatter is the ultimate 'explosive' that annihilates any normal matter it touches. This energy launcher fires a conctail of anti-particles, ensuring that anything its shots hit will be devastated."
+
+ESC_BIO_ENERGY_TORPEDO_4: "Biological Antimatter Launcher"
+ESC_BIO_ENERGY_TORPEDO_4_DESC: "Highly-specilalized organ that is capable of accumulating, safely-storing and launching clumps of antimatter. Anything it attacks will be devastated."
+
+ESC_ENERGY_TORPEDO_CREATURE_4: "$ESC_BIO_ENERGY_TORPEDO_4$"
+ESC_ENERGY_TORPEDO_CREATURE_4_DESC: "$ESC_BIO_ENERGY_TORPEDO_4_DESC$"
+SMALL_ESC_ENERGY_TORPEDO_CREATURE_4: "$esc_small$ $ESC_BIO_ENERGY_TORPEDO_4$"
+SMALL_ESC_ENERGY_TORPEDO_CREATURE_4_DESC: "$ESC_BIO_ENERGY_TORPEDO_4_DESC$"
+MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_4: "$esc_medium$ $ESC_BIO_ENERGY_TORPEDO_4$"
+MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_4_DESC: "$ESC_BIO_ENERGY_TORPEDO_4_DESC$"
+LARGE_ESC_ENERGY_TORPEDO_CREATURE_4: "$esc_large$ $ESC_BIO_ENERGY_TORPEDO_4$"
+LARGE_ESC_ENERGY_TORPEDO_CREATURE_4_DESC: "$ESC_BIO_ENERGY_TORPEDO_4_DESC$"
+XL_ESC_ENERGY_TORPEDO_CREATURE_4: "$esc_extra_large$ $ESC_BIO_ENERGY_TORPEDO_4$"
+XL_ESC_ENERGY_TORPEDO_CREATURE_4_DESC: "$ESC_BIO_ENERGY_TORPEDO_4_DESC$"
 
 # Chrono-Vortex Cannon
 ESC_CHRONO_CANNON: "Chrono-Vortex Cannon"
@@ -247,24 +275,60 @@ MEDIUM_ESC_MINING_LASER_3_DESC: "$ESC_MINING_LASER_3_DESC$"
 # Juggernaut Beam Cannon
 ESC_JUGGERNAUT_BEAM_CANNON_1: "Juggernaut Beam Cannon"
 ESC_JUGGERNAUT_BEAM_CANNON_1_DESC: "An immensely-powerful beam cannon created specifically for the Juggernaut-class warships."
+ESC_BIO_JUGGERNAUT_BEAM_CANNON_1: "$ESC_JUGGERNAUT_BEAM_CANNON_1$"
+ESC_BIO_JUGGERNAUT_BEAM_CANNON_1_DESC: "An immensely-powerful beam emitter that was evolved specifically for the Juggernaut-class warships."
 
 # Improved Juggernaut Beam Cannon
 ESC_JUGGERNAUT_BEAM_CANNON_2: "Improved Juggernaut Beam Cannon"
 ESC_JUGGERNAUT_BEAM_CANNON_2_DESC: "An improved version of the Juggernaut Beam Cannon that features even stronger weapons."
+ESC_BIO_JUGGERNAUT_BEAM_CANNON_2: "$ESC_JUGGERNAUT_BEAM_CANNON_2$"
+ESC_BIO_JUGGERNAUT_BEAM_CANNON_2_DESC: "An even more powerful version of the Juggernaut Beam Cannon with additional mutations for extra firepower."
 
 # Improved Tachyon Lance
 ESC_PARTICLE_LANCE_3: "Improved Tachyon Lance"
 ESC_PARTICLE_LANCE_3_DESC: "The next generation of Tachyon Lances with improved focusing arrays and bigger capacitors for faster recharging."
 
+ESC_BIO_PARTICLE_LANCE_3: "Improved Tachyon Particle Beam"
+ESC_BIO_PARTICLE_LANCE_3_DESC: "This set of organs can generate a concentrated beam of tachyon particles that can deal devastating damage to anything it hits from extreme ranges."
+
+ESC_PARTICLE_LANCE_CREATURE_3: "$ESC_BIO_PARTICLE_LANCE_3$"
+ESC_PARTICLE_LANCE_CREATURE_3_DESC: "$ESC_BIO_PARTICLE_LANCE_3_DESC$"
+SMALL_ESC_PARTICLE_LANCE_CREATURE_3: "$esc_small$ $ESC_BIO_PARTICLE_LANCE_3$"
+SMALL_ESC_PARTICLE_LANCE_CREATURE_3_DESC: "$ESC_BIO_PARTICLE_LANCE_3_DESC$"
+MEDIUM_ESC_PARTICLE_LANCE_CREATURE_3: "$esc_medium$ $ESC_BIO_PARTICLE_LANCE_3$"
+MEDIUM_ESC_PARTICLE_LANCE_CREATURE_3_DESC: "$ESC_BIO_PARTICLE_LANCE_3_DESC$"
+LARGE_ESC_PARTICLE_LANCE_CREATURE_3: "$esc_large$ $ESC_BIO_PARTICLE_LANCE_3$"
+LARGE_ESC_PARTICLE_LANCE_CREATURE_3_DESC: "$ESC_BIO_PARTICLE_LANCE_3_DESC$"
+XL_ESC_PARTICLE_LANCE_CREATURE_3: "$esc_extra_large$ $ESC_BIO_PARTICLE_LANCE_3$"
+XL_ESC_PARTICLE_LANCE_CREATURE_3_DESC: "$ESC_BIO_PARTICLE_LANCE_3_DESC$"
+
 # Hyperdimensional Lance
 ESC_PARTICLE_LANCE_4: "Hyperdimensional Lance"
 ESC_PARTICLE_LANCE_4_DESC: "This particle lance uses specialized generators to locally distort time and space in order to let the tachyons it fires to move towards the target though several different dimensions simultaneously."
+
+ESC_BIO_PARTICLE_LANCE_4: "Hyperdimensional Particle Beam"
+ESC_BIO_PARTICLE_LANCE_4_DESC: "A highly-mutated organ that allows a creature to locally distory time and space letting a beam of tachyons it fires to move towards the target though several different dimensions simultaneously."
+
+ESC_PARTICLE_LANCE_CREATURE_4: "$ESC_BIO_PARTICLE_LANCE_4$"
+ESC_PARTICLE_LANCE_CREATURE_4_DESC: "$ESC_BIO_PARTICLE_LANCE_4_DESC$"
+SMALL_ESC_PARTICLE_LANCE_CREATURE_4: "$esc_small$ $ESC_BIO_PARTICLE_LANCE_4$"
+SMALL_ESC_PARTICLE_LANCE_CREATURE_4_DESC: "$ESC_BIO_PARTICLE_LANCE_4_DESC$"
+MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4: "$esc_medium$ $ESC_BIO_PARTICLE_LANCE_4$"
+MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4_DESC: "$ESC_BIO_PARTICLE_LANCE_4_DESC$"
+LARGE_ESC_PARTICLE_LANCE_CREATURE_4: "$esc_large$ $ESC_BIO_PARTICLE_LANCE_4$"
+LARGE_ESC_PARTICLE_LANCE_CREATURE_4_DESC: "$ESC_BIO_PARTICLE_LANCE_4_DESC$"
+XL_ESC_PARTICLE_LANCE_CREATURE_4: "$esc_extra_large$ $ESC_BIO_PARTICLE_LANCE_4$"
+XL_ESC_PARTICLE_LANCE_CREATURE_4_DESC: "$ESC_BIO_PARTICLE_LANCE_4_DESC$"
 
 # Light of Destruction
 ESC_PARTICLE_LANCE_TITANIC: "Light of Destruction"
 ESC_PARTICLE_LANCE_TITANIC_DESC: "The ultimate particle lance."
 ESC_PARTICLE_LANCE_JUGGERNAUT: "$ESC_PARTICLE_LANCE_TITANIC$ ($juggernaut$)"
 ESC_PARTICLE_LANCE_JUGGERNAUT_DESC: "$ESC_PARTICLE_LANCE_TITANIC_DESC$"
+ESC_BIO_PARTICLE_LANCE_TITANIC: "Light of Destruction"
+ESC_BIO_PARTICLE_LANCE_TITANIC_DESC: "The pinacle of evolution for organic particle beams."
+ESC_BIO_PARTICLE_LANCE_JUGGERNAUT: "$ESC_PARTICLE_LANCE_TITANIC$ ($juggernaut$)"
+ESC_BIO_PARTICLE_LANCE_JUGGERNAUT_DESC: "$ESC_PARTICLE_LANCE_TITANIC_DESC$"
 
 # Lightning Cannon
 ESC_ARC_EMITTER_3: "Lightning Cannon"

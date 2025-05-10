@@ -77,6 +77,31 @@ esc_disruptor_creature_5 = {
 	}
 }
 
+# Muon Launcher
+esc_energy_torpedo_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_energy_launcher_3
+	ship_components = {
+		small = SMALL_ESC_ENERGY_TORPEDO_CREATURE_3
+		medium = MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_3
+		large = LARGE_ESC_ENERGY_TORPEDO_CREATURE_3
+		extra_large = XL_ESC_ENERGY_TORPEDO_CREATURE_3
+	}
+	upgrades_to = "esc_energy_torpedo_creature_4"
+}
+
+# Antimatter Launcher
+esc_energy_torpedo_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_energy_launcher_4
+	ship_components = {
+		small = SMALL_ESC_ENERGY_TORPEDO_CREATURE_4
+		medium = MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_4
+		large = LARGE_ESC_ENERGY_TORPEDO_CREATURE_4
+		extra_large = XL_ESC_ENERGY_TORPEDO_CREATURE_4
+	}
+}
+
 # Amplified Cloud Lightning
 esc_cloud_lightning_creature_2 = {
 	type = offensive
@@ -99,5 +124,30 @@ esc_cloud_lightning_creature_3 = {
 		medium = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_3
 		large = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_3
 		extra_large = XL_ESC_CLOUD_LIGHTNING_CREATURE_3
+	}
+}
+
+# Improved Tachyon Particle Beam
+esc_particle_lance_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_particle_lance_3
+	ship_components = {
+		small = SMALL_ESC_PARTICLE_LANCE_CREATURE_3
+		medium = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_3
+		large = LARGE_ESC_PARTICLE_LANCE_CREATURE_3
+		extra_large = XL_ESC_PARTICLE_LANCE_CREATURE_3
+	}
+	upgrades_to = "esc_particle_lance_creature_4"
+}
+
+# Hyperdimensional Particle Beam
+esc_particle_lance_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_particle_lance_4
+	ship_components = {
+		small = SMALL_ESC_PARTICLE_LANCE_CREATURE_4
+		medium = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4
+		large = LARGE_ESC_PARTICLE_LANCE_CREATURE_4
+		extra_large = XL_ESC_PARTICLE_LANCE_CREATURE_4
 	}
 }

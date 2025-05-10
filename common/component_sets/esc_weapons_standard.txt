@@ -122,18 +122,44 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# muon launcher
+# muon launcher (ships + creatures)
 component_set = {
 	key = ESC_ENERGY_TORPEDO_3
 	icon = GFX_esc_energy_launcher_3
 	icon_frame = 1
 }
 
-# antimatter launcher
+component_set = {
+	key = ESC_BIO_ENERGY_TORPEDO_3
+	icon = GFX_esc_bio_energy_launcher_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ENERGY_TORPEDO_CREATURE_3
+	icon = GFX_esc_bio_energy_launcher_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# antimatter launcher (ships + creatures)
 component_set = {
 	key = ESC_ENERGY_TORPEDO_4
 	icon = GFX_esc_energy_launcher_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ENERGY_TORPEDO_4
+	icon = GFX_esc_bio_energy_launcher_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ENERGY_TORPEDO_CREATURE_4
+	icon = GFX_esc_bio_energy_launcher_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # chrono-vortex cannon
@@ -192,6 +218,12 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_JUGGERNAUT_BEAM_CANNON_1
+	icon = GFX_esc_bio_juggernaut_laser_1
+	icon_frame = 1
+}
+
 # improved juggernaut beam cannon
 component_set = {
 	key = ESC_JUGGERNAUT_BEAM_CANNON_2
@@ -199,19 +231,52 @@ component_set = {
 	icon_frame = 1
 }
 
-# improved tachyon lance
+component_set = {
+	key = ESC_BIO_JUGGERNAUT_BEAM_CANNON_2
+	icon = GFX_esc_bio_juggernaut_laser_2
+	icon_frame = 1
+}
+
+# improved tachyon lance (ships + creatures)
 component_set = {
 	key = ESC_PARTICLE_LANCE_3
 	icon = GFX_esc_particle_lance_3
 	icon_frame = 1
 }
 
-# hyperdimensional lance
+component_set = {
+	key = ESC_BIO_PARTICLE_LANCE_3
+	icon = GFX_esc_bio_particle_lance_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PARTICLE_LANCE_CREATURE_3
+	icon = GFX_esc_bio_particle_lance_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# hyperdimensional lance (ships + creatures)
 component_set = {
 	key = ESC_PARTICLE_LANCE_4
 	icon = GFX_esc_particle_lance_4
 	icon_frame = 1
 }
+
+component_set = {
+	key = ESC_BIO_PARTICLE_LANCE_4
+	icon = GFX_esc_bio_particle_lance_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PARTICLE_LANCE_CREATURE_4
+	icon = GFX_esc_bio_particle_lance_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 
 # light of destruction (titan)
 component_set = {
@@ -220,10 +285,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_PARTICLE_LANCE_TITANIC
+	icon = GFX_esc_bio_particle_lance_titanic
+	icon_frame = 1
+}
+
 # light of destruction (juggernaut)
 component_set = {
 	key = ESC_PARTICLE_LANCE_JUGGERNAUT
 	icon = GFX_esc_particle_lance_titanic
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PARTICLE_LANCE_JUGGERNAUT
+	icon = GFX_esc_bio_particle_lance_titanic
 	icon_frame = 1
 }
 
