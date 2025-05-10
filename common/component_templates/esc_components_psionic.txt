@@ -50,16 +50,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -79,11 +80,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 1
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -116,16 +112,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -145,11 +142,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 1
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -183,16 +175,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -212,11 +205,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 1
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -253,16 +241,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t8_upkeep_energy
-			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -281,11 +270,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 1
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -318,16 +302,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -346,11 +331,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 1
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -384,16 +364,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -412,11 +393,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 1
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -453,16 +429,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -482,11 +459,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -519,16 +491,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -548,11 +521,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -586,16 +554,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -615,11 +584,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -656,16 +620,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t8_upkeep_energy
-			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -684,11 +649,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -721,16 +681,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -749,11 +710,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -787,16 +743,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -90
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -815,11 +772,6 @@ weapon_component_template = {
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
 		EFFECT_LEVEL = 2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -863,16 +815,17 @@ weapon_component_template = {
 	firing_arc = 25.0
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -897,6 +850,82 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_PSIONIC_TORPEDO_1
+	size = torpedo
+	icon = GFX_esc_bio_psionic_torpedo_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 50 max = 100 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_3
+	missile_evasion = 0.1
+	missile_health = 30
+	missile_armor = 0
+	missile_shield = 25
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+	power = -70
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_torpedo_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_torpedo_1" }
+	component_set = ESC_BIO_PSIONIC_TORPEDO_1
+	projectile_gfx = "esc_psionic_torpedo"
+	upgrades_to = ESC_BIO_PSIONIC_TORPEDO_2
+	tags = { weapon_type_energy weapon_type_psionic g_slot }
+	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_mauler_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and spiritualist FE may use this component
@@ -940,16 +969,17 @@ weapon_component_template = {
 	firing_arc = 25.0
 	power = -80
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -990,6 +1020,81 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_PSIONIC_TORPEDO_2
+	size = torpedo
+	icon = GFX_esc_bio_psionic_torpedo_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 65 max = 125 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_3
+	missile_evasion = 0.1
+	missile_health = 30
+	missile_armor = 0
+	missile_shield = 25
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+	power = -80
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_torpedo_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_torpedo_2" }
+	component_set = ESC_BIO_PSIONIC_TORPEDO_2
+	projectile_gfx = "esc_psionic_torpedo"
+	tags = { weapon_type_energy weapon_type_psionic g_slot }
+	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_mauler_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
 ############################################################
 ##                     Psionic Lance                      ##
 ############################################################
@@ -1008,16 +1113,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -275
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1043,11 +1149,6 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -1056,6 +1157,9 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1086,16 +1190,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -325
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			sr_zro = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1121,11 +1226,6 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -1134,6 +1234,9 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1165,16 +1268,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1199,11 +1303,6 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -1212,6 +1311,9 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1239,16 +1341,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1274,11 +1377,6 @@ weapon_component_template = {
 		EFFECT_LEVEL = 2
 	}
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
@@ -1287,6 +1385,9 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1314,16 +1415,17 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_psionic_cannon_tiny"
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_zro = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	count = @ESC_STRIKECRAFT_count
@@ -1359,6 +1461,83 @@ strike_craft_component_template = {
 
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_PSIONIC_INTERCEPTORS
+	prerequisites = { "esc_tech_psionic_interceptors" }
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = ESC_BIO_PSIONIC_INTERCEPTORS
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_psionic_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_psionic_cannon_tiny"
+	power = -70
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP =  0
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+
+	health = 30
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_psionic_strikecraft_hull_damage
+	armor_damage = @ESC_WEAPON_psionic_strikecraft_armor_damage
+	armor_penetration = @ESC_WEAPON_psionic_strikecraft_armor_penetration
+	shield_penetration = @ESC_WEAPON_psionic_strikecraft_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_strikecraft_shield_damage
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_BIO_PSIONIC_INTERCEPTORS
 	prerequisites = { "esc_tech_psionic_interceptors" }
 	tags = { weapon_type_strike_craft }
 	ai_tags = { weapon_role_point_defense carrier }

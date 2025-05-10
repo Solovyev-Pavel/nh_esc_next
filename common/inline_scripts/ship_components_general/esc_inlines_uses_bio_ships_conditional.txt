@@ -1,0 +1,12 @@
+### general script block to be used for bio-ship potential
+
+potential = {
+	$EXTRA_CONDITION$ = $EXTRA_CONDITION_VALUE$
+	from = {
+		country_uses_bio_ships = $EVAL_TARGET$
+	}
+}
+
+show_tech_unlock_if = {
+	country_uses_bio_ships = $EVAL_TARGET$
+}

@@ -37,16 +37,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -7
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_s_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t3_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_s_t3_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_s_t3_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_s_t3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t3_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_s_t3_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -100,16 +101,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -13
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_m_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t3_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_m_t3_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_m_t3_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_m_t3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t3_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_m_t3_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -164,16 +166,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -25
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_l_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t3_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_l_t3_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t3_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_l_t3_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -231,16 +234,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -11
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_s_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t4_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_s_t4_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_s_t4_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t4_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_s_t4_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t4_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_s_t4_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -294,16 +298,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_m_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t4_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_m_t4_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_m_t4_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t4_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_m_t4_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t4_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_m_t4_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -358,16 +363,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -40
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_l_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t4_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_l_t4_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t4_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t4_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_l_t4_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -425,16 +431,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -17
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_s_t5_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t5_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_s_t5_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_s_t5_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_s_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t5_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_s_t5_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -488,16 +495,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -30
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_m_t5_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t5_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_m_t5_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_m_t5_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_m_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t5_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_m_t5_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -552,16 +560,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -58
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_l_t5_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t5_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_l_t5_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t5_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t5_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_l_t5_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -619,16 +628,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_s_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t6_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_s_t6_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_s_t6_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_s_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t6_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_s_t6_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -682,16 +692,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_m_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t6_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_m_t6_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_m_t6_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_m_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t6_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_m_t6_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -746,16 +757,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_l_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t6_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_l_t6_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t6_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_l_t6_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -813,16 +825,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_s_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t7_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_s_t7_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_s_t7_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_s_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_s_t7_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_s_t7_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -875,16 +888,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_m_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t7_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_m_t7_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_m_t7_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_m_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_m_t7_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_m_t7_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -938,16 +952,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -90
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t7_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_l_t7_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_l_t7_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_l_t7_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -1003,16 +1018,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -175
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_lance_0_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_lance_0_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_lance_0_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_lance_0_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_0_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_lance_0_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_0_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_lance_0_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
@@ -1038,6 +1054,14 @@ weapon_component_template = {
 		CRITICAL_HIT_CHANCE = 25
 		NORMAL_HIT_CHANCE = 75
 		CRITICAL_DAMAGE_AMOUNT = 1625 # (min damage + max damage) / 2
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	# only regular empires and xenophile FE should use this component
@@ -1073,16 +1097,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -225
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_lance_1_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_lance_1_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_lance_1_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_lance_1_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_1_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_lance_1_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_1_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_lance_1_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
@@ -1108,6 +1133,14 @@ weapon_component_template = {
 		CRITICAL_HIT_CHANCE = 25
 		NORMAL_HIT_CHANCE = 75
 		CRITICAL_DAMAGE_AMOUNT = 2375 # (min damage + max damage) / 2
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	# only regular empires and xenophile FE should use this component
@@ -1143,16 +1176,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -275
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_lance_2_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_lance_2_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_lance_2_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_lance_2_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_2_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_lance_2_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_2_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_lance_2_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
@@ -1178,6 +1212,14 @@ weapon_component_template = {
 		CRITICAL_HIT_CHANCE = 25
 		NORMAL_HIT_CHANCE = 75
 		CRITICAL_DAMAGE_AMOUNT = 2750 # (min damage + max damage) / 2
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	# only regular empires and xenophile FE should use this component
@@ -1214,16 +1256,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_lance_3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_lance_3_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_lance_3_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_lance_3_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_lance_3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_3_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_lance_3_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
@@ -1248,6 +1291,14 @@ weapon_component_template = {
 		CRITICAL_HIT_CHANCE = 25
 		NORMAL_HIT_CHANCE = 75
 		CRITICAL_DAMAGE_AMOUNT = 6500 # (min damage + max damage) / 2
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	# only regular empires and xenophile FE should use this component
@@ -1280,16 +1331,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_crystalline_lance_3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_lance_3_cost_crystals
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_crystalline_lance_3_upkeep_energy
-			rare_crystals = @ESC_WEAPON_crystalline_lance_3_upkeep_crystals
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_3_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = 0
+		ENERGY_UPKEEP = @ESC_WEAPON_crystalline_lance_3_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_crystalline_lance_3_cost_crystals
+		STRATEGIC_RESOURCE_UPKEEP =  @ESC_WEAPON_crystalline_lance_3_upkeep_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
@@ -1315,6 +1367,14 @@ weapon_component_template = {
 		CRITICAL_HIT_CHANCE = 25
 		NORMAL_HIT_CHANCE = 75
 		CRITICAL_DAMAGE_AMOUNT = 6500 # (min damage + max damage) / 2
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	# only regular empires and xenophile FE should use this component

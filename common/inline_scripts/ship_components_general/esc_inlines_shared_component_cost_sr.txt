@@ -1,0 +1,81 @@
+### inline script to handle components costs for components
+### that are shared between mechanical and biological ships
+
+resources = {
+	category = ship_components
+	# shared cost : strategic resource
+	cost = {
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
+	}
+	# cost for mechanical ships
+	cost = {
+		trigger = {
+			from = { country_uses_bio_ships = no }
+		}
+		$PRIMARY_RESOURCE_TYPE_MECHANICAL$ = $PRIMARY_RESOURCE_COST$
+	}
+	# cost for biological ships (non-lithoid version)
+	cost = {
+		trigger = {
+			from = {
+				country_uses_bio_ships = yes
+				is_lithoid = no
+				is_mechanical_empire = no
+				is_cyborg_empire = no
+			}
+		}
+		$PRIMARY_RESOURCE_TYPE_BIO_NORMAL$ = $PRIMARY_RESOURCE_COST$
+	}
+	# cost for biological ships (lithoid version)
+	cost = {
+		trigger = {
+			from = {
+				country_uses_bio_ships = yes
+				OR = {
+					is_lithoid = yes
+					is_mechanical_empire = yes
+					is_cyborg_empire = yes
+				}
+			}
+		}
+		$PRIMARY_RESOURCE_TYPE_BIO_LITHOID$ = $PRIMARY_RESOURCE_COST$
+	}
+	# shared upkeep
+	upkeep = {
+		energy = $ENERGY_UPKEEP$
+		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_UPKEEP$
+	}
+	# upkeep for mechanical ships
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = no }
+		}
+		$PRIMARY_RESOURCE_TYPE_MECHANICAL$ = $PRIMARY_RESOURCE_UPKEEP$
+	}
+	# upkeep for biological ships (non-lithoid version)
+	upkeep = {
+		trigger = {
+			from = {
+				country_uses_bio_ships = yes
+				is_lithoid = no
+				is_mechanical_empire = no
+				is_cyborg_empire = no
+			}
+		}
+		$PRIMARY_RESOURCE_TYPE_BIO_NORMAL$ = $PRIMARY_RESOURCE_UPKEEP$
+	}
+	# upkeep for biological ships (lithoid versions)
+	upkeep = {
+		trigger = {
+			from = {
+				country_uses_bio_ships = yes
+				OR = {
+					is_lithoid = yes
+					is_mechanical_empire = yes
+					is_cyborg_empire = yes
+				}
+			}
+		}
+		$PRIMARY_RESOURCE_TYPE_BIO_LITHOID$ = $PRIMARY_RESOURCE_UPKEEP$
+	}
+}

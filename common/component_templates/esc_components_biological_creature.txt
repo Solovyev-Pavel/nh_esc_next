@@ -660,7 +660,7 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_WEAPON_biological_lt6_cost_food
+		COMPONENT_COST = @ESC_WEAPON_biological_l_t6_cost_food
 		ENERGY_UPKEEP = 0
 		COMPONENT_UPKEEP_COST = @ESC_WEAPON_biological_l_t6_upkeep_food
 	}

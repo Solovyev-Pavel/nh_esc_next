@@ -399,7 +399,6 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-
 # voidspawn missile barrage
 component_set = {
 	key = ESC_VOIDSPAWN_MISSILE_X
@@ -555,10 +554,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_PSIONIC_TORPEDO_1
+	icon = GFX_esc_bio_psionic_torpedo_1
+	icon_frame = 1
+}
+
 # improved psi-blast torpedo
 component_set = {
 	key = ESC_PSIONIC_TORPEDO_2
 	icon = GFX_esc_psionic_torpedo_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PSIONIC_TORPEDO_2
+	icon = GFX_esc_bio_psionic_torpedo_2
 	icon_frame = 1
 }
 
@@ -594,6 +605,12 @@ component_set = {
 component_set = {
 	key = ESC_PSIONIC_INTERCEPTORS
 	icon = GFX_esc_psionic_strikecraft
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PSIONIC_INTERCEPTORS
+	icon = GFX_esc_bio_psionic_strikecraft
 	icon_frame = 1
 }
 
