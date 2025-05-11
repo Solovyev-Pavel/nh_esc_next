@@ -352,6 +352,23 @@
 @ESC_ARMOR_l_t6_upkeep_alloys 					= 0.212
 @ESC_ARMOR_l_t6_upkeep_food 					= 0.464
 
+@ESC_ARMOR_xl_t6_str_primary_1 					= 4440
+@ESC_ARMOR_xl_t6_str_primary_2 					= 3480
+@ESC_ARMOR_xl_t6_str_primary_3 					= 2640
+@ESC_ARMOR_xl_t6_str_secondary 					= 2100
+@ESC_ARMOR_xl_t6_regen_primary_1				= 17.5
+@ESC_ARMOR_xl_t6_regen_primary_2				= 8.7
+@ESC_ARMOR_xl_t6_regen_secondary_1				= 21.0
+@ESC_ARMOR_xl_t6_regen_secondary_2				= 10.50
+
+@ESC_ARMOR_xl_t6_cost_alloys_1 					= 212
+@ESC_ARMOR_xl_t6_cost_alloys_2 					= 120
+@ESC_ARMOR_xl_t6_cost_food 						= 60
+@ESC_ARMOR_xl_t6_cost_special 					= 2.667
+@ESC_ARMOR_xl_t6_upkeep_energy 					= 2.32
+@ESC_ARMOR_xl_t6_upkeep_alloys 					= 0.424
+@ESC_ARMOR_xl_t6_upkeep_food 					= 0.928
+
 ### tier 7
 @ESC_ARMOR_s_t7_str_primary_1 					= 480
 @ESC_ARMOR_s_t7_str_primary_2 					= 370
@@ -404,6 +421,23 @@
 @ESC_ARMOR_l_t7_upkeep_alloys 					= 0.304
 @ESC_ARMOR_l_t7_upkeep_food 					= 0.608
 
+@ESC_ARMOR_xl_t7_str_primary_1 					= 5760
+@ESC_ARMOR_xl_t7_str_primary_2 					= 4440
+@ESC_ARMOR_xl_t7_str_primary_3 					= 3480
+@ESC_ARMOR_xl_t7_str_secondary 					= 2600
+@ESC_ARMOR_xl_t7_regen_primary_1				= 22.20
+@ESC_ARMOR_xl_t7_regen_primary_2				= 11.1
+@ESC_ARMOR_xl_t7_regen_secondary_1				= 26.4
+@ESC_ARMOR_xl_t7_regen_secondary_2				= 13.2
+
+@ESC_ARMOR_xl_t7_cost_alloys_1 					= 304
+@ESC_ARMOR_xl_t7_cost_alloys_2 					= 152
+@ESC_ARMOR_xl_t7_cost_food 						= 76
+@ESC_ARMOR_xl_t7_cost_special 					= 4
+@ESC_ARMOR_xl_t7_upkeep_energy 					= 3.04
+@ESC_ARMOR_xl_t7_upkeep_alloys 					= 0.608
+@ESC_ARMOR_xl_t7_upkeep_food 					= 1.216
+
 ### tier 8
 @ESC_ARMOR_s_t8_str_primary_1 					= 600
 @ESC_ARMOR_s_t8_str_primary_2 					= 480
@@ -447,6 +481,20 @@
 @ESC_ARMOR_l_t8_upkeep_energy 					= 1.88
 @ESC_ARMOR_l_t8_upkeep_alloys 					= 0.376
 
+@ESC_ARMOR_xl_t8_str_primary_1 					= 7800
+@ESC_ARMOR_xl_t8_str_primary_2 					= 6000
+@ESC_ARMOR_xl_t8_str_primary_3 					= 4440
+@ESC_ARMOR_xl_t8_str_secondary 					= 3400
+@ESC_ARMOR_xl_t8_regen_primary_1				= 40.0
+@ESC_ARMOR_xl_t8_regen_primary_2				= 15.0
+@ESC_ARMOR_xl_t8_regen_secondary_1				= 35.0
+@ESC_ARMOR_xl_t8_regen_secondary_2				= 17.5
+
+@ESC_ARMOR_xl_t8_cost_alloys_1 					= 376
+@ESC_ARMOR_xl_t8_cost_special 					= 5.0
+@ESC_ARMOR_xl_t8_upkeep_energy 					= 3.76
+@ESC_ARMOR_xl_t8_upkeep_alloys 					= 0.752
+
 @ESC_ARMOR_l_dreadnought_str 					= 10000
 
 ############################################################
@@ -481,6 +529,15 @@
 @ESC_SHIELD_l_t6_upkeep_alloys					= 0.114
 @ESC_SHIELD_l_t6_upkeep_energy					= 0.57
 
+@ESC_SHIELD_xl_t6_strength						= 3360
+@ESC_SHIELD_xl_t6_strength_cycl					= 2640
+@ESC_SHIELD_xl_t6_regen							= 22.20
+@ESC_SHIELD_xl_t6_power							= -440
+@ESC_SHIELD_xl_t6_cost_alloys					= 114
+@ESC_SHIELD_xl_t6_cost_special					= 4.0
+@ESC_SHIELD_xl_t6_upkeep_alloys					= 0.228
+@ESC_SHIELD_xl_t6_upkeep_energy					= 1.15
+
 ### tier 7
 @ESC_SHIELD_s_t7_strength						= 360
 @ESC_SHIELD_s_t7_strength_cycl					= 280
@@ -508,6 +565,15 @@
 @ESC_SHIELD_l_t7_cost_special					= 2.5
 @ESC_SHIELD_l_t7_upkeep_alloys					= 0.152
 @ESC_SHIELD_l_t7_upkeep_energy					= 0.76
+
+@ESC_SHIELD_xl_t7_strength						= 4320
+@ESC_SHIELD_xl_t7_strength_cycl					= 3360
+@ESC_SHIELD_xl_t7_regen							= 25.0
+@ESC_SHIELD_xl_t7_power							= -520
+@ESC_SHIELD_xl_t7_cost_alloys					= 152
+@ESC_SHIELD_xl_t7_cost_special					= 5.0
+@ESC_SHIELD_xl_t7_upkeep_alloys					= 0.304
+@ESC_SHIELD_xl_t7_upkeep_energy					= 1.525
 
 ### tier 8
 @ESC_SHIELD_s_t8_strength 						= 420
@@ -537,6 +603,15 @@
 @ESC_SHIELD_l_t8_upkeep_alloys 					= 0.184
 @ESC_SHIELD_l_t8_upkeep_energy 					= 0.92
 
+@ESC_SHIELD_xl_t8_strength 						= 5300
+@ESC_SHIELD_xl_t8_strength_cycl					= 4320
+@ESC_SHIELD_xl_t8_regen 						= 30.0
+@ESC_SHIELD_xl_t8_power 						= -600
+@ESC_SHIELD_xl_t8_cost_alloys 					= 184
+@ESC_SHIELD_xl_t8_cost_special 					= 6.8
+@ESC_SHIELD_xl_t8_upkeep_alloys 				= 0.368
+@ESC_SHIELD_xl_t8_upkeep_energy 				= 1.84
+
 ### tier 9
 @ESC_SHIELD_s_t9_strength 						= 550
 @ESC_SHIELD_s_t9_regen 							= 3.50
@@ -562,6 +637,14 @@
 @ESC_SHIELD_l_t9_upkeep_alloys 					= 0.224
 @ESC_SHIELD_l_t9_upkeep_energy 					= 1.12
 
+@ESC_SHIELD_xl_t9_strength 						= 6000
+@ESC_SHIELD_xl_t9_regen 						= 35.0
+@ESC_SHIELD_xl_t9_power 						= -680
+@ESC_SHIELD_xl_t9_cost_alloys 					= 224
+@ESC_SHIELD_xl_t9_cost_special 					= 8.8
+@ESC_SHIELD_xl_t9_upkeep_alloys 				= 0.448
+@ESC_SHIELD_xl_t9_upkeep_energy 				= 2.24
+
 ############################################################
 ###                         Hull                         ###
 ############################################################
@@ -569,6 +652,7 @@
 @ESC_HULL_s_t6_strength							= 185
 @ESC_HULL_m_t6_strength							= 465
 @ESC_HULL_l_t6_strength							= 1110
+@ESC_HULL_xl_t6_strength						= 2220
 
 ############################################################
 ###                    Sensor Parameters                 ###
