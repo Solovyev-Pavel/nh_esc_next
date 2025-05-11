@@ -127,6 +127,31 @@ esc_cloud_lightning_creature_3 = {
 	}
 }
 
+# Plasma Beam Projector
+esc_mining_laser_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_mining_laser_2
+	ship_components = {
+		small = SMALL_ESC_MINING_LASER_CREATURE_2
+		medium = MEDIUM_ESC_MINING_LASER_CREATURE_2
+		large = LARGE_ESC_MINING_LASER_CREATURE_2
+		extra_large = XL_ESC_MINING_LASER_CREATURE_2
+	}
+	upgrades_to = "esc_mining_laser_creature_3"
+}
+
+# Advanced Plasma Beam Projector
+esc_mining_laser_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_mining_laser_3
+	ship_components = {
+		small = SMALL_ESC_MINING_LASER_CREATURE_3
+		medium = MEDIUM_ESC_MINING_LASER_CREATURE_3
+		large = LARGE_ESC_MINING_LASER_CREATURE_3
+		extra_large = XL_ESC_MINING_LASER_CREATURE_3
+	}
+}
+
 # Improved Tachyon Particle Beam
 esc_particle_lance_creature_3 = {
 	type = offensive
@@ -149,5 +174,30 @@ esc_particle_lance_creature_4 = {
 		medium = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4
 		large = LARGE_ESC_PARTICLE_LANCE_CREATURE_4
 		extra_large = XL_ESC_PARTICLE_LANCE_CREATURE_4
+	}
+}
+
+# Lightning Bio-cannon
+esc_arc_emitter_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_arc_cannon_3
+	ship_components = {
+		small = SMALL_ESC_ARC_EMITTER_CREATURE_3
+		medium = MEDIUM_ESC_ARC_EMITTER_CREATURE_3
+		large = LARGE_ESC_ARC_EMITTER_CREATURE_3
+		extra_large = XL_ESC_ARC_EMITTER_CREATURE_3
+	}
+	upgrades_to = "esc_arc_emitter_creature_4"
+}
+
+# Arc Bio-cannon
+esc_arc_emitter_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_arc_cannon_4
+	ship_components = {
+		small = SMALL_ESC_ARC_EMITTER_CREATURE_4
+		medium = MEDIUM_ESC_ARC_EMITTER_CREATURE_4
+		large = LARGE_ESC_ARC_EMITTER_CREATURE_4
+		extra_large = XL_ESC_ARC_EMITTER_CREATURE_4
 	}
 }

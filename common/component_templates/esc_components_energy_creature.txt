@@ -12,6 +12,8 @@
 # - Antimatter Launcher				S/M/L/X
 # - Amplified Cloud Lightning		S/M/L/X
 # - Thunderstorm Generator			S/M/L/X
+# - Plasma Cutter					S/M/L/X
+# - Advanced Plasma Cutter			S/M/L/X
 
 @ESC_WEAPON_laser_hull_damage = 1.25
 @ESC_WEAPON_laser_armor_damage = 1.5
@@ -44,14 +46,29 @@
 @ESC_WEAPON_lightning_shield_damage = 1.0
 @ESC_WEAPON_lightning_shield_penetration = 1.0
 
+@ESC_WEAPON_drone_laser_hull_damage = 1.75
+@ESC_WEAPON_drone_laser_armor_damage_2 = 1.25
+@ESC_WEAPON_drone_laser_armor_damage_3 = 1.5
+@ESC_WEAPON_drone_laser_armor_penetration = 0.0
+@ESC_WEAPON_drone_laser_shield_damage = 0.5
+@ESC_WEAPON_drone_laser_shield_penetration = 0.0
+
 # - Improved Tachyon Lance				S/M/L/X
 # - Hypercharged Tachyon Lance			S/M/L/X
+# - Lightning Cannon					S/M/L/X
+# - Arc Cannon							S/M/L/X
 
 @ESC_WEAPON_particle_lance_hull_damage = 1.5
 @ESC_WEAPON_particle_lance_armor_damage = 2.0
 @ESC_WEAPON_particle_lance_armor_penetration = 0.0
 @ESC_WEAPON_particle_lance_shield_damage = 0.5
 @ESC_WEAPON_particle_lance_shield_penetration = 0.0
+
+@ESC_WEAPON_arc_emitter_hull_damage = 1.0
+@ESC_WEAPON_arc_emitter_armor_penetration = 1.0
+@ESC_WEAPON_arc_emitter_armor_damage = 1.0
+@ESC_WEAPON_arc_emitter_shield_penetration = 1.0
+@ESC_WEAPON_arc_emitter_shield_damage = 1.0
 
 ############################################################
 ##                  Advanced Combat Laser                 ##
@@ -2022,6 +2039,370 @@ weapon_component_template = {
 }
 
 ############################################################
+##                     Plasma Cutter                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MINING_LASER_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_mining_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 14 max = 36 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 0.8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_2
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.45
+
+	prerequisites = { "esc_tech_mining_laser_2" }
+	component_set = ESC_MINING_LASER_CREATURE_2
+	projectile_gfx = "esc_mining_laser_2_small"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+	upgrades_to = SMALL_ESC_MINING_LASER_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MINING_LASER_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_mining_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 32 max = 88 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 0.8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_2
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_mining_laser_2" }
+	component_set = ESC_MINING_LASER_CREATURE_2
+	projectile_gfx = "esc_mining_laser_2_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+	upgrades_to = MEDIUM_ESC_MINING_LASER_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MINING_LASER_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_mining_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 56 max = 136 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_2
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_mining_laser_2" }
+	component_set = ESC_MINING_LASER_CREATURE_2
+	projectile_gfx = "esc_mining_laser_2_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+	upgrades_to = LARGE_ESC_MINING_LASER_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MINING_LASER_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_mining_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 104 max = 266 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_2
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_mining_laser_2" }
+	component_set = ESC_MINING_LASER_CREATURE_2
+	projectile_gfx = "esc_mining_laser_2_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+	upgrades_to = XL_ESC_MINING_LASER_CREATURE_3
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
+##                 Advanced Plasma Cutter                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MINING_LASER_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_mining_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 51 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_3
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_mining_laser_3" }
+	component_set = ESC_MINING_LASER_CREATURE_3
+	projectile_gfx = "esc_mining_laser_3_small"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MINING_LASER_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_mining_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 44 max = 118 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_3
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_mining_laser_3" }
+	component_set = ESC_MINING_LASER_CREATURE_3
+	projectile_gfx = "esc_mining_laser_3_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MINING_LASER_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_mining_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 62 max = 168 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_3
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_mining_laser_3" }
+	component_set = ESC_MINING_LASER_CREATURE_3
+	projectile_gfx = "esc_mining_laser_3_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MINING_LASER_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_mining_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 118 max = 316 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = 0
+	}
+
+	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_drone_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_drone_laser_armor_damage_3
+	shield_penetration = @ESC_WEAPON_drone_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_drone_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_mining_laser_3" }
+	component_set = ESC_MINING_LASER_CREATURE_3
+	projectile_gfx = "esc_mining_laser_3_medium"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_hull brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = { weight = 1 }
+}
+
+############################################################
 ##                 Improved Tachyon Lance                 ##
 ############################################################
 
@@ -2463,6 +2844,466 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                    Lightning Cannon                    ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ARC_EMITTER_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_arc_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 15 max = 250 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_3" }
+	component_set = ESC_ARC_EMITTER_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	upgrades_to = SMALL_ESC_ARC_EMITTER_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ARC_EMITTER_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_arc_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25 max = 500 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_3" }
+	component_set = ESC_ARC_EMITTER_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	upgrades_to = MEDIUM_ESC_ARC_EMITTER_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ARC_EMITTER_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_arc_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 35 max = 1000 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_3" }
+	component_set = ESC_ARC_EMITTER_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	upgrades_to = LARGE_ESC_ARC_EMITTER_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ARC_EMITTER_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_arc_cannon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 50 max = 2000 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_3" }
+	component_set = ESC_ARC_EMITTER_CREATURE_3
+	projectile_gfx = "arc_emitter"
+	upgrades_to = XL_ESC_ARC_EMITTER_CREATURE_4
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                       Arc Cannon                       ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ARC_EMITTER_CREATURE_4
+	size = small
+	icon = GFX_esc_bio_arc_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 15 max = 285 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_4" }
+	component_set = ESC_ARC_EMITTER_CREATURE_4
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ARC_EMITTER_CREATURE_4
+	size = medium
+	icon = GFX_esc_bio_arc_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25 max = 575 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_4" }
+	component_set = ESC_ARC_EMITTER_CREATURE_4
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ARC_EMITTER_CREATURE_4
+	size = large
+	icon = GFX_esc_bio_arc_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 50 max = 1150 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_4" }
+	component_set = ESC_ARC_EMITTER_CREATURE_4
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# exra-large
+weapon_component_template = {
+	key = XL_ESC_ARC_EMITTER_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_bio_arc_cannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 100 max = 2300 }
+	windup = { min = 12 max = 48 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 1.0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_xl_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_4" }
+	component_set = ESC_ARC_EMITTER_CREATURE_4
+	projectile_gfx = "arc_emitter"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
 
 	target_weights = {
 		titan = 3

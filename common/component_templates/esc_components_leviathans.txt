@@ -926,11 +926,6 @@ weapon_component_template = {
 		EFFECT_LEVEL = 1
 	}
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no

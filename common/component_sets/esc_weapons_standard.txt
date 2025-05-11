@@ -204,11 +204,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_MINING_LASER_2
+	icon = GFX_esc_bio_mining_laser_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MINING_LASER_CREATURE_2
+	icon = GFX_esc_bio_mining_laser_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # advanced plasma cutter
 component_set = {
 	key = ESC_MINING_LASER_3
 	icon = GFX_esc_mining_laser_3
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_MINING_LASER_3
+	icon = GFX_esc_bio_mining_laser_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MINING_LASER_CREATURE_3
+	icon = GFX_esc_bio_mining_laser_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # juggernaut beam cannon
@@ -304,18 +330,44 @@ component_set = {
 	icon_frame = 1
 }
 
-# lightning cannon
+# lightning cannon (ships + creatures)
 component_set = {
 	key = ESC_ARC_EMITTER_3
 	icon = GFX_esc_arc_cannon_3
 	icon_frame = 1
 }
 
-# arc cannon
+component_set = {
+	key = ESC_BIO_ARC_EMITTER_3
+	icon = GFX_esc_bio_arc_cannon_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARC_EMITTER_CREATURE_3
+	icon = GFX_esc_bio_arc_cannon_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# arc cannon (ships + creatures)
 component_set = {
 	key = ESC_ARC_EMITTER_4
 	icon = GFX_esc_arc_cannon_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ARC_EMITTER_4
+	icon = GFX_esc_bio_arc_cannon_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARC_EMITTER_CREATURE_4
+	icon = GFX_esc_bio_arc_cannon_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # divine thunder (titan)
@@ -325,10 +377,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_ARC_BIO_EMITTER_TITANIC
+	icon = GFX_esc_bio_arc_cannon_titanic
+	icon_frame = 1
+}
+
 # divine thunder (juggernaut)
 component_set = {
 	key = ESC_ARC_EMITTER_JUGGERNAUT
 	icon = GFX_esc_arc_cannon_titanic
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARC_BIO_EMITTER_JUGGERNAUT
+	icon = GFX_esc_bio_arc_cannon_titanic
 	icon_frame = 1
 }
 
