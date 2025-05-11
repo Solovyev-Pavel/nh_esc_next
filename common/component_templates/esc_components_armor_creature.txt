@@ -1,0 +1,1117 @@
+############################################################
+##          ESC : Armor Components : Space Fauna          ##
+############################################################
+
+# - Evolved Neutronium Carapace				S/M/L/X
+# - Adamantium Carapace						S/M/L/X
+# - Nanomaterial-infused Carapace			S/M/L/X
+# - Improved Nanomaterial-infused Carapace	S/M/L/X
+# - Nanomachine-Infused Dragonscales		S/M/L/X
+# - Dimensional Horror Carapace				S/M/L/X
+# - Reinforced Crystalline Innards			S/M/L/X
+
+############################################################
+##                Evolved Neutronium Carapace             ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARMOR_CREATURE_6
+	size = small
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_ARMOR_CREATURE_6
+	upgrades_to = SMALL_ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARMOR_CREATURE_6
+	size = medium
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_ARMOR_CREATURE_6
+	upgrades_to = MEDIUM_ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARMOR_CREATURE_6
+	size = large
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_ARMOR_CREATURE_6
+	upgrades_to = LARGE_ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARMOR_CREATURE_6
+	size = extra_large
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_ARMOR_CREATURE_6
+	upgrades_to = XL_ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+############################################################
+##                    Adamantium Carapace                 ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARMOR_CREATURE_7
+	size = small
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARMOR_CREATURE_7
+	size = medium
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARMOR_CREATURE_7
+	size = large
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARMOR_CREATURE_7
+	size = extra_large
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = 0
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_ARMOR_CREATURE_7
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+############################################################
+##              Nanomaterial-infused Carapace             ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_NANO_ARMOR_CREATURE_1
+	size = small
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_s_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_NANO_ARMOR_CREATURE_1
+	upgrades_to = SMALL_ESC_NANO_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_NANO_ARMOR_CREATURE_1
+	size = medium
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_m_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_NANO_ARMOR_CREATURE_1
+	upgrades_to = MEDIUM_ESC_NANO_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_NANO_ARMOR_CREATURE_1
+	size = large
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_NANO_ARMOR_CREATURE_1
+	upgrades_to = LARGE_ESC_NANO_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_NANO_ARMOR_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_NANO_ARMOR_CREATURE_1
+	upgrades_to = XL_ESC_NANO_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+############################################################
+##         Improved Nanomaterial-infused Carapace         ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_NANO_ARMOR_CREATURE_2
+	size = small
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_s_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_NANO_ARMOR_CREATURE_2
+	upgrades_to = SMALL_ESC_DRAGON_NANOARMOR_CREATURE
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_NANO_ARMOR_CREATURE_2
+	size = medium
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_m_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_NANO_ARMOR_CREATURE_2
+	upgrades_to = MEDIUM_ESC_DRAGON_NANOARMOR_CREATURE
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_NANO_ARMOR_CREATURE_2
+	size = large
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_NANO_ARMOR_CREATURE_2
+	upgrades_to = LARGE_ESC_DRAGON_NANOARMOR_CREATURE
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_NANO_ARMOR_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_NANO_ARMOR_CREATURE_2
+	upgrades_to = XL_ESC_DRAGON_NANOARMOR_CREATURE
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+############################################################
+##            Nanomachine-Infused Dragonscales            ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_DRAGON_NANOARMOR_CREATURE
+	size = small
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_s_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_DRAGON_NANOARMOR_CREATURE
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_DRAGON_NANOARMOR_CREATURE
+	size = medium
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_m_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_DRAGON_NANOARMOR_CREATURE
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_DRAGON_NANOARMOR_CREATURE
+	size = large
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_DRAGON_NANOARMOR_CREATURE
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_DRAGON_NANOARMOR_CREATURE
+	size = extra_large
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_DRAGON_NANOARMOR_CREATURE
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+############################################################
+##              Dimensional Horror Carapace               ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_HORROR_ARMOR_CREATURE
+	size = small
+	icon = GFX_esc_armor_horror
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t8_regen_primary_2
+	}
+
+	prerequisites = { "esc_tech_armor_horror" }
+	component_set = ESC_HORROR_ARMOR_CREATURE
+
+	# only normal empires (that have defeated dimensional horror) can use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_HORROR_ARMOR_CREATURE
+	size = medium
+	icon = GFX_esc_armor_horror
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t8_regen_primary_2
+	}
+
+	prerequisites = { "esc_tech_armor_horror" }
+	component_set = ESC_HORROR_ARMOR_CREATURE
+
+	# only normal empires (that have defeated dimensional horror) can use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_HORROR_ARMOR_CREATURE
+	size = large
+	icon = GFX_esc_armor_horror
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_2
+	}
+
+	prerequisites = { "esc_tech_armor_horror" }
+	component_set = ESC_HORROR_ARMOR_CREATURE
+
+	# only normal empires (that have defeated dimensional horror) can use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_HORROR_ARMOR_CREATURE
+	size = extra_large
+	icon = GFX_esc_armor_horror
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_2
+	}
+
+	prerequisites = { "esc_tech_armor_horror" }
+	component_set = ESC_HORROR_ARMOR_CREATURE
+
+	# only normal empires (that have defeated dimensional horror) can use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+############################################################
+##             Reinforced Crystalline Innards             ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_CRYSTAL_ARMOR_CREATURE_3
+	size = small
+	icon = GFX_esc_crystal_armor_creature_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_hull_add = @ESC_HULL_s_t6_strength
+	}
+
+	prerequisites = { "esc_tech_crystal_armor_3" }
+	component_set = ESC_CRYSTAL_ARMOR_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_ARMOR_CREATURE_3
+	size = medium
+	icon = GFX_esc_crystal_armor_creature_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_hull_add = @ESC_HULL_m_t6_strength
+	}
+
+	prerequisites = { "esc_tech_crystal_armor_3" }
+	component_set = ESC_CRYSTAL_ARMOR_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_CRYSTAL_ARMOR_CREATURE_3
+	size = large
+	icon = GFX_esc_crystal_armor_creature_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_hull_add = @ESC_HULL_l_t6_strength
+	}
+
+	prerequisites = { "esc_tech_crystal_armor_3" }
+	component_set = ESC_CRYSTAL_ARMOR_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_CRYSTAL_ARMOR_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_crystal_armor_creature_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_hull_add = @ESC_HULL_l_t6_strength
+	}
+
+	prerequisites = { "esc_tech_crystal_armor_3" }
+	component_set = ESC_CRYSTAL_ARMOR_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

@@ -9,11 +9,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIOSHIP_ARMOR_6
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARMOR_CREATURE_6
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # adamantium armor
 component_set = {
 	key = ESC_ARMOR_7
 	icon = GFX_esc_armor_7
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIOSHIP_ARMOR_7
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARMOR_CREATURE_7
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # bio-material armor (ships + creatures)
@@ -44,25 +70,64 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# nanomaterial armor
+# nanomaterial armor (ships + creatures)
 component_set = {
 	key = ESC_NANO_ARMOR_1
 	icon = GFX_esc_nanite_armor_1
 	icon_frame = 1
 }
 
-# improved nanomaterial armor
+component_set = {
+	key = ESC_BIOSHIP_NANO_ARMOR_1
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_NANO_ARMOR_CREATURE_1
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# improved nanomaterial armor (ships + creatures)
 component_set = {
 	key = ESC_NANO_ARMOR_2
 	icon = GFX_esc_nanite_armor_2
 	icon_frame = 1
 }
 
-# nanite-augmented dragonscale armor
+component_set = {
+	key = ESC_BIOSHIP_NANO_ARMOR_2
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_NANO_ARMOR_CREATURE_2
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# nanite-augmented dragonscale armor (ships + creatures)
 component_set = {
 	key = ESC_DRAGON_NANOARMOR
 	icon = GFX_esc_nanite_armor_3
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIOSHIP_DRAGON_NANOARMOR
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_DRAGON_NANOARMOR_CREATURE
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # shielding armor
@@ -93,18 +158,32 @@ component_set = {
 	icon_frame = 1
 }
 
-# dimensional horror armor
+# dimensional horror armor (ships + creatures)
 component_set = {
 	key = ESC_HORROR_ARMOR
 	icon = GFX_esc_armor_horror
 	icon_frame = 1
 }
 
-# reinforced crystalline plating
+component_set = {
+	key = ESC_HORROR_ARMOR_CREATURE
+	icon = GFX_esc_armor_horror
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# reinforced crystalline plating (ships + creatures)
 component_set = {
 	key = ESC_CRYSTAL_ARMOR_3
 	icon = GFX_esc_crystal_armor_3
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CRYSTAL_ARMOR_CREATURE_3
+	icon = GFX_esc_crystal_armor_creature_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # automated dreadnought armor

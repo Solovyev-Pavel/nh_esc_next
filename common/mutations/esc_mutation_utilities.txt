@@ -2,6 +2,93 @@
 ##          ESC : Armor Components : Space Fauna          ##
 ############################################################
 
+# Evolved Neutronium Carapace
+esc_armor_creature_6 = {
+	type = defensive
+	icon = GFX_esc_bioship_armor_6
+	ship_components = {
+		small = SMALL_ESC_ARMOR_CREATURE_6
+		medium = MEDIUM_ESC_ARMOR_CREATURE_6
+		large = LARGE_ESC_ARMOR_CREATURE_6
+		extra_large = XL_ESC_ARMOR_CREATURE_6
+	}
+	upgrades_to = "esc_armor_creature_7"
+}
+
+# Adamantium Carapace
+esc_armor_creature_7 = {
+	type = defensive
+	icon = GFX_esc_bioship_armor_7
+	ship_components = {
+		small = SMALL_ESC_ARMOR_CREATURE_7
+		medium = MEDIUM_ESC_ARMOR_CREATURE_7
+		large = LARGE_ESC_ARMOR_CREATURE_7
+		extra_large = XL_ESC_ARMOR_CREATURE_7
+	}
+}
+
+# Nanomaterial-infused Carapace
+esc_nano_armor_creature_1 = {
+	type = defensive
+	icon = GFX_esc_bioship_nanite_armor_1
+	ship_components = {
+		small = SMALL_ESC_NANO_ARMOR_CREATURE_1
+		medium = MEDIUM_ESC_NANO_ARMOR_CREATURE_1
+		large = LARGE_ESC_NANO_ARMOR_CREATURE_1
+		extra_large = XL_ESC_NANO_ARMOR_CREATURE_1
+	}
+	upgrades_to = "esc_nano_armor_creature_2"
+}
+
+# Improved Nanomaterial-infused Carapace
+esc_nano_armor_creature_2 = {
+	type = defensive
+	icon = GFX_esc_bioship_nanite_armor_2
+	ship_components = {
+		small = SMALL_ESC_NANO_ARMOR_CREATURE_2
+		medium = MEDIUM_ESC_NANO_ARMOR_CREATURE_2
+		large = LARGE_ESC_NANO_ARMOR_CREATURE_2
+		extra_large = XL_ESC_NANO_ARMOR_CREATURE_2
+	}
+	upgrades_to = "esc_dragon_nanoarmor_creature"
+}
+
+# Nanomachine-Infused Dragonscales
+esc_dragon_nanoarmor_creature = {
+	type = defensive
+	icon = GFX_esc_bioship_nanite_armor_3
+	ship_components = {
+		small = SMALL_ESC_DRAGON_NANOARMOR_CREATURE
+		medium = MEDIUM_ESC_DRAGON_NANOARMOR_CREATURE
+		large = LARGE_ESC_DRAGON_NANOARMOR_CREATURE
+		extra_large = XL_ESC_DRAGON_NANOARMOR_CREATURE
+	}
+}
+
+# Dimensional Horror Carapace
+esc_horror_armor_creature = {
+	type = defensive
+	icon = GFX_esc_armor_horror
+	ship_components = {
+		small = SMALL_ESC_HORROR_ARMOR_CREATURE
+		medium = MEDIUM_ESC_HORROR_ARMOR_CREATURE
+		large = LARGE_ESC_HORROR_ARMOR_CREATURE
+		extra_large = XL_ESC_HORROR_ARMOR_CREATURE
+	}
+}
+
+# Reinforced Crystalline Innards
+esc_crystal_armor_creature_3 = {
+	type = defensive
+	icon = GFX_esc_crystal_armor_creature_3
+	ship_components = {
+		small = SMALL_ESC_CRYSTAL_ARMOR_CREATURE_3
+		medium = MEDIUM_ESC_CRYSTAL_ARMOR_CREATURE_3
+		large = LARGE_ESC_CRYSTAL_ARMOR_CREATURE_3
+		extra_large = XL_ESC_CRYSTAL_ARMOR_CREATURE_3
+	}
+}
+
 # bio-material armor
 esc_bio_armor_creature_1 = {
 	type = defensive

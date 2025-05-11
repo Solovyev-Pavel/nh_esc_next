@@ -41,6 +41,40 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = SMALL_ESC_BIOSHIP_ARMOR_6
+	size = small
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t6_upkeep_alloys
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_BIOSHIP_ARMOR_6
+	upgrades_to = SMALL_ESC_BIOSHIP_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # medium improved neutronium armor
 utility_component_template = {
 	key = MEDIUM_ESC_ARMOR_6
@@ -69,6 +103,40 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIOSHIP_ARMOR_6
+	size = medium
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t6_upkeep_alloys
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_BIOSHIP_ARMOR_6
+	upgrades_to = MEDIUM_ESC_BIOSHIP_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -119,6 +187,40 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = LARGE_ESC_BIOSHIP_ARMOR_6
+	size = large
+	icon = GFX_esc_bioship_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t6_upkeep_alloys
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_BIOSHIP_ARMOR_6
+	upgrades_to = LARGE_ESC_BIOSHIP_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # small adamantium armor
 utility_component_template = {
 	key = SMALL_ESC_ARMOR_7
@@ -146,6 +248,39 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIOSHIP_ARMOR_7
+	size = small
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t7_upkeep_alloys
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_BIOSHIP_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -195,6 +330,39 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = MEDIUM_ESC_BIOSHIP_ARMOR_7
+	size = medium
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t7_upkeep_alloys
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_BIOSHIP_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # large adamantium armor
 utility_component_template = {
 	key = LARGE_ESC_ARMOR_7
@@ -233,6 +401,39 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = LARGE_ESC_BIOSHIP_ARMOR_7
+	size = large
+	icon = GFX_esc_bioship_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t7_upkeep_alloys
+	}
+
+	modifier = { ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1 }
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_BIOSHIP_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 ############################################################
 ##          ESC : Bio-Material Armor Components           ##
 ############################################################
@@ -245,16 +446,17 @@ utility_component_template = {
 	icon_frame = 1
 	power = -5
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_s_t6_cost_alloys_2
-			food = @ESC_ARMOR_s_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_s_t6_upkeep_food
-			alloys = @ESC_ARMOR_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_alloys_2
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_s_t6_upkeep_alloys
+		ENERGY_UPKEEP = 0
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_ARMOR_s_t6_upkeep_food
 	}
 
 	modifier = {
@@ -294,16 +496,17 @@ utility_component_template = {
 	icon_frame = 1
 	power = -10
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_m_t6_cost_alloys_2
-			food = @ESC_ARMOR_m_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_m_t6_upkeep_food
-			alloys = @ESC_ARMOR_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_alloys_2
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_m_t6_upkeep_alloys
+		ENERGY_UPKEEP = 0
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_ARMOR_m_t6_upkeep_food
 	}
 
 	modifier = {
@@ -343,16 +546,17 @@ utility_component_template = {
 	icon_frame = 1
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_l_t6_cost_alloys_2
-			food = @ESC_ARMOR_l_t6_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_l_t6_upkeep_food
-			alloys = @ESC_ARMOR_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_alloys_2
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_l_t6_upkeep_alloys
+		ENERGY_UPKEEP = 0
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_ARMOR_l_t6_upkeep_food
 	}
 
 	modifier = {
@@ -392,16 +596,17 @@ utility_component_template = {
 	icon_frame = 1
 	power = -7
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_s_t7_cost_alloys_2
-			food = @ESC_ARMOR_s_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_s_t7_upkeep_food
-			alloys = @ESC_ARMOR_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_alloys_2
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_s_t7_upkeep_alloys
+		ENERGY_UPKEEP = 0
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_ARMOR_s_t7_upkeep_food
 	}
 
 	modifier = {
@@ -440,16 +645,17 @@ utility_component_template = {
 	icon_frame = 1
 	power = -15
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_m_t7_cost_alloys_2
-			food = @ESC_ARMOR_m_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_m_t6_upkeep_food
-			alloys = @ESC_ARMOR_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_alloys_2
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_m_t7_upkeep_alloys
+		ENERGY_UPKEEP = 0
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_ARMOR_m_t7_upkeep_food
 	}
 
 	modifier = {
@@ -488,16 +694,17 @@ utility_component_template = {
 	icon_frame = 1
 	power = -30
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_l_t7_cost_alloys_2
-			food = @ESC_ARMOR_l_t7_cost_food
-		}
-		upkeep = {
-			food = @ESC_ARMOR_l_t7_upkeep_food
-			alloys = @ESC_ARMOR_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_alloys_2
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = 0
+		STRATEGIC_RESOURCE_TYPE = food
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_food
+		STRATEGIC_RESOURCE_UPKEEP = @ESC_ARMOR_l_t7_upkeep_food
 	}
 
 	modifier = {
@@ -586,6 +793,56 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = SMALL_ESC_BIOSHIP_NANO_ARMOR_1
+	size = small
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+	power = -10
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_s_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_BIOSHIP_NANO_ARMOR_1
+	upgrades_to = SMALL_ESC_BIOSHIP_NANO_ARMOR_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # medium nanomaterial armor
 utility_component_template = {
 	key = MEDIUM_ESC_NANO_ARMOR_1
@@ -619,6 +876,56 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIOSHIP_NANO_ARMOR_1
+	size = medium
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+	power = -10
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_m_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_BIOSHIP_NANO_ARMOR_1
+	upgrades_to = MEDIUM_ESC_BIOSHIP_NANO_ARMOR_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and machine FE may use this component
@@ -694,6 +1001,56 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = LARGE_ESC_BIOSHIP_NANO_ARMOR_1
+	size = large
+	icon = GFX_esc_bioship_nanite_armor_1
+	icon_frame = 1
+	power = -10
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_1" }
+	component_set = ESC_BIOSHIP_NANO_ARMOR_1
+	upgrades_to = LARGE_ESC_BIOSHIP_NANO_ARMOR_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # small improved nanomaterial armor
 utility_component_template = {
 	key = SMALL_ESC_NANO_ARMOR_2
@@ -727,6 +1084,56 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIOSHIP_NANO_ARMOR_2
+	size = small
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+	power = -10
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_s_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_BIOSHIP_NANO_ARMOR_2
+	upgrades_to = SMALL_ESC_BIOSHIP_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and machine FE may use this component
@@ -802,6 +1209,56 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = MEDIUM_ESC_BIOSHIP_NANO_ARMOR_2
+	size = medium
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+	power = -10
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_m_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_BIOSHIP_NANO_ARMOR_2
+	upgrades_to = MEDIUM_ESC_BIOSHIP_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # large improved nanomaterial armor
 utility_component_template = {
 	key = LARGE_ESC_NANO_ARMOR_2
@@ -835,6 +1292,56 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIOSHIP_NANO_ARMOR_2
+	size = large
+	icon = GFX_esc_bioship_nanite_armor_2
+	icon_frame = 1
+	power = -10
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_nanite_2" }
+	component_set = ESC_BIOSHIP_NANO_ARMOR_2
+	upgrades_to = LARGE_ESC_BIOSHIP_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and machine FE may use this component
@@ -909,6 +1416,55 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = SMALL_ESC_BIOSHIP_DRAGON_NANOARMOR
+	size = small
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_s_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_BIOSHIP_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # medium nanite-augmented dragonscale armor
 utility_component_template = {
 	key = MEDIUM_ESC_DRAGON_NANOARMOR
@@ -962,6 +1518,55 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = MEDIUM_ESC_BIOSHIP_DRAGON_NANOARMOR
+	size = medium
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_m_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_BIOSHIP_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
 # large nanite-augmented dragonscale armor
 utility_component_template = {
 	key = LARGE_ESC_DRAGON_NANOARMOR
@@ -994,6 +1599,55 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = @T6_weight
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+		inline_script = {
+			script = ship_components/weights/roles_stealth
+			MULT = 2
+		}
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIOSHIP_DRAGON_NANOARMOR
+	size = large
+	icon = GFX_esc_bioship_nanite_armor_3
+	icon_frame = 1
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_2
+		ship_hull_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_1
+		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_2
+	}
+
+	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
+	component_set = ESC_BIOSHIP_DRAGON_NANOARMOR
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and machine FE may use this component
@@ -1669,16 +2323,17 @@ utility_component_template = {
 	icon = GFX_esc_armor_horror
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_s_t8_cost_alloys_1
-			rare_crystals = @ESC_ARMOR_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_s_t8_upkeep_energy
-			alloys = @ESC_ARMOR_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_alloys_1
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_s_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	modifier = {
@@ -1715,16 +2370,17 @@ utility_component_template = {
 	icon = GFX_esc_armor_horror
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_m_t8_cost_alloys_1
-			rare_crystals = @ESC_ARMOR_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_m_t8_upkeep_energy
-			alloys = @ESC_ARMOR_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_alloys_1
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_m_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	modifier = {
@@ -1761,16 +2417,17 @@ utility_component_template = {
 	icon = GFX_esc_armor_horror
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_l_t8_cost_alloys_1
-			rare_crystals = @ESC_ARMOR_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_l_t8_upkeep_energy
-			alloys = @ESC_ARMOR_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_l_t8_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	modifier = {
@@ -1834,16 +2491,17 @@ utility_component_template = {
 	icon = GFX_esc_crystal_armor_3
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_s_t7_cost_alloys_1
-			rare_crystals = @ESC_ARMOR_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_s_t7_upkeep_energy
-			alloys = @ESC_ARMOR_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_s_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	modifier = {
@@ -1870,16 +2528,17 @@ utility_component_template = {
 	icon = GFX_esc_crystal_armor_3
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_m_t7_cost_alloys_1
-			rare_crystals = @ESC_ARMOR_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_m_t7_upkeep_energy
-			alloys = @ESC_ARMOR_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_m_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	modifier = {
@@ -1906,16 +2565,17 @@ utility_component_template = {
 	icon = GFX_esc_crystal_armor_3
 	icon_frame = 1
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_l_t7_cost_alloys_1
-			rare_crystals = @ESC_ARMOR_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_l_t7_upkeep_energy
-			alloys = @ESC_ARMOR_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		PRIMARY_RESOURCE_UPKEEP = @ESC_ARMOR_l_t7_upkeep_alloys
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	modifier = {
