@@ -587,6 +587,12 @@ esc_building_stellar_energy_tower = {
 		planet_jobs_food_produces_mult = 0.15
 	}
 
+	# research jobs
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @ESC_job_count_1
+	}
+
 	# regular empire
 	triggered_planet_modifier = {
 		potential = {
@@ -594,7 +600,6 @@ esc_building_stellar_energy_tower = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = @ESC_job_count_1
 			job_technician_add = @ESC_job_count_1
 			job_technician_per_pop = 0.05
 		}
@@ -614,7 +619,6 @@ esc_building_stellar_energy_tower = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = @ESC_job_count_1
 			job_technician_drone_add = @ESC_job_count_1
 			job_technician_drone_per_pop = 0.05
 		}
@@ -634,7 +638,6 @@ esc_building_stellar_energy_tower = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = @ESC_job_count_1
 			job_technician_drone_add = @ESC_job_count_1
 			job_technician_drone_per_pop = 0.05
 		}
