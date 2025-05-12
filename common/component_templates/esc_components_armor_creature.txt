@@ -34,12 +34,10 @@ utility_component_template = {
 	component_set = ESC_ARMOR_CREATURE_6
 	upgrades_to = SMALL_ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -63,12 +61,10 @@ utility_component_template = {
 	component_set = ESC_ARMOR_CREATURE_6
 	upgrades_to = MEDIUM_ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -92,12 +88,10 @@ utility_component_template = {
 	component_set = ESC_ARMOR_CREATURE_6
 	upgrades_to = LARGE_ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -121,12 +115,10 @@ utility_component_template = {
 	component_set = ESC_ARMOR_CREATURE_6
 	upgrades_to = XL_ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -153,12 +145,10 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -181,12 +171,10 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -209,12 +197,10 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -237,12 +223,10 @@ utility_component_template = {
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_CREATURE_7
 
-	ai_weight = {
-		weight = @T6_weight
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
 	}
 }
 
@@ -281,17 +265,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -326,17 +304,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -371,17 +343,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -416,17 +382,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -465,17 +425,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -510,17 +464,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -555,17 +503,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -600,17 +542,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -648,17 +584,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -692,17 +622,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -741,17 +665,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -790,17 +708,11 @@ utility_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = nanites }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 2
 	}
 }
 
@@ -837,17 +749,11 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STEALTH_MULT = 2
 	}
 }
 
@@ -880,17 +786,11 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STEALTH_MULT = 2
 	}
 }
 
@@ -923,17 +823,11 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STEALTH_MULT = 2
 	}
 }
 
@@ -966,17 +860,11 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T6_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 2
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+		STEALTH_MULT = 2
 	}
 }
 

@@ -1803,15 +1803,15 @@ utility_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_food
+		COMPONENT_COST = @ESC_ARMOR_xl_t6_cost_food
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t6_upkeep_food
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_xl_t6_upkeep_food
 	}
 
 	modifier = {
-		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_2
-		ship_hull_add = @ESC_ARMOR_l_t6_str_primary_3
-		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_1
+		ship_armor_add = @ESC_ARMOR_xl_t6_str_primary_2
+		ship_hull_add = @ESC_ARMOR_xl_t6_str_primary_3
+		ship_hull_regen_add_static = @ESC_ARMOR_xl_t6_regen_secondary_1
 	}
 
 	prerequisites = { "esc_tech_bio_armor_1" }
@@ -1960,15 +1960,15 @@ utility_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_food
+		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_food
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t7_upkeep_food
+		COMPONENT_UPKEEP_COST = @ESC_ARMOR_xl_t7_upkeep_food
 	}
 
 	modifier = {
-		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_2
-		ship_hull_add = @ESC_ARMOR_l_t7_str_primary_3
-		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_1
+		ship_armor_add = @ESC_ARMOR_xl_t7_str_primary_2
+		ship_hull_add = @ESC_ARMOR_xl_t7_str_primary_3
+		ship_hull_regen_add_static = @ESC_ARMOR_xl_t7_regen_secondary_1
 	}
 
 	prerequisites = { "esc_tech_bio_armor_2" }

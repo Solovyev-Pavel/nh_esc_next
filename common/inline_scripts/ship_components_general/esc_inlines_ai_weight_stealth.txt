@@ -1,0 +1,11 @@
+### inline script for AI weaight for components with role_stealth
+
+ai_weight = {
+	weight = $BASE_WEIGHT$
+	modifier = {
+		factor = $STEALTH_MULT$
+		from = {
+			has_stealth_ship_role = yes
+		}
+	}
+}

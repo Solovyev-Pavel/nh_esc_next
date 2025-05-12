@@ -1,0 +1,16 @@
+### inline script for AI weaight for components with role_stealth
+
+ai_weight = {
+	weight = $BASE_WEIGHT$
+	### AI shouldn't use this component if it can't afford at least some upgrades right away
+	modifier = {
+		factor = 0.0
+		no_resource_for_component = { RESOURCE = $STRATEGIC_RESOURCE_TYPE$ }
+	}
+	modifier = {
+		factor = $STEALTH_MULT$
+		from = {
+			has_stealth_ship_role = yes
+		}
+	}
+}
