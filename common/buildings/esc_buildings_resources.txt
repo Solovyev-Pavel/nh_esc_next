@@ -25,6 +25,7 @@ esc_building_zro_distillery = {
 		industrial
 		factory
 		foundry
+		research
 	}
 
 	potential = {
@@ -58,9 +59,9 @@ esc_building_zro_distillery = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			planet_physicists_sr_zro_produces_add = 1
-			planet_physicists_consumer_goods_upkeep_add = 2
-			planet_physicists_energy_upkeep_add = 3
+			planet_biologists_sr_zro_produces_add = 1
+			planet_biologists_consumer_goods_upkeep_add = 2
+			planet_biologists_energy_upkeep_add = 3
 		}
 	}
 	# gestalt empires
@@ -70,8 +71,8 @@ esc_building_zro_distillery = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			planet_physicists_sr_zro_produces_add = 1
-			planet_physicists_energy_upkeep_add = 7
+			planet_biologists_sr_zro_produces_add = 1
+			planet_biologists_energy_upkeep_add = 7
 		}
 	}
 
