@@ -7,6 +7,9 @@
 # - Nanomaterial-infused Carapace			S/M/L/X
 # - Improved Nanomaterial-infused Carapace	S/M/L/X
 # - Nanomachine-Infused Dragonscales		S/M/L/X
+# - Shielding Carapace						S/M/L/X
+# - Evolved Shielding Carapace				S/M/L/X
+# - Perfected Shielding Carapace			S/M/L/X
 # - Dimensional Horror Carapace				S/M/L/X
 # - Reinforced Crystalline Innards			S/M/L/X
 
@@ -713,6 +716,482 @@ utility_component_template = {
 		BASE_WEIGHT = @T6_weight
 		STRATEGIC_RESOURCE_TYPE = nanites
 		STEALTH_MULT = 2
+	}
+}
+
+############################################################
+##                   Shielding Carapace                   ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_SHIELD_ARMOR_CREATURE_1
+	size = small
+	icon = GFX_esc_bio_shield_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_3
+		ship_shield_add = @ESC_ARMOR_s_t6_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_1" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_1
+	upgrades_to = SMALL_ESC_SHIELD_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_SHIELD_ARMOR_CREATURE_1
+	size = medium
+	icon = GFX_esc_bio_shield_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_3
+		ship_shield_add = @ESC_ARMOR_m_t6_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_1" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_1
+	upgrades_to = MEDIUM_ESC_SHIELD_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_SHIELD_ARMOR_CREATURE_1
+	size = large
+	icon = GFX_esc_bio_shield_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_3
+		ship_shield_add = @ESC_ARMOR_l_t6_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_1" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_1
+	upgrades_to = LARGE_ESC_SHIELD_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_SHIELD_ARMOR_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_bio_shield_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_xl_t6_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_xl_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t6_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_xl_t6_str_primary_3
+		ship_shield_add = @ESC_ARMOR_xl_t6_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_xl_t6_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_1" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_1
+	upgrades_to = XL_ESC_SHIELD_ARMOR_CREATURE_2
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##             Improved Shielding Carapace                ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_SHIELD_ARMOR_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_shield_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_3
+		ship_shield_add = @ESC_ARMOR_s_t7_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_2" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_2
+	upgrades_to = SMALL_ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_SHIELD_ARMOR_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_shield_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_3
+		ship_shield_add = @ESC_ARMOR_m_t7_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_2" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_2
+	upgrades_to = MEDIUM_ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_SHIELD_ARMOR_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_shield_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_3
+		ship_shield_add = @ESC_ARMOR_l_t7_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_2" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_2
+	upgrades_to = LARGE_ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_SHIELD_ARMOR_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_shield_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t7_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_xl_t7_str_primary_3
+		ship_shield_add = @ESC_ARMOR_xl_t7_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_xl_t7_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_2" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_2
+	upgrades_to = XL_ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##             Perfected Shielding Carapace               ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_SHIELD_ARMOR_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_shield_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_3
+		ship_shield_add = @ESC_ARMOR_s_t8_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_3" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_SHIELD_ARMOR_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_shield_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_3
+		ship_shield_add = @ESC_ARMOR_m_t8_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_3" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_SHIELD_ARMOR_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_shield_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_3
+		ship_shield_add = @ESC_ARMOR_l_t8_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_3" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_SHIELD_ARMOR_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_shield_armor_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_ARMOR_xl_t8_cost_alloys_1
+		ENERGY_UPKEEP = @ESC_ARMOR_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t8_cost_special
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_xl_t8_str_primary_3
+		ship_shield_add = @ESC_ARMOR_xl_t8_str_secondary
+		ship_shield_regen_add_static = @ESC_ARMOR_xl_t8_regen_secondary_1
+	}
+
+	prerequisites = { "esc_tech_armor_shield_3" }
+	component_set = ESC_SHIELD_ARMOR_CREATURE_3
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = nanites
+		STEALTH_MULT = 0
 	}
 }
 
