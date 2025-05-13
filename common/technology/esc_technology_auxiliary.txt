@@ -93,7 +93,10 @@ esc_tech_reactor_booster_4 = {
 		NOR = {
 			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
 			has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
-			has_global_flag = @NSC_active_flag
+			AND = {
+				has_global_flag = @NSC_active_flag
+				country_uses_bio_ships = no
+			}
 			has_global_flag = @ACOT_active_flag
 		}
 	}
@@ -125,7 +128,10 @@ esc_tech_reactor_booster_5 = {
 		NOR = {
 			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
 			has_global_flag = ESC_GLOBAL_FLAG_reactors_forbidden
-			has_global_flag = @NSC_active_flag
+			AND = {
+				has_global_flag = @NSC_active_flag
+				country_uses_bio_ships = no
+			}
 			has_global_flag = @ACOT_active_flag
 		}
 	}

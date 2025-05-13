@@ -203,7 +203,7 @@ ESC_ship_uses_strikecruiser_components = {
 		# dummy ship class to sidestep 'bugs' with size_restriction
 		is_ship_size = esc_dummy_strike_cruiser
 		# NSC ships
-		is_ship_size = @NSC_StrikeCruiser
+		#is_ship_size = @NSC_StrikeCruiser
 		# Realistic ships : cruisers
 		is_ship_size = @RS_SupportCruiser
 		is_ship_size = @RS_ElectronicCruiser
@@ -222,7 +222,7 @@ ESC_ship_uses_battlecruiser_components = {
 		is_ship_size = esc_dummy_battle_cruiser
 		# NSC ships
 		is_ship_size = @NSC_BattleCruiser
-		is_ship_size = @NSC_ExplorationShip
+		#is_ship_size = @NSC_ExplorationShip
 		# Realistic ships : cruisers
 		is_ship_size = @RS_SupportCruiser
 		is_ship_size = @RS_ElectronicCruiser
@@ -240,7 +240,7 @@ ESC_ship_uses_carrier_components = {
 		# dummy ship class to sidestep 'bugs' with size_restriction
 		is_ship_size = esc_dummy_carrier
 		# NSC ships
-		is_ship_size = @NSC_Carrier
+		#is_ship_size = @NSC_Carrier
 	}
 }
 
