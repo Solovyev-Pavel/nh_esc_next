@@ -1,0 +1,1398 @@
+############################################################
+##          ESC : Shield Components : Space Fauna         ##
+############################################################
+
+# - Improved Hyper-energy Skin				S/M/L/X
+# - Ultrahyperbolic Energy Skin				S/M/L/X
+# - Wave-Force Armor						S/M/L/X
+# - Cyclonic Energy Flow Skin				S/M/L/X
+# - Evolved Cyclonic Energy Flow Skin		S/M/L/X
+# - Pinacle Cyclonic Energy Flow Skin		S/M/L/X
+# - Evolved Dark Matter Energy Epidermis	S/M/L/X
+# - Pinacle Dark Matter Energy Epidermis	S/M/L/X
+# - Evolved Psionic Skin					S/M/L/X
+# - Absolute Terror Field					S/M/L/X
+
+############################################################
+##               Improved Hyper-energy Skin               ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_SHIELDS_CREATURE_6
+	size = small
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_SHIELDS_CREATURE_6
+	upgrades_to = SMALL_ESC_SHIELDS_CREATURE_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_SHIELDS_CREATURE_6
+	size = medium
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_SHIELDS_CREATURE_6
+	upgrades_to = MEDIUM_ESC_SHIELDS_CREATURE_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_SHIELDS_CREATURE_6
+	size = large
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_SHIELDS_CREATURE_6
+	upgrades_to = LARGE_ESC_SHIELDS_CREATURE_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_SHIELDS_CREATURE_6
+	size = extra_large
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_xl_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_SHIELDS_CREATURE_6
+	upgrades_to = XL_ESC_SHIELDS_CREATURE_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##              Ultrahyperbolic Energy Skin               ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_SHIELDS_CREATURE_7
+	size = small
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_SHIELDS_CREATURE_7
+	upgrades_to = SMALL_ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_SHIELDS_CREATURE_7
+	size = medium
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_SHIELDS_CREATURE_7
+	upgrades_to = MEDIUM_ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_SHIELDS_CREATURE_7
+	size = large
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_SHIELDS_CREATURE_7
+	upgrades_to = LARGE_ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_SHIELDS_CREATURE_7
+	size = extra_large
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_xl_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_SHIELDS_CREATURE_7
+	upgrades_to = XL_ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##                    Wave-Force Armor                    ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_SHIELDS_CREATURE_8
+	size = small
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_SHIELDS_CREATURE_8
+	size = medium
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_SHIELDS_CREATURE_8
+	size = large
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_SHIELDS_CREATURE_8
+	size = extra_large
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_xl_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_SHIELDS_CREATURE_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##               Cyclonic Energy Flow Skin                ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_CYCLONIC_SHIELDS_CREATURE_1
+	size = small
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_1
+	upgrades_to = SMALL_ESC_CYCLONIC_SHIELDS_CREATURE_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_CYCLONIC_SHIELDS_CREATURE_1
+	size = medium
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_1
+	upgrades_to = MEDIUM_ESC_CYCLONIC_SHIELDS_CREATURE_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_CYCLONIC_SHIELDS_CREATURE_1
+	size = large
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_1
+	upgrades_to = LARGE_ESC_CYCLONIC_SHIELDS_CREATURE_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_CYCLONIC_SHIELDS_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_1
+	upgrades_to = XL_ESC_CYCLONIC_SHIELDS_CREATURE_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##           Evolved Cyclonic Energy Flow Skin            ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_CYCLONIC_SHIELDS_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_2
+	upgrades_to = SMALL_ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_CYCLONIC_SHIELDS_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_2
+	upgrades_to = MEDIUM_ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_CYCLONIC_SHIELDS_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_2
+	upgrades_to = LARGE_ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_CYCLONIC_SHIELDS_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_2
+	upgrades_to = XL_ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##           Pinacle Cyclonic Energy Flow Skin            ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_CYCLONIC_SHIELDS_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_CYCLONIC_SHIELDS_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_CYCLONIC_SHIELDS_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_CYCLONIC_SHIELDS_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_CYCLONIC_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##          Evolved Dark Matter Energy Epidermis          ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ENIGMATIC_SHIELD_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_2
+	upgrades_to = SMALL_ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ENIGMATIC_SHIELD_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_2
+	upgrades_to = MEDIUM_ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ENIGMATIC_SHIELD_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_2
+	upgrades_to = LARGE_ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ENIGMATIC_SHIELD_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_2
+	upgrades_to = XL_ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##          Pinacle Dark Matter Energy Epidermis          ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ENIGMATIC_SHIELD_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ENIGMATIC_SHIELD_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ENIGMATIC_SHIELD_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ENIGMATIC_SHIELD_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_ENIGMATIC_SHIELD_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##                  Evolved Psionic Skin                  ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_PSI_SHIELD_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_PSI_SHIELD_CREATURE_2
+	upgrades_to = SMALL_ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_PSI_SHIELD_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_PSI_SHIELD_CREATURE_2
+	upgrades_to = MEDIUM_ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_PSI_SHIELD_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_PSI_SHIELD_CREATURE_2
+	upgrades_to = LARGE_ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_PSI_SHIELD_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_PSI_SHIELD_CREATURE_2
+	upgrades_to = XL_ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+############################################################
+##                 Absolute Terror Field                  ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_PSI_SHIELD_CREATURE_3
+	size = small
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_PSI_SHIELD_CREATURE_3
+	size = medium
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_PSI_SHIELD_CREATURE_3
+	size = large
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_PSI_SHIELD_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_xl_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_xl_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = 0
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_xl_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_xl_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_PSI_SHIELD_CREATURE_3
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}

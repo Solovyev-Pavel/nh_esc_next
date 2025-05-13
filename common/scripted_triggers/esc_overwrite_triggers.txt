@@ -38,6 +38,54 @@ has_non_psionic_shields = {
 		has_component = LARGE_ARCHAEO_SHIELD
 
 		# ESC components
-		esc_TRIGGER_is_non_psionic_shield = yes
+		ESC_TRIGGER_is_non_psionic_shield = yes
+	}
+}
+
+has_non_psionic_shields_mutation = {
+	OR = {
+		# vanilla tier 1
+		has_component = ENERGY_EPIDERMIS_SMALL
+		has_component = ENERGY_EPIDERMIS_MEDIUM
+		has_component = ENERGY_EPIDERMIS_LARGE
+		has_component = ENERGY_EPIDERMIS_EXTRA_LARGE
+		# vanilla tier 2
+		has_component = IMPROVED_ENERGY_EPIDERMIS_SMALL
+		has_component = IMPROVED_ENERGY_EPIDERMIS_MEDIUM
+		has_component = IMPROVED_ENERGY_EPIDERMIS_LARGE
+		has_component = IMPROVED_ENERGY_EPIDERMIS_EXTRA_LARGE
+		# vanilla tier 3
+		has_component = HIGH_ENERGY_SKIN_SMALL
+		has_component = HIGH_ENERGY_SKIN_MEDIUM
+		has_component = HIGH_ENERGY_SKIN_LARGE
+		has_component = HIGH_ENERGY_SKIN_EXTRA_LARGE
+		# vanilla tier 4
+		has_component = ADVANCED_ENERGY_SKIN_SMALL
+		has_component = ADVANCED_ENERGY_SKIN_MEDIUM
+		has_component = ADVANCED_ENERGY_SKIN_LARGE
+		has_component = ADVANCED_ENERGY_SKIN_EXTRA_LARGE
+		# vanilla tier 5
+		has_component = HYPER_ENERGY_SKIN_SMALL
+		has_component = HYPER_ENERGY_SKIN_MEDIUM
+		has_component = HYPER_ENERGY_SKIN_LARGE
+		has_component = HYPER_ENERGY_SKIN_EXTRA_LARGE
+		# vanilla dark matter tier 1
+		has_component = DARK_MATTER_ENERGY_EPIDERMIS_SMALL
+		has_component = DARK_MATTER_ENERGY_EPIDERMIS_MEDIUM
+		has_component = DARK_MATTER_ENERGY_EPIDERMIS_LARGE
+		has_component = DARK_MATTER_ENERGY_EPIDERMIS_EXTRA_LARGE
+		# vanilla archaeo shields
+		has_component = ANCIENT_SUSPENSION_EPIDERMIS_SMALL
+		has_component = ANCIENT_SUSPENSION_EPIDERMIS_MEDIUM
+		has_component = ANCIENT_SUSPENSION_EPIDERMIS_LARGE
+		has_component = ANCIENT_SUSPENSION_EPIDERMIS_EXTRA_LARGE
+		# vanilla archaeo armor
+		has_component = ANCIENT_ENERGISED_CARAPACE_SMALL
+		has_component = ANCIENT_ENERGISED_CARAPACE_MEDIUM
+		has_component = ANCIENT_ENERGISED_CARAPACE_LARGE
+		has_component = ANCIENT_ENERGISED_CARAPACE_EXTRA_LARGE
+
+		# ESC components
+		ESC_TRIGGER_has_non_psionic_shields_mutation = yes
 	}
 }

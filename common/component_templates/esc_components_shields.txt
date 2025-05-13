@@ -36,17 +36,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_SHIELDS_6
+	size = small
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_BIO_SHIELDS_6
+	upgrades_to = SMALL_ESC_BIO_SHIELDS_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -84,17 +116,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_SHIELDS_6
+	size = medium
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_BIO_SHIELDS_6
+	upgrades_to = MEDIUM_ESC_BIO_SHIELDS_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -132,17 +196,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_SHIELDS_6
+	size = large
+	icon = GFX_esc_bio_shields_6
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t6_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t6_regen
+	}
+
+	prerequisites = { "esc_tech_shields_6" }
+	component_set = ESC_BIO_SHIELDS_6
+	upgrades_to = LARGE_ESC_BIO_SHIELDS_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -180,17 +276,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_SHIELDS_7
+	size = small
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_BIO_SHIELDS_7
+	upgrades_to = SMALL_ESC_BIO_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -228,17 +356,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_SHIELDS_7
+	size = medium
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_BIO_SHIELDS_7
+	upgrades_to = MEDIUM_ESC_BIO_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -276,17 +436,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_SHIELDS_7
+	size = large
+	icon = GFX_esc_bio_shields_7
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t7_regen
+	}
+
+	prerequisites = { "esc_tech_shields_7" }
+	component_set = ESC_BIO_SHIELDS_7
+	upgrades_to = LARGE_ESC_BIO_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -328,17 +520,48 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_SHIELDS_8
+	size = small
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t9_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_BIO_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -380,17 +603,48 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_SHIELDS_8
+	size = medium
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t9_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_BIO_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -432,17 +686,48 @@ utility_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_SHIELDS_8
+	size = large
+	icon = GFX_esc_bio_shields_8
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t9_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t9_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+
+	prerequisites = { "esc_tech_shields_8" }
+	component_set = ESC_BIO_SHIELDS_8
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -509,17 +794,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_CYCLONIC_SHIELDS_1
+	size = small
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_1
+	upgrades_to = SMALL_ESC_BIO_CYCLONIC_SHIELDS_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -557,17 +874,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_CYCLONIC_SHIELDS_1
+	size = medium
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_1
+	upgrades_to = MEDIUM_ESC_BIO_CYCLONIC_SHIELDS_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -605,17 +954,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_CYCLONIC_SHIELDS_1
+	size = large
+	icon = GFX_esc_bio_cyclonic_shields_1
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t6_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t6_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t6_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_1" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_1
+	upgrades_to = LARGE_ESC_BIO_CYCLONIC_SHIELDS_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -653,17 +1034,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_CYCLONIC_SHIELDS_2
+	size = small
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_2
+	upgrades_to = SMALL_ESC_BIO_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -701,17 +1114,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_CYCLONIC_SHIELDS_2
+	size = medium
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_2
+	upgrades_to = MEDIUM_ESC_BIO_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -749,17 +1194,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_CYCLONIC_SHIELDS_2
+	size = large
+	icon = GFX_esc_bio_cyclonic_shields_2
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t7_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_2" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_2
+	upgrades_to = LARGE_ESC_BIO_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -796,17 +1273,48 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_CYCLONIC_SHIELDS_3
+	size = small
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -843,17 +1351,48 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_CYCLONIC_SHIELDS_3
+	size = medium
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -890,17 +1429,48 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_CYCLONIC_SHIELDS_3
+	size = large
+	icon = GFX_esc_bio_cyclonic_shields_3
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
+	}
+
+	modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t8_strength_cycl
+		ship_shield_regen_add_perc = 0.015
+	}
+
+	prerequisites = { "esc_tech_shields_cyclonic_3" }
+	component_set = ESC_BIO_CYCLONIC_SHIELDS_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		STEALTH_MULT = 0
 	}
 }
 
@@ -942,17 +1512,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_ENIGMATIC_SHIELD_2
+	size = small
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_BIO_ENIGMATIC_SHIELD_2
+	upgrades_to = SMALL_ESC_BIO_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -990,17 +1592,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_ENIGMATIC_SHIELD_2
+	size = medium
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_BIO_ENIGMATIC_SHIELD_2
+	upgrades_to = MEDIUM_ESC_BIO_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1038,17 +1672,49 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_ENIGMATIC_SHIELD_2
+	size = large
+	icon = GFX_esc_bio_dark_matter_shields_2
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t7_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t7_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t7_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_2" }
+	component_set = ESC_BIO_ENIGMATIC_SHIELD_2
+	upgrades_to = LARGE_ESC_BIO_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1085,17 +1751,48 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_ENIGMATIC_SHIELD_3
+	size = small
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_BIO_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1132,17 +1829,48 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_ENIGMATIC_SHIELD_3
+	size = medium
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_BIO_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1179,17 +1907,48 @@ utility_component_template = {
 		EVAL_TARGET = no
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_ENIGMATIC_SHIELD_3
+	size = large
+	icon = GFX_esc_bio_dark_matter_shields_3
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t8_regen
+	}
+
+	prerequisites = { "esc_tech_dark_matter_shields_3" }
+	component_set = ESC_BIO_ENIGMATIC_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1226,22 +1985,64 @@ utility_component_template = {
 	component_set = ESC_PSI_SHIELD_2
 	upgrades_to = SMALL_ESC_PSI_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_PSI_SHIELD_2
+	size = small
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_BIO_PSI_SHIELD_2
+	upgrades_to = SMALL_ESC_BIO_PSI_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1274,22 +2075,64 @@ utility_component_template = {
 	component_set = ESC_PSI_SHIELD_2
 	upgrades_to = MEDIUM_ESC_PSI_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_PSI_SHIELD_2
+	size = medium
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_BIO_PSI_SHIELD_2
+	upgrades_to = MEDIUM_ESC_BIO_PSI_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1322,22 +2165,64 @@ utility_component_template = {
 	component_set = ESC_PSI_SHIELD_2
 	upgrades_to = LARGE_ESC_PSI_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_PSI_SHIELD_2
+	size = large
+	icon = GFX_esc_bio_psionic_shield_2
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t8_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t8_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t8_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_2" }
+	component_set = ESC_BIO_PSI_SHIELD_2
+	upgrades_to = LARGE_ESC_BIO_PSI_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1369,22 +2254,63 @@ utility_component_template = {
 	prerequisites = { "esc_tech_psionic_shield_3" }
 	component_set = ESC_PSI_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_BIO_PSI_SHIELD_3
+	size = small
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+	power = @ESC_SHIELD_s_t9_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_s_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_s_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_s_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_s_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_BIO_PSI_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1416,22 +2342,63 @@ utility_component_template = {
 	prerequisites = { "esc_tech_psionic_shield_3" }
 	component_set = ESC_PSI_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_BIO_PSI_SHIELD_3
+	size = medium
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+	power = @ESC_SHIELD_m_t9_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_m_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_m_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_m_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_m_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_BIO_PSI_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
 	}
 }
 
@@ -1463,21 +2430,62 @@ utility_component_template = {
 	prerequisites = { "esc_tech_psionic_shield_3" }
 	component_set = ESC_PSI_SHIELD_3
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
-	ai_weight = {
-		weight = @T5_weight
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
-		}
-		inline_script = {
-			script = ship_components/weights/roles_stealth
-			MULT = 0
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_BIO_PSI_SHIELD_3
+	size = large
+	icon = GFX_esc_psionic_shield_3
+	icon_frame = 1
+	power = @ESC_SHIELD_l_t9_power
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_SHIELD_l_t9_cost_alloys
+		ENERGY_UPKEEP = @ESC_SHIELD_l_t9_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t9_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t9_cost_special
+	}
+
+    modifier = {
+		ship_shield_add = @ESC_SHIELD_l_t9_strength
+		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+
+	prerequisites = { "esc_tech_psionic_shield_3" }
+	component_set = ESC_BIO_PSI_SHIELD_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth_sr
+		BASE_WEIGHT = @T6_weight
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+		STEALTH_MULT = 0
 	}
 }
