@@ -152,6 +152,56 @@ esc_bio_armor_creature_2 = {
 	}
 }
 
+# tech-synthetic carapace
+esc_archaeo_armor_creature_2 = {
+	type = defensive
+	icon = GFX_esc_bio_archaeo_armor_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_ARMOR_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_armor_creature_3"
+}
+
+# improved tech-synthetic carapace
+esc_archaeo_armor_creature_3 = {
+	type = defensive
+	icon = GFX_esc_bio_archaeo_armor_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
+	}
+}
+
+# tech-sythetic suspension field
+esc_archaeo_shields_creature_2 = {
+	type = defensive
+	icon = GFX_esc_bio_archaeo_shield_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_SHIELDS_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_SHIELDS_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_SHIELDS_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_SHIELDS_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_shields_creature_3"
+}
+
+# advanced tech-sythetic suspension field
+esc_archaeo_shields_creature_3 = {
+	type = defensive
+	icon = GFX_esc_bio_archaeo_shield_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_SHIELDS_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_SHIELDS_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_SHIELDS_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_SHIELDS_CREATURE_3
+	}
+}
+
 ############################################################
 ##          ESC : Shield Components : Space Fauna         ##
 ############################################################

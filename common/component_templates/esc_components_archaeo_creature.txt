@@ -1,0 +1,777 @@
+############################################################
+##    Component: Archaeotech components : Space Fauna     ##
+############################################################
+
+# - Tech-Synthetic Carapace									S/M/L/X
+# - Advanced Tech-Synthetic Carapace						S/M/L/X
+# - Tech-Synthetic Suspension Field Tissue					S/M/L/X
+# - Advanced Tech-Synthetic Suspension Field Tissue			S/M/L/X
+
+
+############################################################
+##                Tech-Synthetic Carapace                 ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_s_4
+		ship_armor_add = @armor_S4
+		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S4
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 10
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_m_4
+		ship_armor_add = @armor_M4
+		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M4
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_4
+		ship_armor_add = @armor_L4
+		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L4
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_5
+		ship_armor_add = @armor_L5
+		ship_shield_add = @shield_L4
+		ship_shield_regen_add_static = @regen_L5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @x_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @x_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 16
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+############################################################
+##          Advanced Tech-Synthetic Carapace              ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_s_5
+		ship_armor_add = @armor_S5
+		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S3
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_m_5
+		ship_armor_add = @armor_M5
+		ship_shield_add = @shield_M3
+		ship_shield_regen_add_static = @regen_M5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_M3
+		ship_shield_regen_add_static = @regen_M3
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_5
+		ship_armor_add = @armor_L5
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 16
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_6
+		ship_armor_add = @armor_L6
+		ship_shield_add = @shield_L5
+		ship_shield_regen_add_static = @regen_L6
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L4
+		ship_shield_regen_add_static = @regen_L4
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @x_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @x_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 18
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+############################################################
+##         Tech-Synthetic Suspension Field Tissue         ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARCHAEO_SHIELDS_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_archaeo_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 10
+	}
+
+	modifier = {
+		ship_shield_add = @shield_S4
+		ship_shield_regen_add_static = @regen_S7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S2
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_2" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_2
+	upgrades_to = SMALL_ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARCHAEO_SHIELDS_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_archaeo_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @m_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	modifier = {
+		ship_shield_add = @shield_M4
+		ship_shield_regen_add_static = @regen_M7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M2
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_2" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_2
+	upgrades_to = MEDIUM_ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARCHAEO_SHIELDS_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_archaeo_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	modifier = {
+		ship_shield_add = @shield_L4
+		ship_shield_regen_add_static = @regen_L7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L2
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_2" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_2
+	upgrades_to = LARGE_ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARCHAEO_SHIELDS_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_shield_2
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @xl_t6_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @xl_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 16
+	}
+
+	modifier = {
+		ship_shield_add = @shield_L6
+		ship_shield_regen_add_static = @regen_L7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L4
+		ship_shield_regen_add_static = @regen_L4
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_2" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_2
+	upgrades_to = XL_ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+############################################################
+##     Advanced Tech-Synthetic Suspension Field Tissue    ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARCHAEO_SHIELDS_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_archaeo_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @s_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	modifier = {
+		ship_shield_add = @shield_S5
+		ship_shield_regen_add_static = @regen_S7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S3
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_3" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARCHAEO_SHIELDS_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_archaeo_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @m_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	modifier = {
+		ship_shield_add = @shield_M5
+		ship_shield_regen_add_static = @regen_M7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_M3
+		ship_shield_regen_add_static = @regen_M3
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_3" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARCHAEO_SHIELDS_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_archaeo_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	modifier = {
+		ship_shield_add = @shield_L5
+		ship_shield_regen_add_static = @regen_L7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_3" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARCHAEO_SHIELDS_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_shield_3
+	icon_frame = 1
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @xl_t7_cost
+		ENERGY_UPKEEP = 0
+		COMPONENT_UPKEEP_COST = @xl_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	modifier = {
+		ship_shield_add = @shield_L7
+		ship_shield_regen_add_static = @regen_L7 #Regeneration per day
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = 0.15
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L5
+		ship_shield_regen_add_static = @regen_L5
+	}
+
+	prerequisites = { "esc_tech_archaeoshield_3" }
+	component_set = ESC_ARCHAEO_SHIELDS_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 0
+	}
+}
