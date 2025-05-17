@@ -7,7 +7,7 @@ power = @ESC_REACTOR_t$REACTOR_TIER$_power_juggernaut
 
 inline_script = {
 	script = ship_components_general/esc_inlines_bio_component_cost_sr
-	COMPONENT_COST = @ESC_REACTOR_t$REACTOR_TIER$_cost_$SHIP_SIZE_GROUP$
+	COMPONENT_COST = @ESC_REACTOR_t$REACTOR_TIER$_cost_juggernaut
 	ENERGY_UPKEEP = 0
 	COMPONENT_UPKEEP_COST = 0
 	STRATEGIC_RESOURCE_TYPE = $STRATEGIC_RESOURCE_TYPE$

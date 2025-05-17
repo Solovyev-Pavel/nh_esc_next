@@ -214,7 +214,7 @@ esc_psionic_strike_2 = {
 }
 
 ############################################################
-##         ESC : LEviathan Weapons : Space Fauna          ##
+##         ESC : Leviathan Weapons : Space Fauna          ##
 ############################################################
 
 # Voidspawn Missile Launcher
@@ -226,5 +226,159 @@ esc_voidspawn_missile_creature = {
 		medium = MEDIUM_ESC_VOIDSPAWN_MISSILE_CREATURE
 		large = LARGE_ESC_VOIDSPAWN_MISSILE_CREATURE
 		extra_large = XL_ESC_VOIDSPAWN_MISSILE_CREATURE
+	}
+}
+
+############################################################
+##          ESC : Archaeo Weapons : Space Fauna           ##
+############################################################
+
+# Tech-Synthetic Collapsar Eyebeam
+esc_archaeo_laser_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_laser_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_LASER_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_LASER_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_LASER_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_LASER_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_laser_creature_3"
+}
+
+# Advanced Tech-Synthetic Collapsar Eyebeam
+esc_archaeo_laser_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_laser_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_LASER_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_LASER_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_LASER_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_LASER_CREATURE_3
+	}
+}
+
+# Tech-Synthetic Macro Shard Batteries
+esc_archaeo_mass_driver_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_mass_driver_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_mass_driver_creature_3"
+}
+
+# Evoloved Tech-Synthetic Macro Shard Batteries
+esc_archaeo_mass_driver_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_mass_driver_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
+	}
+}
+
+# Tech-Synthetic Fragmentator Artillery
+esc_archaeo_mass_accelerator_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_mass_accelerator_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_mass_accelerator_creature_3"
+}
+
+# Advanced Tech-Synthetic Fragmentator Artillery
+esc_archaeo_mass_accelerator_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_mass_accelerator_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
+	}
+}
+
+# Tech-Synthetic Talon Cloud Launcher
+esc_archaeo_missiles_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_missiles_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_MISSILES_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_MISSILES_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_MISSILES_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_MISSILES_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_missiles_creature_3"
+}
+
+# Advanced Tech-Synthetic Talon Cloud Launcher
+esc_archaeo_missiles_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_missiles_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_MISSILES_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_MISSILES_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_MISSILES_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_MISSILES_CREATURE_3
+	}
+}
+
+# Tech-Synthetic Driller Beasts
+esc_archaeo_strikecraft_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_strikecraft_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_strikecraft_creature_3"
+}
+
+# Evolved Tech-Synthetic Driller Beasts
+esc_archaeo_strikecraft_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_strikecraft_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
+	}
+}
+
+# Tech-Synthetic Web Slinger
+esc_archaeo_pointdefense_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_pd_2
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
+		medium = MEDIUM_ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
+		large = LARGE_ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
+		extra_large = XL_ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
+	}
+	upgrades_to = "esc_archaeo_pointdefense_creature_3"
+}
+
+# Evolved Tech-Synthetic Web Slinger
+esc_archaeo_pointdefense_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_archaeo_pd_3
+	ship_components = {
+		small = SMALL_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
+		medium = MEDIUM_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
+		large = LARGE_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
+		extra_large = XL_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 	}
 }

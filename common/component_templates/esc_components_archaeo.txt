@@ -105,13 +105,82 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_laser_2" }
 	component_set = ESC_ARCHAEO_LASER_2
 	projectile_gfx = "dark_matter_laser_s"
-	tags = { weapon_type_energy weapon_archaeotech }
+	tags = { weapon_type_energy weapon_archaeotech s_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = SMALL_ESC_ARCHAEO_LASER_3
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = SMALL_ESC_BIO_ARCHAEO_LASER_2
+	size = small
+	icon = GFX_esc_bio_archaeo_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 16 max = 54 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.9
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t4_cost
+		ENERGY_UPKEEP = @s_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @s_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 10
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_archaeo_laser_2" }
+	component_set = ESC_BIO_ARCHAEO_LASER_2
+	projectile_gfx = "dark_matter_laser_s"
+	tags = { weapon_type_energy weapon_archaeotech s_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	upgrades_to = SMALL_ESC_BIO_ARCHAEO_LASER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -178,13 +247,82 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_laser_2" }
 	component_set = ESC_ARCHAEO_LASER_2
 	projectile_gfx = "dark_matter_laser_m"
-	tags = { weapon_type_energy weapon_archaeotech }
+	tags = { weapon_type_energy weapon_archaeotech m_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = MEDIUM_ESC_ARCHAEO_LASER_3
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_ARCHAEO_LASER_2
+	size = medium
+	icon = GFX_esc_bio_archaeo_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 48 max = 132 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+	power = -34
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t4_cost
+		ENERGY_UPKEEP = @m_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_archaeo_laser_2" }
+	component_set = ESC_BIO_ARCHAEO_LASER_2
+	projectile_gfx = "dark_matter_laser_m"
+	tags = { weapon_type_energy weapon_archaeotech m_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	upgrades_to = MEDIUM_ESC_BIO_ARCHAEO_LASER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -251,13 +389,82 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_laser_2" }
 	component_set = ESC_ARCHAEO_LASER_2
 	projectile_gfx = "dark_matter_laser_l"
-	tags = { weapon_type_energy weapon_archaeotech }
+	tags = { weapon_type_energy weapon_archaeotech l_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = LARGE_ESC_ARCHAEO_LASER_3
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_ARCHAEO_LASER_2
+	size = large
+	icon = GFX_esc_bio_archaeo_laser_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 118 max = 288 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.9
+	power = -68
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t4_cost
+		ENERGY_UPKEEP = @l_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @l_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_laser_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_archaeo_laser_2" }
+	component_set = ESC_BIO_ARCHAEO_LASER_2
+	projectile_gfx = "dark_matter_laser_l"
+	tags = { weapon_type_energy weapon_archaeotech l_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+	upgrades_to = LARGE_ESC_BIO_ARCHAEO_LASER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -328,12 +535,80 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_laser_3" }
 	component_set = ESC_ARCHAEO_LASER_3
 	projectile_gfx = "dark_matter_laser_s"
-	tags = { weapon_type_energy weapon_archaeotech }
+	tags = { weapon_type_energy weapon_archaeotech s_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = SMALL_ESC_BIO_ARCHAEO_LASER_3
+	size = small
+	icon = GFX_esc_bio_archaeo_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 21 max = 70 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.9
+	power = -24
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t5_cost
+		ENERGY_UPKEEP = @s_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_laser_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_archaeo_laser_3" }
+	component_set = ESC_BIO_ARCHAEO_LASER_3
+	projectile_gfx = "dark_matter_laser_s"
+	tags = { weapon_type_energy weapon_archaeotech s_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -400,12 +675,80 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_laser_3" }
 	component_set = ESC_ARCHAEO_LASER_3
 	projectile_gfx = "dark_matter_laser_m"
-	tags = { weapon_type_energy weapon_archaeotech }
+	tags = { weapon_type_energy weapon_archaeotech m_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_ARCHAEO_LASER_3
+	size = medium
+	icon = GFX_esc_bio_archaeo_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 68 max = 164 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+	power = -46
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t5_cost
+		ENERGY_UPKEEP = @m_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_laser_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_archaeo_laser_3" }
+	component_set = ESC_BIO_ARCHAEO_LASER_3
+	projectile_gfx = "dark_matter_laser_m"
+	tags = { weapon_type_energy weapon_archaeotech m_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -472,12 +815,80 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_laser_3" }
 	component_set = ESC_ARCHAEO_LASER_3
 	projectile_gfx = "dark_matter_laser_l"
-	tags = { weapon_type_energy weapon_archaeotech }
+	tags = { weapon_type_energy weapon_archaeotech l_slot }
 	ai_tags = { weapon_role_anti_armor gunship }
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_ARCHAEO_LASER_3
+	size = large
+	icon = GFX_esc_bio_archaeo_laser_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 162 max = 368 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.9
+	power = -90
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t5_cost
+		ENERGY_UPKEEP = @l_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @l_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 16
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_laser_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_laser_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_laser_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_laser_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_archaeo_laser_3" }
+	component_set = ESC_BIO_ARCHAEO_LASER_3
+	projectile_gfx = "dark_matter_laser_l"
+	tags = { weapon_type_energy weapon_archaeotech l_slot }
+	ai_tags = { weapon_role_anti_armor gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -588,6 +999,79 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_ARCHAEO_MASS_DRIVER_2
+	size = small
+	icon = GFX_esc_bio_archaeo_mass_driver_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 16 max = 51 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.75
+	power = -16
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t4_cost
+		ENERGY_UPKEEP = @s_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @s_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 10
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_railgun_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_railgun_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_railgun_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_railgun_shield_damage
+	tracking = 0.5
+
+	prerequisites = { esc_tech_archaeo_mass_driver_2 }
+	component_set = ESC_BIO_ARCHAEO_MASS_DRIVER_2
+	projectile_gfx = "mass_driver_s"
+	tags = { weapon_type_kinetic weapon_archaeotech }
+	ai_tags = { weapon_role_anti_shield gunship }
+	upgrades_to = SMALL_ESC_BIO_ARCHAEO_MASS_DRIVER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
 #medium
 weapon_component_template = {
 	key = MEDIUM_ESC_ARCHAEO_MASS_DRIVER_2
@@ -665,6 +1149,79 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_ARCHAEO_MASS_DRIVER_2
+	size = medium
+	icon = GFX_esc_bio_archaeo_mass_driver_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 45 max = 136 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 0.75
+	power = -32
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t4_cost
+		ENERGY_UPKEEP = @m_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_railgun_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_railgun_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_railgun_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_railgun_shield_damage
+	tracking = 0.3
+
+	prerequisites = { esc_tech_archaeo_mass_driver_2 }
+	component_set = ESC_BIO_ARCHAEO_MASS_DRIVER_2
+	projectile_gfx = "mass_driver_m"
+	tags = { weapon_type_kinetic weapon_archaeotech }
+	ai_tags = { weapon_role_anti_shield gunship }
+	upgrades_to = MEDIUM_ESC_BIO_ARCHAEO_MASS_DRIVER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
 # large
 weapon_component_template = {
 	key = LARGE_ESC_ARCHAEO_MASS_DRIVER_2
@@ -709,6 +1266,79 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_ARCHAEO_MASS_DRIVER_2
+	size = large
+	icon = GFX_esc_bio_archaeo_mass_driver_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 104 max = 288 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.75
+	power = -64
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t4_cost
+		ENERGY_UPKEEP = @l_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @l_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_railgun_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_railgun_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_railgun_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_railgun_shield_damage
+	tracking = 0.05
+
+	prerequisites = { esc_tech_archaeo_mass_driver_2 }
+	component_set = ESC_BIO_ARCHAEO_MASS_DRIVER_2
+	projectile_gfx = "mass_driver_l"
+	tags = { weapon_type_kinetic weapon_archaeotech }
+	ai_tags = { weapon_role_anti_shield gunship }
+	upgrades_to = LARGE_ESC_BIO_ARCHAEO_MASS_DRIVER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -822,6 +1452,78 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_ARCHAEO_MASS_DRIVER_3
+	size = small
+	icon = GFX_esc_bio_archaeo_mass_driver_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 22 max = 70 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.75
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t5_cost
+		ENERGY_UPKEEP = @s_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_railgun_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_railgun_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_railgun_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_railgun_shield_damage
+	tracking = 0.5
+
+	prerequisites = { esc_tech_archaeo_mass_driver_3 }
+	component_set = ESC_BIO_ARCHAEO_MASS_DRIVER_3
+	projectile_gfx = "mass_driver_s"
+	tags = { weapon_type_kinetic weapon_archaeotech }
+	ai_tags = { weapon_role_anti_shield gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
 #medium
 weapon_component_template = {
 	key = MEDIUM_ESC_ARCHAEO_MASS_DRIVER_3
@@ -865,6 +1567,78 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_ARCHAEO_MASS_DRIVER_3
+	size = medium
+	icon = GFX_esc_bio_archaeo_mass_driver_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 63 max = 170 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 0.75
+	power = -40
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t5_cost
+		ENERGY_UPKEEP = @m_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_railgun_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_railgun_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_railgun_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_railgun_shield_damage
+	tracking = 0.3
+
+	prerequisites = { esc_tech_archaeo_mass_driver_3 }
+	component_set = ESC_BIO_ARCHAEO_MASS_DRIVER_3
+	projectile_gfx = "mass_driver_m"
+	tags = { weapon_type_kinetic weapon_archaeotech }
+	ai_tags = { weapon_role_anti_shield gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -974,6 +1748,78 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = LARGE_ESC_BIO_ARCHAEO_MASS_DRIVER_3
+	size = large
+	icon = GFX_esc_bio_archaeo_mass_driver_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 150 max = 368 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.75
+	power = -80
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @l_t5_cost
+		ENERGY_UPKEEP = @l_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @l_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 16
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_railgun_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_railgun_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_railgun_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_railgun_shield_damage
+	tracking = 0.05
+
+	prerequisites = { esc_tech_archaeo_mass_driver_3 }
+	component_set = ESC_BIO_ARCHAEO_MASS_DRIVER_3
+	projectile_gfx = "mass_driver_l"
+	tags = { weapon_type_kinetic weapon_archaeotech }
+	ai_tags = { weapon_role_anti_shield gunship }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
 ############################################################
 ##                Tech-Synthetic Artillery                ##
 ############################################################
@@ -1031,6 +1877,99 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_ARCHAEO_MASS_ACCELERATOR_2
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_mass_accelerator_2
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 1200 max = 3200 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.75
+	power = -225
+
+	firing_arc = 25.0
+	min_range = 45.0
+	#use_ship_kill_target = no
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 50
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_artillery_shield_damage
+	tracking = 0
+
+	prerequisites = { "esc_tech_archaeo_mass_accelerator_2" }
+	component_set = ESC_BIO_ARCHAEO_MASS_ACCELERATOR_2
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic weapon_archaeotech weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = ESC_BIO_ARCHAEO_MASS_ACCELERATOR_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1124,6 +2063,98 @@ weapon_component_template = {
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_ARCHAEO_MASS_ACCELERATOR_3
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_mass_accelerator_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 1500 max = 3700 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.75
+	power = -250
+
+	firing_arc = 25.0
+	min_range = 45.0
+	#use_ship_kill_target = no
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_xl_t8_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t8_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 55
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { esc_tech_archaeo_mass_accelerator_3 }
+	component_set = ESC_BIO_ARCHAEO_MASS_ACCELERATOR_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic weapon_archaeotech weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1207,7 +2238,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_missiles_2" }
 	component_set = ESC_ARCHAEO_MISSILES_2
 	projectile_gfx = "small_missile"
-	tags = { weapon_type_explosive weapon_archaeotech}
+	tags = { weapon_type_explosive weapon_archaeotech }
 	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 	ai_tag_weight = 0
 	upgrades_to = ESC_ARCHAEO_MISSILES_3
@@ -1215,6 +2246,162 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_ARCHAEO_MISSILES_2
+	size = medium
+	icon = GFX_esc_bio_archaeo_missiles_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 6 max = 8 }
+	windup = { min = 1 max = 4 }
+	total_fire_time = 6
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_3
+	missile_evasion = 0.25
+	missile_health = 8
+	missile_armor = 7
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	power = -15
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t4_cost
+		ENERGY_UPKEEP = @m_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_missile_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_missile_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_missile_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_missile_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_archaeo_missiles_2" }
+	component_set = ESC_BIO_ARCHAEO_MISSILES_2
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive weapon_archaeotech }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	upgrades_to = MEDIUM_ESC_BIO_ARCHAEO_MISSILES_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_stinger_components"
+		EXTRA_CONDITION_VALUE = yes
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = TORPEDO_ESC_BIO_ARCHAEO_MISSILES_2
+	size = torpedo
+	icon = GFX_esc_bio_archaeo_missiles_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 6 max = 8 }
+	windup = { min = 1 max = 4 }
+	total_fire_time = 6
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_3
+	missile_evasion = 0.25
+	missile_health = 8
+	missile_armor = 7
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	power = -15
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t4_cost
+		ENERGY_UPKEEP = @m_t4_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 12
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_missile_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_missile_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_missile_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_missile_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_archaeo_missiles_2" }
+	component_set = ESC_BIO_ARCHAEO_MISSILES_2
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive weapon_archaeotech }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+	upgrades_to = TORPEDO_ESC_BIO_ARCHAEO_MISSILES_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_harbinger_components"
+		EXTRA_CONDITION_VALUE = yes
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -1290,13 +2477,167 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_archaeo_missiles_3" }
 	component_set = ESC_ARCHAEO_MISSILES_3
 	projectile_gfx = "small_missile"
-	tags = { weapon_type_explosive weapon_archaeotech}
+	tags = { weapon_type_explosive weapon_archaeotech }
 	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
 	ai_tag_weight = 0
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_ARCHAEO_MISSILES_3
+	size = medium
+	icon = GFX_esc_bio_archaeo_missiles_3
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 8 max = 11 }
+	windup = { min = 1 max = 4 }
+	total_fire_time = 6
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_3
+	missile_evasion = 0.3
+	missile_health = 10
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t5_cost
+		ENERGY_UPKEEP = @m_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_missile_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_missile_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_missile_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_missile_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_archaeo_missiles_3" }
+	component_set = ESC_BIO_ARCHAEO_MISSILES_3
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive weapon_archaeotech }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_stinger_components"
+		EXTRA_CONDITION_VALUE = yes
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = TORPEDO_ESC_BIO_ARCHAEO_MISSILES_3
+	size = torpedo
+	icon = GFX_esc_bio_archaeo_missiles_3
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 8 max = 11 }
+	windup = { min = 1 max = 4 }
+	total_fire_time = 6
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_3
+	missile_evasion = 0.3
+	missile_health = 10
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	power = -20
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @m_t5_cost
+		ENERGY_UPKEEP = @m_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_missile_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_missile_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_missile_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_missile_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_archaeo_missiles_3" }
+	component_set = ESC_BIO_ARCHAEO_MISSILES_3
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive weapon_archaeotech }
+	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tag_weight = 0
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_harbinger_components"
+		EXTRA_CONDITION_VALUE = yes
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {
@@ -1404,6 +2745,77 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_ARCHAEO_POINTDEFENSE_2
+	size = point_defence
+	icon = GFX_esc_bio_archaeo_pd_2
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 6 max = 12 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_1
+	accuracy = 0.75
+	power = -12
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t5_cost
+		ENERGY_UPKEEP = @s_t5_upkeep_energy
+		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_pointdef_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_pointdef_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_pointdef_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_pointdef_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_archaeo_point_defense_2" }
+	component_set = ESC_BIO_ARCHAEO_POINTDEFENSE_2
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense screen }
+	upgrades_to = ESC_BIO_ARCHAEO_POINTDEFENSE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
 ############################################################
 ##             Advanced Tech-Synthetic CIWS               ##
 ############################################################
@@ -1450,6 +2862,76 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_ARCHAEO_POINTDEFENSE_3
+	size = point_defence
+	icon = GFX_esc_bio_archaeo_pd_3
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 7 max = 15 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_1
+	accuracy = 0.75
+	power = -15
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @s_t6_cost
+		ENERGY_UPKEEP = @s_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @s_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 16
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_pointdef_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_pointdef_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_pointdef_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_pointdef_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_archaeo_point_defense_3" }
+	component_set = ESC_BIO_ARCHAEO_POINTDEFENSE_3
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense screen }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	point_defence_targets = { "missile" "strike_craft" }
@@ -1573,6 +3055,91 @@ strike_craft_component_template = {
 	}
 }
 
+strike_craft_component_template = {
+	key = ESC_BIO_ARCHAEO_STRIKECRAFT_2
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_archaeo_strikecraft_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "strike_craft_laser_3"
+	power = -75
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 14
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 8 max = 23 }
+	cooldown = 2.3
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 15
+	armor = 0
+	shield = 25
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_WEAPON_archaeo_crafts_hull_damage
+	armor_damage = @ESC_WEAPON_archaeo_crafts_armor_damage
+	armor_penetration = @ESC_WEAPON_archaeo_crafts_armor_penetration
+	shield_damage = @ESC_WEAPON_archaeo_crafts_shield_damage
+	shield_penetration = @ESC_WEAPON_archaeo_crafts_shield_penetration
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_BIO_ARCHAEO_STRIKECRAFT_2
+	prerequisites = { "esc_tech_archaeo_strikecraft_2" }
+	tags = { weapon_type_strike_craft weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+	upgrades_to = ESC_BIO_ARCHAEO_STRIKECRAFT_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
 ############################################################
 ##         Advanced Tech-Synthetic Drone Crafts           ##
 ############################################################
@@ -1664,6 +3231,90 @@ strike_craft_component_template = {
 	}
 }
 
+strike_craft_component_template = {
+	key = ESC_BIO_ARCHAEO_STRIKECRAFT_3
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_archaeo_strikecraft_3
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "strike_craft_laser_3"
+	power = -80
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_bio_component_cost_sr
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
+		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 18
+	}
+
+	count = @ESC_STRIKECRAFT_count
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 10 max = 30 }
+	cooldown = 2.3
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 20
+	armor = 0
+	shield = 30
+
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+
+	hull_damage = @ESC_WEAPON_archaeo_crafts_hull_damage
+	armor_damage = @ESC_WEAPON_archaeo_crafts_armor_damage
+	armor_penetration = @ESC_WEAPON_archaeo_crafts_armor_penetration
+	shield_damage = @ESC_WEAPON_archaeo_crafts_shield_damage
+	shield_penetration = @ESC_WEAPON_archaeo_crafts_shield_penetration
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_BIO_ARCHAEO_STRIKECRAFT_3
+	prerequisites = { "esc_tech_archaeo_strikecraft_3" }
+	tags = { weapon_type_strike_craft weapon_archaeotech }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+		modifier = {
+			factor = 0.0
+			owner = {
+				has_monthly_income = {
+					resource = minor_artifacts
+					value < 3
+				}
+			}
+		}
+		modifier = {
+			factor = 1.3
+			owner = {
+				resource_stockpile_compare = {
+					resource = minor_artifacts
+					value > 250
+				}
+			}
+		}
+	}
+}
+
 ############################################################
 ##                Tech-Synthetic Ruinator                 ##
 ############################################################
@@ -1684,16 +3335,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -525
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			minor_artifacts = 50
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t6_upkeep_alloys
+		ENERGY_UPKEEP = ESC_WEAPON_t_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 50
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_titanic_hull_damage
@@ -1713,14 +3365,12 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_ARCHAEO_TITANLASER_3
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1766,16 +3416,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -525
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			minor_artifacts = 50
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t6_upkeep_alloys
+		ENERGY_UPKEEP = ESC_WEAPON_t_t6_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 50
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_titanic_hull_damage
@@ -1796,14 +3447,12 @@ weapon_component_template = {
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	upgrades_to = ESC_ARCHAEO_TITANLASER_3_JUGGERNAUT
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1853,16 +3502,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -550
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			minor_artifacts = 55
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
+		ENERGY_UPKEEP = ESC_WEAPON_t_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 55
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_titanic_hull_damage
@@ -1881,14 +3531,12 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
@@ -1934,16 +3582,17 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -550
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			minor_artifacts = 55
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = ship_components_general/esc_inlines_shared_component_cost_sr
+		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
+		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = minerals
+		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
+		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
+		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
+		ENERGY_UPKEEP = ESC_WEAPON_t_t7_upkeep_energy
+		STRATEGIC_RESOURCE_TYPE = minor_artifacts
+		STRATEGIC_RESOURCE_COST = 55
+		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_titanic_hull_damage
@@ -1963,14 +3612,12 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	size_restriction = { juggernaut @MISC_WarJuggernaut }
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
 	target_weights = {
 		titan = 3
 		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
