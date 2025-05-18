@@ -268,9 +268,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t6_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t6_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -525,9 +525,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t7_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t7_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 18
 	}
@@ -796,9 +796,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @x_t4_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @x_t4_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -1069,9 +1069,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @x_t5_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @x_t5_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -2043,9 +2043,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @xl_t4_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @xl_t4_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -2328,9 +2328,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @xl_t5_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @xl_t5_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 18
 	}
@@ -2551,9 +2551,9 @@ utility_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @xl_t6_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @xl_t6_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -2740,9 +2740,9 @@ utility_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @xl_t7_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @xl_t7_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 18
 	}
@@ -3013,9 +3013,9 @@ strike_craft_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t6_cost_alloys
+		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t6_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -3618,9 +3618,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @x_t5_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @x_t5_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 16
 	}
@@ -3883,9 +3883,9 @@ weapon_component_template = {
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @x_t6_cost
+		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
 		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @x_t6_upkeep_alloys
+		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
 		STRATEGIC_RESOURCE_TYPE = minor_artifacts
 		STRATEGIC_RESOURCE_COST = 18
 	}
