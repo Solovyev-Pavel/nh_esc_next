@@ -473,7 +473,7 @@ ESC_TRIGGER_may_research_crystalline_weapons = {
 # checks whether a machine empire can do special project to research psionics
 ESC_TRIGGER_can_do_machine_psionics_special_project = {
     is_machine_empire = yes
-    any_owned_pop = {
+    any_owned_species = {
         is_being_purged = no
         is_enslaved = no
         OR = {

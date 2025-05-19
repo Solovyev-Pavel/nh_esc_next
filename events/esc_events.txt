@@ -141,7 +141,7 @@ country_event = {
         every_owned_planet = {
             limit = {
                 is_colony = yes
-                num_pops > 0
+				sapient_pop_amount = yes
                 OR = {
                     has_building = esc_building_magmaminer_1
                     has_building = esc_building_magmaminer_2
