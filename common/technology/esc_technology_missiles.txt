@@ -31,6 +31,7 @@ esc_tech_missiles_6 = {
 	gateway = ESC_ADVANCED_MISSILES
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard missiles
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
 	}
 
@@ -89,6 +90,7 @@ esc_tech_missiles_7 = {
 	is_rare	= yes
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard missiles
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
 	}
 
@@ -167,7 +169,7 @@ esc_tech_plasma_missiles_1 = {
 	cost = @tier5cost2
 	weight = @tier5weight2
 	ai_update_type = military
-	prerequisites = { "tech_plasma_3" "esc_tech_new_age_warfare" "tech_missiles_5" }
+	prerequisites = { "tech_plasma_3" "esc_tech_new_age_warfare" }
 	gateway = ESC_PLASMA_MISSILES
 
 	potential = {
@@ -175,6 +177,13 @@ esc_tech_plasma_missiles_1 = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			NAND = {
+				has_technology = tech_missiles_5
+				country_uses_bio_ships = no
+			}
+		}
 		modifier = {
 			factor = 0.8
 			has_ethic = ethic_fanatic_pacifist
@@ -195,6 +204,13 @@ esc_tech_plasma_missiles_1 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.0
+			NAND = {
+				has_technology = tech_missiles_5
+				country_uses_bio_ships = no
+			}
+		}
 		modifier = {
 			factor = 0.8
 			has_ethic = ethic_fanatic_pacifist
@@ -369,6 +385,7 @@ esc_tech_torpedoes_4 = {
 	gateway = ESC_ADVANCED_TORPEDOES
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard torpedoes
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
 	}
 
@@ -427,6 +444,7 @@ esc_tech_torpedoes_5 = {
 	is_rare = yes
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard torpedoes
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
 	}
 
@@ -511,6 +529,7 @@ esc_tech_corrosive_warhead_torpedo = {
 	is_reverse_engineerable = no
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard torpedoes
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
 	}
 
@@ -733,6 +752,7 @@ esc_tech_xmissile_1 = {
 	gateway = ESC_X_MISISLES
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard missiles
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden }
 	}
 
@@ -792,6 +812,7 @@ esc_tech_xmissile_2 = {
 	gateway = ESC_X_MISISLES
 
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard missiles
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden }
 	}
 
@@ -876,6 +897,7 @@ esc_tech_xmissile_titanic = {
 
 	### Apocalypse DLC version
 	potential = {
+		country_uses_bio_ships = no # vanilla doesn't give bioship countries standard missiles
 		ESC_TRIGGER_may_research_oversized_weapons = yes
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_xmissiles_forbidden }
 	}

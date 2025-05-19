@@ -303,7 +303,6 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-
 # light of destruction (titan)
 component_set = {
 	key = ESC_PARTICLE_LANCE_TITANIC
@@ -649,11 +648,25 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_MISSILE_CREATURE_6
+	icon = GFX_esc_bio_missile_6
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # wraith missiles
 component_set = {
 	key = ESC_MISSILE_7
 	icon = GFX_esc_missile_7
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MISSILE_CREATURE_7
+	icon = GFX_esc_bio_missile_7
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # plasma missiles
@@ -663,11 +676,25 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_PLASMA_MISSILE_CREATURE_1
+	icon = GFX_esc_plasma_missile_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # improved plasma missiles
 component_set = {
 	key = ESC_PLASMA_MISSILE_2
 	icon = GFX_esc_plasma_missile_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PLASMA_MISSILE_CREATURE_2
+	icon = GFX_esc_plasma_missile_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # incinerator missiles
@@ -677,11 +704,25 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_PLASMA_MISSILE_CREATURE_3
+	icon = GFX_esc_plasma_missile_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # desolator torpedoes
 component_set = {
 	key = ESC_TORPEDO_4
 	icon = GFX_esc_torpedo_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_TORPEDO_CREATURE_4
+	icon = GFX_esc_bio_torpedo_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # eradicator torpedoes
@@ -691,11 +732,25 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_TORPEDO_CREATURE_5
+	icon = GFX_esc_bio_torpedo_5
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # corrosive warhead torpedoes
 component_set = {
 	key = ESC_CORROSIVE_WARHEAD
 	icon = GFX_esc_corrosive_warhead_torpedo
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CORROSIVE_WARHEAD_CREATURE
+	icon = GFX_esc_bio_corrosive_warhead_torpedo
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # typhoon missiles
@@ -705,11 +760,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_SWARMER_MISSILES_3
+	icon = GFX_esc_bio_swarmer_missiles_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_SWARMER_MISSILES_CREATURE_3
+	icon = GFX_esc_swarmer_missiles_creature_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # hurricane missiles
 component_set = {
 	key = ESC_SWARMER_MISSILES_4
 	icon = GFX_esc_swarmer_missiles_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_SWARMER_MISSILES_4
+	icon = GFX_esc_bio_swarmer_missiles_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_SWARMER_MISSILES_CREATURE_4
+	icon = GFX_esc_swarmer_missiles_creature_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # exotic matter warhead
