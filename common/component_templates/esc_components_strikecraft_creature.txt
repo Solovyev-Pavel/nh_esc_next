@@ -7,6 +7,7 @@
 #      - Perfect Space Organism			S/M/L/X
 #   - Cybernetically-Augmented Amoeba	S/M/L/X
 #      - Bionic Amoeba					S/M/L/X
+# - Ravaging Swarmers					S/M/L/X
 
 ############################################################
 ##                     Highbred Amoeba                    ##
@@ -1392,6 +1393,294 @@ strike_craft_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##                     Ravaging Swarmers                  ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	size = small
+	entity = "swarm_01_fighter_entity"
+	icon = GFX_esc_strikecrafts_scourge_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t8_cost_alloys
+			volatile_motes = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 120
+	armor = 30
+	shield = 0
+
+	tracking = 0.70
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_penetration = 0.75
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	prerequisites = { "esc_tech_swarm_strike_craft_2" }
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna s_slot }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	# only normal empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	size = medium
+	entity = "swarm_01_fighter_entity"
+	icon = GFX_esc_strikecrafts_scourge_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t8_cost_alloys
+			volatile_motes = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 120
+	armor = 30
+	shield = 0
+
+	tracking = 0.70
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_penetration = 0.75
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	prerequisites = { "esc_tech_swarm_strike_craft_2" }
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna m_slot }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	# only normal empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	size = large
+	entity = "swarm_01_fighter_entity"
+	icon = GFX_esc_strikecrafts_scourge_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+			volatile_motes = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 120
+	armor = 30
+	shield = 0
+
+	tracking = 0.70
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_penetration = 0.75
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	prerequisites = { "esc_tech_swarm_strike_craft_2" }
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna l_slot }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	# only normal empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	size = extra_large
+	entity = "swarm_01_fighter_entity"
+	icon = GFX_esc_strikecrafts_scourge_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_xl_t8_cost_alloys
+			volatile_motes = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 15 max = 25 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	health = 120
+	armor = 30
+	shield = 0
+
+	tracking = 0.70
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_penetration = 0.75
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
+	prerequisites = { "esc_tech_swarm_strike_craft_2" }
+	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	# only normal empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 		modifier = {
 			factor = 0.0
