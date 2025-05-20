@@ -330,3 +330,70 @@ esc_swarmer_missiles_creature_4 = {
 		extra_large = XL_ESC_SWARMER_MISSILES_CREATURE_4
 	}
 }
+
+############################################################
+##           ESC : Strikecrafts : Space Fauna             ##
+############################################################
+
+# Highbred Amoebas
+esc_amoeba_creature_2 = {
+	type = offensive
+	icon = GFX_esc_strikecrafts_amoeba_2
+	ship_components = {
+		small = SMALL_ESC_AMOEBA_CREATURE_2
+		medium = MEDIUM_ESC_AMOEBA_CREATURE_2
+		large = LARGE_ESC_AMOEBA_CREATURE_2
+		extra_large = XL_ESC_AMOEBA_CREATURE_2
+	}
+	upgrades_to = "esc_amoeba_bio_creature_3"
+}
+
+# Genetically-Engineered Amoebas
+esc_amoeba_bio_creature_3 = {
+	type = offensive
+	icon = GFX_esc_strikecrafts_amoeba_3_bio
+	ship_components = {
+		small = SMALL_ESC_AMOEBA_BIO_CREATURE_3
+		medium = MEDIUM_ESC_AMOEBA_BIO_CREATURE_3
+		large = LARGE_ESC_AMOEBA_BIO_CREATURE_3
+		extra_large = XL_ESC_AMOEBA_BIO_CREATURE_3
+	}
+	upgrades_to = "esc_amoeba_bio_creature_4"
+}
+
+# Perfect Space Organisms
+esc_amoeba_bio_creature_4 = {
+	type = offensive
+	icon = GFX_esc_strikecrafts_amoeba_4_bio
+	ship_components = {
+		small = SMALL_ESC_AMOEBA_BIO_CREATURE_4
+		medium = MEDIUM_ESC_AMOEBA_BIO_CREATURE_4
+		large = LARGE_ESC_AMOEBA_BIO_CREATURE_4
+		extra_large = XL_ESC_AMOEBA_BIO_CREATURE_4
+	}
+}
+
+# Cybernetically-Augmented Amoebas
+esc_amoeba_cyber_creature_3 = {
+	type = offensive
+	icon = GFX_esc_strikecrafts_amoeba_3_cyber
+	ship_components = {
+		small = SMALL_ESC_AMOEBA_CYBER_CREATURE_3
+		medium = MEDIUM_ESC_AMOEBA_CYBER_CREATURE_3
+		large = LARGE_ESC_AMOEBA_CYBER_CREATURE_3
+		extra_large = XL_ESC_AMOEBA_CYBER_CREATURE_3
+	}
+	upgrades_to = "esc_amoeba_cyber_creature_4"
+}
+
+# Bionic Amoebas
+esc_amoeba_cyber_creature_4 = {
+	type = offensive
+	icon = GFX_esc_strikecrafts_amoeba_4_cyber
+	ship_components = {
+		small = SMALL_ESC_AMOEBA_CYBER_CREATURE_4
+		medium = MEDIUM_ESC_AMOEBA_CYBER_CREATURE_4
+		large = LARGE_ESC_AMOEBA_CYBER_CREATURE_4
+		extra_large = XL_ESC_AMOEBA_CYBER_CREATURE_4
+	}
+}

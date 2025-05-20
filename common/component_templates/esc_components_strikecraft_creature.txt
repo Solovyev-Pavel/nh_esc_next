@@ -1,0 +1,1401 @@
+############################################################
+##            ESC : Strikecrafts : space fauna            ##
+############################################################
+
+# - Highbred Amoeba						S/M/L/X
+#   - Genetically-Engineered Amoeba		S/M/L/X
+#      - Perfect Space Organism			S/M/L/X
+#   - Cybernetically-Augmented Amoeba	S/M/L/X
+#      - Bionic Amoeba					S/M/L/X
+
+############################################################
+##                     Highbred Amoeba                    ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_AMOEBA_CREATURE_2
+	size = small
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t6_cost_alloys
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 35 max = 55 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.7
+	health = 50
+	armor = 20
+	shield = 0
+
+	tracking = 0.5
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.6
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CREATURE_2
+	prerequisites = { "esc_tech_amoeba_2" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = SMALL_ESC_AMOEBA_BIO_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_AMOEBA_CREATURE_2
+	size = medium
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t6_cost_alloys
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 35 max = 55 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.7
+	health = 50
+	armor = 20
+	shield = 0
+
+	tracking = 0.5
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.6
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CREATURE_2
+	prerequisites = { "esc_tech_amoeba_2" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = MEDIUM_ESC_AMOEBA_BIO_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_AMOEBA_CREATURE_2
+	size = large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t6_cost_alloys
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 35 max = 55 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.7
+	health = 50
+	armor = 20
+	shield = 0
+
+	tracking = 0.5
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.6
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CREATURE_2
+	prerequisites = { "esc_tech_amoeba_2" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_AMOEBA_CREATURE_2
+	size = extra_large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_2
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 35 max = 55 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.7
+	health = 50
+	armor = 20
+	shield = 0
+
+	tracking = 0.5
+	speed = @ESC_STRIKECRAFT_speed_4
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.6
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CREATURE_2
+	prerequisites = { "esc_tech_amoeba_2" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = XL_ESC_AMOEBA_BIO_CREATURE_3
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##              Genetically-Engineered Amoeba             ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_AMOEBA_BIO_CREATURE_3
+	size = small
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 50 max = 70 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 75
+	armor = 20
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = SMALL_ESC_AMOEBA_BIO_CREATURE_4
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_AMOEBA_BIO_CREATURE_3
+	size = medium
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 50 max = 70 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 75
+	armor = 20
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_4
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_AMOEBA_BIO_CREATURE_3
+	size = large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 50 max = 70 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 75
+	armor = 20
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_4
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_AMOEBA_BIO_CREATURE_3
+	size = extra_large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_xl_t7_cost_alloys
+			exotic_gases = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 50 max = 70 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 75
+	armor = 20
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_4
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##                  Perfect Space Organism                ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_AMOEBA_BIO_CREATURE_4
+	size = small
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t8_cost_alloys
+			exotic_gases = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 60 max = 80 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 100
+	armor = 30
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_AMOEBA_BIO_CREATURE_4
+	size = medium
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t8_cost_alloys
+			exotic_gases = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 60 max = 80 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 100
+	armor = 30
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_AMOEBA_BIO_CREATURE_4
+	size = large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+			exotic_gases = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 60 max = 80 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 100
+	armor = 30
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_AMOEBA_BIO_CREATURE_4
+	size = extra_large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_bio
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_xl_t8_cost_alloys
+			exotic_gases = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 60 max = 80 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.8
+	health = 100
+	armor = 30
+	shield = 0
+
+	tracking = 0.6
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.7
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_bomber
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_BIO_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4b" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##             Cyberntically-Augmented Amoeba             ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_AMOEBA_CYBER_CREATURE_3
+	size = small
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 45 max = 65 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 50
+	armor = 20
+	shield = 20
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = SMALL_ESC_AMOEBA_CYBER_CREATURE_4
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_AMOEBA_CYBER_CREATURE_3
+	size = medium
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 45 max = 65 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 50
+	armor = 20
+	shield = 20
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = MEDIUM_ESC_AMOEBA_CYBER_CREATURE_4
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_AMOEBA_CYBER_CREATURE_3
+	size = large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 45 max = 65 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 50
+	armor = 20
+	shield = 20
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = LARGE_ESC_AMOEBA_CYBER_CREATURE_4
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_AMOEBA_CYBER_CREATURE_3
+	size = extra_large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_3_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_xl_t7_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 45 max = 65 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 50
+	armor = 20
+	shield = 20
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_3
+	prerequisites = { "esc_tech_amoeba_3c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+	upgrades_to = XL_ESC_AMOEBA_CYBER_CREATURE_4
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+############################################################
+##                       Bionic Amoeba                    ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_AMOEBA_CYBER_CREATURE_4
+	size = small
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_s_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_s_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 55 max = 75 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 75
+	armor = 20
+	shield = 25
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_AMOEBA_CYBER_CREATURE_4
+	size = medium
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_m_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_m_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 55 max = 75 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 75
+	armor = 20
+	shield = 25
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_AMOEBA_CYBER_CREATURE_4
+	size = large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_l_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_l_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 55 max = 75 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 75
+	armor = 20
+	shield = 25
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_AMOEBA_CYBER_CREATURE_4
+	size = extra_large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_strikecrafts_amoeba_4_cyber
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "small_space_amoeba_weapon"
+
+	resources = {
+		category = ship_components
+		cost = {
+			food = @ESC_WEAPON_xl_t8_cost_alloys
+			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
+		}
+		upkeep = {
+			food = 1
+		}
+	}
+
+	count = @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 55 max = 75 }
+	cooldown = 5
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = 0.9
+	health = 75
+	armor = 20
+	shield = 25
+
+	tracking = 0.75
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_creature
+	acceleration = @ESC_STRIKECRAFT_acceleration_creature
+	evasion = 0.75
+
+	hull_damage = @ESC_STRIKECRAFT_hull_damage_fighter
+	armor_damage = @ESC_STRIKECRAFT_armor_damage_bomber
+    shield_penetration = @ESC_STRIKECRAFT_shield_penetration_bomber
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_AMOEBA_CYBER_CREATURE_4
+	prerequisites = { "esc_tech_amoeba_4c" }
+	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
+	ai_tags = { carrier weapon_role_anti_shield carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = food }
+		}
+	}
+}
