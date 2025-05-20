@@ -8,11 +8,13 @@ utility_component_template = {
 	upgrades_to = CORVETTE_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = corvette
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -24,11 +26,13 @@ utility_component_template = {
 	upgrades_to = DESTROYER_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = destroyer
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -40,11 +44,13 @@ utility_component_template = {
 	upgrades_to = CRUISER_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = cruiser
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -56,11 +62,13 @@ utility_component_template = {
 	upgrades_to = BATTLESHIP_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = battleship
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -72,11 +80,13 @@ utility_component_template = {
 	upgrades_to = TITAN_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = titan
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -88,12 +98,19 @@ utility_component_template = {
 	upgrades_to = COLOSSUS_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_juggernaut
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
+		SHIP_SIZE_GROUP = juggernaut
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
+	}
+
+	inline_script = {
+		script = reactors/esc_inlines_juggernaut_aura
 	}
 }
 
@@ -103,11 +120,13 @@ utility_component_template = {
 	upgrades_to = PLATFORM_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = platform
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -119,11 +138,13 @@ utility_component_template = {
 	upgrades_to = PLATFORM2_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = platform2
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -135,11 +156,13 @@ utility_component_template = {
 	upgrades_to = PLATFORM3_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = platform3
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -151,11 +174,13 @@ utility_component_template = {
 	upgrades_to = ION_CANNON_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
 		SHIP_SIZE_GROUP = ion_cannon
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -167,10 +192,13 @@ utility_component_template = {
 	upgrades_to = STARBASE_ESC_BIO_REACTOR_7
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_starbase
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_6
 		REACTOR_TIER = 6
 		PREREQUISITES = "esc_tech_reactor_6"
+		SHIP_SIZE_GROUP = starbase
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6000
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -186,11 +214,13 @@ utility_component_template = {
 	upgrades_to = CORVETTE_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = corvette
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -202,11 +232,13 @@ utility_component_template = {
 	upgrades_to = DESTROYER_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = destroyer
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -218,11 +250,13 @@ utility_component_template = {
 	upgrades_to = CRUISER_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = cruiser
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -234,11 +268,13 @@ utility_component_template = {
 	upgrades_to = BATTLESHIP_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = battleship
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -250,11 +286,13 @@ utility_component_template = {
 	upgrades_to = TITAN_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = titan
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -266,12 +304,19 @@ utility_component_template = {
 	upgrades_to = COLOSSUS_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_juggernaut
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
+		SHIP_SIZE_GROUP = juggernaut
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
+	}
+
+	inline_script = {
+		script = reactors/esc_inlines_juggernaut_aura
 	}
 }
 
@@ -281,11 +326,13 @@ utility_component_template = {
 	upgrades_to = PLATFORM_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = platform
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -297,11 +344,13 @@ utility_component_template = {
 	upgrades_to = PLATFORM2_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = platform2
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -313,11 +362,13 @@ utility_component_template = {
 	upgrades_to = PLATFORM3_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = platform3
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -329,11 +380,13 @@ utility_component_template = {
 	upgrades_to = ION_CANNON_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
 		SHIP_SIZE_GROUP = ion_cannon
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 7
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -345,10 +398,13 @@ utility_component_template = {
 	upgrades_to = STARBASE_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_starbase
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_7
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_reactor_7"
+		SHIP_SIZE_GROUP = starbase
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6000
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -363,11 +419,13 @@ utility_component_template = {
 	key = CORVETTE_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = corvette
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -378,11 +436,13 @@ utility_component_template = {
 	key = DESTROYER_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = destroyer
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -393,11 +453,13 @@ utility_component_template = {
 	key = CRUISER_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = cruiser
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -408,11 +470,13 @@ utility_component_template = {
 	key = BATTLESHIP_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = battleship
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -423,11 +487,13 @@ utility_component_template = {
 	key = TITAN_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = titan
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -438,12 +504,19 @@ utility_component_template = {
 	key = COLOSSUS_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_juggernaut
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
+		SHIP_SIZE_GROUP = juggernaut
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
+	}
+
+	inline_script = {
+		script = reactors/esc_inlines_juggernaut_aura
 	}
 }
 
@@ -452,11 +525,13 @@ utility_component_template = {
 	key = PLATFORM_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = platform
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -467,11 +542,13 @@ utility_component_template = {
 	key = PLATFORM2_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = platform2
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -482,11 +559,13 @@ utility_component_template = {
 	key = PLATFORM3_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = platform3
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -497,11 +576,13 @@ utility_component_template = {
 	key = ION_CANNON_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
 		SHIP_SIZE_GROUP = ion_cannon
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 8
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -512,10 +593,13 @@ utility_component_template = {
 	key = STARBASE_ESC_BIO_REACTOR_8
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_starbase
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_bio_reactor_8
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_8"
+		SHIP_SIZE_GROUP = starbase
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 6000
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -531,13 +615,14 @@ utility_component_template = {
 	upgrades_to = CORVETTE_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = corvette
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 1.5
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -553,13 +638,14 @@ utility_component_template = {
 	upgrades_to = DESTROYER_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = destroyer
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 3.0
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -575,13 +661,14 @@ utility_component_template = {
 	upgrades_to = CRUISER_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = cruiser
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 6.0
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -597,13 +684,14 @@ utility_component_template = {
 	upgrades_to = BATTLESHIP_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = battleship
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 12
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -619,13 +707,14 @@ utility_component_template = {
 	upgrades_to = TITAN_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = titan
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 24
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -641,18 +730,24 @@ utility_component_template = {
 	upgrades_to = COLOSSUS_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_juggernaut_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		SHIP_SIZE_GROUP = juggernaut
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 24
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.05
+	}
+
+	inline_script = {
+		script = reactors/esc_inlines_juggernaut_aura
 	}
 }
 
@@ -662,13 +757,14 @@ utility_component_template = {
 	upgrades_to = PLATFORM_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = platform
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 3
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -684,13 +780,14 @@ utility_component_template = {
 	upgrades_to = PLATFORM2_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = platform2
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 6
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -706,13 +803,14 @@ utility_component_template = {
 	upgrades_to = PLATFORM3_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = platform3
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 12
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -728,13 +826,14 @@ utility_component_template = {
 	upgrades_to = ION_CANNON_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
 		SHIP_SIZE_GROUP = ion_cannon
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 6
 		COMPONENT_WEIGHT = 10
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -750,10 +849,13 @@ utility_component_template = {
 	upgrades_to = STARBASE_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_starbase
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_2
 		REACTOR_TIER = 7
 		PREREQUISITES = "esc_tech_dark_matter_power_core_2"
+		SHIP_SIZE_GROUP = starbase
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 10000
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -772,13 +874,14 @@ utility_component_template = {
 	key = CORVETTE_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = corvette
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 1.5
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -793,13 +896,14 @@ utility_component_template = {
 	key = DESTROYER_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = destroyer
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 3.0
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -814,13 +918,14 @@ utility_component_template = {
 	key = CRUISER_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = cruiser
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 6.0
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -835,13 +940,14 @@ utility_component_template = {
 	key = BATTLESHIP_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = battleship
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 12
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -856,13 +962,14 @@ utility_component_template = {
 	key = TITAN_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = titan
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 24
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -877,18 +984,24 @@ utility_component_template = {
 	key = COLOSSUS_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_juggernaut_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		SHIP_SIZE_GROUP = juggernaut
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 24
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
 
 	ship_modifier = {
 		ships_upkeep_mult = -0.10
+	}
+
+	inline_script = {
+		script = reactors/esc_inlines_juggernaut_aura
 	}
 }
 
@@ -897,13 +1010,14 @@ utility_component_template = {
 	key = PLATFORM_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = platform
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 3
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -918,13 +1032,14 @@ utility_component_template = {
 	key = PLATFORM2_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = platform2
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 6
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -939,13 +1054,14 @@ utility_component_template = {
 	key = PLATFORM3_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = platform3
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 12
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -960,13 +1076,14 @@ utility_component_template = {
 	key = ION_CANNON_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
 		SHIP_SIZE_GROUP = ion_cannon
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 6
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -981,10 +1098,13 @@ utility_component_template = {
 	key = STARBASE_ESC_DARK_MATTER_BIO_CORE_3
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_starbase
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_dark_matter_bio_reactor_3
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_dark_matter_power_core_3"
+		SHIP_SIZE_GROUP = starbase
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 12000
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1003,13 +1123,14 @@ utility_component_template = {
 	key = CORVETTE_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = corvette
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 1.5
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1024,13 +1145,14 @@ utility_component_template = {
 	key = DESTROYER_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = destroyer
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 3.0
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1045,13 +1167,14 @@ utility_component_template = {
 	key = CRUISER_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = cruiser
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 6.0
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1066,13 +1189,14 @@ utility_component_template = {
 	key = BATTLESHIP_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = battleship
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 12
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1087,13 +1211,14 @@ utility_component_template = {
 	key = TITAN_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = titan
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 24
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1108,18 +1233,24 @@ utility_component_template = {
 	key = COLOSSUS_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_juggernaut_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
+		SHIP_SIZE_GROUP = juggernaut
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 24
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
 
 	ship_modifier = {
 		weapon_type_psionic_weapon_damage_mult = 0.25
+	}
+
+	inline_script = {
+		script = reactors/esc_inlines_juggernaut_aura
 	}
 }
 
@@ -1128,13 +1259,14 @@ utility_component_template = {
 	key = PLATFORM_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = platform
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 3
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1149,13 +1281,14 @@ utility_component_template = {
 	key = PLATFORM2_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = platform2
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 6
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1170,13 +1303,14 @@ utility_component_template = {
 	key = PLATFORM3_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = platform3
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 12
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1191,13 +1325,14 @@ utility_component_template = {
 	key = ION_CANNON_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_sr
+		script = reactors/esc_inlines_reactors_general_sr
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
 		SHIP_SIZE_GROUP = ion_cannon
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 6
 		COMPONENT_WEIGHT = 12
 		WEIGHT_MULT_ACOT = 0.75
 	}
@@ -1212,10 +1347,13 @@ utility_component_template = {
 	key = STARBASE_ESC_REACTOR_BIO_PSIONIC
 
 	inline_script = {
-		script = reactors/esc_inlines_bio_reactors_starbase
+		script = reactors/esc_inlines_reactors_general
 		REACTOR_ICON = GFX_esc_psionic_reactor
 		REACTOR_TIER = 8
 		PREREQUISITES = "esc_tech_reactor_psionic"
+		SHIP_SIZE_GROUP = starbase
+		IS_BIOSHIP_REACTOR = yes
+		MULTIPLIER_SUFFIX ="_bio"
 		COMPONENT_WEIGHT = 12000
 		WEIGHT_MULT_ACOT = 0.75
 	}

@@ -1,0 +1,123 @@
+### Generalised inline for component cost
+
+resources = {
+	category = ship_components
+
+	# component cost :: alloys :: standard ships :: mechanical ship empires
+	cost = {
+		trigger = {
+			from = { country_uses_bio_ships = no }
+			is_design_space_fauna = no
+		}
+		$PRIMARY_RESOURCE_TYPE_MECHANICAL$ = @primary_resouce_cost_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_COST_SCALING$|
+	}
+	# component upkeep :: alloys :: standard ships :: mechanical ship empires
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = no }
+			is_design_space_fauna = no
+		}
+		$PRIMARY_RESOURCE_TYPE_MECHANICAL$ = @primary_resource_upkeep_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_UPKEEP_SCALING$|
+	}
+	# component upkeep :: energy :: standard ships :: mechanical ship empires
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = no }
+			is_design_space_fauna = no
+		}
+		energy = @energy_upkeep_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$ENERGY_UPKEEP_SCALING$|
+	}
+
+## ################################################### ##
+
+	# component cost :: alloys :: standard ship :: bioship empires
+	cost = {
+		trigger = {
+			from = { country_uses_bio_ships = yes }
+			is_design_space_fauna = no
+		}
+		$PRIMARY_RESOURCE_TYPE_BIOSHIP$ = @primary_resouce_cost_multiplier_bioship
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_COST_SCALING$|
+	}
+	# component upkeep :: alloys :: standard ships :: bioship empires
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = yes }
+			is_design_space_fauna = no
+		}
+		$PRIMARY_RESOURCE_TYPE_BIOSHIP$ = @primary_resource_upkeep_multiplier_bioship
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_UPKEEP_SCALING$|
+	}
+	# component upkeep :: food :: standard ships :: bioship empires
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = yes }
+			is_design_space_fauna = no
+		}
+		$BIOSHIP_UPKEEP_RESOURCE_TYPE$ = @food_upkeep_multiplier_bioship
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$BIOSHIP_UPKEEP_RESOURCE_SCALING$|
+	}
+
+## ################################################### ##
+
+	# component cost :: food :: domesticated fauna :: food-eating empires
+	cost = {
+		trigger = {
+			from = { country_uses_food = yes }
+			is_design_space_fauna = yes
+		}
+		$PRIMARY_RESOURCE_TYPE_FAUNA_FOOD$ = @primary_resource_cost_multipier_fauna
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_COST_SCALING$|
+	}
+	# component cost :: minerals :: domesticated fauna :: mineral-eating empires
+	cost = {
+		trigger = {
+			from = { country_uses_food = no }
+			is_design_space_fauna = yes
+		}
+		$PRIMARY_RESOURCE_TYPE_FAUNA_LITHOVORE$ = @primary_resource_cost_multipier_fauna
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_COST_SCALING$|
+	}
+	# component upkeep :: energy :: domesticated fauna :: all empires
+	upkeep = {
+		trigger = {
+			is_design_space_fauna = yes
+		}
+		energy = @energy_upkeep_multiplier_fauna
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$ENERGY_UPKEEP_SCALING$|
+	}
+	# component upkeep :: food :: domesticated fauna :: food-eating empires
+	upkeep = {
+		trigger = {
+			from = { country_uses_food = yes }
+			is_design_space_fauna = yes
+		}
+		$PRIMARY_RESOURCE_TYPE_FAUNA_FOOD$ = @primary_resource_upkeep_multiplier_fauna
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_UPKEEP_SCALING$|
+	}
+	# component upkeep :: minerals :: domesticated fauna :: food-eating empires
+	upkeep = {
+		trigger = {
+			from = { country_uses_food = no }
+			is_design_space_fauna = yes
+		}
+		$PRIMARY_RESOURCE_TYPE_FAUNA_LITHOVORE$ = @primary_resource_upkeep_multiplier_fauna
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_UPKEEP_SCALING$|
+	}
+
+## ################################################### ##
+
+	# component cost :: strategic resources :: all empires
+	cost = {
+		$STRATEGIC_RESOURCE_TYPE$ = 1
+		mult = value:esc_component_cost|COST|$STRATEGIC_RESOURCE_COST$|SCALING|$STRATEGIC_RESOURCE_COST_SCALING$|
+	}
+	# component upkeep :: strategic resources :: all empires
+	upkeep = {
+		$STRATEGIC_RESOURCE_TYPE$ = 1
+		mult = value:esc_component_cost|COST|$STRATEGIC_RESOURCE_COST$|SCALING|$STRATEGIC_RESOURCE_UPKEEP_SCALING$|
+	}
+}

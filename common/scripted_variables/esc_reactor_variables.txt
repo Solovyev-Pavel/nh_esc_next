@@ -33,26 +33,47 @@
 ### tier 6
 ###
 
-# power
+# power :: mechanical ships
 @ESC_REACTOR_t6_power_starbase					= 60000
-@ESC_REACTOR_t6_power_corvette					= 285
-@ESC_REACTOR_t6_power_destroyer					= 550
+@ESC_REACTOR_t6_power_corvette					= 350
+@ESC_REACTOR_t6_power_destroyer					= 800
 @ESC_REACTOR_t6_power_cruiser					= 1100
-@ESC_REACTOR_t6_power_cruiser_nsc				= 1825
+@ESC_REACTOR_t6_power_cruiser_nsc				= 2410
 @ESC_REACTOR_t6_power_battleship				= 2000
-@ESC_REACTOR_t6_power_battleship_nsc			= 4000
-@ESC_REACTOR_t6_power_titan						= 4250
-@ESC_REACTOR_t6_power_titan_nsc					= 8000
-@ESC_REACTOR_t6_power_juggernaut				= 25000
+@ESC_REACTOR_t6_power_battleship_nsc			= 5000
+@ESC_REACTOR_t6_power_titan						= 5000
+@ESC_REACTOR_t6_power_titan_nsc					= 9500
+@ESC_REACTOR_t6_power_juggernaut				= 30000
 @ESC_REACTOR_t6_power_platform					= 2415
 @ESC_REACTOR_t6_power_platform2					= 3750
 @ESC_REACTOR_t6_power_platform3					= 7200
 @ESC_REACTOR_t6_power_ion_cannon				= 3750
 @ESC_REACTOR_t6_power_strikecruiser				= 1725
-@ESC_REACTOR_t6_power_battlecruiser				= 2450
+@ESC_REACTOR_t6_power_battlecruiser				= 2425
 @ESC_REACTOR_t6_power_carrier					= 6000
-@ESC_REACTOR_t6_power_dreadnought				= 8000
+@ESC_REACTOR_t6_power_dreadnought				= 10000
 @ESC_REACTOR_t6_power_flagship					= 55000
+
+# power :: biological ships
+@ESC_REACTOR_t6_power_starbase_bio  			= 6000
+@ESC_REACTOR_t6_power_corvette_bio				= 500
+@ESC_REACTOR_t6_power_destroyer_bio				= 1200
+@ESC_REACTOR_t6_power_cruiser_bio				= 1650
+@ESC_REACTOR_t6_power_cruiser_nsc_bio			= 3615
+@ESC_REACTOR_t6_power_battleship_bio			= 3000
+@ESC_REACTOR_t6_power_battleship_nsc_bio		= 7500
+@ESC_REACTOR_t6_power_titan_bio					= 7500
+@ESC_REACTOR_t6_power_titan_nsc_bio				= 13500
+@ESC_REACTOR_t6_power_juggernaut_bio			= 45000
+@ESC_REACTOR_t6_power_platform_bio				= 3600
+@ESC_REACTOR_t6_power_platform2_bio				= 7200
+@ESC_REACTOR_t6_power_platform3_bio				= 10800
+@ESC_REACTOR_t6_power_ion_cannon_bio			= 7200
+@ESC_REACTOR_t6_power_strikecruiser_bio			= 2700
+@ESC_REACTOR_t6_power_battlecruiser_bio			= 3650
+@ESC_REACTOR_t6_power_carrier_bio				= 9000
+@ESC_REACTOR_t6_power_dreadnought_bio			= 15000
+@ESC_REACTOR_t6_power_flagship_bio				= 55000
 
 # cost :: alloys
 @ESC_REACTOR_t6_cost_starbase					= 0
@@ -75,63 +96,21 @@
 @ESC_REACTOR_t6_cost_dreadnought				= 550
 @ESC_REACTOR_t6_cost_flagship					= 1000
 
-# upkeep :: energy
-@ESC_REACTOR_t6_upkeep_energy_starbase			= 0
-@ESC_REACTOR_t6_upkeep_energy_corvette 			= 0.375
-@ESC_REACTOR_t6_upkeep_energy_destroyer 		= 0.75
-@ESC_REACTOR_t6_upkeep_energy_cruiser			= 1.50
-@ESC_REACTOR_t6_upkeep_energy_cruiser_nsc		= 1.50
-@ESC_REACTOR_t6_upkeep_energy_battleship 		= 3.00
-@ESC_REACTOR_t6_upkeep_energy_battleship_nsc 	= 3.00
-@ESC_REACTOR_t6_upkeep_energy_titan 			= 6.00
-@ESC_REACTOR_t6_upkeep_energy_titan_nsc 		= 6.00
-@ESC_REACTOR_t6_upkeep_energy_juggernaut 		= 6.00
-@ESC_REACTOR_t6_upkeep_energy_platform 			= 0.75
-@ESC_REACTOR_t6_upkeep_energy_platform2 		= 1.50
-@ESC_REACTOR_t6_upkeep_energy_platform3 		= 3.00
-@ESC_REACTOR_t6_upkeep_energy_ion_cannon 		= 1.50
-@ESC_REACTOR_t6_upkeep_energy_strikecruiser 	= 1.80
-@ESC_REACTOR_t6_upkeep_energy_battlecruiser 	= 2.20
-@ESC_REACTOR_t6_upkeep_energy_carrier 			= 4.00
-@ESC_REACTOR_t6_upkeep_energy_dreadnought 		= 5.50
-@ESC_REACTOR_t6_upkeep_energy_flagship			= 10.0
-
-# upkeep :: alloys
-@ESC_REACTOR_t6_upkeep_alloys_starbase			= 0
-@ESC_REACTOR_t6_upkeep_alloys_corvette			= 0.037
-@ESC_REACTOR_t6_upkeep_alloys_destroyer 		= 0.75
-@ESC_REACTOR_t6_upkeep_alloys_cruiser 			= 0.15
-@ESC_REACTOR_t6_upkeep_alloys_cruiser_nsc 		= 0.15
-@ESC_REACTOR_t6_upkeep_alloys_battleship 		= 0.30
-@ESC_REACTOR_t6_upkeep_alloys_battleship_nsc 	= 0.30
-@ESC_REACTOR_t6_upkeep_alloys_titan 			= 0.60
-@ESC_REACTOR_t6_upkeep_alloys_titan_nsc 		= 0.60
-@ESC_REACTOR_t6_upkeep_alloys_juggernaut 		= 0.60
-@ESC_REACTOR_t6_upkeep_alloys_platform 			= 0.075
-@ESC_REACTOR_t6_upkeep_alloys_platform2 		= 0.15
-@ESC_REACTOR_t6_upkeep_alloys_platform3 		= 0.30
-@ESC_REACTOR_t6_upkeep_alloys_ion_cannon 		= 0.15
-@ESC_REACTOR_t6_upkeep_alloys_strikecruiser 	= 0.180
-@ESC_REACTOR_t6_upkeep_alloys_battlecruiser 	= 0.220
-@ESC_REACTOR_t6_upkeep_alloys_carrier 			= 0.40
-@ESC_REACTOR_t6_upkeep_alloys_dreadnought 		= 0.550
-@ESC_REACTOR_t6_upkeep_alloys_flagship 			= 1.00
-
 ###
 ### tier 7
 ###
 
-# power
+# power :: mechanical ships
 @ESC_REACTOR_t7_power_starbase					= 80000
-@ESC_REACTOR_t7_power_corvette 					= 375
-@ESC_REACTOR_t7_power_destroyer 				= 790
+@ESC_REACTOR_t7_power_corvette 					= 850
+@ESC_REACTOR_t7_power_destroyer 				= 1850
 @ESC_REACTOR_t7_power_cruiser 					= 1600
-@ESC_REACTOR_t7_power_cruiser_nsc				= 2575
-@ESC_REACTOR_t7_power_battleship 				= 2700
-@ESC_REACTOR_t7_power_battleship_nsc 			= 5800
+@ESC_REACTOR_t7_power_cruiser_nsc				= 3110
+@ESC_REACTOR_t7_power_battleship 				= 3000
+@ESC_REACTOR_t7_power_battleship_nsc 			= 7000
 @ESC_REACTOR_t7_power_titan 					= 5500
 @ESC_REACTOR_t7_power_titan_nsc 				= 12500
-@ESC_REACTOR_t7_power_juggernaut				= 35000
+@ESC_REACTOR_t7_power_juggernaut				= 40000
 @ESC_REACTOR_t7_power_platform 					= 3465
 @ESC_REACTOR_t7_power_platform2 				= 4900
 @ESC_REACTOR_t7_power_platform3 				= 9000
@@ -139,8 +118,29 @@
 @ESC_REACTOR_t7_power_strikecruiser 			= 2475
 @ESC_REACTOR_t7_power_battlecruiser 			= 3500
 @ESC_REACTOR_t7_power_carrier 					= 5800
-@ESC_REACTOR_t7_power_dreadnought 				= 10000
+@ESC_REACTOR_t7_power_dreadnought 				= 12000
 @ESC_REACTOR_t7_power_flagship 					= 75000
+
+# power :: biological ships
+@ESC_REACTOR_t7_power_starbase_bio				= 80000
+@ESC_REACTOR_t7_power_corvette_bio 				= 1250
+@ESC_REACTOR_t7_power_destroyer_bio 			= 2750
+@ESC_REACTOR_t7_power_cruiser_bio 				= 2400
+@ESC_REACTOR_t7_power_cruiser_nsc_bio			= 4650
+@ESC_REACTOR_t7_power_battleship_bio 			= 4500
+@ESC_REACTOR_t7_power_battleship_nsc_bio 		= 10500
+@ESC_REACTOR_t7_power_titan_bio 				= 5500
+@ESC_REACTOR_t7_power_titan_nsc_bio 			= 18750
+@ESC_REACTOR_t7_power_juggernaut_bio			= 40000
+@ESC_REACTOR_t7_power_platform_bio 				= 5150
+@ESC_REACTOR_t7_power_platform2_bio 			= 7500
+@ESC_REACTOR_t7_power_platform3_bio 			= 13500
+@ESC_REACTOR_t7_power_ion_cannon_bio 			= 7500
+@ESC_REACTOR_t7_power_strikecruiser_bio 		= 3750
+@ESC_REACTOR_t7_power_battlecruiser_bio 		= 4750
+@ESC_REACTOR_t7_power_carrier_bio 				= 9000
+@ESC_REACTOR_t7_power_dreadnought_bio 			= 18000
+@ESC_REACTOR_t7_power_flagship_bio 				= 75000
 
 # cost :: alloys
 @ESC_REACTOR_t7_cost_starbase					= 0
@@ -163,62 +163,20 @@
 @ESC_REACTOR_t7_cost_dreadnought 				= 700
 @ESC_REACTOR_t7_cost_flagship 					= 1300
 
-# upkeep :: energy
-@ESC_REACTOR_t7_upkeep_energy_starbase			= 0
-@ESC_REACTOR_t7_upkeep_energy_corvette 			= 0.45
-@ESC_REACTOR_t7_upkeep_energy_destroyer 		= 0.95
-@ESC_REACTOR_t7_upkeep_energy_cruiser 			= 1.90
-@ESC_REACTOR_t7_upkeep_energy_cruiser_nsc 		= 1.90
-@ESC_REACTOR_t7_upkeep_energy_battleship 		= 3.75
-@ESC_REACTOR_t7_upkeep_energy_battleship_nsc 	= 3.75
-@ESC_REACTOR_t7_upkeep_energy_titan 			= 7.50
-@ESC_REACTOR_t7_upkeep_energy_titan_nsc 		= 7.50
-@ESC_REACTOR_t7_upkeep_energy_juggernaut 		= 7.50
-@ESC_REACTOR_t7_upkeep_energy_platform 			= 0.95
-@ESC_REACTOR_t7_upkeep_energy_platform2 		= 1.90
-@ESC_REACTOR_t7_upkeep_energy_platform3 		= 3.80
-@ESC_REACTOR_t7_upkeep_energy_ion_cannon 		= 1.90
-@ESC_REACTOR_t7_upkeep_energy_strikecruiser 	= 2.40
-@ESC_REACTOR_t7_upkeep_energy_battlecruiser 	= 2.9
-@ESC_REACTOR_t7_upkeep_energy_carrier 			= 4.8
-@ESC_REACTOR_t7_upkeep_energy_dreadnought 		= 7.0
-@ESC_REACTOR_t7_upkeep_energy_flagship 			= 13.0
-
-# upkeep :: alloys
-@ESC_REACTOR_t7_upkeep_alloys_starbase			= 0
-@ESC_REACTOR_t7_upkeep_alloys_corvette 			= 0.045
-@ESC_REACTOR_t7_upkeep_alloys_destroyer 		= 0.095
-@ESC_REACTOR_t7_upkeep_alloys_cruiser 			= 0.19
-@ESC_REACTOR_t7_upkeep_alloys_cruiser_nsc 		= 0.19
-@ESC_REACTOR_t7_upkeep_alloys_battleship 		= 0.375
-@ESC_REACTOR_t7_upkeep_alloys_battleship_nsc 	= 0.375
-@ESC_REACTOR_t7_upkeep_alloys_titan 			= 0.75
-@ESC_REACTOR_t7_upkeep_alloys_titan_nsc 		= 0.75
-@ESC_REACTOR_t7_upkeep_alloys_juggernaut 		= 0.75
-@ESC_REACTOR_t7_upkeep_alloys_platform 			= 0.095
-@ESC_REACTOR_t7_upkeep_alloys_platform2 		= 0.19
-@ESC_REACTOR_t7_upkeep_alloys_platform3 		= 0.38
-@ESC_REACTOR_t7_upkeep_alloys_ion_cannon 		= 0.19
-@ESC_REACTOR_t7_upkeep_alloys_strikecruiser 	= 0.240
-@ESC_REACTOR_t7_upkeep_alloys_battlecruiser 	= 0.29
-@ESC_REACTOR_t7_upkeep_alloys_carrier 			= 0.48
-@ESC_REACTOR_t7_upkeep_alloys_dreadnought 		= 0.70
-@ESC_REACTOR_t7_upkeep_alloys_flagship 			= 1.30
-
 ###
 ### tier 8
 ###
 
-# power
+# power :: mechanical ships
 @ESC_REACTOR_t8_power_starbase					= 100000
-@ESC_REACTOR_t8_power_corvette 					= 545
-@ESC_REACTOR_t8_power_destroyer 				= 1200
-@ESC_REACTOR_t8_power_cruiser 					= 2200
-@ESC_REACTOR_t8_power_cruiser_nsc				= 3710
-@ESC_REACTOR_t8_power_battleship 				= 3500
-@ESC_REACTOR_t8_power_battleship_nsc 			= 9000
-@ESC_REACTOR_t8_power_titan 					= 6750
-@ESC_REACTOR_t8_power_titan_nsc 				= 17500
+@ESC_REACTOR_t8_power_corvette 					= 1600
+@ESC_REACTOR_t8_power_destroyer 				= 2600
+@ESC_REACTOR_t8_power_cruiser 					= 3000
+@ESC_REACTOR_t8_power_cruiser_nsc				= 4160
+@ESC_REACTOR_t8_power_battleship 				= 4500
+@ESC_REACTOR_t8_power_battleship_nsc 			= 10000
+@ESC_REACTOR_t8_power_titan 					= 9000
+@ESC_REACTOR_t8_power_titan_nsc 				= 17000
 @ESC_REACTOR_t8_power_juggernaut				= 45000
 @ESC_REACTOR_t8_power_platform 					= 5040
 @ESC_REACTOR_t8_power_platform2 				= 7000
@@ -227,8 +185,29 @@
 @ESC_REACTOR_t8_power_strikecruiser 			= 3610
 @ESC_REACTOR_t8_power_battlecruiser 			= 5250
 @ESC_REACTOR_t8_power_carrier 					= 9000
-@ESC_REACTOR_t8_power_dreadnought 				= 13000
+@ESC_REACTOR_t8_power_dreadnought 				= 15000
 @ESC_REACTOR_t8_power_flagship 					= 95000
+
+# power :: biological ships
+@ESC_REACTOR_t8_power_starbase_bio				= 100000
+@ESC_REACTOR_t8_power_corvette_bio 				= 2400
+@ESC_REACTOR_t8_power_destroyer_bio 			= 3900
+@ESC_REACTOR_t8_power_cruiser_bio 				= 4500
+@ESC_REACTOR_t8_power_cruiser_nsc_bio			= 6250
+@ESC_REACTOR_t8_power_battleship_bio 			= 6750
+@ESC_REACTOR_t8_power_battleship_nsc_bio 		= 15000
+@ESC_REACTOR_t8_power_titan_bio 				= 13500
+@ESC_REACTOR_t8_power_titan_nsc_bio 			= 25000
+@ESC_REACTOR_t8_power_juggernaut_bio			= 45000
+@ESC_REACTOR_t8_power_platform_bio 				= 7500
+@ESC_REACTOR_t8_power_platform2_bio 			= 10500
+@ESC_REACTOR_t8_power_platform3_bio 			= 18000
+@ESC_REACTOR_t8_power_ion_cannon_bio 			= 10500
+@ESC_REACTOR_t8_power_strikecruiser_bio 		= 5400
+@ESC_REACTOR_t8_power_battlecruiser_bio 		= 7750
+@ESC_REACTOR_t8_power_carrier_bio 				= 13500
+@ESC_REACTOR_t8_power_dreadnought_bio 			= 22500
+@ESC_REACTOR_t8_power_flagship_bio 				= 95000
 
 # cost :: alloys
 @ESC_REACTOR_t8_cost_starbase					= 0
@@ -251,44 +230,26 @@
 @ESC_REACTOR_t8_cost_dreadnought 				= 800
 @ESC_REACTOR_t8_cost_flagship 					= 1600
 
-# upkeep :: energy
-@ESC_REACTOR_t8_upkeep_energy_starbase			= 0
-@ESC_REACTOR_t8_upkeep_energy_corvette 			= 0.55
-@ESC_REACTOR_t8_upkeep_energy_destroyer 		= 1.10
-@ESC_REACTOR_t8_upkeep_energy_cruiser 			= 2.20
-@ESC_REACTOR_t8_upkeep_energy_cruiser_nsc 		= 2.20
-@ESC_REACTOR_t8_upkeep_energy_battleship 		= 4.40
-@ESC_REACTOR_t8_upkeep_energy_battleship_nsc 	= 4.40
-@ESC_REACTOR_t8_upkeep_energy_titan 			= 8.80
-@ESC_REACTOR_t8_upkeep_energy_titan_nsc 		= 8.80
-@ESC_REACTOR_t8_upkeep_energy_juggernaut 		= 8.80
-@ESC_REACTOR_t8_upkeep_energy_platform 			= 1.10
-@ESC_REACTOR_t8_upkeep_energy_platform2 		= 2.20
-@ESC_REACTOR_t8_upkeep_energy_platform3 		= 3.30
-@ESC_REACTOR_t8_upkeep_energy_ion_cannon 		= 2.20
-@ESC_REACTOR_t8_upkeep_energy_strikecruiser 	= 3.0
-@ESC_REACTOR_t8_upkeep_energy_battlecruiser 	= 3.60
-@ESC_REACTOR_t8_upkeep_energy_carrier 			= 5.60
-@ESC_REACTOR_t8_upkeep_energy_dreadnought 		= 8.0
-@ESC_REACTOR_t8_upkeep_energy_flagship 			= 16.0
+###
+### strategic resource cost
+###
 
-# upkeep :: alloys
-@ESC_REACTOR_t8_upkeep_alloys_starbase			= 0
-@ESC_REACTOR_t8_upkeep_alloys_corvette 			= 0.055
-@ESC_REACTOR_t8_upkeep_alloys_destroyer 		= 0.110
-@ESC_REACTOR_t8_upkeep_alloys_cruiser 			= 0.220
-@ESC_REACTOR_t8_upkeep_alloys_cruiser_nsc 		= 0.220
-@ESC_REACTOR_t8_upkeep_alloys_battleship 		= 0.440
-@ESC_REACTOR_t8_upkeep_alloys_battleship_nsc 	= 0.440
-@ESC_REACTOR_t8_upkeep_alloys_titan 			= 0.880
-@ESC_REACTOR_t8_upkeep_alloys_titan_nsc 		= 0.880
-@ESC_REACTOR_t8_upkeep_alloys_juggernaut 		= 0.880
-@ESC_REACTOR_t8_upkeep_alloys_platform 			= 0.110
-@ESC_REACTOR_t8_upkeep_alloys_platform2 		= 0.220
-@ESC_REACTOR_t8_upkeep_alloys_platform3 		= 0.330
-@ESC_REACTOR_t8_upkeep_alloys_ion_cannon 		= 0.220
-@ESC_REACTOR_t8_upkeep_alloys_strikecruiser 	= 0.30
-@ESC_REACTOR_t8_upkeep_alloys_battlecruiser 	= 0.360
-@ESC_REACTOR_t8_upkeep_alloys_carrier 			= 0.560
-@ESC_REACTOR_t8_upkeep_alloys_dreadnought 		= 0.80
-@ESC_REACTOR_t8_upkeep_alloys_flagship 			= 1.60
+@ESC_REACTOR_sr_cost_starbase					= 0.0
+@ESC_REACTOR_sr_cost_corvette 					= 1.5
+@ESC_REACTOR_sr_cost_destroyer 					= 3.0
+@ESC_REACTOR_sr_cost_cruiser 					= 6.0
+@ESC_REACTOR_sr_cost_cruiser_nsc 				= 6.0
+@ESC_REACTOR_sr_cost_battleship 				= 12.0
+@ESC_REACTOR_sr_cost_battleship_nsc 			= 12.0
+@ESC_REACTOR_sr_cost_titan 						= 24.0
+@ESC_REACTOR_sr_cost_titan_nsc 					= 24.0
+@ESC_REACTOR_sr_cost_juggernaut 				= 24.0
+@ESC_REACTOR_sr_cost_platform 					= 3.0
+@ESC_REACTOR_sr_cost_platform2 					= 6.0
+@ESC_REACTOR_sr_cost_platform3 					= 12.0
+@ESC_REACTOR_sr_cost_ion_cannon 				= 6.0
+@ESC_REACTOR_sr_cost_strikecruiser 				= 9.0
+@ESC_REACTOR_sr_cost_battlecruiser 				= 9.0
+@ESC_REACTOR_sr_cost_carrier 					= 18.0
+@ESC_REACTOR_sr_cost_dreadnought 				= 21.0
+@ESC_REACTOR_sr_cost_flagship 					= 30.0

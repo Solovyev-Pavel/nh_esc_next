@@ -1,0 +1,22 @@
+############################################################
+##                   ESC : Script Values                  ##
+############################################################
+
+esc_component_cost = {
+	base = 0
+	add = $COST|0$
+	multiply = $SCALING|1.0$
+}
+
+# esc_reactor_power = {
+# 	base = 1
+# 	multiply = @ESC_REACTOR_t$REACTOR_TIER$_power_$SHIP_SIZE_TYPE$ # $POWER|1000$
+# 	modifier = {
+# 		from = { country_uses_bio_ships = yes }
+# 		multiply = 1.5
+# 	}
+# 	modifier = {
+# 		has_global_flag = @NSC_active_flag
+# 		multiply = 1.5
+# 	}
+# }
