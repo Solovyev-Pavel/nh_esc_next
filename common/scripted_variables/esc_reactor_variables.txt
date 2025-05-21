@@ -33,16 +33,16 @@
 ### tier 6
 ###
 
-# power :: mechanical ships
+# power
 @ESC_REACTOR_t6_power_starbase					= 60000
-@ESC_REACTOR_t6_power_corvette					= 350
+@ESC_REACTOR_t6_power_corvette					= 400
 @ESC_REACTOR_t6_power_destroyer					= 800
-@ESC_REACTOR_t6_power_cruiser					= 1100
+@ESC_REACTOR_t6_power_cruiser					= 1200
 @ESC_REACTOR_t6_power_cruiser_nsc				= 2410
-@ESC_REACTOR_t6_power_battleship				= 2000
+@ESC_REACTOR_t6_power_battleship				= 2400
 @ESC_REACTOR_t6_power_battleship_nsc			= 5000
-@ESC_REACTOR_t6_power_titan						= 5000
-@ESC_REACTOR_t6_power_titan_nsc					= 9500
+@ESC_REACTOR_t6_power_titan						= 4800
+@ESC_REACTOR_t6_power_titan_nsc					= 12500
 @ESC_REACTOR_t6_power_juggernaut				= 30000
 @ESC_REACTOR_t6_power_platform					= 2415
 @ESC_REACTOR_t6_power_platform2					= 3750
@@ -50,30 +50,9 @@
 @ESC_REACTOR_t6_power_ion_cannon				= 3750
 @ESC_REACTOR_t6_power_strikecruiser				= 1725
 @ESC_REACTOR_t6_power_battlecruiser				= 2425
-@ESC_REACTOR_t6_power_carrier					= 6000
-@ESC_REACTOR_t6_power_dreadnought				= 10000
+@ESC_REACTOR_t6_power_carrier					= 5000
+@ESC_REACTOR_t6_power_dreadnought				= 8000
 @ESC_REACTOR_t6_power_flagship					= 55000
-
-# power :: biological ships
-@ESC_REACTOR_t6_power_starbase_bio  			= 6000
-@ESC_REACTOR_t6_power_corvette_bio				= 500
-@ESC_REACTOR_t6_power_destroyer_bio				= 1200
-@ESC_REACTOR_t6_power_cruiser_bio				= 1650
-@ESC_REACTOR_t6_power_cruiser_nsc_bio			= 3615
-@ESC_REACTOR_t6_power_battleship_bio			= 3000
-@ESC_REACTOR_t6_power_battleship_nsc_bio		= 7500
-@ESC_REACTOR_t6_power_titan_bio					= 7500
-@ESC_REACTOR_t6_power_titan_nsc_bio				= 13500
-@ESC_REACTOR_t6_power_juggernaut_bio			= 45000
-@ESC_REACTOR_t6_power_platform_bio				= 3600
-@ESC_REACTOR_t6_power_platform2_bio				= 7200
-@ESC_REACTOR_t6_power_platform3_bio				= 10800
-@ESC_REACTOR_t6_power_ion_cannon_bio			= 7200
-@ESC_REACTOR_t6_power_strikecruiser_bio			= 2700
-@ESC_REACTOR_t6_power_battlecruiser_bio			= 3650
-@ESC_REACTOR_t6_power_carrier_bio				= 9000
-@ESC_REACTOR_t6_power_dreadnought_bio			= 15000
-@ESC_REACTOR_t6_power_flagship_bio				= 55000
 
 # cost :: alloys
 @ESC_REACTOR_t6_cost_starbase					= 0
@@ -100,47 +79,26 @@
 ### tier 7
 ###
 
-# power :: mechanical ships
+# power
 @ESC_REACTOR_t7_power_starbase					= 80000
 @ESC_REACTOR_t7_power_corvette 					= 850
 @ESC_REACTOR_t7_power_destroyer 				= 1850
-@ESC_REACTOR_t7_power_cruiser 					= 1600
+@ESC_REACTOR_t7_power_cruiser 					= 2400
 @ESC_REACTOR_t7_power_cruiser_nsc				= 3110
-@ESC_REACTOR_t7_power_battleship 				= 3000
+@ESC_REACTOR_t7_power_battleship 				= 4800
 @ESC_REACTOR_t7_power_battleship_nsc 			= 7000
-@ESC_REACTOR_t7_power_titan 					= 5500
-@ESC_REACTOR_t7_power_titan_nsc 				= 12500
+@ESC_REACTOR_t7_power_titan 					= 9600
+@ESC_REACTOR_t7_power_titan_nsc 				= 15000
 @ESC_REACTOR_t7_power_juggernaut				= 40000
 @ESC_REACTOR_t7_power_platform 					= 3465
 @ESC_REACTOR_t7_power_platform2 				= 4900
 @ESC_REACTOR_t7_power_platform3 				= 9000
 @ESC_REACTOR_t7_power_ion_cannon 				= 4900
 @ESC_REACTOR_t7_power_strikecruiser 			= 2475
-@ESC_REACTOR_t7_power_battlecruiser 			= 3500
-@ESC_REACTOR_t7_power_carrier 					= 5800
+@ESC_REACTOR_t7_power_battlecruiser 			= 2925
+@ESC_REACTOR_t7_power_carrier 					= 7000
 @ESC_REACTOR_t7_power_dreadnought 				= 12000
 @ESC_REACTOR_t7_power_flagship 					= 75000
-
-# power :: biological ships
-@ESC_REACTOR_t7_power_starbase_bio				= 80000
-@ESC_REACTOR_t7_power_corvette_bio 				= 1250
-@ESC_REACTOR_t7_power_destroyer_bio 			= 2750
-@ESC_REACTOR_t7_power_cruiser_bio 				= 2400
-@ESC_REACTOR_t7_power_cruiser_nsc_bio			= 4650
-@ESC_REACTOR_t7_power_battleship_bio 			= 4500
-@ESC_REACTOR_t7_power_battleship_nsc_bio 		= 10500
-@ESC_REACTOR_t7_power_titan_bio 				= 5500
-@ESC_REACTOR_t7_power_titan_nsc_bio 			= 18750
-@ESC_REACTOR_t7_power_juggernaut_bio			= 40000
-@ESC_REACTOR_t7_power_platform_bio 				= 5150
-@ESC_REACTOR_t7_power_platform2_bio 			= 7500
-@ESC_REACTOR_t7_power_platform3_bio 			= 13500
-@ESC_REACTOR_t7_power_ion_cannon_bio 			= 7500
-@ESC_REACTOR_t7_power_strikecruiser_bio 		= 3750
-@ESC_REACTOR_t7_power_battlecruiser_bio 		= 4750
-@ESC_REACTOR_t7_power_carrier_bio 				= 9000
-@ESC_REACTOR_t7_power_dreadnought_bio 			= 18000
-@ESC_REACTOR_t7_power_flagship_bio 				= 75000
 
 # cost :: alloys
 @ESC_REACTOR_t7_cost_starbase					= 0
@@ -167,16 +125,16 @@
 ### tier 8
 ###
 
-# power :: mechanical ships
+# power
 @ESC_REACTOR_t8_power_starbase					= 100000
 @ESC_REACTOR_t8_power_corvette 					= 1600
 @ESC_REACTOR_t8_power_destroyer 				= 2600
-@ESC_REACTOR_t8_power_cruiser 					= 3000
+@ESC_REACTOR_t8_power_cruiser 					= 3200
 @ESC_REACTOR_t8_power_cruiser_nsc				= 4160
-@ESC_REACTOR_t8_power_battleship 				= 4500
+@ESC_REACTOR_t8_power_battleship 				= 6400
 @ESC_REACTOR_t8_power_battleship_nsc 			= 10000
-@ESC_REACTOR_t8_power_titan 					= 9000
-@ESC_REACTOR_t8_power_titan_nsc 				= 17000
+@ESC_REACTOR_t8_power_titan 					= 12800
+@ESC_REACTOR_t8_power_titan_nsc 				= 17500
 @ESC_REACTOR_t8_power_juggernaut				= 45000
 @ESC_REACTOR_t8_power_platform 					= 5040
 @ESC_REACTOR_t8_power_platform2 				= 7000
@@ -187,27 +145,6 @@
 @ESC_REACTOR_t8_power_carrier 					= 9000
 @ESC_REACTOR_t8_power_dreadnought 				= 15000
 @ESC_REACTOR_t8_power_flagship 					= 95000
-
-# power :: biological ships
-@ESC_REACTOR_t8_power_starbase_bio				= 100000
-@ESC_REACTOR_t8_power_corvette_bio 				= 2400
-@ESC_REACTOR_t8_power_destroyer_bio 			= 3900
-@ESC_REACTOR_t8_power_cruiser_bio 				= 4500
-@ESC_REACTOR_t8_power_cruiser_nsc_bio			= 6250
-@ESC_REACTOR_t8_power_battleship_bio 			= 6750
-@ESC_REACTOR_t8_power_battleship_nsc_bio 		= 15000
-@ESC_REACTOR_t8_power_titan_bio 				= 13500
-@ESC_REACTOR_t8_power_titan_nsc_bio 			= 25000
-@ESC_REACTOR_t8_power_juggernaut_bio			= 45000
-@ESC_REACTOR_t8_power_platform_bio 				= 7500
-@ESC_REACTOR_t8_power_platform2_bio 			= 10500
-@ESC_REACTOR_t8_power_platform3_bio 			= 18000
-@ESC_REACTOR_t8_power_ion_cannon_bio 			= 10500
-@ESC_REACTOR_t8_power_strikecruiser_bio 		= 5400
-@ESC_REACTOR_t8_power_battlecruiser_bio 		= 7750
-@ESC_REACTOR_t8_power_carrier_bio 				= 13500
-@ESC_REACTOR_t8_power_dreadnought_bio 			= 22500
-@ESC_REACTOR_t8_power_flagship_bio 				= 95000
 
 # cost :: alloys
 @ESC_REACTOR_t8_cost_starbase					= 0
