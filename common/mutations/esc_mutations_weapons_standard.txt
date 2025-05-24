@@ -332,6 +332,72 @@ esc_swarmer_missiles_creature_4 = {
 }
 
 ############################################################
+##          ESC : Strikecrafts : Point Defense            ##
+############################################################
+
+# Evolved Barb Artillery
+esc_flak_cannon_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_flak_cannon_4
+	ship_components = {
+		small = SMALL_ESC_FLAK_CANNON_CREATURE_4
+		medium = MEDIUM_ESC_FLAK_CANNON_CREATURE_4
+		large = LARGE_ESC_FLAK_CANNON_CREATURE_4
+		extra_large = XL_ESC_FLAK_CANNON_CREATURE_4
+	}
+	upgrades_to = "esc_flak_cannon_creature_5"
+}
+
+# Ironcloud Barb Artillery
+esc_flak_cannon_creature_5 = {
+	type = offensive
+	icon = GFX_esc_bio_flak_cannon_5
+	ship_components = {
+		small = SMALL_ESC_FLAK_CANNON_CREATURE_5
+		medium = MEDIUM_ESC_FLAK_CANNON_CREATURE_5
+		large = LARGE_ESC_FLAK_CANNON_CREATURE_5
+		extra_large = XL_ESC_FLAK_CANNON_CREATURE_5
+	}
+}
+
+# Protector Snapper Gun
+esc_point_defense_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_pd_cannon_4
+	ship_components = {
+		small = SMALL_ESC_POINT_DEFENSE_CREATURE_4
+		medium = MEDIUM_ESC_POINT_DEFENSE_CREATURE_4
+		large = LARGE_ESC_POINT_DEFENSE_CREATURE_4
+		extra_large = XL_ESC_POINT_DEFENSE_CREATURE_4
+	}
+	upgrades_to = "esc_point_defense_creature_5"
+}
+
+# Iron Curtain Snapper Gun
+esc_point_defense_creature_5 = {
+	type = offensive
+	icon = GFX_esc_bio_pd_cannon_5
+	ship_components = {
+		small = SMALL_ESC_POINT_DEFENSE_CREATURE_5
+		medium = MEDIUM_ESC_POINT_DEFENSE_CREATURE_5
+		large = LARGE_ESC_POINT_DEFENSE_CREATURE_5
+		extra_large = XL_ESC_POINT_DEFENSE_CREATURE_5
+	}
+}
+
+# Lightstorm Point-Defense
+esc_lightstorm_pd_creature = {
+	type = offensive
+	icon = GFX_esc_bio_pd_cannon_laser
+	ship_components = {
+		small = SMALL_ESC_LIGHTSTORM_PD_CREATURE
+		medium = MEDIUM_ESC_LIGHTSTORM_PD_CREATURE
+		large = LARGE_ESC_LIGHTSTORM_PD_CREATURE
+		extra_large = XL_ESC_LIGHTSTORM_PD_CREATURE
+	}
+}
+
+############################################################
 ##           ESC : Strikecrafts : Space Fauna             ##
 ############################################################
 
