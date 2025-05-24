@@ -26,6 +26,7 @@
 ##                 Improved Flak Battery                  ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_FLAK_CANNON_4
 	size = point_defence
@@ -40,15 +41,11 @@ weapon_component_template = {
 	accuracy = 0.75
 	power = -12
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 16
-		}
-		upkeep = {
-			energy = 0.16
-			alloys = 0.016
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_flak_hull_damage
@@ -77,10 +74,61 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 }
 
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_FLAK_CANNON_4
+	size = point_defence
+	icon = GFX_esc_bio_flak_cannon_4
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 6 max = 11 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_1
+	accuracy = 0.75
+	power = -12
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
+	}
+
+	hull_damage = @ESC_WEAPON_flak_hull_damage
+	armor_penetration = @ESC_WEAPON_flak_armor_penetration
+	armor_damage = @ESC_WEAPON_flak_armor_damage
+	shield_penetration = @ESC_WEAPON_flak_shield_penetration
+	shield_damage = @ESC_WEAPON_flak_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_flak_cannon_4" }
+	component_set = ESC_BIO_FLAK_CANNON_4
+	projectile_gfx = "flak_pd_3"
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+	upgrades_to = ESC_BIO_FLAK_CANNON_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
 ############################################################
 ##                  Ironcloud Defender                    ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_FLAK_CANNON_5
 	size = point_defence
@@ -95,15 +143,11 @@ weapon_component_template = {
 	accuracy = 0.75
 	power = -15
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 20
-		}
-		upkeep = {
-			energy = 0.2
-			alloys = 0.02
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_flak_hull_damage
@@ -131,10 +175,60 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 }
 
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_FLAK_CANNON_5
+	size = point_defence
+	icon = GFX_esc_bio_flak_cannon_5
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 8 max = 14 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_1
+	accuracy = 0.75
+	power = -15
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
+	}
+
+	hull_damage = @ESC_WEAPON_flak_hull_damage
+	armor_penetration = @ESC_WEAPON_flak_armor_penetration
+	armor_damage = @ESC_WEAPON_flak_armor_damage
+	shield_penetration = @ESC_WEAPON_flak_shield_penetration
+	shield_damage = @ESC_WEAPON_flak_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_flak_cannon_5" }
+	component_set = ESC_BIO_FLAK_CANNON_5
+	projectile_gfx = "flak_pd_3"
+	tags = { weapon_type_point_defense weapon_type_kinetic }
+	ai_tags = { weapon_role_point_defense screen }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
 ############################################################
 ##                Protector Point Defense                 ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_POINT_DEFENSE_4
 	size = point_defence
@@ -149,15 +243,11 @@ weapon_component_template = {
 	accuracy = 0.75
 	power = -12
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 16
-		}
-		upkeep = {
-			energy = 0.16
-			alloys = 0.016
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_pd_hull_damage
@@ -186,10 +276,61 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 }
 
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_POINT_DEFENSE_4
+	size = point_defence
+	icon = GFX_esc_bio_pd_cannon_4
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 6 max = 11 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_1
+	accuracy = 0.75
+	power = -12
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
+	}
+
+	hull_damage = @ESC_WEAPON_pd_hull_damage
+	armor_penetration = @ESC_WEAPON_pd_armor_penetration
+	armor_damage = @ESC_WEAPON_pd_armor_damage
+	shield_penetration = @ESC_WEAPON_pd_shield_penetration
+	shield_damage = @ESC_WEAPON_pd_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_point_defense_4" }
+	component_set = ESC_BIO_POINT_DEFENSE_4
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+	upgrades_to = ESC_BIO_POINT_DEFENSE_5
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
 ############################################################
 ##               Iron Curtain Point Defense               ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_POINT_DEFENSE_5
 	size = point_defence
@@ -204,15 +345,11 @@ weapon_component_template = {
 	accuracy = 0.75
 	power = -15
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 20
-		}
-		upkeep = {
-			energy = 0.2
-			alloys = 0.02
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_pd_hull_damage
@@ -240,10 +377,60 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 }
 
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_POINT_DEFENSE_5
+	size = point_defence
+	icon = GFX_esc_bio_pd_cannon_5
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 8 max = 14 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_1
+	accuracy = 0.75
+	power = -15
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
+	}
+
+	hull_damage = @ESC_WEAPON_pd_hull_damage
+	armor_penetration = @ESC_WEAPON_pd_armor_penetration
+	armor_damage = @ESC_WEAPON_pd_armor_damage
+	shield_penetration = @ESC_WEAPON_pd_shield_penetration
+	shield_damage = @ESC_WEAPON_pd_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_point_defense_5" }
+	component_set = ESC_BIO_POINT_DEFENSE_5
+	projectile_gfx = "white_laser_pd"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
 ############################################################
 ##          Juggernaut Point Defense System               ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_JUGGERNAUT_POINT_DEFENSE_1
 	size = medium
@@ -258,15 +445,11 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 30
-		}
-		upkeep = {
-			energy = 0.30
-			alloys = 0.030
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_pd_hull_damage
@@ -296,10 +479,60 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 }
 
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_1
+	size = medium
+	icon = GFX_esc_bio_pd_cannon_juggernaut_1
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 5 max = 15 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 4
+	range = @ESC_WEAPON_RANGE_P_3
+	accuracy = 0.8
+	power = -24
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
+	}
+
+	hull_damage = @ESC_WEAPON_pd_hull_damage
+	armor_penetration = @ESC_WEAPON_pd_armor_penetration
+	armor_damage = @ESC_WEAPON_pd_armor_damage
+	shield_penetration = @ESC_WEAPON_pd_shield_penetration
+	shield_damage = @ESC_WEAPON_pd_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_juggernaut_pd_1" }
+	component_set = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_1
+	projectile_gfx = "white_laser_pd"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+	upgrades_to = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
 ############################################################
 ##        Improved Juggernaut Point Defense System        ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_JUGGERNAUT_POINT_DEFENSE_2
 	size = medium
@@ -314,15 +547,11 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -30
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 36
-		}
-		upkeep = {
-			energy = 0.36
-			alloys = 0.036
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_pd_hull_damage
@@ -351,10 +580,59 @@ weapon_component_template = {
 	point_defence_targets = { "missile" "strike_craft" }
 }
 
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
+	size = medium
+	icon = GFX_esc_bio_pd_cannon_juggernaut_2
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 6 max = 18 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 4
+	range = @ESC_WEAPON_RANGE_P_3
+	accuracy = 0.8
+	power = -30
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
+	}
+
+	hull_damage = @ESC_WEAPON_pd_hull_damage
+	armor_penetration = @ESC_WEAPON_pd_armor_penetration
+	armor_damage = @ESC_WEAPON_pd_armor_damage
+	shield_penetration = @ESC_WEAPON_pd_shield_penetration
+	shield_damage = @ESC_WEAPON_pd_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_juggernaut_pd_2" }
+	component_set = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
+	projectile_gfx = "white_laser_pd"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
 ############################################################
 ##                Lightstorm Point Defense                ##
 ############################################################
 
+# mechanical ships
 weapon_component_template = {
 	key = ESC_LIGHTSTORM_PD
 	size = point_defence
@@ -369,16 +647,12 @@ weapon_component_template = {
 	accuracy = 0.75
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = 1.0
@@ -397,6 +671,61 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# bioships
+weapon_component_template = {
+	key = ESC_BIO_LIGHTSTORM_PD
+	size = point_defence
+	icon = GFX_esc_bio_pd_cannon_laser
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 6 max = 12 }
+	windup = { min = 0 max = 0 }
+	total_fire_time = 4
+	range = @ESC_WEAPON_RANGE_P_2
+	accuracy = 0.75
+	power = -20
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = 1.0
+	armor_penetration = 0.0
+	armor_damage = 1.0
+	shield_penetration = 0.0
+	shield_damage = 1.0
+	tracking = 0.4
+
+	prerequisites = { "esc_tech_point_defense_laser" }
+	component_set = ESC_BIO_LIGHTSTORM_PD
+	projectile_gfx = "infrared_laser_s"
+	tags = { weapon_type_point_defense weapon_type_energy }
+	ai_tags = { weapon_role_point_defense screen }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
 	}
 
 	ai_weight = {

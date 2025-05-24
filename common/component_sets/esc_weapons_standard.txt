@@ -832,6 +832,19 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_FLAK_CANNON_4
+	icon = GFX_esc_bio_flak_cannon_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_FLAK_CANNON_CREATURE_4
+	icon = GFX_esc_bio_flak_cannon_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # ironcloud defender
 component_set = {
 	key = ESC_FLAK_CANNON_5
@@ -839,11 +852,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_FLAK_CANNON_5
+	icon = GFX_esc_bio_flak_cannon_5
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_FLAK_CANNON_CREATURE_5
+	icon = GFX_esc_bio_flak_cannon_5
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # protector point defense
 component_set = {
 	key = ESC_POINT_DEFENSE_4
 	icon = GFX_esc_pd_cannon_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_POINT_DEFENSE_4
+	icon = GFX_esc_bio_pd_cannon_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_POINT_DEFENSE_CREATURE_4
+	icon = GFX_esc_bio_pd_cannon_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # iron curtain point defense
@@ -854,11 +893,32 @@ component_set = {
 }
 
 component_set = {
+	key = ESC_BIO_POINT_DEFENSE_5
+	icon = GFX_esc_bio_pd_cannon_5
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_POINT_DEFENSE_CREATURE_5
+	icon = GFX_esc_bio_pd_cannon_5
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# juggernaut point defense
+component_set = {
 	key = ESC_JUGGERNAUT_POINT_DEFENSE_1
 	icon = GFX_esc_pd_cannon_juggernaut_1
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_1
+	icon = GFX_esc_bio_pd_cannon_juggernaut_1
+	icon_frame = 1
+}
+
+# improved juggernaut point defense
 component_set = {
 	key = ESC_JUGGERNAUT_POINT_DEFENSE_2
 	icon = GFX_esc_pd_cannon_juggernaut_2
@@ -866,9 +926,29 @@ component_set = {
 }
 
 component_set = {
+	key = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
+	icon = GFX_esc_bio_pd_cannon_juggernaut_2
+	icon_frame = 1
+}
+
+# lightstorm PD
+component_set = {
 	key = ESC_LIGHTSTORM_PD
 	icon = GFX_esc_pd_cannon_laser
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_LIGHTSTORM_PD
+	icon = GFX_esc_bio_pd_cannon_laser
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_LIGHTSTORM_PD_CREATURE
+	icon = GFX_esc_bio_pd_cannon_laser
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 ############################################################
