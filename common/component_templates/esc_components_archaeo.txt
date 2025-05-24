@@ -2660,7 +2660,9 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_ARCHAEO_POINTDEFENSE_3
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
 		EVAL_TARGET = yes
 	}
 
@@ -2800,7 +2802,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_point_defense screen }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_weaver_components"
+		EXTRA_CONDITION_VALUE = no
 		EVAL_TARGET = yes
 	}
 

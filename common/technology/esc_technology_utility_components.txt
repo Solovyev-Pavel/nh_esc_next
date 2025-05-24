@@ -591,6 +591,7 @@ esc_tech_armor_wraith = {
 	is_rare = yes
 
 	potential = {
+		country_uses_bio_ships = no
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_wraith_tech_forbidden }
 	}
 

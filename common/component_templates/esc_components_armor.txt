@@ -17,17 +17,6 @@ utility_component_template = {
 		TIER = 6
 	}
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_ARMOR_s_t6_cost_alloys_1
-		}
-		upkeep = {
-			energy = @ESC_ARMOR_s_t6_upkeep_energy
-			alloys = @ESC_ARMOR_s_t6_upkeep_alloys
-		}
-	}
-
 	modifier = { ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1 }
 
 	prerequisites = { "esc_tech_armor_6" }
