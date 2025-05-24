@@ -25,10 +25,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1 }
@@ -52,10 +52,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1 }
@@ -79,10 +79,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1 }
@@ -106,10 +106,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_xl_t6_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 6
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_xl_t6_str_primary_1 }
@@ -137,10 +137,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1 }
@@ -163,10 +163,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1 }
@@ -189,10 +189,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1 }
@@ -215,10 +215,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_alloys_1
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 7
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_xl_t7_str_primary_1 }
@@ -245,12 +245,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_special
 	}
 
 	modifier = {
@@ -284,12 +283,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_special
 	}
 
 	modifier = {
@@ -323,12 +321,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_special
 	}
 
 	modifier = {
@@ -362,12 +359,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t6_cost_special
 	}
 
 	modifier = {
@@ -405,12 +401,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
 	}
 
 	modifier = {
@@ -444,12 +439,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
 	}
 
 	modifier = {
@@ -483,12 +477,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
 	}
 
 	modifier = {
@@ -522,12 +515,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t7_cost_special
 	}
 
 	modifier = {
@@ -565,12 +557,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
 	}
 
 	modifier = {
@@ -603,12 +594,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
 	}
 
 	modifier = {
@@ -641,12 +631,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
 	}
 
 	modifier = {
@@ -657,11 +646,6 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR_CREATURE
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
-	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -684,12 +668,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t8_cost_special
 	}
 
 	modifier = {
@@ -700,11 +683,6 @@ utility_component_template = {
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR_CREATURE
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
-	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -731,12 +709,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t6_cost_special
 	}
 
 	modifier = {
@@ -770,12 +747,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t6_cost_special
 	}
 
 	modifier = {
@@ -809,12 +785,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t6_cost_special
 	}
 
 	modifier = {
@@ -848,12 +823,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t6_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t6_cost_special
 	}
 
 	modifier = {
@@ -891,12 +865,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
 	}
 
 	modifier = {
@@ -930,12 +903,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
 	}
 
 	modifier = {
@@ -969,12 +941,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
 	}
 
 	modifier = {
@@ -1008,12 +979,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t7_cost_special
 	}
 
 	modifier = {
@@ -1051,12 +1021,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
 	}
 
 	modifier = {
@@ -1089,12 +1058,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
 	}
 
 	modifier = {
@@ -1127,12 +1095,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
 	}
 
 	modifier = {
@@ -1165,12 +1132,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = nanites
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t8_cost_special
 	}
 
 	modifier = {
@@ -1207,12 +1173,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t8_cost_special
 	}
 
 	modifier = {
@@ -1244,12 +1209,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t8_cost_special
 	}
 
 	modifier = {
@@ -1281,12 +1245,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t8_cost_special
 	}
 
 	modifier = {
@@ -1318,12 +1281,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t8_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t8_cost_special
 	}
 
 	modifier = {
@@ -1359,12 +1321,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_s_t7_cost_special
 	}
 
 	modifier = {
@@ -1392,12 +1353,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_m_t7_cost_special
 	}
 
 	modifier = {
@@ -1425,12 +1385,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_l_t7_cost_special
 	}
 
 	modifier = {
@@ -1458,12 +1417,11 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_alloys_1
-		ENERGY_UPKEEP = @ESC_ARMOR_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_ARMOR_xl_t7_cost_special
 	}
 
 	modifier = {

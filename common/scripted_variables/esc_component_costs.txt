@@ -1,0 +1,451 @@
+############################################################
+###   ESC NEXT : scripted variables : component costs    ###
+############################################################
+
+@primary_resouce_cost_multiplier_standard				= 1.0
+@primary_resource_upkeep_multiplier_standard			= 0.002
+@energy_upkeep_multiplier_standard						= 0.01
+
+@primary_resouce_cost_multiplier_bioship				= 1.0
+@primary_resource_upkeep_multiplier_bioship				= 0.002
+@food_upkeep_multiplier_bioship							= 0.01
+
+@primary_resource_cost_multipier_fauna					= 2.0
+@primary_resource_upkeep_multiplier_fauna				= 0.003	 # 0.0015
+@energy_upkeep_multiplier_fauna							= 0.0125 # 0.00625
+
+############################################################
+###                Conventional Weapons                  ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+# tier 1 weapons
+@ESC_COST_WEAPON_s_t1_primary 							= 10
+@ESC_COST_WEAPON_s_t1_special 							= 0
+@ESC_COST_WEAPON_m_t1_primary 							= 20
+@ESC_COST_WEAPON_m_t1_special 							= 0
+@ESC_COST_WEAPON_l_t1_primary 							= 40
+@ESC_COST_WEAPON_l_t1_special 							= 0
+@ESC_COST_WEAPON_xl_t1_primary 							= 80
+@ESC_COST_WEAPON_xl_t1_special 							= 0
+@ESC_COST_WEAPON_t_t1_primary 							= 160
+@ESC_COST_WEAPON_t_t1_special 							= 0
+
+# tier 2 weapons
+@ESC_COST_WEAPON_s_t2_primary 							= 13
+@ESC_COST_WEAPON_s_t2_special 							= 0
+@ESC_COST_WEAPON_m_t2_primary 							= 26
+@ESC_COST_WEAPON_m_t2_special 							= 0
+@ESC_COST_WEAPON_l_t2_primary 							= 52
+@ESC_COST_WEAPON_l_t2_special 							= 0
+@ESC_COST_WEAPON_xl_t2_primary 							= 104
+@ESC_COST_WEAPON_xl_t2_special 							= 0
+@ESC_COST_WEAPON_t_t2_primary 							= 208
+@ESC_COST_WEAPON_t_t2_special 							= 0
+
+# tier 3 weapons
+@ESC_COST_WEAPON_s_t3_primary 							= 17
+@ESC_COST_WEAPON_s_t3_special 							= 0
+@ESC_COST_WEAPON_m_t3_primary 							= 34
+@ESC_COST_WEAPON_m_t3_special 							= 0
+@ESC_COST_WEAPON_l_t3_primary 							= 68
+@ESC_COST_WEAPON_l_t3_special 							= 0
+@ESC_COST_WEAPON_xl_t3_primary 							= 136
+@ESC_COST_WEAPON_xl_t3_special 							= 0
+@ESC_COST_WEAPON_t_t3_primary 							= 272
+@ESC_COST_WEAPON_t_t3_special 							= 0
+
+# tier 4 weapons
+@ESC_COST_WEAPON_s_t4_primary 							= 17
+@ESC_COST_WEAPON_s_t4_special 							= 0.25
+@ESC_COST_WEAPON_m_t4_primary 							= 34
+@ESC_COST_WEAPON_m_t4_special 							= 0.5
+@ESC_COST_WEAPON_l_t4_primary 							= 68
+@ESC_COST_WEAPON_l_t4_special 							= 1
+@ESC_COST_WEAPON_xl_t4_primary 							= 136
+@ESC_COST_WEAPON_xl_t4_special 							= 2
+@ESC_COST_WEAPON_t_t4_primary 							= 272
+@ESC_COST_WEAPON_t_t4_special 							= 4
+
+# tier 5 weapons
+@ESC_COST_WEAPON_s_t5_primary 							= 22
+@ESC_COST_WEAPON_s_t5_special 							= 0.325
+@ESC_COST_WEAPON_m_t5_primary 							= 44
+@ESC_COST_WEAPON_m_t5_special 							= 0.65
+@ESC_COST_WEAPON_l_t5_primary 							= 88
+@ESC_COST_WEAPON_l_t5_special 							= 1.3
+@ESC_COST_WEAPON_xl_t5_primary 							= 176
+@ESC_COST_WEAPON_xl_t5_special 							= 2.6
+@ESC_COST_WEAPON_t_t5_primary 							= 352
+@ESC_COST_WEAPON_t_t5_special 							= 5.2
+
+# tier 6 weapons
+@ESC_COST_WEAPON_s_t6_primary 							= 29
+@ESC_COST_WEAPON_s_t6_special 							= 0.425
+@ESC_COST_WEAPON_m_t6_primary 							= 57
+@ESC_COST_WEAPON_m_t6_special 							= 0.85
+@ESC_COST_WEAPON_l_t6_primary 							= 114
+@ESC_COST_WEAPON_l_t6_special 							= 1.7
+@ESC_COST_WEAPON_xl_t6_primary 							= 228
+@ESC_COST_WEAPON_xl_t6_special 							= 3.38
+@ESC_COST_WEAPON_t_t6_primary 							= 456
+@ESC_COST_WEAPON_t_t6_special 							= 6.76
+
+# tier 7 weapons
+@ESC_COST_WEAPON_s_t7_primary 							= 38
+@ESC_COST_WEAPON_s_t7_special 							= 0.55
+@ESC_COST_WEAPON_m_t7_primary 							= 74
+@ESC_COST_WEAPON_m_t7_special 							= 1.1
+@ESC_COST_WEAPON_l_t7_primary 							= 148
+@ESC_COST_WEAPON_l_t7_special 							= 2.2
+@ESC_COST_WEAPON_xl_t7_primary 							= 296
+@ESC_COST_WEAPON_xl_t7_special 							= 4.4
+@ESC_COST_WEAPON_t_t7_primary 							= 592
+@ESC_COST_WEAPON_t_t7_special 							= 8.8
+
+# tier 8 weapons
+@ESC_COST_WEAPON_s_t8_primary 							= 52
+@ESC_COST_WEAPON_s_t8_special 							= 0.7
+@ESC_COST_WEAPON_m_t8_primary 							= 104
+@ESC_COST_WEAPON_m_t8_special 							= 1.4
+@ESC_COST_WEAPON_l_t8_primary 							= 208
+@ESC_COST_WEAPON_l_t8_special 							= 2.8
+@ESC_COST_WEAPON_xl_t8_primary 							= 416
+@ESC_COST_WEAPON_xl_t8_special 							= 5.6
+@ESC_COST_WEAPON_t_t8_primary 							= 832
+@ESC_COST_WEAPON_t_t8_special 							= 11.2
+
+# tier 9 weapons
+@ESC_COST_WEAPON_s_t9_primary 							= 68
+@ESC_COST_WEAPON_s_t9_special 							= 0.85
+@ESC_COST_WEAPON_m_t9_primary 							= 136
+@ESC_COST_WEAPON_m_t9_special 							= 1.75
+@ESC_COST_WEAPON_l_t9_primary 							= 272
+@ESC_COST_WEAPON_l_t9_special 							= 3.5
+@ESC_COST_WEAPON_xl_t9_primary 							= 544
+@ESC_COST_WEAPON_xl_t9_special 							= 7
+@ESC_COST_WEAPON_t_t9_primary 							= 1088
+@ESC_COST_WEAPON_t_t9_special 							= 14
+
+############################################################
+###                 Archaeotech Weapons                  ###
+############################################################
+
+# primary material costs are the same as for normal
+# weapons, armor and shields, but the special material
+# costs are different
+
+@ESC_COST_ARCHAEOTECH_s_t4_special						= 10
+@ESC_COST_ARCHAEOTECH_m_t4_special						= 12
+@ESC_COST_ARCHAEOTECH_l_t4_special						= 14
+@ESC_COST_ARCHAEOTECH_xl_t4_special						= 16
+@ESC_COST_ARCHAEOTECH_t_t4_special						= 20
+
+@ESC_COST_ARCHAEOTECH_s_t5_special						= 10
+@ESC_COST_ARCHAEOTECH_m_t5_special						= 12
+@ESC_COST_ARCHAEOTECH_l_t5_special						= 14
+@ESC_COST_ARCHAEOTECH_xl_t5_special						= 16
+@ESC_COST_ARCHAEOTECH_t_t5_special						= 20
+
+@ESC_COST_ARCHAEOTECH_s_t6_special						= 12
+@ESC_COST_ARCHAEOTECH_m_t6_special						= 14
+@ESC_COST_ARCHAEOTECH_l_t6_special						= 16
+@ESC_COST_ARCHAEOTECH_xl_t6_special						= 18
+@ESC_COST_ARCHAEOTECH_t_t6_special						= 22
+
+@ESC_COST_ARCHAEOTECH_s_t7_special						= 12
+@ESC_COST_ARCHAEOTECH_m_t7_special						= 14
+@ESC_COST_ARCHAEOTECH_l_t7_special						= 16
+@ESC_COST_ARCHAEOTECH_xl_t7_special						= 18
+@ESC_COST_ARCHAEOTECH_t_t7_special						= 22
+
+@ESC_COST_ARCHAEOTECH_s_t8_special						= 14
+@ESC_COST_ARCHAEOTECH_m_t8_special						= 16
+@ESC_COST_ARCHAEOTECH_l_t8_special						= 18
+@ESC_COST_ARCHAEOTECH_xl_t8_special						= 20
+@ESC_COST_ARCHAEOTECH_t_t8_special						= 24
+
+############################################################
+###                 Biological Weapons                   ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - minerals if it's a domesticated space fauna
+# special resource is always food
+# components have food upkeep instead of alloys
+@weapon_biological_food_upkeep_multiplier				= 0.05
+
+# tier 4 biological weapons
+@ESC_COST_WEAPON_BIOLOGICAL_s_t4_primary				= 12
+@ESC_COST_WEAPON_BIOLOGICAL_s_t4_special				= 6
+@ESC_COST_WEAPON_BIOLOGICAL_m_t4_primary				= 24
+@ESC_COST_WEAPON_BIOLOGICAL_m_t4_special				= 12
+@ESC_COST_WEAPON_BIOLOGICAL_l_t4_primary				= 48
+@ESC_COST_WEAPON_BIOLOGICAL_l_t4_special				= 24
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t4_primary				= 96
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t4_special				= 48
+@ESC_COST_WEAPON_BIOLOGICAL_t_t4_primary				= 192
+@ESC_COST_WEAPON_BIOLOGICAL_t_t4_special				= 96
+
+# tier 5 biological weapons
+@ESC_COST_WEAPON_BIOLOGICAL_s_t5_primary				= 15
+@ESC_COST_WEAPON_BIOLOGICAL_s_t5_special				= 7.5
+@ESC_COST_WEAPON_BIOLOGICAL_m_t5_primary				= 30
+@ESC_COST_WEAPON_BIOLOGICAL_m_t5_special				= 15
+@ESC_COST_WEAPON_BIOLOGICAL_l_t5_primary				= 60
+@ESC_COST_WEAPON_BIOLOGICAL_l_t5_special				= 30
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t5_primary				= 120
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t5_special				= 60
+@ESC_COST_WEAPON_BIOLOGICAL_t_t5_primary				= 240
+@ESC_COST_WEAPON_BIOLOGICAL_t_t5_special				= 120
+
+# tier 6 biological weapons
+@ESC_COST_WEAPON_BIOLOGICAL_s_t6_primary				= 18
+@ESC_COST_WEAPON_BIOLOGICAL_s_t6_special				= 9
+@ESC_COST_WEAPON_BIOLOGICAL_m_t6_primary				= 36
+@ESC_COST_WEAPON_BIOLOGICAL_m_t6_special				= 18
+@ESC_COST_WEAPON_BIOLOGICAL_l_t6_primary				= 72
+@ESC_COST_WEAPON_BIOLOGICAL_l_t6_special				= 36
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t6_primary				= 144
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t6_special				= 72
+@ESC_COST_WEAPON_BIOLOGICAL_t_t6_primary				= 288
+@ESC_COST_WEAPON_BIOLOGICAL_t_t6_special				= 144
+
+# tier 7 biological weapons
+@ESC_COST_WEAPON_BIOLOGICAL_s_t7_primary				= 21
+@ESC_COST_WEAPON_BIOLOGICAL_s_t7_special				= 10.5
+@ESC_COST_WEAPON_BIOLOGICAL_m_t7_primary				= 42
+@ESC_COST_WEAPON_BIOLOGICAL_m_t7_special				= 21
+@ESC_COST_WEAPON_BIOLOGICAL_l_t7_primary				= 84
+@ESC_COST_WEAPON_BIOLOGICAL_l_t7_special				= 42
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t7_primary				= 168
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t7_special				= 84
+@ESC_COST_WEAPON_BIOLOGICAL_t_t7_primary				= 336
+@ESC_COST_WEAPON_BIOLOGICAL_t_t7_special				= 168
+
+# tier 8 biological weapons
+@ESC_COST_WEAPON_BIOLOGICAL_s_t8_primary				= 24
+@ESC_COST_WEAPON_BIOLOGICAL_s_t8_special				= 12
+@ESC_COST_WEAPON_BIOLOGICAL_m_t8_primary				= 48
+@ESC_COST_WEAPON_BIOLOGICAL_m_t8_special				= 24
+@ESC_COST_WEAPON_BIOLOGICAL_l_t8_primary				= 96
+@ESC_COST_WEAPON_BIOLOGICAL_l_t8_special				= 48
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t8_primary				= 192
+@ESC_COST_WEAPON_BIOLOGICAL_xl_t8_special				= 96
+@ESC_COST_WEAPON_BIOLOGICAL_t_t8_primary				= 384
+@ESC_COST_WEAPON_BIOLOGICAL_t_t8_special				= 192
+
+############################################################
+###                Crystalline Weapons                   ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - minerals if it's a domesticated space fauna
+# special resource is always crystals, components do not have alloys upkeep
+@weapon_crystalline_crystal_upkeep_multiplier			= 0.006125
+
+# tier 3 crystalline weapons
+@ESC_COST_WEAPON_CRYSTALLINE_s_t3_primary				= 7
+@ESC_COST_WEAPON_CRYSTALLINE_s_t3_special				= 0.4
+@ESC_COST_WEAPON_CRYSTALLINE_m_t3_primary				= 14
+@ESC_COST_WEAPON_CRYSTALLINE_m_t3_special				= 0.8
+@ESC_COST_WEAPON_CRYSTALLINE_l_t3_primary				= 28
+@ESC_COST_WEAPON_CRYSTALLINE_l_t3_special				= 1.6
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t3_primary				= 56
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t3_special				= 3.2
+@ESC_COST_WEAPON_CRYSTALLINE_t_t3_primary				= 112
+@ESC_COST_WEAPON_CRYSTALLINE_t_t3_special				= 6.4
+
+# tier 4 crystalline weapons
+@ESC_COST_WEAPON_CRYSTALLINE_s_t4_primary				= 9
+@ESC_COST_WEAPON_CRYSTALLINE_s_t4_special				= 0.6
+@ESC_COST_WEAPON_CRYSTALLINE_m_t4_primary				= 18
+@ESC_COST_WEAPON_CRYSTALLINE_m_t4_special				= 1.2
+@ESC_COST_WEAPON_CRYSTALLINE_l_t4_primary				= 36
+@ESC_COST_WEAPON_CRYSTALLINE_l_t4_special				= 2.4
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t4_primary				= 72
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t4_special				= 4.8
+@ESC_COST_WEAPON_CRYSTALLINE_t_t4_primary				= 144
+@ESC_COST_WEAPON_CRYSTALLINE_t_t4_special				= 9.6
+
+# tier 5 crystalline weapons
+@ESC_COST_WEAPON_CRYSTALLINE_s_t5_primary				= 11
+@ESC_COST_WEAPON_CRYSTALLINE_s_t5_special				= 0.8
+@ESC_COST_WEAPON_CRYSTALLINE_m_t5_primary				= 22
+@ESC_COST_WEAPON_CRYSTALLINE_m_t5_special				= 1.6
+@ESC_COST_WEAPON_CRYSTALLINE_l_t5_primary				= 44
+@ESC_COST_WEAPON_CRYSTALLINE_l_t5_special				= 3.2
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t5_primary				= 88
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t5_special				= 6.4
+@ESC_COST_WEAPON_CRYSTALLINE_t_t5_primary				= 176
+@ESC_COST_WEAPON_CRYSTALLINE_t_t5_special				= 12.8
+
+# tier 6 crystalline weapons
+@ESC_COST_WEAPON_CRYSTALLINE_s_t6_primary				= 13
+@ESC_COST_WEAPON_CRYSTALLINE_s_t6_special				= 1.0
+@ESC_COST_WEAPON_CRYSTALLINE_m_t6_primary				= 26
+@ESC_COST_WEAPON_CRYSTALLINE_m_t6_special				= 2.0
+@ESC_COST_WEAPON_CRYSTALLINE_l_t6_primary				= 52
+@ESC_COST_WEAPON_CRYSTALLINE_l_t6_special				= 4.0
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t6_primary				= 104
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t6_special				= 8.0
+@ESC_COST_WEAPON_CRYSTALLINE_t_t6_primary				= 208
+@ESC_COST_WEAPON_CRYSTALLINE_t_t6_special				= 16.0
+
+# tier 7 crystalline weapons
+@ESC_COST_WEAPON_CRYSTALLINE_s_t7_primary				= 16
+@ESC_COST_WEAPON_CRYSTALLINE_s_t7_special				= 1.2
+@ESC_COST_WEAPON_CRYSTALLINE_m_t7_primary				= 32
+@ESC_COST_WEAPON_CRYSTALLINE_m_t7_special				= 2.4
+@ESC_COST_WEAPON_CRYSTALLINE_l_t7_primary				= 64
+@ESC_COST_WEAPON_CRYSTALLINE_l_t7_special				= 4.8
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t7_primary				= 128
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t7_special				= 9.6
+@ESC_COST_WEAPON_CRYSTALLINE_t_t7_primary				= 256
+@ESC_COST_WEAPON_CRYSTALLINE_t_t7_special				= 19.2
+
+# tier 8 crystalline weapons
+@ESC_COST_WEAPON_CRYSTALLINE_s_t8_primary				= 18
+@ESC_COST_WEAPON_CRYSTALLINE_s_t8_special				= 1.4
+@ESC_COST_WEAPON_CRYSTALLINE_m_t8_primary				= 36
+@ESC_COST_WEAPON_CRYSTALLINE_m_t8_special				= 2.8
+@ESC_COST_WEAPON_CRYSTALLINE_l_t8_primary				= 72
+@ESC_COST_WEAPON_CRYSTALLINE_l_t8_special				= 5.6
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t8_primary				= 144
+@ESC_COST_WEAPON_CRYSTALLINE_xl_t8_special				= 11.2
+@ESC_COST_WEAPON_CRYSTALLINE_t_t8_primary				= 288
+@ESC_COST_WEAPON_CRYSTALLINE_t_t8_special				= 22.4
+
+############################################################
+###                        Armor                         ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+# tier 6 armor
+@ESC_COST_ARMOR_s_t6_primary 							= 29
+@ESC_COST_ARMOR_s_t6_special 							= 0.333
+@ESC_COST_ARMOR_BIOLOGICAL_s_t6_primary 				= 15
+@ESC_COST_ARMOR_BIOLOGICAL_s_t6_special 				= 7
+
+@ESC_COST_ARMOR_m_t6_primary 							= 58
+@ESC_COST_ARMOR_m_t6_special 							= 0.666
+@ESC_COST_ARMOR_BIOLOGICAL_m_t6_primary 				= 30
+@ESC_COST_ARMOR_BIOLOGICAL_m_t6_special					= 15
+
+@ESC_COST_ARMOR_l_t6_primary 							= 106
+@ESC_COST_ARMOR_l_t6_special 							= 1.333
+@ESC_COST_ARMOR_BIOLOGICAL_l_t6_primary					= 60
+@ESC_COST_ARMOR_BIOLOGICAL_l_t6_special					= 30
+
+@ESC_COST_ARMOR_xl_t6_primary 							= 212
+@ESC_COST_ARMOR_xl_t6_special 						= 2.667
+@ESC_COST_ARMOR_BIOLOGICAL_xl_t6_primary 				= 120
+@ESC_COST_ARMOR_BIOLOGICAL_xl_t6_special				= 60
+
+# tier 7 armor
+@ESC_COST_ARMOR_s_t7_primary 							= 38
+@ESC_COST_ARMOR_s_t7_special 							= 0.5
+@ESC_COST_ARMOR_BIOLOGICAL_s_t7_primary 				= 19
+@ESC_COST_ARMOR_BIOLOGICAL_s_t7_special 				= 9
+
+@ESC_COST_ARMOR_m_t7_primary 							= 76
+@ESC_COST_ARMOR_m_t7_special 							= 1
+@ESC_COST_ARMOR_BIOLOGICAL_m_t7_primary 				= 38
+@ESC_COST_ARMOR_BIOLOGICAL_m_t7_special 				= 19
+
+@ESC_COST_ARMOR_l_t7_primary 							= 152
+@ESC_COST_ARMOR_l_t7_special 							= 2
+@ESC_COST_ARMOR_BIOLOGICAL_l_t7_primary 				= 76
+@ESC_COST_ARMOR_BIOLOGICAL_l_t7_special 				= 38
+
+@ESC_COST_ARMOR_xl_t7_primary 							= 304
+@ESC_COST_ARMOR_xl_t7_special 							= 4
+@ESC_COST_ARMOR_BIOLOGICAL_xl_t7_primary 				= 152
+@ESC_COST_ARMOR_BIOLOGICAL_xl_t7_special 				= 76
+
+# tier 8 armor
+@ESC_COST_ARMOR_s_t8_primary 							= 47
+@ESC_COST_ARMOR_s_t8_special 							= 0.666
+
+@ESC_COST_ARMOR_m_t8_primary 							= 94
+@ESC_COST_ARMOR_m_t8_special 							= 1.333
+
+@ESC_COST_ARMOR_l_t8_primary 							= 188
+@ESC_COST_ARMOR_l_t8_special 							= 2.5
+
+@ESC_COST_ARMOR_xl_t8_primary 							= 376
+@ESC_COST_ARMOR_xl_t8_special 							= 5.0
+
+############################################################
+###                        Shields                       ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+# tier 6 shields
+@ESC_COST_SHIELD_s_t6_primary							= 16
+@ESC_COST_SHIELD_s_t6_special							= 0.5
+
+@ESC_COST_SHIELD_m_t6_primary							= 29
+@ESC_COST_SHIELD_m_t6_special							= 1.0
+
+@ESC_COST_SHIELD_l_t6_primary							= 57
+@ESC_COST_SHIELD_l_t6_special							= 2.0
+
+@ESC_COST_SHIELD_xl_t6_primary							= 114
+@ESC_COST_SHIELD_xl_t6_special							= 4.0
+
+# tier 7 shields
+@ESC_COST_SHIELD_s_t7_primary							= 22
+@ESC_COST_SHIELD_s_t7_special							= 0.666
+
+@ESC_COST_SHIELD_m_t7_primary							= 38
+@ESC_COST_SHIELD_m_t7_special							= 1.333
+
+@ESC_COST_SHIELD_l_t7_primary							= 76
+@ESC_COST_SHIELD_l_t7_special							= 2.5
+
+@ESC_COST_SHIELD_xl_t7_primary							= 152
+@ESC_COST_SHIELD_xl_t7_special							= 5.0
+
+# tier 8 shields
+@ESC_COST_SHIELD_s_t8_primary 							= 26
+@ESC_COST_SHIELD_s_t8_special 							= 0.85
+
+@ESC_COST_SHIELD_m_t8_primary 							= 47
+@ESC_COST_SHIELD_m_t8_special 							= 1.7
+
+@ESC_COST_SHIELD_l_t8_primary 							= 92
+@ESC_COST_SHIELD_l_t8_special 							= 3.4
+
+@ESC_COST_SHIELD_xl_t8_primary 							= 184
+@ESC_COST_SHIELD_xl_t8_special 							= 6.8
+
+# tier 9 shields
+@ESC_COST_SHIELD_s_t9_primary							= 34
+@ESC_COST_SHIELD_s_t9_special 							= 1.1
+
+@ESC_COST_SHIELD_m_t9_primary 							= 58
+@ESC_COST_SHIELD_m_t9_special 							= 2.2
+
+@ESC_COST_SHIELD_l_t9_primary 							= 112
+@ESC_COST_SHIELD_l_t9_special 							= 4.4
+
+@ESC_COST_SHIELD_xl_t9_primary 							= 224
+@ESC_COST_SHIELD_xl_t9_special 							= 8.8

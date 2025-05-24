@@ -75,12 +75,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -139,12 +137,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -203,12 +199,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -267,12 +261,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -335,12 +327,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -398,12 +388,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -461,12 +449,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -524,12 +510,10 @@ weapon_component_template = {
 	accuracy = 0.9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 18
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_laser_hull_damage
@@ -591,12 +575,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -659,12 +641,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -727,12 +707,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -795,12 +773,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -867,12 +843,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -934,12 +908,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -1001,12 +973,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -1056,7 +1026,7 @@ weapon_component_template = {
 # extra-large
 weapon_component_template = {
 	key = XL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
-	size = large
+	size = extra_large
 	icon = GFX_esc_bio_archaeo_mass_driver_3
 	icon_frame = 1
 	type = instant
@@ -1068,12 +1038,10 @@ weapon_component_template = {
 	accuracy = 0.75
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_railgun_hull_damage
@@ -1143,12 +1111,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 15
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1228,12 +1194,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 25
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1313,12 +1277,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 35
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1398,12 +1360,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 50
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1487,12 +1447,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 20
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1571,12 +1529,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 30
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1655,12 +1611,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 40
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1739,12 +1693,10 @@ weapon_component_template = {
 	#use_ship_kill_target = no
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t8_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 55
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_artillery_hull_damage
@@ -1829,12 +1781,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -1900,12 +1850,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -1971,12 +1919,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t4_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t4_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -2042,12 +1988,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -2117,12 +2061,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -2187,12 +2129,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -2257,12 +2197,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -2327,12 +2265,10 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 18
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_missile_hull_damage
@@ -2377,386 +2313,6 @@ weapon_component_template = {
 }
 
 ############################################################
-##                Tech-Synthetic Carapace                 ##
-############################################################
-
-# small
-utility_component_template = {
-	key = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_2
-	size = small
-	icon = GFX_esc_bio_archaeo_armor_2
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_s_4
-		ship_armor_add = @armor_S4
-		ship_shield_add = @shield_S2
-		ship_shield_regen_add_static = @regen_S4
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_S2
-		ship_shield_regen_add_static = @regen_S2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_2" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
-	upgrades_to = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-# medium
-utility_component_template = {
-	key = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_2
-	size = medium
-	icon = GFX_esc_bio_archaeo_armor_2
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_m_4
-		ship_armor_add = @armor_M4
-		ship_shield_add = @shield_M2
-		ship_shield_regen_add_static = @regen_M4
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_M2
-		ship_shield_regen_add_static = @regen_M2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_2" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
-	upgrades_to = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-# large
-utility_component_template = {
-	key = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_2
-	size = large
-	icon = GFX_esc_bio_archaeo_armor_2
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_l_4
-		ship_armor_add = @armor_L4
-		ship_shield_add = @shield_L2
-		ship_shield_regen_add_static = @regen_L4
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_L2
-		ship_shield_regen_add_static = @regen_L2
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_2" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
-	upgrades_to = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-# extra-large
-utility_component_template = {
-	key = XL_ESC_ARCHAEO_ARMOR_CREATURE_2
-	size = extra_large
-	icon = GFX_esc_bio_archaeo_armor_2
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_l_5
-		ship_armor_add = @armor_L5
-		ship_shield_add = @shield_L4
-		ship_shield_regen_add_static = @regen_L5
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_L3
-		ship_shield_regen_add_static = @regen_L3
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_2" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
-	upgrades_to = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-############################################################
-##          Advanced Tech-Synthetic Carapace              ##
-############################################################
-
-# small
-utility_component_template = {
-	key = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
-	size = small
-	icon = GFX_esc_bio_archaeo_armor_3
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_s_5
-		ship_armor_add = @armor_S5
-		ship_shield_add = @shield_S3
-		ship_shield_regen_add_static = @regen_S5
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_S3
-		ship_shield_regen_add_static = @regen_S3
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_3" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-# medium
-utility_component_template = {
-	key = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
-	size = medium
-	icon = GFX_esc_bio_archaeo_armor_3
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_m_5
-		ship_armor_add = @armor_M5
-		ship_shield_add = @shield_M3
-		ship_shield_regen_add_static = @regen_M5
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_M3
-		ship_shield_regen_add_static = @regen_M3
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_3" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-# large
-utility_component_template = {
-	key = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
-	size = large
-	icon = GFX_esc_bio_archaeo_armor_3
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_l_5
-		ship_armor_add = @armor_L5
-		ship_shield_add = @shield_L3
-		ship_shield_regen_add_static = @regen_L5
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_L3
-		ship_shield_regen_add_static = @regen_L3
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_3" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-# extra-large
-utility_component_template = {
-	key = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
-	size = extra_large
-	icon = GFX_esc_bio_archaeo_armor_3
-	icon_frame = 1
-
-	modifier = {
-		ship_hull_add = @bio_ship_hull_l_6
-		ship_armor_add = @armor_L6
-		ship_shield_add = @shield_L5
-		ship_shield_regen_add_static = @regen_L6
-	}
-
-	triggered_ship_design_modifier = {
-		potential = {
-			exists = from
-			from = {
-				OR = {
-					has_ascension_perk = ap_archaeoengineers
-					is_country_type = synth_queen
-				}
-			}
-		}
-		ship_shield_add = @shield_L4
-		ship_shield_regen_add_static = @regen_L4
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 18
-	}
-
-	prerequisites = { "esc_tech_archaeoarmor_3" }
-	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_archaeo_ai_weight
-		MULTIPLIER = 1.5
-	}
-}
-
-############################################################
 ##            Tech-Synthetic Driller Beasts               ##
 ############################################################
 
@@ -2772,12 +2328,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 	}
 
 	count = @ESC_STRIKECRAFT_count_small
@@ -2852,12 +2406,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 	}
 
 	count = @ESC_STRIKECRAFT_count_medium
@@ -2932,12 +2484,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -3012,12 +2562,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
 	}
 
 	count = @ESC_STRIKECRAFT_count_xl
@@ -3096,12 +2644,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 	}
 
 	count = @ESC_STRIKECRAFT_count_small
@@ -3175,12 +2721,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 	}
 
 	count = @ESC_STRIKECRAFT_count_medium
@@ -3254,12 +2798,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 18
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -3333,12 +2875,10 @@ strike_craft_component_template = {
 	projectile_gfx = "strike_craft_laser_3"
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 20
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 	}
 
 	count = @ESC_STRIKECRAFT_count_xl
@@ -3419,12 +2959,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3485,12 +3023,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3551,12 +3087,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t5_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3617,12 +3151,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3687,12 +3219,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3752,12 +3282,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3817,12 +3345,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3882,12 +3408,10 @@ weapon_component_template = {
 	accuracy = 0.750
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 18
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_archaeo_pointdef_hull_damage
@@ -3933,6 +3457,369 @@ weapon_component_template = {
 }
 
 ############################################################
+##                Tech-Synthetic Carapace                 ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_s_4
+		ship_armor_add = @armor_S4
+		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S4
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_S2
+		ship_shield_regen_add_static = @regen_S2
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_m_4
+		ship_armor_add = @armor_M4
+		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M4
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_M2
+		ship_shield_regen_add_static = @regen_M2
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_4
+		ship_armor_add = @armor_L4
+		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L4
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L2
+		ship_shield_regen_add_static = @regen_L2
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARCHAEO_ARMOR_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_armor_2
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_5
+		ship_armor_add = @armor_L5
+		ship_shield_add = @shield_L4
+		ship_shield_regen_add_static = @regen_L5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 6
+	}
+	prerequisites = { "esc_tech_archaeoarmor_2" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_2
+	upgrades_to = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+############################################################
+##          Advanced Tech-Synthetic Carapace              ##
+############################################################
+
+# small
+utility_component_template = {
+	key = SMALL_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_s_5
+		ship_armor_add = @armor_S5
+		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_S3
+		ship_shield_regen_add_static = @regen_S3
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# medium
+utility_component_template = {
+	key = MEDIUM_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_m_5
+		ship_armor_add = @armor_M5
+		ship_shield_add = @shield_M3
+		ship_shield_regen_add_static = @regen_M5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_M3
+		ship_shield_regen_add_static = @regen_M3
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# large
+utility_component_template = {
+	key = LARGE_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_5
+		ship_armor_add = @armor_L5
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L5
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L3
+		ship_shield_regen_add_static = @regen_L3
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+# extra-large
+utility_component_template = {
+	key = XL_ESC_ARCHAEO_ARMOR_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_archaeo_armor_3
+	icon_frame = 1
+
+	modifier = {
+		ship_hull_add = @bio_ship_hull_l_6
+		ship_armor_add = @armor_L6
+		ship_shield_add = @shield_L5
+		ship_shield_regen_add_static = @regen_L6
+	}
+
+	triggered_ship_design_modifier = {
+		potential = {
+			exists = from
+			from = {
+				OR = {
+					has_ascension_perk = ap_archaeoengineers
+					is_country_type = synth_queen
+				}
+			}
+		}
+		ship_shield_add = @shield_L4
+		ship_shield_regen_add_static = @regen_L4
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 7
+	}
+
+	prerequisites = { "esc_tech_archaeoarmor_3" }
+	component_set = ESC_ARCHAEO_ARMOR_CREATURE_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_archaeo_ai_weight
+		MULTIPLIER = 1.5
+	}
+}
+
+############################################################
 ##         Tech-Synthetic Suspension Field Tissue         ##
 ############################################################
 
@@ -3944,12 +3831,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 10
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 6
 	}
 
 	modifier = {
@@ -3992,12 +3877,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 6
 	}
 
 	modifier = {
@@ -4040,12 +3923,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 6
 	}
 
 	modifier = {
@@ -4088,12 +3969,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @xl_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @xl_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 16
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 6
 	}
 
 	modifier = {
@@ -4140,12 +4019,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @s_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @s_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 7
 	}
 
 	modifier = {
@@ -4187,12 +4064,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @m_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @m_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 7
 	}
 
 	modifier = {
@@ -4234,12 +4109,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @l_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 14
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 7
 	}
 
 	modifier = {
@@ -4281,12 +4154,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @xl_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @xl_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = minor_artifacts
-		STRATEGIC_RESOURCE_COST = 12
+		script = component_costs/shorthands/esc_inlines_archaeotech_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 7
 	}
 
 	modifier = {

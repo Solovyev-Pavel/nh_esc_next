@@ -1685,10 +1685,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_s_t6_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t6_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
 	}
 
 	modifier = {
@@ -1724,10 +1724,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_m_t6_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t6_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
 	}
 
 	modifier = {
@@ -1763,10 +1763,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_l_t6_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t6_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
 	}
 
 	modifier = {
@@ -1802,10 +1802,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_xl_t6_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_xl_t6_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 6
 	}
 
 	modifier = {
@@ -1845,10 +1845,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_s_t7_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_s_t7_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
 	}
 
 	modifier = {
@@ -1883,10 +1883,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_m_t7_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_m_t7_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
 	}
 
 	modifier = {
@@ -1921,10 +1921,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_l_t7_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_l_t7_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
 	}
 
 	modifier = {
@@ -1959,10 +1959,10 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_ARMOR_xl_t7_cost_food
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = @ESC_ARMOR_xl_t7_upkeep_food
+		script = component_costs/shorthands/esc_inlines_biological_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = xl
+		TIER = 7
 	}
 
 	modifier = {
