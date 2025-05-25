@@ -24,8 +24,10 @@ ai_weight = {
 			}
 		}
 	}
-	inline_script = {
-		script = ship_components/weights/roles_stealth
-		MULT = $MULTIPLIER$
+	modifier = {
+		factor = $MULTIPLIER$
+		from = {
+			has_stealth_ship_role = yes
+		}
 	}
 }
