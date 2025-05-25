@@ -12,11 +12,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = corvette
-		POWER = @ESC_THRUSTER_t5_power_corvette
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_corvette
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 20
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -30,11 +27,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = destroyer
-		POWER = @ESC_THRUSTER_t5_power_destroyer
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_destroyer
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 16
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -48,11 +42,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = cruiser
-		POWER = @ESC_THRUSTER_t5_power_cruiser
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_cruiser
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 12
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -66,11 +57,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = battleship
-		POWER = @ESC_THRUSTER_t5_power_battleship
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_battleship
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 8
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -84,11 +72,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = titan
-		POWER = @ESC_THRUSTER_t5_power_titan
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_titan
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 4
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -102,11 +87,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = juggernaut
-		POWER = @ESC_THRUSTER_t5_power_colossus
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_colossus
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 0
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -120,11 +102,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = strikecruiser
-		POWER = @ESC_THRUSTER_t5_power_strikecruiser
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_strikecruiser
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 14
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -138,11 +117,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = battlecruiser
-		POWER = @ESC_THRUSTER_t5_power_battlecruiser
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_battlecruiser
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 10
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -156,11 +132,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = carrier
-		POWER = @ESC_THRUSTER_t5_power_carrier
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_carrier
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 8
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -174,11 +147,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = dreadnought
-		POWER = @ESC_THRUSTER_t5_power_dreadnought
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_dreadnought
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 6
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -192,11 +162,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = flagship
-		POWER = @ESC_THRUSTER_t5_power_flagship
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_flagship
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 0
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -210,15 +177,12 @@ utility_component_template = {
 	upgrades_to = ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = corvette
-		POWER = @ESC_THRUSTER_t5_power_corvette
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_corvette
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 20
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -228,15 +192,12 @@ utility_component_template = {
 	upgrades_to = DESTROYER_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = destroyer
-		POWER = @ESC_THRUSTER_t5_power_destroyer
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_destroyer
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 16
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -246,15 +207,12 @@ utility_component_template = {
 	upgrades_to = CRUISER_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = cruiser
-		POWER = @ESC_THRUSTER_t5_power_cruiser
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_cruiser
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 12
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -264,15 +222,12 @@ utility_component_template = {
 	upgrades_to = BATTLESHIP_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = battleship
-		POWER = @ESC_THRUSTER_t5_power_battleship
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_battleship
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 8
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -282,15 +237,12 @@ utility_component_template = {
 	upgrades_to = TITAN_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = titan
-		POWER = @ESC_THRUSTER_t5_power_titan
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_titan
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 4
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -300,15 +252,12 @@ utility_component_template = {
 	upgrades_to = COLOSSUS_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = colossus
-		POWER = @ESC_THRUSTER_t5_power_colossus
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_colossus
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 0
-		COMPONENT_WEIGHT = 5
+		TIER = 5
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -326,10 +275,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = corvette
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_corvette
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 20
-		COMPONENT_WEIGHT = 5
+		TIER = 5
 	}
 }
 
@@ -343,10 +289,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = destroyer
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_destroyer
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 16
-		COMPONENT_WEIGHT = 5
+		TIER = 5
 	}
 }
 
@@ -360,10 +303,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = cruiser
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_cruiser
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 12
-		COMPONENT_WEIGHT = 5
+		TIER = 5
 	}
 }
 
@@ -377,10 +317,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = battleship
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_battleship
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 8
-		COMPONENT_WEIGHT = 5
+		TIER = 5
 	}
 }
 
@@ -394,10 +331,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_5
 		PREREQUISITES = "esc_tech_thrusters_5"
 		SHIP_SIZE_GROUP = titan
-		COMPONENT_COST = @ESC_THRUSTER_t5_cost_titan
-		SPEED_MULTIPLIER = 1.0
-		EVASION_MODIFIER = 4
-		COMPONENT_WEIGHT = 5
+		TIER = 5
 	}
 }
 
@@ -414,11 +348,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = corvette
-		POWER = @ESC_THRUSTER_t6_power_corvette
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_corvette
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 25
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -431,11 +362,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = destroyer
-		POWER = @ESC_THRUSTER_t6_power_destroyer
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_destroyer
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 20
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -448,11 +376,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = cruiser
-		POWER = @ESC_THRUSTER_t6_power_cruiser
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_cruiser
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 15
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -465,11 +390,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = battleship
-		POWER = @ESC_THRUSTER_t6_power_battleship
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_battleship
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 10
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -482,11 +404,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = titan
-		POWER = @ESC_THRUSTER_t6_power_titan
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_titan
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 7
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -499,11 +418,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = juggernaut
-		POWER = @ESC_THRUSTER_t6_power_colossus
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_colossus
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 3
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -516,11 +432,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = strikecruiser
-		POWER = @ESC_THRUSTER_t5_power_strikecruiser
-		ALLOY_COST = @ESC_THRUSTER_t5_cost_strikecruiser
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 17
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -533,11 +446,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = battlecruiser
-		POWER = @ESC_THRUSTER_t6_power_battlecruiser
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_battlecruiser
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 13
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -550,11 +460,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = carrier
-		POWER = @ESC_THRUSTER_t6_power_carrier
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_carrier
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 10
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -567,11 +474,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = dreadnought
-		POWER = @ESC_THRUSTER_t6_power_dreadnought
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_dreadnought
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 8
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -584,11 +488,8 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = flagship
-		POWER = @ESC_THRUSTER_t6_power_flagship
-		ALLOY_COST = @ESC_THRUSTER_t6_cost_flagship
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 3
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = no
 	}
 }
 
@@ -601,15 +502,12 @@ utility_component_template = {
 	key = ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = corvette
-		POWER = @ESC_THRUSTER_t6_power_corvette
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_corvette
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 25
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -618,15 +516,12 @@ utility_component_template = {
 	key = DESTROYER_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = destroyer
-		POWER = @ESC_THRUSTER_t6_power_destroyer
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_destroyer
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 20
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -635,15 +530,12 @@ utility_component_template = {
 	key = CRUISER_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = cruiser
-		POWER = @ESC_THRUSTER_t6_power_cruiser
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_cruiser
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 15
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -652,15 +544,12 @@ utility_component_template = {
 	key = BATTLESHIP_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = battleship
-		POWER = @ESC_THRUSTER_t6_power_battleship
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_battleship
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 10
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -669,15 +558,12 @@ utility_component_template = {
 	key = TITAN_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = titan
-		POWER = @ESC_THRUSTER_t6_power_titan
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_titan
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 7
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -686,15 +572,12 @@ utility_component_template = {
 	key = COLOSSUS_ESC_BIO_THRUSTERS_6
 
 	inline_script = {
-		script = thrusters/esc_inlines_bio_thrusters
+		script = thrusters/esc_inlines_thrusters
 		THRUSTER_ICON = GFX_esc_bio_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = colossus
-		POWER = @ESC_THRUSTER_t6_power_colossus
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_colossus
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 3
-		COMPONENT_WEIGHT = 6
+		TIER = 6
+		IS_BIOSHIP_THRUSTER = yes
 	}
 }
 
@@ -711,10 +594,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = corvette
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_corvette
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 25
-		COMPONENT_WEIGHT = 6
+		TIER = 6
 	}
 }
 
@@ -727,10 +607,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = destroyer
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_destroyer
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 20
-		COMPONENT_WEIGHT = 6
+		TIER = 6
 	}
 }
 
@@ -743,10 +620,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = cruiser
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_cruiser
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 15
-		COMPONENT_WEIGHT = 6
+		TIER = 6
 	}
 }
 
@@ -759,10 +633,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = battleship
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_battleship
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 10
-		COMPONENT_WEIGHT = 6
+		TIER = 6
 	}
 }
 
@@ -775,10 +646,7 @@ utility_component_template = {
 		THRUSTER_ICON = GFX_esc_bioship_thrusters_6
 		PREREQUISITES = "esc_tech_thrusters_6"
 		SHIP_SIZE_GROUP = titan
-		COMPONENT_COST = @ESC_THRUSTER_t6_cost_titan
-		SPEED_MULTIPLIER = 1.25
-		EVASION_MODIFIER = 7
-		COMPONENT_WEIGHT = 6
+		TIER = 6
 	}
 }
 

@@ -6,15 +6,15 @@ icon_frame = 1
 power = 0
 
 inline_script = {
-	script = ship_components_general/esc_inlines_bio_component_cost
-	COMPONENT_COST = $COMPONENT_COST$
-	ENERGY_UPKEEP = 0
-	COMPONENT_UPKEEP_COST = 0
+	script = component_costs/shorthands/esc_inlines_thruster_no_sr_cost
+	SIZE = $SHIP_SIZE_GROUP$
+	TIER = $TIER$
 }
 
-modifier = {
-	ship_base_speed_mult = $SPEED_MULTIPLIER$
-	ship_evasion_add = $EVASION_MODIFIER$
+inline_script = {
+	script = thrusters/esc_inlines_thruster_modifiers
+	TIER = $TIER$
+	SHIP_SIZE_GROUP = $SHIP_SIZE_GROUP$
 }
 
 prerequisites = { $PREREQUISITES$ tech_thrusters_bio_integration }
@@ -25,5 +25,5 @@ potential = {
 }
 
 ai_weight = {
-	weight = $COMPONENT_WEIGHT$
+	weight = $TIER$
 }

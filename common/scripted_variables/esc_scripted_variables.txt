@@ -552,19 +552,67 @@
 ###                       Thrusters                      ###
 ############################################################
 
-# tier 5 thrusters
-@ESC_THRUSTER_t5_cost_corvette 					= 15
-@ESC_THRUSTER_t5_cost_destroyer 				= 30
-@ESC_THRUSTER_t5_cost_cruiser 					= 60
-@ESC_THRUSTER_t5_cost_battleship 				= 120
-@ESC_THRUSTER_t5_cost_titan 					= 240
-@ESC_THRUSTER_t5_cost_colossus 					= 300
-@ESC_THRUSTER_t5_cost_strikecruiser 			= 75
-@ESC_THRUSTER_t5_cost_battlecruiser 			= 100
-@ESC_THRUSTER_t5_cost_carrier 					= 120
-@ESC_THRUSTER_t5_cost_dreadnought 				= 150
-@ESC_THRUSTER_t5_cost_flagship 					= 300
+# tier 1 thrusters (NSC)
+@ESC_THRUSTER_t1_power_strikecruiser			= -60
+@ESC_THRUSTER_t1_power_battlecruiser 			= -70
+@ESC_THRUSTER_t1_power_carrier 					= -85
+@ESC_THRUSTER_t1_power_dreadnought 				= -120
+@ESC_THRUSTER_t1_power_flagship 				= -180
 
+@ESC_THRUSTER_t1_speed_multiplier				= 0.0
+
+@ESC_THRUSTER_t1_evasion_strikecruiser 			= 0
+@ESC_THRUSTER_t1_evasion_battlecruiser 			= 0
+@ESC_THRUSTER_t1_evasion_carrier 				= 0
+@ESC_THRUSTER_t1_evasion_dreadnought 			= 0
+@ESC_THRUSTER_t1_evasion_flagship 				= 0
+
+# tier 2 thrusters (NSC)
+@ESC_THRUSTER_t2_power_strikecruiser			= -80
+@ESC_THRUSTER_t2_power_battlecruiser 			= -100
+@ESC_THRUSTER_t2_power_carrier 					= -125
+@ESC_THRUSTER_t2_power_dreadnought 				= -140
+@ESC_THRUSTER_t2_power_flagship 				= -260
+
+@ESC_THRUSTER_t2_speed_multiplier				= 0.25
+
+@ESC_THRUSTER_t2_evasion_strikecruiser 			= 3
+@ESC_THRUSTER_t2_evasion_battlecruiser 			= 2
+@ESC_THRUSTER_t2_evasion_carrier 				= 1
+@ESC_THRUSTER_t2_evasion_dreadnought 			= 0
+@ESC_THRUSTER_t2_evasion_flagship 				= 0
+
+# tier 3 thrusters (NSC)
+@ESC_THRUSTER_t3_power_strikecruiser			= -100
+@ESC_THRUSTER_t3_power_battlecruiser 			= -130
+@ESC_THRUSTER_t3_power_carrier 					= -165
+@ESC_THRUSTER_t3_power_dreadnought 				= -180
+@ESC_THRUSTER_t3_power_flagship 				= -340
+
+@ESC_THRUSTER_t3_speed_multiplier				= 0.5
+
+@ESC_THRUSTER_t3_evasion_strikecruiser 			= 7
+@ESC_THRUSTER_t3_evasion_battlecruiser 			= 5
+@ESC_THRUSTER_t3_evasion_carrier 				= 2
+@ESC_THRUSTER_t3_evasion_dreadnought 			= 0
+@ESC_THRUSTER_t3_evasion_flagship 				= 0
+
+# tier 4 thrusters (NSC)
+@ESC_THRUSTER_t4_power_strikecruiser			= -120
+@ESC_THRUSTER_t4_power_battlecruiser 			= -160
+@ESC_THRUSTER_t4_power_carrier 					= -205
+@ESC_THRUSTER_t4_power_dreadnought 				= -220
+@ESC_THRUSTER_t4_power_flagship 				= -420
+
+@ESC_THRUSTER_t4_speed_multiplier				= 0.75
+
+@ESC_THRUSTER_t4_evasion_strikecruiser 			= 10
+@ESC_THRUSTER_t4_evasion_battlecruiser 			= 7
+@ESC_THRUSTER_t4_evasion_carrier 				= 3
+@ESC_THRUSTER_t4_evasion_dreadnought 			= 0
+@ESC_THRUSTER_t4_evasion_flagship 				= 0
+
+# tier 5 thrusters
 @ESC_THRUSTER_t5_power_corvette 				= -30
 @ESC_THRUSTER_t5_power_destroyer				= -60
 @ESC_THRUSTER_t5_power_cruiser 					= -120
@@ -577,18 +625,21 @@
 @ESC_THRUSTER_t5_power_dreadnought 				= -260
 @ESC_THRUSTER_t5_power_flagship 				= -500
 
-@ESC_THRUSTER_t6_cost_corvette 					= 18
-@ESC_THRUSTER_t6_cost_destroyer 				= 36
-@ESC_THRUSTER_t6_cost_cruiser 					= 72
-@ESC_THRUSTER_t6_cost_battleship 				= 144
-@ESC_THRUSTER_t6_cost_titan 					= 288
-@ESC_THRUSTER_t6_cost_colossus 					= 360
-@ESC_THRUSTER_t6_cost_strikecruiser 			= 90
-@ESC_THRUSTER_t6_cost_battlecruiser 			= 120
-@ESC_THRUSTER_t6_cost_carrier 					= 144
-@ESC_THRUSTER_t6_cost_dreadnought 				= 180
-@ESC_THRUSTER_t6_cost_flagship 					= 360
+@ESC_THRUSTER_t5_speed_multiplier				= 1.0
 
+@ESC_THRUSTER_t5_evasion_corvette 				= 20
+@ESC_THRUSTER_t5_evasion_destroyer 				= 16
+@ESC_THRUSTER_t5_evasion_cruiser 				= 12
+@ESC_THRUSTER_t5_evasion_battleship 			= 8
+@ESC_THRUSTER_t5_evasion_titan 					= 4
+@ESC_THRUSTER_t5_evasion_colossus 				= 0
+@ESC_THRUSTER_t5_evasion_strikecruiser 			= 14
+@ESC_THRUSTER_t5_evasion_battlecruiser 			= 10
+@ESC_THRUSTER_t5_evasion_carrier 				= 8
+@ESC_THRUSTER_t5_evasion_dreadnought 			= 6
+@ESC_THRUSTER_t5_evasion_flagship 				= 0
+
+# tier 6 thrusters
 @ESC_THRUSTER_t6_power_corvette 				= -35
 @ESC_THRUSTER_t6_power_destroyer 				= -72
 @ESC_THRUSTER_t6_power_cruiser 					= -144
@@ -600,6 +651,20 @@
 @ESC_THRUSTER_t6_power_carrier 					= -275
 @ESC_THRUSTER_t6_power_dreadnought 				= -300
 @ESC_THRUSTER_t6_power_flagship					= -580
+
+@ESC_THRUSTER_t6_speed_multiplier				= 1.25
+
+@ESC_THRUSTER_t6_evasion_corvette 				= 25
+@ESC_THRUSTER_t6_evasion_destroyer 				= 20
+@ESC_THRUSTER_t6_evasion_cruiser 				= 15
+@ESC_THRUSTER_t6_evasion_battleship 			= 10
+@ESC_THRUSTER_t6_evasion_titan 					= 7
+@ESC_THRUSTER_t6_evasion_colossus 				= 3
+@ESC_THRUSTER_t6_evasion_strikecruiser 			= 17
+@ESC_THRUSTER_t6_evasion_battlecruiser 			= 13
+@ESC_THRUSTER_t6_evasion_carrier 				= 10
+@ESC_THRUSTER_t6_evasion_dreadnought 			= 8
+@ESC_THRUSTER_t6_evasion_flagship 				= 3
 
 ############################################################
 ###                      Jump Drives                     ###

@@ -3,30 +3,30 @@
 size = small
 icon = $THRUSTER_ICON$
 icon_frame = 1
-power = $POWER$
+power = @ESC_THRUSTER_t$TIER$_power_$SHIP_SIZE_GROUP$
 
-resources = {
-	category = ship_components
-	cost = {
-		alloys = $ALLOY_COST$
-	}
+inline_script = {
+	script = component_costs/shorthands/esc_inlines_thruster_no_sr_cost
+	SIZE = $SHIP_SIZE_GROUP$
+	TIER = $TIER$
 }
 
-modifier = {
-	ship_base_speed_mult = $SPEED_MULTIPLIER$
-	ship_evasion_add = $EVASION_MODIFIER$
+inline_script = {
+	script = thrusters/esc_inlines_thruster_modifiers
+	TIER = $TIER$
+	SHIP_SIZE_GROUP = $SHIP_SIZE_GROUP$
 }
 
 prerequisites = { $PREREQUISITES$ }
 component_set = "thruster_components"
 
-potential = {
-	ESC_ship_uses_$SHIP_SIZE_GROUP$_components = yes
-	from = {
-		country_uses_bio_ships = no
-	}
+inline_script = {
+	script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+	EXTRA_CONDITION = ESC_ship_uses_$SHIP_SIZE_GROUP$_components
+	EXTRA_CONDITION_VALUE = yes
+	EVAL_TARGET = $IS_BIOSHIP_THRUSTER$
 }
 
 ai_weight = {
-	weight = $COMPONENT_WEIGHT$
+	weight = $TIER$
 }

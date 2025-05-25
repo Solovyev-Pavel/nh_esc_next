@@ -512,3 +512,73 @@
 
 @ESC_COST_COMPUTER_s_t2_primary       					= 20
 @ESC_COST_COMPUTER_s_t2_special		    				= 2
+
+############################################################
+###                       Thrusters                      ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+# tier 1 thrusters (NSC)
+@ESC_COST_THRUSTER_strikecruiser_t1_primary 			= 15
+@ESC_COST_THRUSTER_battlecruiser_t1_primary 			= 18
+@ESC_COST_THRUSTER_carrier_t1_primary 					= 24
+@ESC_COST_THRUSTER_dreadnought_t1_primary 				= 36
+@ESC_COST_THRUSTER_flagship_t1_primary 					= 80
+
+# tier 2 thrusters (NSC)
+@ESC_COST_THRUSTER_strikecruiser_t2_primary 			= 30
+@ESC_COST_THRUSTER_battlecruiser_t2_primary 			= 36
+@ESC_COST_THRUSTER_carrier_t2_primary 					= 48
+@ESC_COST_THRUSTER_dreadnought_t2_primary 				= 72
+@ESC_COST_THRUSTER_flagship_t2_primary 					= 140
+
+# tier 3 thrusters (NSC)
+@ESC_COST_THRUSTER_strikecruiser_t3_primary 			= 45
+@ESC_COST_THRUSTER_battlecruiser_t3_primary 			= 54
+@ESC_COST_THRUSTER_carrier_t3_primary 					= 72
+@ESC_COST_THRUSTER_dreadnought_t3_primary 				= 108
+@ESC_COST_THRUSTER_flagship_t3_primary 					= 200
+
+# tier 4 thrusters (NSC)
+@ESC_COST_THRUSTER_strikecruiser_t4_primary 			= 60
+@ESC_COST_THRUSTER_battlecruiser_t4_primary 			= 72
+@ESC_COST_THRUSTER_carrier_t4_primary 					= 96
+@ESC_COST_THRUSTER_dreadnought_t4_primary 				= 144
+@ESC_COST_THRUSTER_flagship_t4_primary 					= 260
+
+# tier 5 thrusters
+@ESC_COST_THRUSTER_corvette_t5_primary 					= 15
+@ESC_COST_THRUSTER_destroyer_t5_primary 				= 30
+@ESC_COST_THRUSTER_cruiser_t5_primary 					= 60
+@ESC_COST_THRUSTER_battleship_t5_primary 				= 120
+@ESC_COST_THRUSTER_titan_t5_primary 					= 240
+@ESC_COST_THRUSTER_colossus_t5_primary 					= 300
+@ESC_COST_THRUSTER_strikecruiser_t5_primary 			= 75
+@ESC_COST_THRUSTER_battlecruiser_t5_primary 			= 90
+@ESC_COST_THRUSTER_carrier_t5_primary 					= 120
+@ESC_COST_THRUSTER_dreadnought_t5_primary 				= 180
+@ESC_COST_THRUSTER_flagship_t5_primary 					= 320
+
+@ESC_COST_THRUSTER_strikecruiser_t5_special 			= 5
+@ESC_COST_THRUSTER_battlecruiser_t5_special 			= 6
+@ESC_COST_THRUSTER_carrier_t5_special 					= 8
+@ESC_COST_THRUSTER_dreadnought_t5_special 				= 12
+@ESC_COST_THRUSTER_flagship_t5_special 					= 32
+
+# tier 6 thrusters
+@ESC_COST_THRUSTER_corvette_t6_primary 					= 18
+@ESC_COST_THRUSTER_destroyer_t6_primary 				= 36
+@ESC_COST_THRUSTER_cruiser_t6_primary 					= 72
+@ESC_COST_THRUSTER_battleship_t6_primary 				= 144
+@ESC_COST_THRUSTER_titan_t6_primary 					= 288
+@ESC_COST_THRUSTER_colossus_t6_primary 					= 360
+@ESC_COST_THRUSTER_strikecruiser_t6_primary 			= 90
+@ESC_COST_THRUSTER_battlecruiser_t6_primary 			= 108
+@ESC_COST_THRUSTER_carrier_t6_primary 					= 144
+@ESC_COST_THRUSTER_dreadnought_t6_primary 				= 216
+@ESC_COST_THRUSTER_flagship_t6_primary 					= 360
