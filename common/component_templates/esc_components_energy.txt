@@ -97,25 +97,6 @@
 @ESC_WEAPON_arc_en_ciel_shield_damage = 1.0
 @ESC_WEAPON_arc_en_ciel_shield_penetration = 10.0
 
-# - Matter Annihilator				S/M/L
-# - Great Matter Annihilator		X
-# - Titanic Matter Annihilator		T
-# - Reality Eraser					S/M/L
-# - Great Reality Eraser			X
-# - Titanic Reality Eraser			T
-
-@ESC_WEAPON_extradimensional_hull_damage = 1.75
-@ESC_WEAPON_extradimensional_armor_damage = 1.5
-@ESC_WEAPON_extradimensional_armor_penetration = 0.0
-@ESC_WEAPON_extradimensional_shield_damage = 0.33
-@ESC_WEAPON_extradimensional_shield_penetration = 0.0
-
-@ESC_WEAPON_eraser_hull_damage = 2.0
-@ESC_WEAPON_eraser_armor_damage = 1.5
-@ESC_WEAPON_eraser_armor_penetration = 0.0
-@ESC_WEAPON_eraser_shield_damage = 0.5
-@ESC_WEAPON_eraser_shield_penetration = 0.0
-
 ############################################################
 ##                  Advanced Combat Laser                 ##
 ############################################################
@@ -135,16 +116,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t6_upkeep_energy
-			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -191,12 +168,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -243,16 +219,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_m_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -299,12 +271,11 @@ weapon_component_template = {
 	power = -34
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -351,16 +322,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t6_upkeep_energy
-			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -407,12 +374,11 @@ weapon_component_template = {
 	power = -64
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -463,16 +429,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -518,12 +480,11 @@ weapon_component_template = {
 	power = -24
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -569,16 +530,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -624,12 +581,11 @@ weapon_component_template = {
 	power = -46
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -675,16 +631,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -90
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -730,12 +682,11 @@ weapon_component_template = {
 	power = -90
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_laser_hull_damage
@@ -785,16 +736,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t6_cost_alloys
-			exotic_gases = @ESC_WEAPON_s_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t6_upkeep_energy
-			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -842,12 +789,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -895,16 +841,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			exotic_gases = @ESC_WEAPON_m_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -952,12 +894,11 @@ weapon_component_template = {
 	power = -34
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1006,16 +947,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t6_cost_alloys
-			exotic_gases = @ESC_WEAPON_l_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t6_upkeep_energy
-			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1068,12 +1005,11 @@ weapon_component_template = {
 	power = -64
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1129,16 +1065,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1185,12 +1117,11 @@ weapon_component_template = {
 	power = -24
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1237,16 +1168,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1293,12 +1220,11 @@ weapon_component_template = {
 	power = -46
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1346,16 +1272,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -90
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1407,12 +1329,11 @@ weapon_component_template = {
 	power = -90
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_hull_damage
@@ -1467,16 +1388,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t6_upkeep_energy
-			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1524,12 +1441,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1577,16 +1493,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -37
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_m_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1634,12 +1546,11 @@ weapon_component_template = {
 	power = -37
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1691,16 +1602,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1747,12 +1654,11 @@ weapon_component_template = {
 	power = -24
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1799,16 +1705,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1855,12 +1757,11 @@ weapon_component_template = {
 	power = -46
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_disruptor_hull_damage
@@ -1913,16 +1814,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -105
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -1976,12 +1873,11 @@ weapon_component_template = {
 	power = -105
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -2040,16 +1936,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -120
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			exotic_gases = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -2102,12 +1994,11 @@ weapon_component_template = {
 	power = -120
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -2163,16 +2054,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -40
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t9_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_s_t9_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t9_upkeep_energy
-			alloys = @ESC_WEAPON_s_t9_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_chrono_hull_damage
@@ -2223,16 +2110,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t9_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_m_t9_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t9_upkeep_energy
-			alloys = @ESC_WEAPON_m_t9_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_chrono_hull_damage
@@ -2284,16 +2167,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -120
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t9_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t9_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t9_upkeep_energy
-			alloys = @ESC_WEAPON_l_t9_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_chrono_hull_damage
@@ -2348,16 +2227,11 @@ weapon_component_template = {
 	power = -55
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t6_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = 0
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_2
@@ -2402,16 +2276,11 @@ weapon_component_template = {
 	power = -70
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = 0
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_lightning_hull_damage_3
@@ -2460,15 +2329,11 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -9
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t6_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t6_upkeep_energy
-			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2513,12 +2378,10 @@ weapon_component_template = {
 	power = -9
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2563,15 +2426,11 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -17
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2616,12 +2475,10 @@ weapon_component_template = {
 	power = -17
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2670,15 +2527,11 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -12
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2722,12 +2575,10 @@ weapon_component_template = {
 	power = -12
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2771,15 +2622,11 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2823,12 +2670,10 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_drone_laser_hull_damage
@@ -2876,16 +2721,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -105
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -2934,12 +2775,11 @@ weapon_component_template = {
 	power = -105
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -2991,16 +2831,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -120
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -3048,12 +2884,11 @@ weapon_component_template = {
 	power = -120
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_energy_launcher_hull_damage
@@ -3103,16 +2938,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -280
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3169,12 +3000,11 @@ weapon_component_template = {
 	power = -280
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3234,16 +3064,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -310
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3300,12 +3126,11 @@ weapon_component_template = {
 	power = -310
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3366,16 +3191,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3431,12 +3252,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_t_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_t_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3492,16 +3312,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3558,12 +3374,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_t_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_t_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
@@ -3623,16 +3438,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -280
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -3690,12 +3501,11 @@ weapon_component_template = {
 	power = -280
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -3756,16 +3566,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -310
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -3828,12 +3634,11 @@ weapon_component_template = {
 	power = -310
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_xl_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_xl_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -3900,16 +3705,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -3971,12 +3772,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_t_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_t_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -4038,16 +3838,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -4110,12 +3906,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_t_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_t_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
@@ -4181,17 +3976,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -250
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
-			exotic_gases = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_wmg_hull_damage
@@ -4256,17 +4046,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -280
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
-			exotic_gases = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_wmg_hull_damage
@@ -4332,17 +4117,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t6_cost_special
-			exotic_gases = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_wmg_hull_damage
@@ -4403,17 +4183,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t6_cost_special
-			exotic_gases = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_wmg_hull_damage
@@ -4479,16 +4254,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -375
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
@@ -4555,16 +4326,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -600
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
@@ -4627,16 +4394,12 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -600
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
@@ -4665,650 +4428,6 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-	}
-}
-
-############################################################
-##                   Matter Annihilator                   ##
-############################################################
-
-# small
-weapon_component_template = {
-	key = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_2
-	size = small
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 36 max = 102 }
-	size_damage_factor = 0.1
-	windup = { min = 5 max = 20 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_S_2
-	accuracy = 0.9
-	power = -28
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.6
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
-	projectile_gfx = "disruptor_2_small"
-	upgrades_to = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
-	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-# medium
-weapon_component_template = {
-	key = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_2
-	size = medium
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 114 max = 218 }
-	size_damage_factor = 0.1
-	windup = { min = 5 max = 20 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_M_2
-	accuracy = 0.9
-	power = -52
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.3
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
-	projectile_gfx = "disruptor_2_medium"
-	upgrades_to = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
-	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-# large
-weapon_component_template = {
-	key = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_2
-	size = large
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 228 max = 454 }
-	size_damage_factor = 0.1
-	windup = { min = 5 max = 20 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_L_2
-	accuracy = 0.9
-	power = -100
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.05
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
-	projectile_gfx = "disruptor_2_large"
-	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
-	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-############################################################
-##                Grand Matter Annihilator                ##
-############################################################
-
-weapon_component_template = {
-	key = ESC_EXTRADIMENSIONAL_WEAPON_2_X
-	size = extra_large
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 1500 max = 2700 }
-	size_damage_factor = 0.1
-	windup = { min = 10 max = 35 }
-	total_fire_time = 80
-	range = @ESC_WEAPON_RANGE_X_4
-	accuracy = 0.85
-	power = -280
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2_x" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_X
-	projectile_gfx = "esc_extradimensional_x_2"
-	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_X
-	# no clean way to enable upgrades both to Juggernaut version and to Reality Eraser, so using only the former
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-############################################################
-##               Titanic Matter Annihilator               ##
-############################################################
-
-weapon_component_template = {
-	key =ESC_EXTRADIMENSIONAL_WEAPON_2_T
-	size = titanic
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 6000 max = 9000 }
-	size_damage_factor = 0.1
-	windup = { min = 30 max = 70 }
-	total_fire_time = 170
-	range = @ESC_WEAPON_RANGE_T_3
-	accuracy = 0.85
-	power = -500
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t6_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t6_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t6_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2_t" }
-	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_T
-	projectile_gfx = "esc_extradimensional_t_2"
-	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_T
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-############################################################
-##                     Reality Eraser                     ##
-############################################################
-
-# small
-weapon_component_template = {
-	key = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
-	size = small
-	icon = GFX_esc_extradimensional_cannon_3
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 42 max = 118 }
-	size_damage_factor = 0.15
-	windup = { min = 5 max = 20 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_S_2
-	accuracy = 0.9
-	power = -34
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t9_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t9_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t9_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t9_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_eraser_hull_damage
-	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
-	armor_damage = @ESC_WEAPON_eraser_armor_damage
-	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
-	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.6
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
-	projectile_gfx = "esc_disruptor_4_small"
-	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-	}
-}
-
-# medium
-weapon_component_template = {
-	key = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
-	size = medium
-	icon = GFX_esc_extradimensional_cannon_3
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 128 max = 236 }
-	size_damage_factor = 0.15
-	windup = { min = 5 max = 20 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_M_2
-	accuracy = 0.9
-	power = -60
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t9_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t9_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t9_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t9_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_eraser_hull_damage
-	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
-	armor_damage = @ESC_WEAPON_eraser_armor_damage
-	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
-	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.3
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
-	projectile_gfx = "esc_disruptor_4_medium"
-	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-	}
-}
-
-# large
-weapon_component_template = {
-	key = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
-	size = large
-	icon = GFX_esc_extradimensional_cannon_3
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 252 max = 488 }
-	size_damage_factor = 0.15
-	windup = { min = 5 max = 20 }
-	total_fire_time = 30
-	range = @ESC_WEAPON_RANGE_L_2
-	accuracy = 0.9
-	power = -110
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t9_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t9_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t9_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t9_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_eraser_hull_damage
-	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
-	armor_damage = @ESC_WEAPON_eraser_armor_damage
-	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
-	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.05
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
-	projectile_gfx = "esc_disruptor_4_large"
-	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-	}
-}
-
-############################################################
-##                  Grand Reality Eraser                  ##
-############################################################
-
-weapon_component_template = {
-	key = ESC_EXTRADIMENSIONAL_WEAPON_3_X
-	size = extra_large
-	icon = GFX_esc_extradimensional_cannon_3
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 1700 max = 2850 }
-	size_damage_factor = 0.15
-	windup = { min = 10 max = 35 }
-	total_fire_time = 80
-	range = @ESC_WEAPON_RANGE_X_4
-	accuracy = 0.85
-	power = -330
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_eraser_hull_damage
-	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
-	armor_damage = @ESC_WEAPON_eraser_armor_damage
-	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
-	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3_x" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
-	projectile_gfx = "esc_extradimensional_x_3"
-	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-	}
-}
-
-############################################################
-##                 Titanic Reality Eraser                 ##
-############################################################
-
-weapon_component_template = {
-	key = ESC_EXTRADIMENSIONAL_WEAPON_3_T
-	size = titanic
-	icon = GFX_esc_extradimensional_cannon_3
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 7000 max = 9000 }
-	size_damage_factor = 0.15
-	windup = { min = 30 max = 70 }
-	total_fire_time = 170
-	range = @ESC_WEAPON_RANGE_T_3
-	accuracy = 0.85
-	power = -550
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
-	}
-
-	hull_damage = @ESC_WEAPON_eraser_hull_damage
-	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
-	armor_damage = @ESC_WEAPON_eraser_armor_damage
-	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
-	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3_t" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
-	projectile_gfx = "esc_extradimensional_t_3"
-	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
 	}
 
 	target_weights = {
