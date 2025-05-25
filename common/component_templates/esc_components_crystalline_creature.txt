@@ -32,15 +32,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_s_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t3_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_s_t3_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 3
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -93,15 +89,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_m_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t3_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_m_t3_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 3
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -155,15 +147,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t3_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 3
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -217,15 +205,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t3_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t3_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t3_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 3
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -282,15 +266,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_s_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t4_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_s_t4_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -343,15 +323,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_m_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t4_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_m_t4_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -405,15 +381,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t4_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -467,15 +439,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t4_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t4_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t4_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 4
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -532,14 +500,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_s_t5_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_s_t5_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -592,15 +557,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_m_t5_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t5_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_m_t5_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -654,15 +615,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t5_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t5_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -716,15 +673,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t5_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t5_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t5_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 5
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -781,15 +734,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_s_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t6_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_s_t6_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -842,15 +791,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_m_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t6_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_m_t6_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -904,15 +849,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t6_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -966,15 +907,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t6_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t6_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t6_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -1031,15 +968,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_S_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_s_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_s_t7_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_s_t7_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -1091,15 +1024,11 @@ weapon_component_template = {
 	range = @ESC_WEAPON_RANGE_M_3
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_m_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_m_t7_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_m_t7_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -1152,15 +1081,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.85
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t7_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
@@ -1213,15 +1138,11 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_4
 	accuracy = 0.8
 
-	resources = {
-		category = ship_components
-		cost = {
-			minerals = @ESC_WEAPON_crystalline_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_crystalline_l_t7_cost_crystals
-		}
-		upkeep = {
-			minerals = @ESC_WEAPON_crystalline_l_t7_upkeep_energy
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_crystalline_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 	}
 
 	hull_damage = @ESC_WEAPON_crystalline_hull_damage
