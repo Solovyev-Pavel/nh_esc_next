@@ -111,90 +111,6 @@
 @ESC_WEAPON_t_t7_upkeep_alloys 					= 1.186
 
 ############################################################
-###                 Biological Weapons                   ###
-############################################################
-
-### biological weapons : tier 1
-@ESC_WEAPON_biological_s_t4_cost_alloys			= 10
-@ESC_WEAPON_biological_s_t4_cost_food			= 4
-@ESC_WEAPON_biological_s_t4_upkeep_energy		= 0.20
-@ESC_WEAPON_biological_s_t4_upkeep_food			= 0.068
-
-@ESC_WEAPON_biological_m_t4_cost_alloys			= 20
-@ESC_WEAPON_biological_m_t4_cost_food			= 8
-@ESC_WEAPON_biological_m_t4_upkeep_energy		= 0.40
-@ESC_WEAPON_biological_m_t4_upkeep_food			= 0.136
-
-@ESC_WEAPON_biological_l_t4_cost_alloys			= 40
-@ESC_WEAPON_biological_l_t4_cost_food			= 16
-@ESC_WEAPON_biological_l_t4_upkeep_energy		= 0.80
-@ESC_WEAPON_biological_l_t4_upkeep_food			= 0.272
-
-### biological weapons : tier 2
-@ESC_WEAPON_biological_s_t5_cost_alloys			= 12
-@ESC_WEAPON_biological_s_t5_cost_food			= 5
-@ESC_WEAPON_biological_s_t5_upkeep_energy		= 0.24
-@ESC_WEAPON_biological_s_t5_upkeep_food			= 0.088
-
-@ESC_WEAPON_biological_m_t5_cost_alloys			= 24
-@ESC_WEAPON_biological_m_t5_cost_food			= 10
-@ESC_WEAPON_biological_m_t5_upkeep_energy		= 0.48
-@ESC_WEAPON_biological_m_t5_upkeep_food			= 0.176
-
-@ESC_WEAPON_biological_l_t5_cost_alloys			= 48
-@ESC_WEAPON_biological_l_t5_cost_food			= 20
-@ESC_WEAPON_biological_l_t5_upkeep_energy		= 0.96
-@ESC_WEAPON_biological_l_t5_upkeep_food			= 0.352
-
-### biological weapons : tier 3
-@ESC_WEAPON_biological_s_t6_cost_alloys			= 15
-@ESC_WEAPON_biological_s_t6_cost_food			= 7
-@ESC_WEAPON_biological_s_t6_upkeep_energy		= 0.30
-@ESC_WEAPON_biological_s_t6_upkeep_food			= 0.104
-
-@ESC_WEAPON_biological_m_t6_cost_alloys			= 30
-@ESC_WEAPON_biological_m_t6_cost_food			= 14
-@ESC_WEAPON_biological_m_t6_upkeep_energy		= 0.60
-@ESC_WEAPON_biological_m_t6_upkeep_food			= 0.208
-
-@ESC_WEAPON_biological_l_t6_cost_alloys			= 60
-@ESC_WEAPON_biological_l_t6_cost_food			= 28
-@ESC_WEAPON_biological_l_t6_upkeep_energy		= 1.20
-@ESC_WEAPON_biological_l_t6_upkeep_food			= 0.416
-
-### biological weapons : tier 4
-@ESC_WEAPON_biological_s_t7_cost_alloys			= 18
-@ESC_WEAPON_biological_s_t7_cost_food			= 8
-@ESC_WEAPON_biological_s_t7_upkeep_energy		= 0.36
-@ESC_WEAPON_biological_s_t7_upkeep_food			= 0.148
-
-@ESC_WEAPON_biological_m_t7_cost_alloys			= 36
-@ESC_WEAPON_biological_m_t7_cost_food			= 16
-@ESC_WEAPON_biological_m_t7_upkeep_energy		= 0.72
-@ESC_WEAPON_biological_m_t7_upkeep_food			= 0.296
-
-@ESC_WEAPON_biological_l_t7_cost_alloys			= 72
-@ESC_WEAPON_biological_l_t7_cost_food			= 32
-@ESC_WEAPON_biological_l_t7_upkeep_energy		= 1.44
-@ESC_WEAPON_biological_l_t7_upkeep_food			= 0.592
-
-### extralarge biological weapons
-@ESC_WEAPON_biological_lance_1_cost_alloys		= 100
-@ESC_WEAPON_biological_lance_1_cost_food		= 50
-@ESC_WEAPON_biological_lance_1_upkeep_energy	= 2.00
-@ESC_WEAPON_biological_lance_1_upkeep_food		= 0.912
-
-@ESC_WEAPON_biological_lance_2_cost_alloys		= 150
-@ESC_WEAPON_biological_lance_2_cost_food		= 70
-@ESC_WEAPON_biological_lance_2_upkeep_energy	= 3.00
-@ESC_WEAPON_biological_lance_2_upkeep_food		= 1.186
-
-@ESC_WEAPON_biological_lance_3_cost_alloys		= 200
-@ESC_WEAPON_biological_lance_3_cost_food		= 90
-@ESC_WEAPON_biological_lance_3_upkeep_energy	= 4.00
-@ESC_WEAPON_biological_lance_3_upkeep_food		= 1.482
-
-############################################################
 ###                Crystalline Weapons                   ###
 ############################################################
 
@@ -315,14 +231,6 @@
 @ESC_ARMOR_s_t6_regen_secondary_1				= 1.7
 @ESC_ARMOR_s_t6_regen_secondary_2				= 0.85
 
-@ESC_ARMOR_s_t6_cost_alloys_1 					= 29
-@ESC_ARMOR_s_t6_cost_alloys_2 					= 15
-@ESC_ARMOR_s_t6_cost_food 						= 7
-@ESC_ARMOR_s_t6_cost_special 					= 0.333
-@ESC_ARMOR_s_t6_upkeep_energy 					= 0.29
-@ESC_ARMOR_s_t6_upkeep_alloys 					= 0.058
-@ESC_ARMOR_s_t6_upkeep_food 					= 0.116
-
 @ESC_ARMOR_m_t6_str_primary_1 					= 925
 @ESC_ARMOR_m_t6_str_primary_2 					= 740
 @ESC_ARMOR_m_t6_str_primary_3 					= 550
@@ -333,14 +241,6 @@
 @ESC_ARMOR_m_t6_regen_primary_2					= 1.8
 @ESC_ARMOR_m_t6_regen_secondary_1				= 4.3
 @ESC_ARMOR_m_t6_regen_secondary_2				= 2.15
-
-@ESC_ARMOR_m_t6_cost_alloys_1 					= 58
-@ESC_ARMOR_m_t6_cost_alloys_2 					= 30
-@ESC_ARMOR_m_t6_cost_food 						= 15
-@ESC_ARMOR_m_t6_cost_special 					= 0.666
-@ESC_ARMOR_m_t6_upkeep_energy 					= 0.58
-@ESC_ARMOR_m_t6_upkeep_alloys 					= 0.106
-@ESC_ARMOR_m_t6_upkeep_food 					= 0.232
 
 @ESC_ARMOR_l_t6_str_primary_1 					= 2220
 @ESC_ARMOR_l_t6_str_primary_2 					= 1740
@@ -353,14 +253,6 @@
 @ESC_ARMOR_l_t6_regen_secondary_1				= 10.50
 @ESC_ARMOR_l_t6_regen_secondary_2				= 5.25
 
-@ESC_ARMOR_l_t6_cost_alloys_1 					= 106
-@ESC_ARMOR_l_t6_cost_alloys_2 					= 60
-@ESC_ARMOR_l_t6_cost_food 						= 30
-@ESC_ARMOR_l_t6_cost_special 					= 1.333
-@ESC_ARMOR_l_t6_upkeep_energy 					= 1.16
-@ESC_ARMOR_l_t6_upkeep_alloys 					= 0.212
-@ESC_ARMOR_l_t6_upkeep_food 					= 0.464
-
 @ESC_ARMOR_xl_t6_str_primary_1 					= 4440
 @ESC_ARMOR_xl_t6_str_primary_2 					= 3480
 @ESC_ARMOR_xl_t6_str_primary_3 					= 2640
@@ -371,14 +263,6 @@
 @ESC_ARMOR_xl_t6_regen_primary_2				= 8.7
 @ESC_ARMOR_xl_t6_regen_secondary_1				= 21.0
 @ESC_ARMOR_xl_t6_regen_secondary_2				= 10.50
-
-@ESC_ARMOR_xl_t6_cost_alloys_1 					= 212
-@ESC_ARMOR_xl_t6_cost_alloys_2 					= 120
-@ESC_ARMOR_xl_t6_cost_food 						= 60
-@ESC_ARMOR_xl_t6_cost_special 					= 2.667
-@ESC_ARMOR_xl_t6_upkeep_energy 					= 2.32
-@ESC_ARMOR_xl_t6_upkeep_alloys 					= 0.424
-@ESC_ARMOR_xl_t6_upkeep_food 					= 0.928
 
 ### tier 7
 @ESC_ARMOR_s_t7_str_primary_1 					= 480
@@ -392,14 +276,6 @@
 @ESC_ARMOR_s_t7_regen_secondary_1				= 2.2
 @ESC_ARMOR_s_t7_regen_secondary_2				= 1.1
 
-@ESC_ARMOR_s_t7_cost_alloys_1 					= 38
-@ESC_ARMOR_s_t7_cost_alloys_2 					= 19
-@ESC_ARMOR_s_t7_cost_food 						= 9
-@ESC_ARMOR_s_t7_cost_special 					= 0.5
-@ESC_ARMOR_s_t7_upkeep_energy 					= 0.38
-@ESC_ARMOR_s_t7_upkeep_alloys 					= 0.076
-@ESC_ARMOR_s_t7_upkeep_food 					= 0.152
-
 @ESC_ARMOR_m_t7_str_primary_1 					= 1200
 @ESC_ARMOR_m_t7_str_primary_2 					= 930
 @ESC_ARMOR_m_t7_str_primary_3 					= 730
@@ -410,14 +286,6 @@
 @ESC_ARMOR_m_t7_regen_primary_2					= 2.325
 @ESC_ARMOR_m_t7_regen_secondary_1				= 5.5
 @ESC_ARMOR_m_t7_regen_secondary_2				= 2.75
-
-@ESC_ARMOR_m_t7_cost_alloys_1 					= 76
-@ESC_ARMOR_m_t7_cost_alloys_2 					= 38
-@ESC_ARMOR_m_t7_cost_food 						= 19
-@ESC_ARMOR_m_t7_cost_special 					= 1
-@ESC_ARMOR_m_t7_upkeep_energy 					= 0.76
-@ESC_ARMOR_m_t7_upkeep_alloys 					= 0.152
-@ESC_ARMOR_m_t7_upkeep_food 					= 0.304
 
 @ESC_ARMOR_l_t7_str_primary_1 					= 2880
 @ESC_ARMOR_l_t7_str_primary_2 					= 2220
@@ -430,14 +298,6 @@
 @ESC_ARMOR_l_t7_regen_secondary_1				= 13.2
 @ESC_ARMOR_l_t7_regen_secondary_2				= 6.6
 
-@ESC_ARMOR_l_t7_cost_alloys_1 					= 152
-@ESC_ARMOR_l_t7_cost_alloys_2 					= 76
-@ESC_ARMOR_l_t7_cost_food 						= 38
-@ESC_ARMOR_l_t7_cost_special 					= 2
-@ESC_ARMOR_l_t7_upkeep_energy 					= 1.52
-@ESC_ARMOR_l_t7_upkeep_alloys 					= 0.304
-@ESC_ARMOR_l_t7_upkeep_food 					= 0.608
-
 @ESC_ARMOR_xl_t7_str_primary_1 					= 5760
 @ESC_ARMOR_xl_t7_str_primary_2 					= 4440
 @ESC_ARMOR_xl_t7_str_primary_3 					= 3480
@@ -448,14 +308,6 @@
 @ESC_ARMOR_xl_t7_regen_primary_2				= 11.1
 @ESC_ARMOR_xl_t7_regen_secondary_1				= 26.4
 @ESC_ARMOR_xl_t7_regen_secondary_2				= 13.2
-
-@ESC_ARMOR_xl_t7_cost_alloys_1 					= 304
-@ESC_ARMOR_xl_t7_cost_alloys_2 					= 152
-@ESC_ARMOR_xl_t7_cost_food 						= 76
-@ESC_ARMOR_xl_t7_cost_special 					= 4
-@ESC_ARMOR_xl_t7_upkeep_energy 					= 3.04
-@ESC_ARMOR_xl_t7_upkeep_alloys 					= 0.608
-@ESC_ARMOR_xl_t7_upkeep_food 					= 1.216
 
 ### tier 8
 @ESC_ARMOR_s_t8_str_primary_1 					= 600
@@ -469,11 +321,6 @@
 @ESC_ARMOR_s_t8_regen_secondary_1				= 2.8
 @ESC_ARMOR_s_t8_regen_secondary_2				= 1.4
 
-@ESC_ARMOR_s_t8_cost_alloys_1 					= 47
-@ESC_ARMOR_s_t8_cost_special 					= 0.666
-@ESC_ARMOR_s_t8_upkeep_energy 					= 0.47
-@ESC_ARMOR_s_t8_upkeep_alloys 					= 0.094
-
 @ESC_ARMOR_m_t8_str_primary_1 					= 1500
 @ESC_ARMOR_m_t8_str_primary_2 					= 1200
 @ESC_ARMOR_m_t8_str_primary_3 					= 930
@@ -484,11 +331,6 @@
 @ESC_ARMOR_m_t8_regen_primary_2					= 3.0
 @ESC_ARMOR_m_t8_regen_secondary_1				= 7.3
 @ESC_ARMOR_m_t8_regen_secondary_2				= 3.65
-
-@ESC_ARMOR_m_t8_cost_alloys_1 					= 94
-@ESC_ARMOR_m_t8_cost_special 					= 1.333
-@ESC_ARMOR_m_t8_upkeep_energy 					= 0.94
-@ESC_ARMOR_m_t8_upkeep_alloys 					= 0.188
 
 @ESC_ARMOR_l_t8_str_primary_1 					= 3900
 @ESC_ARMOR_l_t8_str_primary_2 					= 3000
@@ -501,11 +343,6 @@
 @ESC_ARMOR_l_t8_regen_secondary_1				= 17.5
 @ESC_ARMOR_l_t8_regen_secondary_2				= 8.7
 
-@ESC_ARMOR_l_t8_cost_alloys_1 					= 188
-@ESC_ARMOR_l_t8_cost_special 					= 2.5
-@ESC_ARMOR_l_t8_upkeep_energy 					= 1.88
-@ESC_ARMOR_l_t8_upkeep_alloys 					= 0.376
-
 @ESC_ARMOR_xl_t8_str_primary_1 					= 7800
 @ESC_ARMOR_xl_t8_str_primary_2 					= 6000
 @ESC_ARMOR_xl_t8_str_primary_3 					= 4440
@@ -516,11 +353,6 @@
 @ESC_ARMOR_xl_t8_regen_primary_2				= 15.0
 @ESC_ARMOR_xl_t8_regen_secondary_1				= 35.0
 @ESC_ARMOR_xl_t8_regen_secondary_2				= 17.5
-
-@ESC_ARMOR_xl_t8_cost_alloys_1 					= 376
-@ESC_ARMOR_xl_t8_cost_special 					= 5.0
-@ESC_ARMOR_xl_t8_upkeep_energy 					= 3.76
-@ESC_ARMOR_xl_t8_upkeep_alloys 					= 0.752
 
 @ESC_ARMOR_l_dreadnought_str 					= 10000
 
