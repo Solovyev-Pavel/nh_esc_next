@@ -12,11 +12,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = @ESC_SENSOR_t5_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_SENSOR_t5_cost
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 5
 	}
 
 	inline_script = {
@@ -47,10 +47,10 @@ utility_component_template = {
 	power = @ESC_SENSOR_t5_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 5
 	}
 
 	inline_script = {
@@ -81,10 +81,10 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t5_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 5
 	}
 
 	sensor_range = @ESC_SENSOR_t5_sensor_range
@@ -109,11 +109,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = @ESC_SENSOR_t6_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_SENSOR_t6_cost
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 6
 	}
 
 	inline_script = {
@@ -144,10 +144,10 @@ utility_component_template = {
 	power = @ESC_SENSOR_t6_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 6
 	}
 
 	inline_script = {
@@ -178,10 +178,10 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t6_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 6
 	}
 
 	sensor_range = @ESC_SENSOR_t6_sensor_range
@@ -206,11 +206,11 @@ utility_component_template = {
 	icon_frame = 1
 	power = @ESC_SENSOR_t7_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_SENSOR_t7_cost
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
 	}
 
 	inline_script = {
@@ -244,10 +244,10 @@ utility_component_template = {
 	power = @ESC_SENSOR_t7_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
 	}
 
 	inline_script = {
@@ -281,10 +281,10 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
 	}
 
 	sensor_range = @ESC_SENSOR_t7_sensor_range
@@ -312,12 +312,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = @ESC_SENSOR_t6_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_SENSOR_t6_cost
-			sr_dark_matter = 1
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	inline_script = {
@@ -358,12 +358,11 @@ utility_component_template = {
 	power = @ESC_SENSOR_t6_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 1
 	}
 
 	inline_script = {
@@ -404,10 +403,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	sensor_range = @ESC_SENSOR_t7_sensor_range
@@ -435,12 +435,12 @@ utility_component_template = {
 	icon_frame = 1
 	power = @ESC_SENSOR_t7_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_SENSOR_t7_cost
-			sr_zro = 1
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_zro
 	}
 
 	inline_script = {
@@ -478,12 +478,11 @@ utility_component_template = {
 	power = @ESC_SENSOR_t7_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 1
 	}
 
 	inline_script = {
@@ -521,12 +520,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 1
 	}
 
 	inline_script = {
@@ -564,12 +562,11 @@ utility_component_template = {
 	power = @ESC_SENSOR_t7_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 1.5
 	}
 
 	inline_script = {
@@ -610,12 +607,11 @@ utility_component_template = {
 	power = @ESC_SENSOR_t7_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 2
 	}
 
 	inline_script = {
@@ -656,12 +652,11 @@ utility_component_template = {
 	power = @ESC_SENSOR_t7_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SENSOR_t7_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SENSOR
+		SIZE = s
+		TIER = 10
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 2.5
 	}
 
 	inline_script = {
@@ -734,16 +729,18 @@ utility_component_template = {
 	jumpdrive = yes
 	power = @ESC_JUMP_DRIVE_t2_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_JUMP_DRIVE_t2_cost
-			sr_dark_matter = 1.5
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 2
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -779,16 +776,17 @@ utility_component_template = {
 	power = @ESC_JUMP_DRIVE_t2_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 2
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 1.5
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
@@ -824,12 +822,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 2
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 1.5
 	}
 
 	ship_modifier = {
@@ -863,16 +860,18 @@ utility_component_template = {
 	jumpdrive = yes
 	power = @ESC_JUMP_DRIVE_t3_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_JUMP_DRIVE_t3_cost
-			sr_dark_matter = 2
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 3
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -908,16 +907,17 @@ utility_component_template = {
 	power = @ESC_JUMP_DRIVE_t3_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 3
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 2
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
@@ -953,12 +953,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_power
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 3
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 2
 	}
 
 	ship_modifier = {
@@ -992,16 +991,18 @@ utility_component_template = {
 	jumpdrive = yes
 	power = @ESC_JUMP_DRIVE_t3_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_JUMP_DRIVE_t3_cost
-			sr_dark_matter = 2.5
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 4
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -1036,16 +1037,17 @@ utility_component_template = {
 	power = @ESC_JUMP_DRIVE_t3_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 4
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 2.5
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
@@ -1080,12 +1082,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 4
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = 2.5
 	}
 
 	ship_modifier = {
@@ -1118,16 +1119,18 @@ utility_component_template = {
 	jumpdrive = yes
 	power = @ESC_JUMP_DRIVE_t2_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_JUMP_DRIVE_t2_cost
-			sr_zro = 1.5
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 2
+		STRATEGIC_RESOURCE_TYPE = sr_zro
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -1163,16 +1166,17 @@ utility_component_template = {
 	power = @ESC_JUMP_DRIVE_t2_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 2
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 1.5
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
@@ -1208,12 +1212,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 2
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 1.5
 	}
 
 	ship_modifier = {
@@ -1247,16 +1250,18 @@ utility_component_template = {
 	jumpdrive = yes
 	power = @ESC_JUMP_DRIVE_t3_power
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_JUMP_DRIVE_t3_cost
-			sr_zro = 2
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 3
+		STRATEGIC_RESOURCE_TYPE = sr_zro
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -1291,16 +1296,17 @@ utility_component_template = {
 	power = @ESC_JUMP_DRIVE_t3_power
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t3_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 3
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 2
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_jumpdrives
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = ship_uses_jump_drives
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
@@ -1335,12 +1341,11 @@ utility_component_template = {
 	power = 0
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_JUMP_DRIVE_t2_cost
-		ENERGY_UPKEEP = 0
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = FTL
+		SIZE = s
+		TIER = 3
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = 2
 	}
 
 	ship_modifier = {

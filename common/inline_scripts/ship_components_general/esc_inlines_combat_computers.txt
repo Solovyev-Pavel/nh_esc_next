@@ -5,19 +5,19 @@ icon = $COMPUTER_ICON$
 icon_frame = 1
 power = $POWER$
 
-potential = {
-	ESC_ship_uses_$SHIP_COMBAT_ROLE$_computers = yes
-	from = {
-		country_uses_bio_ships = no
-	}
+inline_script = {
+	script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+	EXTRA_CONDITION = ESC_ship_uses_$SHIP_COMBAT_ROLE$_computers
+	EXTRA_CONDITION_VALUE = yes
+	EVAL_TARGET = $IS_BIOSHIP_COMPUTER$
 }
 
-resources = {
-	category = ship_components
-	cost = {
-		alloys = $ALLOY_COST$
-		$STRATEGIC_RESOURCE_TYPE$ = $STRATEGIC_RESOURCE_COST$
-	}
+inline_script = {
+	script = component_costs/shorthands/esc_inlines_standard_cost
+	COMPONENT_TYPE = COMPUTER
+	SIZE = s
+	TIER = 2
+	STRATEGIC_RESOURCE_TYPE = $STRATEGIC_RESOURCE_TYPE$
 }
 
 component_set = "combat_computers"

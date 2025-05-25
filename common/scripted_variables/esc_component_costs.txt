@@ -449,3 +449,66 @@
 
 @ESC_COST_SHIELD_xl_t9_primary 							= 224
 @ESC_COST_SHIELD_xl_t9_special 							= 8.8
+
+############################################################
+###                       Sensors                        ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+@ESC_COST_SENSOR_s_t5_primary 							= 10
+@ESC_COST_SENSOR_s_t5_special 							= 1
+
+@ESC_COST_SENSOR_s_t6_primary							= 12
+@ESC_COST_SENSOR_s_t6_special							= 1
+
+@ESC_COST_SENSOR_s_t7_primary 							= 14
+@ESC_COST_SENSOR_s_t7_special 							= 1
+
+@ESC_COST_SENSOR_s_t8_primary 							= 16
+@ESC_COST_SENSOR_s_t8_special 							= 1.5
+
+@ESC_COST_SENSOR_s_t9_primary 							= 18
+@ESC_COST_SENSOR_s_t9_special 							= 2
+
+@ESC_COST_SENSOR_s_t10_primary 							= 20
+@ESC_COST_SENSOR_s_t10_special 							= 2.5
+
+############################################################
+###                         FTL                          ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+# tier 2 jumpdrives and psi-jumpdrives
+@ESC_COST_FTL_s_t2_primary 								= 50
+@ESC_COST_FTL_s_t2_special 								= 1.5
+
+# tier 3 jumpdrives and psi-jumpdrives
+@ESC_COST_FTL_s_t3_primary 								= 65
+@ESC_COST_FTL_s_t3_special 								= 2
+
+# FE jumpdrives
+@ESC_COST_FTL_s_t4_primary 								= 80
+@ESC_COST_FTL_s_t4_special 								= 2.5
+
+############################################################
+###                   Combat Computers                   ###
+############################################################
+
+# for conventional ships, primary cost is:
+# - alloys if it's a mechanical or biological ship
+# - food if it's a domesticated space fauna in a food using empire
+# - minerals if it's a domesticated space fauna in an empire that doesn't use food
+# for conventional ships, special is whatever rare or strategic resource is required aside from alloys/food/minerals
+
+@ESC_COST_COMPUTER_s_t2_primary       					= 20
+@ESC_COST_COMPUTER_s_t2_special		    				= 2
