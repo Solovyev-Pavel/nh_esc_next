@@ -5,6 +5,7 @@ inline_script = {
 	script = component_costs/esc_inlines_component_cost
 	# passed:
 	PRIMARY_RESOURCE_COST 					= @ESC_COST_THRUSTER_$SIZE$_t$TIER$_primary
+	PRIMARY_RESOURCE_COST_SCALING 			= @ESC_$IS_BIOSHIP_THRUSTER$_bioship_thruster_cost_multiplier
 	STRATEGIC_RESOURCE_TYPE					= $STRATEGIC_RESOURCE_TYPE$
 	STRATEGIC_RESOURCE_COST					= @ESC_COST_THRUSTER_$SIZE$_t$TIER$_special
 	# defaults:
@@ -13,7 +14,6 @@ inline_script = {
 	PRIMARY_RESOURCE_TYPE_FAUNA_FOOD		= food
 	PRIMARY_RESOURCE_TYPE_FAUNA_LITHOVORE 	= minerals
 	BIOSHIP_UPKEEP_RESOURCE_TYPE			= food
-	PRIMARY_RESOURCE_COST_SCALING 			= 1.0
 	PRIMARY_RESOURCE_UPKEEP_SCALING			= 0.0 # thrusters do not have upkeep
 	ENERGY_UPKEEP_SCALING					= 0.0
 	BIOSHIP_UPKEEP_RESOURCE_SCALING			= 0.0
