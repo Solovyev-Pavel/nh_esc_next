@@ -169,6 +169,19 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_CHRONO_CANNON
+	icon = GFX_esc_bio_chrono_cannon
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CHRONO_CANNON_CREATURE
+	icon = GFX_esc_bio_chrono_cannon
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # amplified cloud lightning (ships + creatures)
 component_set = {
 	key = ESC_CLOUD_LIGHTNING_2
@@ -402,11 +415,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_WAVEMOTIONGUN_1
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_WAVEMOTIONGUN_CREATURE_1
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # dimensional wave cannon
 component_set = {
 	key = ESC_WAVEMOTIONGUN_2
 	icon = GFX_esc_wave_motion_gun_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_WAVEMOTIONGUN_2
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_WAVEMOTIONGUN_CREATURE_2
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # titanic dimensional wave cannon (titan)
@@ -416,9 +455,21 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_WAVEMOTIONGUN_3
+	icon = GFX_esc_wave_motion_gun_3
+	icon_frame = 1
+}
+
 # titanic dimensional wave cannon (juggernaut)
 component_set = {
 	key = ESC_WAVEMOTIONGUN_JUGGERNAUT
+	icon = GFX_esc_wave_motion_gun_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_WAVEMOTIONGUN_JUGGERNAUT
 	icon = GFX_esc_wave_motion_gun_3
 	icon_frame = 1
 }

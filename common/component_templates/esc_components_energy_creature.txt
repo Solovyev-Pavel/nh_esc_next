@@ -2,73 +2,26 @@
 ##           ESC : Energy Weapons : Space Fauna           ##
 ############################################################
 
-# - Advanced Combat Laser			S/M/L/X
-# - Aurora Laser					S/M/L/X
-# - Advanced Plasma Cannon			S/M/L/X
-# - Dragonbreath Cannon				S/M/L/X
-# - Tachyon Disruptor				S/M/L/X
-# - Disruptor Lance					S/M/L/X
-# - Muon Launcher					S/M/L/X
-# - Antimatter Launcher				S/M/L/X
-# - Amplified Cloud Lightning		S/M/L/X
-# - Thunderstorm Generator			S/M/L/X
-# - Plasma Cutter					S/M/L/X
-# - Advanced Plasma Cutter			S/M/L/X
-
-@ESC_WEAPON_laser_hull_damage = 1.25
-@ESC_WEAPON_laser_armor_damage = 1.5
-@ESC_WEAPON_laser_armor_penetration = 0.0
-@ESC_WEAPON_laser_shield_damage = 0.5
-@ESC_WEAPON_laser_shield_penetration = 0.0
-
-@ESC_WEAPON_plasma_hull_damage = 1.5
-@ESC_WEAPON_plasma_armor_damage = 2.0
-@ESC_WEAPON_plasma_armor_penetration = 0.0
-@ESC_WEAPON_plasma_shield_damage = 0.25
-@ESC_WEAPON_plasma_shield_penetration = 0.0
-
-@ESC_WEAPON_disruptor_hull_damage = 1.0
-@ESC_WEAPON_disruptor_armor_damage = 1.0
-@ESC_WEAPON_disruptor_armor_penetration = 1.0
-@ESC_WEAPON_disruptor_shield_damage = 1.0
-@ESC_WEAPON_disruptor_shield_penetration = 1.0
-
-@ESC_WEAPON_energy_launcher_hull_damage = 1.75
-@ESC_WEAPON_energy_launcher_armor_damage = 1.5
-@ESC_WEAPON_energy_launcher_armor_penetration = 0.0
-@ESC_WEAPON_energy_launcher_shield_damage = 0.5
-@ESC_WEAPON_energy_launcher_shield_penetration = 0.0
-
-@ESC_WEAPON_lightning_hull_damage_2 = 1.0
-@ESC_WEAPON_lightning_hull_damage_3 = 1.15
-@ESC_WEAPON_lightning_armor_damage = 1.0
-@ESC_WEAPON_lightning_armor_penetration = 1.0
-@ESC_WEAPON_lightning_shield_damage = 1.0
-@ESC_WEAPON_lightning_shield_penetration = 1.0
-
-@ESC_WEAPON_drone_laser_hull_damage = 1.75
-@ESC_WEAPON_drone_laser_armor_damage_2 = 1.25
-@ESC_WEAPON_drone_laser_armor_damage_3 = 1.5
-@ESC_WEAPON_drone_laser_armor_penetration = 0.0
-@ESC_WEAPON_drone_laser_shield_damage = 0.5
-@ESC_WEAPON_drone_laser_shield_penetration = 0.0
+# - Advanced Combat Laser				S/M/L/X
+# - Aurora Laser						S/M/L/X
+# - Advanced Plasma Cannon				S/M/L/X
+# - Dragonbreath Cannon					S/M/L/X
+# - Tachyon Disruptor					S/M/L/X
+# - Disruptor Lance						S/M/L/X
+# - Muon Launcher						S/M/L/X
+# - Antimatter Launcher					S/M/L/X
+# - Amplified Cloud Lightning			S/M/L/X
+# - Thunderstorm Generator				S/M/L/X
+# - Plasma Cutter						S/M/L/X
+# - Advanced Plasma Cutter				S/M/L/X
+# - Chrono-Vortex Launcer				S/M/L/X
 
 # - Improved Tachyon Lance				S/M/L/X
 # - Hypercharged Tachyon Lance			S/M/L/X
 # - Lightning Cannon					S/M/L/X
 # - Arc Cannon							S/M/L/X
-
-@ESC_WEAPON_particle_lance_hull_damage = 1.5
-@ESC_WEAPON_particle_lance_armor_damage = 2.0
-@ESC_WEAPON_particle_lance_armor_penetration = 0.0
-@ESC_WEAPON_particle_lance_shield_damage = 0.5
-@ESC_WEAPON_particle_lance_shield_penetration = 0.0
-
-@ESC_WEAPON_arc_emitter_hull_damage = 1.0
-@ESC_WEAPON_arc_emitter_armor_penetration = 1.0
-@ESC_WEAPON_arc_emitter_armor_damage = 1.0
-@ESC_WEAPON_arc_emitter_shield_penetration = 1.0
-@ESC_WEAPON_arc_emitter_shield_damage = 1.0
+# - Proton Scream						S/M/L/X
+# - Atomic Breath						S/M/L/X
 
 ############################################################
 ##                  Advanced Combat Laser                 ##
@@ -2363,6 +2316,212 @@ weapon_component_template = {
 }
 
 ############################################################
+##                 Chrono-Vortex Launcer                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_CHRONO_CANNON_CREATURE
+	size = small
+	icon = GFX_esc_bio_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 60 max = 110 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.8
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON_CREATURE
+	projectile_gfx = "esc_chronocannon_small"
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_CHRONO_CANNON_CREATURE
+	size = medium
+	icon = GFX_esc_bio_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 114 max = 278 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON_CREATURE
+	projectile_gfx = "esc_chronocannon_medium"
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_CHRONO_CANNON_CREATURE
+	size = large
+	icon = GFX_esc_bio_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 294 max = 546 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON_CREATURE
+	projectile_gfx = "esc_chronocannon_large"
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_CHRONO_CANNON_CREATURE
+	size = extra_large
+	icon = GFX_esc_bio_chrono_cannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 582 max = 1092 }
+	windup = { min = 2.0 max = 25.0 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_chrono_hull_damage
+	armor_penetration = @ESC_WEAPON_chrono_armor_penetration
+	armor_damage = @ESC_WEAPON_chrono_armor_damage
+	shield_penetration = @ESC_WEAPON_chrono_shield_penetration
+	shield_damage = @ESC_WEAPON_chrono_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_chrono_cannon" }
+	component_set = ESC_CHRONO_CANNON_CREATURE
+	projectile_gfx = "esc_chronocannon_large"
+	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
 ##                 Improved Tachyon Lance                 ##
 ############################################################
 
@@ -3262,6 +3421,466 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                     Proton Scream                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_WAVEMOTIONGUN_CREATURE_1
+	size = small
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 155 max = 325 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_1" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
+	projectile_gfx = "esc_wavemotiongun_1"
+	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = SMALL_ESC_WAVEMOTIONGUN_CREATURE_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_WAVEMOTIONGUN_CREATURE_1
+	size = medium
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 325 max = 625 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_3
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_1" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
+	projectile_gfx = "esc_wavemotiongun_1"
+	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = MEDIUM_ESC_WAVEMOTIONGUN_CREATURE_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_WAVEMOTIONGUN_CREATURE_1
+	size = large
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 625 max = 1250 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_1" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
+	projectile_gfx = "esc_wavemotiongun_1"
+	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = LARGE_ESC_WAVEMOTIONGUN_CREATURE_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_WAVEMOTIONGUN_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_wave_motion_gun_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1250 max = 2500 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_1" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
+	projectile_gfx = "esc_wavemotiongun_1"
+	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = XL_ESC_WAVEMOTIONGUN_CREATURE_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
+##                     Atomic Breath                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_WAVEMOTIONGUN_CREATURE_2
+	size = small
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 185 max = 485 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_2" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
+	projectile_gfx = "esc_wavemotiongun_2"
+	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_WAVEMOTIONGUN_CREATURE_2
+	size = medium
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 375 max = 685 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_3
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_2" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
+	projectile_gfx = "esc_wavemotiongun_2"
+	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_WAVEMOTIONGUN_CREATURE_2
+	size = large
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 750 max = 1375 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_2" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
+	projectile_gfx = "esc_wavemotiongun_2"
+	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_WAVEMOTIONGUN_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_wave_motion_gun_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1500 max = 2750 }
+	windup = { min = 9 max = 28 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_2" }
+	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
+	projectile_gfx = "esc_wavemotiongun_2"
+	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
 		}
 	}
 }
