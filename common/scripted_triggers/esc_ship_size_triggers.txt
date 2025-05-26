@@ -149,6 +149,11 @@ ESC_ship_uses_juggernaut_components = {
 		is_ship_size = @MISC_WarJuggernaut
 	}
 }
+ESC_ship_uses_colossus_components = {
+	OR = {
+		ESC_ship_uses_juggernaut_components = yes
+	}
+}
 
 ###
 ### ESC gives different reactors to different size of platforms...
