@@ -560,6 +560,13 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_PSIONIC_TORPEDO_CREATURE_1
+	icon = GFX_esc_bio_psionic_torpedo_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # improved psi-blast torpedo
 component_set = {
 	key = ESC_PSIONIC_TORPEDO_2
@@ -571,6 +578,13 @@ component_set = {
 	key = ESC_BIO_PSIONIC_TORPEDO_2
 	icon = GFX_esc_bio_psionic_torpedo_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_TORPEDO_CREATURE_2
+	icon = GFX_esc_bio_psionic_torpedo_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # psionic lance
@@ -612,6 +626,13 @@ component_set = {
 	key = ESC_BIO_PSIONIC_INTERCEPTORS
 	icon = GFX_esc_bio_psionic_strikecraft
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_INTERCEPTORS_CREATURE
+	icon = GFX_esc_bio_psionic_strikecraft
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # psionic blast

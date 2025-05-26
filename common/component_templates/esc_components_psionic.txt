@@ -14,23 +14,6 @@
 # - Psionic Interceptors				H
 # - Psionic Blast (Shroud Avatar)		M
 
-@ESC_WEAPON_psionic_hull_damage = 1.25
-@ESC_WEAPON_psionic_lance_hull_damage = 1.5
-@ESC_WEAPON_psionic_strike_hull_damage = 1.0
-@ESC_WEAPON_psionic_armor_damage = 1.0
-@ESC_WEAPON_psionic_armor_penetration = 1.0
-@ESC_WEAPON_psionic_shield_damage = 0.5
-@ESC_WEAPON_psionic_torpedo_shield_damage = 0.7
-@ESC_WEAPON_psionic_strike_shield_damage = 1.0
-@ESC_WEAPON_psionic_shield_penetration = 0
-@ESC_WEAPON_psionic_strike_shield_penetration = 1.0
-
-@ESC_WEAPON_psionic_strikecraft_hull_damage = 1.25
-@ESC_WEAPON_psionic_strikecraft_armor_damage = 1.0
-@ESC_WEAPON_psionic_strikecraft_armor_penetration = 1.0
-@ESC_WEAPON_psionic_strikecraft_shield_damage = 0.5
-@ESC_WEAPON_psionic_strikecraft_shield_penetration = 0.75
-
 ############################################################
 ##                Psionic Energy Projector                ##
 ############################################################
@@ -51,16 +34,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -113,16 +91,11 @@ weapon_component_template = {
 	power = -34
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -176,16 +149,11 @@ weapon_component_template = {
 	power = -64
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -242,16 +210,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -303,16 +266,11 @@ weapon_component_template = {
 	power = -34
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -365,16 +323,11 @@ weapon_component_template = {
 	power = -64
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -430,16 +383,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -492,16 +440,11 @@ weapon_component_template = {
 	power = -34
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -555,16 +498,11 @@ weapon_component_template = {
 	power = -64
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -621,16 +559,11 @@ weapon_component_template = {
 	power = -24
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -682,16 +615,11 @@ weapon_component_template = {
 	power = -46
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -744,16 +672,11 @@ weapon_component_template = {
 	power = -90
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_strike_hull_damage
@@ -816,16 +739,11 @@ weapon_component_template = {
 	power = -70
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -890,16 +808,11 @@ weapon_component_template = {
 	power = -70
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -970,16 +883,11 @@ weapon_component_template = {
 	power = -80
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -1043,16 +951,11 @@ weapon_component_template = {
 	power = -80
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_hull_damage
@@ -1114,16 +1017,11 @@ weapon_component_template = {
 	power = -275
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1191,16 +1089,11 @@ weapon_component_template = {
 	power = -325
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1269,16 +1162,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1342,16 +1230,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
@@ -1416,16 +1299,11 @@ strike_craft_component_template = {
 	power = -70
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -1493,16 +1371,11 @@ strike_craft_component_template = {
 	power = -70
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	count = @ESC_STRIKECRAFT_count_large

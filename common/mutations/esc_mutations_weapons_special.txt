@@ -213,6 +213,43 @@ esc_psionic_strike_2 = {
 	}
 }
 
+# Psi-blast Torpedo
+esc_psionic_torpedo_creature_1 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_torpedo_1
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_1
+		medium = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_1
+		large = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_1
+		extra_large = XL_ESC_PSIONIC_TORPEDO_CREATURE_1
+	}
+	upgrades_to = "esc_psionic_torpedo_creature_2"
+}
+
+# Improved Psi-blast Torpedo
+esc_psionic_torpedo_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_torpedo_2
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_2
+		medium = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_2
+		large = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_2
+		extra_large = XL_ESC_PSIONIC_TORPEDO_CREATURE_2
+	}
+}
+
+# Psionic Interceptors
+esc_psionic_interceptors_creature = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_strikecraft
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_INTERCEPTORS_CREATURE
+		medium = MEDIUM_ESC_PSIONIC_INTERCEPTORS_CREATURE
+		large = LARGE_ESC_PSIONIC_INTERCEPTORS_CREATURE
+		extra_large = XL_ESC_PSIONIC_INTERCEPTORS_CREATURE
+	}
+}
+
 ############################################################
 ##         ESC : Leviathan Weapons : Space Fauna          ##
 ############################################################
