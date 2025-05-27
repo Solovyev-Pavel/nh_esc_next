@@ -1,0 +1,872 @@
+############################################################
+##           ESC : Kinetic Weapons : Space Fauna          ##
+############################################################
+
+# - Advanced Gauss Cannon				S/M/L/X
+# - Strike Cannon						S/M/L/X
+# - Improved Kinetic Artillery			S/M/L/X
+# - Skypiercer Artillery				S/M/L/X
+
+############################################################
+##                Advanced Gauss Cannon                   ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MASS_DRIVER_CREATURE_6
+	size = small
+	icon = GFX_esc_bio_mass_driver_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 18 max = 57 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_mass_driver_6" }
+	component_set = ESC_MASS_DRIVER_CREATURE_6
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
+	upgrades_to = SMALL_ESC_MASS_DRIVER_CREATURE_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MASS_DRIVER_CREATURE_6
+	size = medium
+	icon = GFX_esc_bio_mass_driver_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 44 max = 148 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_mass_driver_6" }
+	component_set = ESC_MASS_DRIVER_CREATURE_6
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship }
+	upgrades_to = MEDIUM_ESC_MASS_DRIVER_CREATURE_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MASS_DRIVER_CREATURE_6
+	size = large
+	icon = GFX_esc_bio_mass_driver_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 104 max = 318 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mass_driver_6" }
+	component_set = ESC_MASS_DRIVER_CREATURE_6
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = LARGE_ESC_MASS_DRIVER_CREATURE_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MASS_DRIVER_CREATURE_6
+	size = extra_large
+	icon = GFX_esc_bio_mass_driver_6
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 208 max = 636 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mass_driver_6" }
+	component_set = ESC_MASS_DRIVER_CREATURE_6
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler gunship }
+	upgrades_to = XL_ESC_MASS_DRIVER_CREATURE_7
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                     Strike Cannon                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MASS_DRIVER_CREATURE_7
+	size = small
+	icon = GFX_esc_bio_mass_driver_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 24 max = 74 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_mass_driver_7" }
+	component_set = ESC_MASS_DRIVER_CREATURE_7
+	projectile_gfx = "gauss_cannon_s"
+	tags = { weapon_type_kinetic s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MASS_DRIVER_CREATURE_7
+	size = medium
+	icon = GFX_esc_bio_mass_driver_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 67 max = 192 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_mass_driver_7" }
+	component_set = ESC_MASS_DRIVER_CREATURE_7
+	projectile_gfx = "gauss_cannon_m"
+	tags = { weapon_type_kinetic m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MASS_DRIVER_CREATURE_7
+	size = large
+	icon = GFX_esc_bio_mass_driver_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 158 max = 378 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mass_driver_7" }
+	component_set = ESC_MASS_DRIVER_CREATURE_7
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MASS_DRIVER_CREATURE_7
+	size = extra_large
+	icon = GFX_esc_bio_mass_driver_7
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 316 max = 756 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mass_driver_hull_damage
+	armor_penetration = @ESC_WEAPON_mass_driver_armor_penetration
+	armor_damage = @ESC_WEAPON_mass_driver_armor_damage
+	shield_penetration = @ESC_WEAPON_mass_driver_shield_penetration
+	shield_damage = @ESC_WEAPON_mass_driver_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mass_driver_7" }
+	component_set = ESC_MASS_DRIVER_CREATURE_7
+	projectile_gfx = "gauss_cannon_l"
+	tags = { weapon_type_kinetic x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                Improved Kinetic Artillery              ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ARTILLERY_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_kinetic_artillery_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 65 max = 180 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_3" }
+	component_set = ESC_ARTILLERY_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	upgrades_to = SMALL_ESC_ARTILLERY_CREATURE_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ARTILLERY_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_kinetic_artillery_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 125 max = 360 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_3" }
+	component_set = ESC_ARTILLERY_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	upgrades_to = MEDIUM_ESC_ARTILLERY_CREATURE_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ARTILLERY_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_kinetic_artillery_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 245 max = 720 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_3" }
+	component_set = ESC_ARTILLERY_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	upgrades_to = LARGE_ESC_ARTILLERY_CREATURE_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ARTILLERY_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_kinetic_artillery_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 490 max = 1440 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_3" }
+	component_set = ESC_ARTILLERY_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	upgrades_to = XL_ESC_ARTILLERY_CREATURE_4
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                  Skypiercer Artillery                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ARTILLERY_CREATURE_4
+	size = small
+	icon = GFX_esc_bio_kinetic_artillery_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 75 max = 220 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_4" }
+	component_set = ESC_ARTILLERY_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ARTILLERY_CREATURE_4
+	size = medium
+	icon = GFX_esc_bio_kinetic_artillery_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 150 max = 435 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_4" }
+	component_set = ESC_ARTILLERY_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ARTILLERY_CREATURE_4
+	size = large
+	icon = GFX_esc_bio_kinetic_artillery_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 300 max = 870 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_4" }
+	component_set = ESC_ARTILLERY_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ARTILLERY_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_bio_kinetic_artillery_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 600 max = 1740 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_4" }
+	component_set = ESC_ARTILLERY_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}

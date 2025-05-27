@@ -240,6 +240,60 @@ esc_wavemotiongun_creature_2 = {
 }
 
 ############################################################
+##          ESC : Kinetic weapons : Space Fauna           ##
+############################################################
+
+# Evolved Shard Gauss Accelerator
+esc_mass_driver_creature_6 = {
+	type = offensive
+	icon = GFX_esc_bio_mass_driver_6
+	ship_components = {
+		small = SMALL_ESC_MASS_DRIVER_CREATURE_6
+		medium = MEDIUM_ESC_MASS_DRIVER_CREATURE_6
+		large = LARGE_ESC_MASS_DRIVER_CREATURE_6
+		extra_large = XL_ESC_MASS_DRIVER_CREATURE_6
+	}
+	upgrades_to = "esc_mass_driver_creature_7"
+}
+
+# Strike Cannon
+esc_mass_driver_creature_7 = {
+	type = offensive
+	icon = GFX_esc_bio_mass_driver_7
+	ship_components = {
+		small = SMALL_ESC_MASS_DRIVER_CREATURE_7
+		medium = MEDIUM_ESC_MASS_DRIVER_CREATURE_7
+		large = LARGE_ESC_MASS_DRIVER_CREATURE_7
+		extra_large = XL_ESC_MASS_DRIVER_CREATURE_7
+	}
+}
+
+# Advanced Kinetic Artillery
+esc_artillery_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_kinetic_artillery_3
+	ship_components = {
+		small = SMALL_ESC_ARTILLERY_CREATURE_3
+		medium = MEDIUM_ESC_ARTILLERY_CREATURE_3
+		large = LARGE_ESC_ARTILLERY_CREATURE_3
+		extra_large = XL_ESC_ARTILLERY_CREATURE_3
+	}
+	upgrades_to = "esc_artillery_creature_4"
+}
+
+# Skypiercer Artillery
+esc_artillery_creature_4 = {
+	type = offensive
+	icon = GFX_esc_bio_kinetic_artillery_4
+	ship_components = {
+		small = SMALL_ESC_ARTILLERY_CREATURE_4
+		medium = MEDIUM_ESC_ARTILLERY_CREATURE_4
+		large = LARGE_ESC_ARTILLERY_CREATURE_4
+		extra_large = XL_ESC_ARTILLERY_CREATURE_4
+	}
+}
+
+############################################################
 ##          ESC : Missile Weapons : Space Fauna           ##
 ############################################################
 

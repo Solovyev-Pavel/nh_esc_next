@@ -162,7 +162,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# chrono-vortex cannon
+# chrono-vortex cannon (ships + creatures)
 component_set = {
 	key = ESC_CHRONO_CANNON
 	icon = GFX_esc_chrono_cannon
@@ -210,7 +210,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# plasma cutter
+# plasma cutter (ships + creatures)
 component_set = {
 	key = ESC_MINING_LASER_2
 	icon = GFX_esc_mining_laser_2
@@ -230,7 +230,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# advanced plasma cutter
+# advanced plasma cutter (ships + creatures)
 component_set = {
 	key = ESC_MINING_LASER_3
 	icon = GFX_esc_mining_laser_3
@@ -250,7 +250,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# juggernaut beam cannon
+# juggernaut beam cannon (ships + creatures)
 component_set = {
 	key = ESC_JUGGERNAUT_BEAM_CANNON_1
 	icon = GFX_esc_juggernaut_laser_1
@@ -263,7 +263,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# improved juggernaut beam cannon
+# improved juggernaut beam cannon (ships + creatures)
 component_set = {
 	key = ESC_JUGGERNAUT_BEAM_CANNON_2
 	icon = GFX_esc_juggernaut_laser_2
@@ -316,7 +316,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# light of destruction (titan)
+# light of destruction (titan) (ships + creatures)
 component_set = {
 	key = ESC_PARTICLE_LANCE_TITANIC
 	icon = GFX_esc_particle_lance_titanic
@@ -329,7 +329,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# light of destruction (juggernaut)
+# light of destruction (juggernaut) (ships + creatures)
 component_set = {
 	key = ESC_PARTICLE_LANCE_JUGGERNAUT
 	icon = GFX_esc_particle_lance_titanic
@@ -382,7 +382,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# divine thunder (titan)
+# divine thunder (titan) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EMITTER_TITANIC
 	icon = GFX_esc_arc_cannon_titanic
@@ -395,7 +395,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# divine thunder (juggernaut)
+# divine thunder (juggernaut) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EMITTER_JUGGERNAUT
 	icon = GFX_esc_arc_cannon_titanic
@@ -408,7 +408,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# wave-motion gun
+# wave-motion gun (ships + creatures)
 component_set = {
 	key = ESC_WAVEMOTIONGUN_1
 	icon = GFX_esc_wave_motion_gun_1
@@ -428,7 +428,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# dimensional wave cannon
+# dimensional wave cannon (ships + creatures)
 component_set = {
 	key = ESC_WAVEMOTIONGUN_2
 	icon = GFX_esc_wave_motion_gun_2
@@ -448,7 +448,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# titanic dimensional wave cannon (titan)
+# titanic dimensional wave cannon (titan) (ships + creatures)
 component_set = {
 	key = ESC_WAVEMOTIONGUN_3
 	icon = GFX_esc_wave_motion_gun_3
@@ -461,7 +461,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# titanic dimensional wave cannon (juggernaut)
+# titanic dimensional wave cannon (juggernaut) (ships + creatures)
 component_set = {
 	key = ESC_WAVEMOTIONGUN_JUGGERNAUT
 	icon = GFX_esc_wave_motion_gun_3
@@ -474,21 +474,21 @@ component_set = {
 	icon_frame = 1
 }
 
-# arc-en-ciel (x-slot)
+# arc-en-ciel (x-slot) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EN_CIEL
 	icon = GFX_esc_arc_en_ciel
 	icon_frame = 1
 }
 
-# arc-en-ciel (titan)
+# arc-en-ciel (titan) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EN_CIEL_TITANIC
 	icon = GFX_esc_arc_en_ciel
 	icon_frame = 1
 }
 
-# arc-en-ciel (juggernaut)
+# arc-en-ciel (juggernaut) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EN_CIEL_JUGGERNAUT
 	icon = GFX_esc_arc_en_ciel
@@ -541,32 +541,84 @@ component_set = {
 ##             Component Sets: Kinetic Weapons            ##
 ############################################################
 
-# advanced gauss cannon
+# advanced gauss cannon (ships + creatures)
 component_set = {
 	key = ESC_MASS_DRIVER_6
 	icon = GFX_esc_mass_driver_6
 	icon_frame = 1
 }
 
-# strike cannon
+component_set = {
+	key = ESC_BIO_MASS_DRIVER_6
+	icon = GFX_esc_bio_mass_driver_6
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MASS_DRIVER_CREATURE_6
+	icon = GFX_esc_bio_mass_driver_6
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# strike cannon (ships + creatures)
 component_set = {
 	key = ESC_MASS_DRIVER_7
 	icon = GFX_esc_mass_driver_7
 	icon_frame = 1
 }
 
-# advanced kinetic artillery
+component_set = {
+	key = ESC_BIO_MASS_DRIVER_7
+	icon = GFX_esc_bio_mass_driver_7
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MASS_DRIVER_CREATURE_7
+	icon = GFX_esc_bio_mass_driver_7
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# advanced kinetic artillery (ships + creatures)
 component_set = {
 	key = ESC_ARTILLERY_3
 	icon = GFX_esc_kinetic_artillery_3
 	icon_frame = 1
 }
 
-# skypiercer cannon
+component_set = {
+	key = ESC_BIO_ARTILLERY_3
+	icon = GFX_esc_bio_kinetic_artillery_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARTILLERY_CREATURE_3
+	icon = GFX_esc_bio_kinetic_artillery_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# skypiercer cannon (ships + creatures)
 component_set = {
 	key = ESC_ARTILLERY_4
 	icon = GFX_esc_kinetic_artillery_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ARTILLERY_4
+	icon = GFX_esc_bio_kinetic_artillery_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ARTILLERY_CREATURE_4
+	icon = GFX_esc_bio_kinetic_artillery_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # improved stormfire autocannon
@@ -692,7 +744,7 @@ component_set = {
 ##             Component Sets: Missile Weapons            ##
 ############################################################
 
-# joker missiles
+# joker missiles (ships + creatures)
 component_set = {
 	key = ESC_MISSILE_6
 	icon = GFX_esc_missile_6
@@ -706,7 +758,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# wraith missiles
+# wraith missiles (ships + creatures)
 component_set = {
 	key = ESC_MISSILE_7
 	icon = GFX_esc_missile_7
@@ -720,7 +772,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# plasma missiles
+# plasma missiles (ships + creatures)
 component_set = {
 	key = ESC_PLASMA_MISSILE_1
 	icon = GFX_esc_plasma_missile_1
@@ -734,7 +786,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# improved plasma missiles
+# improved plasma missiles (ships + creatures)
 component_set = {
 	key = ESC_PLASMA_MISSILE_2
 	icon = GFX_esc_plasma_missile_2
@@ -748,7 +800,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# incinerator missiles
+# incinerator missiles (ships + creatures)
 component_set = {
 	key = ESC_PLASMA_MISSILE_3
 	icon = GFX_esc_plasma_missile_3
@@ -762,7 +814,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# desolator torpedoes
+# desolator torpedoes (ships + creatures)
 component_set = {
 	key = ESC_TORPEDO_4
 	icon = GFX_esc_torpedo_4
@@ -776,7 +828,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# eradicator torpedoes
+# eradicator torpedoes (ships + creatures)
 component_set = {
 	key = ESC_TORPEDO_5
 	icon = GFX_esc_torpedo_5
@@ -790,7 +842,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# corrosive warhead torpedoes
+# corrosive warhead torpedoes (ships + creatures)
 component_set = {
 	key = ESC_CORROSIVE_WARHEAD
 	icon = GFX_esc_corrosive_warhead_torpedo
@@ -804,7 +856,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# typhoon missiles
+# typhoon missiles (ships + creatures)
 component_set = {
 	key = ESC_SWARMER_MISSILES_3
 	icon = GFX_esc_swarmer_missiles_3
@@ -824,7 +876,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# hurricane missiles
+# hurricane missiles (ships + creatures)
 component_set = {
 	key = ESC_SWARMER_MISSILES_4
 	icon = GFX_esc_swarmer_missiles_4
@@ -876,7 +928,7 @@ component_set = {
 ##              Component Sets: Point Defense             ##
 ############################################################
 
-# improved flak artillery
+# improved flak artillery (ships + creatures)
 component_set = {
 	key = ESC_FLAK_CANNON_4
 	icon = GFX_esc_flak_cannon_4
@@ -896,7 +948,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# ironcloud defender
+# ironcloud defender (ships + creatures)
 component_set = {
 	key = ESC_FLAK_CANNON_5
 	icon = GFX_esc_flak_cannon_5
@@ -916,7 +968,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# protector point defense
+# protector point defense (ships + creatures)
 component_set = {
 	key = ESC_POINT_DEFENSE_4
 	icon = GFX_esc_pd_cannon_4
@@ -936,7 +988,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# iron curtain point defense
+# iron curtain point defense (ships + creatures)
 component_set = {
 	key = ESC_POINT_DEFENSE_5
 	icon = GFX_esc_pd_cannon_5
@@ -956,7 +1008,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# juggernaut point defense
+# juggernaut point defense (ships + creatures)
 component_set = {
 	key = ESC_JUGGERNAUT_POINT_DEFENSE_1
 	icon = GFX_esc_pd_cannon_juggernaut_1
@@ -969,7 +1021,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# improved juggernaut point defense
+# improved juggernaut point defense (ships + creatures)
 component_set = {
 	key = ESC_JUGGERNAUT_POINT_DEFENSE_2
 	icon = GFX_esc_pd_cannon_juggernaut_2
@@ -982,7 +1034,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# lightstorm PD
+# lightstorm PD (ships + creatures)
 component_set = {
 	key = ESC_LIGHTSTORM_PD
 	icon = GFX_esc_pd_cannon_laser
@@ -1062,7 +1114,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# highbred amoeba (bomber)
+# highbred amoeba (bomber) (ships + creatures)
 component_set = {
 	key = ESC_AMOEBA_2
 	icon = GFX_esc_strikecrafts_amoeba_2
@@ -1076,7 +1128,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# genetically-engineered amoeba (bomber)
+# genetically-engineered amoeba (bomber) (ships + creatures)
 component_set = {
 	key = ESC_AMOEBA_BIO_3
 	icon = GFX_esc_strikecrafts_amoeba_3_bio
@@ -1090,7 +1142,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# perfect space organism (bomber)
+# perfect space organism (bomber) (ships + creatures)
 component_set = {
 	key = ESC_AMOEBA_BIO_4
 	icon = GFX_esc_strikecrafts_amoeba_4_bio
@@ -1104,7 +1156,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# cybernetically-augmented amoeba (bomber)
+# cybernetically-augmented amoeba (bomber) (ships + creatures)
 component_set = {
 	key = ESC_AMOEBA_CYBER_3
 	icon = GFX_esc_strikecrafts_amoeba_3_cyber
@@ -1118,7 +1170,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# bionic amoeba (bomber)
+# bionic amoeba (bomber) (ships + creatures)
 component_set = {
 	key = ESC_AMOEBA_CYBER_4
 	icon = GFX_esc_strikecrafts_amoeba_4_cyber
@@ -1132,7 +1184,7 @@ component_set = {
 	is_space_fauna_component_set = yes
 }
 
-# ravaging swarmers (bomber)
+# ravaging swarmers (bomber) (ships + creatures)
 component_set = {
 	key = ESC_SWARMER_STRIKECRAFT_2
 	icon = GFX_esc_strikecrafts_scourge_2

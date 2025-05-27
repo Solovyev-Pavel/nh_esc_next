@@ -85,6 +85,51 @@
 @ESC_WEAPON_arc_en_ciel_shield_damage = 1.0
 @ESC_WEAPON_arc_en_ciel_shield_penetration = 10.0
 
+###
+### Kinteic weapons
+###
+
+# mass driver
+@ESC_WEAPON_mass_driver_hull_damage = 1.0
+@ESC_WEAPON_mass_driver_armor_damage = 0.5
+@ESC_WEAPON_mass_driver_armor_penetration = 0.0
+@ESC_WEAPON_mass_driver_shield_damage = 1.5
+@ESC_WEAPON_mass_driver_shield_penetration = 0.0
+
+# autocannon
+@ESC_WEAPON_autocannon_hull_damage = 1.25
+@ESC_WEAPON_autocannon_armor_damage = 0.25
+@ESC_WEAPON_autocannon_xl_armor_damage = 0.5
+@ESC_WEAPON_autocannon_armor_penetration = 0.0
+@ESC_WEAPON_autocannon_shield_damage = 1.5
+@ESC_WEAPON_autocannon_shield_penetration = 0.0
+
+# kinetic artillery
+@ESC_WEAPON_artillery_hull_damage = 1.25
+@ESC_WEAPON_artillery_armor_damage = 0.5
+@ESC_WEAPON_artillery_armor_penetration = 0.0
+@ESC_WEAPON_artillery_shield_damage = 2.0
+@ESC_WEAPON_artillery_shield_penetration = 0.0
+
+# megacannon
+@ESC_WEAPON_megacannon_hull_damage = 1.25
+@ESC_WEAPON_megacannon_armor_damage = 0.75
+@ESC_WEAPON_rkkv_armor_damage = 0.75
+@ESC_WEAPON_megacannon_armor_penetration = 0.0
+@ESC_WEAPON_megacannon_shield_damage = 1.5
+@ESC_WEAPON_megacannon_shield_penetration = 0.0
+
+# magneto-hydro-dynamic cannon
+@ESC_WEAPON_mhd_cannon_hull_damage = 1.25
+@ESC_WEAPON_mhd_cannon_armor_damage = 1.0
+@ESC_WEAPON_mhd_cannon_armor_penetration = 0.5
+@ESC_WEAPON_mhd_cannon_shield_damage = 1.25
+@ESC_WEAPON_mhd_cannon_shield_penetration = 0.0
+
+###
+### Archaeo weapons
+###
+
 # archaeo laser
 @ESC_WEAPON_archaeo_laser_hull_damage = 1.0
 @ESC_WEAPON_archaeo_laser_armor_damage = 1.5
@@ -133,6 +178,10 @@
 @ESC_WEAPON_archaeo_titanic_armor_penetration = 0.0
 @ESC_WEAPON_archaeo_titanic_shield_damage = 0.5
 @ESC_WEAPON_archaeo_titanic_shield_penetration = 0.0
+
+###
+### Special type weapons
+###
 
 # biological
 @ESC_WEAPON_biological_hull_damage = 2.0
