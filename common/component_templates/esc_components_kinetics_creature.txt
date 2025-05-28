@@ -6,6 +6,10 @@
 # - Strike Cannon						S/M/L/X
 # - Improved Kinetic Artillery			S/M/L/X
 # - Skypiercer Artillery				S/M/L/X
+# - Improved Giga-cannon				S/M/L/X
+# - The Grand Cannon					S/M/L/X
+# - Ferromagnetic Liquid Cannon			S/M/L/X
+# - Imp. Ferromagnetic Liquid Cannon	S/M/L/X
 
 ############################################################
 ##                Advanced Gauss Cannon                   ##
@@ -867,6 +871,898 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_gravity_ai_weight_factor
 			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                  Improved Giga-Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MASS_ACCELERATOR_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_mass_accelerator_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 150 max = 400 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.0
+
+	prerequisites = { "esc_tech_giga_cannon_3" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = SMALL_ESC_MASS_ACCELERATOR_CREATURE_4
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MASS_ACCELERATOR_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_mass_accelerator_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 300 max = 800 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.0
+
+	prerequisites = { "esc_tech_giga_cannon_3" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = MEDIUM_ESC_MASS_ACCELERATOR_CREATURE_4
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MASS_ACCELERATOR_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_mass_accelerator_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 600 max = 1600 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.0
+
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_giga_cannon_3" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = LARGE_ESC_MASS_ACCELERATOR_CREATURE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MASS_ACCELERATOR_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_mass_accelerator_3
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 1200 max = 3200 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_3
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_giga_cannon_3" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = XL_ESC_MASS_ACCELERATOR_CREATURE_4
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                    The Grand Cannon                    ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MASS_ACCELERATOR_CREATURE_4
+	size = small
+	icon = GFX_esc_bio_mass_accelerator_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 185 max = 465 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_giga_cannon_4" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MASS_ACCELERATOR_CREATURE_4
+	size = medium
+	icon = GFX_esc_bio_mass_accelerator_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 375 max = 925 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_giga_cannon_4" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MASS_ACCELERATOR_CREATURE_4
+	size = large
+	icon = GFX_esc_bio_mass_accelerator_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 750 max = 1850 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.05
+
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_giga_cannon_4" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MASS_ACCELERATOR_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_bio_mass_accelerator_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1500 max = 3700 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_3
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_megacannon_hull_damage
+	armor_penetration = @ESC_WEAPON_megacannon_armor_penetration
+	armor_damage = @ESC_WEAPON_megacannon_armor_damage
+	shield_penetration = @ESC_WEAPON_megacannon_shield_penetration
+	shield_damage = @ESC_WEAPON_megacannon_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_giga_cannon_4" }
+	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##                Ferromagnetic Liquid Cannon             ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MHD_CANNON_CREATURE_1
+	size = small
+	icon = GFX_esc_bio_mhd_cannon_1
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 160 max = 315 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mhd_cannon_1" }
+	component_set = ESC_MHD_CANNON_CREATURE_1
+	projectile_gfx = "esc_mhd_cannon_1"
+	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = SMALL_ESC_MHD_CANNON_CREATURE_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MHD_CANNON_CREATURE_1
+	size = medium
+	icon = GFX_esc_bio_mhd_cannon_1
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 315 max = 625 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mhd_cannon_1" }
+	component_set = ESC_MHD_CANNON_CREATURE_1
+	projectile_gfx = "esc_mhd_cannon_1"
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = MEDIUM_ESC_MHD_CANNON_CREATURE_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MHD_CANNON_CREATURE_1
+	size = large
+	icon = GFX_esc_bio_mhd_cannon_1
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 625 max = 1250 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_mhd_cannon_1" }
+	component_set = ESC_MHD_CANNON_CREATURE_1
+	projectile_gfx = "esc_mhd_cannon_1"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = LARGE_ESC_MHD_CANNON_CREATURE_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MHD_CANNON_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_bio_mhd_cannon_1
+	icon_frame = 1
+	type = instant
+
+    damage = { min = 1250 max = 2500 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_mhd_cannon_1" }
+	component_set = ESC_MHD_CANNON_CREATURE_1
+	projectile_gfx = "esc_mhd_cannon_1"
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+	upgrades_to = XL_ESC_MHD_CANNON_CREATURE_2
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+############################################################
+##           Improved Ferromagnetic Liquid Cannon         ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_MHD_CANNON_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_mhd_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 185 max = 340 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mhd_cannon_2" }
+	component_set = ESC_MHD_CANNON_CREATURE_2
+	projectile_gfx = "esc_mhd_cannon_2"
+	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_MHD_CANNON_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_mhd_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 375 max = 680 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_mhd_cannon_2" }
+	component_set = ESC_MHD_CANNON_CREATURE_2
+	projectile_gfx = "esc_mhd_cannon_2"
+	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_MHD_CANNON_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_mhd_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 750 max = 1375 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_mhd_cannon_2" }
+	component_set = ESC_MHD_CANNON_CREATURE_2
+	projectile_gfx = "esc_mhd_cannon_2"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_MHD_CANNON_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_mhd_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1500 max = 2750 }
+	windup = { min = 14 max = 54 }
+	total_fire_time = 80
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_mhd_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_mhd_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_mhd_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_mhd_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_mhd_cannon_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_mhd_cannon_2" }
+	component_set = ESC_MHD_CANNON_CREATURE_2
+	projectile_gfx = "esc_mhd_cannon_2"
+	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery artillery }
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
 		}
 	}
 }

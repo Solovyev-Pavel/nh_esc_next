@@ -642,11 +642,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_MASS_ACCELERATOR_3
+	icon = GFX_esc_bio_mass_accelerator_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MASS_ACCELERATOR_CREATURE_3
+	icon = GFX_esc_bio_mass_accelerator_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # the grand cannon
 component_set = {
 	key = ESC_MASS_ACCELERATOR_4
 	icon = GFX_esc_mass_accelerator_4
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_MASS_ACCELERATOR_4
+	icon = GFX_esc_bio_mass_accelerator_4
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MASS_ACCELERATOR_CREATURE_4
+	icon = GFX_esc_bio_mass_accelerator_4
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # rkkv (titan)
@@ -656,9 +682,21 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_MASS_ACCELERATOR_TITANIC
+	icon = GFX_esc_mass_accelerator_titanic
+	icon_frame = 1
+}
+
 # rkkv (juggernaut)
 component_set = {
 	key = ESC_MASS_ACCELERATOR_JUGGERNAUT
+	icon = GFX_esc_mass_accelerator_titanic
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_MASS_ACCELERATOR_JUGGERNAUT
 	icon = GFX_esc_mass_accelerator_titanic
 	icon_frame = 1
 }
@@ -698,10 +736,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_JUGGERNAUT_ARTILLERY_1
+	icon = GFX_esc_bio_juggernaut_cannon_1
+	icon_frame = 1
+}
+
 # improved juggernaut artillery
 component_set = {
 	key = ESC_JUGGERNAUT_ARTILLERY_2
 	icon = GFX_esc_juggernaut_cannon_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_JUGGERNAUT_ARTILLERY_2
+	icon = GFX_esc_bio_juggernaut_cannon_2
 	icon_frame = 1
 }
 
@@ -712,11 +762,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_MHD_CANNON_1
+	icon = GFX_esc_bio_mhd_cannon_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MHD_CANNON_CREATURE_1
+	icon = GFX_esc_bio_mhd_cannon_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # improved ferromagnetic liquid cannon
 component_set = {
 	key = ESC_MHD_CANNON_2
 	icon = GFX_esc_mhd_cannon_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_MHD_CANNON_2
+	icon = GFX_esc_bio_mhd_cannon_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_MHD_CANNON_CREATURE_2
+	icon = GFX_esc_bio_mhd_cannon_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # magnetohydrodynamic cannon (titan)
@@ -726,10 +802,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_MHD_CANNON_TITANIC
+	icon = GFX_esc_bio_mhd_cannon_3
+	icon_frame = 1
+}
+
 # magnetohydrodynamic cannon (juggernaut)
 component_set = {
 	key = ESC_MHD_CANNON_JUGGERNAUT
 	icon = GFX_esc_mhd_cannon_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_MHD_CANNON_JUGGERNAUT
+	icon = GFX_esc_bio_mhd_cannon_3
 	icon_frame = 1
 }
 
