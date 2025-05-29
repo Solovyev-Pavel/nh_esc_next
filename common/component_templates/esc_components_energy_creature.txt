@@ -2554,23 +2554,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_particle_lance_3" }
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = SMALL_ESC_PARTICLE_LANCE_CREATURE_4
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -2610,23 +2599,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_particle_lance_3" }
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -2665,9 +2643,6 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
 	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
 	tracking = 0.0
-
-	firing_arc = 25.0
-	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_3" }
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
@@ -2782,22 +2757,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_particle_lance_4" }
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -2837,22 +2801,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_particle_lance_4" }
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -2891,9 +2844,6 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
 	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
 	tracking = 0.0
-
-	firing_arc = 25.0
-	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_particle_lance_4" }
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
@@ -3006,23 +2956,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_arc_emitter_3" }
 	component_set = ESC_ARC_EMITTER_CREATURE_3
 	projectile_gfx = "arc_emitter"
 	upgrades_to = SMALL_ESC_ARC_EMITTER_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3062,23 +3001,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_arc_emitter_3" }
 	component_set = ESC_ARC_EMITTER_CREATURE_3
 	projectile_gfx = "arc_emitter"
 	upgrades_to = MEDIUM_ESC_ARC_EMITTER_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3117,9 +3045,6 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
 	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
 	tracking = 0.0
-
-	firing_arc = 25.0
-	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arc_emitter_3" }
 	component_set = ESC_ARC_EMITTER_CREATURE_3
@@ -3234,22 +3159,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_arc_emitter_4" }
 	component_set = ESC_ARC_EMITTER_CREATURE_4
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3289,22 +3203,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
 	tracking = 0.0
 
-	firing_arc = 25.0
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_arc_emitter_4" }
 	component_set = ESC_ARC_EMITTER_CREATURE_4
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3343,9 +3246,6 @@ weapon_component_template = {
 	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
 	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
 	tracking = 0.0
-
-	firing_arc = 25.0
-	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_arc_emitter_4" }
 	component_set = ESC_ARC_EMITTER_CREATURE_4
@@ -3458,24 +3358,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_wmg_shield_damage
 	tracking = 0.1
 
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_wave_motion_gun_1" }
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
-	projectile_gfx = "esc_wavemotiongun_1"
+	projectile_gfx = "red_laser_s"
 	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = SMALL_ESC_WAVEMOTIONGUN_CREATURE_2
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3515,24 +3403,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_wmg_shield_damage
 	tracking = 0.1
 
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_wave_motion_gun_1" }
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
-	projectile_gfx = "esc_wavemotiongun_1"
+	projectile_gfx = "red_laser_m"
 	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = MEDIUM_ESC_WAVEMOTIONGUN_CREATURE_2
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3572,13 +3448,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_wmg_shield_damage
 	tracking = 0.1
 
-	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_wave_motion_gun_1" }
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
-	projectile_gfx = "esc_wavemotiongun_1"
+	projectile_gfx = "red_laser_l"
 	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = LARGE_ESC_WAVEMOTIONGUN_CREATURE_2
@@ -3690,23 +3565,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_wmg_shield_damage
 	tracking = 0.1
 
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_wave_motion_gun_2" }
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
-	projectile_gfx = "esc_wavemotiongun_2"
+	projectile_gfx = "blue_laser_s"
 	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3746,23 +3609,11 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_wmg_shield_damage
 	tracking = 0.1
 
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
 	prerequisites = { "esc_tech_wave_motion_gun_2" }
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
-	projectile_gfx = "esc_wavemotiongun_2"
+	projectile_gfx = "blue_laser_m"
 	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
 
 	ai_weight = {
 		weight = 1
@@ -3802,13 +3653,12 @@ weapon_component_template = {
 	shield_damage = @ESC_WEAPON_wmg_shield_damage
 	tracking = 0.1
 
-	firing_arc = 25.0
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
 	prerequisites = { "esc_tech_wave_motion_gun_2" }
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
-	projectile_gfx = "esc_wavemotiongun_2"
+	projectile_gfx = "blue_laser_m"
 	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
