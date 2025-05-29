@@ -268,6 +268,31 @@ esc_mass_driver_creature_7 = {
 	}
 }
 
+# Evolved Acidstorm Thorn Cannon
+esc_autocannon_creature_4 = {
+	type = offensive
+	icon = GFX_esc_creature_autocannon_4
+	ship_components = {
+		small = SMALL_ESC_AUTOCANNON_CREATURE_4
+		medium = MEDIUM_ESC_AUTOCANNON_CREATURE_4
+		large = LARGE_ESC_AUTOCANNON_CREATURE_4
+		extra_large = XL_ESC_AUTOCANNON_CREATURE_4
+	}
+	upgrades_to = "esc_autocannon_creature_5"
+}
+
+# Shredder Thorn Cannon
+esc_autocannon_creature_5 = {
+	type = offensive
+	icon = GFX_esc_creature_autocannon_5
+	ship_components = {
+		small = SMALL_ESC_AUTOCANNON_CREATURE_5
+		medium = MEDIUM_ESC_AUTOCANNON_CREATURE_5
+		large = LARGE_ESC_AUTOCANNON_CREATURE_5
+		extra_large = XL_ESC_AUTOCANNON_CREATURE_5
+	}
+}
+
 # Advanced Kinetic Artillery
 esc_artillery_creature_3 = {
 	type = offensive

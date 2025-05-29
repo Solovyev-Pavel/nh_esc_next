@@ -4,6 +4,8 @@
 
 # - Advanced Gauss Cannon				S/M/L/X
 # - Strike Cannon						S/M/L/X
+# - Improved Stromfire Autocannon		S/M/L/X
+# - Shredder Autocannon					S/M/L/X
 # - Improved Kinetic Artillery			S/M/L/X
 # - Skypiercer Artillery				S/M/L/X
 # - Improved Giga-cannon				S/M/L/X
@@ -431,6 +433,410 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_gravity_ai_weight_factor
 			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+############################################################
+##            Improved Stormfire Autocannon               ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_AUTOCANNON_CREATURE_4
+	size = small
+	icon = GFX_esc_creature_autocannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 17 max = 35 }
+	windup = { min = 1 max = 4 }
+	total_fire_time = 6
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_autocannon_4" }
+	component_set = ESC_AUTOCANNON_CREATURE_4
+	projectile_gfx = "esc_autocannon_4_small"
+	tags = { weapon_type_kinetic s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	upgrades_to = SMALL_ESC_AUTOCANNON_CREATURE_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_AUTOCANNON_CREATURE_4
+	size = medium
+	icon = GFX_esc_creature_autocannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 43 max = 88 }
+	windup = { min = 2 max = 6 }
+	total_fire_time = 9
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_autocannon_4" }
+	component_set = ESC_AUTOCANNON_CREATURE_4
+	projectile_gfx = "esc_autocannon_4_medium"
+	tags = { weapon_type_kinetic m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	upgrades_to = MEDIUM_ESC_AUTOCANNON_CREATURE_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_AUTOCANNON_CREATURE_4
+	size = large
+	icon = GFX_esc_creature_autocannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 102 max = 210 }
+	windup = { min = 2 max = 8 }
+	total_fire_time = 12
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_autocannon_4" }
+	component_set = ESC_AUTOCANNON_CREATURE_4
+	projectile_gfx = "esc_autocannon_4_large"
+	tags = { weapon_type_kinetic l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	upgrades_to = LARGE_ESC_AUTOCANNON_CREATURE_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_AUTOCANNON_CREATURE_4
+	size = extra_large
+	icon = GFX_esc_creature_autocannon_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 204 max = 420 }
+	windup = { min = 2 max = 8 }
+	total_fire_time = 12
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_autocannon_4" }
+	component_set = ESC_AUTOCANNON_CREATURE_4
+	projectile_gfx = "esc_autocannon_4_large"
+	tags = { weapon_type_kinetic x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	upgrades_to = XL_ESC_AUTOCANNON_CREATURE_5
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+############################################################
+##                  Shredder Autocannon                   ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_AUTOCANNON_CREATURE_5
+	size = small
+	icon = GFX_esc_creature_autocannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 22 max = 44 }
+	windup = { min = 1 max = 4 }
+	total_fire_time = 6
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_autocannon_5" }
+	component_set = ESC_AUTOCANNON_CREATURE_5
+	projectile_gfx = "esc_autocannon_5_small"
+	tags = { weapon_type_kinetic s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_AUTOCANNON_CREATURE_5
+	size = medium
+	icon = GFX_esc_creature_autocannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 54 max = 110 }
+	windup = { min = 2 max = 6 }
+	total_fire_time = 9
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_autocannon_5" }
+	component_set = ESC_AUTOCANNON_CREATURE_5
+	projectile_gfx = "esc_autocannon_5_medium"
+	tags = { weapon_type_kinetic m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_AUTOCANNON_CREATURE_5
+	size = large
+	icon = GFX_esc_creature_autocannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 132 max = 246 }
+	windup = { min = 2 max = 8 }
+	total_fire_time = 12
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_autocannon_5" }
+	component_set = ESC_AUTOCANNON_CREATURE_5
+	projectile_gfx = "esc_autocannon_5_large"
+	tags = { weapon_type_kinetic l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_AUTOCANNON_CREATURE_5
+	size = extra_large
+	icon = GFX_esc_creature_autocannon_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 264 max = 492 }
+	windup = { min = 2 max = 8 }
+	total_fire_time = 12
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_autocannon_hull_damage
+	armor_penetration = @ESC_WEAPON_autocannon_armor_penetration
+	armor_damage = @ESC_WEAPON_autocannon_armor_damage
+	shield_penetration = @ESC_WEAPON_autocannon_shield_penetration
+	shield_damage = @ESC_WEAPON_autocannon_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_autocannon_5" }
+	component_set = ESC_AUTOCANNON_CREATURE_5
+	projectile_gfx = "esc_autocannon_5_large"
+	tags = { weapon_type_kinetic x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
 		}
 	}
 }
@@ -1384,7 +1790,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	component_set = ESC_MHD_CANNON_CREATURE_1
-	projectile_gfx = "esc_mhd_cannon_1"
+	projectile_gfx = "xray_laser_s"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = SMALL_ESC_MHD_CANNON_CREATURE_2
@@ -1430,7 +1836,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	component_set = ESC_MHD_CANNON_CREATURE_1
-	projectile_gfx = "esc_mhd_cannon_1"
+	projectile_gfx = "xray_laser_m"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = MEDIUM_ESC_MHD_CANNON_CREATURE_2
@@ -1479,7 +1885,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	component_set = ESC_MHD_CANNON_CREATURE_1
-	projectile_gfx = "esc_mhd_cannon_1"
+	projectile_gfx = "xray_laser_l"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = LARGE_ESC_MHD_CANNON_CREATURE_2
@@ -1537,7 +1943,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	component_set = ESC_MHD_CANNON_CREATURE_1
-	projectile_gfx = "esc_mhd_cannon_1"
+	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 	upgrades_to = XL_ESC_MHD_CANNON_CREATURE_2
@@ -1595,7 +2001,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_2" }
 	component_set = ESC_MHD_CANNON_CREATURE_2
-	projectile_gfx = "esc_mhd_cannon_2"
+	projectile_gfx = "xray_laser_s"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 
@@ -1640,7 +2046,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_2" }
 	component_set = ESC_MHD_CANNON_CREATURE_2
-	projectile_gfx = "esc_mhd_cannon_2"
+	projectile_gfx = "xray_laser_m"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 
@@ -1688,7 +2094,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_2" }
 	component_set = ESC_MHD_CANNON_CREATURE_2
-	projectile_gfx = "esc_mhd_cannon_2"
+	projectile_gfx = "xray_laser_l"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 
@@ -1745,7 +2151,7 @@ weapon_component_template = {
 
 	prerequisites = { "esc_tech_mhd_cannon_2" }
 	component_set = ESC_MHD_CANNON_CREATURE_2
-	projectile_gfx = "esc_mhd_cannon_2"
+	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery artillery }
 
