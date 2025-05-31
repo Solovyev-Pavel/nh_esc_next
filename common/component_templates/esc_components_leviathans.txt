@@ -682,16 +682,12 @@ weapon_component_template = {
 	accuracy = 0.8
 	power = -25
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_dimensional_horror_hull_damage
@@ -706,11 +702,6 @@ weapon_component_template = {
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense screen }
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -748,16 +739,11 @@ weapon_component_template = {
 	power = -290
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_xl_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
@@ -781,6 +767,79 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_TIYANKI_CANNON
+	size = extra_large
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 2500 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_4
+	accuracy = 0.85
+	power = -290
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.3
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam" }
+	component_set = ESC_BIO_TIYANKI_CANNON
+	projectile_gfx = "esc_tiyanki_lance"
+	upgrades_to = ESC_BIO_TIYANKI_CANNON_JUGGERNAUT
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	target_weights = {
@@ -821,16 +880,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
@@ -853,6 +907,78 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_TIYANKI_CANNON_TITANIC
+	size = titanic
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 4500 max = 9500 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 165
+	range = @ESC_WEAPON_RANGE_T_3
+	accuracy = 0.85
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
+	component_set = ESC_BIO_TIYANKI_CANNON_TITANIC
+	projectile_gfx = "esc_tiyanki_lance_titanic"
+	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	target_weights = {
@@ -889,16 +1015,11 @@ weapon_component_template = {
 	power = -500
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_t_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_t_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_t_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
@@ -922,6 +1043,79 @@ weapon_component_template = {
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_TIYANKI_CANNON_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 4500 max = 9500 }
+	windup = { min = 20.0 max = 35.0 }
+	total_fire_time = 165
+	range = @ESC_WEAPON_RANGE_J_3
+	accuracy = 0.85
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam_titanic" }
+	component_set = ESC_BIO_TIYANKI_CANNON_JUGGERNAUT
+	projectile_gfx = "esc_tiyanki_lance"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	target_weights = {
@@ -970,12 +1164,12 @@ weapon_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			minerals = @ESC_WEAPON_m_t6_cost_alloys
+			alloys = @ESC_COST_WEAPON_m_t5_primary
+			minerals = @ESC_COST_WEAPON_m_t5_primary
 		}
 		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			minerals = @ESC_WEAPON_m_t6_upkeep_alloys
+			energy = 0.44
+			minerals = 0.22
 		}
 	}
 
@@ -992,10 +1186,8 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
 
-	inline_script = {
-		script = ship_components_general/esc_inlines_conditional_potential
-		CONDITION = "ship_uses_mauler_components"
-		CONDITION_VALUE = no
+	potential = {
+		ship_uses_mauler_components = no
 	}
 
 	# only regular empires may use this component
@@ -1034,16 +1226,11 @@ weapon_component_template = {
 	power = -50
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t9_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
@@ -1115,16 +1302,11 @@ weapon_component_template = {
 	power = -330
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t9_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t9_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t9_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_xl_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP = 0
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage

@@ -6,6 +6,8 @@
 # - Enigmatic Energy Lash						S/M/L/X
 # - Enigmatic Energy Autocannon					S/M/L/X
 # - Enigmatic Energy Lance						S/M/L/X
+# - Dimensional Horror Point Defense			S/M/L/X
+# - Tiyanki Beam Cannon							S/M/L/X
 # - Voidspawn Missile Launcher					S/M/L/X
 
 ############################################################
@@ -870,6 +872,437 @@ weapon_component_template = {
 }
 
 ############################################################
+##            Dimensional Horror Point Defense            ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_EXTRADIMENSIONAL_PD_CREATURE
+	size = small
+	icon = GFX_esc_horror_pd
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 10.0 max = 14.0 }
+	windup = { min = 1.0 max = 3.0 }
+	total_fire_time = 8
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.8
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_dimensional_horror_hull_damage
+	armor_penetration = @ESC_WEAPON_dimensional_horror_armor_penetration
+	armor_damage = @ESC_WEAPON_dimensional_horror_armor_damage
+	shield_penetration = @ESC_WEAPON_dimensional_horror_shield_penetration
+	shield_damage = @ESC_WEAPON_dimensional_horror_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_extradimensional_pd" }
+	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
+	projectile_gfx = "dimensional_horror_spike_weapon"
+	tags = { weapon_type_point_defense weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense screen }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_EXTRADIMENSIONAL_PD_CREATURE
+	size = medium
+	icon = GFX_esc_horror_pd
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 20.0 max = 28.0 }
+	windup = { min = 1.0 max = 3.0 }
+	total_fire_time = 8
+	range = @ESC_WEAPON_RANGE_P_4
+	accuracy = 0.8
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_dimensional_horror_hull_damage
+	armor_penetration = @ESC_WEAPON_dimensional_horror_armor_penetration
+	armor_damage = @ESC_WEAPON_dimensional_horror_armor_damage
+	shield_penetration = @ESC_WEAPON_dimensional_horror_shield_penetration
+	shield_damage = @ESC_WEAPON_dimensional_horror_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_extradimensional_pd" }
+	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
+	projectile_gfx = "dimensional_horror_spike_weapon"
+	tags = { weapon_type_point_defense weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense screen }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_EXTRADIMENSIONAL_PD_CREATURE
+	size = large
+	icon = GFX_esc_horror_pd
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 35.0 max = 55.0 }
+	windup = { min = 1.0 max = 3.0 }
+	total_fire_time = 8
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.8
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_dimensional_horror_hull_damage
+	armor_penetration = @ESC_WEAPON_dimensional_horror_armor_penetration
+	armor_damage = @ESC_WEAPON_dimensional_horror_armor_damage
+	shield_penetration = @ESC_WEAPON_dimensional_horror_shield_penetration
+	shield_damage = @ESC_WEAPON_dimensional_horror_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_extradimensional_pd" }
+	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
+	projectile_gfx = "dimensional_horror_spike_weapon"
+	tags = { weapon_type_point_defense weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense screen }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_EXTRADIMENSIONAL_PD_CREATURE
+	size = extra_large
+	icon = GFX_esc_horror_pd
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 60.0 max = 100.0 }
+	windup = { min = 1.0 max = 3.0 }
+	total_fire_time = 8
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.8
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_dimensional_horror_hull_damage
+	armor_penetration = @ESC_WEAPON_dimensional_horror_armor_penetration
+	armor_damage = @ESC_WEAPON_dimensional_horror_armor_damage
+	shield_penetration = @ESC_WEAPON_dimensional_horror_shield_penetration
+	shield_damage = @ESC_WEAPON_dimensional_horror_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_extradimensional_pd" }
+	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
+	projectile_gfx = "dimensional_horror_spike_weapon"
+	tags = { weapon_type_point_defense weapon_type_energy x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense screen }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+############################################################
+##                  Tiyanki Beam Cannon                   ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_TIYANKI_CANNON_CREATURE
+	size = small
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 125 max = 315 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_tiyanki_beam" }
+	component_set = ESC_TIYANKI_CANNON_CREATURE
+	projectile_gfx = "esc_tiyanki_lance"
+	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_TIYANKI_CANNON_CREATURE
+	size = medium
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 250 max = 625 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_3
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_tiyanki_beam" }
+	component_set = ESC_TIYANKI_CANNON_CREATURE
+	projectile_gfx = "esc_tiyanki_lance"
+	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_TIYANKI_CANNON_CREATURE
+	size = large
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 500 max = 1250 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.3
+
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam" }
+	component_set = ESC_TIYANKI_CANNON_CREATURE
+	projectile_gfx = "esc_tiyanki_lance"
+	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_TIYANKI_CANNON_CREATURE
+	size = extra_large
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1000 max = 2500 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+	}
+
+	hull_damage = @ESC_WEAPON_tiyanki_hull_damage
+	armor_penetration = @ESC_WEAPON_tiyanki_armor_penetration
+	armor_damage = @ESC_WEAPON_tiyanki_armor_damage
+	shield_penetration = @ESC_WEAPON_tiyanki_shield_penetration
+	shield_damage = @ESC_WEAPON_tiyanki_shield_damage
+	tracking = 0.3
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_tiyanki_beam" }
+	component_set = ESC_TIYANKI_CANNON_CREATURE
+	projectile_gfx = "esc_tiyanki_lance"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = exotic_gases }
+		}
+	}
+}
+
+############################################################
 ##               Voidspawn Missile Launcher               ##
 ############################################################
 
@@ -895,12 +1328,11 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_s_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_s_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
@@ -958,12 +1390,11 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
@@ -1021,12 +1452,11 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_3
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage
@@ -1084,12 +1514,11 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_4
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_l_t8_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_voidspawn_hull_damage

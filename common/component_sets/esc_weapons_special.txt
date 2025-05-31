@@ -409,11 +409,31 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_EXTRADIMENSIONAL_PD_CREATURE
+	icon = GFX_esc_horror_pd
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # tiyanki beam cannon
 component_set = {
 	key = ESC_TIYANKI_CANNON
 	icon = GFX_esc_tiyanki_lance
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_TIYANKI_CANNON
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_TIYANKI_CANNON_CREATURE
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # titanic tiyanki beam cannon (titan)
@@ -423,10 +443,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_TIYANKI_CANNON_TITANIC
+	icon = GFX_esc_bio_tiyanki_lance
+	icon_frame = 1
+}
+
 # titanic tiyanki beam cannon (juggernaut)
 component_set = {
 	key = ESC_TIYANKI_CANNON_JUGGERNAUT
 	icon = GFX_esc_tiyanki_lance
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_TIYANKI_CANNON_JUGGERNAUT
+	icon = GFX_esc_bio_tiyanki_lance
 	icon_frame = 1
 }
 

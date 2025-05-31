@@ -302,6 +302,30 @@ esc_enigmatic_lance_creature = {
 	}
 }
 
+# Extradimensional Spike
+esc_extradimensional_pd_creature = {
+	type = offensive
+	icon = GFX_esc_horror_pd
+	ship_components = {
+		small = SMALL_ESC_EXTRADIMENSIONAL_PD_CREATURE
+		medium = MEDIUM_ESC_EXTRADIMENSIONAL_PD_CREATURE
+		large = LARGE_ESC_EXTRADIMENSIONAL_PD_CREATURE
+		extra_large = XL_ESC_EXTRADIMENSIONAL_PD_CREATURE
+	}
+}
+
+# Tiyanki Beam Cannon
+esc_tiyanki_cannon_creature = {
+	type = offensive
+	icon = GFX_esc_bio_tiyanki_lance
+	ship_components = {
+		small = SMALL_ESC_TIYANKI_CANNON_CREATURE
+		medium = MEDIUM_ESC_TIYANKI_CANNON_CREATURE
+		large = LARGE_ESC_TIYANKI_CANNON_CREATURE
+		extra_large = XL_ESC_TIYANKI_CANNON_CREATURE
+	}
+}
+
 # Voidspawn Missile Launcher
 esc_voidspawn_missile_creature = {
 	type = offensive
