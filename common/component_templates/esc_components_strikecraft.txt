@@ -35,15 +35,11 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_fighter_laser_4"
 	power = -75
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t6_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t6_upkeep_energy
-			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -100,15 +96,11 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_bomber_laser_4"
 	power = -75
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t6_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t6_upkeep_energy
-			alloys = @ESC_WEAPON_l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -164,15 +156,11 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_fighter_laser_5"
 	power = -85
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -229,15 +217,11 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_bomber_laser_5"
 	power = -85
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -293,16 +277,12 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_fighter_laser_6"
 	power = -100
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -370,16 +350,12 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_bomber_laser_6"
 	power = -100
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -449,7 +425,7 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t6_cost_alloys
+			food = @ESC_COST_WEAPON_l_t6_primary
 		}
 		upkeep = {
 			food = 1
@@ -514,8 +490,8 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_l_t7_cost_special
+			food = @ESC_COST_WEAPON_l_t7_primary
+			exotic_gases = @ESC_COST_WEAPON_l_t7_special
 		}
 		upkeep = {
 			food = 1
@@ -589,8 +565,8 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			exotic_gases = @ESC_WEAPON_l_t8_cost_special
+			food = @ESC_COST_WEAPON_l_t8_primary
+			exotic_gases = @ESC_COST_WEAPON_l_t8_special
 		}
 		upkeep = {
 			food = 1
@@ -663,8 +639,8 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t7_cost_special
+			food = @ESC_COST_WEAPON_l_t7_primary
+			rare_crystals = @ESC_COST_WEAPON_l_t7_special
 		}
 		upkeep = {
 			food = 1
@@ -738,8 +714,8 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t8_cost_special
+			food = @ESC_COST_WEAPON_l_t8_primary
+			rare_crystals = @ESC_COST_WEAPON_l_t8_special
 		}
 		upkeep = {
 			food = 1
@@ -812,12 +788,12 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			energy = @l_t5_cost
-			alloys = @l_t3_cost
+			energy = @ESC_COST_WEAPON_m_t6_primary
+			alloys = @ESC_COST_WEAPON_l_t4_primary
 		}
 		upkeep = {
-			energy = @ESC_WEAPON_l_t6_upkeep_energy
-			alloys = @l_t4_upkeep_alloys
+			energy = 1.14
+			alloys = 0.136
 		}
 	}
 
@@ -886,12 +862,12 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			energy = @ESC_WEAPON_m_t7_cost_alloys
-			alloys = @l_t4_cost
+			energy = @ESC_COST_WEAPON_m_t7_primary
+			alloys = @ESC_COST_WEAPON_l_t5_primary
 		}
 		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @l_t5_upkeep_alloys
+			energy = 2.08
+			alloys = 0.176
 		}
 	}
 
@@ -959,8 +935,8 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t8_cost_alloys
-			volatile_motes = @ESC_WEAPON_l_t8_cost_special
+			food = @ESC_COST_WEAPON_l_t8_primary
+			volatile_motes = @ESC_COST_WEAPON_l_t8_special
 		}
 		upkeep = {
 			food = 1

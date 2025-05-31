@@ -220,16 +220,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -28
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @s_t6_cost
-			rare_crystals = @s_t6_rare
-		}
-		upkeep = {
-			energy = @s_t6_upkeep_energy
-			alloys = @s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = 2.0
@@ -273,16 +269,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -52
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @m_t6_cost
-			rare_crystals = @m_t6_rare
-		}
-		upkeep = {
-			energy = @m_t6_upkeep_energy
-			alloys = @m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = 2.0
@@ -326,16 +318,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -100
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @l_t6_cost
-			rare_crystals = @l_t6_rare
-		}
-		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = 2.0
@@ -435,6 +423,10 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_swarm_missile" }
 	component_set = ESC_SCOURGE_MISSILE_1
 
+	potential = {
+		ship_uses_mauler_components = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -533,7 +525,7 @@ strike_craft_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			food = @ESC_WEAPON_l_t6_cost_alloys
+			food = @ESC_COST_WEAPON_l_t6_primary
 		}
 		upkeep = {
 			food = 1
