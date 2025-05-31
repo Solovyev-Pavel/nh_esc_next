@@ -2,13 +2,872 @@
 ##         ESC : Leviathan Weapons : Space Fauna          ##
 ############################################################
 
+# - Enigmatic Energy Discharger					S/M/L/X
+# - Enigmatic Energy Lash						S/M/L/X
+# - Enigmatic Energy Autocannon					S/M/L/X
+# - Enigmatic Energy Lance						S/M/L/X
 # - Voidspawn Missile Launcher					S/M/L/X
 
-@ESC_WEAPON_voidspawn_hull_damage = 3.0
-@ESC_WEAPON_voidspawn_armor_damage = 0.8
-@ESC_WEAPON_voidspawn_armor_penetration = 0.0
-@ESC_WEAPON_voidspawn_shield_damage = 1.0
-@ESC_WEAPON_voidspawn_shield_penetration = 1.0
+############################################################
+##              Enigmatic Energy Autocannon               ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	size = small
+	icon = GFX_esc_enigmatic_autocannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 25.0 max = 35.0 }
+	windup = { min = 2.0 max = 14.0 }
+	total_fire_time = 15
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.65
+
+	prerequisites = { "esc_tech_enigmatic_autocannon" }
+	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_small"
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	size = medium
+	icon = GFX_esc_enigmatic_autocannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 45.0 max = 70.0 }
+	windup = { min = 2.0 max = 14.0 }
+	total_fire_time = 15
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.65
+
+	prerequisites = { "esc_tech_enigmatic_autocannon" }
+	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_small"
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	size = large
+	icon = GFX_esc_enigmatic_autocannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 80.0 max = 145.0 }
+	windup = { min = 2.0 max = 14.0 }
+	total_fire_time = 15
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.65
+
+	prerequisites = { "esc_tech_enigmatic_autocannon" }
+	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_small"
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	size = extra_large
+	icon = GFX_esc_enigmatic_autocannon
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 160.0 max = 290.0 }
+	windup = { min = 2.0 max = 14.0 }
+	total_fire_time = 15
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.65
+
+	prerequisites = { "esc_tech_enigmatic_autocannon" }
+	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_small"
+	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                 Enigmatic Energy Lash                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ENIGMATIC_LASH_CREATURE
+	size = small
+	icon = GFX_esc_bio_enigmatic_lash
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 5.0 max = 10.0 }
+	windup = { min = 1.0 max = 1.0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_2
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_enigmatic_lash" }
+	component_set = ESC_ENIGMATIC_LASH_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_medium"
+	tags = { weapon_type_point_defense weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ENIGMATIC_LASH_CREATURE
+	size = medium
+	icon = GFX_esc_bio_enigmatic_lash
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 10.0 max = 15.0 }
+	windup = { min = 1.0 max = 1.0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_P_3
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_enigmatic_lash" }
+	component_set = ESC_ENIGMATIC_LASH_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_medium"
+	tags = { weapon_type_point_defense weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ENIGMATIC_LASH_CREATURE
+	size = large
+	icon = GFX_esc_bio_enigmatic_lash
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 20.0 max = 30.0 }
+	windup = { min = 1.0 max = 1.0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_enigmatic_lash" }
+	component_set = ESC_ENIGMATIC_LASH_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_medium"
+	tags = { weapon_type_point_defense weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ENIGMATIC_LASH_CREATURE
+	size = extra_large
+	icon = GFX_esc_bio_enigmatic_lash
+	icon_frame = 1
+	type = point_defence
+
+	damage = { min = 30.0 max = 50.0 }
+	windup = { min = 1.0 max = 1.0 }
+	total_fire_time = 5
+	range = @ESC_WEAPON_RANGE_M_4
+	accuracy = 0.75
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_enigmatic_lash" }
+	component_set = ESC_ENIGMATIC_LASH_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_medium"
+	tags = { weapon_type_point_defense weapon_type_energy x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+
+	point_defence_targets = { "missile" "strike_craft" }
+}
+
+############################################################
+##              Enigmatic Energy Discharger               ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ENIGMATIC_CANNON_CREATURE
+	size = small
+	icon = GFX_esc_enigmatic_discharger
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 75.0 max = 210.0 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 55
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_enigmatic_cannon" }
+	component_set = ESC_ENIGMATIC_CANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_large"
+	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ENIGMATIC_CANNON_CREATURE
+	size = medium
+	icon = GFX_esc_enigmatic_discharger
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 155.0 max = 415.0 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 55
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_enigmatic_cannon" }
+	component_set = ESC_ENIGMATIC_CANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_large"
+	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ENIGMATIC_CANNON_CREATURE
+	size = large
+	icon = GFX_esc_enigmatic_discharger
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 305.0 max = 825.0 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 55
+	range = @ESC_WEAPON_RANGE_L_6
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_enigmatic_cannon" }
+	component_set = ESC_ENIGMATIC_CANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_large"
+	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ENIGMATIC_CANNON_CREATURE
+	size = extra_large
+	icon = GFX_esc_enigmatic_discharger
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 305.0 max = 825.0 }
+	windup = { min = 2.0 max = 20.0 }
+	total_fire_time = 55
+	range = @ESC_WEAPON_RANGE_X_2
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.25
+
+	prerequisites = { "esc_tech_enigmatic_cannon" }
+	component_set = ESC_ENIGMATIC_CANNON_CREATURE
+	projectile_gfx = "esc_enigmatic_cannon_large"
+	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
+##                Enigmatic Energy Lance                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_ENIGMATIC_LANCE_CREATURE
+	size = small
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 220 max = 315 }
+	windup = { min = 12.0 max = 47.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_enigmatic_lance" }
+	component_set = ESC_ENIGMATIC_LANCE_CREATURE
+	projectile_gfx = "xray_laser_s"
+	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_ENIGMATIC_LANCE_CREATURE
+	size = medium
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 440 max = 625 }
+	windup = { min = 12.0 max = 47.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_L_5
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_enigmatic_lance" }
+	component_set = ESC_ENIGMATIC_LANCE_CREATURE
+	projectile_gfx = "xray_laser_m"
+	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_ENIGMATIC_LANCE_CREATURE
+	size = large
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 875 max = 1250 }
+	windup = { min = 12.0 max = 47.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_enigmatic_lance" }
+	component_set = ESC_ENIGMATIC_LANCE_CREATURE
+	projectile_gfx = "xray_laser_l"
+	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ENIGMATIC_LANCE_CREATURE
+	size = extra_large
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 1750 max = 2500 }
+	windup = { min = 12.0 max = 47.0 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_enigmatic_hull_damage
+	armor_penetration = @ESC_WEAPON_enigmatic_armor_penetration
+	armor_damage = @ESC_WEAPON_enigmatic_armor_damage
+	shield_penetration = @ESC_WEAPON_enigmatic_shield_penetration
+	shield_damage = @ESC_WEAPON_enigmatic_shield_damage
+	tracking = 0.15
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_enigmatic_lance" }
+	component_set = ESC_ENIGMATIC_LANCE_CREATURE
+	projectile_gfx = "esc_enigmatic_lance"
+	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
 
 ############################################################
 ##               Voidspawn Missile Launcher               ##

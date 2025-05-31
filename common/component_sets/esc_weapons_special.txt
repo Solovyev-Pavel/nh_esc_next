@@ -315,11 +315,31 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	icon = GFX_esc_enigmatic_autocannon
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # enigmatic energy lash
 component_set = {
 	key = ESC_ENIGMATIC_LASH
 	icon = GFX_esc_enigmatic_lash
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ENIGMATIC_LASH
+	icon = GFX_esc_bio_enigmatic_lash
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ENIGMATIC_LASH_CREATURE
+	icon = GFX_esc_bio_enigmatic_lash
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # enigmatic energy discharger
@@ -329,11 +349,31 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_ENIGMATIC_CANNON_CREATURE
+	icon = GFX_esc_enigmatic_discharger
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # enigmatic energy lance
 component_set = {
 	key = ESC_ENIGMATIC_LANCE
 	icon = GFX_esc_enigmatic_lance
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ENIGMATIC_LANCE
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_ENIGMATIC_LANCE_CREATURE
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # titanic enigmatic energy lance (titan)
@@ -343,10 +383,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_ENIGMATIC_LANCE_TITANIC
+	icon = GFX_esc_bio_enigmatic_lance
+	icon_frame = 1
+}
+
 # titanic enigmatic energy lance (juggernaut)
 component_set = {
 	key = ESC_ENIGMATIC_LANCE_JUGGERNAUT
 	icon = GFX_esc_enigmatic_lance
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_ENIGMATIC_LANCE_JUGGERNAUT
+	icon = GFX_esc_bio_enigmatic_lance
 	icon_frame = 1
 }
 

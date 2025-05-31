@@ -254,6 +254,54 @@ esc_psionic_interceptors_creature = {
 ##         ESC : Leviathan Weapons : Space Fauna          ##
 ############################################################
 
+# Enigmatic Energy Autocannon
+esc_enigmatic_autocannon_creature = {
+	type = offensive
+	icon = GFX_esc_enigmatic_autocannon
+	ship_components = {
+		small = SMALL_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+		medium = MEDIUM_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+		large = LARGE_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+		extra_large = XL_ESC_ENIGMATIC_AUTOCANNON_CREATURE
+	}
+}
+
+# Enigmatic Energy Lash
+esc_enigmatic_lash_creature = {
+	type = offensive
+	icon = GFX_esc_bio_enigmatic_lash
+	ship_components = {
+		small = SMALL_ESC_ENIGMATIC_LASH_CREATURE
+		medium = MEDIUM_ESC_ENIGMATIC_LASH_CREATURE
+		large = LARGE_ESC_ENIGMATIC_LASH_CREATURE
+		extra_large = XL_ESC_ENIGMATIC_LASH_CREATURE
+	}
+}
+
+# Enigmatic Energy Discharger
+esc_enigmatic_cannon_creature = {
+	type = offensive
+	icon = GFX_esc_enigmatic_discharger
+	ship_components = {
+		small = SMALL_ESC_ENIGMATIC_CANNON_CREATURE
+		medium = MEDIUM_ESC_ENIGMATIC_CANNON_CREATURE
+		large = LARGE_ESC_ENIGMATIC_CANNON_CREATURE
+		extra_large = XL_ESC_ENIGMATIC_CANNON_CREATURE
+	}
+}
+
+# Enigmatic Energy Lance
+esc_enigmatic_lance_creature = {
+	type = offensive
+	icon = GFX_esc_bio_enigmatic_lance
+	ship_components = {
+		small = SMALL_ESC_ENIGMATIC_LANCE_CREATURE
+		medium = MEDIUM_ESC_ENIGMATIC_LANCE_CREATURE
+		large = LARGE_ESC_ENIGMATIC_LANCE_CREATURE
+		extra_large = XL_ESC_ENIGMATIC_LANCE_CREATURE
+	}
+}
+
 # Voidspawn Missile Launcher
 esc_voidspawn_missile_creature = {
 	type = offensive
