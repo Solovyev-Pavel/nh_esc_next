@@ -1,0 +1,13 @@
+### inline for energy syphon weapons
+
+on_hit = {
+	custom_tooltip = esc_tooltip_energy_syphon_shields_repair_$SIZE$_t$TIER$
+	hidden_effect = {
+		from = { repair_shield_amount = @ESC_WEAPON_shield_repair_$SIZE$_t$TIER$ }
+	}
+}
+
+custom_tooltip = esc_tooltip_energy_syphon_shields_add_$SIZE$_t$TIER$
+modifier = {
+	ship_shield_add = @ESC_WEAPON_shield_add_$SIZE$_t$TIER$
+}

@@ -9,6 +9,8 @@
 #     └─ Enigmatic Energy Lance					: X-slot enigmatic weapon
 #         └─ Supersized Enigmatic Energy Lance	: titanic enigmatic weapon
 # ── Extradimensional Spike						: M-slot point-defense weapon; requires killed Dimensional Horror / Leviathans DLC
+# ── Advanced Energy Syphon						: tier 2 energy syphon weapon
+#     └─ Paradox Energy Syphon					: tier 3 energy syphon weapon
 # ── Tiyanki Beam Cannon						: X-slot tiyanki weapon; requires killed Tiyanki Matriarch / Distant Stars DLC
 #     └─ Supersized Tiyanki Beam Cannon			: titanic tiyanki weapon
 # ── Junk Mines Launcher						: special missile weapon; requires killed Scrapper Bot / Distant Stars DLC
@@ -505,6 +507,130 @@ esc_tech_extradimensional_pd = {
 				has_country_flag = horror_killed
 				has_country_flag = ESC_COUNTRY_FLAG_killed_dimensional_horror
 			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                Advanced Energy Syphon                  ##
+############################################################
+
+esc_tech_space_whale_weapon_2 = {
+	area = society
+	category = { particles }
+	tier = 5
+	cost = @tier5cost1
+	weight = @tier5weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_new_age_warfare" "tech_space_whale_weapon_1" }
+	is_rare = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##                 Paradox Energy Syphon                  ##
+############################################################
+
+esc_tech_space_whale_weapon_3 = {
+	area = society
+	category = { particles }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	is_rare = yes
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_tiyanki_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech

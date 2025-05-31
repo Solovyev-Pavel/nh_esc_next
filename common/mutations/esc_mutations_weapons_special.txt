@@ -314,6 +314,31 @@ esc_extradimensional_pd_creature = {
 	}
 }
 
+# Advanced Energy Syphon
+esc_space_whale_weapon_creature_2 = {
+	type = offensive
+	icon = GFX_esc_energy_syphon_2
+	ship_components = {
+		small = SMALL_ESC_SPACE_WHALE_WEAPON_CREATURE_2
+		medium = MEDIUM_ESC_SPACE_WHALE_WEAPON_CREATURE_2
+		large = LARGE_ESC_SPACE_WHALE_WEAPON_CREATURE_2
+		extra_large = XL_ESC_SPACE_WHALE_WEAPON_CREATURE_2
+	}
+	upgrades_to = "esc_space_whale_weapon_creature_3"
+}
+
+# Paradox Energy Syphon
+esc_space_whale_weapon_creature_3 = {
+	type = offensive
+	icon = GFX_esc_energy_syphon_3
+	ship_components = {
+		small = SMALL_ESC_SPACE_WHALE_WEAPON_CREATURE_3
+		medium = MEDIUM_ESC_SPACE_WHALE_WEAPON_CREATURE_3
+		large = LARGE_ESC_SPACE_WHALE_WEAPON_CREATURE_3
+		extra_large = XL_ESC_SPACE_WHALE_WEAPON_CREATURE_3
+	}
+}
+
 # Tiyanki Beam Cannon
 esc_tiyanki_cannon_creature = {
 	type = offensive

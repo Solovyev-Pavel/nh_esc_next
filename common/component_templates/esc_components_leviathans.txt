@@ -7,6 +7,8 @@
 # - Enigmatic Energy Autocannon					S
 # - Enigmatic Energy Lance						X, Titanic
 # - Dimensional Horror Point Defense			M
+# - Advanced Energy Syphon						S/M/L
+# - Paradox Energy Syphon						S/M/L
 # - Tiyanki Beam Cannon							X, Titanic
 # - Junk Mine Launcher							G
 # - Voidspawn Missile Launcher					G, X, Titanic
@@ -718,6 +720,686 @@ weapon_component_template = {
 	}
 
 	point_defence_targets = { "missile" "strike_craft" }
+}
+
+############################################################
+##                 Advanced Energy Syphon                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_SPACE_WHALE_WEAPON_2
+	size = small
+	icon = GFX_esc_energy_syphon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 16.0 max = 42.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_4
+	accuracy = 0.75
+	power = -9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = s
+		TIER = 2
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	component_set = ESC_SPACE_WHALE_WEAPON_2
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+	upgrades_to = SMALL_ESC_SPACE_WHALE_WEAPON_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = SMALL_ESC_BIO_SPACE_WHALE_WEAPON_2
+	size = small
+	icon = GFX_esc_energy_syphon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 16.0 max = 42.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_4
+	accuracy = 0.75
+	power = -9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = s
+		TIER = 2
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	component_set = ESC_BIO_SPACE_WHALE_WEAPON_2
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+	upgrades_to = SMALL_ESC_BIO_SPACE_WHALE_WEAPON_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_SPACE_WHALE_WEAPON_2
+	size = medium
+	icon = GFX_esc_energy_syphon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 32.0 max = 84.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_M_5
+	accuracy = 0.75
+	power = -18
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = m
+		TIER = 2
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	component_set = ESC_SPACE_WHALE_WEAPON_2
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+	upgrades_to = MEDIUM_ESC_SPACE_WHALE_WEAPON_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_SPACE_WHALE_WEAPON_2
+	size = medium
+	icon = GFX_esc_energy_syphon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 32.0 max = 84.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_M_5
+	accuracy = 0.75
+	power = -18
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = m
+		TIER = 2
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	component_set = ESC_BIO_SPACE_WHALE_WEAPON_2
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+	upgrades_to = MEDIUM_ESC_BIO_SPACE_WHALE_WEAPON_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_SPACE_WHALE_WEAPON_2
+	size = large
+	icon = GFX_esc_energy_syphon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 64.0 max = 168.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+	power = -36
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = l
+		TIER = 2
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	component_set = ESC_SPACE_WHALE_WEAPON_2
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+	upgrades_to = LARGE_ESC_SPACE_WHALE_WEAPON_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_SPACE_WHALE_WEAPON_2
+	size = large
+	icon = GFX_esc_energy_syphon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 64.0 max = 168.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+	power = -36
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = l
+		TIER = 2
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_space_whale_weapon_2" }
+	component_set = ESC_BIO_SPACE_WHALE_WEAPON_2
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+	upgrades_to = LARGE_ESC_BIO_SPACE_WHALE_WEAPON_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+############################################################
+##                 Paradox Energy Syphon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_SPACE_WHALE_WEAPON_3
+	size = small
+	icon = GFX_esc_energy_syphon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 22.0 max = 56.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_4
+	accuracy = 0.75
+	power = -11
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = s
+		TIER = 3
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_space_whale_weapon_3" }
+	component_set = ESC_SPACE_WHALE_WEAPON_3
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = SMALL_ESC_BIO_SPACE_WHALE_WEAPON_3
+	size = small
+	icon = GFX_esc_energy_syphon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 22.0 max = 56.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_4
+	accuracy = 0.75
+	power = -11
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = s
+		TIER = 3
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_space_whale_weapon_3" }
+	component_set = ESC_BIO_SPACE_WHALE_WEAPON_3
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_SPACE_WHALE_WEAPON_3
+	size = medium
+	icon = GFX_esc_energy_syphon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 44.0 max = 112.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_M_5
+	accuracy = 0.75
+	power = -22
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = m
+		TIER = 3
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_space_whale_weapon_3" }
+	component_set = ESC_SPACE_WHALE_WEAPON_3
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_SPACE_WHALE_WEAPON_3
+	size = medium
+	icon = GFX_esc_energy_syphon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 44.0 max = 112.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_M_5
+	accuracy = 0.75
+	power = -22
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = m
+		TIER = 3
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_space_whale_weapon_3" }
+	component_set = ESC_BIO_SPACE_WHALE_WEAPON_3
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_SPACE_WHALE_WEAPON_3
+	size = large
+	icon = GFX_esc_energy_syphon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 88.0 max = 224.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+	power = -44
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = l
+		TIER = 3
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_space_whale_weapon_3" }
+	component_set = ESC_SPACE_WHALE_WEAPON_3
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_SPACE_WHALE_WEAPON_3
+	size = large
+	icon = GFX_esc_energy_syphon_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 88.0 max = 224.0 }
+	windup = { min = 5.0 max = 20.0 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.75
+	power = -44
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_no_sr_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_energy_syphon
+		SIZE = l
+		TIER = 3
+	}
+
+	hull_damage = @ESC_WEAPON_syphon_hull_damage
+	armor_penetration = @ESC_WEAPON_syphon_armor_penetration
+	armor_damage = @ESC_WEAPON_syphon_armor_damage
+	shield_penetration = @ESC_WEAPON_syphon_shield_penetration
+	shield_damage = @ESC_WEAPON_syphon_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_space_whale_weapon_3" }
+	component_set = ESC_BIO_SPACE_WHALE_WEAPON_3
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_shield weapon_type_space_fauna }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+	}
 }
 
 ############################################################
