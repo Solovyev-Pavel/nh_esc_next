@@ -1,13 +1,9 @@
 ############################################################
-##             ESC : Extradimensional Weapons             ##
+##      ESC : Extradimensional Weapons : Space Fauna      ##
 ############################################################
 
-# - Matter Annihilator				S/M/L
-# - Great Matter Annihilator		X
-# - Titanic Matter Annihilator		T
-# - Reality Eraser					S/M/L
-# - Great Reality Eraser			X
-# - Titanic Reality Eraser			T
+# - Matter Annihilator				S/M/L/X
+# - Reality Eraser					S/M/L/X
 
 ############################################################
 ##                   Matter Annihilator                   ##
@@ -15,7 +11,7 @@
 
 # small
 weapon_component_template = {
-	key = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_2
+	key = SMALL_ESC_ED_WEAPON_CREATURE_2
 	size = small
 	icon = GFX_esc_extradimensional_cannon_2
 	icon_frame = 1
@@ -27,7 +23,6 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.9
-	power = -28
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -45,10 +40,10 @@ weapon_component_template = {
 	tracking = 0.6
 
 	prerequisites = { "esc_tech_extradimensional_weapon_2" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	component_set = ESC_ED_WEAPON_CREATURE_2
 	projectile_gfx = "disruptor_2_small"
-	upgrades_to = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
-	tags = { weapon_type_energy s_slot }
+	upgrades_to = SMALL_ESC_ED_WEAPON_CREATURE_3
+	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -68,7 +63,7 @@ weapon_component_template = {
 
 # medium
 weapon_component_template = {
-	key = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_2
+	key = MEDIUM_ESC_ED_WEAPON_CREATURE_2
 	size = medium
 	icon = GFX_esc_extradimensional_cannon_2
 	icon_frame = 1
@@ -80,7 +75,6 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.9
-	power = -52
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -98,10 +92,10 @@ weapon_component_template = {
 	tracking = 0.3
 
 	prerequisites = { "esc_tech_extradimensional_weapon_2" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	component_set = ESC_ED_WEAPON_CREATURE_2
 	projectile_gfx = "disruptor_2_medium"
-	upgrades_to = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
-	tags = { weapon_type_energy m_slot }
+	upgrades_to = MEDIUM_ESC_ED_WEAPON_CREATURE_3
+	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -121,7 +115,7 @@ weapon_component_template = {
 
 # large
 weapon_component_template = {
-	key = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_2
+	key = LARGE_ESC_ED_WEAPON_CREATURE_2
 	size = large
 	icon = GFX_esc_extradimensional_cannon_2
 	icon_frame = 1
@@ -133,7 +127,6 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_L_2
 	accuracy = 0.9
-	power = -100
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -151,10 +144,62 @@ weapon_component_template = {
 	tracking = 0.05
 
 	prerequisites = { "esc_tech_extradimensional_weapon_2" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	component_set = ESC_ED_WEAPON_CREATURE_2
 	projectile_gfx = "disruptor_2_large"
-	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
-	tags = { weapon_type_energy l_slot }
+	upgrades_to = LARGE_ESC_ED_WEAPON_CREATURE_3
+	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_ED_WEAPON_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 456 max = 908 }
+	size_damage_factor = 0.1
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.9
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2" }
+	component_set = ESC_ED_WEAPON_CREATURE_2
+	projectile_gfx = "disruptor_2_large"
+	upgrades_to = XL_ESC_ED_WEAPON_CREATURE_3
+	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
@@ -173,149 +218,12 @@ weapon_component_template = {
 }
 
 ############################################################
-##                Grand Matter Annihilator                ##
-############################################################
-
-weapon_component_template = {
-	key = ESC_EXTRADIMENSIONAL_WEAPON_2_X
-	size = extra_large
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 1500 max = 2700 }
-	size_damage_factor = 0.1
-	windup = { min = 10 max = 35 }
-	total_fire_time = 80
-	range = @ESC_WEAPON_RANGE_X_4
-	accuracy = 0.85
-	power = -280
-
-	inline_script = {
-		script = component_costs/shorthands/esc_inlines_standard_cost
-		COMPONENT_TYPE = WEAPON
-		SIZE = xl
-		TIER = 8
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2_x" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_X
-	projectile_gfx = "esc_extradimensional_x_2"
-	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_X
-	# no clean way to enable upgrades both to Juggernaut version and to Reality Eraser, so using only the former
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-############################################################
-##               Titanic Matter Annihilator               ##
-############################################################
-
-weapon_component_template = {
-	key =ESC_EXTRADIMENSIONAL_WEAPON_2_T
-	size = titanic
-	icon = GFX_esc_extradimensional_cannon_2
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 6000 max = 9000 }
-	size_damage_factor = 0.1
-	windup = { min = 30 max = 70 }
-	total_fire_time = 170
-	range = @ESC_WEAPON_RANGE_T_3
-	accuracy = 0.85
-	power = -500
-
-	inline_script = {
-		script = component_costs/shorthands/esc_inlines_standard_cost
-		COMPONENT_TYPE = WEAPON
-		SIZE = t
-		TIER = 7
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-	}
-
-	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
-	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
-	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
-	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
-	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_2_t" }
-	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_T
-	projectile_gfx = "esc_extradimensional_t_2"
-	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_T
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
-	}
-}
-
-############################################################
 ##                     Reality Eraser                     ##
 ############################################################
 
 # small
 weapon_component_template = {
-	key = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
+	key = SMALL_ESC_ED_WEAPON_CREATURE_3
 	size = small
 	icon = GFX_esc_extradimensional_cannon_3
 	icon_frame = 1
@@ -327,7 +235,6 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_S_2
 	accuracy = 0.9
-	power = -34
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -345,7 +252,7 @@ weapon_component_template = {
 	tracking = 0.6
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
+	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_hull }
@@ -367,7 +274,7 @@ weapon_component_template = {
 
 # medium
 weapon_component_template = {
-	key = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
+	key = MEDIUM_ESC_ED_WEAPON_CREATURE_3
 	size = medium
 	icon = GFX_esc_extradimensional_cannon_3
 	icon_frame = 1
@@ -379,7 +286,6 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_M_2
 	accuracy = 0.9
-	power = -60
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -397,7 +303,7 @@ weapon_component_template = {
 	tracking = 0.3
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
+	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_hull }
@@ -419,7 +325,7 @@ weapon_component_template = {
 
 # large
 weapon_component_template = {
-	key = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
+	key = LARGE_ESC_ED_WEAPON_CREATURE_3
 	size = large
 	icon = GFX_esc_extradimensional_cannon_3
 	icon_frame = 1
@@ -431,7 +337,6 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_L_2
 	accuracy = 0.9
-	power = -110
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -449,7 +354,7 @@ weapon_component_template = {
 	tracking = 0.05
 
 	prerequisites = { "esc_tech_extradimensional_weapon_3" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
+	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_hull }
@@ -469,24 +374,20 @@ weapon_component_template = {
 	}
 }
 
-############################################################
-##                  Grand Reality Eraser                  ##
-############################################################
-
+# extra-large
 weapon_component_template = {
-	key = ESC_EXTRADIMENSIONAL_WEAPON_3_X
+	key = XL_ESC_ED_WEAPON_CREATURE_3
 	size = extra_large
 	icon = GFX_esc_extradimensional_cannon_3
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1700 max = 2850 }
+	damage = { min = 504 max = 976 }
 	size_damage_factor = 0.15
-	windup = { min = 10 max = 35 }
-	total_fire_time = 80
-	range = @ESC_WEAPON_RANGE_X_4
-	accuracy = 0.85
-	power = -330
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 0.9
 
 	inline_script = {
 		script = component_costs/shorthands/esc_inlines_standard_cost
@@ -501,96 +402,17 @@ weapon_component_template = {
 	armor_damage = @ESC_WEAPON_eraser_armor_damage
 	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
 	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.0
+	tracking = 0.05
 
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_2
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3_x" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
-	projectile_gfx = "esc_extradimensional_x_3"
-	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	prerequisites = { "esc_tech_extradimensional_weapon_3" }
+	component_set = ESC_ED_WEAPON_CREATURE_3
+	projectile_gfx = "esc_disruptor_4_large"
+	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
+	ai_tags = { weapon_role_anti_hull }
 
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
-	}
-
-	ai_weight = {
-		weight = 1
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
-		}
-	}
-}
-
-############################################################
-##                 Titanic Reality Eraser                 ##
-############################################################
-
-weapon_component_template = {
-	key = ESC_EXTRADIMENSIONAL_WEAPON_3_T
-	size = titanic
-	icon = GFX_esc_extradimensional_cannon_3
-	icon_frame = 1
-	type = instant
-
-	damage = { min = 7000 max = 9000 }
-	size_damage_factor = 0.15
-	windup = { min = 30 max = 70 }
-	total_fire_time = 170
-	range = @ESC_WEAPON_RANGE_T_3
-	accuracy = 0.85
-	power = -550
-
-	inline_script = {
-		script = component_costs/shorthands/esc_inlines_standard_cost
-		COMPONENT_TYPE = WEAPON
-		SIZE = t
-		TIER = 8
-		STRATEGIC_RESOURCE_TYPE = rare_crystals
-	}
-
-	hull_damage = @ESC_WEAPON_eraser_hull_damage
-	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
-	armor_damage = @ESC_WEAPON_eraser_armor_damage
-	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
-	shield_damage = @ESC_WEAPON_eraser_shield_damage
-	tracking = 0.0
-
-	firing_arc = 25.0
-	min_range = @ESC_WEAPON_MIN_RANGE_3
-	#use_ship_kill_target = no
-
-	prerequisites = { "esc_tech_extradimensional_weapon_3_t" }
-	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
-	projectile_gfx = "esc_extradimensional_t_3"
-	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
-
-	# only regular empires may use this component
-	valid_for_country = {
-		is_fallen_empire = no
-	}
-
-	target_weights = {
-		titan = 3
-		battleship = 2
-		stinger_stage_1 = 2
-		stinger_stage_2 = 2
-		stinger_stage_3 = 2
 	}
 
 	ai_weight = {
