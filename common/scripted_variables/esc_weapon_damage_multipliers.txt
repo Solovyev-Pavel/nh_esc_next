@@ -127,6 +127,52 @@
 @ESC_WEAPON_mhd_cannon_shield_penetration = 0.0
 
 ###
+### Missile weapons
+###
+
+# normal missiles
+@ESC_WEAPON_missile_hull_damage = 1.25
+@ESC_WEAPON_missile_armor_damage = 1.0
+@ESC_WEAPON_missile_armor_penetration = 0.0
+@ESC_WEAPON_missile_shield_damage = 1.0
+@ESC_WEAPON_missile_shield_penetration = 1.0
+
+# plasma missiles
+@ESC_WEAPON_plasma_missile_hull_damage = 1.50
+@ESC_WEAPON_plasma_missile_armor_damage = 2.0
+@ESC_WEAPON_plasma_missile_armor_penetration = 0.0
+@ESC_WEAPON_plasma_missile_shield_damage = 0.40
+@ESC_WEAPON_plasma_missile_shield_penetration = 0.0
+
+# normal torpedoes
+@ESC_WEAPON_torpedo_hull_damage = 1
+@ESC_WEAPON_torpedo_armor_damage = 1.5
+@ESC_WEAPON_torpedo_armor_penetration = 0.0
+@ESC_WEAPON_torpedo_shield_damage = 1.0
+@ESC_WEAPON_torpedo_shield_penetration = 1.0
+
+# corrosive warhead torpedoes
+@ESC_WEAPON_corrosive_warhead_hull_damage = 1.25
+@ESC_WEAPON_corrosive_warhead_armor_damage = 1.75
+@ESC_WEAPON_corrosive_warhead_armor_penetration = 0.0
+@ESC_WEAPON_corrosive_warhead_shield_damage = 1.5
+@ESC_WEAPON_corrosive_warhead_shield_penetration = 0.0
+
+# swarmer missiles
+@ESC_WEAPON_swarmer_hull_damage = 1.0
+@ESC_WEAPON_swarmer_armor_damage = 1.0
+@ESC_WEAPON_swarmer_armor_penetration = 0.0
+@ESC_WEAPON_swarmer_shield_damage = 1.0
+@ESC_WEAPON_swarmer_shield_penetration = 1.0
+
+# exotic matter warhead missiles
+@ESC_WEAPON_exotic_hull_damage = 1.35
+@ESC_WEAPON_exotic_armor_damage = 2.5
+@ESC_WEAPON_exotic_armor_penetration = 0.5
+@ESC_WEAPON_exotic_shield_damage = 0.8
+@ESC_WEAPON_exotic_shield_penetration = 0.0
+
+###
 ### Archaeo weapons
 ###
 

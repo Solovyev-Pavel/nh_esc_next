@@ -16,42 +16,6 @@
 # - Strange Matter Warhead			X
 # - Reflex Missile Launcher			Titanic
 
-@ESC_WEAPON_missile_hull_damage = 1.25
-@ESC_WEAPON_missile_armor_damage = 1.0
-@ESC_WEAPON_missile_armor_penetration = 0.0
-@ESC_WEAPON_missile_shield_damage = 1.0
-@ESC_WEAPON_missile_shield_penetration = 1.0
-
-@ESC_WEAPON_plasma_missile_hull_damage = 1.50
-@ESC_WEAPON_plasma_missile_armor_damage = 2.0
-@ESC_WEAPON_plasma_missile_armor_penetration = 0.0
-@ESC_WEAPON_plasma_missile_shield_damage = 0.40
-@ESC_WEAPON_plasma_missile_shield_penetration = 0.0
-
-@ESC_WEAPON_torpedo_hull_damage = 1
-@ESC_WEAPON_torpedo_armor_damage = 1.5
-@ESC_WEAPON_torpedo_armor_penetration = 0.0
-@ESC_WEAPON_torpedo_shield_damage = 1.0
-@ESC_WEAPON_torpedo_shield_penetration = 1.0
-
-@ESC_WEAPON_corrosive_warhead_hull_damage = 1.25
-@ESC_WEAPON_corrosive_warhead_armor_damage = 1.75
-@ESC_WEAPON_corrosive_warhead_armor_penetration = 0.0
-@ESC_WEAPON_corrosive_warhead_shield_damage = 1.5
-@ESC_WEAPON_corrosive_warhead_shield_penetration = 0.0
-
-@ESC_WEAPON_swarmer_hull_damage = 1.0
-@ESC_WEAPON_swarmer_armor_damage = 1.0
-@ESC_WEAPON_swarmer_armor_penetration = 0.0
-@ESC_WEAPON_swarmer_shield_damage = 1.0
-@ESC_WEAPON_swarmer_shield_penetration = 1.0
-
-@ESC_WEAPON_exotic_hull_damage = 1.35
-@ESC_WEAPON_exotic_armor_damage = 2.5
-@ESC_WEAPON_exotic_armor_penetration = 0.5
-@ESC_WEAPON_exotic_shield_damage = 0.8
-@ESC_WEAPON_exotic_shield_penetration = 0.0
-
 ############################################################
 ##                     Joker Missiles                     ##
 ############################################################
@@ -76,16 +40,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -30
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t6_cost_alloys
-			volatile_motes = @ESC_WEAPON_s_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t6_upkeep_energy
-			alloys = @ESC_WEAPON_s_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
 	}
 
 	hull_damage = @ESC_WEAPON_missile_hull_damage
@@ -142,16 +102,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -35
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			volatile_motes = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
 	}
 
 	hull_damage = @ESC_WEAPON_missile_hull_damage
@@ -209,16 +165,11 @@ weapon_component_template = {
 	power = -20
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t6_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t6_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t6_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -267,16 +218,11 @@ weapon_component_template = {
 	power = -34
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t6_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -325,16 +271,11 @@ weapon_component_template = {
 	power = -64
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t6_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t6_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t6_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -387,16 +328,11 @@ weapon_component_template = {
 	power = -24
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -445,16 +381,11 @@ weapon_component_template = {
 	power = -46
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -503,16 +434,11 @@ weapon_component_template = {
 	power = -90
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t7_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t7_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t7_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -565,16 +491,11 @@ weapon_component_template = {
 	power = -28
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_s_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_s_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_s_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -622,16 +543,11 @@ weapon_component_template = {
 	power = -52
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_m_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -679,16 +595,11 @@ weapon_component_template = {
 	power = -100
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_shared_component_cost_sr
-		PRIMARY_RESOURCE_TYPE_MECHANICAL = alloys
-		PRIMARY_RESOURCE_TYPE_BIO_NORMAL = food
-		PRIMARY_RESOURCE_TYPE_BIO_LITHOID = minerals
-		PRIMARY_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_alloys
-		PRIMARY_RESOURCE_UPKEEP = @ESC_WEAPON_l_t8_upkeep_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_l_t8_upkeep_energy
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_l_t8_cost_special
-		STRATEGIC_RESOURCE_UPKEEP =  0
 	}
 
 	hull_damage = @ESC_WEAPON_plasma_missile_hull_damage
@@ -741,16 +652,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_1
 	power = -38
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			volatile_motes = @ESC_WEAPON_m_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
 	}
 
 	hull_damage = @ESC_WEAPON_torpedo_hull_damage
@@ -809,16 +716,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_1
 	power = -44
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			volatile_motes = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
 	}
 
 	hull_damage = @ESC_WEAPON_torpedo_hull_damage
@@ -876,16 +779,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -65
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_corrosive_warhead_hull_damage
@@ -945,16 +844,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -35
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t6_cost_alloys
-			volatile_motes = @ESC_WEAPON_m_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t6_upkeep_energy
-			alloys = @ESC_WEAPON_m_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
 	}
 
 	hull_damage = @ESC_WEAPON_swarmer_hull_damage
@@ -1007,12 +902,11 @@ weapon_component_template = {
 	power = -35
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_swarmer_hull_damage
@@ -1067,12 +961,11 @@ weapon_component_template = {
 	power = -35
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t6_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_swarmer_hull_damage
@@ -1130,16 +1023,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -49
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			volatile_motes = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
 	}
 
 	hull_damage = @ESC_WEAPON_swarmer_hull_damage
@@ -1191,12 +1080,11 @@ weapon_component_template = {
 	power = -49
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_swarmer_hull_damage
@@ -1250,12 +1138,11 @@ weapon_component_template = {
 	power = -49
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_WEAPON_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_WEAPON_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_WEAPON_m_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = volatile_motes
-		STRATEGIC_RESOURCE_COST = @ESC_WEAPON_m_t7_cost_special
 	}
 
 	hull_damage = @ESC_WEAPON_swarmer_hull_damage
@@ -1316,16 +1203,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -300
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			exotic_gases = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_exotic_hull_damage
@@ -1385,16 +1268,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -325
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			exotic_gases = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_exotic_hull_damage
@@ -1455,16 +1334,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			exotic_gases = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_exotic_hull_damage
@@ -1520,16 +1395,12 @@ weapon_component_template = {
 	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t6_cost_alloys
-			exotic_gases = @ESC_WEAPON_t_t6_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t6_upkeep_energy
-			alloys = @ESC_WEAPON_t_t6_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
 	}
 
 	hull_damage = @ESC_WEAPON_exotic_hull_damage
