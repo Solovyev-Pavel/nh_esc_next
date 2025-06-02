@@ -11,21 +11,6 @@
 # - Titanic Tesla Cannon				Titanic
 # - Tesla Interdictors					H
 
-@ESC_WEAPON_tesla_hull_damage = 1.5
-@ESC_WEAPON_tesla_lance_hull_damage = 1.75
-@ESC_WEAPON_tesla_armor_damage = 0.66
-@ESC_WEAPON_tesla_armor_penetration = 0.5
-@ESC_WEAPON_tesla_shield_damage = 0.5
-@ESC_WEAPON_tesla_bomb_shield_damage = 1.0
-@ESC_WEAPON_tesla_shield_penetration = 0.0
-@ESC_WEAPON_tesla_bomb_shield_penetration = 1.0
-
-@ESC_WEAPON_tesla_interdictor_hull_damage = 1.75
-@ESC_WEAPON_tesla_interdictor_armor_damage = 0.66
-@ESC_WEAPON_tesla_interdictor_armor_penetration = 0.5
-@ESC_WEAPON_tesla_interdictor_shield_damage = 1.0
-@ESC_WEAPON_tesla_interdictor_shield_penetration = 1.0
-
 ############################################################
 ##                       Tesla Coil                       ##
 ############################################################
@@ -45,16 +30,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -96,6 +77,67 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_TESLA_COIL_1
+	size = small
+	icon = GFX_esc_bio_tesla_coil_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 35 max = 80 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.9
+	power = -20
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_tesla_coil_1" }
+	component_set = ESC_BIO_TESLA_COIL_1
+	projectile_gfx = "esc_tesla_1_small"
+	upgrades_to = SMALL_ESC_BIO_TESLA_COIL_2
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # medium
 weapon_component_template = {
 	key = MEDIUM_ESC_TESLA_COIL_1
@@ -111,16 +153,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -162,6 +200,67 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_TESLA_COIL_1
+	size = medium
+	icon = GFX_esc_bio_tesla_coil_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 70 max = 160 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+	power = -34
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_tesla_coil_1" }
+	component_set = ESC_BIO_TESLA_COIL_1
+	projectile_gfx = "esc_tesla_1_medium"
+	upgrades_to = MEDIUM_ESC_BIO_TESLA_COIL_2
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # large
 weapon_component_template = {
 	key = LARGE_ESC_TESLA_COIL_1
@@ -178,16 +277,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -229,6 +324,68 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = LARGE_ESC_BIO_TESLA_COIL_1
+	size = large
+	icon = GFX_esc_bio_tesla_coil_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 180 max = 415 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.9
+	power = -64
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_tesla_coil_1" }
+	component_set = ESC_BIO_TESLA_COIL_1
+	projectile_gfx = "esc_tesla_1_large"
+	upgrades_to = LARGE_ESC_BIO_TESLA_COIL_2
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_hull artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 ############################################################
 ##                  Improved Tesla Coil                   ##
 ############################################################
@@ -248,16 +405,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t8_upkeep_energy
-			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -298,6 +451,66 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = SMALL_ESC_BIO_TESLA_COIL_2
+	size = small
+	icon = GFX_esc_bio_tesla_coil_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 50 max = 105 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.9
+	power = -24
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_tesla_coil_2" }
+	component_set = ESC_BIO_TESLA_COIL_2
+	projectile_gfx = "esc_tesla_2_small"
+	tags = { weapon_type_energy s_slot }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # medium
 weapon_component_template = {
 	key = MEDIUM_ESC_TESLA_COIL_2
@@ -313,16 +526,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -363,6 +572,66 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = MEDIUM_ESC_BIO_TESLA_COIL_2
+	size = medium
+	icon = GFX_esc_bio_tesla_coil_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 115 max = 265 }
+	windup = { min = 6 max = 24 }
+	total_fire_time = 35
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.9
+	power = -46
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_tesla_coil_2" }
+	component_set = ESC_BIO_TESLA_COIL_2
+	projectile_gfx = "esc_tesla_2_medium"
+	tags = { weapon_type_energy m_slot }
+	ai_tags = { weapon_role_anti_hull brawler gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # large
 weapon_component_template = {
 	key = LARGE_ESC_TESLA_COIL_2
@@ -379,16 +648,12 @@ weapon_component_template = {
 	accuracy = 0.9
 	power = -90
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -412,6 +677,67 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = LARGE_ESC_BIO_TESLA_COIL_2
+	size = large
+	icon = GFX_esc_bio_tesla_coil_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 260 max = 530 }
+	windup = { min = 7 max = 27 }
+	total_fire_time = 40
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.9
+	power = -90
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_tesla_coil_2" }
+	component_set = ESC_BIO_TESLA_COIL_2
+	projectile_gfx = "esc_tesla_2_large"
+	tags = { weapon_type_energy l_slot }
+	ai_tags = { weapon_role_anti_hull artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and machine FE may use this component
@@ -455,16 +781,12 @@ weapon_component_template = {
 	firing_arc = 25.0
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -489,6 +811,77 @@ weapon_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_BIO_TESLA_BOMB_1
+	size = torpedo
+	icon = GFX_esc_bio_tesla_bomb_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 100 max = 125 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 15
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+	power = -70
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_bomb_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_bomb_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_tesla_bomb_1" }
+	component_set = ESC_BIO_TESLA_BOMB_1
+	projectile_gfx = "esc_tesla_bomb_1_missile"
+	upgrades_to = ESC_BIO_TESLA_BOMB_2
+	tags = { weapon_type_energy g_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_mauler_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
 	}
 
 	# only regular empires and machine FE may use this component
@@ -532,16 +925,12 @@ weapon_component_template = {
 	firing_arc = 25.0
 	power = -80
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_hull_damage
@@ -582,6 +971,76 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_TESLA_BOMB_2
+	size = torpedo
+	icon = GFX_esc_bio_tesla_bomb_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 125 max = 150 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 18
+	missile_armor = 12
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+	power = -80
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_bomb_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_bomb_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_tesla_bomb_2" }
+	component_set = ESC_BIO_TESLA_BOMB_2
+	projectile_gfx = "esc_tesla_bomb_2_missile"
+	tags = { weapon_type_energy g_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ship_uses_mauler_components"
+		EXTRA_CONDITION_VALUE = no
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 ############################################################
 ##                      Tesla Cannon                      ##
 ############################################################
@@ -604,16 +1063,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -275
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
@@ -660,6 +1115,76 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_TESLA_CANNON_1
+	size = extra_large
+	icon = GFX_esc_bio_tesla_cannon_1
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	damage = { min = 1500 max = 3000 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_3
+	accuracy = 0.85
+	power = -275
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_tesla_cannon_1" }
+	component_set = ESC_BIO_TESLA_CANNON_1
+	projectile_gfx = "esc_tesla_1_xl"
+	upgrades_to = ESC_BIO_TESLA_CANNON_2
+	tags = { weapon_type_energy x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 ############################################################
 ##                 Improved Tesla Cannon                  ##
 ############################################################
@@ -682,16 +1207,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -325
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			rare_crystals = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
@@ -738,6 +1259,76 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_TESLA_CANNON_2
+	size = extra_large
+	icon = GFX_esc_bio_tesla_cannon_2
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_2
+	#use_ship_kill_target = no
+
+	damage = { min = 1750 max = 3500 }
+	windup = { min = 12 max = 47 }
+	total_fire_time = 70
+	range = @ESC_WEAPON_RANGE_X_3
+	accuracy = 0.85
+	power = -325
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_tesla_cannon_2" }
+	component_set = ESC_BIO_TESLA_CANNON_2
+	projectile_gfx = "esc_tesla_2_xl"
+	upgrades_to = ESC_BIO_TESLA_CANNON_JUGGERNAUT
+	tags = { weapon_type_energy x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 ############################################################
 ##            Titanic Super-Graviton Cannon               ##
 ############################################################
@@ -761,16 +1352,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
@@ -816,6 +1403,75 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_TESLA_CANNON_TITANIC
+	size = titanic
+	icon = GFX_esc_bio_tesla_cannon_3
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	damage = { min = 6000 max = 9000 }
+	windup = { min = 30 max = 100 }
+	total_fire_time = 160
+	range = @ESC_WEAPON_RANGE_T_3
+	accuracy = 0.85
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_tesla_cannon_titanic" }
+	component_set = ESC_BIO_TESLA_CANNON_TITANIC
+	projectile_gfx = "esc_tesla_2_titanic"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 # juggernaut
 weapon_component_template = {
 	key = ESC_TESLA_CANNON_JUGGERNAUT
@@ -835,16 +1491,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
@@ -891,6 +1543,76 @@ weapon_component_template = {
 	}
 }
 
+weapon_component_template = {
+	key = ESC_BIO_TESLA_CANNON_JUGGERNAUT
+	size = extra_large
+	icon = GFX_esc_bio_tesla_cannon_3
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	damage = { min = 6000 max = 9000 }
+	windup = { min = 30 max = 100 }
+	total_fire_time = 160
+	range = @ESC_WEAPON_RANGE_J_3
+	accuracy = 0.85
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_tesla_cannon_titanic" }
+	component_set = ESC_BIO_TESLA_CANNON_JUGGERNAUT
+	projectile_gfx = "esc_tesla_2_xl"
+	size_restriction = { juggernaut @MISC_WarJuggernaut }
+	tags = { weapon_type_energy x_slot weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
 ############################################################
 ##                    Tesla Interdictor                   ##
 ############################################################
@@ -906,16 +1628,12 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_tesla_1_tiny"
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			rare_crystals = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
 	}
 
 	count = @ESC_STRIKECRAFT_count_large
@@ -951,6 +1669,78 @@ strike_craft_component_template = {
 
 	ship_behavior = "fighters_behavior"
 	component_set = ESC_TESLA_INTERDICTOR
+	prerequisites = { "esc_tech_tesla_interdictor" }
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_point_defense carrier }
+	point_defence_targets = { "strike_craft" }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = ESC_BIO_TESLA_INTERDICTOR
+	size = LARGE
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_tesla_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_tesla_1_tiny"
+	power = -70
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_fighter
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_fighter
+
+	health = 30
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_fighter
+	acceleration = @ESC_STRIKECRAFT_acceleration_fighter
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_tesla_interdictor_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_interdictor_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_interdictor_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_interdictor_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_interdictor_shield_damage
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	ship_behavior = "fighters_behavior"
+	component_set = ESC_BIO_TESLA_INTERDICTOR
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft }
 	ai_tags = { weapon_role_point_defense carrier }

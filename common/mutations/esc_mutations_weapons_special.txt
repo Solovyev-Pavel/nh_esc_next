@@ -160,97 +160,6 @@ esc_crystal_cannon_creature_5 = {
 }
 
 ############################################################
-##          ESC : Psionic Weapons : Space Fauna           ##
-############################################################
-
-# Psionic Energy Projector
-esc_psionic_cannon_1 = {
-	type = offensive
-	icon = GFX_esc_psionic_cannon_1
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_CANNON_CREATURE_1
-		medium = MEDIUM_ESC_PSIONIC_CANNON_CREATURE_1
-		large = LARGE_ESC_PSIONIC_CANNON_CREATURE_1
-		extra_large = XL_ESC_PSIONIC_CANNON_CREATURE_1
-	}
-	upgrades_to = "esc_psionic_cannon_2"
-}
-
-# Psionic Beam Cannon
-esc_psionic_cannon_2 = {
-	type = offensive
-	icon = GFX_esc_psionic_cannon_2
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_CANNON_CREATURE_2
-		medium = MEDIUM_ESC_PSIONIC_CANNON_CREATURE_2
-		large = LARGE_ESC_PSIONIC_CANNON_CREATURE_2
-		extra_large = XL_ESC_PSIONIC_CANNON_CREATURE_2
-	}
-}
-
-# Shroud Strike
-esc_psionic_strike_1 = {
-	type = offensive
-	icon = GFX_esc_psionic_strike_1
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_STRIKE_CREATURE_1
-		medium = MEDIUM_ESC_PSIONIC_STRIKE_CREATURE_1
-		large = LARGE_ESC_PSIONIC_STRIKE_CREATURE_1
-		extra_large = XL_ESC_PSIONIC_STRIKE_CREATURE_1
-	}
-	upgrades_to = "esc_psionic_strike_2"
-}
-
-# Shroud Wrath
-esc_psionic_strike_2 = {
-	type = offensive
-	icon = GFX_esc_psionic_strike_2
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_STRIKE_CREATURE_2
-		medium = MEDIUM_ESC_PSIONIC_STRIKE_CREATURE_2
-		large = LARGE_ESC_PSIONIC_STRIKE_CREATURE_2
-		extra_large = XL_ESC_PSIONIC_STRIKE_CREATURE_2
-	}
-}
-
-# Psi-blast Torpedo
-esc_psionic_torpedo_creature_1 = {
-	type = offensive
-	icon = GFX_esc_bio_psionic_torpedo_1
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_1
-		medium = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_1
-		large = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_1
-		extra_large = XL_ESC_PSIONIC_TORPEDO_CREATURE_1
-	}
-	upgrades_to = "esc_psionic_torpedo_creature_2"
-}
-
-# Improved Psi-blast Torpedo
-esc_psionic_torpedo_creature_2 = {
-	type = offensive
-	icon = GFX_esc_bio_psionic_torpedo_2
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_2
-		medium = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_2
-		large = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_2
-		extra_large = XL_ESC_PSIONIC_TORPEDO_CREATURE_2
-	}
-}
-
-# Psionic Interceptors
-esc_psionic_interceptors_creature = {
-	type = offensive
-	icon = GFX_esc_bio_psionic_strikecraft
-	ship_components = {
-		small = SMALL_ESC_PSIONIC_INTERCEPTORS_CREATURE
-		medium = MEDIUM_ESC_PSIONIC_INTERCEPTORS_CREATURE
-		large = LARGE_ESC_PSIONIC_INTERCEPTORS_CREATURE
-		extra_large = XL_ESC_PSIONIC_INTERCEPTORS_CREATURE
-	}
-}
-
-############################################################
 ##         ESC : Leviathan Weapons : Space Fauna          ##
 ############################################################
 
@@ -360,6 +269,163 @@ esc_voidspawn_missile_creature = {
 		medium = MEDIUM_ESC_VOIDSPAWN_MISSILE_CREATURE
 		large = LARGE_ESC_VOIDSPAWN_MISSILE_CREATURE
 		extra_large = XL_ESC_VOIDSPAWN_MISSILE_CREATURE
+	}
+}
+
+############################################################
+##          ESC : Psionic Weapons : Space Fauna           ##
+############################################################
+
+# Psionic Energy Projector
+esc_psionic_cannon_1 = {
+	type = offensive
+	icon = GFX_esc_psionic_cannon_1
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_CANNON_CREATURE_1
+		medium = MEDIUM_ESC_PSIONIC_CANNON_CREATURE_1
+		large = LARGE_ESC_PSIONIC_CANNON_CREATURE_1
+		extra_large = XL_ESC_PSIONIC_CANNON_CREATURE_1
+	}
+	upgrades_to = "esc_psionic_cannon_2"
+}
+
+# Psionic Beam Cannon
+esc_psionic_cannon_2 = {
+	type = offensive
+	icon = GFX_esc_psionic_cannon_2
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_CANNON_CREATURE_2
+		medium = MEDIUM_ESC_PSIONIC_CANNON_CREATURE_2
+		large = LARGE_ESC_PSIONIC_CANNON_CREATURE_2
+		extra_large = XL_ESC_PSIONIC_CANNON_CREATURE_2
+	}
+}
+
+# Shroud Strike
+esc_psionic_strike_1 = {
+	type = offensive
+	icon = GFX_esc_psionic_strike_1
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_STRIKE_CREATURE_1
+		medium = MEDIUM_ESC_PSIONIC_STRIKE_CREATURE_1
+		large = LARGE_ESC_PSIONIC_STRIKE_CREATURE_1
+		extra_large = XL_ESC_PSIONIC_STRIKE_CREATURE_1
+	}
+	upgrades_to = "esc_psionic_strike_2"
+}
+
+# Shroud Wrath
+esc_psionic_strike_2 = {
+	type = offensive
+	icon = GFX_esc_psionic_strike_2
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_STRIKE_CREATURE_2
+		medium = MEDIUM_ESC_PSIONIC_STRIKE_CREATURE_2
+		large = LARGE_ESC_PSIONIC_STRIKE_CREATURE_2
+		extra_large = XL_ESC_PSIONIC_STRIKE_CREATURE_2
+	}
+}
+
+# Psi-blast Torpedo
+esc_psionic_torpedo_creature_1 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_torpedo_1
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_1
+		medium = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_1
+		large = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_1
+		extra_large = XL_ESC_PSIONIC_TORPEDO_CREATURE_1
+	}
+	upgrades_to = "esc_psionic_torpedo_creature_2"
+}
+
+# Improved Psi-blast Torpedo
+esc_psionic_torpedo_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_torpedo_2
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_2
+		medium = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_2
+		large = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_2
+		extra_large = XL_ESC_PSIONIC_TORPEDO_CREATURE_2
+	}
+}
+
+# Psionic Interceptors
+esc_psionic_interceptors_creature = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_strikecraft
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_INTERCEPTORS_CREATURE
+		medium = MEDIUM_ESC_PSIONIC_INTERCEPTORS_CREATURE
+		large = LARGE_ESC_PSIONIC_INTERCEPTORS_CREATURE
+		extra_large = XL_ESC_PSIONIC_INTERCEPTORS_CREATURE
+	}
+}
+
+############################################################
+##           ESC : Tesla Weapons : Space Fauna            ##
+############################################################
+
+# Bio-electric Discharger
+esc_tesla_coil_creature_1 = {
+	type = offensive
+	icon = GFX_esc_bio_tesla_coil_1
+	ship_components = {
+		small = SMALL_ESC_TESLA_COIL_CREATURE_1
+		medium = MEDIUM_ESC_TESLA_COIL_CREATURE_1
+		large = LARGE_ESC_TESLA_COIL_CREATURE_1
+		extra_large = XL_ESC_TESLA_COIL_CREATURE_1
+	}
+	upgrades_to = "esc_tesla_coil_creature_2"
+}
+
+# Evolved Bio-electric Discharger
+esc_tesla_coil_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_tesla_coil_2
+	ship_components = {
+		small = SMALL_ESC_TESLA_COIL_CREATURE_2
+		medium = MEDIUM_ESC_TESLA_COIL_CREATURE_2
+		large = LARGE_ESC_TESLA_COIL_CREATURE_2
+		extra_large = XL_ESC_TESLA_COIL_CREATURE_2
+	}
+}
+
+# Bio-electric Bomb
+esc_tesla_bomb_creature_1 = {
+	type = offensive
+	icon = GFX_esc_bio_tesla_bomb_1
+	ship_components = {
+		small = SMALL_ESC_TESLA_BOMB_CREATURE_1
+		medium = MEDIUM_ESC_TESLA_BOMB_CREATURE_1
+		large = LARGE_ESC_TESLA_BOMB_CREATURE_1
+		extra_large = XL_ESC_TESLA_BOMB_CREATURE_1
+	}
+	upgrades_to = "esc_tesla_bomb_creature_2"
+}
+
+# Evolved Bio-electric Bomb
+esc_tesla_bomb_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_tesla_bomb_2
+	ship_components = {
+		small = SMALL_ESC_TESLA_BOMB_CREATURE_2
+		medium = MEDIUM_ESC_TESLA_BOMB_CREATURE_2
+		large = LARGE_ESC_TESLA_BOMB_CREATURE_2
+		extra_large = XL_ESC_TESLA_BOMB_CREATURE_2
+	}
+}
+
+# Bio-electric Warbeasts
+esc_tesla_interdictor_creature = {
+	type = offensive
+	icon = GFX_esc_bio_tesla_strikecraft
+	ship_components = {
+		small = SMALL_ESC_TESLA_INTERDICTOR_CREATURE
+		medium = MEDIUM_ESC_TESLA_INTERDICTOR_CREATURE
+		large = LARGE_ESC_TESLA_INTERDICTOR_CREATURE
+		extra_large = XL_ESC_TESLA_INTERDICTOR_CREATURE
 	}
 }
 

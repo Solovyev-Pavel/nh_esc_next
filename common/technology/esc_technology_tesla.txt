@@ -162,7 +162,7 @@ esc_tech_tesla_bomb_1 = {
 	cost = @tier5cost1
 	weight = @tier5weight1
 	ai_update_type = military
-	prerequisites = { "esc_tech_tesla_weapons" "tech_torpedoes_3" }
+	prerequisites = { "esc_tech_tesla_weapons" }
 	gateway = ESC_TESLA_TORPEDOES
 
 	potential = {
@@ -170,6 +170,11 @@ esc_tech_tesla_bomb_1 = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			factor = 0.0
+			country_uses_bio_ships = no
+			NOT = { has_technology = "tech_torpedoes_3" }
+		}
 		modifier = {
 			factor = 0.8
 			has_ethic = ethic_fanatic_pacifist
@@ -190,6 +195,11 @@ esc_tech_tesla_bomb_1 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.0
+			country_uses_bio_ships = no
+			NOT = { has_technology = "tech_torpedoes_3" }
+		}
 		modifier = {
 			factor = 0.8
 			has_ethic = ethic_fanatic_pacifist
