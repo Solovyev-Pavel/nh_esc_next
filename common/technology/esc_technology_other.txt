@@ -170,7 +170,7 @@ esc_tech_reprocessing_plant = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 0
-			NOT = { has_country_flag = technosphere_studied }
+			NOT = { has_country_flag = scrapper_killed }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
