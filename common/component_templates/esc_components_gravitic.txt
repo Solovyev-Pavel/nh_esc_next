@@ -11,19 +11,6 @@
 # - Titanic Super-Graviton Cannon		Titanic
 # - Singulatiry Bombers					H
 
-@ESC_WEAPON_gravitic_hull_damage = 1.25
-@ESC_WEAPON_gravitic_lance_hull_damage = 1.5
-@ESC_WEAPON_gravitic_armor_damage = 0.5
-@ESC_WEAPON_gravitic_armor_penetration = 0.0
-@ESC_WEAPON_gravitic_shield_damage = 2.0
-@ESC_WEAPON_gravitic_shield_penetration = 0.0
-
-@ESC_WEAPON_gravitic_bombers_hull_damage = 1.75
-@ESC_WEAPON_gravitic_bombers_armor_damage = 0.75
-@ESC_WEAPON_gravitic_bombers_armor_penetration = 0.0
-@ESC_WEAPON_gravitic_bombers_shield_damage = 1.0
-@ESC_WEAPON_gravitic_bombers_shield_penetration = 1.0
-
 ############################################################
 ##             Gravitational Anomaly Projector            ##
 ############################################################
@@ -43,16 +30,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -20
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_s_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t7_upkeep_energy
-			alloys = @ESC_WEAPON_s_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -109,16 +92,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -34
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_m_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t7_upkeep_energy
-			alloys = @ESC_WEAPON_m_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -176,16 +155,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -64
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -246,16 +221,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -24
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_s_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_s_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_s_t8_upkeep_energy
-			alloys = @ESC_WEAPON_s_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -311,16 +282,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -46
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_m_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_m_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_m_t8_upkeep_energy
-			alloys = @ESC_WEAPON_m_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -377,16 +344,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -90
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -453,16 +416,12 @@ weapon_component_template = {
 	firing_arc = 25.0
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -530,16 +489,12 @@ weapon_component_template = {
 	firing_arc = 25.0
 	power = -80
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t8_upkeep_energy
-			alloys = @ESC_WEAPON_l_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_hull_damage
@@ -602,16 +557,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -275
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_xl_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t7_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
@@ -680,16 +631,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -325
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_xl_t8_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_xl_t8_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_xl_t8_upkeep_energy
-			alloys = @ESC_WEAPON_xl_t8_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
@@ -759,16 +706,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
@@ -833,16 +776,12 @@ weapon_component_template = {
 	accuracy = 0.85
 	power = -500
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_t_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_t_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_t_t7_upkeep_energy
-			alloys = @ESC_WEAPON_t_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
@@ -904,16 +843,12 @@ strike_craft_component_template = {
 	projectile_gfx = "esc_gravity_cannon_tiny"
 	power = -70
 
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = @ESC_WEAPON_l_t7_cost_alloys
-			sr_dark_matter = @ESC_WEAPON_l_t7_cost_special
-		}
-		upkeep = {
-			energy = @ESC_WEAPON_l_t7_upkeep_energy
-			alloys = @ESC_WEAPON_l_t7_upkeep_alloys
-		}
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
 	}
 
 	count = @ESC_STRIKECRAFT_count_large

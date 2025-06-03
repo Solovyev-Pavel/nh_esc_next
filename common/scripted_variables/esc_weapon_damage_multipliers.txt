@@ -298,6 +298,37 @@
 @ESC_WEAPON_biological_shield_penetration = 0.0
 @ESC_WEAPON_biological_missile_shield_penetration = 1.0
 
+# gravitic weapons
+@ESC_WEAPON_gravitic_hull_damage = 1.25
+@ESC_WEAPON_gravitic_lance_hull_damage = 1.5
+@ESC_WEAPON_gravitic_armor_damage = 0.5
+@ESC_WEAPON_gravitic_armor_penetration = 0.0
+@ESC_WEAPON_gravitic_shield_damage = 2.0
+@ESC_WEAPON_gravitic_shield_penetration = 0.0
+
+@ESC_WEAPON_gravitic_bombers_hull_damage = 1.75
+@ESC_WEAPON_gravitic_bombers_armor_damage = 0.75
+@ESC_WEAPON_gravitic_bombers_armor_penetration = 0.0
+@ESC_WEAPON_gravitic_bombers_shield_damage = 1.0
+@ESC_WEAPON_gravitic_bombers_shield_penetration = 1.0
+
+# nanite weapons
+@ESC_WEAPON_nanite_torpedo_hull_damage = 1.25
+@ESC_WEAPON_nanite_cannon_hull_damage = 1.5
+@ESC_WEAPON_nanite_torpedo_armor_damage = 1.5
+@ESC_WEAPON_nanite_cannon_armor_damage = 1.75
+@ESC_WEAPON_nanite_armor_penetration = 0.0
+@ESC_WEAPON_nanite_torpedo_shield_damage = 1.0
+@ESC_WEAPON_nanite_cannon_shield_damage = 0.4
+@ESC_WEAPON_nanite_torpedo_shield_penetration = 1.0
+@ESC_WEAPON_nanite_cannon_shield_penetration = 0.0
+
+@ESC_WEAPON_nanite_bombers_hull_damage = 1.25
+@ESC_WEAPON_nanite_bombers_armor_damage = 1.75
+@ESC_WEAPON_nanite_bombers_armor_penetration = 0.0
+@ESC_WEAPON_nanite_bombers_shield_damage = 1.0
+@ESC_WEAPON_nanite_bombers_shield_penetration = 1.0
+
 # psionic weapons
 @ESC_WEAPON_psionic_hull_damage = 1.25
 @ESC_WEAPON_psionic_lance_hull_damage = 1.5
@@ -316,10 +347,7 @@
 @ESC_WEAPON_psionic_strikecraft_shield_damage = 0.5
 @ESC_WEAPON_psionic_strikecraft_shield_penetration = 0.75
 
-###
-### Tesla weapons
-###
-
+# tesla weapons
 @ESC_WEAPON_tesla_hull_damage = 1.5
 @ESC_WEAPON_tesla_lance_hull_damage = 1.75
 @ESC_WEAPON_tesla_armor_damage = 0.66
