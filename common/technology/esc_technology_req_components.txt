@@ -11,6 +11,7 @@
 #
 # ── Automated Dreadnought Computer				: very strong computer for bigger hulls; requires observed Automatic Dreadnought / Leviathans DLC
 # ── Nanite Thought Matrix						: nanite-based combat computers
+# ── Gigapredator Instincts						: special bioship combat computers
 #
 # ── Improved Tachyon Sensors					: tier 5 sensors for ships and stations
 #     └─ String Theory							: tier 6 sensors for ships and stations
@@ -515,6 +516,41 @@ esc_tech_nanite_thought_matrix = {
 		custom = {
 			title = "ESC_TECH_UNLOCK_COMBAT_COMPUTERS_NANITE_TITLE"
 			desc = "ESC_TECH_UNLOCK_COMBAT_COMPUTERS_NANITE_DESC"
+		}
+	}
+}
+
+############################################################
+##                Gigapredator Instincts                  ##
+############################################################
+
+esc_tech_gigapredator_instincts = {
+	area = society
+	category = { biology }
+	tier = 4
+	cost = @tier4cost2
+	weight = @tier4weight2
+	ai_update_type = all
+	prerequisites = { "tech_combat_computers_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "ESC_TECH_UNLOCK_GIGAPREDATOR_TITLE"
+			desc = "ESC_TECH_UNLOCK_GIGAPREDATOR_DESC"
+		}
+	}
+
+	potential = {
+		country_uses_bio_ships = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0	### event tech
 		}
 	}
 }

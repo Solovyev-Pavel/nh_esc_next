@@ -434,3 +434,17 @@ ESC_ship_uses_swarm_computers = {
 		ESC_ship_uses_battlecruiser_components = yes
 	}
 }
+
+# ESC custom trigger for buffer combat computers
+ESC_ship_uses_buffer_computers = {
+	OR = {
+		ship_uses_buffer_role = yes
+	}
+}
+
+# ESC custom trigger for debuffer combat computers
+ESC_ship_uses_debuffer_computers = {
+	OR = {
+		ship_uses_debuffer_role = yes
+	}
+}

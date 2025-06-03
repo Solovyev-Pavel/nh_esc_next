@@ -43,6 +43,75 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_SWARM
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_swarm
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = swarm
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = swarm
+	ai_tags = { gunship brawler }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_evasion_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Gigapredator Instincts : Swarm
+utility_component_template = {
+	key = ESC_GIGAPREDATOR_INSTINCTS_SWARM
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_gigapredator_instincts_swarm
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = swarm
+		PREREQUISITE = esc_tech_gigapredator_instincts
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = swarm
+	ai_tags = { gunship brawler }
+
+	ship_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_evasion_add = 10
+		ship_speed_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
 ############################################################
 ### Torpedo computers
 
@@ -74,6 +143,76 @@ utility_component_template = {
 		ship_shield_mult = 0.1
 		ship_armor_mult = 0.1
 		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_TORPEDO
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_swarm
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = torpedo
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = torpedo
+	ai_tags = { explosive }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_evasion_add = 10
+		weapon_type_explosive_weapon_damage_mult = 0.15
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Gigapredator Instincts : Torpedo
+utility_component_template = {
+	key = ESC_GIGAPREDATOR_INSTINCTS_TORPEDO
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_gigapredator_instincts_swarm
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = torpedo
+		PREREQUISITE = esc_tech_gigapredator_instincts
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = torpedo
+	ai_tags = { explosive }
+
+	ship_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_evasion_add = 10
+		ship_speed_mult = 0.1
 	}
 
 	# only regular empires may use this component
@@ -155,6 +294,75 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_PICKET
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_picket
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = picket
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = picket
+	ai_tags = { screen }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Gigapredator Instincts : Picket
+utility_component_template = {
+	key = ESC_GIGAPREDATOR_INSTINCTS_PICKET
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_gigapredator_instincts_picket
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = picket
+		PREREQUISITE = esc_tech_gigapredator_instincts
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = picket
+	ai_tags = { screen }
+
+	ship_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_evasion_add = 10
+		ship_speed_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
 ############################################################
 ### Line computers
 
@@ -228,6 +436,75 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_LINE
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_line
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = line
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = line
+	ai_tags = { gunship }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_accuracy_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Gigapredator Instincts : Line
+utility_component_template = {
+	key = ESC_GIGAPREDATOR_INSTINCTS_LINE
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_gigapredator_instincts_line
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = line
+		PREREQUISITE = esc_tech_gigapredator_instincts
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = line
+	ai_tags = { gunship }
+
+	ship_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_accuracy_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_evasion_add = 10
+		ship_speed_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
 ############################################################
 ### Artillery computers
 
@@ -293,6 +570,75 @@ utility_component_template = {
 		ship_shield_mult = 0.1
 		ship_armor_mult = 0.1
 		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_ARTILLERY
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_artillery
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = artillery
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = artillery
+	ai_tags = { artillery energy_torpedoes }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_weapon_range_mult = 0.1
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Gigapredator Instincts : Artillery
+utility_component_template = {
+	key = ESC_GIGAPREDATOR_INSTINCTS_ARTILLERY
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_gigapredator_instincts_artillery
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = artillery
+		PREREQUISITE = esc_tech_gigapredator_instincts
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = artillery
+	ai_tags = { artillery energy_torpedoes }
+
+	ship_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_weapon_range_mult = 0.1
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_evasion_add = 10
+		ship_speed_mult = 0.1
 	}
 
 	# only regular empires may use this component
@@ -376,6 +722,158 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_CARRIER
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_carrier
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = carrier
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = carrier
+	ai_tags = { carrier }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_weapon_range_mult = 0.1
+		ship_engagement_range_mult = 1.0
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Gigapredator Instincts : Carrier
+utility_component_template = {
+	key = ESC_GIGAPREDATOR_INSTINCTS_CARRIER
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_gigapredator_instincts_carrier
+		POWER = @ESC_COMPUTER_power_dreadnought
+		SHIP_COMBAT_ROLE = carrier
+		PREREQUISITE = esc_tech_gigapredator_instincts
+		STRATEGIC_RESOURCE_TYPE = exotic_gases
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = carrier
+	ai_tags = { carrier }
+
+	ship_modifier = {
+		ship_weapon_damage = 0.2
+		ship_fire_rate_mult = 0.1
+		ship_weapon_range_mult = 0.1
+		ship_engagement_range_mult = 1.0
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_evasion_add = 10
+		ship_speed_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+############################################################
+### Buffer and Debuffer computers
+
+# Nanite Thought Matrix : buffer
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_BUFFER
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_swarm
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = buffer
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	upgrade_path = buffer
+	target_type = target_allies
+	ship_behavior = swarm
+	ai_tags = { buffer_role buffer_role_stealth }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_weapon_range_mult = 0.1
+		buffer_role_weapon_fire_rate_mult = 0.15
+		ship_accuracy_add = 15
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+		ship_evasion_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+# Nanite Thought Matrix : debuffer
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_DEBUFFER
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_platform
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = debuffer
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	upgrade_path = debuffer
+	ship_behavior = swarm
+	ai_tags = { debuffer_role debuffer_role_stealth }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_weapon_range_mult = 0.1
+		debuffer_role_weapon_fire_rate_mult = 0.15
+		ship_accuracy_add = 15
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
 ############################################################
 ### Platform computers
 
@@ -414,6 +912,40 @@ utility_component_template = {
 	}
 }
 
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_PLATFORM
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_platform
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = platform
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = platform
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_accuracy_add = 10
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.2
+		ship_armor_mult = 0.2
+		ship_hull_mult = 0.2
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
 ############################################################
 ### Starbase computers
 
@@ -429,6 +961,40 @@ utility_component_template = {
 		PREREQUISITE = esc_tech_nanite_thought_matrix
 		STRATEGIC_RESOURCE_TYPE = nanites
 		IS_BIOSHIP_COMPUTER = no
+		COMPONENT_WEIGHT = 16
+	}
+
+	ship_behavior = platform
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_accuracy_add = 10
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.1
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+}
+
+utility_component_template = {
+	key = ESC_BIO_NANITE_COMPUTER_STARBASE
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_combat_computers
+		COMPUTER_ICON = GFX_esc_nanite_computer_starbase
+		POWER = @ESC_COMPUTER_power_nanite
+		SHIP_COMBAT_ROLE = starbase
+		PREREQUISITE = esc_tech_nanite_thought_matrix
+		STRATEGIC_RESOURCE_TYPE = nanites
+		IS_BIOSHIP_COMPUTER = yes
 		COMPONENT_WEIGHT = 16
 	}
 

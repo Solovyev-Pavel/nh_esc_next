@@ -81,3 +81,23 @@ special_project = {
 	on_success = { owner = { country_event = { id = esc_special_projects.3004 days = 0 } } }
 	on_fail = { }
 }
+
+### special project to give country access to Gigapredator Insticts computer
+special_project = {
+	key = "ESC_GIGAPREDATOR_STUDY"
+	picture = GFX_evt_space_monster
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	cost = @tier1cost2
+	tech_department = society_technology
+	sound = no
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+	requirements = {}
+	abort_trigger = {}
+
+	on_success = { owner = { country_event = { id = esc_special_projects.4003 } } }
+	on_fail = {}
+}

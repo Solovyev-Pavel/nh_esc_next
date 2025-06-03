@@ -97,6 +97,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
+		country_uses_bio_ships = no
 		NOR = {
 			has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
 			has_country_flag = ESC_COUNTRY_FLAG_dreadnough_computer_queued
@@ -319,5 +320,115 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		add_research_option = esc_tech_nanite_thought_matrix
+	}
+}
+
+############################################################
+###                 Gigapredator studies                 ###
+############################################################
+
+# checks whether the country meets criteria for getting Gigapredator Instincts 'computer'
+country_event = {
+	id = esc_special_projects.4000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		country_uses_bio_ships = yes
+		has_technology = tech_combat_computers_2
+		NOR = {
+			has_global_flag = ESC_GLOBAL_FLAG_dreadnought_tech_forbidden
+			has_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_queued
+			has_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer
+			has_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_declined
+		}
+		OR = {
+			has_communications = event_target:stellarite_country
+			has_communications = event_target:dimensional_horror_country
+			has_country_flag = dragon_encounter
+			has_country_flag = voidspawn_boss_met
+			has_country_flag = encountered_elderly_tiyanki
+		}
+	}
+
+	immediate = {
+		set_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_queued
+
+		if = {
+			limit = { is_ai = yes }
+			random_list = {
+				33 = { country_event = { id = esc_special_projects.2001 days = 1180 random = 100 } }
+				33 = { country_event = { id = esc_special_projects.2001 days = 1440 random = 100 } }
+				33 = { country_event = { id = esc_special_projects.2001 days = 1800 random = 100 } }
+			}
+		}
+		else = {
+			random_list = {
+				33 = { country_event = { id = esc_special_projects.4002 days = 180 } }
+				33 = { country_event = { id = esc_special_projects.4002 days = 360 } }
+				33 = { country_event = { id = esc_special_projects.4002 days = 540 } }
+			}
+		}
+	}
+}
+
+# AI just gets tech option
+country_event = {
+	id = esc_special_projects.4001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_research_option = esc_tech_gigapredator_instincts
+		remove_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_queued
+		set_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer
+	}
+}
+
+# human player can either choose to run a special project to get the tech, or give the chance up for influence
+country_event = {
+	id = esc_special_projects.4002
+	is_triggered_only = yes
+	title = esc_special_projects.4002.name
+	desc = esc_special_projects.4002.desc
+	picture = GFX_evt_space_monster
+
+	trigger = {
+		has_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_queued
+	}
+
+	option = {
+		name = esc_special_projects.4002.option.a
+		capital_scope = {
+			enable_special_project = {
+				name = ESC_GIGAPREDATOR_STUDY
+				location = this
+				owner = root.owner
+			}
+		}
+		hidden_effect = { set_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer }
+	}
+	option = {
+		name = esc_special_projects.4002.option.b
+		add_resource = { influence = 250 }
+		hidden_effect = { set_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_declined }
+	}
+
+	after = {
+		remove_country_flag = ESC_COUNTRY_FLAG_giga_predator_computer_queued
+	}
+}
+
+# human player gets the research option
+country_event = {
+	id = esc_special_projects.4003
+	is_triggered_only = yes
+	title = esc_special_projects.4003.name
+	desc = esc_special_projects.4003.desc
+	picture = GFX_evt_society_research
+
+	option = {
+		name = EXCELLENT
+		add_research_option = esc_tech_gigapredator_instincts
 	}
 }
