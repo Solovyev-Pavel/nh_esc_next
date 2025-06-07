@@ -49,7 +49,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic s_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_2
 
@@ -106,7 +106,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_2
 
@@ -164,7 +164,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_2
 
@@ -222,7 +222,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_1
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_2
 
@@ -283,7 +283,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic s_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_3
 
@@ -340,7 +340,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_3
 
@@ -398,7 +398,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_3
 
@@ -456,7 +456,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_2" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_2
 	projectile_gfx = "red_crystal_ship_projectile"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_3
 
@@ -517,7 +517,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic s_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_4
 
@@ -574,7 +574,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_4
 
@@ -632,7 +632,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_4
 
@@ -690,7 +690,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_3" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_3
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_4
 
@@ -751,7 +751,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic s_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_CREATURE_5
 
@@ -808,7 +808,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_CREATURE_5
 
@@ -866,7 +866,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_CREATURE_5
 
@@ -924,7 +924,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_4" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_4
 	projectile_gfx = "crystal_ship_projectile"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 	upgrades_to = XL_ESC_CRYSTAL_CANNON_CREATURE_5
 
@@ -985,7 +985,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic s_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 
 	inline_script = {
@@ -1041,7 +1041,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic m_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield brawler gunship }
 
 	inline_script = {
@@ -1098,7 +1098,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic l_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 
 	inline_script = {
@@ -1155,7 +1155,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_cannon_5" }
 	component_set = ESC_CRYSTAL_CANNON_CREATURE_5
 	projectile_gfx = "green_crystal_ship_projectile"
-	tags = { weapon_type_kinetic x_slot }
+	tags = { weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield artillery }
 
 	inline_script = {
