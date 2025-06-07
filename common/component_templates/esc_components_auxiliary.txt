@@ -2,7 +2,7 @@
 ##    Components : Auxiliary components : Fire Control    ##
 ############################################################
 
-# Advanced Auxiliary Fire Control
+# Advanced Auxiliary Fire Control :: standard ships
 utility_component_template = {
 	key = ESC_ADV_AUX_FIRE_CONTROL
 	size = aux
@@ -22,8 +22,50 @@ utility_component_template = {
 		ship_tracking_add = 3
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
 	prerequisites = { "esc_tech_auxiliary_fire_control_2" }
 	component_set = ESC_ADV_AUX_FIRE_CONTROL
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 3.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+	}
+}
+
+# Advanced Auxiliary Fire Control :: bioships
+utility_component_template = {
+	key = ESC_BIO_ADV_AUX_FIRE_CONTROL
+	size = aux
+	icon = GFX_esc_bio_fire_control_2
+	icon_frame = 1
+	power = -20
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 25
+		}
+	}
+
+	ship_modifier = {
+		ship_accuracy_add = 6
+		ship_tracking_add = 3
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_auxiliary_fire_control_2" }
+	component_set = ESC_BIO_ADV_AUX_FIRE_CONTROL
 
 	ai_weight = {
 		weight = 10
@@ -38,7 +80,7 @@ utility_component_template = {
 ##    Components : Auxiliary components : Afterburners    ##
 ############################################################
 
-# pulsed plasma afterburners
+# pulsed plasma afterburners :: standard ships
 utility_component_template = {
 	key = ESC_AFTERBURNER_3
 	size = aux
@@ -58,13 +100,57 @@ utility_component_template = {
 		ship_evasion_mult = 0.15
 	}
 
-	class_restriction = { shipclass_military shipclass_science_ship }
 	prerequisites = { "esc_tech_afterburners_3" }
 	component_set = ESC_AFTERBURNER_3
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
 		EVAL_TARGET = no
+		EXTRA_CONDITION = ESC_ship_uses_afterburners
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	ai_weight = {
+		weight = 15
+		modifier = {
+			factor = 2.0
+			is_preferred_weapons = weapon_type_kinetic
+		}
+		modifier = {
+			factor = 0.5
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+}
+
+# pulsed plasma afterburners :: bioships
+utility_component_template = {
+	key = ESC_BIO_AFTERBURNER_3
+	size = aux
+	icon = GFX_esc_bio_afterburners_3
+	icon_frame = 1
+	power = -30
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+
+	modifier = {
+		ship_speed_mult = 0.30
+		ship_evasion_mult = 0.15
+	}
+
+	prerequisites = { "esc_tech_afterburners_3" }
+	component_set = ESC_BIO_AFTERBURNER_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = ESC_ship_uses_afterburners
+		EXTRA_CONDITION_VALUE = yes
 	}
 
 	ai_weight = {
@@ -320,6 +406,166 @@ utility_component_template = {
 }
 
 ############################################################
+##    Components : Auxiliary components : Repair Drones   ##
+############################################################
+
+# repair drones :: standard ships
+utility_component_template = {
+	key = ESC_REPAIR_DRONES
+	size = aux
+	icon = GFX_esc_repair_drones
+	icon_frame = 1
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			volatile_motes = 1
+		}
+	}
+
+	modifier = {
+		ship_hull_regen_add_perc = 0.075
+		ship_armor_regen_add_perc = 0.125
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	prerequisites = { "esc_tech_repair_drones" }
+	component_set = ESC_REPAIR_DRONES
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+# repair drones :: bioships
+utility_component_template = {
+	key = ESC_BIO_REPAIR_DRONES
+	size = aux
+	icon = GFX_esc_bio_repair_drones
+	icon_frame = 1
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			volatile_motes = 1
+		}
+	}
+
+	modifier = {
+		ship_hull_regen_add_perc = 0.075
+		ship_armor_regen_add_perc = 0.125
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_repair_drones" }
+	component_set = ESC_BIO_REPAIR_DRONES
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+	}
+}
+
+############################################################
+##      Components : Auxiliary components : Warheads      ##
+############################################################
+
+# standardized warheads :: standard ships
+utility_component_template = {
+	key = ESC_STANDARDIZED_WARHEADS
+	size = aux
+	icon = GFX_esc_standardized_warheads
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 15
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = 0.05
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	ship_modifier = {
+		weapon_type_explosive_weapon_fire_rate_mult = 0.1
+		weapon_type_explosive_weapon_damage_mult = 0.1
+	}
+
+	prerequisites = { "esc_tech_standardized_warheads" }
+	component_set = ESC_STANDARDIZED_WARHEADS
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+# standardized warheads :: bioships
+utility_component_template = {
+	key = ESC_BIO_STANDARDIZED_WARHEADS
+	size = aux
+	icon = GFX_esc_bio_standardized_warheads
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 15
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = 0.05
+	}
+
+	ship_modifier = {
+		weapon_type_explosive_weapon_fire_rate_mult = 0.1
+		weapon_type_explosive_weapon_damage_mult = 0.1
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_standardized_warheads" }
+	component_set = ESC_BIO_STANDARDIZED_WARHEADS
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+############################################################
 ##    Components : Auxiliary components : Miscellaneous   ##
 ############################################################
 
@@ -408,38 +654,6 @@ utility_component_template = {
 	}
 }
 
-# standardized warheads
-utility_component_template = {
-	key = ESC_STANDARDIZED_WARHEADS
-	size = aux
-	icon = GFX_esc_standardized_warheads
-	icon_frame = 1
-	power = 0
-
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 15
-		}
-	}
-
-	modifier = {
-		ship_hull_mult = 0.05
-	}
-
-	ship_modifier = {
-		weapon_type_explosive_weapon_fire_rate_mult = 0.1
-		weapon_type_explosive_weapon_damage_mult = 0.1
-	}
-
-	prerequisites = { "esc_tech_standardized_warheads" }
-	component_set = ESC_STANDARDIZED_WARHEADS
-
-	ai_weight = {
-		weight = 10
-	}
-}
-
 # structural reinforcement
 utility_component_template = {
 	key = ESC_STRUCTURAL_REINFORCEMENT
@@ -470,45 +684,6 @@ utility_component_template = {
 
 	ai_weight = {
 		weight = 0.5
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
-		}
-	}
-}
-
-# repair drones
-utility_component_template = {
-	key = ESC_REPAIR_DRONES
-	size = aux
-	icon = GFX_esc_repair_drones
-	icon_frame = 1
-	power = -40
-
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 30
-			volatile_motes = 1
-		}
-	}
-
-	modifier = {
-		ship_hull_regen_add_perc = 0.075
-		ship_armor_regen_add_perc = 0.125
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
-	prerequisites = { "esc_tech_repair_drones" }
-	component_set = ESC_REPAIR_DRONES
-
-	ai_weight = {
-		weight = 10
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
 		modifier = {
 			factor = 0.0

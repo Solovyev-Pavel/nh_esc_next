@@ -333,6 +333,7 @@ esc_tech_aux_maneuver_thrusters = {
 	prerequisites = { "tech_afterburners_2" "esc_tech_grand_research_initiative" }
 
 	potential = {
+		country_uses_bio_ships = no
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
 	}
 
@@ -461,7 +462,7 @@ esc_tech_repair_drones = {
 	tier = 4
 	cost = @tier4cost1
 	weight = @tier4weight1
-	prerequisites = { "esc_tech_grand_research_initiative" "tech_cruisers" }
+	prerequisites = { "esc_tech_grand_research_initiative" }
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
@@ -469,10 +470,30 @@ esc_tech_repair_drones = {
 
 	weight_modifier = {
 		factor = 1.25
+		modifier = {
+			factor = 0
+			country_uses_bio_ships = no
+			NOT = { has_technology = "tech_cruisers" }
+		}
+		modifier = {
+			factor = 0
+			country_uses_bio_ships = yes
+			NOT = { has_technology = tech_weavers }
+		}
 	}
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			country_uses_bio_ships = no
+			NOT = { has_technology = "tech_cruisers" }
+		}
+		modifier = {
+			factor = 0
+			country_uses_bio_ships = yes
+			NOT = { has_technology = tech_weavers }
+		}
 	}
 }
 

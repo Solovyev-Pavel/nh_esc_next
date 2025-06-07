@@ -289,6 +289,14 @@ ESC_ship_uses_dreadnought_carrier_components = {
 	}
 }
 
+# ESC custom trigger for afterburners
+ESC_ship_uses_afterburners = {
+	OR = {
+		is_ship_class = shipclass_military
+		is_ship_size = @NSC_ExplorationShip
+	}
+}
+
 ###
 ### Combat computer triggers
 ###
