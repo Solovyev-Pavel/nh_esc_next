@@ -15,6 +15,11 @@
 # ── Bio-Horror Armies					: bio-ascension armies
 # ── Psionic Avatar Armies				: psi-ascension armies
 
+# ┬─ Neutronium-Infused Mandibles		: unlocks tier 4 mandibles
+# ├─ Adamantine Mandibles				: unlocks tier 5 mandibles
+# └─ Cybernetically-Enhanced Mandibles	: unlocks cybernetic mandibles
+#     └─ Bionic Mandibles				: unlocks andvanced cybernetic mandibles
+
 ############################################################
 ##                 Orbital Power Station                  ##
 ############################################################
@@ -622,6 +627,182 @@ esc_tech_psi_avatar_army = {
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
 			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##              Neutronium-Infused Mandibles              ##
+############################################################
+
+esc_tech_mandibles_4 = {
+	area = engineering
+	cost = @tier4cost3
+	weight = @tier4weight3
+	tier = 4
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { tech_mandibles_3 esc_tech_new_age_warfare }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+		country_uses_bio_ships = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##                  Adamantine Mandibles                  ##
+############################################################
+
+esc_tech_mandibles_5 = {
+	area = engineering
+	cost = @tier5cost2
+	weight = @tier5weight2
+	tier = 5
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { esc_tech_mandibles_4 }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+		country_uses_bio_ships = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##            Cybernetically-Enhanced Mandibles           ##
+############################################################
+
+esc_tech_mandibles_cyber_1 = {
+	area = engineering
+	cost = @tier5cost2
+	weight = @tier5weight2
+	tier = 5
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { esc_tech_mandibles_4 }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+		country_uses_bio_ships = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_cybernetic_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			ESC_TRIGGER_may_research_cybernetic_amoeba = no
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##                    Bionic Mandibles                    ##
+############################################################
+
+esc_tech_mandibles_cyber_2 = {
+	area = engineering
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	tier = 6
+	category = { materials }
+	ai_update_type = military
+	prerequisites = { esc_tech_mandibles_cyber_1 }
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
+		country_uses_bio_ships = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
 		}
 	}
 }

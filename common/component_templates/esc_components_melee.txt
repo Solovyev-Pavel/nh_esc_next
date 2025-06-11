@@ -1,0 +1,233 @@
+############################################################
+###                      Mandibles                       ###
+############################################################
+
+# Neutronium-Infused Mandibles
+weapon_component_template = {
+	key = ESC_MANDIBLES_4
+	size = torpedo
+	entity = "invisible_turret_entity"
+	icon = GFX_esc_mandibles_4
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 28.0 max = 70.0 }
+	windup = { min = 2.0 max = 6.0 }
+	total_fire_time = 9
+	range = 10
+	accuracy = 1.0
+	power = -28
+
+	size_damage_factor = 0.5
+	firing_arc = 25.0
+
+	hull_damage = @ESC_WEAPON_mandible_hull_damage
+	armor_penetration = @ESC_WEAPON_mandible_armor_penetration
+	armor_damage = @ESC_WEAPON_mandible_armor_damage
+	shield_penetration = @ESC_WEAPON_mandible_shield_penetration
+	shield_damage = @ESC_WEAPON_mandible_shield_damage
+	tracking = 0.6
+
+	prerequisites = { esc_tech_mandibles_4 }
+	component_set = ESC_MANDIBLES_4
+	projectile_gfx = "biogenesis_01_mandible_attack"
+	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = ESC_MANDIBLES_5
+
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# Adamantine Mandibles
+weapon_component_template = {
+	key = ESC_MANDIBLES_5
+	size = torpedo
+	entity = "invisible_turret_entity"
+	icon = GFX_esc_mandibles_5
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 36.0 max = 84.0 }
+	windup = { min = 2.0 max = 6.0 }
+	total_fire_time = 9
+	range = 10
+	accuracy = 1.0
+	power = -35
+
+	size_damage_factor = 0.5
+	firing_arc = 25.0
+
+	hull_damage = @ESC_WEAPON_mandible_hull_damage
+	armor_penetration = @ESC_WEAPON_mandible_armor_penetration
+	armor_damage = @ESC_WEAPON_mandible_armor_damage
+	shield_penetration = @ESC_WEAPON_mandible_shield_penetration
+	shield_damage = @ESC_WEAPON_mandible_shield_damage
+	tracking = 0.6
+
+	prerequisites = { esc_tech_mandibles_5 }
+	component_set = ESC_MANDIBLES_5
+	projectile_gfx = "biogenesis_01_mandible_attack"
+	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
+	ai_tags = { weapon_role_anti_armor }
+
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# Cybernetically-Enhanced Mandibles
+weapon_component_template = {
+	key = ESC_MANDIBLES_CYBER_1
+	size = torpedo
+	entity = "invisible_turret_entity"
+	icon = GFX_esc_cyber_mandibles_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 31.0 max = 75.0 }
+	windup = { min = 2.0 max = 6.0 }
+	total_fire_time = 6
+	range = 10
+	accuracy = 1.0
+	power = -28
+
+	size_damage_factor = 0.5
+	firing_arc = 25.0
+
+	hull_damage = @ESC_WEAPON_cyber_mandible_hull_damage
+	armor_penetration = @ESC_WEAPON_cyber_mandible_armor_penetration
+	armor_damage = @ESC_WEAPON_cyber_mandible_armor_damage
+	shield_penetration = @ESC_WEAPON_cyber_mandible_shield_penetration
+	shield_damage = @ESC_WEAPON_cyber_mandible_shield_damage
+	tracking = 0.6
+
+	prerequisites = { esc_tech_mandibles_cyber_1 }
+	component_set = ESC_MANDIBLES_CYBER_1
+	projectile_gfx = "biogenesis_01_mandible_attack"
+	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
+	ai_tags = { weapon_role_anti_armor }
+	upgrades_to = ESC_MANDIBLES_CYBER_2
+
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
+
+# Bionic Mandibles
+weapon_component_template = {
+	key = ESC_MANDIBLES_CYBER_2
+	size = torpedo
+	entity = "invisible_turret_entity"
+	icon = GFX_esc_cyber_mandibles_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 36.0 max = 85.0 }
+	windup = { min = 2.0 max = 6.0 }
+	total_fire_time = 6
+	range = 10
+	accuracy = 1.0
+	power = -28
+
+	size_damage_factor = 0.5
+	firing_arc = 25.0
+
+	hull_damage = @ESC_WEAPON_cyber_mandible_hull_damage
+	armor_penetration = @ESC_WEAPON_cyber_mandible_armor_penetration
+	armor_damage = @ESC_WEAPON_cyber_mandible_armor_damage
+	shield_penetration = @ESC_WEAPON_cyber_mandible_shield_penetration
+	shield_damage = @ESC_WEAPON_cyber_mandible_shield_damage
+	tracking = 0.6
+
+	prerequisites = { esc_tech_mandibles_cyber_2 }
+	component_set = ESC_MANDIBLES_CYBER_2
+	projectile_gfx = "biogenesis_01_mandible_attack"
+	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
+	ai_tags = { weapon_role_anti_armor }
+
+	potential = {
+		ship_uses_mauler_components = yes
+	}
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+	}
+}
