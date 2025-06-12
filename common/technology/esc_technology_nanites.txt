@@ -217,7 +217,7 @@ esc_tech_nanite_torpedo_1 = {
 	cost = @tier5cost2
 	weight = @tier5weight2
 	ai_update_type = military
-	prerequisites = { "esc_tech_synthetic_lifeform_studies" "tech_torpedoes_3" }
+	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 	gateway = ESC_NANITE_TORPEDOES
 
 	potential = {
@@ -225,6 +225,11 @@ esc_tech_nanite_torpedo_1 = {
 	}
 
 	weight_modifier = {
+		modifier = {
+			factor = 0
+			country_uses_bio_ships = no
+			NOT = { has_technology = tech_torpedoes_3 }
+		}
 		modifier = {
 			factor = 1.1
 			has_ethic = ethic_xenophile
@@ -237,6 +242,11 @@ esc_tech_nanite_torpedo_1 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			country_uses_bio_ships = no
+			NOT = { has_technology = tech_torpedoes_3 }
+		}
 		modifier = {
 			factor = 1.1
 			has_ethic = ethic_xenophile

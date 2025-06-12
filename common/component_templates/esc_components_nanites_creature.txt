@@ -1,0 +1,1495 @@
+############################################################
+##            ESC : Nanite Weapons : Space Fauna          ##
+############################################################
+
+# - Nanite Cannon							S/M/L/X
+# - Improved Nanite Cannon					S/M/L/X
+# - Nanite Reconstruction Bean				S/M/L/X
+# - Nanite Warhead Torpedo					S/M/L/X
+# - Gray Goo Warhead Torpedo				S/M/L/X
+# - Nanite Bombers							S/M/L/X
+
+############################################################
+##                     Nanite Cannon                      ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_NANITE_CANNON_CREATURE_1
+	size = small
+	icon = GFX_esc_bio_nanite_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 30 max = 72 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_nanite_cannon_1" }
+	component_set = ESC_NANITE_CANNON_CREATURE_1
+	projectile_gfx = "esc_nanities_small"
+	upgrades_to = SMALL_ESC_NANITE_CANNON_CREATURE_2
+	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_NANITE_CANNON_CREATURE_1
+	size = medium
+	icon = GFX_esc_bio_nanite_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 70 max = 136 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_nanite_cannon_1" }
+	component_set = ESC_NANITE_CANNON_CREATURE_1
+	projectile_gfx = "esc_nanities_medium"
+	upgrades_to = MEDIUM_ESC_NANITE_CANNON_CREATURE_2
+	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_NANITE_CANNON_CREATURE_1
+	size = large
+	icon = GFX_esc_bio_nanite_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 160 max = 334 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_cannon_1" }
+	component_set = ESC_NANITE_CANNON_CREATURE_1
+	projectile_gfx = "esc_nanities_large"
+	upgrades_to = LARGE_ESC_NANITE_CANNON_CREATURE_2
+	tags = { weapon_type_kinetic weapon_type_nanite l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_NANITE_CANNON_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_bio_nanite_cannon_1
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 320 max = 668 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = x
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_cannon_1" }
+	component_set = ESC_NANITE_CANNON_CREATURE_1
+	projectile_gfx = "esc_nanities_large"
+	upgrades_to = XL_ESC_NANITE_CANNON_CREATURE_2
+	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+############################################################
+##                Improved Nanite Cannon                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_NANITE_CANNON_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_nanite_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 40 max = 86 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_nanite_cannon_2" }
+	component_set = ESC_NANITE_CANNON_CREATURE_2
+	projectile_gfx = "esc_nanities_small"
+	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_NANITE_CANNON_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_nanite_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 100 max = 230 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_nanite_cannon_2" }
+	component_set = ESC_NANITE_CANNON_CREATURE_2
+	projectile_gfx = "esc_nanities_medium"
+	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_NANITE_CANNON_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_nanite_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 210 max = 440 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_cannon_2" }
+	component_set = ESC_NANITE_CANNON_CREATURE_2
+	projectile_gfx = "esc_nanities_large"
+	tags = { weapon_type_kinetic weapon_type_nanite l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_NANITE_CANNON_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_nanite_cannon_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 420 max = 880 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_cannon_2" }
+	component_set = ESC_NANITE_CANNON_CREATURE_2
+	projectile_gfx = "esc_nanities_large"
+	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+############################################################
+##                  Nanite Reconstructor                  ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_NANITE_RECONSTRUCTOR_CREATURE
+	size = small
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 40 max = 76 }
+	windup = { min = 4 max = 14 }
+	total_fire_time = 20
+	range = @ESC_WEAPON_RANGE_S_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.5
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR_CREATURE
+	projectile_gfx = "esc_nanities_small"
+	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 30
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_NANITE_RECONSTRUCTOR_CREATURE
+	size = medium
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 100 max = 210 }
+	windup = { min = 5 max = 17 }
+	total_fire_time = 25
+	range = @ESC_WEAPON_RANGE_M_2
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR_CREATURE
+	projectile_gfx = "esc_nanities_medium"
+	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 75
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_NANITE_RECONSTRUCTOR_CREATURE
+	size = large
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 210 max = 390 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_2
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR_CREATURE
+	projectile_gfx = "esc_nanities_large"
+	tags = { weapon_type_kinetic weapon_type_nanite l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 150
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_NANITE_RECONSTRUCTOR_CREATURE
+	size = extra_large
+	icon = GFX_esc_nanite_reconstructor
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 420 max = 780 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 30
+	range = @ESC_WEAPON_RANGE_L_4
+	min_range = @ESC_WEAPON_MIN_RANGE_4
+	accuracy = 0.85
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_cannon_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_cannon_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_cannon_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_cannon_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_reconstructor" }
+	component_set = ESC_NANITE_RECONSTRUCTOR_CREATURE
+	projectile_gfx = "esc_nanities_large"
+	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_healing_effect
+		REPAIR_AMOUNT = 225
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+############################################################
+##                 Nanite Warhead Torpedo                 ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_NANITE_TORPEDO_CREATURE_1
+	size = small
+	icon = GFX_esc_bio_nanite_torpedo_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 25 max = 35 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_1
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 15
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_1" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_1
+	projectile_gfx = "esc_nanite_torpedo"
+	upgrades_to = SMALL_ESC_NANITE_TORPEDO_CREATURE_2
+	tags = { weapon_type_explosive weapon_type_nanite s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_NANITE_TORPEDO_CREATURE_1
+	size = medium
+	icon = GFX_esc_bio_nanite_torpedo_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 45 max = 70 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 15
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_1" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_1
+	projectile_gfx = "esc_nanite_torpedo"
+	upgrades_to = MEDIUM_ESC_NANITE_TORPEDO_CREATURE_2
+	tags = { weapon_type_explosive weapon_type_nanite m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_NANITE_TORPEDO_CREATURE_1
+	size = large
+	icon = GFX_esc_bio_nanite_torpedo_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 85 max = 140 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 15
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_1" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_1
+	projectile_gfx = "esc_nanite_torpedo"
+	upgrades_to = LARGE_ESC_NANITE_TORPEDO_CREATURE_2
+	tags = { weapon_type_explosive weapon_type_nanite l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_NANITE_TORPEDO_CREATURE_1
+	size = extra_large
+	icon = GFX_esc_bio_nanite_torpedo_1
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 170 max = 280 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_3
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 15
+	missile_armor = 10
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_1" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_1
+	projectile_gfx = "esc_nanite_torpedo"
+	upgrades_to = XL_ESC_NANITE_TORPEDO_CREATURE_2
+	tags = { weapon_type_explosive weapon_type_nanite x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+############################################################
+##                    Gray Goo Torpedo                    ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_NANITE_TORPEDO_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_nanite_torpedo_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 30 max = 45 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_1
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 18
+	missile_armor = 12
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_2" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_2
+	projectile_gfx = "esc_nanite_torpedo"
+	tags = { weapon_type_explosive weapon_type_nanite s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_NANITE_TORPEDO_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_nanite_torpedo_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 55 max = 85 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 18
+	missile_armor = 12
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_2" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_2
+	projectile_gfx = "esc_nanite_torpedo"
+	tags = { weapon_type_explosive weapon_type_nanite m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_NANITE_TORPEDO_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_nanite_torpedo_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 110 max = 165 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_2
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 18
+	missile_armor = 12
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_2" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_2
+	projectile_gfx = "esc_nanite_torpedo"
+	tags = { weapon_type_explosive weapon_type_nanite l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_NANITE_TORPEDO_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_nanite_torpedo_2
+	icon_frame = 1
+	type = missile
+
+	damage = { min = 220 max = 330 }
+	size_damage_factor = 1
+	windup = { min = 5 max = 10 }
+	total_fire_time = 100
+	range = @ESC_WEAPON_RANGE_G_3
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 18
+	missile_armor = 12
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	firing_arc = 25.0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	hull_damage = @ESC_WEAPON_nanite_torpedo_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_torpedo_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_torpedo_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_torpedo_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_nanite_torpedo_2" }
+	component_set = ESC_NANITE_TORPEDO_CREATURE_2
+	projectile_gfx = "esc_nanite_torpedo"
+	tags = { weapon_type_explosive weapon_type_nanite x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+
+	inline_script = {
+		script = weapon_effects/esc_armor_damage_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+############################################################
+##                     Nanite Bombers                     ##
+############################################################
+
+# small
+strike_craft_component_template = {
+	key = SMALL_ESC_NANITE_BOMBERS_CREATURE
+	size = small
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_nanite_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_nanities_tiny"
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	count = 2 # @ESC_STRIKECRAFT_count_small
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+
+	health = 30
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_nanite_bombers_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_bombers_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_bombers_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_bombers_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_bombers_shield_penetration
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_NANITE_BOMBERS_CREATURE
+	prerequisites = { "esc_tech_nanite_bomber" }
+	tags = { weapon_type_strike_craft s_slot weapon_type_space_fauna }
+	ai_tags = { carrier weapon_role_anti_hull carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# medium
+strike_craft_component_template = {
+	key = MEDIUM_ESC_NANITE_BOMBERS_CREATURE
+	size = medium
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_nanite_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_nanities_tiny"
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	count = 4 # @ESC_STRIKECRAFT_count_medium
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+
+	health = 30
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_nanite_bombers_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_bombers_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_bombers_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_bombers_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_bombers_shield_penetration
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_NANITE_BOMBERS_CREATURE
+	prerequisites = { "esc_tech_nanite_bomber" }
+	tags = { weapon_type_strike_craft m_slot weapon_type_space_fauna }
+	ai_tags = { carrier weapon_role_anti_hull carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# large
+strike_craft_component_template = {
+	key = LARGE_ESC_NANITE_BOMBERS_CREATURE
+	size = large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_nanite_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_nanities_tiny"
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	count = @ESC_STRIKECRAFT_count_large
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+
+	health = 30
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_nanite_bombers_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_bombers_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_bombers_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_bombers_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_bombers_shield_penetration
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_NANITE_BOMBERS_CREATURE
+	prerequisites = { "esc_tech_nanite_bomber" }
+	tags = { weapon_type_strike_craft l_slot weapon_type_space_fauna }
+	ai_tags = { carrier weapon_role_anti_hull carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
+
+# extra-large
+strike_craft_component_template = {
+	key = XL_ESC_NANITE_BOMBERS_CREATURE
+	size = extra_large
+	entity = "space_amoeba_small_entity"
+	icon = GFX_esc_bio_nanite_strikecraft
+	icon_frame = 1
+
+	weapon_type = point_defence
+	projectile_gfx = "esc_nanities_tiny"
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = nanites
+	}
+
+	count = 16 # @ESC_STRIKECRAFT_count_xl
+	regeneration_per_day = @ESC_STRIKECRAFT_regen
+	launch_time = @ESC_STRIKECRAFT_launch_time
+
+	damage = { min = 20 max = 30 }
+	cooldown = 2.0
+	range = @ESC_STRIKECRAFT_attack_range_bomber
+	engagement_range = @ESC_STRIKECRAFT_engagement_range
+	accuracy = @ESC_STRIKECRAFT_accuracy
+	tracking = @ESC_STRIKECRAFT_tracking_bomber
+
+	health = 30
+	armor = 10
+	shield = 50
+
+	speed = @ESC_STRIKECRAFT_speed_5
+	rotation_speed = @ESC_STRIKECRAFT_rot_speed_bomber
+	acceleration = @ESC_STRIKECRAFT_acceleration_bomber
+	evasion = @ESC_STRIKECRAFT_evasion
+
+	hull_damage = @ESC_WEAPON_nanite_bombers_hull_damage
+	armor_damage = @ESC_WEAPON_nanite_bombers_armor_damage
+	armor_penetration = @ESC_WEAPON_nanite_bombers_armor_penetration
+	shield_damage = @ESC_WEAPON_nanite_bombers_shield_damage
+	shield_penetration = @ESC_WEAPON_nanite_bombers_shield_penetration
+
+	ship_behavior = "bombers_behavior"
+	component_set = ESC_NANITE_BOMBERS_CREATURE
+	prerequisites = { "esc_tech_nanite_bomber" }
+	tags = { weapon_type_strike_craft x_slot weapon_type_space_fauna }
+	ai_tags = { carrier weapon_role_anti_hull carrier }
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
+	}
+}
