@@ -248,11 +248,37 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_GRAVITY_CANNON_1
+	icon = GFX_esc_bio_gravitic_cannon_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_GRAVITY_CANNON_CREATURE_1
+	icon = GFX_esc_bio_gravitic_cannon_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # microsingularity cannon
 component_set = {
 	key = ESC_GRAVITY_CANNON_2
 	icon = GFX_esc_gravitic_cannon_2
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_GRAVITY_CANNON_2
+	icon = GFX_esc_bio_gravitic_cannon_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_GRAVITY_CANNON_CREATURE_2
+	icon = GFX_esc_bio_gravitic_cannon_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 # spatial distortion warhead
@@ -262,6 +288,19 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_GRAVITY_TORPS_1
+	icon = GFX_esc_bio_gravitic_torpedo_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_GRAVITY_TORPS_CREATURE_1
+	icon = GFX_esc_bio_gravitic_torpedo_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # microsingularity warhead
 component_set = {
 	key = ESC_GRAVITY_TORPS_2
@@ -269,10 +308,29 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_GRAVITY_TORPS_2
+	icon = GFX_esc_bio_gravitic_torpedo_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_GRAVITY_TORPS_CREATURE_2
+	icon = GFX_esc_bio_gravitic_torpedo_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 # supergraviton cannon
 component_set = {
 	key = ESC_GRAVITY_LANCE_1
 	icon = GFX_esc_gravitic_lance_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_GRAVITY_LANCE_1
+	icon = GFX_esc_bio_gravitic_lance_1
 	icon_frame = 1
 }
 
@@ -283,10 +341,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_GRAVITY_LANCE_2
+	icon = GFX_esc_bio_gravitic_lance_2
+	icon_frame = 1
+}
+
 # titanic supergraviton cannon (titan)
 component_set = {
 	key = ESC_GRAVITY_LANCE_TITANIC
 	icon = GFX_esc_gravitic_lance_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_GRAVITY_LANCE_TITANIC
+	icon = GFX_esc_bio_gravitic_lance_3
 	icon_frame = 1
 }
 
@@ -297,11 +367,30 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_GRAVITY_LANCE_JUGGERNAUT
+	icon = GFX_esc_bio_gravitic_lance_3
+	icon_frame = 1
+}
+
 # singularity bombers
 component_set = {
 	key = ESC_GRAVITY_BOMBERS
 	icon = GFX_esc_gravitic_strikecraft
 	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_GRAVITY_BOMBERS
+	icon = GFX_esc_bio_gravitic_strikecraft
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_GRAVITY_BOMBERS_CREATURE
+	icon = GFX_esc_bio_gravitic_strikecraft
+	icon_frame = 1
+	is_space_fauna_component_set = yes
 }
 
 ############################################################
