@@ -29,6 +29,14 @@ esc_tech_armor_6 = {
 	prerequisites = { "esc_tech_advanced_materials" "tech_ship_armor_5" }
 	gateway = ESC_ARMOR
 
+	technology_swap = {
+		name = esc_tech_armor_6_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
 	}
@@ -67,6 +75,14 @@ esc_tech_armor_7 = {
 	weight = @ESC_TECH_tier6_weight1
 	prerequisites = { "esc_tech_armor_6" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_armor_7_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
@@ -263,6 +279,14 @@ esc_tech_armor_nanite_1 = {
 	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 	gateway = ESC_NANITE_ARMOR
 
+	technology_swap = {
+		name = esc_tech_armor_nanite_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
 	}
@@ -310,6 +334,14 @@ esc_tech_armor_nanite_2 = {
 	prerequisites = { "esc_tech_armor_nanite_1" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_armor_nanite_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
@@ -383,6 +415,14 @@ esc_tech_armor_dragonscales_nanite = {
 	is_rare = yes
 	is_reverse_engineerable = no
 
+	technology_swap = {
+		name = esc_tech_armor_dragonscales_nanite_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ether_dragon_tech_forbidden }
@@ -431,6 +471,14 @@ esc_tech_armor_shield_1 = {
 	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 	gateway = ESC_SHIELD_ARMOR
 
+	technology_swap = {
+		name = esc_tech_armor_shield_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
 	}
@@ -470,6 +518,14 @@ esc_tech_armor_shield_2 = {
 	prerequisites = { "esc_tech_armor_shield_1" }
 	gateway = ESC_SHIELD_ARMOR
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_armor_shield_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
@@ -518,6 +574,14 @@ esc_tech_armor_shield_3 = {
 	prerequisites = { "esc_tech_armor_shield_2" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_armor_shield_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
