@@ -24,6 +24,14 @@ esc_tech_flak_cannon_4 = {
 	prerequisites = { "tech_flak_batteries_3" "esc_tech_new_age_warfare" }
 	gateway = ESC_FLAK_CANNONS
 
+	technology_swap = {
+		name = esc_tech_flak_cannon_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
 	}
@@ -81,6 +89,14 @@ esc_tech_flak_cannon_5 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_flak_cannon_4" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_flak_cannon_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
@@ -164,6 +180,14 @@ esc_tech_point_defense_4 = {
 	prerequisites = { "tech_pd_tracking_3" "esc_tech_new_age_warfare" }
 	gateway = ESC_PD_CANNONS
 
+	technology_swap = {
+		name = esc_tech_point_defense_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
 	}
@@ -189,6 +213,14 @@ esc_tech_point_defense_5 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_point_defense_4" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_point_defense_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
@@ -240,6 +272,14 @@ esc_tech_juggernaut_pd_1 = {
 	prerequisites = { "tech_juggernaut" }
 	gateway = ESC_JUGGERNAUT_PD
 
+	technology_swap = {
+		name = esc_tech_juggernaut_pd_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		host_has_dlc = "Federations"
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }
@@ -280,6 +320,14 @@ esc_tech_juggernaut_pd_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_juggernaut_pd_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_juggernaut_pd_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		host_has_dlc = "Federations"
@@ -331,6 +379,14 @@ esc_tech_point_defense_laser = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_point_defense_4" "esc_tech_laser_6" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_point_defense_laser_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_pd_weapons_forbidden }

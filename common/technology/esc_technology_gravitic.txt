@@ -25,6 +25,14 @@ esc_tech_gravity_cannon_1 = {
 	prerequisites = { "esc_tech_gravity_weapons" }
 	gateway = ESC_GRAVITY_CANNONS
 
+	technology_swap = {
+		name = esc_tech_gravity_cannon_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
 	}
@@ -82,6 +90,14 @@ esc_tech_gravity_cannon_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_gravity_cannon_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_gravity_cannon_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
@@ -165,6 +181,14 @@ esc_tech_gravity_torpedo_1 = {
 	prerequisites = { "esc_tech_gravity_weapons" }
 	gateway = ESC_GRAVITY_TORPEDOES
 
+	technology_swap = {
+		name = esc_tech_gravity_torpedo_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
 	}
@@ -232,6 +256,14 @@ esc_tech_gravity_torpedo_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_gravity_torpedo_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_gravity_torpedo_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
@@ -578,6 +610,14 @@ esc_tech_gravity_bombers = {
 	ai_update_type = military
 	prerequisites = { "tech_strike_craft_3" "esc_tech_gravity_weapons" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_gravity_bombers_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden }
