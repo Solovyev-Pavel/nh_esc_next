@@ -50,6 +50,14 @@ esc_tech_laser_6 = {
 	prerequisites = { "tech_lasers_5" "esc_tech_new_age_warfare" }
 	gateway = ESC_LASERS
 
+	technology_swap = {
+		name = esc_tech_laser_6_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
 	}
@@ -107,6 +115,14 @@ esc_tech_laser_7 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_laser_6" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_laser_7_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
@@ -190,6 +206,14 @@ esc_tech_energy_torpedo_3 = {
 	prerequisites = { "tech_energy_torpedoes_2" "esc_tech_new_age_warfare" }
 	gateway = ESC_ENERTY_LAUNCHERS
 
+	technology_swap = {
+		name = esc_tech_energy_torpedo_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
 	}
@@ -247,6 +271,14 @@ esc_tech_energy_torpedo_4 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_energy_torpedo_3" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_energy_torpedo_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
@@ -330,6 +362,14 @@ esc_tech_disruptors_4 = {
 	prerequisites = { "tech_disruptors_3" "esc_tech_new_age_warfare" }
 	gateway = ESC_DISRUPTORS
 
+	technology_swap = {
+		name = esc_tech_disruptors_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
 	}
@@ -387,6 +427,14 @@ esc_tech_disruptors_5 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_disruptors_4" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_disruptors_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
@@ -470,6 +518,14 @@ esc_tech_plasma_4 = {
 	prerequisites = { "tech_plasma_3" "esc_tech_new_age_warfare" }
 	gateway = ESC_PLASMA_CANNONS
 
+	technology_swap = {
+		name = esc_tech_plasma_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
 	}
@@ -527,6 +583,14 @@ esc_tech_plasma_5 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_plasma_4" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_plasma_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_weapons_forbidden }
@@ -610,6 +674,14 @@ esc_tech_chrono_cannon = {
 	prerequisites = { "esc_tech_chrono_spatial_weapons" }
 	is_rare = yes
 	is_dangerous = yes
+
+	technology_swap = {
+		name = esc_tech_chrono_cannon_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden }
@@ -777,6 +849,14 @@ esc_tech_mining_laser_2 = {
 	prerequisites = { "tech_mining_drone_weapon_1" "esc_tech_new_age_warfare" }
 	gateway = ESC_ADV_MINING_LASER
 
+	technology_swap = {
+		name = esc_tech_mining_laser_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
 	}
@@ -802,6 +882,14 @@ esc_tech_mining_laser_3 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_mining_laser_2" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_mining_laser_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_creature_weapons_forbidden }
@@ -852,6 +940,14 @@ esc_tech_juggernaut_beam_1 = {
 	ai_update_type = military
 	prerequisites = { "tech_juggernaut" }
 	gateway = ESC_JUGGERNAUT_BEAM_CANNONS
+
+	technology_swap = {
+		name = esc_tech_juggernaut_beam_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		host_has_dlc = "Federations"
@@ -929,6 +1025,14 @@ esc_tech_juggernaut_beam_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_juggernaut_beam_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_juggernaut_beam_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		host_has_dlc = "Federations"
@@ -1013,6 +1117,14 @@ esc_tech_particle_lance_3 = {
 	prerequisites = { "tech_energy_lance_2" "esc_tech_advanced_heavy_weapons" }
 	gateway = ESC_PARTICLE_LANCES
 
+	technology_swap = {
+		name = esc_tech_particle_lance_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden }
 	}
@@ -1070,6 +1182,14 @@ esc_tech_particle_lance_4 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_particle_lance_3" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_particle_lance_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_energy_lances_forbidden }
@@ -1153,6 +1273,14 @@ esc_tech_particle_lance_titanic = {
 	prerequisites = { "esc_tech_particle_lance_4" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_particle_lance_titanic_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		ESC_TRIGGER_may_research_oversized_weapons = yes
@@ -1251,6 +1379,14 @@ esc_tech_arc_emitter_3 = {
 	prerequisites = { "tech_arc_emitter_2" "esc_tech_advanced_heavy_weapons" }
 	gateway = ESC_ADV_ARC_EMITTERS
 
+	technology_swap = {
+		name = esc_tech_arc_emitter_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden }
 	}
@@ -1308,6 +1444,14 @@ esc_tech_arc_emitter_4 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_arc_emitter_3" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_arc_emitter_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_arc_emitters_forbidden }
@@ -1391,6 +1535,14 @@ esc_tech_arc_emitter_titanic = {
 	prerequisites = { "esc_tech_arc_emitter_4" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_arc_emitter_titanic_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		ESC_TRIGGER_may_research_oversized_weapons = yes
@@ -1490,6 +1642,14 @@ esc_tech_wave_motion_gun_1 = {
 	is_rare = yes
 	gateway = ESC_WAVE_MOTION_GUN
 
+	technology_swap = {
+		name = esc_tech_wave_motion_gun_1_bio
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden }
 	}
@@ -1588,6 +1748,14 @@ esc_tech_wave_motion_gun_2 = {
 	prerequisites = { "esc_tech_wave_motion_gun_1" }
 	is_rare = yes
 
+	technology_swap = {
+		name = esc_tech_wave_motion_gun_2_bio
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_wavemotiongun_forbidden }
 	}
@@ -1670,6 +1838,14 @@ esc_tech_wave_motion_gun_titanic = {
 	prerequisites = { "esc_tech_wave_motion_gun_2" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_wave_motion_gun_titanic_bio
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		ESC_TRIGGER_may_research_oversized_weapons = yes
