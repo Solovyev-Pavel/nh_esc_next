@@ -611,6 +611,14 @@ esc_tech_swarmer_missiles_3 = {
 	prerequisites = { "tech_swarmer_missiles_2" "esc_tech_new_age_warfare" }
 	gateway = ESC_ADVANCED_SWARMER_MISSILES
 
+	technology_swap = {
+		name = esc_tech_swarmer_missiles_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
 	}
@@ -668,6 +676,14 @@ esc_tech_swarmer_missiles_4 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_swarmer_missiles_3" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_swarmer_missiles_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_missile_weapons_forbidden }
