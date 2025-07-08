@@ -28,6 +28,14 @@ esc_tech_nanite_cannon_1 = {
 	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 	gateway = ESC_NANITE_CANNONS
 
+	technology_swap = {
+		name = esc_tech_nanite_cannon_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
 	}
@@ -70,6 +78,14 @@ esc_tech_nanite_cannon_2 = {
 	prerequisites = { "esc_tech_nanite_cannon_1" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_nanite_cannon_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
@@ -146,6 +162,14 @@ esc_tech_nanite_reconstructor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 
+	technology_swap = {
+		name = esc_tech_nanite_reconstructor_bio
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
 	}
@@ -220,6 +244,14 @@ esc_tech_nanite_torpedo_1 = {
 	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 	gateway = ESC_NANITE_TORPEDOES
 
+	technology_swap = {
+		name = esc_tech_nanite_torpedo_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
 	}
@@ -272,6 +304,14 @@ esc_tech_nanite_torpedo_2 = {
 	prerequisites = { "esc_tech_nanite_torpedo_1" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_nanite_torpedo_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
@@ -349,6 +389,14 @@ esc_tech_nanite_missile_x_1 = {
 	is_reverse_engineerable = no
 	gateway = ESC_NANITE_X_WEAPONS
 
+	technology_swap = {
+		name = esc_tech_nanite_missile_x_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden }
 	}
@@ -425,6 +473,14 @@ esc_tech_nanite_missile_x_2 = {
 	is_reverse_engineerable = no
 	gateway = ESC_NANITE_X_WEAPONS
 
+	technology_swap = {
+		name = esc_tech_nanite_missile_x_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_x_weapons_forbidden }
 	}
@@ -499,6 +555,14 @@ esc_tech_nanite_missile_titanic = {
 	prerequisites = { "esc_tech_nanite_missile_x_2" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_nanite_missile_titanic_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		ESC_TRIGGER_may_research_oversized_weapons = yes
@@ -588,6 +652,14 @@ esc_tech_nanite_bomber = {
 	ai_update_type = military
 	prerequisites = { "tech_strike_craft_3" "esc_tech_synthetic_lifeform_studies" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_nanite_bomber_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
