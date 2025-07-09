@@ -692,6 +692,9 @@ ESC_BIO_STANDARDIZED_WARHEADS_DESC: "An evolution of creature's inner structure 
 ESC_TEMPORAL_DISPLACER: "Temporal Displacer"
 ESC_TEMPORAL_DISPLACER_DESC: "A curious little device that literally bends time and space to increase the ship's chances of survival in combat."
 
+ESC_BIO_TEMPORAL_DISPLACER: "$ESC_TEMPORAL_DISPLACER$"
+ESC_BIO_TEMPORAL_DISPLACER_DESC: "A curious little device integrated into the warbeast and capable of literally bending time and space to increase its chances of survival in combat."
+
 ESC_AFTERBURNER_3: "Pulsed Plasma Afterburners"
 ESC_AFTERBURNER_3_DESC: "Advanced plasma afterburners that allow for increased combat speed and evasion."
 
@@ -763,16 +766,28 @@ mod_esc_damage_enemy_ship_on_death: "Upon death, inflict a percentage of this sh
 ESC_AUX_DEAD_HAND_KILL_CMD_1: "Dead Hand Switch: Kill Command"
 ESC_AUX_DEAD_HAND_KILL_CMD_1_DESC: "In the event of the ship suffering critical damage, self-destruct mechanisms are engaged. This may result in additional causalties among the crew but also has a chance to inflict damage on nearby enemy ships."
 
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1: "Catalytic Bladder"
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1_DESC: "Sacks full of highly-volatile substances that will rupture should the creature perish in fight, hopefully damaging an enemy ship or two."
+
 ESC_AUX_DEAD_HAND_KILL_CMD_2: "Dead Hand Switch: Annihilate Command"
 ESC_AUX_DEAD_HAND_KILL_CMD_2_DESC: "In the event of the ship suffering critical damage, self-destruct mechanisms, including power core critical overload, protocols are engaged. This will result in a massive explosion that may seriously damage nearby enemy ships, at the cost of no survivors among the ship's crew."
+
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2: "Volatile Catalytic Bladder"
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2_DESC: "Sacks overflowing with extremely-volatile substances that will violently explode should the creature perish in fight. It is very likely that the resulting explosion will take out an enemy ship or two."
 
 mod_esc_repair_allied_ship_on_death: "Upon death, a random allied ship in the fleet regains a portion of Hull and Armor"
 
 ESC_AUX_DEAD_HAND_HEAL_CMD_1: "Dead Hand Switch: Repair Allies Command"
 ESC_AUX_DEAD_HAND_HEAL_CMD_1_DESC: "In the event of the ship suffering critical damage, repair drones are directed to nearby allies. The loss of a ship is tragic, but its sacrifice may let others survive the battle."
 
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1: "Restorative Enzymes Sacks"
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1_DESC: "Sacks filled with restorative enzymes that grow on the outer side of the creatures carapase. Should the creature perish, the contents will be disperced into the surrounding space and jump-start regeneration of nearby allied creatures."
+
 ESC_AUX_DEAD_HAND_HEAL_CMD_2: "Dead Hand Switch: Support Allies Command"
 ESC_AUX_DEAD_HAND_HEAL_CMD_2_DESC: "In the event of the ship suffering critical damage, repair drones and all of surviving materials are diected to nearby allies. The loss of a ship is tragic, but its sacrifice may let others survive the battle."
+
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2: "Supreme Restorative Enzymes Sacks"
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2_DESC: "Sacks filled with potent restorative enzymes that grow on the outer side of the creatures carapase. Should the creature perish, the contents will be disperced into the surrounding space and jump-start regeneration of nearby allied creatures."
 
 ############################################################
 ###                   Archaeo Components                 ###

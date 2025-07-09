@@ -566,6 +566,88 @@ utility_component_template = {
 }
 
 ############################################################
+##    Components : Temporal Displacer : Miscellaneous     ##
+############################################################
+
+# temporal displacer :: standard ships
+utility_component_template = {
+	key = ESC_TEMPORAL_DISPLACER
+	size = aux
+	icon = GFX_esc_temporal_displacer
+	icon_frame = 1
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			sr_dark_matter = 2
+		}
+	}
+
+	modifier = {
+		ship_evasion_add = 5
+		ship_disengage_chance_mult = 0.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = no
+	}
+
+	prerequisites = { "esc_tech_temporal_displacer" }
+	component_set = ESC_TEMPORAL_DISPLACER
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+# temporal displacer :: bioships
+utility_component_template = {
+	key = ESC_BIO_TEMPORAL_DISPLACER
+	size = aux
+	icon = GFX_esc_bio_temporal_displacer
+	icon_frame = 1
+	power = -40
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 50
+			sr_dark_matter = 2
+		}
+	}
+
+	modifier = {
+		ship_evasion_add = 5
+		ship_disengage_chance_mult = 0.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_temporal_displacer" }
+	component_set = ESC_BIO_TEMPORAL_DISPLACER
+
+	ai_weight = {
+		weight = 10
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
+	}
+}
+
+############################################################
 ##    Components : Auxiliary components : Miscellaneous   ##
 ############################################################
 
@@ -688,45 +770,6 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
-		}
-	}
-}
-
-# temporal displacer
-utility_component_template = {
-	key = ESC_TEMPORAL_DISPLACER
-	size = aux
-	icon = GFX_esc_temporal_displacer
-	icon_frame = 1
-	power = -40
-
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 50
-			sr_dark_matter = 2
-		}
-	}
-
-	modifier = {
-		ship_evasion_add = 5
-		ship_disengage_chance_mult = 0.5
-	}
-
-	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
-	}
-
-	prerequisites = { "esc_tech_temporal_displacer" }
-	component_set = ESC_TEMPORAL_DISPLACER
-
-	ai_weight = {
-		weight = 10
-		### AI shouldn't use this component if it can't afford at least some upgrades right away
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
 	}
 }
@@ -954,7 +997,7 @@ utility_component_template = {
 ##     Components : Auxiliary components : On-killed      ##
 ############################################################
 
-# dead hand switch : kill command
+# dead hand switch : kill command :: standard ships
 utility_component_template = {
 	key = ESC_AUX_DEAD_HAND_KILL_CMD_1
 	size = aux
@@ -986,7 +1029,39 @@ utility_component_template = {
 	ai_weight = { weight = 5 }
 }
 
-# dead hand switch : annihilate command
+# dead hand switch : kill command :: bioships
+utility_component_template = {
+	key = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1
+	size = aux
+	icon = GFX_esc_bio_dead_hand_kill_1
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+
+	ship_modifier = {
+		damage_random_nearby_enemy_on_death = 0.15
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_kill_1" }
+	component_set = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1
+	upgrades_to = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2
+
+	ai_weight = { weight = 5 }
+}
+
+# dead hand switch : annihilate command :: standard ships
 utility_component_template = {
 	key = ESC_AUX_DEAD_HAND_KILL_CMD_2
 	size = aux
@@ -1017,7 +1092,38 @@ utility_component_template = {
 	ai_weight = { weight = 5 }
 }
 
-# dead hand switch : repair ally command
+# dead hand switch : annihilate command :: bioships
+utility_component_template = {
+	key = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2
+	size = aux
+	icon = GFX_esc_bio_dead_hand_kill_2
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+
+	ship_modifier = {
+		esc_damage_enemy_ship_on_death = 0.30
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_kill_2" }
+	component_set = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2
+
+	ai_weight = { weight = 5 }
+}
+
+# dead hand switch : repair ally command :: standard ships
 utility_component_template = {
 	key = ESC_AUX_DEAD_HAND_HEAL_CMD_1
 	size = aux
@@ -1049,7 +1155,39 @@ utility_component_template = {
 	ai_weight = { weight = 5 }
 }
 
-# dead hand switch : support ally command
+# dead hand switch : repair ally command :: bioships
+utility_component_template = {
+	key = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1
+	size = aux
+	icon = GFX_esc_bio_dead_hand_heal_1
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+
+	ship_modifier = {
+		esc_repair_allied_ship_on_death = 0.25
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_heal_1" }
+	component_set = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1
+	upgrades_to = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2
+
+	ai_weight = { weight = 5 }
+}
+
+# dead hand switch : support ally command :: standard ships
 utility_component_template = {
 	key = ESC_AUX_DEAD_HAND_HEAL_CMD_2
 	size = aux
@@ -1080,30 +1218,33 @@ utility_component_template = {
 	ai_weight = { weight = 5 }
 }
 
-# nanite reconstruction beam
-# utility_component_template = {
-# 	key = ESC_NANITE_RECONSTRUCTOR
-# 	size = aux
-# 	icon = GFX_esc_nanite_reconstructor
-# 	icon_frame = 1
-# 	power = -50
-# 	ship_limit = 1
-# 	hidden = yes # replaced by actual weapon with on-hit effect
-#
-# 	resources = {
-# 		category = ship_components
-# 		cost = {
-# 			alloys = 20
-# 			nanites = 5
-# 		}
-# 	}
-#
-# 	ship_modifier = {
-# 		component_lifesteal_add = 0.25
-# 	}
-#
-# 	prerequisites = { "esc_tech_nanite_reconstructor" }
-# 	component_set = ESC_NANITE_RECONSTRUCTOR
-#
-# 	ai_weight = { weight = 0 }
-# }
+# dead hand switch : support ally command :: bioships
+utility_component_template = {
+	key = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2
+	size = aux
+	icon = GFX_esc_bio_dead_hand_heal_2
+	icon_frame = 1
+	power = 0
+	ship_limit = 1
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+
+	ship_modifier = {
+		esc_repair_allied_ship_on_death = 0.5
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships
+		EVAL_TARGET = yes
+	}
+
+	prerequisites = { "esc_tech_dead_hand_switch_heal_2" }
+	component_set = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2
+
+	ai_weight = { weight = 5 }
+}

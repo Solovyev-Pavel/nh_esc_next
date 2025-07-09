@@ -63,6 +63,12 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_TEMPORAL_DISPLACER
+	icon = GFX_esc_bio_temporal_displacer
+	icon_frame = 1
+}
+
 # bioship low-tier afterburners
 component_set = {
 	key = ESC_BIO_AFTERBURNER_1
@@ -198,10 +204,22 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1
+	icon = GFX_esc_bio_dead_hand_kill_1
+	icon_frame = 1
+}
+
 # dead hand switch : annihilate command
 component_set = {
 	key = ESC_AUX_DEAD_HAND_KILL_CMD_2
 	icon = GFX_esc_dead_hand_kill_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2
+	icon = GFX_esc_bio_dead_hand_kill_2
 	icon_frame = 1
 }
 
@@ -212,9 +230,21 @@ component_set = {
 	icon_frame = 1
 }
 
+component_set = {
+	key = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1
+	icon = GFX_esc_bio_dead_hand_heal_1
+	icon_frame = 1
+}
+
 # dead hand switch : support command
 component_set = {
 	key = ESC_AUX_DEAD_HAND_HEAL_CMD_2
 	icon = GFX_esc_dead_hand_heal_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2
+	icon = GFX_esc_bio_dead_hand_heal_2
 	icon_frame = 1
 }

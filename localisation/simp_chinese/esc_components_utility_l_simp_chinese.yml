@@ -565,6 +565,10 @@
  ESC_STANDARDIZED_WARHEADS_DESC: "爆破武器的标准化弹头。这种弹头可以实现更迅速的导弹装填，并提升弹药储备的安全性。"
  ESC_TEMPORAL_DISPLACER: "时间置换器"
  ESC_TEMPORAL_DISPLACER_DESC: "一种奇特的小型装置，能够真正意义上地扭曲时空，提高舰船在战斗中的生存机会。"
+
+ESC_BIO_TEMPORAL_DISPLACER: "$ESC_TEMPORAL_DISPLACER$"
+ESC_BIO_TEMPORAL_DISPLACER_DESC: "A curious little device integrated into the warbeast and capable of literally bending time and space to increase its chances of survival in combat."
+
  ESC_AFTERBURNER_3: "脉冲等离子加力燃烧室"
  ESC_AFTERBURNER_3_DESC: "先进的等离子加力燃烧室，可实现作战速度与规避能力的双重提升。"
  ESC_AUX_THRUSTERS: "辅助机动推进器"
@@ -602,13 +606,29 @@
  mod_esc_damage_enemy_ship_on_death: "死亡时，对附近敌人造成一定比例的船体和护甲伤害。"
  ESC_AUX_DEAD_HAND_KILL_CMD_1: "死手开关：击杀指令"
  ESC_AUX_DEAD_HAND_KILL_CMD_1_DESC: "在舰船遭受严重损伤的情况下，自毁机制将被触发。这可能导致船员的额外伤亡，但也有概率对附近敌舰造成伤害。"
+
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1: "Catalytic Bladder"
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1_DESC: "Sacks full of highly-volatile substances that will rupture should the creature perish in fight, hopefully damaging an enemy ship or two."
+
  ESC_AUX_DEAD_HAND_KILL_CMD_2: "死手开关：歼灭指令"
  ESC_AUX_DEAD_HAND_KILL_CMD_2_DESC: "当舰船遭受严重损伤时，包含动力核心临界过载协议的自毁机制将自动激活。这将引发剧烈爆炸，可能对附近敌方舰船造成重创，代价是舰船乘员无人生还。"
+
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2: "Volatile Catalytic Bladder"
+ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2_DESC: "Sacks overflowing with extremely-volatile substances that will violently explode should the creature perish in fight. It is very likely that the resulting explosion will take out an enemy ship or two."
+
  mod_esc_repair_allied_ship_on_death: "死亡后，随机一艘友军舰船会恢复一部分船体和护甲。"
  ESC_AUX_DEAD_HAND_HEAL_CMD_1: "死手开关：友军修复指令"
  ESC_AUX_DEAD_HAND_HEAL_CMD_1_DESC: "当舰船遭受严重损伤时，维修无人机将被派往邻近友方单位。损失一艘舰船固然令人痛心，但其牺牲可能让其他舰船在战斗中存活下来。"
+
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1: "Restorative Enzymes Sacks"
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1_DESC: "Sacks filled with restorative enzymes that grow on the outer side of the creatures carapase. Should the creature perish, the contents will be disperced into the surrounding space and jump-start regeneration of nearby allied creatures."
+
  ESC_AUX_DEAD_HAND_HEAL_CMD_2: "死手开关：友军支援指令"
  ESC_AUX_DEAD_HAND_HEAL_CMD_2_DESC: "当舰船遭受严重损伤时，维修无人机与所有残存可用物资将被转移至邻近友方单位。损失舰船固然令人痛心，但其牺牲可能让其他舰船在战斗中存活下来。"
+
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2: "Supreme Restorative Enzymes Sacks"
+ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2_DESC: "Sacks filled with potent restorative enzymes that grow on the outer side of the creatures carapase. Should the creature perish, the contents will be disperced into the surrounding space and jump-start regeneration of nearby allied creatures."
+
  ESC_ARCHAEO_ARMOR_2: "融会装甲"
  ESC_ARCHAEO_ARMOR_2_DESC: "这款更为先进的装甲集成了我们在材料科学与力场生成领域的顶尖成果，同时整合了逆向工程复现的先驱脉冲装甲技术。"
  SMALL_ESC_ARCHAEO_ARMOR_2: "$esc_small$ $ESC_ARCHAEO_ARMOR_2$"
