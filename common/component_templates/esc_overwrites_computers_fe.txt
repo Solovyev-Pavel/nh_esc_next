@@ -666,3 +666,240 @@ utility_component_template = {
 
 	ai_weight = { weight = 5 }
 }
+
+############################################################
+###             Combat Computers : Hive FE              ###
+############################################################
+
+### Titans
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_TITAN
+	size = small
+	icon = GFX_esc_computer_fe_hive_artillery
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 15
+		ship_accuracy_add = 5
+		ship_weapon_damage = 0.50
+		ship_fire_rate_mult = 0.30
+		ship_hull_mult = 0.40
+	}
+
+	modifier = {
+		ship_evasion_add = 10
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+### Battlecruisers
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_BATTLECRUISER
+	size = small
+	icon = GFX_esc_computer_fe_hive_line
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "line"
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 15
+		ship_accuracy_add = 5
+		ship_weapon_damage = 0.50
+		ship_fire_rate_mult = 0.30
+		ship_hull_mult = 0.40
+	}
+
+	modifier = {
+		ship_evasion_add = 10
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+### Escorts
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_ESCORT
+	size = small
+	icon = GFX_esc_computer_fe_hive_picket
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "picket"
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 15
+		ship_accuracy_add = 5
+		ship_weapon_damage = 0.50
+		ship_fire_rate_mult = 0.30
+		ship_hull_mult = 0.40
+	}
+
+	modifier = {
+		ship_evasion_add = 10
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+### Maulers
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_MAULER
+	size = small
+	icon = GFX_esc_computer_fe_hive_swarm
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 15
+		ship_accuracy_add = 5
+		ship_weapon_damage = 0.50
+		ship_fire_rate_mult = 0.30
+		ship_hull_mult = 0.40
+	}
+
+	modifier = {
+		ship_evasion_add = 10
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+### Buffer
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_BUFFER
+	size = small
+	icon = GFX_esc_computer_fe_hive_starbase
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	ai_tags = { buffer_role buffer_role_stealth }
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = buffer
+	target_type = target_allies
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 25
+		ship_accuracy_add = 25
+		buffer_role_weapon_fire_rate_mult = 0.30
+		ship_hull_mult = 0.40
+	}
+
+	modifier = {
+		ship_evasion_add = 10
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+### Debuffer
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_DEBUFFER
+	size = small
+	icon = GFX_esc_computer_fe_hive_starbase
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	ai_tags = { debuffer_role debuffer_role_stealth }
+	component_set = "combat_computers"
+	ship_behavior = "swarm"
+	upgrade_path = debuffer
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 25
+		ship_accuracy_add = 25
+		debuffer_role_weapon_fire_rate_mult = 0.30
+		ship_hull_mult = 0.40
+	}
+
+	modifier = {
+		ship_evasion_add = 10
+	}
+
+	ai_weight = { weight = 5 }
+}
+
+### Defense Platforms
+utility_component_template = {
+	key = ESC_FE_COMP_HVE_PLATFORM
+	size = small
+	icon = GFX_esc_computer_fe_hive_platform
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = { alloys = 0 }
+	}
+
+	class_restriction = { shipclass_military }
+	component_set = "combat_computers"
+	ship_behavior = "platform"
+	hidden = yes
+
+	ship_modifier = {
+		ship_tracking_add = 25
+		ship_accuracy_add = 25
+		ship_weapon_damage = 0.50
+		ship_fire_rate_mult = 0.30
+
+		ship_hull_mult = 0.50
+		ship_armor_mult = 0.50
+		ship_shield_mult = 0.50
+	}
+
+	ai_weight = { weight = 5 }
+}
