@@ -40,6 +40,14 @@ esc_tech_mass_driver_6 = {
 	prerequisites = { "tech_mass_drivers_5" "esc_tech_new_age_warfare" }
 	gateway = ESC_MASS_DRIVERS
 
+	technology_swap = {
+		name = esc_tech_mass_driver_6_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
 	}
@@ -97,6 +105,14 @@ esc_tech_mass_driver_7 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_mass_driver_6" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_mass_driver_7_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
@@ -180,6 +196,14 @@ esc_tech_autocannon_4 = {
 	prerequisites = { "tech_autocannons_3" "esc_tech_new_age_warfare" }
 	gateway = ESC_AUTOCANNONS
 
+	technology_swap = {
+		name = esc_tech_autocannon_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
 	}
@@ -237,6 +261,14 @@ esc_tech_autocannon_5 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_autocannon_4" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_autocannon_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
@@ -320,6 +352,14 @@ esc_tech_kinetic_artillery_3 = {
 	prerequisites = { "tech_kinetic_artillery_2" "esc_tech_new_age_warfare" }
 	gateway = ESC_KINETIC_ARTILLERY
 
+	technology_swap = {
+		name = esc_tech_kinetic_artillery_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
 	}
@@ -377,6 +417,14 @@ esc_tech_kinetic_artillery_4 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_kinetic_artillery_3" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_kinetic_artillery_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
@@ -460,6 +508,14 @@ esc_tech_giga_cannon_3 = {
 	prerequisites = { "tech_mass_accelerator_2" "esc_tech_advanced_heavy_weapons" }
 	gateway = ESC_GIGA_CANNONS
 
+	technology_swap = {
+		name = esc_tech_giga_cannon_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden }
 	}
@@ -517,6 +573,14 @@ esc_tech_giga_cannon_4 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_giga_cannon_3" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_giga_cannon_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_x_weapons_forbidden }
@@ -600,6 +664,14 @@ esc_tech_giga_cannon_titanic = {
 	prerequisites = { "esc_tech_giga_cannon_4" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_giga_cannon_titanic_bio
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	### Apocalypse DLC version
 	potential = {
@@ -699,6 +771,14 @@ esc_tech_autocannon_x_1 = {
 	prerequisites = { "esc_tech_autocannon_5" "esc_tech_advanced_heavy_weapons" }
 	gateway = ESC_X_AUTOCANNONS
 
+	technology_swap = {
+		name = esc_tech_autocannon_x_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden }
 	}
@@ -756,6 +836,14 @@ esc_tech_autocannon_x_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_autocannon_x_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_autocannon_x_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_xautocannons_forbidden }
@@ -839,6 +927,14 @@ esc_tech_autocannon_titanic = {
 	prerequisites = { "esc_tech_autocannon_x_2" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_autocannon_titanic_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	### Apocalypse DLC version
 	potential = {
@@ -938,6 +1034,14 @@ esc_tech_juggernaut_artillery_1 = {
 	prerequisites = { "tech_juggernaut" }
 	gateway = ESC_JUGGERNAUT_ARTILLERY
 
+	technology_swap = {
+		name = esc_tech_juggernaut_artillery_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		host_has_dlc = "Federations"
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_adv_vanilla_kinetic_weapons_forbidden }
@@ -1012,6 +1116,14 @@ esc_tech_juggernaut_artillery_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_juggernaut_artillery_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_juggernaut_artillery_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		host_has_dlc = "Federations"
@@ -1096,6 +1208,14 @@ esc_tech_mhd_cannon_1 = {
 	prerequisites = { "esc_tech_advanced_heavy_weapons" "esc_tech_advanced_materials" "tech_mass_accelerator_2" }
 	gateway = ESC_MHD_CANNONS
 
+	technology_swap = {
+		name = esc_tech_mhd_cannon_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden }
 	}
@@ -1153,6 +1273,14 @@ esc_tech_mhd_cannon_2 = {
 	ai_update_type = military
 	prerequisites = { "esc_tech_mhd_cannon_1" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_mhd_cannon_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mhd_cannons_forbidden }
@@ -1236,6 +1364,14 @@ esc_tech_mhd_cannon_titanic = {
 	prerequisites = { "esc_tech_mhd_cannon_2" }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_mhd_cannon_titanic_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	### Apocalypse DLC version
 	potential = {
