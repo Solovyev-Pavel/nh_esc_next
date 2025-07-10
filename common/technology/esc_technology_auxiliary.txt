@@ -38,6 +38,14 @@ esc_tech_auxiliary_fire_control_2 = {
 	ai_update_type = military
 	prerequisites = { "tech_auxiliary_fire_control" "esc_tech_grand_research_initiative" }
 
+	technology_swap = {
+		name = esc_tech_auxiliary_fire_control_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
 	}
@@ -62,6 +70,14 @@ esc_tech_afterburners_3 = {
 	weight = @tier4weight3
 	ai_update_type = all
 	prerequisites = { "tech_afterburners_2" "esc_tech_grand_research_initiative" }
+
+	technology_swap = {
+		name = esc_tech_afterburners_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
@@ -88,6 +104,14 @@ esc_tech_reactor_booster_4 = {
 	weight = @tier4weight2
 	ai_update_type = all
 	prerequisites = { "tech_zero_point_power" "tech_reactor_boosters_3" "esc_tech_grand_research_initiative" }
+
+	technology_swap = {
+		name = esc_tech_reactor_booster_4_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOR = {
@@ -123,6 +147,14 @@ esc_tech_reactor_booster_5 = {
 	ai_update_type = all
 	prerequisites = { "esc_tech_reactor_7" "esc_tech_reactor_booster_4" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_reactor_booster_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOR = {
@@ -401,6 +433,14 @@ esc_tech_standardized_warheads = {
 	ai_update_type = all
 	prerequisites = { "esc_tech_grand_research_initiative" }
 
+	technology_swap = {
+		name = esc_tech_standardized_warheads_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
 	}
@@ -463,6 +503,14 @@ esc_tech_repair_drones = {
 	cost = @tier4cost1
 	weight = @tier4weight1
 	prerequisites = { "esc_tech_grand_research_initiative" }
+
+	technology_swap = {
+		name = esc_tech_repair_drones_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden }
@@ -579,6 +627,14 @@ esc_tech_temporal_displacer = {
 	prerequisites = { "esc_tech_chrono_spatial_weapons" }
 	is_rare = yes
 	is_dangerous = yes
+
+	technology_swap = {
+		name = esc_tech_temporal_displacer_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOR = {
@@ -805,6 +861,14 @@ esc_tech_dead_hand_switch_kill_1 = {
 	ai_update_type = all
 	prerequisites = { "tech_interstellar_fleet_traditions" }
 
+	technology_swap = {
+		name = esc_tech_dead_hand_switch_kill_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = {
 			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
@@ -828,6 +892,14 @@ esc_tech_dead_hand_switch_kill_2 = {
 	weight = @tier5weight1
 	ai_update_type = all
 	prerequisites = { "esc_tech_dead_hand_switch_kill_1" "esc_tech_new_age_warfare" }
+
+	technology_swap = {
+		name = esc_tech_dead_hand_switch_kill_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = {
@@ -853,6 +925,14 @@ esc_tech_dead_hand_switch_heal_1 = {
 	ai_update_type = all
 	prerequisites = { "tech_interstellar_fleet_traditions" }
 
+	technology_swap = {
+		name = esc_tech_dead_hand_switch_heal_1_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = {
 			has_global_flag = ESC_GLOBAL_FLAG_auxiliary_forbidden
@@ -876,6 +956,14 @@ esc_tech_dead_hand_switch_heal_2 = {
 	weight = @tier5weight1
 	ai_update_type = all
 	prerequisites = { "esc_tech_dead_hand_switch_heal_1" "esc_tech_new_age_warfare" }
+
+	technology_swap = {
+		name = esc_tech_dead_hand_switch_heal_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = {
