@@ -49,6 +49,14 @@ esc_tech_reactor_6 = {
 	ai_update_type = all
 	gateway = ESC_REACTORS
 
+	technology_swap = {
+		name = esc_tech_reactor_6_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -97,6 +105,14 @@ esc_tech_reactor_7 = {
 	ai_update_type = all
 	gateway = ESC_REACTORS
 
+	technology_swap = {
+		name = esc_tech_reactor_7_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -144,6 +160,14 @@ esc_tech_reactor_8 = {
 	prerequisites = { "esc_tech_reactor_7" }
 	ai_update_type = all
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_reactor_8_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
@@ -217,6 +241,14 @@ esc_tech_dark_matter_power_core_2 = {
 	ai_update_type = all
 	is_rare = yes
 	gateway = ESC_REACTORS
+
+	technology_swap = {
+		name = esc_tech_dark_matter_power_core_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
@@ -298,6 +330,14 @@ esc_tech_dark_matter_power_core_3 = {
 	ai_update_type = all
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_dark_matter_power_core_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
@@ -1000,6 +1040,14 @@ esc_tech_sensors_precursor = {
 	ai_update_type = all
 	is_rare = yes
 
+	technology_swap = {
+		name = esc_tech_sensors_precursor_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
 		custom = {
@@ -1027,6 +1075,14 @@ esc_tech_thrusters_5 = {
 	weight = @tier5weight1
 	ai_update_type = all
 	prerequisites = { "esc_tech_grand_research_initiative" "tech_thrusters_4" }
+
+	technology_swap = {
+		name = esc_tech_thrusters_5_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
@@ -1062,6 +1118,14 @@ esc_tech_thrusters_6 = {
 	ai_update_type = all
 	prerequisites = { "esc_tech_gravity_manipulation" "esc_tech_thrusters_5" }
 	is_rare = yes
+
+	technology_swap = {
+		name = esc_tech_thrusters_6_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	prereqfor_desc = {
 		hide_prereq_for_desc = component
@@ -1124,6 +1188,14 @@ esc_tech_jump_drive_2 = {
 	prerequisites = { tech_jump_drive_1 }
 	is_rare = yes
 
+	technology_swap = {
+		name = esc_tech_jump_drive_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = @ACOT_active_flag } # ACOT has better drives
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden }
@@ -1177,6 +1249,14 @@ esc_tech_jump_drive_3 = {
 	is_rare = yes
 	is_reverse_engineerable = no
 
+	technology_swap = {
+		name = esc_tech_jump_drive_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = @ACOT_active_flag } # ACOT has better drives
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden }
@@ -1228,6 +1308,14 @@ esc_tech_jump_drive_precursor = {
 	ai_update_type = all
 	is_rare = yes
 
+	technology_swap = {
+		name = esc_tech_jump_drive_precursor_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
 	potential = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_ftl_forbidden }
 	}
@@ -1247,6 +1335,14 @@ esc_tech_psi_jump_drive_2 = {
 	prerequisites = { tech_psi_jump_drive_1 }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_psi_jump_drive_2_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = @ACOT_active_flag } # ACOT has better drives
@@ -1301,6 +1397,14 @@ esc_tech_psi_jump_drive_3 = {
 	prerequisites = { esc_tech_psi_jump_drive_2 }
 	is_rare = yes
 	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_psi_jump_drive_3_bio
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
 
 	potential = {
 		NOT = { has_global_flag = @ACOT_active_flag } # ACOT has better drives
