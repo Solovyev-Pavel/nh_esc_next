@@ -42,6 +42,15 @@ spriteTypes = {
 		name = "GFX_esc_dark_matter_bio_reactor_3"
 		textureFile = "gfx/interface/icons/ship_parts/biogenesis/ship_part_esc_bio_enigmatic_power_3.dds"
 	}
+	# overwrites starbase reactors
+	spriteType = {
+		name = "GFX_esc_starbase_reactor_component"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_esc_reactor_starbase.dds"
+	}
+	spriteType = {
+		name = "GFX_esc_bio_starbase_reactor_component"
+		textureFile = "gfx/interface/icons/ship_parts/ship_part_esc_reactor_starbase_bio.dds"
+	}
 }
 
 # sensors
