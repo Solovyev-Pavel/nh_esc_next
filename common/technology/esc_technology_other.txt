@@ -68,7 +68,7 @@ esc_tech_stellar_energy_tower = {
 			NOT = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -80,7 +80,7 @@ esc_tech_stellar_energy_tower = {
 			NOT = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -109,7 +109,7 @@ esc_tech_quantum_node = {
 			NOT = { has_country_flag = technosphere_studied }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -129,7 +129,7 @@ esc_tech_quantum_node = {
 			NOT = { has_country_flag = technosphere_studied }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -166,7 +166,7 @@ esc_tech_reprocessing_plant = {
 			NOT = { has_country_flag = scrapper_killed }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -178,7 +178,7 @@ esc_tech_reprocessing_plant = {
 			NOT = { has_country_flag = scrapper_killed }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -210,7 +210,7 @@ esc_tech_zro_distilleries = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -232,7 +232,7 @@ esc_tech_zro_distilleries = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -269,7 +269,7 @@ esc_tech_dark_matter_facilities = {
 
 	weight_modifier = {
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -285,7 +285,7 @@ esc_tech_dark_matter_facilities = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier #strategic resource
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -331,7 +331,7 @@ esc_tech_magmaminer_1 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -360,7 +360,7 @@ esc_tech_magmaminer_1 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -406,7 +406,7 @@ esc_tech_magmaminer_2 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -435,7 +435,7 @@ esc_tech_magmaminer_2 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -557,7 +557,7 @@ esc_tech_bio_horror_army = {
 			is_lithoid_empire = no
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -574,7 +574,7 @@ esc_tech_bio_horror_army = {
 			is_lithoid_empire = no
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -608,7 +608,7 @@ esc_tech_psi_avatar_army = {
 			is_lithoid_empire = no
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -625,7 +625,7 @@ esc_tech_psi_avatar_army = {
 			is_lithoid_empire = no
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}

@@ -171,7 +171,7 @@ esc_tech_reactor_booster_5 = {
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -187,7 +187,7 @@ esc_tech_reactor_booster_5 = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -221,7 +221,7 @@ esc_tech_advanced_shield_capacitors = {
 
 	weight_modifier = {
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -237,7 +237,7 @@ esc_tech_advanced_shield_capacitors = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -271,7 +271,7 @@ esc_tech_crystal_infused_capacitor = {
 
 	weight_modifier = {
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -287,7 +287,7 @@ esc_tech_crystal_infused_capacitor = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -321,7 +321,7 @@ esc_tech_crystal_forged_capacitor = {
 
 	weight_modifier = {
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -337,7 +337,7 @@ esc_tech_crystal_forged_capacitor = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -402,7 +402,7 @@ esc_tech_stellarite_powercore = {
 			NOT = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -414,7 +414,7 @@ esc_tech_stellarite_powercore = {
 			NOT = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -583,7 +583,7 @@ esc_tech_psionic_reinforcement = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -607,7 +607,7 @@ esc_tech_psionic_reinforcement = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -646,7 +646,7 @@ esc_tech_temporal_displacer = {
 	weight_modifier = {
 		factor = 1.5
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -662,7 +662,7 @@ esc_tech_temporal_displacer = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 		modifier = {
@@ -705,7 +705,7 @@ esc_tech_armor_hardening_3 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -720,7 +720,7 @@ esc_tech_armor_hardening_3 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -755,7 +755,7 @@ esc_tech_armor_hardening_lm_2 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -770,7 +770,7 @@ esc_tech_armor_hardening_lm_2 = {
 			}
 		}
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -798,7 +798,7 @@ esc_tech_shield_hardening_3 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -806,7 +806,7 @@ esc_tech_shield_hardening_3 = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -834,7 +834,7 @@ esc_tech_shield_hardening_psi_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
@@ -842,7 +842,7 @@ esc_tech_shield_hardening_psi_2 = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
