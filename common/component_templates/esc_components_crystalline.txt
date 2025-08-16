@@ -1238,9 +1238,12 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_crystal_lance_titanic" }
 	component_set = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	projectile_gfx = "yellow_crystal_ship_projectile"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
+
+	potential = {
+		ESC_ship_uses_juggernaut_components = yes
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit

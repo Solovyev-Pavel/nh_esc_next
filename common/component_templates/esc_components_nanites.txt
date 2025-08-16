@@ -1921,7 +1921,6 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_nanite_missile_titanic" }
 	component_set = ESC_NANITE_TSLOT_JUGGERNAUT
 	projectile_gfx = "esc_nanite_torpedo"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
 
@@ -1931,7 +1930,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -1992,7 +1993,6 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_nanite_missile_titanic" }
 	component_set = ESC_BIO_NANITE_TSLOT_JUGGERNAUT
 	projectile_gfx = "esc_nanite_torpedo"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
 
@@ -2002,7 +2002,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 

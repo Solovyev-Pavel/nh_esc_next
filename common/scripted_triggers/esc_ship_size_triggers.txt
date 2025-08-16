@@ -24,6 +24,28 @@ ESC_ship_uses_starbase_components = {
 		is_ship_size = @MISC_Bastion
 	}
 }
+ESC_ship_uses_big_starbase_components = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		is_ship_size = starbase_citadel
+		is_ship_size = starbase_deep_space_citadel_1
+		is_ship_size = starbase_deep_space_citadel_2
+		is_ship_size = starbase_deep_space_citadel_3
+		# special case for the fallen hive empire
+		AND = {
+			is_ship_class = shipclass_starbase
+			is_fallen_empire_hive = yes
+		}
+		# NSC starbases
+		is_ship_size = @NSC_GrandCitadel
+		is_ship_size = @NSC_SolarStronghold
+		# NSC ships
+		is_ship_size = @NSC_Headquarters
+		# other starbases
+		is_ship_size = @MISC_Battlefortress
+		is_ship_size = @MISC_Bastion
+	}
+}
 
 # ESC overwrite for ship_sizes that use corvette components
 ESC_ship_uses_corvette_components = {

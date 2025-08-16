@@ -15,10 +15,13 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_starbase }
-	size_restriction = { starbase_citadel @NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
 	component_set = "combat_computers"
 	ship_behavior = "platform"
 	hidden = yes # component exists in the base mod to prevent issues if overwrites if removed midgame, but without overwrites this component will not be used
+
+	potential = {
+		ESC_ship_uses_big_starbase_components = yes
+	}
 
 	ship_modifier = {
 		ship_tracking_add = 25
@@ -53,10 +56,13 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_starbase }
-	size_restriction = { starbase_citadel @NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
 	component_set = "combat_computers"
 	ship_behavior = "platform"
 	hidden = yes # component exists in the base mod to prevent issues if overwrites if removed midgame, but without overwrites this component will not be used
+
+	potential = {
+		ESC_ship_uses_big_starbase_components = yes
+	}
 
 	ship_modifier = {
 		ship_tracking_add = 25
@@ -91,10 +97,13 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_starbase }
-	size_restriction = { starbase_citadel @NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
 	component_set = "combat_computers"
 	ship_behavior = "platform"
 	hidden = yes # component exists in the base mod to prevent issues if overwrites if removed midgame, but without overwrites this component will not be used
+
+	potential = {
+		ESC_ship_uses_big_starbase_components = yes
+	}
 
 	ship_modifier = {
 		ship_tracking_add = 25
@@ -129,10 +138,13 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_starbase }
-	size_restriction = { starbase_citadel @NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
 	component_set = "combat_computers"
 	ship_behavior = "platform"
 	hidden = yes # component exists in the base mod to prevent issues if overwrites if removed midgame, but without overwrites this component will not be used
+
+	potential = {
+		ESC_ship_uses_big_starbase_components = yes
+	}
 
 	ship_modifier = {
 		ship_tracking_add = 25
@@ -167,10 +179,13 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_starbase }
-	size_restriction = { starbase_citadel @NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
 	component_set = "combat_computers"
 	ship_behavior = "platform"
 	hidden = yes # component exists in the base mod to prevent issues if overwrites if removed midgame, but without overwrites this component will not be used
+
+	potential = {
+		ESC_ship_uses_big_starbase_components = yes
+	}
 
 	ship_modifier = {
 		ship_tracking_add = 25
@@ -205,10 +220,13 @@ utility_component_template = {
 	}
 
 	class_restriction = { shipclass_starbase }
-	size_restriction = { starbase_citadel @NSC_GrandCitadel @NSC_SolarStronghold @MISC_Battlefortress @MISC_Bastion }
 	component_set = "combat_computers"
 	ship_behavior = "platform"
 	hidden = yes # component exists in the base mod to prevent issues if overwrites if removed midgame, but without overwrites this component will not be used
+
+	potential = {
+		ESC_ship_uses_big_starbase_components = yes
+	}
 
 	ship_modifier = {
 		ship_tracking_add = 25

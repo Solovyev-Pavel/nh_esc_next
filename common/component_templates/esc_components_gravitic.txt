@@ -1527,12 +1527,13 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_lance_titanic" }
 	component_set = ESC_GRAVITY_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_gravity_lance"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -1600,12 +1601,13 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_gravity_lance_titanic" }
 	component_set = ESC_BIO_GRAVITY_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_gravity_lance"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 

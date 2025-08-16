@@ -1509,7 +1509,6 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_cannon_titanic" }
 	component_set = ESC_TESLA_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_tesla_2_xl"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
@@ -1519,7 +1518,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -1579,7 +1580,6 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_tesla_cannon_titanic" }
 	component_set = ESC_BIO_TESLA_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_tesla_2_xl"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
 
@@ -1589,7 +1589,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 

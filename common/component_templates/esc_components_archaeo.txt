@@ -3250,8 +3250,11 @@ weapon_component_template = {
 	projectile_gfx = "perdition_beam"
 	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	upgrades_to = ESC_ARCHAEO_TITANLASER_3_JUGGERNAUT
+
+	potential = {
+		ESC_ship_uses_juggernaut_components = yes
+	}
 
 	target_weights = {
 		titan = 3
@@ -3404,7 +3407,10 @@ weapon_component_template = {
 	projectile_gfx = "perdition_beam"
 	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
+
+	potential = {
+		ESC_ship_uses_juggernaut_components = yes
+	}
 
 	target_weights = {
 		titan = 3

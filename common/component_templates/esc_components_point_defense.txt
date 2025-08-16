@@ -462,13 +462,14 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_juggernaut_pd_1" }
 	component_set = ESC_JUGGERNAUT_POINT_DEFENSE_1
 	projectile_gfx = "white_laser_pd"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_JUGGERNAUT_POINT_DEFENSE_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -511,13 +512,14 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_juggernaut_pd_1" }
 	component_set = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_1
 	projectile_gfx = "white_laser_pd"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
@@ -564,12 +566,13 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_juggernaut_pd_2" }
 	component_set = ESC_JUGGERNAUT_POINT_DEFENSE_2
 	projectile_gfx = "white_laser_pd"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = no
 	}
 
@@ -612,12 +615,13 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_juggernaut_pd_2" }
 	component_set = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
 	projectile_gfx = "white_laser_pd"
-	size_restriction = { juggernaut @MISC_WarJuggernaut }
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EXTRA_CONDITION = "ESC_ship_uses_juggernaut_components"
+		EXTRA_CONDITION_VALUE = yes
 		EVAL_TARGET = yes
 	}
 
