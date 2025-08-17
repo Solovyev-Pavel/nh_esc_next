@@ -176,7 +176,6 @@ utility_component_template = {
 	size = aux
 	icon = GFX_esc_aux_reactor_4
 	icon_frame = 1
-	power = 200
 
 	resources = {
 		category = ship_components
@@ -188,6 +187,10 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	modifier = {
+		ship_reactor_power_mult = 0.66
 	}
 
 	prerequisites = { "esc_tech_reactor_booster_4" }
@@ -203,7 +206,6 @@ utility_component_template = {
 	size = aux
 	icon = GFX_esc_aux_bio_reactor_4
 	icon_frame = 1
-	power = 200
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost
@@ -215,6 +217,10 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = yes
+	}
+
+	modifier = {
+		ship_reactor_power_mult = 0.66
 	}
 
 	prerequisites = { "esc_tech_reactor_booster_4" }
@@ -230,7 +236,6 @@ utility_component_template = {
 	size = aux
 	icon = GFX_esc_aux_reactor_5
 	icon_frame = 1
-	power = 400
 
 	resources = {
 		category = ship_components
@@ -242,6 +247,10 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
+	}
+
+	modifier = {
+		ship_reactor_power_mult = 0.75
 	}
 
 	prerequisites = { "esc_tech_reactor_booster_5" }
@@ -258,7 +267,6 @@ utility_component_template = {
 	size = aux
 	icon = GFX_esc_aux_bio_reactor_5
 	icon_frame = 1
-	power = 400
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_bio_component_cost
@@ -270,6 +278,10 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = yes
+	}
+
+	modifier = {
+		ship_reactor_power_mult = 0.75
 	}
 
 	prerequisites = { "esc_tech_reactor_booster_5" }
