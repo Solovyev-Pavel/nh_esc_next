@@ -34,7 +34,7 @@ ESC_ship_uses_big_starbase_components = {
 		# special case for the fallen hive empire
 		AND = {
 			is_ship_class = shipclass_starbase
-			is_fallen_empire_hive = yes
+			from = { is_fallen_empire_hive = yes }
 		}
 		# NSC starbases
 		is_ship_size = @NSC_GrandCitadel
