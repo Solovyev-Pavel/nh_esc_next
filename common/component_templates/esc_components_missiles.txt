@@ -924,9 +924,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_BIO_SWARMER_MISSILES_4
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EXTRA_CONDITION = "ship_uses_stinger_components"
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = yes
 	}
 
@@ -1101,9 +1099,7 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EXTRA_CONDITION = "ship_uses_stinger_components"
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = yes
 	}
 
