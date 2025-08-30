@@ -3,7 +3,18 @@
 size = small
 icon = $REACTOR_ICON$
 icon_frame = 1
-power = @ESC_REACTOR_t$REACTOR_TIER$_power_$SHIP_SIZE_GROUP$
+
+# power
+inline_script = {
+	script = reactors/esc_inlines_reactors_power
+	SHIP_SIZE_GROUP = $SHIP_SIZE_GROUP$
+	REACTOR_TIER = $REACTOR_TIER$
+	# extra power for reactors
+	POWER_MOD_CATEGORY = $POWER_MOD_CATEGORY$
+	POWER_MOD_SUFFIX = $POWER_MOD_SUFFIX$
+	# baseline modifier :: have to be passed along since there can be only one ship_modifier block
+	BASELINE_MODIFIER = "$BASELINE_MODIFIER_TYPE$ = $BASELINE_MODIFIER_VALUE$"
+}
 
 # component cost
 inline_script = {

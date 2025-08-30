@@ -3,7 +3,18 @@
 size = small
 icon = $REACTOR_ICON$
 icon_frame = 1
-power = @ESC_REACTOR_t$REACTOR_TIER$_power_$SHIP_SIZE_GROUP$
+
+# power
+inline_script = {
+	script = reactors/esc_inlines_reactors_power
+	SHIP_SIZE_GROUP = $SHIP_SIZE_GROUP$
+	REACTOR_TIER = $REACTOR_TIER$
+	# extra power for reactors
+	POWER_MOD_CATEGORY = $POWER_MOD_CATEGORY$
+	POWER_MOD_SUFFIX = $POWER_MOD_SUFFIX$
+	# passing NULL baseline modifier just to keep the number of scrips down
+	BASELINE_MODIFIER = ""
+}
 
 # component cost
 inline_script = {
@@ -29,6 +40,6 @@ ai_weight = {
 	factor = $COMPONENT_WEIGHT$
 	modifier = {
 		has_global_flag = @ACOT_active_flag
-		factor = $WEIGHT_MULT_ACOT$
+		factor = $WEIGHT_MULT_ACOT|1$
 	}
 }

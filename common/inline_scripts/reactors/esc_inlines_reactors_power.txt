@@ -1,0 +1,10 @@
+### inline script encapsulating power generation for ships
+
+power = @ESC_REACTOR_t$REACTOR_TIER$_power_$SHIP_SIZE_GROUP$
+
+ship_modifier = {
+	# baseline modifier
+	$BASELINE_MODIFIER$
+	# extra power for reactors
+	ship_reactor_power_add = @ESC_REACTOR_MOD_t$REACTOR_TIER$_$POWER_MOD_CATEGORY$$POWER_MOD_SUFFIX$
+}
