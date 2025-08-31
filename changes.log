@@ -393,3 +393,18 @@
 - Add overwrites for certain vanilla technology icons.
 - Add global ship designs overwrites for the hive FE overwrites. (submod)
 - Some localisation fixes.
+
+>>> 19.08.2025
+- Update for the new version of the base game.
+- Update aux reactors to give percentage-based boost rather than flat amount of power.
+- Housekeeping with technologies.
+- Remove dummy ship_sizes since they are no longer needed.
+- Replace remaining size_restriction blocks with potential blocks.
+- Fixed a bug that prevented hive FE starbases from equipping their modded combat computers.
+
+>>> 31.08.2025
+- Update cruiser/battleship/titan reactors to allow different output depending on presence of active NSC3 mod.
+- Retire dedicated NSC3 cruiser/battleship/titan reactors (legacy support).
+- Allow more freedom with M-slot bioship swarmer missiles.
+- Fix a bug with a few thruster costs being missing.
+- Fix certain bug with FE-specific starbase combat computers and adjust their modifiers.
