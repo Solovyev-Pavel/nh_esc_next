@@ -1,6 +1,6 @@
 ﻿l_korean:
 
-### KOREAN (ACTUALLY ENGLISH) LOCALIZATION
+### KOREAN LOCALIZATION
 
 ############################################################
 ###                    Dynamic Mod Menu                  ###
@@ -12,28 +12,28 @@ esc_next_name_id: "Extra Ship Components §YNEXT§!"
 ###                      Weapon Tags                     ###
 ############################################################
 
-weapon_type_psionic: "§YPsionic§!"
-weapon_type_nanite: "§YNanite§!"
-weapon_type_biological: "§YBiological§!"
+weapon_type_psionic: "§Y사이오닉§!"
+weapon_type_nanite: "§Y나노머신§!"
+weapon_type_biological: "§Y생물학§!"
 
-esc_small: "Small"
-esc_medium: "Medium"
-esc_large: "Large"
-esc_extra_large: "Extra-large"
+esc_small: "소형"
+esc_medium: "중형"
+esc_large: "대형"
+esc_extra_large: "초대형"
 
 ############################################################
 ###                        Deposits                      ###
 ############################################################
 
-d_esc_large_borehole_1: "Abyssal Borehole"
-d_esc_large_borehole_1_desc: "A giant borehole that allows for extraction of precious resources straight from the planet's mantle and core."
+d_esc_large_borehole_1: "끝없는 시추공"
+d_esc_large_borehole_1_desc: "행성의 맨틀과 핵에서 귀중한 자원을 직접 추출하는 거대한 시추공입니다."
 
 ############################################################
 ###                         Edicts                       ###
 ############################################################
 
-edict_esc_mod_control_edict: "ESC NEXT Control Panel"
-edict_esc_mod_control_edict_desc: "Open ESC NEXT options menu"
+edict_esc_mod_control_edict: "ESC NEXT 제어판"
+edict_esc_mod_control_edict_desc: "ESC NEXT 옵션 메뉴를 엽니다."
 
 ############################################################
 ###                       Decisions                      ###
@@ -42,130 +42,130 @@ edict_esc_mod_control_edict_desc: "Open ESC NEXT options menu"
 decision_esc_mod_menu: "$edict_esc_mod_control_edict$"
 decision_esc_mod_menu_desc: "$edict_esc_mod_control_edict_desc$"
 
-decision_esc_clone_dragon: "Clone Ether Drake Hatchling"
-decision_esc_clone_dragon_desc: "Our scientific staff will attempt to clone the Ether Drake in order to produce a younger and more malleable drake under our control."
+decision_esc_clone_dragon: "에테르 드레이크 유체 복제"
+decision_esc_clone_dragon_desc: "우리 과학 부서는 에테르 드레이크를 복제하여 더 젊고 유연한 드레이크를 만들어 우리의 통제 하에 두려고 시도할 것입니다."
 
-decision_esc_clone_sky_dragon: "Clone Sky Dragon Hatchling"
-decision_esc_clone_sky_dragon_desc: "Our scientific staff will attempt to clone the Sky Dragon in order to produce a young drake that will serve us."
+decision_esc_clone_sky_dragon: "스카이 드래곤 유체 복제"
+decision_esc_clone_sky_dragon_desc: "우리 과학 부서는 스카이 드래곤을 복제하여 더 젊고 유연한 드레이크를 만들어 우리의 통제 하에 두려고 시도할 것입니다."
 
 ############################################################
 ###                       Modifiers                      ###
 ############################################################
 
-mod_weapon_type_psionic_weapon_damage_mult: "Psionic Weapon Damage"
-mod_weapon_type_psionic_weapon_fire_rate_mult: "Psionic Weapon Attack Speed"
-mod_weapon_type_nanite_weapon_damage_mult: "Nanite Weapon Damage"
-mod_weapon_type_nanite_weapon_fire_rate_mult: "Nanite Weapon Attack Speed"
-mod_weapon_type_biological_weapon_damage_mult: "Biological Weapon Damage"
-mod_weapon_type_biological_weapon_fire_rate_mult: "Biological Weapon Attack Speed"
+mod_weapon_type_psionic_weapon_damage_mult: "사이오닉 무기 피해량"
+mod_weapon_type_psionic_weapon_fire_rate_mult: "사이오닉 무기 연사속도"
+mod_weapon_type_nanite_weapon_damage_mult: "나노머신 무기 피해량"
+mod_weapon_type_nanite_weapon_fire_rate_mult: "나노머신 무기 연사속도"
+mod_weapon_type_biological_weapon_damage_mult: "생물학 무기 피해량"
+mod_weapon_type_biological_weapon_fire_rate_mult: "생물학 무기 연사속도"
 
-mod_planet_farmers_rare_crystals_produces_add: "£rare_crystals£ $rare_crystals$ from £job_farmer£ $job_farmer_plural$"
-mod_planet_farmers_minerals_upkeep_add: "£minerals£ $minerals$ Upkeep of £job_farmer£ $job_farmer_plural$"
-mod_planet_metallurgists_nanites_produces_add: "£nanites£ $nanites$ from £job_foundry£ $job_foundry_plural$"
-mod_planet_metallurgists_consumer_goods_upkeep_add: "£consumer_goods£ $consumer_goods$ Upkeep of £job_foundry£ $job_foundry_plural$"
-mod_planet_researchers_sr_zro_produces_add: "£sr_zro£ $sr_zro$ from £job_researcher£ $job_researcher_plural$"
-mod_planet_biologists_sr_zro_produces_add: "£sr_zro£ $sr_zro$ from £job_biologist£ $job_biologist_plural$"
-mod_planet_physicsts_sr_dark_matter_produces_add: "£sr_dark_matter£ $sr_dark_matter$ from £job_physicist£ $job_physicist_plural$"
-mod_planet_miners_alloys_upkeep_add: "£alloys£ $alloys$ Upkeep of £job_miner£ $job_miner_plural$"
+mod_planet_farmers_rare_crystals_produces_add: "£job_farmer£ $job_farmer_plural$의 £rare_crystals£ $rare_crystals$ 생산량"
+mod_planet_farmers_minerals_upkeep_add: "£job_farmer£ $job_farmer_plural$의 £minerals£ $minerals$ 유지비"
+mod_planet_metallurgists_nanites_produces_add: "£job_foundry£ $job_foundry_plural$의 £nanites£ $nanites$ 생산량"
+mod_planet_metallurgists_consumer_goods_upkeep_add: "£job_foundry£ $job_foundry_plural$의 £consumer_goods£ $consumer_goods$ 유지비"
+mod_planet_researchers_sr_zro_produces_add: "£job_researcher£ $job_researcher_plural$의 £sr_zro£ $sr_zro$ 생산량"
+mod_planet_biologists_sr_zro_produces_add: "£job_biologist£ $job_biologist_plural$의 £sr_zro£ $sr_zro$ 생산량"
+mod_planet_physicsts_sr_dark_matter_produces_add: "£job_physicist£ $job_physicist_plural$의 £sr_dark_matter£ $sr_dark_matter$ 생산량"
+mod_planet_miners_alloys_upkeep_add: "£job_miner£ $job_miner_plural$의 £alloys£ $alloys$ 유지비"
 
-mod_esc_weapon_effect_healing: "Repairs some $HITPOINTS$ or $ARMOR$ when dealing damage to targets"
-mod_esc_weapon_effect_critical_damage: "This weapon can sometimes deal critical hits that do increased damage to the target"
+mod_esc_weapon_effect_healing: "목표물에 피해를 입히면 $HITPOINTS$ 또는 $ARMOR$를 회복합니다."
+mod_esc_weapon_effect_critical_damage: "이 무기는 때때로 목표물에 더 많은 피해를 입히는 치명타를 가할 수 있습니다."
 
 ############################################################
 ###                         Armies                       ###
 ############################################################
 
-esc_psionic_avatar_army: "§MPsionic Avatar§!"
-esc_psionic_avatar_army_desc: "An extremely-powerful psionic entity summoned to fight on the behalf of those inhabiting the material plane."
+esc_psionic_avatar_army: "§M사이오닉 아바타§!"
+esc_psionic_avatar_army_desc: "물질계에 거주하는 자들을 대신하여 싸우기 위해 소환된 매우 강력한 사이오닉 존재입니다."
 
-esc_erasure_squad_army: "Erasure Squad"
-esc_erasure_squad_army_desc: "Special forces, armed with weapons capable of erasing their enemies from reality."
+esc_erasure_squad_army: "삭제반"
+esc_erasure_squad_army_desc: "적들을 현실에서 지워버릴 수 있는 무기로 무장한 특수부대입니다."
 
-esc_eradicator_droids_army: "Eradicator Droid Army"
-esc_eradicator_droids_army_desc: "Advanced mechanical warriors, equipped with weapons capable of erasing their enemies from reality."
+esc_eradicator_droids_army: "박멸자 드로이드 군대"
+esc_eradicator_droids_army_desc: "적들을 현실에서 지워버릴 수 있는 무기로 무장한 고급 기계 전사들입니다."
 
-esc_tesla_droids_army: "Tesla Droids"
-esc_tesla_droids_army_desc: "Machine army that utilizes powerful tesla weapons to fry its enemies alive."
+esc_tesla_droids_army: "테슬라 드로이드"
+esc_tesla_droids_army_desc: "적들을 산 채로 튀겨버리는 강력한 테슬라 무기로 무장한 기계 군대입니다."
 
-esc_tesla_troopers_army: "Tesla Troopers"
-esc_tesla_troopers_army_desc: "Sodiers encased in heavy non-conducting armor and wielding powerful tesla weapons."
+esc_tesla_troopers_army: "테슬라 기갑병"
+esc_tesla_troopers_army_desc: "두꺼운 비전도체 갑옷으로 보호받으며 강력한 테슬라 무기를 휘두르는 병사들입니다."
 
-esc_biohorror_army: "Bio-Horror Horde"
-esc_biohorror_army_desc: "An assault unit consisting of remotely-guided genetically-engineered attack beasts."
+esc_biohorror_army: "생체 공포 무리"
+esc_biohorror_army_desc: "원격 조종을 받는 유전자 조작된 공격용 짐승들로 구성된 습격 부대입니다."
 
 ############################################################
 ###              Starbase Buildings & Modules            ###
 ############################################################
 
-sm_esc_starbase_reactor: "Starbase Reactor"
-sm_esc_starbase_reactor_desc: "A massive zero-point reactor capable of providing all the power needed by gigantic space installations."
+sm_esc_starbase_reactor: "항성 기지 반응로"
+sm_esc_starbase_reactor_desc: "거대한 영점 반응기로, 거대한 우주 시설에 필요한 모든 전력을 공급할 수 있습니다."
 
-sm_esc_starbase_dm_orbital_plant: "Dark Matter Orbital Plant"
-sm_esc_starbase_dm_orbital_plant_desc: "A large facility within the starbase, dedicated to production of £sr_dark_matter£ §Y$sr_dark_matter$§!. While it can function anywhere, it will be most effective if there is a natural source of £sr_dark_matter£ §Y$sr_dark_matter$§!, such as a black hole, nearby."
-sm_esc_starbase_zro_orbital_plant: "Zro Orbital Plant"
-sm_esc_starbase_zro_orbital_plant_desc: "A specialized facility to produce synthetic £sr_zro£ §Y$sr_zro$§!. Its efficiency can be boosted if there is a source of natural £sr_zro£ §Y$sr_zro$§! nearby."
-sm_esc_starbase_nanite_factory: "Nanite Orbital Plant"
-sm_esc_starbase_nanite_factory_desc: "A orbital installation for industrial-scale production of £nanites£ §Y$nanites$§!. Having a natural source of £nanites£ §Y$nanites$§! nearby will, undoubtedly, increase it's productivity."
+sm_esc_starbase_dm_orbital_plant: "궤도 암흑 물질 공장"
+sm_esc_starbase_dm_orbital_plant_desc: "항성 기지 안에 있는 거대한 시설로, £sr_dark_matter£ §Y$sr_dark_matter$§!을 생산합니다. 어느 곳에서도 작동하지만, 자연적으로 £sr_dark_matter£ §Y$sr_dark_matter$§!을 얻을 수 있는 곳 - 블랙홀 같은 곳 - 근처에 건설하는 것이 가장 효율적입니다."
+sm_esc_starbase_zro_orbital_plant: "궤도 즈로 공장"
+sm_esc_starbase_zro_orbital_plant_desc: "합성 £sr_zro£ §Y$sr_zro$§!를 생산하는 특수한 시설입니다. 자연적으로 £sr_zro£ §Y$sr_zro$§!를 얻을 수 있는 곳 근처에 있으면 효율성이 높아질 수 있습니다."
+sm_esc_starbase_nanite_factory: "궤도 나노머신 공장"
+sm_esc_starbase_nanite_factory_desc: "산업적인 규모로 £nanites£ §Y$nanites$§!을 생산하는 궤도 시설입니다. 자연적으로 £nanites£ §Y$nanites$§!을 얻을 수 있는 곳 근처에 있으면 의심의 여지 없이 생산 능률이 올라갑니다."
 
 ############################################################
 ###                   Special Projects                   ###
 ############################################################
 
 ### Machines learn about psionics
-esc_special_projects.1001.name: "Organics Display Strange Abilities"
-esc_special_projects.1001.desc: "A number of organics existing within our sphere of influence are displaying strange abilities. An investigation into the phenomenon reveals that these abilities are collectively referred to as §MPsionics§! and represent a form of thought-driven energy manipulation. Our $job_calculator$ drones think that these abilities can be refined and turned into a viable weapon for our fleets. Shall they be given a go-ahead with this research avenue?"
-esc_special_projects.1001.a: "We must learn all that we can about this!"
-esc_special_projects.1001.b: "We have better things to research"
+esc_special_projects.1001.name: "유기체들이 이상한 능력을 보입니다."
+esc_special_projects.1001.desc: "우리의 영향권 안에 있는 여러 유기체들이 이상한 능력을 보이고 있습니다. 이 현상을 조사하여 이러한 능력들이 총괄적으로 §M사이오닉§!이라고 불리며 생각에 의해 구동되는 에너지 조작의 한 형태임을 밝혀냈습니다. 우리의 $job_calculator$ 드론들은 이러한 능력들이 개선되어 우리의 함대가 사용할 수 있는 유효한 무기로 전환될 수 있다고 생각합니다. 그들이 이 연구에 착수하도록 허락해도 될까요?"
+esc_special_projects.1001.a: "우리는 이것에 대해 모든 것을 배워야 합니다!"
+esc_special_projects.1001.b: "우리는 더 중요한 것을 연구해야 합니다."
 
-ESC_MACHINE_EMPIRE_PSIONICS: "What is §MPsionics§!?"
-ESC_MACHINE_EMPIRE_PSIONICS_DESC: "We must research these strange abilities - §MPsionics§! - that a number of organics within our sphere of influence display. The Guiding Intelligence believes that thought-driven energy manipulation that lays at the core of §MPsionic§! abilities can be refined and turned into viable weapon that can be used by our fleets. Such weapons that seemingly defy known laws of physics, should they prove to be possible, will give us a considerable advantage against our foes."
+ESC_MACHINE_EMPIRE_PSIONICS: "§M사이오닉§!이 뭐죠?"
+ESC_MACHINE_EMPIRE_PSIONICS_DESC: "우리는 우리의 영향권 안에 있는 많은 유기체들이 보이는 이 §M사이오닉§!이라는 이상한 능력을 연구해야 합니다. The Guiding Intelligence는 §M사이오닉§!의 핵심에 놓여져 있는, 생각에 의해 구동되는 에너지 조작 능력들이 개선되어 우리의 함대가 사용할 수 있는 유효한 무기로 전환될 수 있다고 믿습니다. 알려진 물리 법칙을 부정하는 것처럼 보이는 이런 무기는, 실증될 수만 있다면, 우리의 적들을 상대할 때 상당한 이점을 가져다줄 것입니다."
 
-esc_special_projects.1002.name: "§MPsionics§! Research Complete!"
-esc_special_projects.1002.desc: "After much research and experimentation, our $job_calculator$ drones were able to find a way to control and enhance §MPsionic§! abilities displayed by organics. This should allow us to create weapons for our ships that have unique properties such as an ability to penetrate seemingly endless number of armor layers. §MPsionic§! weapons, however, come with the downside of requiring a number of organics aboard to function and a substance known as £sr_zro£ §Y$sr_zro$§! in order to maximize potency their abilities."
+esc_special_projects.1002.name: "§M사이오닉§! 연구 완료!"
+esc_special_projects.1002.desc: "많은 연구와 실험을 통해, 우리의 $job_calculator$ 드론들은 유기체들이 보였던 §M사이오닉§! 능력을 조종하고 향상할 방법을 찾아낼 수 있었습니다. 이것으로 우리는 우리의 함선에 장비할, 끝이 없어 보일 정도로 많은 겹의 층으로 쌓인 장갑을 꿰뚫을 능력 등등의 특별한 능력을 가진 무장을 개발할 수 있어야 합니다. 하지만 §M사이오닉§! 무기는, 작동시키기 위해 많은 수의 유기체를 태워야 하고, 그 능력을 극대화하는 데 £sr_zro£ §Y$sr_zro$§!라는 물질을 요구한다는 단점이 있습니다."
 
-### Automated Dreadnought computers
-esc_special_projects.2002.name: "Automated Dreadnought Observation: Suggestion"
-esc_special_projects.2002.desc: "Automated Dreadnought is a fascinating piece of precursor technology and while it doesn't look like it will let us study its design up close, we can still learn a lot by observing its movements as it forever patrols the system. Perhaps, if we can replicate the logic behind its combat computers, it can be applied to our own ships, greatly boosting their abilities."
-esc_special_projects.2002.option.a: "We will learn what we can"
-esc_special_projects.2002.option.b: "We don't need to copy from this piece of junk!"
+### 자동화 드레드노트 computers
+esc_special_projects.2002.name: "자동화 드레드노트 관찰: 제안"
+esc_special_projects.2002.desc: "자동화 드레드노트는 선구자 기술력의 매력적인 작품이며 우리가 그 설계를 가까이서 연구하는 것을 허락하지 않을 것처럼 생겼지만, 그럼에도 우리는 이것이 그 성계를 영원히 순찰하면서 움직이는 것을 관찰함으로써 많은 것을 배울 수 있었습니다. 아마도, 우리가 이것의 전투 컴퓨터 뒤의 논리를 복제할 수 있다면, 그것을 우리의 함선에 적용하여 능력을 아주 크게 강화할 수 있을 것입니다."
+esc_special_projects.2002.option.a: "배울 수 있는 것은 모두 배우겠습니다."
+esc_special_projects.2002.option.b: "우리는 이 고물을 베낄 필요가 없습니다!"
 
-ESC_DREADNOUGHT_OBSERVATION: "Automated Dreadnought Observation"
-ESC_DREADNOUGHT_OBSERVATION_DESC: "While it doesn't look like combat systems of the ancient Automated Dreadnought possess any form of true intelligence, they are still extremely advanced and if we can replicate their logic for out own ships, this will without a doubt greatly increase strength of our fleets."
+ESC_DREADNOUGHT_OBSERVATION: "자동화 드레드노트 관찰"
+ESC_DREADNOUGHT_OBSERVATION_DESC: "고대의 자동화 드레드노트의 전투 시스템이 어떤 형태로든 진정한 지능을 갖고 있는 것 같진 않지만, 그래도 그 시스템은 극도로 발전했으며, 우리가 그 시스템의 논리를 복제할 수 있다면, 우리의 함대의 힘을 의심의 여지 없이 크게 강화할 수 있을 것입니다."
 
-esc_special_projects.2003.name: "Automated Dreadnought Obervation: Report"
-esc_special_projects.2003.desc: "With the data our observation team has collected on the Automated Dreadnought and its combat behavior, our science department is positive that they will be able to replicate at least some of apparent logic behing its combat computers, adapted to our own ship designs, of course."
+esc_special_projects.2003.name: "자동화 드레드노트 관찰: 보고서"
+esc_special_projects.2003.desc: "우리의 관찰 팀이 자동화 드레드노트와 그 전투 행동에 대해 수집한 데이터를 바탕으로, 우리의 과학 부서는 적어도 그 전투 컴퓨터 뒤에 있는 명백한 논리의 일부를 우리의 함선의 설계에 맞춰 복제할 수 있을 것이라고 확신하고 있습니다. "
 
 ### Nanite Thought Matrix computers
-esc_special_projects.3002.name: "Nanite Thought Matrix Development"
-esc_special_projects.3002.desc: "With our advancements in the fields of nanotechnology and AI some of scientists began contemplating the creation of next generation of AI, one that run on nanite substrate and are capable of mimicing organic minds to an unprecedent degree. Our navy has already expressed interest in adopting such AI for fleet command and are willing to sponsor the research."
-esc_special_projects.3002.option.a: "Give researchers a go ahead"
-esc_special_projects.3002.option.b: "We have no need of such technology!"
+esc_special_projects.3002.name: "나노머신 사고망 개발"
+esc_special_projects.3002.desc: "나노기술과 AI 분야의 발전에 힘입어 일부 과학자들은 유기적인 사고를 전례 없는 수준으로 모방할 수 있는 나노머신 기판에서 작동하는 신세대 AI의 창조를 구상하기 시작했습니다. 우리의 해군은 이미 이러한 AI를 함대 지휘에 채택하는 데 관심을 표명했으며 연구를 후원할 의향이 있습니다."
+esc_special_projects.3002.option.a: "연구자들에게 진행하라고 하세요."
+esc_special_projects.3002.option.b: "우린 그런 기술은 필요없습니다!"
 
-ESC_NANITE_THOUGHT_MATRIX_DEVELOP: "Nanite Thought Matrix Development"
-ESC_NANITE_THOUGHT_MATRIX_DEVELOP_DESC: "According to some research, an AI running on nanite substrate can be made to perfectly replicate organic thought processes, except with incredible speed and precision of a machine. Such AI, should it ever be developed, would revolutionize many fields, and the admiralty board has displayed a great interest in adopting such AI for the purposes of space warfare. They say that having such an AI on our ships will give them a significant edge over our enemies who are still using simplistic and outdated AI."
+ESC_NANITE_THOUGHT_MATRIX_DEVELOP: "나노머신 사고망 개발"
+ESC_NANITE_THOUGHT_MATRIX_DEVELOP_DESC: "몇몇 연구에 따르면, 나노머신 기판에서 작동하는 AI는 기계의 믿을 수 없는 속도와 정확성을 덧붙인 채 유기체의 사고 과정을 완벽히 복제하도록 만들어질 수 있습니다. 그런 AI가 만약에 개발된다면 많은 분야에서 혁명을 일으킬 것이며, 해군 본부 위원회는 우주전을 위해서 그런 AI를 도입하는 것에 큰 관심을 표출하고 있습니다. 해군 본부 위원회는 우리 함선에 그런 AI를 탑재하면 여전히 단순하고 철 지난 AI를 쓰는 우리의 적들에게 상당한 우위를 얻을 수 있다고 말하고 있습니다."
 
-esc_special_projects.3003.name: "Intact Tempest Ship Recovered"
-esc_special_projects.3003.desc: "Following a recent battle, we were able to recover a mostly-intact ship belonging to an extragalctic threat known as the Gray Tempest. The preliminary report of our scientists indicates that the ship was controlled by an AI running on a nanite substrate set to mimic an organic mind of some long-extict species. According to the same report, we might be able to replicate the technology behind this advanced AI and use it to improve combat capabilities of our own ships."
-esc_special_projects.3003.option.a: "Give researchers a go ahead"
-esc_special_projects.3003.option.b: "We have no need of such technology!"
+esc_special_projects.3003.name: "온전한 템페스트 함선 확보"
+esc_special_projects.3003.desc: "최근의 전투에 뒤이어, 우리는 그레이 템페스트라고 알려진 은하 외부로부터의 위협에 속해 있는 거의 온전한 함선을 얻을 수 있었습니다. 우리 과학자들의 초기 보고서에 따르면 그 함선은 오래 전에 멸종한 종의 유기체적 정신을 흉내내도록 설정된 나노머신 기판에서 작동하는 AI에 의해 조종되고 있었습니다. 그 보고서에 따르면 우리는 그 발전된 AI의 뒤에 있는 기술을 복제하고 우리의 함선들의 전투력을 높이기 위해서 사용할 수 있다고 합니다."
+esc_special_projects.3003.option.a: "연구자들에게 진행하라고 하세요."
+esc_special_projects.3003.option.b: "우린 그런 기술은 필요없습니다!"
 
-ESC_NANITE_THOUGHT_MATRIX_RENGINEER: "Nanite Thought Matrix Reverse Engineering"
-ESC_NANITE_THOUGHT_MATRIX_RENGINEER_DESC: "Having recovered a mostly-intact Tempest ship, our scientists have discovered that they are controlled by an advanced form of AI running on a nanite substrate set to mimic an organic mind of some long-extinct species. Having witnessed the power of those ships, it is only natural that we want to copy it for our own fleets."
+ESC_NANITE_THOUGHT_MATRIX_RENGINEER: "나노머신 사고망 역설계"
+ESC_NANITE_THOUGHT_MATRIX_RENGINEER_DESC: "거의 온전한 템페스트 함선을 얻고, 우리 과학자들은 그 함선들이 오래 전에 멸종한 종의 유기체적 정신을 흉내내도록 설정된 나노머신 기판에서 작동하는 발전한 형태의 AI에 의해 조종되고 있음을 밝혀냈습니다. 그 함선들의 힘을 봤으니, 우리가 우리의 함대를 위해서 이것을 복제하고 싶어하는 것은 당연합니다."
 
-esc_special_projects.3004.name: "Nanite Thought Matrix"
-esc_special_projects.3004.desc: "Our researchers have successfully developed the necessary technologies to create a nanite-based AI with abilities to perfectly mimic organic minds. This breakthrough marks the dawn of a new era in our technological development."
+esc_special_projects.3004.name: "나노머신 사고망"
+esc_special_projects.3004.desc: "우리 연구자들은 나노머신 기반의 유기체적 정신을 완전히 흉내내는 AI를 만드는 데 꼭 필요한 기술을 성공적으로 개발해냈습니다. 이 혁신을 통해서 우리의 기술 개발의 새 시대가 밝아올 것입니다."
 
 ### Gigapredator Instincts computers
-esc_special_projects.4002.name: "Gigapredator Study: Suggestion"
-esc_special_projects.4002.desc: "We have recently come in contact spaceborn lifeforms unlike anything we've seen before. The creatures of immense scale and, undoubtedly, immense appetite. These giant must utilize some unorthodox physiological tricks and food hunting strategies to survive and thrive. If we can learn and replicate those, perhaps, new and more powerful phenotypes of our own warbeasts will become possible."
-esc_special_projects.4002.option.a: "We will learn what we can"
-esc_special_projects.4002.option.b: "We don't want our warbeasts to turn on us!"
+esc_special_projects.4002.name: "최고 포식자 연구: 제안"
+esc_special_projects.4002.desc: "우리는 최근 우리가 지금까지 보아온 어느 것과도 닮지 않은 우주 태생 생명체를 만났습니다. 엄청난 크기와 의심의 여지 없이 엄청난 식욕을 가진 생물체입니다. 이 거대 생물체는 생존하고 번성하기 위해 몇몇 특이한 생태학적 트릭과 먹이 사냥 전략을 활용해야 합니다. 우리가 이것들을 연구하고 복제할 수 있다면, 아마도, 새롭고 더 강력한 형질을 가진 생물함선들을 만들 수 있을 것입니다."
+esc_special_projects.4002.option.a: "배울 수 있는 것은 모두 배우겠습니다."
+esc_special_projects.4002.option.b: "그 생물함선들이 우리한테 반항하면 어쩌려구요?"
 
-ESC_GIGAPREDATOR_STUDY: "Gigapredator Study"
-ESC_GIGAPREDATOR_STUDY_DESC: "Specaborn leviathans utilize some really unusual biological and behavioral adaptations to survive even in areas of space where, by all accounts, there should not be enough food to sustain their immense bulk. By studying these adaptations, we can learn how to further empower warbeasts under our own command."
+ESC_GIGAPREDATOR_STUDY: "최고 포식자 연구"
+ESC_GIGAPREDATOR_STUDY_DESC: "우주 태생 레비아탄들은 그들의 엄청난 덩치를 유지할 먹잇감이 없어야 할 우주 공간에서 살아남기 위해 몇몇 아주 특이한 생물학적 및 행동학적 적응형을 활용합니다. 이들 적응형을 연구함으로써 우리는 우리가 통제하는 생물함선들을 더욱더 강화할 방법을 알게 될 수 있습니다."
 
-esc_special_projects.4003.name: "Gigapredator Study: Report"
-esc_special_projects.4003.desc: "Our researchers managed to uncover some of the secrets behind the mechanics that allow survival of the leviathan creatures in the void of space. They are also positive that the gained knowledge can be applied to the lesser creatures, such as our own warbeasts. This should allow creation of stronger and smarter phenotypes, greatly increasing he power of our fleets."
+esc_special_projects.4003.name: "최고 포식자 연구: 보고서"
+esc_special_projects.4003.desc: "우리 연구자들은 텅 빈 우주 공간에서 레비아탄 생물체들이 살 수 있게 하는 매카니즘의 비밀 중 몇 가지를 밝혀냈습니다. 그들은 이 연구 결과가 우리가 가진 생물함선들과 같은 더 작은 생물체들에게도 적용될 수 있다고 보고 있습니다. 이것은 더 강하고 똑똑한, 우리의 함대의 전투력을 크게 증가시킬 표현형을 만드는 데 활용될 수 있어야 합니다."
 
 ############################################################
 ###                     Event Messages                   ###
@@ -173,99 +173,99 @@ esc_special_projects.4003.desc: "Our researchers managed to uncover some of the 
 
 ESC_NULL_STRING: ""
 
-esc_events.2000.title: "Ether Drake Takes Flight!"
-esc_events.2000.desc: "Our efforts to clone an Ether Drake were successful and a young hatchling was produced. The creature is reasonably docile when in presence of our scientific staff and, according to them, can be guided to lend its already-considerable power to our cause."
+esc_events.2000.title: "에테르 드레이크의 비행!"
+esc_events.2000.desc: "에테르 드레이크를 복제하기 위한 우리의 노력은 성공적이었고, 어린 유체가 태어났습니다. 이 생물체는 우리의 과학 직원들 앞에서 상당히 순동적이며, 과학 직원들에 따르면, 이미 충분히 강한 전투력을 우리의 목적에 빌려주도록 이끌어질 수 있다고 합니다."
 
-esc_events.2002.title: "Sky Dragon Takes Flight!"
-esc_events.2002.desc: "Our efforts to clone a Sky Dragon were successful and a young hatchling was produced. The creature is reasonably docile when in presence of our scientific staff and, according to them, can be guided to lend its already-considerable power to our cause."
+esc_events.2002.title: "스카이 드래곤의 비행!"
+esc_events.2002.desc: "스카이 드래곤을 복제하기 위한 우리의 노력은 성공적이었고, 어린 유체가 태어났습니다. 이 생물체는 우리의 과학 직원들 앞에서 상당히 순동적이며, 과학 직원들에 따르면, 이미 충분히 강한 전투력을 우리의 목적에 빌려주도록 이끌어질 수 있다고 합니다."
 
-esc_events.3001.name: "Mineral Riches"
-esc_events.3001.desc: "Miners on §Y[Root.GetName]§! report that an exceptionally valuable cluster of £minerals£ §Y$minerals$§! had been extracted from the planet's mantle."
+esc_events.3001.name: "풍부한 광맥"
+esc_events.3001.desc: "§Y[Root.GetName]§!의 광부들은 행성의 맨틀에서 매우 귀중한 £minerals£ §Y$minerals$§! 클러스터가 추출되었다고 보고했습니다."
 
-esc_events.3002.name: "Molten Alloys"
-esc_events.3002.desc: "Miners on §Y[Root.GetName]§! report that a large amount of molten £alloys£ §Y$alloys$§! had been recently extracted from the planet's core, alongside with the usual minerals."
+esc_events.3002.name: "녹은 합금"
+esc_events.3002.desc: "§Y[Root.GetName]§!의 광부들은 행성의 핵에서 최근에 대량의 녹은 £alloys£ §Y$alloys$§!이 일반적인 광물들과 함께 추출되었다고 보고했습니다."
 
-esc_events.3003.name: "Crystalline Gift"
-esc_events.3003.desc: "Miners on §Y[Root.GetName]§! report that several large clusters of valuable £rare_crystals£ §Y$rare_crystals$§! had been extracted from the planet's mantle."
+esc_events.3003.name: "크리스탈로 된 선물"
+esc_events.3003.desc: "§Y[Root.GetName]§!의 광부들은 행성의 맨틀에서 여러 개의 귀중한 £rare_crystals£ §Y$rare_crystals$§! 클러스터가 추출되었다고 보고했습니다."
 
-esc_events.3004.name: "Molten Motes"
-esc_events.3004.desc: "Miners on §Y[Root.GetName]§! report that their operations have extracted a large amount of £volataile_motes£ §Y$volatile_motes$§! that were dissolved in molten rocks of the planet's mantle."
+esc_events.3004.name: "녹은 분말"
+esc_events.3004.desc: "§Y[Root.GetName]§!의 광부들은 그들의 작전에서 행성의 맨틀의 녹은 바위 안에 용해되어 있던 많은 양의 £volatile_motes£ §Y$volatile_motes$§!을 추출해냈다고 보고했습니다."
 
-esc_events.3005.name: "Exotic Gases Pocket"
-esc_events.3005.desc: "Miners on §Y[Root.GetName]§! report that a pocket of £exotic_gases£ §Y$exotic_gases$§! had been located within the planet's mantle. Extraction was successful and yielded large amounts of valuable resources."
+esc_events.3005.name: "외게 가스 주머니"
+esc_events.3005.desc: "§Y[Root.GetName]§!의 광부들은 £exotic_gases£ §Y$exotic_gases$§! 주머니가 행성의 맨틀 안에 존재한다고 보고했습니다. 추출은 성공적이었고 많은 양의 귀한 자원들을 얻었습니다."
 
 ############################################################
 ###                    Static Modifiers                  ###
 ############################################################
 
 # ai research speed boost: easy
-esc_ai_early_game_science_boost_easy: "Exta Ship Components AI research boost (Easy Scaling)"
-esc_ai_early_game_science_boost_easy_desc: "AI empires are granted scaling bonus to research speed:\n+§G10§!% in the early game\n+§G25§!% during the mid-game\n+§G50§!% during the late game"
+esc_ai_early_game_science_boost_easy: "Extra Ship Components AI 연구 버프 (쉬움 비례)"
+esc_ai_early_game_science_boost_easy_desc: "AI 제국은 연구 속도에 비례 난이도 보너스를 받게 됩니다.\n게임 초반 +§G10§!%\n게임 중반 +§G25§!%\n게임 종반 +§G50§!%"
 esc_ai_mid_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
 esc_ai_mid_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
 esc_ai_end_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"
 esc_ai_end_game_science_boost_easy_desc: "$esc_ai_early_game_science_boost_easy_desc$"
-esc_ai_science_boost_easy_static: "Exta Ship Components AI research boost (Easy Static)"
-esc_ai_science_boost_easy_static_desc: "AI empires are granted +§G25§!% research speed bonus throughout the whole game."
+esc_ai_science_boost_easy_static: "Extra Ship Components AI 연구 버프 (쉬움 고정)"
+esc_ai_science_boost_easy_static_desc: "AI 제국들은 게임 전체에 걸쳐 +§G25§!% 연구 속도 보너스를 받게 됩니다."
 
 # ai research speed boost: moderate
-esc_ai_early_game_science_boost_moderate: "Exta Ship Components AI research boost (Moderate Scaling)"
-esc_ai_early_game_science_boost_moderate_desc: "AI empires are granted scaling bonus to research speed:\n+§G25§!% in the early game\n+§G50§!% during the mid-game\n+§G100§!% during the late game"
+esc_ai_early_game_science_boost_moderate: "Extra Ship Components AI 연구 버프 (보통 비례)"
+esc_ai_early_game_science_boost_moderate_desc: "AI 제국은 연구 속도에 비례 난이도 보너스를 받게 됩니다.\n게임 초반 +§G25§!%\n게임 중반 +§G50§!%\n게임 종반 +§G100§!%"
 esc_ai_mid_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
 esc_ai_mid_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
 esc_ai_end_game_science_boost_moderate: "$esc_ai_early_game_science_boost_moderate$"
 esc_ai_end_game_science_boost_moderate_desc: "$esc_ai_early_game_science_boost_moderate_desc$"
-esc_ai_science_boost_moderate_static: "Exta Ship Components AI research boost (Moderate Static)"
-esc_ai_science_boost_moderate_static_desc: "AI empires are granted +§G50§!% research speed bonus throughout the whole game."
+esc_ai_science_boost_moderate_static: "Extra Ship Components AI 연구 버프 (보통 고정)"
+esc_ai_science_boost_moderate_static_desc: "AI 제국들은 게임 전체에 걸쳐 +§G50§!% 연구 속도 보너스를 받게 됩니다."
 
 # ai research speed boost: challenging
-esc_ai_early_game_science_boost_challenging: "Exta Ship Components AI research boost (Challenging Scaling)"
-esc_ai_early_game_science_boost_challenging_desc: "AI empires are granted scaling bonus to research speed:\n+§G50§!% in the early game\n+§G100§!% during the mid-game\n+§G150§!% during the late game"
+esc_ai_early_game_science_boost_challenging: "Extra Ship Components AI 연구 버프 (어려움 비례)"
+esc_ai_early_game_science_boost_challenging_desc: "AI 제국은 연구 속도에 비례 난이도 보너스를 받게 됩니다.\n게임 초반 +§G50§!%\n게임 중반 +§G100§!%\n게임 종반 +§G150§!%"
 esc_ai_mid_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
 esc_ai_mid_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
 esc_ai_end_game_science_boost_challenging: "$esc_ai_early_game_science_boost_challenging$"
 esc_ai_end_game_science_boost_challenging_desc: "$esc_ai_early_game_science_boost_challenging_desc$"
-esc_ai_science_boost_challenging_static: "Exta Ship Components AI research boost (Challenging Static)"
-esc_ai_science_boost_challenging_static_desc: "AI empires are granted +§G100§!% research speed bonus throughout the whole game."
+esc_ai_science_boost_challenging_static: "Extra Ship Components AI 연구 버프 (어려움 고정)"
+esc_ai_science_boost_challenging_static_desc: "AI 제국들은 게임 전체에 걸쳐 +§G100§!% 연구 속도 보너스를 받게 됩니다."
 
 # ai resource boost
-esc_economy_plan: "ESC NEXT economic plan"
+esc_economy_plan: "ESC NEXT 경제 계획"
 
-esc_ai_nanites_boost: "AI Nanites boost"
-esc_ai_nanites_boost_desc: "Monthly £nanites£ §Y$nanites$§!."
+esc_ai_nanites_boost: "AI 나노머신 버프"
+esc_ai_nanites_boost_desc: "매달 £nanites£ §Y$nanites$§! 제공"
 
-esc_ai_zro_boost: "AI Zro boost"
-esc_ai_zro_boost_desc: "Monthly £sr_zro£ §Y$sr_zro$§!."
+esc_ai_zro_boost: "AI 즈로 버프"
+esc_ai_zro_boost_desc: "매달 £sr_zro£ §Y$sr_zro$§! 제공"
 
-esc_ai_dark_matter_boost: "AI Dark Matter boost"
-esc_ai_dark_matter_boost_desc: "Monthly £sr_dark_matter£ §Y$sr_dark_matter$§!."
+esc_ai_dark_matter_boost: "AI 암흑 물질 버프"
+esc_ai_dark_matter_boost_desc: "매달 £sr_dark_matter£ §Y$sr_dark_matter$§! 제공"
 
-esc_mercenary_boost: "Mercenary Enclave boost"
-esc_mercenary_boost_desc: "Monthly strategic resources for the mercenary enclave"
+esc_mercenary_boost: "용병 엔클레이브 버프"
+esc_mercenary_boost_desc: "매달 용병 엔클레이브를 위한 전략 자원 제공"
 
 # on-hit weapon effects
-esc_biological_weapon_armor_hardening_debuff_1: "Corrosive substances"
-esc_biological_weapon_armor_hardening_debuff_1_desc: "Accidic and corrosive substances in the bile of the weaponized space creatures sticks to ship hulls and causes damage to the outer layers of armor, reducing its structural integrity"
+esc_biological_weapon_armor_hardening_debuff_1: "부식성 물질"
+esc_biological_weapon_armor_hardening_debuff_1_desc: "무기화된 우주 생물의 담즙에 있는 산성 및 부식성 물질이 선체에 달라붙어 외부 장갑의 손상을 일으켜 구조적 무결성을 감소시킵니다."
 esc_biological_weapon_armor_hardening_debuff_2: "$esc_biological_weapon_armor_hardening_debuff_1$"
 esc_biological_weapon_armor_hardening_debuff_2_desc: "$esc_biological_weapon_armor_hardening_debuff_1_desc$"
 
-esc_gravitic_weapon_movement_speed_debuff_1: "Lingering Gravitic Anomaly"
-esc_gravitic_weapon_movement_speed_debuff_1_desc: "Gravitic anomaly left in the wake of microsingularity's explosive evaporation creates issues for ship movement, reducing their speed and maneuverability."
+esc_gravitic_weapon_movement_speed_debuff_1: "잔여 중력 이상"
+esc_gravitic_weapon_movement_speed_debuff_1_desc: "초소형 특이점의 폭발적 증발로 인해 남겨진 중력 이상이 함선의 이동에 문제를 일으켜 속도와 기동성을 감소시킵니다."
 esc_gravitic_weapon_movement_speed_debuff_2: "$esc_gravitic_weapon_movement_speed_debuff_1$"
 esc_gravitic_weapon_movement_speed_debuff_2_desc: "$esc_gravitic_weapon_movement_speed_debuff_1_desc$"
 
-esc_nanite_weapons_armor_damage_debuff_1: "Aggressive Disassembly Nanobots"
-esc_nanite_weapons_armor_damage_debuff_1_desc: "These nanites are programmed to aggressively disassemble any matter they find themselves latched on, resulting in continuous damage to the targets they were used against."
+esc_nanite_weapons_armor_damage_debuff_1: "공격적인 분해 나노봇"
+esc_nanite_weapons_armor_damage_debuff_1_desc: "이 나노머신들은 자신이 부착된 모든 물질을 공격적으로 분해하도록 프로그래밍되어 있어, 목표에 지속적인 피해를 줍니다."
 esc_nanite_weapons_armor_damage_debuff_2: "$esc_nanite_weapons_armor_damage_debuff_1$"
 esc_nanite_weapons_armor_damage_debuff_2_desc: "$esc_nanite_weapons_armor_damage_debuff_1_desc$"
 
-esc_psionic_weapons_accuracy_debuff_1: "Thought Disruption"
-esc_psionic_weapons_accuracy_debuff_1_desc: "Lingering effects of psionic attacks that make it harder for minds to focus on tasks."
+esc_psionic_weapons_accuracy_debuff_1: "사고 방해"
+esc_psionic_weapons_accuracy_debuff_1_desc: "정신 공격의 잔여 효과로 인해 피격자들의 정신이 작업에 집중하기 어렵게 됩니다."
 esc_psionic_weapons_accuracy_debuff_2: "$esc_psionic_weapons_accuracy_debuff_1$"
 esc_psionic_weapons_accuracy_debuff_2_desc: "$esc_psionic_weapons_accuracy_debuff_1_desc$"
 
-esc_tesla_weapons_fire_rate_debuff_1: "Power Surges"
-esc_tesla_weapons_fire_rate_debuff_1_desc: "Extreme powers of Tesla weapons cause lasting power surges in target ships' energy grids, leading to subpar performance of their weapons."
+esc_tesla_weapons_fire_rate_debuff_1: "전력 서지"
+esc_tesla_weapons_fire_rate_debuff_1_desc: "테슬라 무기의 극단적인 힘이 목표 함선의 에너지 그리드에 지속적인 전력 급증을 일으켜 무기의 성능을 저하시킵니다."
 esc_tesla_weapons_fire_rate_debuff_2: "$esc_tesla_weapons_fire_rate_debuff_1$"
 esc_tesla_weapons_fire_rate_debuff_2_desc: "$esc_tesla_weapons_fire_rate_debuff_1_desc$"
 
@@ -273,30 +273,30 @@ esc_tesla_weapons_fire_rate_debuff_2_desc: "$esc_tesla_weapons_fire_rate_debuff_
 ###                         Flags                        ###
 ############################################################
 
-ESC_COUNTRY_FLAG_drake_clone_requested: "Ether Drake Hatchling Cloning in Progress"
+ESC_COUNTRY_FLAG_drake_clone_requested: "에테르 드레이크 유체 복제 진행중"
 
 ############################################################
 ###                      Tooltips                        ###
 ############################################################
 
-esc_tooltip_bioship_armor: "This component regenerates §G1§!% of its max armor strength daily while ship's total armor is under §G50§!% of its max value."
+esc_tooltip_bioship_armor: "이 장비는 함선의 총 장갑이 최대치의 §G50§!% 미만일 때 매일 장갑 최대치의 §G1§!%를 재생시킵니다."
 
 esc_tooltip_energy_syphon_shields_add_s_t2: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+100§!"
 esc_tooltip_energy_syphon_shields_add_m_t2: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+200§!"
 esc_tooltip_energy_syphon_shields_add_l_t2: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+300§!"
 esc_tooltip_energy_syphon_shields_add_xl_t2: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+400§!"
 
-esc_tooltip_energy_syphon_shields_repair_s_t2: "- Restores §Y20§! Shields to attacking ship"
-esc_tooltip_energy_syphon_shields_repair_m_t2: "- Restores §Y40§! Shields to attacking ship"
-esc_tooltip_energy_syphon_shields_repair_l_t2: "- Restores §Y60§! Shields to attacking ship"
-esc_tooltip_energy_syphon_shields_repair_xl_t2: "- Restores §Y80! Shields to attacking ship"
+esc_tooltip_energy_syphon_shields_repair_s_t2: "- 공격하는 함선의 보호막을 §Y20§!만큼 회복"
+esc_tooltip_energy_syphon_shields_repair_m_t2: "- 공격하는 함선의 보호막을 §Y40§!만큼 회복"
+esc_tooltip_energy_syphon_shields_repair_l_t2: "- 공격하는 함선의 보호막을 §Y60§!만큼 회복"
+esc_tooltip_energy_syphon_shields_repair_xl_t2: "- 공격하는 함선의 보호막을 §Y80§!만큼 회복"
 
 esc_tooltip_energy_syphon_shields_add_s_t3: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+150§!"
 esc_tooltip_energy_syphon_shields_add_m_t3: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+300§!"
 esc_tooltip_energy_syphon_shields_add_l_t3: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+450§!"
 esc_tooltip_energy_syphon_shields_add_xl_t3: "- $MOD_SHIP_SHIELD_HP_ADD$: §G+600§!"
 
-esc_tooltip_energy_syphon_shields_repair_s_t3: "- Restores §Y30§! Shields to attacking ship"
-esc_tooltip_energy_syphon_shields_repair_m_t3: "- Restores §Y60§! Shields to attacking ship"
-esc_tooltip_energy_syphon_shields_repair_l_t3: "- Restores §Y90§! Shields to attacking ship"
-esc_tooltip_energy_syphon_shields_repair_xl_t3: "- Restores §Y120§! Shields to attacking ship"
+esc_tooltip_energy_syphon_shields_repair_s_t3: "- 공격하는 함선의 보호막을 §Y30§!만큼 회복"
+esc_tooltip_energy_syphon_shields_repair_m_t3: "- 공격하는 함선의 보호막을 §Y60§!만큼 회복"
+esc_tooltip_energy_syphon_shields_repair_l_t3: "- 공격하는 함선의 보호막을 §Y90§!만큼 회복"
+esc_tooltip_energy_syphon_shields_repair_xl_t3: "- 공격하는 함선의 보호막을 §Y120§!만큼 회복"
