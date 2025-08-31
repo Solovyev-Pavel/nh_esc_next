@@ -354,8 +354,9 @@ ESC_ship_uses_carrier_computers = {
 	OR = {
 		ESC_ship_uses_cruiser_components = yes
 		ESC_ship_uses_battleship_components = yes
-		ESC_ship_uses_carrier_components = yes
 		ESC_ship_uses_flagship_components = yes
+		ESC_ship_uses_titan_components = yes
+		is_ship_size = cosmo_crisis_titan
 		# also...
 		is_ship_size = @NSC_EscortCarrier
 		# Realistic ships : cruisers
