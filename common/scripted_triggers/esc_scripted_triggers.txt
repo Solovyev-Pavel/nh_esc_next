@@ -520,7 +520,10 @@ ESC_TRIGGER_may_research_psionic_weapons_advanced = {
         }
         AND = {
             host_has_dlc = "Utopia"
-            has_tradition = tr_psionics_breach_shroud
+            OR = {
+                has_tradition = tr_psionics_breach_shroud
+                has_tradition = tr_psionics_shroud_psychometry
+            }
         }
     }
 }
