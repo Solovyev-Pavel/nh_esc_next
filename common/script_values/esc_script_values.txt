@@ -6,6 +6,13 @@ esc_component_cost = {
 	base = 0
 	add = $COST|0$
 	multiply = $SCALING|1.0$
+	multiply = $GLOBAL_MULTIPLIER|1.0$
+}
+
+esc_damage_value = {
+	base = 0
+	add = $BASE_DAMAGE|0$
+	multiply = $DAMAGE_SCALING|1.0$
 }
 
 # esc_reactor_power = {
