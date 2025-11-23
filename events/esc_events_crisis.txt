@@ -39,21 +39,21 @@ country_event = {
 				limit = { end_game_years_passed < 15 }
 				random_country = {
 					limit = { is_country_type = ambient } # should always exist
+					country_event = { id = esc_events_crisis.2000 days = 7200 } # 20 years
 				}
-				country_event = { id = esc_events_crisis.2000 days = 7200 } # 20 years
 			}
 			else_if = {
 				limit = { end_game_years_passed < 30 }
 				random_country = {
 					limit = { is_country_type = ambient } # should always exist
+					country_event = { id = esc_events_crisis.2000 days = 5400 } # 15 years
 				}
-				country_event = { id = esc_events_crisis.2000 days = 5400 } # 15 years
 			}
 			else = {
 				random_country = {
 					limit = { is_country_type = ambient } # should always exist
+					country_event = { id = esc_events_crisis.2000 days = 3600 } # 10 years
 				}
-				country_event = { id = esc_events_crisis.2000 days = 3600 } # 10 years
 			}
 		}
 	}
