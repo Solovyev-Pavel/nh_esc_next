@@ -9,420 +9,6 @@ esc_no_disable_buildings: "\n\n§H알림§!: 이미 건설된 건물은 비활�
 esc_other_cat_dependants: "\n\n§R경고§!: 다른 카테고리의 일부 기술이 연구할 수 §R없게 될§! 수 있습니다."
 
 ########################################
-###        Options Menu : MAIN       ###
-########################################
-
-esc_options.title: "Extra Ship Components §YNEXT§! 설정 메뉴"
-esc_options.desc: "\"Extra Ship Components §YNEXT§!\" 설정 메뉴에 오신 것을 환영합니다. 여기서 이 모드가 제공하는 어떤 컨텐츠를 게임 플레이 중에 볼 수 있는지 선택할 수 있습니다."
-
-esc_options.1000.weapons: "무기 부품 설정"
-esc_options.1000.weapons.tooltip: "무기 부품 설정 메뉴로 이동합니다."
-
-esc_options.1000.utility: "지원 부품 설정"
-esc_options.1000.utility.tooltip: "지원 부품 설정 메뉴로 이동합니다."
-
-esc_options.1000.leviathan: "레비아탄 및 위기 보상"
-esc_options.1000.leviathan.tooltip: "레비아탄 및 위기 보상 설정 메뉴로 이동합니다."
-
-esc_options.1000.buildings: "건물 설정"
-esc_options.1000.buildings.tooltip: "건물 설정 메뉴로 이동합니다."
-
-esc_options.1000.ai_boost.easy_scaling: "AI 버프 설정 (current: §G쉬움 비례§!)"
-esc_options.1000.ai_boost.easy_scaling.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-esc_options.1000.ai_boost.easy_static: "AI 버프 설정 (current: §G쉬움 고정§!)"
-esc_options.1000.ai_boost.easy_static.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-esc_options.1000.ai_boost.moderate_scaling: "AI 버프 설정 (current: §E보통 비례§!)"
-esc_options.1000.ai_boost.moderate_scaling.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-esc_options.1000.ai_boost.moderate_static: "AI 버프 설정 (current: §E보통 고정§!)"
-esc_options.1000.ai_boost.moderate_static.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-esc_options.1000.ai_boost.challenging_scaling: "AI 버프 설정 (current: §B어려움 비례§!)"
-esc_options.1000.ai_boost.challenging_scaling.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-esc_options.1000.ai_boost.challenging_static: "AI 버프 설정 (current: §B어려움 고정§!)"
-esc_options.1000.ai_boost.challenging_static.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-esc_options.1000.ai_boost.disabled: "AI 버프 설정 (current: §R비활성화§!)"
-esc_options.1000.ai_boost.disabled.tooltip: "AI 버프 설정 메뉴로 이동합니다."
-
-esc_options.1000.presets: "설정 프리셋 선택"
-esc_options.1000.presets.tooltip: "모드 프리셋 페이지로 이동합니다."
-
-esc_options.1000.crisis.a: "위기: §R비활성화§!"
-esc_options.1000.crisis.a.tooltip: "이 모드로 인한 언비든 침공은 §R비활성화§!되었습니다.\n\n§G활성화§!를 클릭하면 위험한 시공간 기술을 연구할 시 언비든이 침공할 수 있게 됩니다."
-esc_options.1000.crisis.b: "위기: §G활성화§!"
-esc_options.1000.crisis.b.tooltip: "이 모드로 인한 언비든 침공은 §G활성화§!되었지만 한 번만 발생합니다. 이 위기는 프레소린 스커지 또는 컨틴전시를 방지하지 않으며 이들과 함께 발생할 수 있습니다.\n\n§G활성화§!를 여러 번 클릭하면 반복 언비든 침공이 활성화됩니다."
-esc_options.1000.crisis.c: "위기: §G반복 침공 허용§!"
-esc_options.1000.crisis.c.tooltip: "이 모드로 인한 반복 언비든 침공이 §G활성화§!되었습니다. 이 침공은 프레소린 스커지 또는 컨틴전시를 방지하지 않으며 이들과 함께 발생할 수 있습니다.\n\n§R비활성화§!를 클릭하면 이 모드로 인한 언비든 침공을 비활성화할 수 있습니다."
-
-########################################
-###      Options Menu : WEAPONS      ###
-########################################
-
-### general screen
-esc_options.weapons_menu.title: "$esc_options.title$"
-esc_options.weapons_menu.desc: "이 메뉴에서는 어떤 종류의 무기 부품이 게임 플레이 중에 연구될 수 있는지 설정할 수 있습니다."
-
-esc_options.2000.vanilla_normal: "고급 바닐라 무기 설정 (일반)"
-esc_options.2000.vanilla_normal.tooltip: "일반 크기의 바닐라 무기의 고급 버전 사용자 정의 메뉴로 이동합니다."
-
-esc_options.2000.vanilla_xl: "고급 바닐라 무기 설정 (주축 탑재형)"
-esc_options.2000.vanilla_xl.tooltip: "주축 탑재형 규모의 바닐라 무기의 고급 버전 사용자 정의 메뉴로 이동합니다."
-
-esc_options.2000.extras: "추가 무기 유형 구성"
-esc_options.2000.extras.tooltip: "추가 무기 유형에 대한 사용자 정의 메뉴로 이동합니다."
-
-esc_options.2000.biological.a: "§G생물학적§! 무기: §G모두 활성화§!"
-esc_options.2000.biological.a.tooltip: " §G생물학적§! 주축 탑재형 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.biological.b: "§G생물학적§! 무기: §G일반 크기 활성화§!"
-esc_options.2000.biological.b.tooltip: "모든 §G생물학적§! 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.2000.biological.c: "§G생물학적§! 무기: §R비활성화§!"
-esc_options.2000.biological.c.tooltip: "모든 §G생물학적§! 무기의 연구를 §R활성화§!하려면 클릭하십시오."
-
-esc_options.2000.crystal.a: "§L크리스탈§! 무기: §G모두 활성화§!"
-esc_options.2000.crystal.a.tooltip: "§L크리스탈§! 주축 탑재형 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.crystal.b: "§L크리스탈§! 무기: §G일반 크기 활성화§!"
-esc_options.2000.crystal.b.tooltip: "모든 §L크리스탈§! 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.crystal.c: "§L크리스탈§! 무기: §R비활성화§!"
-esc_options.2000.crystal.c.tooltip: "모든 §L크리스탈§! 무기의 연구를 §R활성화§!하려면 클릭하십시오."
-
-esc_options.2000.gravitic.a: "§P중력장§! 무기: §G모두 활성화§!"
-esc_options.2000.gravitic.a.tooltip: "§P중력장§! 주축 탑재형 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.gravitic.b: "§P중력장§! 무기: §G일반 크기 활성화§!"
-esc_options.2000.gravitic.b.tooltip: "모든 §P중력장§! 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.gravitic.c: "§P중력장§! 무기: §R비활성화§!"
-esc_options.2000.gravitic.c.tooltip: "모든 §P중력장§! 무기의 연구를 §R활성화§!하려면 클릭하십시오."
-
-esc_options.2000.nanite.a: "나노머신 무기: §G모두 활성화§!"
-esc_options.2000.nanite.a.tooltip: "나노머신 주축 탑재형 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.nanite.b: "나노머신 무기: §G일반 크기 활성화§!"
-esc_options.2000.nanite.b.tooltip: "모든 나노머신 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.2000.nanite.c: "나노머신 무기: §R비활성화§!"
-esc_options.2000.nanite.c.tooltip: "모든 나노머신 무기의 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2000.psionic.a: "§M사이오닉§! 무기: §G모두 활성화§!"
-esc_options.2000.psionic.a.tooltip: "§M사이오닉§! 주축 탑재형 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.psionic.b: "§M사이오닉§! 무기: §G일반 크기 활성화§!"
-esc_options.2000.psionic.b.tooltip: "모든 §M사이오닉§! 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.2000.psionic.c: "§M사이오닉§! 무기: §R비활성화§!"
-esc_options.2000.psionic.c.tooltip: "모든 §M사이오닉§! 무기의 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2000.tesla.a: "§Y테슬라§! 무기: §G모두 활성화§!"
-esc_options.2000.tesla.a.tooltip: "§Y테슬라§! 주축 탑재형 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.tesla.b: "§Y테슬라§! 무기: §G일반 크기 활성화§!"
-esc_options.2000.tesla.b.tooltip: "모든 §Y테슬라§! 무기의 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2000.tesla.c: "§Y테슬라§! 무기: §R비활성화§!"
-esc_options.2000.tesla.c.tooltip: "모든 §Y테슬라§! 무기의 연구를 §G활성화§!하려면 클릭하십시오."
-
-### vanilla weapons screen (normal weapons)
-esc_options.weapons_vanilla.title: "$esc_options.title$"
-esc_options.weapons_vanilla.desc: "이 메뉴에서 어떤 종류의 일반 크기의 바닐라 무기의 고급 버전이 게임 플레이 중에 연구될 수 있도록 사용자 정의할 수 있습니다."
-
-esc_options.2001.kinetics.a: "고급 실탄 무기: §G활성화§!"
-esc_options.2001.kinetics.a.tooltip: "고급 실탄 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2001.kinetics.b: "고급 실탄 무기: §R비활성화§!"
-esc_options.2001.kinetics.b.tooltip: "고급 실탄 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2001.energy.a: "고급 에너지 무기: §G활성화§!"
-esc_options.2001.energy.a.tooltip: "고급 에너지 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2001.energy.b: "고급 에너지 무기: §R비활성화§!"
-esc_options.2001.energy.b.tooltip: "고급 에너지 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2001.missiles.a: "고급 미사일 무기: §G활성화§!"
-esc_options.2001.missiles.a.tooltip: "고급 미사일 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2001.missiles.b: "고급 미사일 무기: §R비활성화§!"
-esc_options.2001.missiles.b.tooltip: "고급 미사일 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2001.pd.a: "고급 거점방어 무기: §G활성화§!"
-esc_options.2001.pd.a.tooltip: "고급 거점방어 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2001.pd.b: "고급 거점방어 무기: §R비활성화§!"
-esc_options.2001.pd.b.tooltip: "고급 거점방어 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2001.strikecraft.a: "고급 함재기: §G활성화§!"
-esc_options.2001.strikecraft.a.tooltip: "고급 함재기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2001.strikecraft.b: "고급 함재기: §R비활성화§!"
-esc_options.2001.strikecraft.b.tooltip: "고급 함재기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2001.creature.a: "고급 우주생물 무기: §G활성화§!"
-esc_options.2001.creature.a.tooltip: "고급 우주생물 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2001.creature.b: "고급 우주생물 무기: §R비활성화§!"
-esc_options.2001.creature.b.tooltip: "고급 우주생물 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-### vanilla weapons screen (supersized weapons)
-esc_options.weapons_vanilla_x.title: "$esc_options.title$"
-esc_options.weapons_vanilla_x.desc: "이 메뉴에서 어떤 종류의 주축 탑재형 규모의 바닐라 무기의 고급 버전이 게임 플레이 중에 연구될 수 있도록 사용자 정의할 수 있습니다."
-
-esc_options.2002.kinetics.a: "고급 기가 캐논: §G활성화§!"
-esc_options.2002.kinetics.a.tooltip: "고급 기가 캐논 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2002.kinetics.b: "고급 기가 캐논: §R비활성화§!"
-esc_options.2002.kinetics.b.tooltip: "고급 기가 캐논 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2002.lance.a: "고급 파티클 랜스: §G활성화§!"
-esc_options.2002.lance.a.tooltip: "고급 파티클 랜스 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2002.lance.b: "고급 파티클 랜스: §R비활성화§!"
-esc_options.2002.lance.b.tooltip: "고급 파티클 랜스 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2002.arc.a: "고급 아크 방출기: §G활성화§!"
-esc_options.2002.arc.a.tooltip: "고급 아크 방출기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2002.arc.b: "고급 아크 방출기: §R비활성화§!"
-esc_options.2002.arc.b.tooltip: "고급 아크 방출기 연구를 §G활성화§!하려면 클릭하십시오."
-
-### additional weapons screen
-esc_options.weapons_extra.title: "$esc_options.title$"
-esc_options.weapons_extra.desc: "이 메뉴에서 어떤 종류의 추가 무기가 게임 플레이 중에 연구될 수 있도록 사용자 정의할 수 있습니다."
-
-esc_options.2003.plasma_missiles.a: "플라즈마 미사일: §G활성화§!"
-esc_options.2003.plasma_missiles.a.tooltip: "플라즈마 미사일 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.plasma_missiles.b: "플라즈마 미사일: §R비활성화§!"
-esc_options.2003.plasma_missiles.b.tooltip: "플라즈마 미사일 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2003.chrono.a: "시공간 무기: §G모두 활성화§!"
-esc_options.2003.chrono.a.tooltip: "주축 탑재형 시공간 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.chrono.b: "시공간 무기: §G일반 크기 활성화§!"
-esc_options.2003.chrono.b.tooltip: "모든 시공간 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.chrono.c: "시공간 무기: §R비활성화§!"
-esc_options.2003.chrono.c.tooltip: "모든 시공간 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2003.x_missiles.a: "주축 탑재형 미사일 발사기: §G활성화§!"
-esc_options.2003.x_missiles.a.tooltip: "주축 탑재형 미사일 발사기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.x_missiles.b: "주축 탑재형 미사일 발사기: §R비활성화§!"
-esc_options.2003.x_missiles.b.tooltip: "주축 탑재형 미사일 발사기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2003.wmg.a: "파동역학 포: §G활성화§!"
-esc_options.2003.wmg.a.tooltip: "파동역학 포 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.wmg.b: "파동역학 포: §R비활성화§!"
-esc_options.2003.wmg.b.tooltip: "파동역학 포 연구를 §G활성화§!하려면 클릭하십시오.\n\n§H알림§!: 이 무기는 고급 엔진과 반응로가 필요합니다."
-
-esc_options.2003.b_autocannons.a: "대형 오토캐논: §G모두 활성화§!"
-esc_options.2003.b_autocannons.a.tooltip: "주축 탑재형 오토캐논 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.b_autocannons.b: "대형 오토캐논: §G일반 크기 활성화§!"
-esc_options.2003.b_autocannons.b.tooltip: "모든 대형 오토캐논 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.b_autocannons.c: "대형 오토캐논: §R비활성화§!"
-esc_options.2003.b_autocannons.c.tooltip: "모든 대형 오토캐논 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.2003.mhd.a: "자기유체역학 포: §G활성화§!"
-esc_options.2003.mhd.a.tooltip: "자기유체역학 포 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.2003.mhd.b: "자기유체역학 포: §R비활성화§!"
-esc_options.2003.mhd.b.tooltip: "자기유체역학 포 연구를 §G활성화§!하려면 클릭하십시오."
-
-########################################
-###      Options Menu : UTILITY      ###
-########################################
-
-esc_options.utility_menu.title: "$esc_options.title$"
-esc_options.utility_menu.desc: "이 메뉴에서는 어떤 종류의 지원 부품이 게임 플레이 중에 연구될 수 있는지 설정할 수 있습니다."
-
-esc_options.3000.armor.a: "고급 장갑: §G활성화§!"
-esc_options.3000.armor.a.tooltip: "고급 장갑 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.armor.b: "고급 장갑: §R비활성화§!"
-esc_options.3000.armor.b.tooltip: "고급 장갑 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.3000.shields.a: "고급 보호막: §G활성화§!"
-esc_options.3000.shields.a.tooltip: "고급 보호막 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.shields.b: "고급 보호막: §R비활성화§!"
-esc_options.3000.shields.b.tooltip: "고급 보호막 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.3000.sensor.a: "고급 감지기: §G활성화§!"
-esc_options.3000.sensor.a.tooltip: "고급 감지기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.sensor.b: "고급 감지기: §R비활성화§!"
-esc_options.3000.sensor.b.tooltip: "고급 감지기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.3000.reactor.a: "고급 반응로: §G활성화§!"
-esc_options.3000.reactor.a.tooltip: "고급 반응로 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.reactor.b: "고급 반응로: §R비활성화§!"
-esc_options.3000.reactor.b.tooltip: "고급 반응로 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.3000.thruster.a: "고급 추진기: §G활성화§!"
-esc_options.3000.thruster.a.tooltip: "고급 추진기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.thruster.b: "고급 추진기: §R비활성화§!"
-esc_options.3000.thruster.b.tooltip: "고급 추진기 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.3000.ftl.a: "고급 FTL 드라이브: §G활성화§!"
-esc_options.3000.ftl.a.tooltip: "고급 FTL 드라이브 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.ftl.b: "고급 FTL 드라이브: §R비활성화§!"
-esc_options.3000.ftl.b.tooltip: "고급 FTL 드라이브 연구를 §G활성화§!하려면 클릭하십시오."
-
-esc_options.3000.aux.a: "고급 보조 부품: §G활성화§!"
-esc_options.3000.aux.a.tooltip: "고급 보조 부품 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$ $esc_other_cat_dependants$"
-esc_options.3000.aux.b: "고급 보조 부품: §R비활성화§!"
-esc_options.3000.aux.b.tooltip: "고급 보조 부품 연구를 §G활성화§!하려면 클릭하십시오."
-
-########################################
-###     Options Menu : LEVIATHAN     ###
-########################################
-
-# general page
-esc_options.leviathan_menu.title: "$esc_options.title$"
-esc_options.leviathan_menu.desc: "이 메뉴에서는 어떤 종류의 레비아탄 또는 위기 격퇴 보상을 게임 플레이 중에 얻을 수 있는지 설정할 수 있습니다."
-
-esc_options.4000.leviathan_1: "\"Leviathans\" DLC 컨텐츠의 보상 설정하기"
-esc_options.4000.leviathan_1.tooltip: "\"Leviathans\" DLC로 추가된 레비아탄에 관련된 보상을 설정하는 메뉴로 갑니다."
-
-esc_options.4000.leviathan_2: "\"Distant Stars\" DLC 컨텐츠의 보상 설정하기"
-esc_options.4000.leviathan_2.tooltip: "\"Distant Stars\" DLC로 추가된 레비아탄에 관련된 보상을 설정하는 메뉴로 갑니다."
-
-esc_options.4000.crises.a: "위기 보상 무기: §G모두 활성화§!"
-esc_options.4000.crises.a.tooltip: "주축 탑재형 위기 보상 무기 및 파생 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4000.crises.b: "위기 보상 무기: §G일반 크기 활성화§!"
-esc_options.4000.crises.b.tooltip: "모든 위기 보상 무기 및 파생 무기 연구를 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4000.crises.c: "위기 보상 무기: §R비활성화§!"
-esc_options.4000.crises.c.tooltip: "모든 위기 보상 무기 및 파생 무기 연구를 §G활성화§!하려면 클릭하십시오."
-
-# leviathans DLC leviathans page
-esc_options.leviathan_menu_1.title: "$esc_options.title$"
-esc_options.leviathan_menu_1.desc: "이 메뉴에서는 게임 플레이 중에 \"Leviathans\" DLC로 추가된 레비아탄을 처치했을 때 어떤 종류의 보상을 얻을 수 있는지 설정할 수 있습니다."
-
-esc_options.4001.drake.a: "에테르 드레이크 보상: §G활성화§!"
-esc_options.4001.drake.a.tooltip: "에테르 드레이크를 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.drake.b: "에테르 드레이크 보상: §R비활성화§!"
-esc_options.4001.drake.b.tooltip: "에테르 드레이크를 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 에테르 드레이크는 \"Leviathan\" DLC가 있어야 등장합니다."
-
-esc_options.4001.dreadnought.a: "자동화 드레드노트 보상: §G활성화§!"
-esc_options.4001.dreadnought.a.tooltip: "자동화 드레드노트에 관련된 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.dreadnought.b: "자동화 드레드노트: §R비활성화§!"
-esc_options.4001.dreadnought.b.tooltip: "자동화 드레드노트에 관련된 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 자동화 드레드노트는 \"Leviathan\" DLC가 있어야 등장합니다."
-
-esc_options.4001.fortress.a: "수수께끼 요새 무기: §G모두 활성화§!"
-esc_options.4001.fortress.a.tooltip: "수수께끼 요새를 잡았을 때 얻는 주축 탑재형 무기 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.fortress.b: "수수께끼 요새 무기: §G일반 크기 활성화§!"
-esc_options.4001.fortress.b.tooltip: "수수께끼 요새를 잡았을 때 얻는 모든 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.fortress.c: "수수께끼 요새 무기: §R비활성화§!"
-esc_options.4001.fortress.c.tooltip: "수수께끼 요새를 잡았을 때 얻는 모든 보상을 §G활성화§!하려면 클릭하십시오.\n\n§H알림§!: 수수께끼 요새는 \"Leviathan\" DLC가 있어야 등장합니다."
-
-esc_options.4001.wraith.a: "스펙트럼 망령 보상: §G활성화§!"
-esc_options.4001.wraith.a.tooltip: "스펙트럼 망령을 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.wraith.b: "스펙트럼 망령 보상: §R비활성화§!"
-esc_options.4001.wraith.b.tooltip: "스펙트럼 망령을 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 스펙트럼 망령은 \"Leviathan\" DLC가 있어야 등장합니다."
-
-esc_options.4001.stellarite.a: "항성 포식자 보상: §G활성화§!"
-esc_options.4001.stellarite.a.tooltip: "항성 포식자를 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.stellarite.b: "항성 포식자 보상: §R비활성화§!"
-esc_options.4001.stellarite.b.tooltip: "항성 포식자를 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 항성 포식자는 \"Leviathan\" DLC가 있어야 등장합니다."
-
-esc_options.4001.technosphere.a: "무한 기계 보상: §G활성화§!"
-esc_options.4001.technosphere.a.tooltip: "무한 기계에 관련된 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.technosphere.b: "무한 기계 보상: §R비활성화§!"
-esc_options.4001.technosphere.b.tooltip: "무한 기계에 관련된 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 무한 기계는 \"Leviathan\" DLC가 있어야 등장합니다."
-
-esc_options.4001.horror.a: "차원의 공포 보상: §G활성화§!"
-esc_options.4001.horror.a.tooltip: "차원의 공포를 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4001.horror.b: "차원의 공포 보상: §R비활성화§!"
-esc_options.4001.horror.b.tooltip: "차원의 공포를 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 차원의 공포는 \"Leviathan\" DLC가 있어야 등장합니다."
-
-# distant stars DLC leviathans page
-esc_options.leviathan_menu_2.title: "$esc_options.title$"
-esc_options.leviathan_menu_2.desc: "이 메뉴에서는 게임 플레이 중에 \"Distant Stars\" DLC로 추가된 레비아탄을 처치했을 때 어떤 종류의 보상을 얻을 수 있는지 설정할 수 있습니다."
-
-esc_options.4002.tiyanki.a: "티얀키 대모 보상: §G활성화§!"
-esc_options.4002.tiyanki.a.tooltip: "티얀키 대모를 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4002.tiyanki.b: "티얀키 대모 보상: §R비활성화§!"
-esc_options.4002.tiyanki.b.tooltip: "티얀키 대모를 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 티얀키 대모는 \"Distant Stars\" DLC가 있어야 등장합니다."
-
-esc_options.4002.scrapper.a: "청소부 로봇 보상: §G활성화§!"
-esc_options.4002.scrapper.a.tooltip: "청소부 로봇을 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4002.scrapper.b: "청소부 로봇 보상: §R비활성화§!"
-esc_options.4002.scrapper.b.tooltip: "청소부 로봇을 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 청소부 로봇은 \"Distant Stars\" DLC가 있어야 등장합니다."
-
-esc_options.4002.voidspawn.a: "공허 태생체 보상: §G활성화§!"
-esc_options.4002.voidspawn.a.tooltip: "공허 태생체를 잡았을 때 얻는 보상을 §R비활성화§!하려면 클릭하십시오. $esc_no_hide_disabled_components$"
-esc_options.4002.voidspawn.b: "공허 태생체 보상: §R비활성화§!"
-esc_options.4002.voidspawn.b.tooltip: "공허 태생체를 잡았을 때 얻는 보상을 §G활성화§!하려면 클릭하십시오. \n\n§H알림§!: 공허 태생체는 \"Distant Stars\" DLC가 있어야 등장합니다."
-
-########################################
-###     Options Menu : BUILDINGS     ###
-########################################
-
-esc_options.buildings_menu.title: "$esc_options.title$"
-esc_options.buildings_menu.desc: "이 메뉴에서는 \"Extra Ship Components §YNEXT§!\" 모드에 의해서 추가된 어떤 건물들을 게임 플레이 중에 건설할 수 있는지 설정할 수 있습니다."
-
-esc_options.5000.bureau.a: "중앙 연구 부서: §G활성화§!"
-esc_options.5000.bureau.a.tooltip: "중앙 연구 부서 건물의 건설을 §R비활성화§!하려면 클릭하십시오. $esc_no_disable_buildings$"
-esc_options.5000.bureau.b: "중앙 연구 부서: §R비활성화§!"
-esc_options.5000.bureau.b.tooltip: "중앙 연구 부서 건물의 건설을 §G활성화§!하려면 클릭하십시오."
-
-esc_options.5000.culture.a: "문화 연결체: §G활성화§!"
-esc_options.5000.culture.a.tooltip: "문화 연결체 건물의 건설을 §R비활성화§!하려면 클릭하십시오. $esc_no_disable_buildings$"
-esc_options.5000.culture.b: "문화 연결체: §R비활성화§!"
-esc_options.5000.culture.b.tooltip: "문화 연결체 건물의 건설을 §G활성화§!하려면 클릭하십시오."
-
-esc_options.5000.materials.a: "고급 물질 연구소: §G활성화§!"
-esc_options.5000.materials.a.tooltip: "고급 물질 연구소 건물의 건설을 §R비활성화§!하려면 클릭하십시오. $esc_no_disable_buildings$"
-esc_options.5000.materials.b: "고급 물질 연구소: §R비활성화§!"
-esc_options.5000.materials.b.tooltip: "고급 물질 연구소 건물의 건설을 §G활성화§!하려면 클릭하십시오."
-
-esc_options.5000.institute.a: "기술 연구소: §G활성화§!"
-esc_options.5000.institute.a.tooltip: "기술 연구소 건물의 건설을 §R비활성화§!하려면 클릭하십시오. $esc_no_disable_buildings$"
-esc_options.5000.institute.b: "기술 연구소: §R비활성화§!"
-esc_options.5000.institute.b.tooltip: "기술 연구소 건물의 건설을 §G활성화§!하려면 클릭하십시오."
-
-esc_options.5000.watcher.a: "영원의 감시자: §G활성화§!"
-esc_options.5000.watcher.a.tooltip: "영원의 감시자 건물의 건설을 §R비활성화§!하려면 클릭하십시오. $esc_no_disable_buildings$"
-esc_options.5000.watcher.b: "영원의 감시자: §R비활성화§!"
-esc_options.5000.watcher.b.tooltip: "영원의 감시자 건물의 건설을 §G활성화§!하려면 클릭하십시오."
-
-esc_options.5000.mantle.a: "맨틀 채굴 시설: §G활성화§!"
-esc_options.5000.mantle.a.tooltip: "맨틀 채굴 시설 건물의 건설을 §R비활성화§!하려면 클릭하십시오. $esc_no_disable_buildings$"
-esc_options.5000.mantle.b: "맨틀 채굴 시설: §R비활성화§!"
-esc_options.5000.mantle.b.tooltip: "맨틀 채굴 시설 건물의 건설을 §G활성화§!하려면 클릭하십시오."
-
-########################################
-###         Options Menu : AI        ###
-########################################
-
-esc_options_ai_boost_title: "$esc_options.title$"
-esc_options_ai_boost_title_desc: "이 메뉴에서는 AI 제국이 \"Extra Ship Components §YNEXT§!\" 모드가 활성화되어 있는 동안 어떤 보너스를 가질지 설정할 수 있습니다."
-
-esc_options.6000.ai_easy_scaling: "AI 연구 속도 보너스 §G쉬움 비례§!"
-esc_options.6000.ai_easy_scaling.tooltip: "AI 제국은 연구 속도에 비례 난이도 보너스를 받게 됩니다.\n게임 초반 +§G10§!%\n게임 중반 +§G25§!%\n게임 종반 +§G50§!%"
-esc_options.6000.ai_easy_static: "AI 연구 속도 보너스 §G쉬움 고정§!"
-esc_options.6000.ai_easy_static.tooltip: "AI 제국은 게임 전체에 걸쳐 +§G25§!% 연구 속도 보너스를 받게 됩니다."
-
-esc_options.6000.ai_moderate_scaling: "AI 연구 속도 보너스 §E보통 비례§!"
-esc_options.6000.ai_moderate_scaling.tooltip: "AI 제국은 연구 속도에 비례 난이도 보너스를 받게 됩니다.\n게임 초반 +§G25§!%\n게임 중반 +§G50§!%\n게임 종반 +§G100§!%"
-esc_options.6000.ai_moderate_static: "AI 연구 속도 보너스 §E보통 고정§!"
-esc_options.6000.ai_moderate_static.tooltip: "AI 제국은 게임 전체에 걸쳐 +§G50§!% 연구 속도 보너스를 받게 됩니다."
-
-esc_options.6000.ai_challenging_scaling: "AI 연구 속도 보너스 §B어려움 비례§!"
-esc_options.6000.ai_challenging_scaling.tooltip: "AI 제국은 연구 속도에 비례 난이도 보너스를 받게 됩니다.\n게임 초반 +§G50§!%\n게임 중반 +§G100§!%\n게임 종반 +§G150§!%"
-esc_options.6000.ai_challenging_static: "AI 연구 속도 보너스 §B어려움 고정§!"
-esc_options.6000.ai_challenging_static.tooltip: "AI 제국은 게임 전체에 걸쳐 +§G100§!% 연구 속도 보너스를 받게 됩니다."
-
-esc_options.6000.ai_boost_disabled: "AI 연구 속도 보너스 §R비활성화§!"
-esc_options.6000.ai_boost_disabled.tooltip: "AI 제국은 아무 연구 속도 보너스도 받지 않습니다."
-
-ESC_AI_research_boost_easy_scaling: "AI 연구 보너스: 쉬움 비례"
-ESC_AI_research_boost_easy_static: "AI 연구 보너스: 쉬움 고정"
-ESC_AI_research_boost_moderate_scaling: "AI 연구 보너스: 보통 비례"
-ESC_AI_research_boost_moderate_static: "AI 연구 보너스: 보통 고정"
-ESC_AI_research_boost_challenging_scaling: "AI 연구 보너스: 어려움 비례"
-ESC_AI_research_boost_challenging_static: "AI 연구 보너스: 어려움 고정"
-
-########################################
-###       Options Menu : Presets     ###
-########################################
-
-esc_options_presets_title: "$esc_options.title$"
-esc_options_presets_title_desc: "이 곳에서는 \"Extra Ship Components §YNEXT§!\" 모드의 설정 프리셋 중 하나를 선택할 수 있습니다."
-
-esc_options.7000.enable_all: "모두 활성화"
-esc_options.7000.enable_all.tooltip: "\"Extra Ship Components §YNEXT§!\" 모드로 추가되는 모든 무기, 유틸리티 구성 요소, 레비아탄 보상 및 건물이 활성화되며, 필요 선결조건을 충족하는 모든 제국이 연구할 수 있습니다."
-
-esc_options.7000.no_buildings: "과학 건물 제외 모두 활성화"
-esc_options.7000.no_buildings.tooltip: "고급 과학 건물과 맨틀 채굴 시설을 제외한 모든 것을 활성화합니다."
-
-esc_options.7000.vanilla_only: "고급 바닐라 장비 및 파생물"
-esc_options.7000.vanilla_only.tooltip: "바닐라 무기 및 지원 장비의 고급 버전과 그 파생물(예: 초대형 오토캐논)을 활성화합니다."
-
-esc_options.7000.leviathan_only: "위기와 레비아탄 보상만"
-esc_options.7000.leviathan_only.tooltip: "위기 또는 레비아탄 격퇴 보상으로 주어지는 장비와 건물만 활성화합니다."
-
-esc_options.7000.vanilla_leviathan: "고급 바닐라 장비와 레비아탄 보상"
-esc_options.7000.vanilla_leviathan.tooltip: "바닐라 무기 및 지원 장비의 고급 버전과 그 파생물(예: 초대형 오토캐논)을 활성화합니다. 위기 또는 레비아탄 격퇴 보상도 활성화됩니다."
-
-esc_options.7000.new_weapon_types: "새로운 장비 유형만 활성화"
-esc_options.7000.enable_all.new_weapon_types: "다음의 장비 유형을 활성화합니다.\n나노머신, 사이오닉, 생물학 무기, 시공간 무기, 중력장, 크리스탈, 테슬라, 파동역학 포, 플라즈마 미사일."
-
-esc_options.7000.new_and_leviathan: "새로운 구성 요소 유형 및 레비아탄 보상 활성화"
-esc_options.7000.enable_all.new_and_leviathan: "새로운 구성 요소 유형과 위기 또는 레비아탄 격퇴 보상을 활성화합니다."
-
-########################################
 ###         Options Menu v2.0        ###
 ########################################
 
@@ -611,3 +197,51 @@ esc_mod_menu_crisis_repeated_tooltip_21: "\"Extra Ship Components §YNEXT§!\" �
 esc_mod_menu_crisis_repeated_tooltip_22: "§R위험§! 기술을 연구하고"
 esc_mod_menu_crisis_repeated_tooltip_23: "바닐라의 언비든 침공 이벤트가 발생하지 않았다면"
 esc_mod_menu_crisis_repeated_tooltip_24: "언비든이 계속해서 침공할 수 있습니다."
+
+########################################
+###            Cheats Menu           ###
+########################################
+
+esc_cheats_guaranteed_access_1: "§GEnables§! guaranteed accees to"
+esc_cheats_guaranteed_access_2: "technologies for the current empire."
+
+esc_cheats_revoked_access_1: "§RRevokes§! guaranteed accees to"
+esc_cheats_revoked_access_2: "weapon technologies for the current empire. The technologies can be researched if normal conditions to access are fulfilled."
+
+esc_cheats.title: "\"Extra Ship Components §YNEXT§!\" cheat menu"
+esc_cheats.desc: "This is a cheat menu for \"Extra Ship Components §YNEXT§!\" that allows one to give their empire access to technologies or abilities that would normally not be accessible to them."
+
+esc_cheats.20000.crystalline.enable: "§GEnable§! guaranteed access to crystalline weapon technologies"
+esc_cheats.20000.crystalline.enable.tooltip: "$esc_cheats_guaranteed_access_1$ §Ycrystalline§! weapon $esc_cheats_guaranteed_access_2$"
+esc_cheats.20000.crystalline.disable: "§RRevoke§! guaranteed access to crystalline weapon technologies"
+esc_cheats.20000.crystalline.disable.tooltip: "$esc_cheats_revoked_access_1$ §Ycrystalline§! weapon $esc_cheats_revoked_access_2$"
+
+esc_cheats.20000.biological.enable: "§GEnable§! guaranteed access to biological weapon technologies"
+esc_cheats.20000.biological.enable.tooltip: "$esc_cheats_guaranteed_access_1$ §Ybiological§! weapon $esc_cheats_guaranteed_access_2$"
+esc_cheats.20000.biological.disable: "§RRevoke§! guaranteed access to biological weapon technologies"
+esc_cheats.20000.biological.disable.tooltip: "$esc_cheats_revoked_access_1$ §Ybiological§! weapon $esc_cheats_revoked_access_2$"
+
+esc_cheats.20000.cyber_amoeba.enable: "§GEnable§! guaranteed access to cybernetic amoeba upgrade"
+esc_cheats.20000.cyber_amoeba.enable.tooltip: "$esc_cheats_guaranteed_access_1$ §Ycybernetic amoeba§! upgrade $esc_cheats_guaranteed_access_2$"
+esc_cheats.20000.cyber_amoeba.disable: "§RRevoke§! guaranteed access to cybernetic amoeba upgrade"
+esc_cheats.20000.cyber_amoeba.disable.tooltip: "$esc_cheats_revoked_access_1$ §Ycybernetic amoeba§! upgrade $esc_cheats_revoked_access_2$"
+
+esc_cheats.20000.nanite.enable: "§GEnable§! guaranteed access to nanite weapon technologies"
+esc_cheats.20000.nanite.enable.tooltip: "$esc_cheats_guaranteed_access_1$ §Ynanite§! weapon $esc_cheats_guaranteed_access_2$"
+esc_cheats.20000.nanite.disable: "§RRevoke§! guaranteed access to nanite weapon technologies"
+esc_cheats.20000.nanite.disable.tooltip: "$esc_cheats_revoked_access_1$ §Ynanite§! weapon $esc_cheats_revoked_access_2$"
+
+esc_cheats.20000.psionic.enable: "§GEnable§! guaranteed access to psionic weapon technologies"
+esc_cheats.20000.psionic.enable.tooltip: "$esc_cheats_guaranteed_access_1$ §Ypsionic§! weapon $esc_cheats_guaranteed_access_2$"
+esc_cheats.20000.psionic.disable: "§RRevoke§! guaranteed access to psionic weapon technologies"
+esc_cheats.20000.psionic.disable.tooltip: "$esc_cheats_revoked_access_1$ §Ypsionic§! weapon $esc_cheats_revoked_access_2$"
+
+esc_cheats.20000.tesla.enable: "§GEnable§! guaranteed access to tesla weapon technologies"
+esc_cheats.20000.tesla.enable.tooltip: "$esc_cheats_guaranteed_access_1$ §Ytesla§! weapon $esc_cheats_guaranteed_access_2$"
+esc_cheats.20000.tesla.disable: "§RRevoke§! guaranteed access to tesla weapon technologies"
+esc_cheats.20000.tesla.disable.tooltip: "$esc_cheats_revoked_access_1$ §Ytesla§! weapon $esc_cheats_revoked_access_2$"
+
+esc_cheats.20000.volcanic.enable: "§GAllow§! mantle mining facilities on volcanic worlds"
+esc_cheats.20000.volcanic.enable.tooltip: "§GEnables§! construction of mantle mining facilities on volcanic worlds."
+esc_cheats.20000.volcanic.disable: "§RDisable§! mantle mining facilities on volcanic worlds"
+esc_cheats.20000.volcanic.disable.tooltip: "§RDisables§! construction of mantle mining facilities on volcanic worlds. Already constructed mantle mining facilities will continue working."

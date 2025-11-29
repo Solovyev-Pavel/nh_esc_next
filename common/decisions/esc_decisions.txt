@@ -33,6 +33,31 @@ decision_esc_mod_menu = {
 	}
 }
 
+decision_esc_mod_cheat_menu = {
+	owned_planets_only = yes
+
+	resources = {
+		category = decisions
+		cost = { energy = 0 }
+	}
+
+	potential = {
+		is_capital = yes
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_CHEAT_MENU_ACTIVE }
+		# only human players are allowed to use this
+		exists = owner
+		owner = { is_ai = no }
+		# singleplayer only
+		is_multiplayer = no
+	}
+
+	effect = {
+		owner = {
+			country_event = { id = esc_options.20000 days = 0 }
+		}
+	}
+}
+
 ### ################################################# ###
 ###          Clone an ether drake hatchling           ###
 ### ################################################# ###
