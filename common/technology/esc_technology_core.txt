@@ -1048,7 +1048,7 @@ esc_tech_biological_weapons = {
 	tier = 3
 	cost = @tier3cost2
 	weight = @tier3weight3
-	prerequisites = { "esc_tech_grand_research_initiative" }
+	prerequisites = { }
 	is_rare = yes # purely for cosmetic reasons
 	gateway = ESC_BIOLOGICAL_WEAPONS
 
@@ -1155,7 +1155,7 @@ esc_tech_tesla_weapons = {
 	tier = 5
 	cost = @tier5cost1
 	weight = @tier5weight1
-	prerequisites = { "esc_tech_new_age_warfare" "esc_tech_grand_research_initiative" "tech_power_plant_4" }
+	prerequisites = { "esc_tech_new_age_warfare" "tech_power_plant_4" }
 	is_rare = yes
 	gateway = ESC_TESLA_WEAPONS
 
