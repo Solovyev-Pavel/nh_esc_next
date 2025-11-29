@@ -76,6 +76,10 @@ ESC_TRIGGER_is_naked_mantle_planet = {
         has_modifier = @RSNF_VolcanicWorld # New Frontiers volcanic tomb world
         has_modifier = @RSNF_LavaWorld # New Frontiers planet
         has_modifier = @RSNF_InfernalWorld # New Frontiers hollow world subclass
+        AND = {
+            is_planet_class = pc_volcanic
+            has_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+        }
     }
 }
 
