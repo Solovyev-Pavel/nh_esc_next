@@ -1,0 +1,18 @@
+### shorthand for infernal component costs with sr addition.
+### adds default values for unpassed params
+
+inline_script = {
+	script = component_costs/esc_inlines_infernal_component_cost
+	# passed:
+	STRATEGIC_RESOURCE_TYPE					= $STRATEGIC_RESOURCE_TYPE$
+	PRIMARY_RESOURCE_COST 					= @ESC_COST_$COMPONENT_TYPE$_$SIZE$_t$TIER$_primary
+	STRATEGIC_RESOURCE_COST					= @ESC_COST_$COMPONENT_TYPE$_$SIZE$_t$TIER$_special
+	# defaults:
+	PRIMARY_RESOURCE_COST_SCALING 			= 1.0
+	STRATEGIC_RESOURCE_COST_SCALING			= 1.0
+	PRIMARY_RESOURCE_UPKEEP_SCALING			= 1.0
+	ENERGY_UPKEEP_SCALING					= 1.0
+
+	GLOBAL_COST_MULTIPLIER					= @global_cost_multiplier
+	GLOBAL_UPKEEP_MULTIPLIER				= @global_upkeep_multiplier
+}

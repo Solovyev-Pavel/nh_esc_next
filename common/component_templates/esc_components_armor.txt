@@ -2,7 +2,7 @@
 ##                 ESC : Armor Components                 ##
 ############################################################
 
-# small improved neutronium armor
+# small improved neutronium armor :: standard
 utility_component_template = {
 	key = SMALL_ESC_ARMOR_6
 	size = small
@@ -77,7 +77,90 @@ utility_component_template = {
 	}
 }
 
-# medium improved neutronium armor
+# small improved neutronium armor :: infernal
+utility_component_template = {
+	key = SMALL_ESC_LM_ARMOR_6
+	size = small
+	icon = GFX_esc_lm_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_LM_ARMOR_6
+	upgrades_to = SMALL_ESC_LM_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_LM_ARMOR_BIO_6
+	size = small
+	icon = GFX_esc_bio_lm_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 6
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_LM_ARMOR_BIO_6
+	upgrades_to = SMALL_ESC_LM_ARMOR_BIO_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+# medium improved neutronium armor :: standard
 utility_component_template = {
 	key = MEDIUM_ESC_ARMOR_6
 	size = medium
@@ -152,7 +235,90 @@ utility_component_template = {
 	}
 }
 
-# large improved neutronium armor
+# medium improved neutronium armor :: infernal
+utility_component_template = {
+	key = MEDIUM_ESC_LM_ARMOR_6
+	size = medium
+	icon = GFX_esc_lm_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_LM_ARMOR_6
+	upgrades_to = MEDIUM_ESC_LM_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_LM_ARMOR_BIO_6
+	size = medium
+	icon = GFX_esc_bio_lm_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 6
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_LM_ARMOR_BIO_6
+	upgrades_to = MEDIUM_ESC_LM_ARMOR_BIO_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+# large improved neutronium armor :: standard
 utility_component_template = {
 	key = LARGE_ESC_ARMOR_6
 	size = large
@@ -227,7 +393,90 @@ utility_component_template = {
 	}
 }
 
-# small adamantium armor
+# large improved neutronium armor :: infernal
+utility_component_template = {
+	key = LARGE_ESC_LM_ARMOR_6
+	size = large
+	icon = GFX_esc_lm_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_LM_ARMOR_6
+	upgrades_to = LARGE_ESC_LM_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_LM_ARMOR_BIO_6
+	size = large
+	icon = GFX_esc_bio_lm_armor_6
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 6
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_6" }
+	component_set = ESC_LM_ARMOR_BIO_6
+	upgrades_to = LARGE_ESC_LM_ARMOR_BIO_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+# small adamantium armor :: standard
 utility_component_template = {
 	key = SMALL_ESC_ARMOR_7
 	size = small
@@ -300,7 +549,88 @@ utility_component_template = {
 	}
 }
 
-# medium adamantium armor
+# small adamantium armor :: infernal
+utility_component_template = {
+	key = SMALL_ESC_LM_ARMOR_7
+	size = small
+	icon = GFX_esc_lm_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_LM_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+utility_component_template = {
+	key = SMALL_ESC_LM_ARMOR_BIO_7
+	size = small
+	icon = GFX_esc_bio_lm_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_LM_ARMOR_BIO_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+# medium adamantium armor :: standard
 utility_component_template = {
 	key = MEDIUM_ESC_ARMOR_7
 	size = medium
@@ -373,7 +703,88 @@ utility_component_template = {
 	}
 }
 
-# large adamantium armor
+# medium adamantium armor :: infernal
+utility_component_template = {
+	key = MEDIUM_ESC_LM_ARMOR_7
+	size = medium
+	icon = GFX_esc_lm_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_LM_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+utility_component_template = {
+	key = MEDIUM_ESC_LM_ARMOR_BIO_7
+	size = medium
+	icon = GFX_esc_bio_lm_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_LM_ARMOR_BIO_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+# large adamantium armor :: standard
 utility_component_template = {
 	key = LARGE_ESC_ARMOR_7
 	size = large
@@ -437,6 +848,87 @@ utility_component_template = {
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+# large adamantium armor :: infernal
+utility_component_template = {
+	key = LARGE_ESC_LM_ARMOR_7
+	size = large
+	icon = GFX_esc_lm_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_LM_ARMOR_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_ai_weight_stealth
+		BASE_WEIGHT = @T6_weight
+		STEALTH_MULT = 2
+	}
+}
+
+utility_component_template = {
+	key = LARGE_ESC_LM_ARMOR_BIO_7
+	size = large
+	icon = GFX_esc_bio_lm_armor_7
+	icon_frame = 1
+	power = 0
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_no_sr_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1
+		ship_armor_regen_add_perc = @inf_regen_perc
+		ship_hull_regen_add_perc = @inf_regen_perc
+	}
+	ship_modifier = {
+		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+	}
+
+	prerequisites = { "esc_tech_armor_7" }
+	component_set = ESC_LM_ARMOR_BIO_7
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
 	}
 
 	inline_script = {

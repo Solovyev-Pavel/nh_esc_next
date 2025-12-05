@@ -29,6 +29,11 @@
 # - Titanic Dimensional Wave Cannon		Titanic + Juggernaut
 # - Arc-en-Ciel Cannon					X, Titanic + Juggernaut
 
+# - Blinding Lens Flare Gun				X
+# - Starfire Flare Emitter				X
+# - Nova Flare Paralyzer				X
+# - Supernova Flare Cannon				X
+
 ############################################################
 ##                  Advanced Combat Laser                 ##
 ############################################################
@@ -4772,5 +4777,297 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
+	}
+}
+
+############################################################
+##                     Infernal Weapons                   ##
+############################################################
+
+# Blinding Lens Flare Gun
+weapon_component_template = {
+	key = "ESC_LENS_FLARE_GUN_2"
+	size = extra_large
+	type = instant
+	icon = "GFX_esc_lens_flare_gun_2"
+	icon_frame = 1
+
+	damage = { min = 1000 max = 2200 }
+	windup = { min = 0 max = 12 }
+	total_fire_time = 120
+	range = @ESC_WEAPON_RANGE_X_2
+	accuracy = 0.9
+	power = 0
+
+	# doesn't cost anything
+	resources = {
+		category = ship_components
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_beam_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_beam_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_beam_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_beam_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_beam_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			is_ship_size = ember_battleship
+			is_ship_size = entropy_conduit
+			is_ship_size = conduit_station
+		}
+	}
+
+	component_set = "ESC_LENS_FLARE_GUN_2"
+	projectile_gfx = "lens_flare_beam"
+	prerequisites = { "esc_tech_energy_lens_beam_2" }
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+	upgrades_to = ESC_LENS_FLARE_GUN_3
+
+	on_hit = {
+		custom_tooltip = "lfb_on_hit_stun_tt"
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					NOT = { has_ship_flag = conduit_paralyzed }
+				}
+				set_timed_ship_flag = { flag = conduit_paralyzed days = 35 }
+				add_modifier = {
+					modifier = lf_weapon_stun_effect
+					days = 7 # If this changes, adjust the tt
+				}
+			}
+			from.owner = { complete_crisis_objective = crisobj_lens_beam_impact }
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1.25
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = entropy_crystals }
+		}
+	}
+}
+
+# Starfire Flare Emitter
+weapon_component_template = {
+	key = "ESC_LENS_FLARE_GUN_3"
+	size = extra_large
+	type = instant
+	icon = "GFX_esc_lens_flare_gun_3"
+	icon_frame = 1
+
+	damage = { min = 1400 max = 2800 }
+	windup = { min = 0 max = 12 }
+	total_fire_time = 120
+	range = @ESC_WEAPON_RANGE_X_3
+	accuracy = 0.9
+	power = 0
+
+	# doesn't cost anything
+	resources = {
+		category = ship_components
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_beam_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_beam_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_beam_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_beam_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_beam_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	use_ship_main_target = no
+	potential = {
+		OR = {
+			is_ship_size = ember_battleship
+			is_ship_size = entropy_conduit
+			is_ship_size = conduit_station
+		}
+	}
+
+	component_set = "ESC_LENS_FLARE_GUN_3"
+	projectile_gfx = "lens_flare_beam"
+	prerequisites = { "esc_tech_energy_lens_beam_3" }
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = { weapon_role_artillery artillery }
+	ai_tag_weight = 0
+
+	on_hit = {
+		custom_tooltip = "lfb_on_hit_stun_tt"
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					NOT = { has_ship_flag = conduit_paralyzed }
+				}
+				set_timed_ship_flag = { flag = conduit_paralyzed days = 35 }
+				add_modifier = {
+					modifier = lf_weapon_stun_effect
+					days = 7 # If this changes, adjust the tt
+				}
+			}
+			from.owner = { complete_crisis_objective = crisobj_lens_beam_impact }
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1.25
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = entropy_crystals }
+		}
+	}
+}
+
+# Nova Flare Cannon
+weapon_component_template = {
+	key = "ESC_NOVA_FLARE_GUN"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ship_part_energy_lens_beam"
+	icon_frame = 1
+
+	damage = { min = 3250 max = 7500 }
+	windup = { min = 30.0 max = 120.0 }
+	total_fire_time = 180
+	range = @ESC_WEAPON_RANGE_T_3
+	accuracy = 0.9
+
+	# doesn't cost anything
+	resources = {
+		category = ship_components
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_beam_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_beam_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_beam_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_beam_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_beam_cannon_shield_damage
+	tracking = 0.1
+
+	firing_arc = 10.0
+	use_ship_main_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+
+	potential = { is_ship_size = starfire_cannon }
+	component_set = "ESC_NOVA_FLARE_GUN"
+	projectile_gfx = "starfire_cannon"
+	upgrades_to = ESC_SUPERNOVA_FLARE_GUN
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		custom_tooltip = "sfe_on_hit_stun_tt"
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					NOT = { has_ship_flag = starfire_emp }
+				}
+				set_timed_ship_flag = { flag = starfire_emp days = 15 }
+				add_modifier = {
+					modifier = sfe_weapon_stun_effect
+					days = 5 # If this changes, adjust the tt
+				}
+			}
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+}
+
+# Supernova Flare Cannon
+weapon_component_template = {
+	key = "ESC_SUPERNOVA_FLARE_GUN"
+	size = extra_large
+	type = instant
+	prio_projectile = yes
+	icon = "GFX_ship_part_energy_lens_beam"
+	icon_frame = 1
+
+	damage = { min = 4000 max = 8500 }
+	windup = { min = 30.0 max = 120.0 }
+	total_fire_time = 180
+	range = @ESC_WEAPON_RANGE_T_3
+	accuracy = 0.9
+
+	# doesn't cost anything
+	resources = {
+		category = ship_components
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_beam_cannon_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_beam_cannon_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_beam_cannon_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_beam_cannon_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_beam_cannon_shield_damage
+	tracking = 0.1
+
+	firing_arc = 10.0
+	use_ship_main_target = no
+
+	tags = { weapon_type_energy weapon_role_artillery x_slot }
+
+	potential = { is_ship_size = starfire_cannon }
+	component_set = "ESC_SUPERNOVA_FLARE_GUN"
+	projectile_gfx = "starfire_cannon"
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		custom_tooltip = "sfe_on_hit_stun_tt"
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					NOT = { has_ship_flag = starfire_emp }
+				}
+				set_timed_ship_flag = { flag = starfire_emp days = 15 }
+				add_modifier = {
+					modifier = sfe_weapon_stun_effect
+					days = 5 # If this changes, adjust the tt
+				}
+			}
+		}
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
 	}
 }

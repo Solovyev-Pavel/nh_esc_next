@@ -78,7 +78,10 @@ ESC_TRIGGER_is_naked_mantle_planet = {
         has_modifier = @RSNF_InfernalWorld # New Frontiers hollow world subclass
         AND = {
             is_planet_class = pc_volcanic
-            has_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+            exists = owner
+            owner = {
+                has_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+            }
         }
     }
 }
@@ -86,13 +89,7 @@ ESC_TRIGGER_is_naked_mantle_planet = {
 # returns 'yes' if the planet is a valid place for the mantle mining facility
 ESC_TRIGGER_can_host_mantle_miner = {
     OR = {
-        AND = {
-            ESC_TRIGGER_is_city_planet = yes
-            # OR = {
-            #     free_district_slots > 4 # need at least 5
-            #     has_deposit = d_esc_large_borehole_1
-            # }
-        }
+        ESC_TRIGGER_is_city_planet = yes
         ESC_TRIGGER_is_naked_mantle_planet = yes
     }
 }

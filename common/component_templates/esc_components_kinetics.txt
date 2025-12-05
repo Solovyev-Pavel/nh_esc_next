@@ -1380,6 +1380,7 @@ weapon_component_template = {
 ##                Improved Kinetic Artillery              ##
 ############################################################
 
+# standard
 weapon_component_template = {
 	key = ESC_ARTILLERY_3
 	size = large
@@ -1500,10 +1501,144 @@ weapon_component_template = {
 	}
 }
 
+# infernal
+weapon_component_template = {
+	key = ESC_LM_ACCELERATOR_2
+	size = large
+	icon = GFX_esc_lm_accelerator_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 205 max = 640 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.85
+	power = -110
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_3" }
+	component_set = ESC_LM_ACCELERATOR_2
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	upgrades_to = ESC_LM_ACCELERATOR_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_LM_ACCELERATOR_BIO_2
+	size = large
+	icon = GFX_esc_bio_lm_accelerator_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 205 max = 640 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.85
+	power = -110
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_3" }
+	component_set = ESC_LM_ACCELERATOR_BIO_2
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	upgrades_to = ESC_LM_ACCELERATOR_BIO_3
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
 ############################################################
 ##                  Skypiercer Artillery                  ##
 ############################################################
 
+# standard
 weapon_component_template = {
 	key = ESC_ARTILLERY_4
 	size = large
@@ -1610,6 +1745,137 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+# infernal
+weapon_component_template = {
+	key = ESC_LM_ACCELERATOR_3
+	size = large
+	icon = GFX_esc_lm_accelerator_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 275 max = 785 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.85
+	power = -110
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_4" }
+	component_set = ESC_LM_ACCELERATOR_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = no
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
+		}
+		modifier = {
+			factor = @cosmic_storm_shroud_ai_weight_factor
+			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = @cosmic_storm_gravity_ai_weight_factor
+			has_country_flag = affected_by_gravity_storm
+		}
+	}
+}
+
+weapon_component_template = {
+	key = ESC_LM_ACCELERATOR_BIO_3
+	size = large
+	icon = GFX_esc_bio_lm_accelerator_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 275 max = 785 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 50
+	range = @ESC_WEAPON_RANGE_L_5
+	min_range = @ESC_WEAPON_MIN_RANGE_5
+	accuracy = 0.85
+	power = -110
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_infernal_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = volatile_motes
+	}
+
+	hull_damage = @ESC_WEAPON_infernal_artillery_hull_damage
+	armor_penetration = @ESC_WEAPON_infernal_artillery_armor_penetration
+	armor_damage = @ESC_WEAPON_infernal_artillery_armor_damage
+	shield_penetration = @ESC_WEAPON_infernal_artillery_shield_penetration
+	shield_damage = @ESC_WEAPON_infernal_artillery_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_kinetic_artillery_4" }
+	component_set = ESC_LM_ACCELERATOR_BIO_3
+	projectile_gfx = "adv_kinetic_artillery"
+	tags = { weapon_type_kinetic l_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
+		EVAL_TARGET = yes
+		EXTRA_CONDITION = is_galvanic_empire
+		EXTRA_CONDITION_VALUE = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = volatile_motes }
+		}
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_living_metal }
 		}
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor

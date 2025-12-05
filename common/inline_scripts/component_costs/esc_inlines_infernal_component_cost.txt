@@ -1,0 +1,37 @@
+### shorthand for basic component cost.
+### adds default values for unpassed params
+
+resources = {
+	category = ship_components
+
+	# component cost :: living metal
+	cost = {
+		sr_living_metal = @primary_resouce_cost_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_COST_SCALING$|GLOBAL_MULTIPLIER|$GLOBAL_COST_MULTIPLIER$|
+	}
+	# component cost :: strategic resource
+	cost = {
+		$STRATEGIC_RESOURCE_TYPE$ = 1
+		mult = value:esc_component_cost|COST|$STRATEGIC_RESOURCE_COST$|SCALING|$STRATEGIC_RESOURCE_COST_SCALING$|GLOBAL_MULTIPLIER|$GLOBAL_COST_MULTIPLIER$|
+	}
+	# component upkeep :: alloys
+	upkeep = {
+		alloys = @primary_resource_upkeep_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$PRIMARY_RESOURCE_UPKEEP_SCALING$|GLOBAL_MULTIPLIER|$GLOBAL_UPKEEP_MULTIPLIER$|
+	}
+	# component upkeep :: energy / food
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = no }
+		}
+		energy = @energy_upkeep_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$ENERGY_UPKEEP_SCALING$|GLOBAL_MULTIPLIER|$GLOBAL_UPKEEP_MULTIPLIER$|
+	}
+	upkeep = {
+		trigger = {
+			from = { country_uses_bio_ships = yes }
+		}
+		food = @energy_upkeep_multiplier_standard
+		mult = value:esc_component_cost|COST|$PRIMARY_RESOURCE_COST$|SCALING|$ENERGY_UPKEEP_SCALING$|GLOBAL_MULTIPLIER|$GLOBAL_UPKEEP_MULTIPLIER$|
+	}
+}

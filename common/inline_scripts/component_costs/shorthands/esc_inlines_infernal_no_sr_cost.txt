@@ -1,0 +1,18 @@
+### shorthand for basic infernal component cost.
+### adds default values for unpassed params
+
+inline_script = {
+	script = component_costs/esc_inlines_infernal_component_cost
+	# passed:
+	PRIMARY_RESOURCE_COST 					= @ESC_COST_$COMPONENT_TYPE$_$SIZE$_t$TIER$_primary
+	# defaults:
+	STRATEGIC_RESOURCE_TYPE					= volatile_motes
+	STRATEGIC_RESOURCE_COST					= 0.0
+	PRIMARY_RESOURCE_COST_SCALING 			= 1.0
+	STRATEGIC_RESOURCE_COST_SCALING			= 1.0
+	PRIMARY_RESOURCE_UPKEEP_SCALING			= 1.0
+	ENERGY_UPKEEP_SCALING					= 1.0
+
+	GLOBAL_COST_MULTIPLIER					= @global_cost_multiplier
+	GLOBAL_UPKEEP_MULTIPLIER				= @global_upkeep_multiplier
+}

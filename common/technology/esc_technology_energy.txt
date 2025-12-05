@@ -36,6 +36,9 @@
 #         └─ Grand Reality Eraser				: extradimensional X-slot weapon
 #             └─ Titanic Reality Eraser			: titanic extradimensional weapon
 
+# ── Nova Flare Paralyzer						: tier 2 lens flare paralyzer
+#     └─ Supernova Flare Cannon					: tier 3 lens flare paralyzer
+
 ############################################################
 ##                   Advanced Combat Laser                ##
 ############################################################
@@ -2620,6 +2623,142 @@ esc_tech_extradimensional_weapon_3_t = {
 				has_federation_perk = rare_tech_boost
 				any_member = { has_technology = esc_tech_extradimensional_weapon_3_t }
 			}
+		}
+	}
+}
+
+############################################################
+##                  Nova Flare Paralyzer                  ##
+############################################################
+
+esc_tech_energy_lens_beam_2 = {
+	area = physics
+	category = { particles }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_advanced_heavy_weapons" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+		has_crisis_level = crisis_hyperthermia_level_5 # ember battleship
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                 Supernova Flare Cannon                 ##
+############################################################
+
+esc_tech_energy_lens_beam_3 = {
+	area = physics
+	category = { particles }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_energy_lens_beam_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+		has_crisis_level = crisis_hyperthermia_level_5 # ember battleship
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 }

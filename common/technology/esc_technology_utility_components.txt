@@ -33,7 +33,30 @@ esc_tech_armor_6 = {
 		name = esc_tech_armor_6_bio
 		inherit_icon = no
 		inherit_effects = yes
-		trigger = { country_uses_bio_ships = yes }
+		trigger = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = no
+		}
+		weight = { factor = 1 }
+	}
+	technology_swap = {
+		name = esc_tech_lm_armor_6
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = {
+			country_uses_bio_ships = no
+			is_galvanic_empire = yes
+		}
+		weight = { factor = 1 }
+	}
+	technology_swap = {
+		name = esc_tech_lm_armor_bio_6
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
 		weight = { factor = 1 }
 	}
 
@@ -80,7 +103,30 @@ esc_tech_armor_7 = {
 		name = esc_tech_armor_7_bio
 		inherit_icon = no
 		inherit_effects = yes
-		trigger = { country_uses_bio_ships = yes }
+		trigger = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = no
+		}
+		weight = { factor = 1 }
+	}
+	technology_swap = {
+		name = esc_tech_lm_armor_7
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = {
+			country_uses_bio_ships = no
+			is_galvanic_empire = yes
+		}
+		weight = { factor = 1 }
+	}
+	technology_swap = {
+		name = esc_tech_lm_armor_bio_7
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = {
+			country_uses_bio_ships = yes
+			is_galvanic_empire = yes
+		}
 		weight = { factor = 1 }
 	}
 
