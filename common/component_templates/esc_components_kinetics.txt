@@ -1540,10 +1540,9 @@ weapon_component_template = {
 	upgrades_to = ESC_LM_ACCELERATOR_3
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	ai_weight = {
@@ -1606,10 +1605,9 @@ weapon_component_template = {
 	upgrades_to = ESC_LM_ACCELERATOR_BIO_3
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	ai_weight = {
@@ -1795,10 +1793,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	ai_weight = {
@@ -1860,10 +1857,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	ai_weight = {
