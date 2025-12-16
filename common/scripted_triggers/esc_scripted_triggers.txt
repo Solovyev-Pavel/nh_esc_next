@@ -2,128 +2,13 @@
 ###                 ESC Scripted Triggers                ###
 ############################################################
 
-### mod planet classes : arcologies
-@PD_Ecocity             = "pc_ecocity"
-@PD_Bioforge            = "pc_bioforge"
-@PD_MachineFactory      = "pc_machine_factory"
-@PD_ShroudCity          = "pc_shroudcity"
-@PD_Necropolis          = "pc_necropolis"
-@PD_NechoHive           = "pc_necrohive"
-@PD_NecropolisMachine   = "pc_machine_necropolis"
-@PD_PalaceWorld         = "pc_palacearc"
-@PD_CapitalWorld        = "pc_capitalarc"
-@PD_HiveCapital         = "pc_biocapital"
-@PD_MachineCapital      = "pc_machine_capital"
-@PD_FortCity            = "pc_milarc"
-@PD_FortCityHive        = "pc_biofort"
-@PD_FortCityMachine     = "pc_machine_fort"
-@PD_FortCityRelic       = "pc_milarc_relic"
-@PD_Crucible            = "pc_crucible"
-@PD_CrucibleShroud      = "pc_shroud_crucible"
-@PD_CrucibleClean       = "pc_clean_crucible"
-### mod planet classes : molten habitats
-@PD_MoltenHabitat       = "pc_pd_molten_hab"
-@AM_MoltenHabitable     = "pc_molten_habitable"
-@RSPS_MoltenStation     = "pc_molten_station"
-### mod planet (subclass) modifiers
-@RSNF_VolcanicWorld     = "volcanic_world"
-@RSNF_LavaWorld         = "lava_world"
-@RSNF_InfernalWorld     = "infernal_world"
-### mod district types
-@DO2_AscendedHousing    = "district_ascended_housing"
-
-############################################################
-###                Mantle Mining Facility                ###
-############################################################
-
-# returns 'yes' if a planet is an ecumenopolis type
-ESC_TRIGGER_is_city_planet = {
-    OR = {
-        is_planet_class = pc_city
-        # planet diversity compatibility
-        is_planet_class = @PD_Ecocity
-        is_planet_class = @PD_Bioforge
-        is_planet_class = @PD_MachineFactory
-        is_planet_class = @PD_ShroudCity
-        is_planet_class = @PD_Necropolis
-        is_planet_class = @PD_NechoHive
-        is_planet_class = @PD_NecropolisMachine
-        is_planet_class = @PD_PalaceWorld
-        is_planet_class = @PD_CapitalWorld
-        is_planet_class = @PD_HiveCapital
-        is_planet_class = @PD_MachineCapital
-        is_planet_class = @PD_FortCity
-        is_planet_class = @PD_FortCityHive
-        is_planet_class = @PD_FortCityMachine
-        is_planet_class = @PD_FortCityRelic
-        # district overhaul compatibility
-        AND = {
-            is_planet_class = pc_relic
-            has_district = @DO2_AscendedHousing
-        }
-    }
-}
-
-# returns yes if a planet is molten/volcanic
-ESC_TRIGGER_is_naked_mantle_planet = {
-    OR = {
-        is_planet_class = @AM_MoltenHabitable # Alphamod Molten Habitable
-        is_planet_class = @PD_MoltenHabitat # Planet Diversity molten habitat
-        is_planet_class = @PD_Crucible # Planet Diversity crucible world
-        is_planet_class = @PD_CrucibleShroud # Planet Diversity crucible world
-        is_planet_class = @PD_CrucibleClean # Planet Diversity crucible world
-        is_planet_class = @RSPS_MoltenStation # Planetary Stations : molten station
-        has_modifier = @RSNF_VolcanicWorld # New Frontiers volcanic tomb world
-        has_modifier = @RSNF_LavaWorld # New Frontiers planet
-        has_modifier = @RSNF_InfernalWorld # New Frontiers hollow world subclass
-        AND = {
-            is_planet_class = pc_volcanic
-            exists = owner
-            owner = {
-                has_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
-            }
-        }
-    }
-}
-
-# returns 'yes' if the planet is a valid place for the mantle mining facility
-ESC_TRIGGER_can_host_mantle_miner = {
-    OR = {
-        ESC_TRIGGER_is_city_planet = yes
-        ESC_TRIGGER_is_naked_mantle_planet = yes
-    }
-}
-
-# returns 'yes' if the planet is a valid place for the upgraded mantle mining facility
-ESC_TRIGGER_can_host_upgraded_mantle_miner = {
-    OR = {
-        ESC_TRIGGER_is_city_planet = yes
-        ESC_TRIGGER_is_naked_mantle_planet = yes
-    }
-}
-
-# returns 'yes' if a planet is allowed to construct mantle mining facility
-ESC_TRIGGER_can_build_mantle_miner = {
-    OR = {
-        AND = {
-            ESC_TRIGGER_is_city_planet = yes
-            has_major_upgraded_capital = yes
-        }
-        AND = {
-            ESC_TRIGGER_is_naked_mantle_planet = yes
-            has_fully_upgraded_capital = yes
-            #num_pops > 49
-        }
-    }
-}
-
-# returns 'yes' if the planets needs a borehole 'feature' upon construction of the mantle mining facility
-ESC_TRIGGER_needs_giant_borehole = {
-    NOR = {
-        has_deposit = d_esc_large_borehole_1
-        ESC_TRIGGER_is_naked_mantle_planet = yes
-    }
-}
+# - detection of empire type
+# - checks for whether advanced weapons are enabled
+# - checks for culture worker types
+# - checks for industrial galactic community resolutions
+# - checks for technology access
+# - checks for starbase module locational prerequisites
+# - checks for shield types
 
 ############################################################
 ###               Playable Empire Detection              ###

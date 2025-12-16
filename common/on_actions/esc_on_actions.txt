@@ -42,7 +42,6 @@ on_monthly_pulse_country = {
 
 on_yearly_pulse_country = {
 	events = {
-		esc_events.3000 					# random boons from mantle mining facility
 		esc_special_projects.3001 			# roll for nanite thought matrix special project
 		esc_events_crisis.3000				# crisis dice roller
 	}
@@ -93,5 +92,17 @@ on_planet_transfer = {
 dmm_mod_selected = {
 	events = {
 		esc_dmm_integration.10 # open mod menu
+	}
+}
+
+on_building_demolished = {
+	events = {
+		esc_events.3100 # remove deposits created by mantle miner facility when it no longer exists
+	}
+}
+
+on_building_replaced = {
+	events = {
+		esc_events.3100 # remove deposits created by mantle miner facility when it no longer exists
 	}
 }

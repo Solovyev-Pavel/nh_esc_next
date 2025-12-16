@@ -4,10 +4,125 @@ d_esc_large_borehole_1 = {
     category = deposit_cat_rare
 
     planet_modifier = {
-        planet_max_districts_add = -5 # -3
+        planet_max_districts_add = -1
     }
 
     drop_weight = {
         weight = 0 # event only
+    }
+}
+
+### Extra minerals
+d_esc_mantle_mineral_cluster = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_minerals_produces_add = 1
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### Extra alloys
+d_esc_mantle_alloy_plume = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_alloys_produces_add = 1
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### Exotic gases
+d_esc_mantle_exotic_gases_pocket = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_exotic_gases_produces_add = 0.25
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### Rare crystals
+d_esc_mantle_rare_crystal_cluster = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_rare_crystals_produces_add = 0.25
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### Volatile Motes
+d_esc_mantle_volatile_motes_cluster = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_volatile_motes_produces_add = 0.25
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### Trade value
+d_esc_mantle_trade_value = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_trade_produces_add = 2
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### living metal
+d_esc_mantle_living_metal = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_sr_living_metal_produces_add = 0.1
+        planet_miners_society_research_produces_add = 0.25
+    }
+
+    drop_weight = {
+        factor = 0 # event only
+    }
+}
+
+### dead colossus
+d_esc_mantle_immanis_colosseus = {
+    is_for_colonizable = yes
+    category = deposit_cat_rare
+
+    planet_modifier = {
+        planet_miners_society_research_produces_add = 0.25
+        planet_biologists_society_research_produces_add = 2
+        planet_biologists_alloys_upkeep_add = 0.5
+    }
+
+    drop_weight = {
+        factor = 0 # event only
     }
 }

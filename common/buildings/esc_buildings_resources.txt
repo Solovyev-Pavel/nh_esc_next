@@ -76,42 +76,6 @@ esc_building_zro_distillery = {
 		}
 	}
 
-	# regular empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_regular_empire = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_zro_distiller_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_regular_empire = yes }
-    #     }
-    #     text = job_esc_zro_distiller_effect_desc
-	# }
-
-	# gestalt empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_zro_distiller_drone_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_hive_empire = yes }
-    #     }
-    #     text = job_esc_zro_distiller_drone_effect_desc
-	# }
-
 	prerequisites = { "esc_tech_zro_distilleries" }
 
 	ai_resource_production = {
@@ -164,65 +128,29 @@ esc_building_dark_matter_facility = {
         }
 	}
 
-		# resgular empires
-		triggered_planet_modifier = {
-			potential = {
-				exists = owner
-				owner = { is_regular_empire = yes }
-			}
-			modifier = {
-				planet_physicists_sr_dark_matter_produces_add = 1
-				planet_physicists_consumer_goods_upkeep_add = 2
-				planet_physicists_energy_upkeep_add = 2
-			}
+	# resgular empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
 		}
-		# gestalt empires
-		triggered_planet_modifier = {
-			potential = {
-				exists = owner
-				owner = { is_gestalt = yes }
-			}
-			modifier = {
-				planet_physicists_sr_dark_matter_produces_add = 1
-				planet_physicists_energy_upkeep_add = 6
-			}
+		modifier = {
+			planet_physicists_sr_dark_matter_produces_add = 1
+			planet_physicists_consumer_goods_upkeep_add = 2
+			planet_physicists_energy_upkeep_add = 2
 		}
-
-	# # regular empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_regular_empire = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_dark_matter_shaper_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_regular_empire = yes }
-    #     }
-    #     text = job_esc_dark_matter_shaper_effect_desc
-	# }
-
-	# # gestalt empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_dark_matter_shaper_drone_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_gestalt = yes }
-    #     }
-    #     text = job_esc_dark_matter_shaper_drone_effect_desc
-	# }
+	}
+	# gestalt empires
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			planet_physicists_sr_dark_matter_produces_add = 1
+			planet_physicists_energy_upkeep_add = 6
+		}
+	}
 
 	prerequisites = { "esc_tech_dark_matter_facilities" }
 
@@ -297,42 +225,6 @@ esc_building_nanite_foundry = {
 		}
 	}
 
-	# # regular empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_regular_empire = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_nanite_breeder_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_regular_empire = yes }
-    #     }
-    #     text = job_esc_nanite_breeder_effect_desc
-	# }
-
-	# # gestalt empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_nanite_breeder_drone_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_gestalt = yes }
-    #     }
-    #     text = job_esc_nanite_breeder_drone_effect_desc
-	# }
-
 	prerequisites = { "esc_tech_synthetic_lifeform_studies" }
 
 	ai_resource_production = {
@@ -401,42 +293,6 @@ esc_building_crystal_farm_1 = {
 		}
 	}
 
-	# # regular empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_regular_empire = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_crystal_farmer_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_regular_empire = yes }
-    #     }
-    #     text = job_esc_crystal_farmer_effect_desc
-	# }
-
-	# # gestalt empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_crystal_farmer_drone_add = @ESC_job_count_2
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_gestalt = yes }
-    #     }
-    #     text = job_esc_crystal_farmer_drone_effect_desc
-	# }
-
 	prerequisites = { "esc_tech_crystal_cannon_1" }
 
 	ai_resource_production = {
@@ -504,42 +360,6 @@ esc_building_crystal_farm_2 = {
 			planet_farmers_energy_upkeep_add = 2
 		}
 	}
-
-	# # regular empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_regular_empire = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_crystal_farmer_add = @ESC_job_count_4
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_regular_empire = yes }
-    #     }
-    #     text = job_esc_crystal_farmer_effect_desc
-	# }
-
-	# # gestalt empires
-	# triggered_planet_modifier = {
-	# 	potential = {
-	# 		exists = owner
-	# 		owner = { is_gestalt = yes }
-	# 	}
-	# 	modifier = {
-	# 		job_esc_crystal_farmer_drone_add = @ESC_job_count_4
-	# 	}
-	# }
-	# triggered_desc = {
-    #     trigger = {
-    #         exists = owner
-    #         owner = { is_gestalt = yes }
-    #     }
-    #     text = job_esc_crystal_farmer_drone_effect_desc
-	# }
 
 	prerequisites = { "esc_tech_improved_crystal_farm" }
 
@@ -663,19 +483,23 @@ esc_building_magmaminer_1 = {
 	}
 
 	potential = {
-		ESC_TRIGGER_can_host_mantle_miner = yes
+		planet = {
+			planet_is_habitat_equivalent = no
+			planet_is_ring_world_equivalent = no
+		}
+		NOT = { has_modifier = resort_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
 	}
 
-	allow = { ESC_TRIGGER_can_build_mantle_miner = yes }
+	allow = { has_major_upgraded_capital = yes }
 
 	resources = {
         category = planet_buildings
         cost = {
-			minerals = 4000
-			alloys = 1000
-			volatile_motes = 100
-			rare_crystals = 100
+			minerals = 2000
+			alloys = 500
+			volatile_motes = 50
+			rare_crystals = 50
 		}
 		produces = {
 			minerals = 10
@@ -692,11 +516,9 @@ esc_building_magmaminer_1 = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 16
-			planet_miners_engineering_research_produces_add = 10
-			planet_miners_rare_crystals_produces_add = 1
-			planet_miners_consumer_goods_upkeep_add = 5
-			planet_miners_energy_upkeep_add = 7.5
+			planet_miners_minerals_produces_add = 6
+			planet_miners_rare_crystals_produces_add = 0.25
+			planet_miners_energy_upkeep_add = 5
 			planet_miners_alloys_upkeep_add = 1
 		}
 	}
@@ -706,25 +528,25 @@ esc_building_magmaminer_1 = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 16
-			planet_miners_engineering_research_produces_add = 10
-			planet_miners_rare_crystals_produces_add = 1
-			planet_miners_energy_upkeep_add = 15
+			planet_miners_minerals_produces_add = 6
+			planet_miners_rare_crystals_produces_add = 0.25
+			planet_miners_energy_upkeep_add = 10
 			planet_miners_alloys_upkeep_add = 1
 		}
 	}
 
 	inline_script = {
 		script = jobs/miners_add
-		AMOUNT = @ESC_job_count_10
+		AMOUNT = @ESC_job_count_5
 	}
-
-	### jobs
-	# inline_script = {
-	# 	script = jobs/esc_mantle_miner_jobs
-	# 	CORE_MINERS_AMOUNT = @ESC_job_count_2
-	# 	BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_1
-	# }
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = @ESC_job_count_1
+	}
+	inline_script = {
+		script = jobs/engineers_add
+		AMOUNT = @ESC_job_count_1
+	}
 
 	prerequisites = { "esc_tech_magmaminer_1" }
 
@@ -736,7 +558,7 @@ esc_building_magmaminer_1 = {
 
 	on_queued = {
 		if = {
-			limit = { ESC_TRIGGER_needs_giant_borehole = yes }
+			limit = { NOT = { has_deposit = d_esc_large_borehole_1 } }
 			set_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
 			add_deposit = d_esc_large_borehole_1
 		}
@@ -746,16 +568,19 @@ esc_building_magmaminer_1 = {
 		if = {
 			limit = { has_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner }
 			remove_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
-			random_deposit = {
-				limit = { is_deposit_type = d_esc_large_borehole_1 }
-				remove_deposit = d_esc_large_borehole_1
-			}
+			remove_deposit = d_esc_large_borehole_1
 		}
 	}
 
 	on_built = {
 		remove_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
 		# after this, it is impossible to remove the blocker without cheats
+		hidden_effect = {
+			planet = {
+				planet_event = { id = esc_events.3000 days = 360 random = 360 }
+				planet_event = { id = esc_events.3050 days = 1080 random = 720 }
+			}
+		}
 	}
 
 	upgrades = { esc_building_magmaminer_2 }
@@ -777,19 +602,23 @@ esc_building_magmaminer_2 = {
 	}
 
 	potential = {
-		ESC_TRIGGER_can_host_upgraded_mantle_miner = yes
+		planet = {
+			planet_is_habitat_equivalent = no
+			planet_is_ring_world_equivalent = no
+		}
+		NOT = { has_modifier = resort_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
 	}
 
-	allow = { ESC_TRIGGER_can_build_mantle_miner = yes }
+	allow = { has_fully_upgraded_capital = yes }
 
 	resources = {
         category = planet_buildings
         cost = {
-			minerals = 4000
-			alloys = 1000
-			volatile_motes = 100
-			rare_crystals = 100
+			minerals = 2000
+			alloys = 500
+			volatile_motes = 50
+			rare_crystals = 50
 		}
 		produces = {
 			minerals = 20
@@ -806,11 +635,10 @@ esc_building_magmaminer_2 = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 16
-			planet_miners_engineering_research_produces_add = 10
-			planet_miners_rare_crystals_produces_add = 1
-			planet_miners_consumer_goods_upkeep_add = 5
-			planet_miners_energy_upkeep_add = 7.5
+			planet_miners_minerals_produces_add = 6
+			planet_miners_rare_crystals_produces_add = 0.25
+			planet_miners_consumer_goods_upkeep_add = 3
+			planet_miners_energy_upkeep_add = 5
 			planet_miners_alloys_upkeep_add = 1
 		}
 	}
@@ -820,25 +648,25 @@ esc_building_magmaminer_2 = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 16
-			planet_miners_engineering_research_produces_add = 10
-			planet_miners_rare_crystals_produces_add = 1
-			planet_miners_energy_upkeep_add = 15
+			planet_miners_minerals_produces_add = 6
+			planet_miners_rare_crystals_produces_add = 0.25
+			planet_miners_energy_upkeep_add = 10
 			planet_miners_alloys_upkeep_add = 1
 		}
 	}
 
 	inline_script = {
 		script = jobs/miners_add
-		AMOUNT = @ESC_job_count_15
+		AMOUNT = @ESC_job_count_10
 	}
-
-	### jobs
-	# inline_script = {
-	# 	script = jobs/esc_mantle_miner_jobs
-	# 	CORE_MINERS_AMOUNT = @ESC_job_count_5
-	# 	BOREHOLE_MAINTAINER_AMOUNT = @ESC_job_count_2
-	# }
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = @ESC_job_count_2
+	}
+	inline_script = {
+		script = jobs/engineers_add
+		AMOUNT = @ESC_job_count_2
+	}
 
 	prerequisites = { "esc_tech_magmaminer_2" }
 

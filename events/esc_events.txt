@@ -124,129 +124,469 @@ planet_event = {
 ##            Mantle Mining Facility Resources           ##
 ## ##################################################### ##
 
-### random resource boons from mantle miner
-country_event = {
+### extra resource deposits for mantle miner
+planet_event = {
     id = esc_events.3000
     is_triggered_only = yes
     hide_window = yes
 
     trigger = {
-        OR = {
-            ESC_TRIGGER_is_playable_empire = yes
-            is_fallen_empire = yes
-        }
+		exists = owner
+		owner = {
+			OR = {
+				ESC_TRIGGER_is_playable_empire = yes
+				is_fallen_empire = yes
+			}
+		}
+		is_colony = yes
+		OR = {
+			has_building = esc_building_magmaminer_1
+			has_building = esc_building_magmaminer_2
+		}
     }
 
     immediate = {
-        every_owned_planet = {
-            limit = {
-                is_colony = yes
-				sapient_pop_amount = yes
-                OR = {
-                    has_building = esc_building_magmaminer_1
-                    has_building = esc_building_magmaminer_2
-                }
-            }
+		random_list = {
+			5 = { # nothing, tough luck
+			}
+			15 = { # extra minerals
+				planet_event = { id = esc_events.3011 days = 0 }
+			}
+			15 = { # alloys
+				planet_event = { id = esc_events.3012 days = 0 }
+			}
+			15 = { # exotic gases
+				planet_event = { id = esc_events.3013 days = 0 }
+			}
+			15 = { # rare crystals
+				planet_event = { id = esc_events.3014 days = 0 }
+			}
+			15 = { # volatile motes
+				planet_event = { id = esc_events.3015 days = 0 }
+			}
+			15 = { # trade
+				planet_event = { id = esc_events.3016 days = 0 }
+			}
+			5 = { # living metal
+				planet_event = { id = esc_events.3017 days = 0 }
+			}
+		}
 
-            random_list = {
-                90 = {}
-                2 = { planet_event = { id = esc_events.3001 days = 30 random = 90 } }
-                2 = { planet_event = { id = esc_events.3002 days = 30 random = 90 } }
-                2 = { planet_event = { id = esc_events.3003 days = 30 random = 90 } }
-                2 = { planet_event = { id = esc_events.3004 days = 30 random = 90 } }
-                2 = { planet_event = { id = esc_events.3005 days = 30 random = 90 } }
-            }
-        }
+		# roll dice to decide if there should be another deposit
+		if = {
+			limit = {
+				NOT = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5 }
+			}
+
+			if = { # normal mode
+				limit = {
+					exists = owner
+					owner = {
+						has_country_flag = ESC_COUNTRY_FLAG_guaranteed_extra_mantle_miner_deposits
+					}
+				}
+				planet_event = { id = esc_events.3000 days = 360 random = 720 }
+			}
+			else = { # guaranteed deposits cheat is enabled
+				random_list = {
+					75 = {}
+					25 = {
+						planet_event = { id = esc_events.3000 days = 360 random = 720 }
+					}
+				}
+			}
+
+		}
     }
 }
 
 # extra minerals
 planet_event = {
-    id = esc_events.3001
+    id = esc_events.3011
     is_triggered_only = yes
-    title = esc_events.3001.name
-    desc = esc_events.3001.desc
-    picture = GFX_evt_mining_operations
+    title = esc_events.3011.name
+    desc = esc_events.3011.desc
+    picture = GFX_esc_event_picture_mantle_resource
 
     option = {
         name = EXCELLENT
-            owner = {
-            add_resource = {
-                minerals = 500
-            }
-        }
+        planet = {
+			add_deposit = d_esc_mantle_mineral_cluster
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
     }
 }
 
 # some alloys
 planet_event = {
-    id = esc_events.3002
+    id = esc_events.3012
     is_triggered_only = yes
-    title = esc_events.3002.name
-    desc = esc_events.3002.desc
-    picture = GFX_evt_mining_operations
+    title = esc_events.3012.name
+    desc = esc_events.3012.desc
+    picture = GFX_esc_event_picture_mantle_resource
 
     option = {
         name = EXCELLENT
-        owner = {
-            add_resource = {
-                alloys = 100
-            }
-        }
-    }
-}
-
-# some rare crystals
-planet_event = {
-    id = esc_events.3003
-    is_triggered_only = yes
-    title = esc_events.3003.name
-    desc = esc_events.3003.desc
-    picture = GFX_evt_mining_operations
-
-    option = {
-        name = EXCELLENT
-        owner = {
-            add_resource = {
-                rare_crystals = 50
-            }
-        }
-    }
-}
-
-# some volatile motes
-planet_event = {
-    id = esc_events.3004
-    is_triggered_only = yes
-    title = esc_events.3004.name
-    desc = esc_events.3004.desc
-    picture = GFX_evt_mining_operations
-
-    option = {
-        name = EXCELLENT
-        owner = {
-            add_resource = {
-                volatile_motes = 50
-            }
-        }
+        planet = {
+			add_deposit = d_esc_mantle_alloy_plume
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
     }
 }
 
 # some exotic gases
 planet_event = {
-    id = esc_events.3005
+    id = esc_events.3013
     is_triggered_only = yes
-    title = esc_events.3005.name
-    desc = esc_events.3005.desc
-    picture = GFX_evt_mining_operations
+    title = esc_events.3013.name
+    desc = esc_events.3013.desc
+    picture = GFX_esc_event_picture_mantle_resource
 
     option = {
         name = EXCELLENT
-        owner = {
-            add_resource = {
-                exotic_gases = 50
-            }
-        }
+       	planet = {
+			add_deposit = d_esc_mantle_exotic_gases_pocket
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
+    }
+}
+
+# some rare crystals
+planet_event = {
+    id = esc_events.3014
+    is_triggered_only = yes
+    title = esc_events.3014.name
+    desc = esc_events.3014.desc
+    picture = GFX_esc_event_picture_mantle_resource
+
+    option = {
+        name = EXCELLENT
+       	planet = {
+			add_deposit = d_esc_mantle_rare_crystal_cluster
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
+    }
+}
+
+# some volatile motes
+planet_event = {
+    id = esc_events.3015
+    is_triggered_only = yes
+    title = esc_events.3015.name
+    desc = esc_events.3015.desc
+    picture = GFX_esc_event_picture_mantle_resource
+
+    option = {
+        name = EXCELLENT
+       	planet = {
+			add_deposit = d_esc_mantle_volatile_motes_cluster
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
+    }
+}
+
+# some trade value
+planet_event = {
+    id = esc_events.3016
+    is_triggered_only = yes
+    title = esc_events.3016.name
+    desc = esc_events.3016.desc
+    picture = GFX_esc_event_picture_mantle_resource
+
+    option = {
+        name = EXCELLENT
+       	planet = {
+			add_deposit = d_esc_mantle_trade_value
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
+    }
+}
+
+# some living metal
+planet_event = {
+    id = esc_events.3017
+    is_triggered_only = yes
+    title = esc_events.3017.name
+    desc = esc_events.3017.desc
+    picture = GFX_esc_event_picture_mantle_resource
+
+    option = {
+        name = EXCELLENT
+       	planet = {
+			add_deposit = d_esc_mantle_living_metal
+			if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			}
+			else_if = {
+				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
+				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			}
+			else = {
+				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			}
+		}
+    }
+}
+
+# immanis colosseus (hidden dice roll)
+planet_event = {
+    id = esc_events.3050
+    is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_colony = yes
+		OR = {
+			has_building = esc_building_magmaminer_1
+			has_building = esc_building_magmaminer_2
+		}
+	}
+
+    immediate = {
+        random_list = {
+			95= {}
+			5 = { planet_event = { id = esc_events.3051 days = 0 } }
+		}
+    }
+}
+
+# immanis colosseus (user notification on successfull roll)
+planet_event = {
+    id = esc_events.3051
+    is_triggered_only = yes
+    title = esc_events.3051.name
+    desc = esc_events.3051.desc
+    picture = GFX_esc_event_picture_dead_colossus
+
+	trigger = {
+		is_colony = yes
+		OR = {
+			has_building = esc_building_magmaminer_1
+			has_building = esc_building_magmaminer_2
+		}
+	}
+
+    option = {
+        name = FASCINATING
+       	planet = {
+			add_deposit = d_esc_mantle_immanis_colosseus
+		}
+    }
+}
+
+# when mantle miner is demolished or replaced, remove unique deposits tied to it
+planet_event = {
+    id = esc_events.3100
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+		planet = {
+			NOR = {
+				has_building = esc_building_magmaminer_1
+				has_building = esc_building_magmaminer_2
+			}
+			OR = {
+				has_deposit = d_esc_mantle_mineral_cluster
+				has_deposit = d_esc_mantle_alloy_plume
+				has_deposit = d_esc_mantle_exotic_gases_pocket
+				has_deposit = d_esc_mantle_rare_crystal_cluster
+				has_deposit = d_esc_mantle_volatile_motes_cluster
+				has_deposit = d_esc_mantle_trade_value
+				has_deposit = d_esc_mantle_living_metal
+			}
+		}
+    }
+
+    immediate = {
+		planet = {
+			# remove all extra minerals deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_mineral_cluster }
+				remove_deposit = d_esc_mantle_mineral_cluster
+			}
+			# remove all extra alloys deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_alloy_plume }
+				remove_deposit = d_esc_mantle_alloy_plume
+			}
+			# remove all extra exotic gases deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_exotic_gases_pocket }
+				remove_deposit = d_esc_mantle_exotic_gases_pocket
+			}
+			# remove all extra rare crystl deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_rare_crystal_cluster }
+				remove_deposit = d_esc_mantle_rare_crystal_cluster
+			}
+			# remove all extra volatile motes deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_volatile_motes_cluster }
+				remove_deposit = d_esc_mantle_volatile_motes_cluster
+			}
+			# remove all extra trade value deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_trade_value }
+				remove_deposit = d_esc_mantle_trade_value
+			}
+			# remove all extra living metal deposits added by the mantle miner
+			while = {
+				limit = { has_deposit = d_esc_mantle_living_metal }
+				remove_deposit = d_esc_mantle_living_metal
+			}
+
+			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+		}
     }
 }
 
