@@ -106,10 +106,9 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_LM_ARMOR_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	inline_script = {
@@ -147,10 +146,9 @@ utility_component_template = {
 	upgrades_to = SMALL_ESC_LM_ARMOR_BIO_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	inline_script = {
@@ -264,10 +262,9 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_LM_ARMOR_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	inline_script = {
@@ -305,10 +302,9 @@ utility_component_template = {
 	upgrades_to = MEDIUM_ESC_LM_ARMOR_BIO_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	inline_script = {
@@ -422,10 +418,9 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_LM_ARMOR_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	inline_script = {
@@ -463,10 +458,9 @@ utility_component_template = {
 	upgrades_to = LARGE_ESC_LM_ARMOR_BIO_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	inline_script = {
@@ -577,10 +571,9 @@ utility_component_template = {
 	component_set = ESC_LM_ARMOR_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	inline_script = {
@@ -617,10 +610,9 @@ utility_component_template = {
 	component_set = ESC_LM_ARMOR_BIO_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	inline_script = {
@@ -731,10 +723,9 @@ utility_component_template = {
 	component_set = ESC_LM_ARMOR_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	inline_script = {
@@ -771,10 +762,9 @@ utility_component_template = {
 	component_set = ESC_LM_ARMOR_BIO_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	inline_script = {
@@ -885,10 +875,9 @@ utility_component_template = {
 	component_set = ESC_LM_ARMOR_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = no
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = no
 	}
 
 	inline_script = {
@@ -925,10 +914,9 @@ utility_component_template = {
 	component_set = ESC_LM_ARMOR_BIO_7
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-		EVAL_TARGET = yes
-		EXTRA_CONDITION = is_galvanic_empire
-		EXTRA_CONDITION_VALUE = yes
+		script = ship_components_general/esc_inlines_uses_galvanic_components
+		IS_GALVANIC = yes
+		USES_BIO_SHIPS = yes
 	}
 
 	inline_script = {
