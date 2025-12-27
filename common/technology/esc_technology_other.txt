@@ -318,10 +318,6 @@ esc_tech_magmaminer_1 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0
-			NOT = { any_owned_planet = { ESC_TRIGGER_can_host_mantle_miner = yes } }
-		}
-		modifier = {
 			factor = 1.25
 			OR = {
 				has_trait_in_council = { TRAIT = leader_trait_curator }
@@ -346,10 +342,6 @@ esc_tech_magmaminer_1 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 0
-			NOT = { any_owned_planet = { ESC_TRIGGER_can_host_mantle_miner = yes } }
-		}
 		modifier = {
 			factor = 1.25
 			OR = {
@@ -393,10 +385,6 @@ esc_tech_magmaminer_2 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0
-			NOT = { any_owned_planet = { ESC_TRIGGER_can_host_upgraded_mantle_miner = yes } }
-		}
-		modifier = {
 			factor = 1.25
 			OR = {
 				has_trait_in_council = { TRAIT = leader_trait_curator }
@@ -421,10 +409,6 @@ esc_tech_magmaminer_2 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
-		modifier = {
-			factor = 0
-			NOT = { any_owned_planet = { ESC_TRIGGER_can_host_upgraded_mantle_miner = yes } }
-		}
 		modifier = {
 			factor = 1.25
 			OR = {

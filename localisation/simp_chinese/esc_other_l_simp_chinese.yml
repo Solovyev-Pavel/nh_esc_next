@@ -9,6 +9,31 @@
  esc_extra_large: "特大型"
  d_esc_large_borehole_1: "深渊钻井"
  d_esc_large_borehole_1_desc: "可以直接从行星的地幔和核心提取宝贵资源的巨型钻孔。"
+
+d_esc_mantle_mineral_cluster: "Minerals Cluster"
+d_esc_mantle_mineral_cluster_desc: "A cluster of high-quality minerals located within the planet's mantle that can be harvested by The Mantle Mining Facility."
+
+d_esc_mantle_alloy_plume: "Alloys Plume"
+d_esc_mantle_alloy_plume_desc: "A plume of molten alloys rising from the planet's core and into its upper mantle that can be harvested by the Mantle Mining Facility."
+
+d_esc_mantle_exotic_gases_pocket: "Exotic Gases Pocket"
+d_esc_mantle_exotic_gases_pocket_desc: "A pocket of exotic gases located within the planet's upper mantle that can be extracted by the Mantle Mining Facility."
+
+d_esc_mantle_rare_crystal_cluster: "Rare Crystals Cluster"
+d_esc_mantle_rare_crystal_cluster_desc: "A large cluster of rare crystals located witin the planet's mantle that can be extracted by the Mantle Mining Facility."
+
+d_esc_mantle_volatile_motes_cluster: "Molten Motes"
+d_esc_mantle_volatile_motes_cluster_desc: "A pocket of molten volatile motes located within the planet's upper mantle that can be extracted by the Mantle Mining Facility."
+
+d_esc_mantle_trade_value: "Pretty Crystals"
+d_esc_mantle_trade_value_desc: "A cluster of crystals found within the planet's upper mantle that can be extracted by the Mantle Mining Facility. While these crystals have little to no industrial use, there is a rising demand on the market for luxury items made with these crystals."
+
+d_esc_mantle_living_metal: "Plume of Living Metal"
+d_esc_mantle_living_metal_desc: "This strange plume of molten metal displays characteristics of very simple living organisms. Perhaps, this 'living metal' can be utilized to create new types of materials with unique properties."
+
+d_esc_mantle_immanis_colosseus: "Dead Colossus"
+d_esc_mantle_immanis_colosseus_desc: "A corpse of an immense creature floating within the planet's upper mantle. Studying it will allow us to greatly advance our understanding of life and its limits."
+
  edict_esc_mod_control_edict: "ESC·NEXT 控制面板"
  edict_esc_mod_control_edict_desc: "打开ESC·NEXT选项菜单"
  decision_esc_mod_menu: "$edict_esc_mod_control_edict$"
@@ -96,16 +121,30 @@
  esc_events.2000.desc: "我们的科研人员成功克隆了以太龙，已有一头幼龙诞生。这只生物在科研人员面前表现得相当温顺。据他们所说，我们可以引导这头幼龙，将它强大的力量用于我们的事业。"
  esc_events.2002.title: "天龙腾飞！"
  esc_events.2002.desc: "我们的科研人员成功克隆了天龙，已有一头幼龙诞生。这只生物在科研人员面前表现得相当温顺。据他们所说，我们可以引导这头幼龙，将它强大的力量用于我们的事业。"
- esc_events.3001.name: "矿物财富"
- esc_events.3001.desc: "§Y[Root.GetName]§!的采矿者报告说，从行星地幔中开采到一个珍贵的£minerals£§Y$minerals$§!簇群。"
- esc_events.3002.name: "熔融合金"
- esc_events.3002.desc: "§Y[Root.GetName]§!的采矿者报告说，除了通常的矿物以外，近期还从行星地核中开采到大量熔融£alloys£§Y$alloys$§!。"
- esc_events.3003.name: "水晶赠礼"
- esc_events.3003.desc: "§Y[Root.GetName]§!的采矿者报告说，已从行星地幔中成功提取出多个珍贵的大型£rare_crystals£§Y$rare_crystals$§!簇群。"
- esc_events.3004.name: "熔化微粒"
- esc_events.3004.desc: "§Y[Root.GetName]§!的采矿者报告说，他们的开采作业已经提取出大量溶化于地幔熔岩中的£volataile_motes£§Y$volatile_motes$§!。"
- esc_events.3005.name: "异星气穴"
- esc_events.3005.desc: "§Y[Root.GetName]§!的采矿者报告说，在行星地幔内定位到一个£exotic_gases£§Y$exotic_gases$§!空腔。开采行动取得成功，收获到大量珍贵资源。"
+esc_events.3011.name: "Mineral Riches"
+esc_events.3011.desc: "Miners on §Y[Root.GetName]§! report that an exceptionally valuable cluster of £minerals£ §Y$minerals$§! has been located within the planet's mantle. Extracting these minerals will noticeably boost local resource production and will greatly benefit our empire."
+
+esc_events.3012.name: "Molten Alloys"
+esc_events.3012.desc: "Miners on §Y[Root.GetName]§! report that a plume of molten £alloys£ §Y$alloys$§! rising from the planet's core has been located during the mantle mining operations. With some tweaks to usual ectraction process, the Manle Mining Facility will be able to harvest these alloys for the benefit of our empire."
+
+esc_events.3013.name: "Exotic Gases Pocket"
+esc_events.3013.desc: "Miners on §Y[Root.GetName]§! report that a pocket of £exotic_gases£ §Y$exotic_gases$§! has been located within the planet's mantle and can be extracted by the Mantle Mining Facility. Our empire will greatly benefit from this."
+
+esc_events.3014.name: "Crystalline Gift"
+esc_events.3014.desc: "Miners on §Y[Root.GetName]§! report that several large clusters of valuable £rare_crystals£ §Y$rare_crystals$§! have been located within the planet's mantle and can be extracted by the Mantle Mining Facility. The local economy will greatly benefit from this discovery."
+
+esc_events.3015.name: "Molten Motes"
+esc_events.3015.desc: "Miners on §Y[Root.GetName]§! report that a large amount of £volatile_motes£ §Y$volatile_motes$§! were found dissolved in molten rocks of the planet's mantle. The Mantle Mining Facility will be able to extract these valuable resources for the benefit of our empire."
+
+esc_events.3016.name: "Crystalline Pretties"
+esc_events.3016.desc: "Miners on §Y[Root.GetName]§! report that a number of crystalline clusters was discovered within the planet's mantle. While these crystals appear to have little to no industrial use, there is a rising demand for luxury items that incorporate these crystals. We can make hefty £trade_value£ §Y$trade$§! from extracting these crystals with the Mantle Mining Facility."
+
+esc_events.3017.name: "Living Metals"
+esc_events.3017.desc: "Miners on §Y[Root.GetName]§! report that a curious formation of molten metal displaying qualities akin to that of very simple living organisms was discovered within the planet's mantle. With some modifications, the Mantle Mining Facility's equipment can be utilized to observe and study this £sr_living_metal£ §Y$sr_living_metal$§!, and small amounts of it can be extracted for the industrial uses."
+
+esc_events.3051.name: "Immanis Colosseus"
+esc_events.3051.desc: "Mantle Mining Facility on §Y[Root.GetName]§! reports a fascinating discovery made during the operations. A corpse of a giant lifeform unlike anything we've ever seen before was found floating within the planet's mantle, somehow intact despite immense pressure and heat surrounding it.\n\nAccording to the initial study, this colossal creature was about 250 kilometers across and at least 20 kilometers thick. We do not yet know how a creature of such immense size sustained itself, but the leading theory is that it was metabolizing fossil fuels from the planet's crust.\n\nScientists estimate that the creature perished for yet-unknown reasons around 150 000 years ago and has been slowly sinking into the planet's mantle ever since. An expedition inside the creature showed that its internal 'biosphere' is still alive, although barely. The lifeforms found within the dead colossus bear little resemblance to anything found on the surface, leading us to believe that their lineages got separated millions of years ago, which raises further questions about the nature of the colossus.\n\nWe should definitely study this creature further."
+
  esc_ai_early_game_science_boost_easy: "ESC的AI研究加成（容易·动态）"
  esc_ai_early_game_science_boost_easy_desc: "AI帝国的研究速度会获得动态加成：\n游戏前期§G+10%§!\n游戏中期§G+25%§!\n游戏后期§G+50%§!"
  esc_ai_mid_game_science_boost_easy: "$esc_ai_early_game_science_boost_easy$"

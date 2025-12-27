@@ -491,7 +491,16 @@ esc_building_magmaminer_1 = {
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_mantle_mining_facility_forbidden }
 	}
 
-	allow = { has_major_upgraded_capital = yes }
+	allow = {
+		has_major_upgraded_capital = yes
+		OR = {
+			has_deposit = d_esc_large_borehole_1
+			num_free_districts = {
+				type = any
+				value > 1
+			}
+		}
+	}
 
 	resources = {
         category = planet_buildings
