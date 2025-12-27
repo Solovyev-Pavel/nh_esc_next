@@ -18,6 +18,9 @@ utility_component_template = {
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1 }
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_6" }
 	component_set = ESC_ARMOR_6
@@ -52,6 +55,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_1
 		ship_hull_add = @ESC_ARMOR_s_t6_bio_hull_primary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 	triggered_ship_modifier = {
 		potential = {
@@ -99,6 +105,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_6" }
@@ -139,6 +146,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_6" }
@@ -174,6 +182,9 @@ utility_component_template = {
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1 }
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_6" }
 	component_set = ESC_ARMOR_6
@@ -208,6 +219,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_1
 		ship_hull_add = @ESC_ARMOR_m_t6_bio_hull_primary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 	triggered_ship_modifier = {
 		potential = {
@@ -255,6 +269,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_6" }
@@ -295,6 +310,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_6" }
@@ -330,6 +346,9 @@ utility_component_template = {
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1 }
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_6" }
 	component_set = ESC_ARMOR_6
@@ -364,6 +383,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_1
 		ship_hull_add = @ESC_ARMOR_l_t6_bio_hull_primary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 	triggered_ship_modifier = {
 		potential = {
@@ -411,6 +433,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_6" }
@@ -451,6 +474,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_6" }
@@ -486,6 +510,9 @@ utility_component_template = {
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1 }
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_7
@@ -519,6 +546,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1
 		ship_hull_add = @ESC_ARMOR_s_t7_bio_hull_primary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 	triggered_ship_modifier = {
 		potential = {
@@ -565,6 +595,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_7" }
@@ -604,6 +635,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_7" }
@@ -638,6 +670,9 @@ utility_component_template = {
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1 }
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_7
@@ -671,6 +706,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1
 		ship_hull_add = @ESC_ARMOR_m_t7_bio_hull_primary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 	triggered_ship_modifier = {
 		potential = {
@@ -717,6 +755,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_7" }
@@ -756,6 +795,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_7" }
@@ -790,6 +830,9 @@ utility_component_template = {
 	}
 
 	modifier = { ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1 }
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_7" }
 	component_set = ESC_ARMOR_7
@@ -823,6 +866,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1
 		ship_hull_add = @ESC_ARMOR_l_t7_bio_hull_primary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 	triggered_ship_modifier = {
 		potential = {
@@ -869,6 +915,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_7" }
@@ -908,6 +955,7 @@ utility_component_template = {
 	}
 	ship_modifier = {
 		weapon_type_energy_weapon_fire_rate_mult = @inf_energy_speed
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_7" }
@@ -950,6 +998,9 @@ utility_component_template = {
 		ship_hull_add = @ESC_ARMOR_s_t6_str_secondary
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_bio_armor_1" }
 	component_set = ESC_BIO_ARMOR_1
@@ -987,6 +1038,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_3
 		ship_hull_add = @ESC_ARMOR_m_t6_str_secondary
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_bio_armor_1" }
@@ -1026,6 +1080,9 @@ utility_component_template = {
 		ship_hull_add = @ESC_ARMOR_l_t6_str_secondary
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_bio_armor_1" }
 	component_set = ESC_BIO_ARMOR_1
@@ -1064,6 +1121,9 @@ utility_component_template = {
 		ship_hull_add = @ESC_ARMOR_s_t7_str_secondary
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_bio_armor_2" }
 	component_set = ESC_BIO_ARMOR_2
@@ -1101,6 +1161,9 @@ utility_component_template = {
 		ship_hull_add = @ESC_ARMOR_m_t7_str_secondary
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_bio_armor_2" }
 	component_set = ESC_BIO_ARMOR_2
@@ -1137,6 +1200,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_3
 		ship_hull_add = @ESC_ARMOR_l_t7_str_secondary
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_bio_armor_2" }
@@ -1180,6 +1246,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t6_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_nanite_1" }
 	component_set = ESC_NANO_ARMOR_1
@@ -1222,6 +1291,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t6_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_nanite_1" }
@@ -1267,6 +1339,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t6_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_nanite_1" }
 	component_set = ESC_NANO_ARMOR_1
@@ -1309,6 +1384,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t6_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_nanite_1" }
@@ -1354,6 +1432,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_nanite_1" }
 	component_set = ESC_NANO_ARMOR_1
@@ -1396,6 +1477,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t6_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_nanite_1" }
@@ -1441,6 +1525,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t7_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_nanite_2" }
 	component_set = ESC_NANO_ARMOR_2
@@ -1483,6 +1570,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t7_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_nanite_2" }
@@ -1528,6 +1618,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t7_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_nanite_2" }
 	component_set = ESC_NANO_ARMOR_2
@@ -1570,6 +1663,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t7_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_nanite_2" }
@@ -1615,6 +1711,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_nanite_2" }
 	component_set = ESC_NANO_ARMOR_2
@@ -1657,6 +1756,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t7_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_nanite_2" }
@@ -1702,6 +1804,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t8_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
@@ -1743,6 +1848,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_s_t8_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
@@ -1787,6 +1895,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t8_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
@@ -1828,6 +1939,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_m_t8_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
@@ -1872,6 +1986,9 @@ utility_component_template = {
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
 	component_set = ESC_DRAGON_NANOARMOR
@@ -1913,6 +2030,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_2
 		ship_hull_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_dragonscales_nanite" }
@@ -1961,6 +2081,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_s_t6_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+		ship_shield_hardening_add = @hardening_T4
+	}
 
 	prerequisites = { "esc_tech_armor_shield_1" }
 	component_set = ESC_SHIELD_ARMOR_1
@@ -2003,6 +2127,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_3
 		ship_shield_add = @ESC_ARMOR_s_t6_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_s_t6_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_armor_shield_1" }
@@ -2048,6 +2176,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_m_t6_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+		ship_shield_hardening_add = @hardening_T4
+	}
 
 	prerequisites = { "esc_tech_armor_shield_1" }
 	component_set = ESC_SHIELD_ARMOR_1
@@ -2090,6 +2222,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_3
 		ship_shield_add = @ESC_ARMOR_m_t6_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_m_t6_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_armor_shield_1" }
@@ -2135,6 +2271,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_l_t6_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+		ship_shield_hardening_add = @hardening_T4
+	}
 
 	prerequisites = { "esc_tech_armor_shield_1" }
 	component_set = ESC_SHIELD_ARMOR_1
@@ -2177,6 +2317,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_3
 		ship_shield_add = @ESC_ARMOR_l_t6_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_l_t6_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T4
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_armor_shield_1" }
@@ -2222,6 +2366,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_s_t7_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_shield_2" }
 	component_set = ESC_SHIELD_ARMOR_2
@@ -2264,6 +2412,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_3
 		ship_shield_add = @ESC_ARMOR_s_t7_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_s_t7_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_shield_2" }
@@ -2309,6 +2461,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_m_t7_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_shield_2" }
 	component_set = ESC_SHIELD_ARMOR_2
@@ -2351,6 +2507,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_3
 		ship_shield_add = @ESC_ARMOR_m_t7_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_m_t7_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_shield_2" }
@@ -2396,6 +2556,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_l_t7_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_shield_2" }
 	component_set = ESC_SHIELD_ARMOR_2
@@ -2438,6 +2602,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_3
 		ship_shield_add = @ESC_ARMOR_l_t7_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_l_t7_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_shield_2" }
@@ -2483,6 +2651,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_s_t8_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
@@ -2524,6 +2696,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_3
 		ship_shield_add = @ESC_ARMOR_s_t8_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_s_t8_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_shield_3" }
@@ -2568,6 +2744,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_m_t8_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
@@ -2609,6 +2789,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_3
 		ship_shield_add = @ESC_ARMOR_m_t8_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_m_t8_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_shield_3" }
@@ -2653,6 +2837,10 @@ utility_component_template = {
 		ship_shield_add = @ESC_ARMOR_l_t8_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_1
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_shield_3" }
 	component_set = ESC_SHIELD_ARMOR_3
@@ -2694,6 +2882,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_3
 		ship_shield_add = @ESC_ARMOR_l_t8_str_secondary
 		ship_shield_regen_add_static = @ESC_ARMOR_l_t8_regen_secondary_1
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_shield_3" }
@@ -2741,6 +2933,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_1
 		ship_shield_regen_add_static = 7.5
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
@@ -2782,6 +2978,10 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_1
 		ship_shield_regen_add_static = 15
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_armor_wraith" }
@@ -2825,6 +3025,10 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_1
 		ship_shield_regen_add_static = 30
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T5
+		ship_shield_hardening_add = @hardening_T5
+	}
 
 	prerequisites = { "esc_tech_armor_wraith" }
 	component_set = ESC_HARDLIGHT_ARMOR
@@ -2866,6 +3070,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_s_t8_str_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_s_t8_regen_primary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_horror" }
 	component_set = ESC_HORROR_ARMOR
@@ -2901,6 +3108,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_m_t8_str_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_m_t8_regen_primary_2
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_armor_horror" }
@@ -2938,6 +3148,9 @@ utility_component_template = {
 		ship_armor_add = @ESC_ARMOR_l_t8_str_primary_1
 		ship_armor_regen_add_static = @ESC_ARMOR_l_t8_regen_primary_2
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	prerequisites = { "esc_tech_armor_horror" }
 	component_set = ESC_HORROR_ARMOR
@@ -2970,6 +3183,9 @@ utility_component_template = {
 	modifier = {
 		ship_armor_add = @ESC_ARMOR_l_dreadnought_str
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+	}
 
 	component_set = ESC_DREADNOUGHT_ARMOR
 
@@ -2999,6 +3215,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @ESC_HULL_s_t6_strength
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 3
 	}
 
 	prerequisites = { "esc_tech_crystal_armor_3" }
@@ -3032,6 +3251,9 @@ utility_component_template = {
 	modifier = {
 		ship_hull_add = @ESC_HULL_m_t6_strength
 	}
+	ship_modifier = {
+		ship_damage_reduction_add = 6
+	}
 
 	prerequisites = { "esc_tech_crystal_armor_3" }
 	component_set = ESC_CRYSTAL_ARMOR_3
@@ -3063,6 +3285,9 @@ utility_component_template = {
 
 	modifier = {
 		ship_hull_add = @ESC_HULL_l_t6_strength
+	}
+	ship_modifier = {
+		ship_damage_reduction_add = 12
 	}
 
 	prerequisites = { "esc_tech_crystal_armor_3" }

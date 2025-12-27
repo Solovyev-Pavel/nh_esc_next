@@ -3464,6 +3464,10 @@ utility_component_template = {
 		ship_shield_add = @shield_S2
 		ship_shield_regen_add_static = @regen_S4
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
+	}
 
 	custom_tooltip = tt_SMALL_ARCHAEO_ARMOR_AP
 	triggered_ship_design_modifier = {
@@ -3514,6 +3518,10 @@ utility_component_template = {
 		ship_armor_add = @armor_S4
 		ship_shield_add = @shield_S2
 		ship_shield_regen_add_static = @regen_S4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	triggered_ship_design_modifier = {
@@ -3572,6 +3580,10 @@ utility_component_template = {
 		ship_shield_add = @shield_M2
 		ship_shield_regen_add_static = @regen_M4
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
+	}
 
 	custom_tooltip = tt_MEDIUM_ARCHAEO_ARMOR_AP
 	triggered_ship_design_modifier = {
@@ -3622,6 +3634,10 @@ utility_component_template = {
 		ship_armor_add = @armor_M4
 		ship_shield_add = @shield_M2
 		ship_shield_regen_add_static = @regen_M4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	triggered_ship_design_modifier = {
@@ -3680,6 +3696,10 @@ utility_component_template = {
 		ship_shield_add = @shield_L2
 		ship_shield_regen_add_static = @regen_L4
 	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
+	}
 
 	custom_tooltip = tt_LARGE_ARCHAEO_ARMOR_AP
 	triggered_ship_design_modifier = {
@@ -3730,6 +3750,10 @@ utility_component_template = {
 		ship_armor_add = @armor_L4
 		ship_shield_add = @shield_L2
 		ship_shield_regen_add_static = @regen_L4
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	triggered_ship_design_modifier = {
@@ -3793,7 +3817,8 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_S5
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.05
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	custom_tooltip = tt_SMALL_ARCHAEO_ARMOR_AP
@@ -3846,7 +3871,8 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_S5
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.05
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	triggered_ship_design_modifier = {
@@ -3905,7 +3931,8 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_M5
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.05
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	custom_tooltip = tt_MEDIUM_ARCHAEO_ARMOR_AP
@@ -3958,7 +3985,8 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_M5
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.05
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	triggered_ship_design_modifier = {
@@ -4017,7 +4045,8 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_L5
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.05
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	custom_tooltip = tt_LARGE_ARCHAEO_ARMOR_AP
@@ -4070,7 +4099,8 @@ utility_component_template = {
 		ship_shield_regen_add_static = @regen_L5
 	}
 	ship_modifier = {
-		ship_armor_hardening_add = 0.05
+		ship_armor_hardening_add = @hardening_T6
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	triggered_ship_design_modifier = {
