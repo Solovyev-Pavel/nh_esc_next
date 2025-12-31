@@ -261,7 +261,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1750 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1750
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 12.0 max = 47.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -329,7 +336,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1750 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1750
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 12.0 max = 47.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -402,7 +416,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_4
@@ -469,7 +490,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_4
@@ -537,7 +565,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_4
@@ -606,7 +641,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_4
@@ -1415,7 +1457,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1000 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 2.0 max = 20.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -1483,7 +1532,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1000 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 2.0 max = 20.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -1556,7 +1612,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1623,7 +1686,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1691,7 +1761,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_3
@@ -1760,7 +1837,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_3
@@ -1973,7 +2057,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 600 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 600
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 0.5
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80

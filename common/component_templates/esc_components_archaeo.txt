@@ -3146,7 +3146,14 @@ weapon_component_template = {
 	type = instant
 	prio_projectile = yes
 
-	damage = { min = 5500 max = 10000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5500
+		MAX_DAMAGE = 10000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20 max = 90 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_L_6
@@ -3221,7 +3228,14 @@ weapon_component_template = {
 	type = instant
 	prio_projectile = yes
 
-	damage = { min = 5500 max = 10000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5500
+		MAX_DAMAGE = 10000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20 max = 90 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_L_6
@@ -3304,7 +3318,14 @@ weapon_component_template = {
 	type = instant
 	prio_projectile = yes
 
-	damage = { min = 6000 max = 10000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 10000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20 max = 90 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_G_4
@@ -3378,7 +3399,14 @@ weapon_component_template = {
 	type = instant
 	prio_projectile = yes
 
-	damage = { min = 6000 max = 10000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 10000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20 max = 90 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_G_4

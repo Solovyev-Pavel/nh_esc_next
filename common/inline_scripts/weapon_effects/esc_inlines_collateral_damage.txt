@@ -1,0 +1,34 @@
+### inline that sets weapon's damage and collateral damage
+damage = { min = $MIN_DAMAGE$ max = $MAX_DAMAGE$ }
+
+on_hit = {
+	hidden_effect = {
+		solar_system = {
+			every_ship_in_system = {
+				limit = {
+					controller = { is_hostile = from.controller }
+					distance = {
+						source = root
+						max_distance <= $COLLATERAL_RANGE$
+						same_solar_system = yes
+					}
+				}
+
+				set_variable_to_random_value  = {
+					which = damage_to_do
+					min = $MIN_DAMAGE$
+					max = $MAX_DAMAGE$
+					rounded = yes
+				}
+				multiply_variable = {
+					which = damage_to_do
+					value = $COLLATERAL_SCALE_MULTIPLIER$
+				}
+
+				damage_ship = damage_to_do
+				clear_variable = damage_to_do
+			}
+		}
+	}
+	custom_tooltip = "esc_collateral_damage_tooltip"
+}

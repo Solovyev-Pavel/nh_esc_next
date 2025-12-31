@@ -1455,7 +1455,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 160 max = 280 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 160
+		MAX_DAMAGE = 280
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -1526,7 +1533,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 160 max = 280 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 160
+		MAX_DAMAGE = 280
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -1601,7 +1615,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 190 max = 310 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 190
+		MAX_DAMAGE = 310
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -1672,7 +1693,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 190 max = 310 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 190
+		MAX_DAMAGE = 310
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -1748,7 +1776,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1818,7 +1853,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1889,7 +1931,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1961,7 +2010,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60

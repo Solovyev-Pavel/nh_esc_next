@@ -899,7 +899,14 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 140 max = 225 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 140
+		MAX_DAMAGE = 225
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_s
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
@@ -958,7 +965,14 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 275 max = 450 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 275
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_m
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
@@ -1017,7 +1031,14 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 550 max = 900 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 550
+		MAX_DAMAGE = 900
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_l
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
@@ -1076,7 +1097,14 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 1100 max = 1800 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1100
+		MAX_DAMAGE = 1800
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150

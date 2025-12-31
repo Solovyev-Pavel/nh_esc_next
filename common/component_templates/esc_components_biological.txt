@@ -928,7 +928,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 150 max = 300 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 150
+		MAX_DAMAGE = 300
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -995,7 +1002,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 175 max = 325 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 175
+		MAX_DAMAGE = 325
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
@@ -1063,7 +1077,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 250 max = 500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 250
+		MAX_DAMAGE = 500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1126,7 +1147,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 250 max = 500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 250
+		MAX_DAMAGE = 500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60

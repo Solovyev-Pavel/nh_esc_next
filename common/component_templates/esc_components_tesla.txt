@@ -1345,7 +1345,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 6000 max = 9000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 9000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 160
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1414,7 +1421,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 6000 max = 9000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 9000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 160
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1484,7 +1498,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 6000 max = 9000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 9000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 160
 	range = @ESC_WEAPON_RANGE_J_3
@@ -1555,7 +1576,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 6000 max = 9000 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 9000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 160
 	range = @ESC_WEAPON_RANGE_J_3

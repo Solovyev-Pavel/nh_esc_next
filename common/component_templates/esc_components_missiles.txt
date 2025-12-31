@@ -765,7 +765,14 @@ weapon_component_template = {
 
 	firing_arc = 25.0
 
-	damage = { min = 275 max = 450 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 275
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_l
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1.0
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
@@ -1185,7 +1192,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 190 max = 380 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 190
+		MAX_DAMAGE = 380
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 75
@@ -1250,7 +1264,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 220 max = 440 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 220
+		MAX_DAMAGE = 440
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 10 max = 35 }
 	total_fire_time = 75
@@ -1316,7 +1337,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 500 max = 750 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 500
+		MAX_DAMAGE = 750
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
@@ -1377,7 +1405,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 500 max = 750 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 500
+		MAX_DAMAGE = 750
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
 	size_damage_factor = 1
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
