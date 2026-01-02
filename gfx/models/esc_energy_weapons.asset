@@ -4126,3 +4126,73 @@ entity = {
 		}
 	}
 }
+
+############################################################
+###                   Shockwave weapons                  ###
+############################################################
+
+entity = {
+	name = "esc_arc_shockwave_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 3
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_shockwave_light_blue_particle"
+			node = "root"
+			keep_particle = yes
+			sound = { soundeffect = "xl_arc_emitter_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_xl_arc_emitter_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_dark_matter_shockwave_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 3
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_shockwave_teal_particle"
+			node = "root"
+			keep_particle = yes
+			sound = { soundeffect = "xl_arc_emitter_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_xl_arc_emitter_fire" }
+		}
+	}
+}
+
+entity = {
+	name = "esc_psionic_shockwave_muzzle_entity"
+	pdxmesh = "locator_mesh"
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 3
+		looping = no
+		event = {
+			time = 0
+			particle = "esc_shockwave_purple_particle"
+			node = "root"
+			keep_particle = yes
+			sound = { soundeffect = "xl_arc_emitter_fire" }
+		}
+		event = {
+			trigger_once = yes
+			sound = { soundeffect = "distance_xl_arc_emitter_fire" }
+		}
+	}
+}

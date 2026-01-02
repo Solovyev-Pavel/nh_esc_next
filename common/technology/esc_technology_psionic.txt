@@ -12,6 +12,7 @@
 #     └─ Shroud Strike						: tier 1 psionic cannon
 #         └─ Shroud Wrath					: tier 2 psionic cannon
 # ── Psionic Interceptors					: psionic strikecrafts
+# ── Psionic Catastrophe					: omnidirectional psionic weapon
 # ── Focused Minds							: psionic damage repeatable
 # ── Well of Power							: psionic rate of fire repeatable
 
@@ -719,6 +720,74 @@ esc_tech_psionic_interceptors = {
 				has_federation_perk = rare_tech_boost
 				any_member = { has_technology = esc_tech_psionic_interceptors }
 			}
+		}
+	}
+}
+
+############################################################
+##                   Psionic Catastrophe                  ##
+############################################################
+
+esc_tech_shockwave_psionic = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_shockwave" "tech_titans" "esc_tech_psionic_strike_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 }

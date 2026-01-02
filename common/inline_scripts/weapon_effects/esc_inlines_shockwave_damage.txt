@@ -1,0 +1,31 @@
+### inline that creates a weapon that hits all nearby targets
+damage = { min = $MIN_DAMAGE$ max = $MAX_DAMAGE$ }
+range = $ATTACK_RANGE$
+
+on_hit = {
+	hidden_effect = {
+		solar_system = {
+			every_ship_in_system = {
+				limit = {
+					controller = { is_hostile = from.controller }
+					distance = {
+						source = from
+						max_distance <= $ATTACK_RANGE$
+						same_solar_system = yes
+					}
+				}
+
+				set_variable_to_random_value  = {
+					which = damage_to_do
+					min = $MIN_DAMAGE$
+					max = $MAX_DAMAGE$
+					rounded = yes
+				}
+
+				damage_ship = damage_to_do
+				clear_variable = damage_to_do
+			}
+		}
+	}
+	custom_tooltip = "esc_shockwave_damage_tooltip"
+}

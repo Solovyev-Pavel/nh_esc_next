@@ -10,6 +10,7 @@
 # - Improved Tesla Cannon				X
 # - Titanic Tesla Cannon				Titanic
 # - Tesla Interdictors					H
+# - Omnidirectional Tesla Shockwave		Titanic
 
 ############################################################
 ##                       Tesla Coil                       ##
@@ -1780,6 +1781,64 @@ strike_craft_component_template = {
 	valid_for_country = {
 		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
 	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##             Omnidirectional Tesla Shockwave            ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_TESLA_SHOCKWAVE
+	size = titanic
+	icon = GFX_esc_tesla_shockwave
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage with applied effect
+		script = weapon_effects/esc_inlines_shockwave_damage_with_effect
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 1250
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_M_2
+		MODIFIER_TYPE = esc_tesla_weapons_fire_rate_debuff_2
+		MODIFIER_DURATION = 10
+		EFFECT_TOOLTIP = esc_tesla_shockwave_tooltip
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave_tesla" }
+	component_set = ESC_TESLA_SHOCKWAVE
+	projectile_gfx = "esc_arc_shockwave"
+	tags = { weapon_type_energy t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
 
 	ai_weight = {
 		weight = 1

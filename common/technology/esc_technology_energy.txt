@@ -39,6 +39,9 @@
 # ── Nova Flare Paralyzer						: tier 2 lens flare paralyzer
 #     └─ Supernova Flare Cannon					: tier 3 lens flare paralyzer
 
+# ── Arc Energy Shockwave						: base omnidirectional weapon
+#     └─ Dark Matter Halo Blast					: advanced omnidirectional weapon
+
 ############################################################
 ##                   Advanced Combat Laser                ##
 ############################################################
@@ -2740,6 +2743,155 @@ esc_tech_energy_lens_beam_3 = {
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                  Arc Energy Shockwave                  ##
+############################################################
+
+esc_tech_shockwave = {
+	area = physics
+	category = { particles }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight2
+	ai_update_type = military
+	prerequisites = { "esc_tech_arc_emitter_3" "tech_titans" }
+	is_rare = yes
+
+	potential = {
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                 Dark Matter Halo Blast                 ##
+############################################################
+
+esc_tech_shockwave_dark_matter = {
+	area = physics
+	category = { particles }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost3
+	weight = @ESC_TECH_tier6_weight3
+	ai_update_type = military
+	prerequisites = { "esc_tech_shockwave" "tech_titans" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	potential = {
+		ESC_TRIGGER_may_research_oversized_weapons = yes
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_precursor_armaments
+				has_technology = esc_tech_sensors_precursor
+				has_technology = tech_dark_matter_propulsion
+			}
+		}
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = esc_tech_precursor_armaments
+				has_technology = esc_tech_sensors_precursor
+				has_technology = tech_dark_matter_propulsion
+			}
+		}
 		modifier = {
 			factor = 0.8
 			has_ethic = ethic_fanatic_pacifist

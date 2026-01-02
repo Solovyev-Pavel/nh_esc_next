@@ -1813,3 +1813,112 @@ projectile_gfx_beam = {
 		delay = 0
 	}
 }
+
+############################################################
+###       Energy Weapons' Projectiles : Shockwave        ###
+############################################################
+
+### Arc Energy Shockwave
+projectile_gfx_beam = {
+	name = "esc_arc_shockwave"
+	color = { 0.9 0.9 1.0 1.0 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_arc_shockwave_muzzle_entity"
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Dark Matter Halo Blast
+projectile_gfx_beam = {
+	name = "esc_dark_matter_shockwave"
+	color = { 0.9 0.9 1.0 1.0 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_dark_matter_shockwave_muzzle_entity"
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}
+
+### Psionic Catastrophe
+projectile_gfx_beam = {
+	name = "esc_psionic_shockwave"
+	color = { 0.9 0.9 1.0 1.0 }
+	hit_entity = "titan_laser_hit_entity"
+	shield_hit_entity = "titan_laser_shield_hit_entity"
+	muzzle_flash_entity = "esc_psionic_shockwave_muzzle_entity"
+
+	#beam specific data
+	width = 5.0
+	texture_scroll_speed = 1.0
+	texture_tiling = 5.5
+
+	hit = {
+		alpha_curve = {
+			0.0 0.0
+			1.0 0.0
+		}
+		duration = 3.0
+	}
+	miss = {
+		alpha_curve = {
+			0.0 0.0
+			1.0 0.0
+		}
+		duration = 1.5
+	}
+	texture = "gfx/models/combat_items/titan_laser_diffuse.dds"
+
+	shield_impact = {
+		size = large
+		delay = 0
+	}
+}

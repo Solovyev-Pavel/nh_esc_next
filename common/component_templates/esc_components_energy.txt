@@ -2,21 +2,21 @@
 ##                   ESC : Energy Weapons                 ##
 ############################################################
 
-# - Advanced Combat Laser			S/M/L
-# - Aurora Laser					S/M/L
-# - Advanced Plasma Cannon			S/M/L
-# - Dragonbreath Cannon				S/M/L
-# - Tachyon Disruptor				S/M
-# - Disruptor Lance					S/M
-# - Muon Launcher					G
-# - Antimatter Launcher				G
-# - Chrono-Vortex Cannon			S/M/L
-# - Amplified Cloud Lightning		L
-# - Thunderstorm Generator			L
-# - Plasma Cutter					S/M
-# - Advanced Plasma Cutter			S/M
-# - Juggernaut Beam Cannon			M (Juggernaut only)
-# - Improved Juggernaut Beam Cannon	M (Juggernaut only)
+# - Advanced Combat Laser				S/M/L
+# - Aurora Laser						S/M/L
+# - Advanced Plasma Cannon				S/M/L
+# - Dragonbreath Cannon					S/M/L
+# - Tachyon Disruptor					S/M
+# - Disruptor Lance						S/M
+# - Muon Launcher						G
+# - Antimatter Launcher					G
+# - Chrono-Vortex Cannon				S/M/L
+# - Amplified Cloud Lightning			L
+# - Thunderstorm Generator				L
+# - Plasma Cutter						S/M
+# - Advanced Plasma Cutter				S/M
+# - Juggernaut Beam Cannon				M (Juggernaut only)
+# - Improved Juggernaut Beam Cannon		M (Juggernaut only)
 
 # - Improved Tachyon Lance				X
 # - Hypercharged Tachyon Lance			X
@@ -33,6 +33,9 @@
 # - Starfire Flare Emitter				X
 # - Nova Flare Paralyzer				X
 # - Supernova Flare Cannon				X
+
+# - Arc Energy Shockwave				Titanic
+# - Dark Matter Halo Blast				Titanic
 
 ############################################################
 ##                  Advanced Combat Laser                 ##
@@ -5258,5 +5261,119 @@ weapon_component_template = {
 		stinger_stage_1 = 2
 		stinger_stage_2 = 2
 		stinger_stage_3 = 2
+	}
+}
+
+############################################################
+##                   Arc Energy Shockwave                 ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_ARC_SHOCKWAVE
+	size = titanic
+	icon = GFX_esc_arc_shockwave
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage
+		script = weapon_effects/esc_inlines_shockwave_damage
+		MIN_DAMAGE = 250
+		MAX_DAMAGE = 2000
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_M_2
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave" }
+	component_set = ESC_ARC_SHOCKWAVE
+	projectile_gfx = "esc_arc_shockwave"
+	tags = { weapon_type_energy t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	# upgrades_to = ESC_DARK_MATTER_SHOCKWAVE
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##                  Dark Matter Halo Blast                ##
+############################################################
+
+# titan
+weapon_component_template = {
+	key = ESC_DARK_MATTER_SHOCKWAVE
+	size = titanic
+	icon = GFX_esc_dark_matter_shockwave
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage with applied effect
+		script = weapon_effects/esc_inlines_shockwave_damage_with_effect
+		MIN_DAMAGE = 500
+		MAX_DAMAGE = 2500
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_M_3
+		MODIFIER_TYPE = esc_gravitic_weapon_movement_speed_debuff_2
+		MODIFIER_DURATION = 10
+		EFFECT_TOOLTIP = esc_dark_matter_shockwave_tooltip
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = -500
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = t
+		TIER = 9
+		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave_dark_matter" }
+	component_set = ESC_DARK_MATTER_SHOCKWAVE
+	projectile_gfx = "esc_dark_matter_shockwave"
+	tags = { weapon_type_energy t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_dark_matter }
+		}
 	}
 }
