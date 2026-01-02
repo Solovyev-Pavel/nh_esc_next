@@ -22,7 +22,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 36 max = 102 }
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_S_2
@@ -75,7 +75,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 114 max = 218 }
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_M_2
@@ -128,7 +128,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 228 max = 454 }
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_L_2
@@ -191,7 +191,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_4
@@ -267,7 +267,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 30 max = 70 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_3
@@ -336,7 +336,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 42 max = 118 }
-	size_damage_factor = 0.15
+	size_damage_factor = 0.05
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_S_2
@@ -388,7 +388,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 128 max = 236 }
-	size_damage_factor = 0.15
+	size_damage_factor = 0.05
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_M_2
@@ -440,7 +440,7 @@ weapon_component_template = {
 	type = instant
 
 	damage = { min = 252 max = 488 }
-	size_damage_factor = 0.15
+	size_damage_factor = 0.05
 	windup = { min = 5 max = 20 }
 	total_fire_time = 30
 	range = @ESC_WEAPON_RANGE_L_2
@@ -502,7 +502,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	size_damage_factor = 0.15
+	size_damage_factor = 0.05
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_4
@@ -576,7 +576,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	size_damage_factor = 0.15
+	size_damage_factor = 0.05
 	windup = { min = 30 max = 70 }
 	total_fire_time = 170
 	range = @ESC_WEAPON_RANGE_T_3

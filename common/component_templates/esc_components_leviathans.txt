@@ -1918,7 +1918,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 50 max = 100 }
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 15 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1982,7 +1982,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 120 max = 160 }
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_G_4
@@ -2065,7 +2065,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
 	}
 
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5

@@ -724,7 +724,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 50 max = 100 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -793,7 +793,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 50 max = 100 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -868,7 +868,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 65 max = 125 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -936,7 +936,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 65 max = 125 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2

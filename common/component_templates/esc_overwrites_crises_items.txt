@@ -213,7 +213,7 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull gunship brawler }
 
 	damage = { min = 32.0 max = 82.0 }
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 2.0 max = 18.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_S_2
@@ -262,7 +262,7 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull gunship brawler }
 
 	damage = { min = 98.0 max = 192.0 }
-	size_damage_factor = 0.1
+	size_damage_factor = 0.05
 	windup = { min = 2.0 max = 18.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_M_2
@@ -311,7 +311,7 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull artillery }
 
 	damage = { min = 208.0 max = 414.0 }
-	size_damage_factor = 0.15
+	size_damage_factor = 0.05
 	windup = { min = 2.0 max = 18.0 }
 	total_fire_time = 35
 	range = @ESC_WEAPON_RANGE_L_2
@@ -394,7 +394,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 196.0 max = 388.0 }
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	windup = { min = 1.0 max = 19.0 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_G_3

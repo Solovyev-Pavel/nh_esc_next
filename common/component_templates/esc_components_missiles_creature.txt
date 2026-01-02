@@ -456,7 +456,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 105 max = 160 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_1
@@ -511,7 +511,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 210 max = 315 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_1
@@ -566,7 +566,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 420 max = 630 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_2
@@ -621,7 +621,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 420 max = 1260 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_3
@@ -680,7 +680,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 125 max = 175 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_1
@@ -734,7 +734,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 250 max = 350 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_1
@@ -788,7 +788,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 500 max = 700 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_2
@@ -842,7 +842,7 @@ weapon_component_template = {
 	firing_arc = 25.0
 
 	damage = { min = 1000 max = 1400 }
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 200
 	range = @ESC_WEAPON_RANGE_G_3
@@ -907,7 +907,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
 	}
 
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_G_3
@@ -973,7 +973,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
 	}
 
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_G_3
@@ -1039,7 +1039,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
 	}
 
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_G_3
@@ -1105,7 +1105,7 @@ weapon_component_template = {
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
 	}
 
-	size_damage_factor = 1.0
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 150
 	range = @ESC_WEAPON_RANGE_G_4
