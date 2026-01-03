@@ -34,6 +34,7 @@ weapon_component_template = {
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
 	upgrades_to = ESC_MANDIBLES_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes
@@ -91,6 +92,7 @@ weapon_component_template = {
 	projectile_gfx = "biogenesis_01_mandible_attack"
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes
@@ -149,6 +151,7 @@ weapon_component_template = {
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
 	upgrades_to = ESC_MANDIBLES_CYBER_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes
@@ -206,6 +209,7 @@ weapon_component_template = {
 	projectile_gfx = "biogenesis_01_mandible_attack"
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes

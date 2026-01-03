@@ -185,6 +185,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -238,6 +239,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -291,6 +293,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -348,6 +351,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -401,6 +405,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -454,6 +459,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -510,6 +516,7 @@ weapon_component_template = {
 	projectile_gfx = "small_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -562,6 +569,7 @@ weapon_component_template = {
 	projectile_gfx = "medium_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -614,6 +622,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -673,6 +682,7 @@ weapon_component_template = {
 	upgrades_to = ESC_TORPEDO_5
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -736,6 +746,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -806,6 +817,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy g_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -872,6 +884,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = ESC_SWARMER_MISSILES_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -929,6 +942,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive m_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = MEDIUM_ESC_BIO_SWARMER_MISSILES_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -986,6 +1000,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = TORPEDO_ESC_BIO_SWARMER_MISSILES_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -1048,6 +1063,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1104,6 +1120,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive m_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1160,6 +1177,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive g_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -1234,6 +1252,7 @@ weapon_component_template = {
 	upgrades_to = ESC_XMISSILE_2
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1306,6 +1325,7 @@ weapon_component_template = {
 	upgrades_to = ESC_XMISSILE_3_JUGGERNAUT
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1378,6 +1398,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile3"
 	tags = { weapon_type_explosive weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1446,6 +1467,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile3"
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional

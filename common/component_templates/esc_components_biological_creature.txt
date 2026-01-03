@@ -958,6 +958,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_BIO_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1020,6 +1021,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_BIO_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1082,6 +1084,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_BIO_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1144,6 +1147,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_BIO_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1210,6 +1214,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_BIO_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1272,6 +1277,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_BIO_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1334,6 +1340,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_BIO_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1396,6 +1403,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_BIO_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1461,6 +1469,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1522,6 +1531,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1583,6 +1593,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1644,6 +1655,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff

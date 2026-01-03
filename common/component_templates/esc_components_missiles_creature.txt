@@ -489,6 +489,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_TORPEDO_CREATURE_5
 	tags = { weapon_type_explosive weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -544,6 +545,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_TORPEDO_CREATURE_5
 	tags = { weapon_type_explosive weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -599,6 +601,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_TORPEDO_CREATURE_5
 	tags = { weapon_type_explosive weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -654,6 +657,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_TORPEDO_CREATURE_5
 	tags = { weapon_type_explosive weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -712,6 +716,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -766,6 +771,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -820,6 +826,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -874,6 +881,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_missiles_7"
 	tags = { weapon_type_explosive weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	ai_weight = {
 		weight = 1
@@ -939,6 +947,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth weapon_role_artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1005,6 +1014,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth weapon_role_artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1071,6 +1081,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth weapon_role_artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1137,6 +1148,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_anti_shield explosive explosive_stealth weapon_role_artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1198,6 +1210,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1250,6 +1263,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1302,6 +1316,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1354,6 +1369,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_PLASMA_MISSILE_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy x_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1410,6 +1426,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_PLASMA_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1462,6 +1479,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PLASMA_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1514,6 +1532,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PLASMA_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1566,6 +1585,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_PLASMA_MISSILE_CREATURE_3
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy x_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1621,6 +1641,7 @@ weapon_component_template = {
 	projectile_gfx = "small_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1672,6 +1693,7 @@ weapon_component_template = {
 	projectile_gfx = "medium_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1723,6 +1745,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy l_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1774,6 +1797,7 @@ weapon_component_template = {
 	projectile_gfx = "large_esc_plasma_missile_3"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_type_energy x_slot }
 	ai_tags = { weapon_role_anti_armor weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	ai_weight = {
 		weight = 1
@@ -1830,6 +1854,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = SMALL_ESC_SWARMER_MISSILES_CREATURE_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -1882,6 +1907,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = MEDIUM_ESC_SWARMER_MISSILES_CREATURE_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -1934,6 +1960,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = LARGE_ESC_SWARMER_MISSILES_CREATURE_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -1986,6 +2013,7 @@ weapon_component_template = {
 	tags = { weapon_type_explosive weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	upgrades_to = XL_ESC_SWARMER_MISSILES_CREATURE_4
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -2041,6 +2069,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -2092,6 +2121,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -2143,6 +2173,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1
@@ -2194,6 +2225,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_swarmer_missiles_4"
 	tags = { weapon_type_explosive weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_swarmer_missiles
 
 	ai_weight = {
 		weight = 1

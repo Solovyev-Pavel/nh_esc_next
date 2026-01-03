@@ -747,6 +747,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -819,6 +820,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -890,6 +892,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -970,6 +973,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1044,6 +1048,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_3_JUGGERNAUT
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1118,6 +1123,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1188,6 +1194,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	potential = {
 		ESC_ship_uses_juggernaut_components = yes

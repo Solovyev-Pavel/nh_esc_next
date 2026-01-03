@@ -748,6 +748,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = SMALL_ESC_AUTOCANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -803,6 +804,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = SMALL_ESC_BIO_AUTOCANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -859,6 +861,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = MEDIUM_ESC_AUTOCANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -914,6 +917,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = MEDIUM_ESC_BIO_AUTOCANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -970,6 +974,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = LARGE_ESC_AUTOCANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1025,6 +1030,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
 	upgrades_to = LARGE_ESC_BIO_AUTOCANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1084,6 +1090,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_5_small"
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1138,6 +1145,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_5_small"
 	tags = { weapon_type_kinetic s_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1193,6 +1201,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_5_medium"
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1247,6 +1256,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_5_medium"
 	tags = { weapon_type_kinetic m_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1302,6 +1312,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_5_large"
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1356,6 +1367,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_5_large"
 	tags = { weapon_type_kinetic l_slot }
 	ai_tags = { weapon_role_anti_shield brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2529,6 +2541,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = ESC_AUTOCANNON_X_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2588,6 +2601,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield }
 	upgrades_to = ESC_BIO_AUTOCANNON_X_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2651,6 +2665,7 @@ weapon_component_template = {
 	upgrades_to = ESC_AUTOCANNON_J
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2710,6 +2725,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_AUTOCANNON_J
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_shield }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2780,6 +2796,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_4_large"
 	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2845,6 +2862,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_4_large"
 	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2911,6 +2929,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_4_large"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -2978,6 +2997,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_autocannon_4_large"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_autocannon_grand
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -3302,6 +3322,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_asteroid_thrower_projectile"
 	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_asteroid_gun
 
 	target_weights = {
 		titan = 3

@@ -502,6 +502,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -562,6 +563,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -623,6 +625,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -684,6 +687,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -757,6 +761,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_NANITE_TORPEDO_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_nanite s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -821,6 +826,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_NANITE_TORPEDO_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_nanite m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -885,6 +891,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_NANITE_TORPEDO_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_nanite l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -949,6 +956,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_NANITE_TORPEDO_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_nanite x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1016,6 +1024,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1079,6 +1088,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1142,6 +1152,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1205,6 +1216,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff

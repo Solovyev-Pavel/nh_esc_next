@@ -803,6 +803,7 @@ weapon_component_template = {
 	upgrades_to = ESC_TESLA_BOMB_2
 	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -872,6 +873,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_TESLA_BOMB_2
 	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -946,6 +948,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_bomb_2_missile"
 	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1014,6 +1017,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_bomb_2_missile"
 	tags = { weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1839,6 +1843,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_shockwave"
 	tags = { weapon_type_energy t_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	ai_weight = {
 		weight = 1

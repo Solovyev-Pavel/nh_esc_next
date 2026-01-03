@@ -511,6 +511,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -575,6 +576,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -639,6 +641,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -703,6 +706,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -770,6 +774,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -833,6 +838,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -896,6 +902,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -959,6 +966,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff

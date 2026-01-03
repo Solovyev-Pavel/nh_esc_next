@@ -5308,7 +5308,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_shockwave"
 	tags = { weapon_type_energy t_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
-	# upgrades_to = ESC_DARK_MATTER_SHOCKWAVE
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	ai_weight = {
 		weight = 1
@@ -5367,6 +5367,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_dark_matter_shockwave"
 	tags = { weapon_type_energy t_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	ai_weight = {
 		weight = 1

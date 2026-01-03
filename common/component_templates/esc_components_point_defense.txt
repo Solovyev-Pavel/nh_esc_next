@@ -61,6 +61,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_kinetic }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_FLAK_CANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -109,6 +110,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_kinetic }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_BIO_FLAK_CANNON_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -162,6 +164,7 @@ weapon_component_template = {
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -209,6 +212,7 @@ weapon_component_template = {
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -263,6 +267,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_POINT_DEFENSE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -311,6 +316,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_BIO_POINT_DEFENSE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -364,6 +370,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -411,6 +418,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -465,6 +473,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_JUGGERNAUT_POINT_DEFENSE_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -515,6 +524,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -568,6 +578,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -617,6 +628,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -671,6 +683,7 @@ weapon_component_template = {
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -724,6 +737,7 @@ weapon_component_template = {
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_energy }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional

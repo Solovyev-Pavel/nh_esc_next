@@ -969,6 +969,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_PSIONIC_TORPEDO_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1033,6 +1034,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_PSIONIC_TORPEDO_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1097,6 +1099,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_PSIONIC_TORPEDO_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1161,6 +1164,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_PSIONIC_TORPEDO_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1228,6 +1232,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_torpedo"
 	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1291,6 +1296,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_torpedo"
 	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1354,6 +1360,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_torpedo"
 	tags = { weapon_type_energy weapon_type_psionic l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1417,6 +1424,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_torpedo"
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_armor energy_torpedoes energy_torpedoes_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff

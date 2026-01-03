@@ -51,6 +51,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -105,6 +106,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -167,6 +169,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -234,6 +237,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy l_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -300,6 +304,7 @@ weapon_component_template = {
 	upgrades_to = ESC_ENIGMATIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -375,6 +380,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_ENIGMATIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -454,6 +460,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -528,6 +535,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -603,6 +611,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -679,6 +688,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -2015,6 +2025,7 @@ weapon_component_template = {
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna g_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -2098,6 +2109,7 @@ weapon_component_template = {
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_kinetic weapon_type_explosive weapon_type_space_fauna x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
