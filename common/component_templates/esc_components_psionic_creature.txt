@@ -9,6 +9,10 @@
 # - Psi-blast Torpedo					S/M/L/X
 # - Improved Psi-blast Torpedo			S/M/L/X
 # - Psionic Interceptors				S/M/L/X
+# - Focused Psionic Dusruptors			S/M/L/X
+# - Shroud-Empowered Disruptors			S/M/L/X
+# - Focused Psionic Lightning			S/M/L/X
+# - Shroud Lightning					S/M/L/X
 
 ############################################################
 ##                Psionic Energy Projector                ##
@@ -1701,6 +1705,1118 @@ strike_craft_component_template = {
 	tags = { weapon_type_strike_craft l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_point_defense carrier }
 	point_defence_targets = { "strike_craft" }
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##               Focused Psionic Disruptors               ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_psionic_disruptors_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5 max = 30 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_psionic_disruptor_2" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	projectile_gfx = "psionic_disruptor_small"
+	tags = { weapon_type_energy weapon_type_psionic s_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_psionic_disruptors_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 8 max = 85 }
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_disruptor_2" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	projectile_gfx = "psionic_disruptor_medium"
+	tags = { weapon_type_energy weapon_type_psionic m_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_psionic_disruptors_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 13 max = 170 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_psionic_disruptor_2" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	projectile_gfx = "psionic_disruptor_medium"
+	tags = { weapon_type_energy weapon_type_psionic l_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_psionic_disruptors_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 18 max = 345 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_disruptor_2" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	projectile_gfx = "psionic_disruptor_medium"
+	tags = { weapon_type_energy weapon_type_psionic x_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##              Shroud-Empowered Disruptors               ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_psionic_disruptors_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 5 max = 43 }
+	windup = { min = 3 max = 11 }
+	total_fire_time = 16
+	range = @ESC_WEAPON_RANGE_S_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.6
+
+	prerequisites = { "esc_tech_psionic_disruptor_3" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	projectile_gfx = "psionic_disruptor_small"
+	tags = { weapon_type_energy weapon_type_psionic s_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_psionic_disruptors_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 115 }
+	windup = { min = 4 max = 16 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_M_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.35
+
+	prerequisites = { "esc_tech_psionic_disruptor_3" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	projectile_gfx = "psionic_disruptor_medium"
+	tags = { weapon_type_energy weapon_type_psionic m_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_psionic_disruptors_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 15 max = 230 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.15
+
+	prerequisites = { "esc_tech_psionic_disruptor_3" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	projectile_gfx = "psionic_disruptor_medium"
+	tags = { weapon_type_energy weapon_type_psionic l_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_psionic_disruptors_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 480 }
+	windup = { min = 5 max = 20 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_disruptors_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_disruptors_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_disruptors_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_disruptors_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_disruptors_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_disruptor_3" }
+	component_set = ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	projectile_gfx = "psionic_disruptor_medium"
+	tags = { weapon_type_energy weapon_type_psionic x_slot debuffer_role weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull brawler brawler_stealth debuffer_role debuffer_role_stealth }
+
+	target_type = target_enemies
+	target_focus = spread
+	injected_modifier = {
+		modifier = {
+			modifier = psionic_disruptor_anti_fire_rate
+			days = 10
+		}
+		stack_info = {
+			id = anti_fire_rate
+			priority = 1
+		}
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##               Focused Psionic Lightning                ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_LIGHTNING_CREATURE_2
+	size = small
+	icon = GFX_esc_bio_psionic_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 35 }
+	windup = { min = 5 max = 24 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 5
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_psionic_lightning_2" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_2
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_LIGHTNING_CREATURE_2
+	size = medium
+	icon = GFX_esc_bio_psionic_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 80 }
+	windup = { min = 7 max = 29 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 5
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.55
+
+	prerequisites = { "esc_tech_psionic_lightning_2" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_2
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_LIGHTNING_CREATURE_2
+	size = large
+	icon = GFX_esc_bio_psionic_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 175 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 5
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_psionic_lightning_2" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_2
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_PSIONIC_LIGHTNING_CREATURE_2
+	size = extra_large
+	icon = GFX_esc_bio_psionic_lightning_2
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 10 max = 400 }
+	windup = { min = 11 max = 39 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 5
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_lightning_2" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_2
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+############################################################
+##                    Shroud Lightning                    ##
+############################################################
+
+# small
+weapon_component_template = {
+	key = SMALL_ESC_PSIONIC_LIGHTNING_CREATURE_3
+	size = small
+	icon = GFX_esc_bio_psionic_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 40 }
+	windup = { min = 5 max = 24 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_S_3
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = s
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.75
+
+	prerequisites = { "esc_tech_psionic_lightning_3" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_3
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# medium
+weapon_component_template = {
+	key = MEDIUM_ESC_PSIONIC_LIGHTNING_CREATURE_3
+	size = medium
+	icon = GFX_esc_bio_psionic_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 90 }
+	windup = { min = 7 max = 29 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_M_3
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = m
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.55
+
+	prerequisites = { "esc_tech_psionic_lightning_3" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_3
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# large
+weapon_component_template = {
+	key = LARGE_ESC_PSIONIC_LIGHTNING_CREATURE_3
+	size = large
+	icon = GFX_esc_bio_psionic_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 200 }
+	windup = { min = 9 max = 34 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_1
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = l
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.3
+
+	prerequisites = { "esc_tech_psionic_lightning_3" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_3
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic l_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+	}
+}
+
+# extra-large
+weapon_component_template = {
+	key = XL_ESC_PSIONIC_LIGHTNING_CREATURE_3
+	size = extra_large
+	icon = GFX_esc_bio_psionic_lightning_3
+	icon_frame = 1
+	type = instant
+
+	damage = { min = 20 max = 460 }
+	windup = { min = 11 max = 39 }
+	total_fire_time = 24
+	range = @ESC_WEAPON_RANGE_L_4
+	accuracy = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = WEAPON
+		SIZE = xl
+		TIER = 6
+		STRATEGIC_RESOURCE_TYPE = sr_zro
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lightning_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_lightning_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_lightning_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_lightning_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_lightning_shield_damage
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_psionic_lightning_3" }
+	component_set = ESC_PSIONIC_LIGHTNING_CREATURE_3
+	projectile_gfx = "psionic_arc_emitter"
+	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_type_space_fauna }
+	ai_tags = { weapon_role_anti_hull }
+
+	target_type = target_enemies
+	target_focus = spread
+	on_hit = {
+		hidden_effect = {
+			if = {
+				limit = {
+					exists = this
+					is_civilian = no
+					NOT = { is_ship_class = shipclass_starbase }
+				}
+				random = {
+					chance = value:ship_terrify_chance
+					set_terrified_by = root.from
+					set_ship_flag = is_terrified
+					ship_event = {
+						id = shroud.5
+						days = value:ship_terrify_duration
+					}
+				}
+			}
+		}
+		custom_tooltip = "ship_terrify_tt"
+	}
 
 	# only regular empires and spiritualist FE may use this component
 	valid_for_country = {

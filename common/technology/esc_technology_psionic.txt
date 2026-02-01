@@ -13,6 +13,10 @@
 #         └─ Shroud Wrath					: tier 2 psionic cannon
 # ── Psionic Interceptors					: psionic strikecrafts
 # ── Psionic Catastrophe					: omnidirectional psionic weapon
+# ── Focused Psionic Lightning				: tier 2 psionic lightning
+#     └─ Shroud Lightning					: tier 3 psionic lightning
+# ── Focused Psionic Disruptors				: tier 2 psionic disruptor
+#     └─ Shroud-Empowered Disruptors		: tier 3 psionic disruptor
 # ── Focused Minds							: psionic damage repeatable
 # ── Well of Power							: psionic rate of fire repeatable
 
@@ -788,6 +792,274 @@ esc_tech_shockwave_psionic = {
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+############################################################
+##                Focused Psionic Disruptors              ##
+############################################################
+
+esc_tech_psionic_disruptor_2 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "tech_psionic_disruptor" "esc_tech_psionic_weapons" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_bio_psionic_disruptor_2
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##               Shroud-Empowered Disruptors              ##
+############################################################
+
+esc_tech_psionic_disruptor_3 = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_disruptor_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_bio_psionic_disruptor_3
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##                Focused Psionic Lightning               ##
+############################################################
+
+esc_tech_psionic_lightning_2 = {
+	area = society
+	category = { psionics }
+	tier = 5
+	cost = @tier5cost3
+	weight = @tier5weight3
+	ai_update_type = military
+	prerequisites = { "tech_psionic_lightning" "esc_tech_psionic_weapons" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_bio_psionic_lightning_2
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+############################################################
+##                      Shroud Lightning                  ##
+############################################################
+
+esc_tech_psionic_lightning_3 = {
+	area = society
+	category = { psionics }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost1
+	weight = @ESC_TECH_tier6_weight1
+	ai_update_type = military
+	prerequisites = { "esc_tech_psionic_lightning_2" }
+	is_rare = yes
+	is_reverse_engineerable = no
+
+	technology_swap = {
+		name = esc_tech_bio_psionic_lightning_3
+		inherit_icon = no
+		inherit_effects = yes
+		trigger = { country_uses_bio_ships = yes }
+		weight = { factor = 1 }
+	}
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0.8
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 0.9
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.1
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.2
+			has_ethic = ethic_fanatic_militarist
 		}
 	}
 }
