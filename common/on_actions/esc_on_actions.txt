@@ -74,6 +74,9 @@ on_ship_destroyed_victim = {
 	events = {
 		esc_events.6001						# repair allied ship on death
 		esc_events.6002						# damage enemy ship on death
+		esc_events_crisis.4002				# re-invasion unbidden portal destroyed
+		esc_events_crisis.4004				# re-invasion aberrant portal destroyed
+		esc_events_crisis.4006				# re-invasion vehement portal destroyed
 	}
 }
 
