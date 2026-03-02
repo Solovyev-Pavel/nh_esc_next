@@ -475,6 +475,7 @@ country_event = {
 		NOT = { has_global_flag = extradimensional_second_portal }
 		endgame_crisis_large_size_trigger = yes
 		has_global_flag = ESC_CRISIS_RE_INVASION
+		NOT = { has_global_flag = ESC_CRISIS_ABERRANT_SPAWNED }
 	}
 
 	mean_time_to_happen = {
@@ -485,6 +486,7 @@ country_event = {
 		set_crisis_sound = extradimensional_crisis_ambient_stage_3
 		set_crisis_stage_3 = yes
 		set_global_flag = extradimensional_second_portal
+		set_global_flag = ESC_CRISIS_ABERRANT_SPAWNED
 
 		random_system_within_border = {
 			limit = {
@@ -785,6 +787,7 @@ country_event = {
 		NOT = { has_global_flag = extradimensional_third_portal }
 		is_country_type = extradimensional_2
 		any_country = { is_country_type = extradimensional }
+		NOT = { has_global_flag = ESC_CRISIS_VEHEMENT_SPAWNED }
 	}
 
 	mean_time_to_happen = {
@@ -793,6 +796,7 @@ country_event = {
 
 	immediate = {
 		set_global_flag = extradimensional_third_portal
+		set_global_flag = ESC_CRISIS_VEHEMENT_SPAWNED
 		random_country = {
 			limit = { is_country_type = extradimensional }
 			random_system_within_border = {
@@ -1124,6 +1128,8 @@ country_event = {
 
 	immediate = {
 		remove_global_flag = extradimensional_invasion_happened
+		remove_global_flag = ESC_CRISIS_ABERRANT_SPAWNED
+		remove_global_flag = ESC_CRISIS_VEHEMENT_SPAWNED
 		set_global_flag = ESC_CRISIS_run_rng
 		 # trigger to enable duplicates of events that are once-only in vanilla
 		set_global_flag = ESC_CRISIS_RE_INVASION
