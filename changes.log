@@ -436,3 +436,22 @@
 - Add cheat menu for singleplayer. Cheat menu can be accessed via decision on the captial world (only in singleplayer).
 - Mantle Mining Facility can now be constructed on volcanic worlds if such an option is enabled in cheat menu.
 - Update Realistic Ships support.
+
+>>>
+- Update for Stellaris 4.3
+- Implement armor hardening for armor components. Implement shield hardening for shield components.
+- Implement damage reduction for advanced crystalline armor.
+- Implement collateral damage for titanic weapons and select XL weapons.
+- Implement several Shockwave weapons (T slot, short range but hit all enemies within).
+- Implement advanced psionic disruptors and psionic lightning weapons. Update icons for vanilla base versions of psionic disruptors and psionic lightning weapons.
+- Update size_damage_factor for ESC weapons.
+- Add military_power_multiplier for ESC weapons that need it.
+- Add bonus damage against starbases and orbital bombardment bonus to relevant ESC combat computers.
+- Rework Mantle Mining Facility:
+--- Now can be built on any natural planet.
+--- Lower production bonuses to compensate for the above.
+--- Now provides some physics and engineering researcher jobs.
+--- Building Mantle Mining Facility now always 'costs' 1 district.
+--- Mantle Mining Facility now adds additional production-bonus deposits instead of just giving lumps of random resources.
+- Quantum Computation Node now provides research jobs automation.
+- Update crisis events to avoid breaks in the re-invasion loop.
