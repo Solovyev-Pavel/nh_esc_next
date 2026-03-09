@@ -2,6 +2,9 @@
 ###                 ESC Scripted Triggers                ###
 ############################################################
 
+# returns true if ESC is active
+is_extra_ship_components_activate = { always = yes }
+
 # - detection of empire type
 # - checks for whether advanced weapons are enabled
 # - checks for culture worker types
@@ -217,8 +220,6 @@ ESC_TRIGGER_needs_dark_matter_for_ship_components = {
 ###           Technology Potentials :: general           ###
 ############################################################
 
-@ACoT_defines_flag = "acot_defines_activated"
-
 # checks whether Titanic / oversized X-slot weapons can be researched
 ESC_TRIGGER_may_research_oversized_weapons = {
     OR = {
@@ -328,9 +329,9 @@ ESC_TRIGGER_may_research_bio_weapon_damage_repeatable = {
         AND = {
             ESC_TRIGGER_may_research_biological_weapons_advanced = yes
             OR = {
-                NOT = { has_global_flag = @ACoT_defines_flag }
+                is_acot_defines_activated = no
                 AND = {
-                    has_global_flag = @ACoT_defines_flag
+                    is_acot_defines_activated = yes
                     check_variable = { which = ESC_COUNTRY_VARIABLE_bio_damage_repeatables value < 20 }
                 }
             }
@@ -345,9 +346,9 @@ ESC_TRIGGER_may_research_bio_weapon_fire_rate_repeatable = {
         AND = {
             ESC_TRIGGER_may_research_biological_weapons_advanced = yes
             OR = {
-                NOT = { has_global_flag = @ACoT_defines_flag }
+                is_acot_defines_activated = no
                 AND = {
-                    has_global_flag = @ACoT_defines_flag
+                    is_acot_defines_activated = yes
                     check_variable = { which = ESC_COUNTRY_VARIABLE_bio_fire_rate_repeatables value < 20 }
                 }
             }
@@ -436,9 +437,9 @@ ESC_TRIGGER_may_research_psionic_weapon_damage_repeatable = {
         AND = {
             ESC_TRIGGER_may_research_psionic_weapons_advanced = yes
             OR = {
-                NOT = { has_global_flag = @ACoT_defines_flag }
+                is_acot_defines_activated = no
                 AND = {
-                    has_global_flag = @ACoT_defines_flag
+                    is_acot_defines_activated = yes
                     check_variable = { which = ESC_COUNTRY_VARIABLE_psionic_damage_repeatables value < 20 }
                 }
             }
@@ -453,9 +454,9 @@ ESC_TRIGGER_may_research_psionic_weapon_fire_rate_repeatable = {
         AND = {
             ESC_TRIGGER_may_research_psionic_weapons_advanced = yes
             OR = {
-                NOT = { has_global_flag = @ACoT_defines_flag }
+                is_acot_defines_activated = no
                 AND = {
-                    has_global_flag = @ACoT_defines_flag
+                    is_acot_defines_activated = yes
                     check_variable = { which = ESC_COUNTRY_VARIABLE_psionic_fire_rate_repeatables value < 20 }
                 }
             }
@@ -488,9 +489,9 @@ ESC_TRIGGER_may_research_nanite_weapon_damage_repeatable = {
         AND = {
             ESC_TRIGGER_may_research_nanite_weapons_advanced = yes
             OR = {
-                NOT = { has_global_flag = @ACoT_defines_flag }
+                is_acot_defines_activated = no
                 AND = {
-                    has_global_flag = @ACoT_defines_flag
+                    is_acot_defines_activated = yes
                     check_variable = { which = ESC_COUNTRY_VARIABLE_nanite_damage_repeatables value < 20 }
                 }
             }
@@ -505,9 +506,9 @@ ESC_TRIGGER_may_research_nanite_weapon_fire_rate_repeatable = {
         AND = {
             ESC_TRIGGER_may_research_nanite_weapons_advanced = yes
             OR = {
-                NOT = { has_global_flag = @ACoT_defines_flag }
+                is_acot_defines_activated = no
                 AND = {
-                    has_global_flag = @ACoT_defines_flag
+                    is_acot_defines_activated = yes
                     check_variable = { which = ESC_COUNTRY_VARIABLE_nanite_fire_rate_repeatables value < 20 }
                 }
             }
