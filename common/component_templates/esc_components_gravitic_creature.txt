@@ -477,7 +477,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 30 max = 45 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_1
@@ -511,6 +511,7 @@ weapon_component_template = {
 	upgrades_to = SMALL_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -541,7 +542,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 60 max = 85 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -575,6 +576,7 @@ weapon_component_template = {
 	upgrades_to = MEDIUM_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -605,7 +607,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 115 max = 155 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -639,6 +641,7 @@ weapon_component_template = {
 	upgrades_to = LARGE_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -669,7 +672,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 325 max = 315 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_3
@@ -703,6 +706,7 @@ weapon_component_template = {
 	upgrades_to = XL_ESC_GRAVITY_TORPS_CREATURE_2
 	tags = { weapon_type_explosive weapon_type_energy x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -737,7 +741,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 40 max = 60 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_1
@@ -770,6 +774,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy s_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -800,7 +805,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 75 max = 115 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -833,6 +838,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy m_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -863,7 +869,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 150 max = 215 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -896,6 +902,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy l_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -926,7 +933,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 300 max = 435 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_3
@@ -959,6 +966,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy x_slot weapon_type_space_fauna }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff

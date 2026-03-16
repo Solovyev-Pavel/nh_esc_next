@@ -58,6 +58,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = SMALL_ESC_FLAK_CANNON_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -100,6 +101,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = MEDIUM_ESC_FLAK_CANNON_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -142,6 +144,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = LARGE_ESC_FLAK_CANNON_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -184,6 +187,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = XL_ESC_FLAK_CANNON_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -229,6 +233,7 @@ weapon_component_template = {
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -270,6 +275,7 @@ weapon_component_template = {
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -311,6 +317,7 @@ weapon_component_template = {
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -352,6 +359,7 @@ weapon_component_template = {
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -398,6 +406,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = SMALL_ESC_POINT_DEFENSE_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -440,6 +449,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = MEDIUM_ESC_POINT_DEFENSE_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -482,6 +492,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = LARGE_ESC_POINT_DEFENSE_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -524,6 +535,7 @@ weapon_component_template = {
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_point_defense screen }
 	upgrades_to = XL_ESC_POINT_DEFENSE_CREATURE_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -569,6 +581,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna s_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -610,6 +623,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna m_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -651,6 +665,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna l_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -692,6 +707,7 @@ weapon_component_template = {
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_type_space_fauna x_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -738,6 +754,7 @@ weapon_component_template = {
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_space_fauna weapon_type_energy s_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -785,6 +802,7 @@ weapon_component_template = {
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_space_fauna weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -832,6 +850,7 @@ weapon_component_template = {
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_space_fauna weapon_type_energy l_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1
@@ -879,6 +898,7 @@ weapon_component_template = {
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_space_fauna weapon_type_energy x_slot }
 	ai_tags = { weapon_role_point_defense screen }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	ai_weight = {
 		weight = 1

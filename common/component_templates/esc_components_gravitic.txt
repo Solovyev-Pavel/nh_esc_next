@@ -767,7 +767,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 115 max = 155 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -802,6 +802,7 @@ weapon_component_template = {
 	upgrades_to = ESC_GRAVITY_TORPS_2
 	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -836,7 +837,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 115 max = 155 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -871,6 +872,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_GRAVITY_TORPS_2
 	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -911,7 +913,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 150 max = 215 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -945,6 +947,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -979,7 +982,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 150 max = 215 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1013,6 +1016,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravitic_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy g_slot }
 	ai_tags = { weapon_role_anti_shield weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -1357,7 +1361,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 5000 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5000
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1429,7 +1440,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 5000 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5000
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1502,7 +1520,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 5000 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5000
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_3
@@ -1576,7 +1601,14 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 5000 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5000
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30 max = 100 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_3

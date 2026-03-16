@@ -50,7 +50,7 @@ esc_building_dragon_hatchery_desc: "강력한 에테르 드레이크를 복제�
 
 # resource-producing buildings
 esc_building_magmaminer_1: "맨틀 채굴 시설"
-esc_building_magmaminer_1_desc: "이 행성의 핵까지 파고 들어가는 채굴용 거대 구조물입니다. 가동을 위해서 셀 수 없는 노동력을 필요로 하며 어마어마한 양의 자원을 생산할 수 있습니다. 행성 도시 또는 거주할 수 있는 용암 행성에 지어질 수 있습니다.\n\n§R경고: 행성 도시에 이 건물을 건설하면 최대 개발 가능 지구가 영구적으로 5 감소합니다!§!"
+esc_building_magmaminer_1_desc: "A megastructural mine that reaches to the very core of the planet. It requires untold amount of workers to operate and can produce tremendous amounts of resources. Can be built on Ecumenopolis or Habitable Molten planets.\n\n§RWARNING: This building requires $d_esc_large_borehole_1$ to function, which will permanently reduce number of available districts by 1.§!"
 esc_planetary_core_miner_effect_regular_1: "£job_esc_planetary_core_miner£ $job_esc_planetary_core_miner_plural$은 행성의 맨틀과 핵을 채굴하여 막대한 양의 £minerals£ §Y$minerals$§!을 생성합니다."
 esc_planetary_core_miner_effect_regular_2: "$esc_planetary_core_miner_effect_regular_1$\n£job_esc_borehole_maintainer£ $job_esc_borehole_maintainer_plural$은 끝없이 파고 내려간 시추공을 관리하며, £engineering_research£ §Y$engineering_research$§!과 약간의 £rare_crystals£ §Y$rare_crystals$§!을 생산합니다."
 esc_planetary_core_miner_effect_gestalt_1: "£job_esc_planetary_core_miner_drone£ $job_esc_planetary_core_miner_drone_plural$은 행성의 맨틀과 핵을 채굴하여 막대한 양의 £minerals£ §Y$minerals$§!을 생성합니다."
@@ -81,7 +81,7 @@ job_esc_crystal_farmer_drone_effect_desc: "£job_esc_crystal_farmer_drone£ $job
 
 esc_building_crystal_farm_2: "개선된 크리스탈 농장"
 esc_building_crystal_farm_2_desc: "£rare_crystals£ §Y$rare_crystals$§!을 재배하기 위한 더 크고 효율적인 농장입니다."
-  
+
 esc_building_reprocessing_plant: "재처리 공장"
 esc_building_reprocessing_plant_desc: "이 고급 재활용 및 재처리 공장은 평범한 쓰레기에서 엄청난 양의 유용한 자원을 추출할 수 있습니다."
 job_esc_reprocessor_effect_desc: "£job_esc_reprocessor£ $job_esc_reprocessor_plural$은 £minerals£ §Y$minerals$§!와 £energy£ §Y$energy$§!를 £consumer_goods£ §Y$consumer_goods$§!와 £alloys£ §Y$alloys$§!로 전환합니다."

@@ -43,12 +43,17 @@ country_event = {
 	picture = GFX_evt_juggernaut
 	is_triggered_only = yes
 
-	trigger = {
-		NOT = { has_global_flag = ESC_GLOBAL_FLAG_CHEAT_MENU_ACTIVE }
-	}
+	# trigger = {
+	# 	NOT = { has_global_flag = ESC_GLOBAL_FLAG_CHEAT_MENU_ACTIVE }
+	# }
 
 	immediate = {
 		set_global_flag = ESC_GLOBAL_FLAG_CHEAT_MENU_ACTIVE
+	}
+
+	# leave menu
+	option = {
+		name = esc_option.exit
 	}
 
 	# Access to crystalline weapons
@@ -230,35 +235,30 @@ country_event = {
 		}
 	}
 
-	# Mantle miners on volcanic worlds
+	# Mantle miners get guaranteed 5 extra resource deposits
 	option = {
-		name = esc_cheats.20000.volcanic.enable
-		custom_tooltip = esc_cheats.20000.volcanic.enable.tooltip
+		name = esc_cheats.20000.deposits.enable
+		custom_tooltip = esc_cheats.20000.deposits.enable.tooltip
 		trigger = {
 			NOT = {
-				has_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+				has_country_flag = ESC_COUNTRY_FLAG_guaranteed_extra_mantle_miner_deposits
 			}
 		}
 		hidden_effect = {
-			set_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+			set_country_flag = ESC_COUNTRY_FLAG_guaranteed_extra_mantle_miner_deposits
 			country_event = { id = esc_options.20000 days = 0 }
 		}
 	}
 	option = {
-		name = esc_cheats.20000.volcanic.disable
-		custom_tooltip = esc_cheats.20000.volcanic.disable.tooltip
+		name = esc_cheats.20000.deposits.disable
+		custom_tooltip = esc_cheats.20000.deposits.disable.tooltip
 		trigger = {
-			has_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+			has_country_flag = ESC_COUNTRY_FLAG_guaranteed_extra_mantle_miner_deposits
 		}
 		hidden_effect = {
-			remove_country_flag = ESC_COUNTRY_FLAG_mod_allow_mantle_mining_on_volcanic_worlds
+			remove_country_flag = ESC_COUNTRY_FLAG_guaranteed_extra_mantle_miner_deposits
 			country_event = { id = esc_options.20000 days = 0 }
 		}
-	}
-
-	# leave menu
-	option = {
-		name = esc_option.exit
 	}
 
 	after = {

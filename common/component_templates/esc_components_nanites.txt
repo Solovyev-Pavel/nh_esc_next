@@ -795,6 +795,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
 	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -860,6 +861,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
 	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -926,6 +928,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -991,6 +994,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
 	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1058,6 +1062,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1124,6 +1129,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_large"
 	tags = { weapon_type_kinetic weapon_type_nanite l_slot }
 	ai_tags = { weapon_role_anti_armor artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1167,7 +1173,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 85 max = 140 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1202,6 +1208,7 @@ weapon_component_template = {
 	upgrades_to = ESC_NANITE_TORPEDO_2
 	tags = { weapon_type_explosive weapon_type_nanite g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1236,7 +1243,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 85 max = 140 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1271,6 +1278,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_NANITE_TORPEDO_2
 	tags = { weapon_type_explosive weapon_type_nanite g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1311,7 +1319,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 110 max = 165 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1345,6 +1353,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1379,7 +1388,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 110 max = 165 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1413,6 +1422,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite g_slot }
 	ai_tags = { weapon_role_artillery explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1455,8 +1465,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 160 max = 280 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 160
+		MAX_DAMAGE = 280
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1490,6 +1507,7 @@ weapon_component_template = {
 	upgrades_to = ESC_NANITE_XSLOT_2
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1526,8 +1544,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 160 max = 280 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 160
+		MAX_DAMAGE = 280
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1561,6 +1586,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_NANITE_XSLOT_2
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1601,8 +1627,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 190 max = 310 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 190
+		MAX_DAMAGE = 310
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1636,6 +1669,7 @@ weapon_component_template = {
 	upgrades_to = ESC_NANITE_TSLOT_JUGGERNAUT
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1672,8 +1706,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 190 max = 310 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 190
+		MAX_DAMAGE = 310
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1707,6 +1748,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_NANITE_TSLOT_JUGGERNAUT
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1748,8 +1790,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_T_4
@@ -1782,6 +1831,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1818,8 +1868,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_T_4
@@ -1852,6 +1909,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1889,8 +1947,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_J_4
@@ -1923,6 +1988,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -1961,8 +2027,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_3
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 450 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 450
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_J_4
@@ -1995,6 +2068,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff

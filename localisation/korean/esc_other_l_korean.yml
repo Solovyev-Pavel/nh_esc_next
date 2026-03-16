@@ -28,6 +28,30 @@ esc_extra_large: "초대형"
 d_esc_large_borehole_1: "끝없는 시추공"
 d_esc_large_borehole_1_desc: "행성의 맨틀과 핵에서 귀중한 자원을 직접 추출하는 거대한 시추공입니다."
 
+d_esc_mantle_mineral_cluster: "Minerals Cluster"
+d_esc_mantle_mineral_cluster_desc: "A cluster of high-quality minerals located within the planet's mantle that can be harvested by The Mantle Mining Facility."
+
+d_esc_mantle_alloy_plume: "Alloys Plume"
+d_esc_mantle_alloy_plume_desc: "A plume of molten alloys rising from the planet's core and into its upper mantle that can be harvested by the Mantle Mining Facility."
+
+d_esc_mantle_exotic_gases_pocket: "Exotic Gases Pocket"
+d_esc_mantle_exotic_gases_pocket_desc: "A pocket of exotic gases located within the planet's upper mantle that can be extracted by the Mantle Mining Facility."
+
+d_esc_mantle_rare_crystal_cluster: "Rare Crystals Cluster"
+d_esc_mantle_rare_crystal_cluster_desc: "A large cluster of rare crystals located witin the planet's mantle that can be extracted by the Mantle Mining Facility."
+
+d_esc_mantle_volatile_motes_cluster: "Molten Motes"
+d_esc_mantle_volatile_motes_cluster_desc: "A pocket of molten volatile motes located within the planet's upper mantle that can be extracted by the Mantle Mining Facility."
+
+d_esc_mantle_trade_value: "Pretty Crystals"
+d_esc_mantle_trade_value_desc: "A cluster of crystals found within the planet's upper mantle that can be extracted by the Mantle Mining Facility. While these crystals have little to no industrial use, there is a rising demand on the market for luxury items made with these crystals."
+
+d_esc_mantle_living_metal: "Plume of Living Metal"
+d_esc_mantle_living_metal_desc: "This strange plume of molten metal displays characteristics of very simple living organisms. Perhaps, this 'living metal' can be utilized to create new types of materials with unique properties."
+
+d_esc_mantle_immanis_colosseus: "Dead Colossus"
+d_esc_mantle_immanis_colosseus_desc: "A corpse of an immense creature floating within the planet's upper mantle. Studying it will allow us to greatly advance our understanding of life and its limits."
+
 ############################################################
 ###                         Edicts                       ###
 ############################################################
@@ -182,20 +206,29 @@ esc_events.2000.desc: "에테르 드레이크를 복제하기 위한 우리의 �
 esc_events.2002.title: "스카이 드래곤의 비행!"
 esc_events.2002.desc: "스카이 드래곤을 복제하기 위한 우리의 노력은 성공적이었고, 어린 유체가 태어났습니다. 이 생물체는 우리의 과학 직원들 앞에서 상당히 순동적이며, 과학 직원들에 따르면, 이미 충분히 강한 전투력을 우리의 목적에 빌려주도록 이끌어질 수 있다고 합니다."
 
-esc_events.3001.name: "풍부한 광맥"
-esc_events.3001.desc: "§Y[Root.GetName]§!의 광부들은 행성의 맨틀에서 매우 귀중한 £minerals£ §Y$minerals$§! 클러스터가 추출되었다고 보고했습니다."
+esc_events.3011.name: "Mineral Riches"
+esc_events.3011.desc: "Miners on §Y[Root.GetName]§! report that an exceptionally valuable cluster of £minerals£ §Y$minerals$§! has been located within the planet's mantle. Extracting these minerals will noticeably boost local resource production and will greatly benefit our empire."
 
-esc_events.3002.name: "녹은 합금"
-esc_events.3002.desc: "§Y[Root.GetName]§!의 광부들은 행성의 핵에서 최근에 대량의 녹은 £alloys£ §Y$alloys$§!이 일반적인 광물들과 함께 추출되었다고 보고했습니다."
+esc_events.3012.name: "Molten Alloys"
+esc_events.3012.desc: "Miners on §Y[Root.GetName]§! report that a plume of molten £alloys£ §Y$alloys$§! rising from the planet's core has been located during the mantle mining operations. With some tweaks to usual ectraction process, the Manle Mining Facility will be able to harvest these alloys for the benefit of our empire."
 
-esc_events.3003.name: "크리스탈로 된 선물"
-esc_events.3003.desc: "§Y[Root.GetName]§!의 광부들은 행성의 맨틀에서 여러 개의 귀중한 £rare_crystals£ §Y$rare_crystals$§! 클러스터가 추출되었다고 보고했습니다."
+esc_events.3013.name: "Exotic Gases Pocket"
+esc_events.3013.desc: "Miners on §Y[Root.GetName]§! report that a pocket of £exotic_gases£ §Y$exotic_gases$§! has been located within the planet's mantle and can be extracted by the Mantle Mining Facility. Our empire will greatly benefit from this."
 
-esc_events.3004.name: "녹은 분말"
-esc_events.3004.desc: "§Y[Root.GetName]§!의 광부들은 그들의 작전에서 행성의 맨틀의 녹은 바위 안에 용해되어 있던 많은 양의 £volatile_motes£ §Y$volatile_motes$§!을 추출해냈다고 보고했습니다."
+esc_events.3014.name: "Crystalline Gift"
+esc_events.3014.desc: "Miners on §Y[Root.GetName]§! report that several large clusters of valuable £rare_crystals£ §Y$rare_crystals$§! have been located within the planet's mantle and can be extracted by the Mantle Mining Facility. The local economy will greatly benefit from this discovery."
 
-esc_events.3005.name: "외게 가스 주머니"
-esc_events.3005.desc: "§Y[Root.GetName]§!의 광부들은 £exotic_gases£ §Y$exotic_gases$§! 주머니가 행성의 맨틀 안에 존재한다고 보고했습니다. 추출은 성공적이었고 많은 양의 귀한 자원들을 얻었습니다."
+esc_events.3015.name: "Molten Motes"
+esc_events.3015.desc: "Miners on §Y[Root.GetName]§! report that a large amount of £volatile_motes£ §Y$volatile_motes$§! were found dissolved in molten rocks of the planet's mantle. The Mantle Mining Facility will be able to extract these valuable resources for the benefit of our empire."
+
+esc_events.3016.name: "Crystalline Pretties"
+esc_events.3016.desc: "Miners on §Y[Root.GetName]§! report that a number of crystalline clusters was discovered within the planet's mantle. While these crystals appear to have little to no industrial use, there is a rising demand for luxury items that incorporate these crystals. We can make hefty £trade_value£ §Y$trade$§! from extracting these crystals with the Mantle Mining Facility."
+
+esc_events.3017.name: "Living Metals"
+esc_events.3017.desc: "Miners on §Y[Root.GetName]§! report that a curious formation of molten metal displaying qualities akin to that of very simple living organisms was discovered within the planet's mantle. With some modifications, the Mantle Mining Facility's equipment can be utilized to observe and study this £sr_living_metal£ §Y$sr_living_metal$§!, and small amounts of it can be extracted for the industrial uses."
+
+esc_events.3051.name: "Immanis Colosseus"
+esc_events.3051.desc: "Mantle Mining Facility on §Y[Root.GetName]§! reports a fascinating discovery made during the operations. A corpse of a giant lifeform unlike anything we've ever seen before was found floating within the planet's mantle, somehow intact despite immense pressure and heat surrounding it.\n\nAccording to the initial study, this colossal creature was about 250 kilometers across and at least 20 kilometers thick. We do not yet know how a creature of such immense size sustained itself, but the leading theory is that it was metabolizing fossil fuels from the planet's crust.\n\nScientists estimate that the creature perished for yet-unknown reasons around 150 000 years ago and has been slowly sinking into the planet's mantle ever since. An expedition inside the creature showed that its internal 'biosphere' is still alive, although barely. The lifeforms found within the dead colossus bear little resemblance to anything found on the surface, leading us to believe that their lineages got separated millions of years ago, which raises further questions about the nature of the colossus.\n\nWe should definitely study this creature further."
 
 ############################################################
 ###                    Static Modifiers                  ###
@@ -303,3 +336,9 @@ esc_tooltip_energy_syphon_shields_repair_s_t3: "- 공격하는 함선의 보호�
 esc_tooltip_energy_syphon_shields_repair_m_t3: "- 공격하는 함선의 보호막을 §Y60§!만큼 회복"
 esc_tooltip_energy_syphon_shields_repair_l_t3: "- 공격하는 함선의 보호막을 §Y90§!만큼 회복"
 esc_tooltip_energy_syphon_shields_repair_xl_t3: "- 공격하는 함선의 보호막을 §Y120§!만큼 회복"
+
+esc_collateral_damage_tooltip: "§YCollateral Damage§!: Deals additional damage to all hostile ships around the primary target."
+esc_shockwave_damage_tooltip: "§YOmnidirectional Shockwave§!: Deals damage to all hostile ships within attack range."
+esc_dark_matter_shockwave_tooltip: "Reduces target ships' movement speed and evasion by §G25§!%. Effect duration: §Y10§! days."
+esc_psionic_shockwave_tooltip: "Reduces target ships' accuracy and tracking by §G25§!%. Effect duration: §Y10§! days."
+esc_tesla_shockwave_tooltip: "Reduces target ships' rate of fire and weapons range by §G20§!%. Effect uration: §Y10§! days."

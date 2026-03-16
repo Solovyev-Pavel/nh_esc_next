@@ -51,6 +51,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -105,6 +106,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -167,6 +169,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot }
 	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -234,6 +237,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy l_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -261,7 +265,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1750 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1750
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 12.0 max = 47.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -293,6 +304,7 @@ weapon_component_template = {
 	upgrades_to = ESC_ENIGMATIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -329,7 +341,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1750 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1750
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 12.0 max = 47.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -361,6 +380,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_ENIGMATIC_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -402,7 +422,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_4
@@ -433,6 +460,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -469,7 +497,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_4
@@ -500,6 +535,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -537,7 +573,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_4
@@ -568,6 +611,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -606,7 +650,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 6000 max = 8500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 8500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 30.0 max = 100.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_4
@@ -637,6 +688,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_enigmatic_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -1415,7 +1467,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1000 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 2.0 max = 20.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -1483,7 +1542,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 1000 max = 2500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 2500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 2.0 max = 20.0 }
 	total_fire_time = 70
 	range = @ESC_WEAPON_RANGE_X_4
@@ -1556,7 +1622,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1623,7 +1696,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_T_3
@@ -1691,7 +1771,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_3
@@ -1760,7 +1847,14 @@ weapon_component_template = {
 	icon_frame = 1
 	type = instant
 
-	damage = { min = 4500 max = 9500 }
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 4500
+		MAX_DAMAGE = 9500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
 	windup = { min = 20.0 max = 35.0 }
 	total_fire_time = 165
 	range = @ESC_WEAPON_RANGE_J_3
@@ -1834,7 +1928,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 50 max = 100 }
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 15 }
 	total_fire_time = 40
 	range = @ESC_WEAPON_RANGE_G_2
@@ -1898,7 +1992,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 120 max = 160 }
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_G_4
@@ -1931,6 +2025,7 @@ weapon_component_template = {
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna g_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive explosive_stealth artillery artillery_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1973,8 +2068,15 @@ weapon_component_template = {
 	min_range = @ESC_WEAPON_MIN_RANGE_2
 	#use_ship_kill_target = no
 
-	damage = { min = 300 max = 600 }
-	size_damage_factor = 0.5
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 300
+		MAX_DAMAGE = 600
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.1
 	windup = { min = 2 max = 20 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -2007,6 +2109,7 @@ weapon_component_template = {
 	projectile_gfx = "voidspawn_missile"
 	tags = { weapon_type_kinetic weapon_type_explosive weapon_type_space_fauna x_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull explosive }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff

@@ -507,6 +507,56 @@ esc_psionic_interceptors_creature = {
 	}
 }
 
+# Focused Psionic Disruptors
+esc_psionic_disruptors_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_disruptors_2
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+		medium = MEDIUM_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+		large = LARGE_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+		extra_large = XL_ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	}
+	upgrades_to = esc_psionic_disruptors_creature_3
+}
+
+# Shroud-Empowered Disruptors
+esc_psionic_disruptors_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_disruptors_3
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+		medium = MEDIUM_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+		large = LARGE_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+		extra_large = XL_ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	}
+}
+
+# Focused Psionic Lightning
+esc_psionic_lightning_creature_2 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_lightning_2
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_LIGHTNING_CREATURE_2
+		medium = MEDIUM_ESC_PSIONIC_LIGHTNING_CREATURE_2
+		large = LARGE_ESC_PSIONIC_LIGHTNING_CREATURE_2
+		extra_large = XL_ESC_PSIONIC_LIGHTNING_CREATURE_2
+	}
+	upgrades_to = esc_psionic_lightning_creature_3
+}
+
+# Shroud Lightning
+esc_psionic_lightning_creature_3 = {
+	type = offensive
+	icon = GFX_esc_bio_psionic_lightning_3
+	ship_components = {
+		small = SMALL_ESC_PSIONIC_LIGHTNING_CREATURE_3
+		medium = MEDIUM_ESC_PSIONIC_LIGHTNING_CREATURE_3
+		large = LARGE_ESC_PSIONIC_LIGHTNING_CREATURE_3
+		extra_large = XL_ESC_PSIONIC_LIGHTNING_CREATURE_3
+	}
+}
+
 ############################################################
 ##           ESC : Tesla Weapons : Space Fauna            ##
 ############################################################

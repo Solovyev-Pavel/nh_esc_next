@@ -714,7 +714,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 60 max = 110 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -747,6 +747,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_MISSILE_2
 	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -786,7 +787,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 75 max = 120 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -819,6 +820,7 @@ weapon_component_template = {
 	upgrades_to = ESC_BIO_MISSILE_3
 	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -858,7 +860,7 @@ weapon_component_template = {
 	type = missile
 
 	damage = { min = 90 max = 155 }
-	size_damage_factor = 1
+	size_damage_factor = 0.2
 	windup = { min = 5 max = 10 }
 	total_fire_time = 100
 	range = @ESC_WEAPON_RANGE_G_2
@@ -890,6 +892,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological g_slot }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -928,8 +931,15 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 150 max = 300 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 150
+		MAX_DAMAGE = 300
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -963,6 +973,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -995,8 +1006,15 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 175 max = 325 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 175
+		MAX_DAMAGE = 325
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_xl
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 10 max = 35 }
 	total_fire_time = 80
 	range = @ESC_WEAPON_RANGE_X_5
@@ -1030,6 +1048,7 @@ weapon_component_template = {
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	upgrades_to = ESC_BIO_X_MISSILE_3_JUGGERNAUT
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1063,8 +1082,15 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 250 max = 500 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 250
+		MAX_DAMAGE = 500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_T_4
@@ -1097,6 +1123,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -1126,8 +1153,15 @@ weapon_component_template = {
 	icon_frame = 1
 	type = missile
 
-	damage = { min = 250 max = 500 }
-	size_damage_factor = 1
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 250
+		MAX_DAMAGE = 500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
 	windup = { min = 15 max = 45 }
 	total_fire_time = 60
 	range = @ESC_WEAPON_RANGE_J_4
@@ -1160,6 +1194,7 @@ weapon_component_template = {
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	potential = {
 		ESC_ship_uses_juggernaut_components = yes

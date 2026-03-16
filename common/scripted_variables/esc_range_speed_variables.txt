@@ -56,3 +56,23 @@
 @ESC_WEAPON_RANGE_J_2 = 175 # wave motion gun
 @ESC_WEAPON_RANGE_J_3 = 200 # crystalline, particle lance, arc emitter, gravity, rkkv, ferromagnetic, tiyanki, psionic, tesla
 @ESC_WEAPON_RANGE_J_4 = 225 # bio-t-missiles, arc-en-ciel, enigmatic, x missile, nanite
+
+### Collateral damage ranges (circle around primary target)
+
+@ESC_COLLATERAL_RANGE_KINETIC_s 	= 3
+@ESC_COLLATERAL_RANGE_KINETIC_m 	= 3
+@ESC_COLLATERAL_RANGE_KINETIC_l 	= 5
+@ESC_COLLATERAL_RANGE_KINETIC_xl 	= 5
+@ESC_COLLATERAL_RANGE_KINETIC_t 	= 10
+
+@ESC_COLLATERAL_RANGE_ENERGY_s 		= 3
+@ESC_COLLATERAL_RANGE_ENERGY_m 		= 5
+@ESC_COLLATERAL_RANGE_ENERGY_l 		= 5
+@ESC_COLLATERAL_RANGE_ENERGY_xl 	= 10
+@ESC_COLLATERAL_RANGE_ENERGY_t 		= 20
+
+@ESC_COLLATERAL_RANGE_EXPLOSIVE_s 	= 5
+@ESC_COLLATERAL_RANGE_EXPLOSIVE_m 	= 5
+@ESC_COLLATERAL_RANGE_EXPLOSIVE_l 	= 10
+@ESC_COLLATERAL_RANGE_EXPLOSIVE_xl 	= 15
+@ESC_COLLATERAL_RANGE_EXPLOSIVE_t 	= 20

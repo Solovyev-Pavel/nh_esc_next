@@ -18,7 +18,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -28
 
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	firing_arc = 25.0
 
 	hull_damage = @ESC_WEAPON_mandible_hull_damage
@@ -34,6 +34,7 @@ weapon_component_template = {
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
 	upgrades_to = ESC_MANDIBLES_5
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes
@@ -76,7 +77,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -35
 
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	firing_arc = 25.0
 
 	hull_damage = @ESC_WEAPON_mandible_hull_damage
@@ -91,6 +92,7 @@ weapon_component_template = {
 	projectile_gfx = "biogenesis_01_mandible_attack"
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes
@@ -133,7 +135,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -28
 
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	firing_arc = 25.0
 
 	hull_damage = @ESC_WEAPON_cyber_mandible_hull_damage
@@ -149,6 +151,7 @@ weapon_component_template = {
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
 	upgrades_to = ESC_MANDIBLES_CYBER_2
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes
@@ -191,7 +194,7 @@ weapon_component_template = {
 	accuracy = 1.0
 	power = -28
 
-	size_damage_factor = 0.5
+	size_damage_factor = 0.1
 	firing_arc = 25.0
 
 	hull_damage = @ESC_WEAPON_cyber_mandible_hull_damage
@@ -206,6 +209,7 @@ weapon_component_template = {
 	projectile_gfx = "biogenesis_01_mandible_attack"
 	tags = { weapon_type_mandible weapon_type_kinetic g_slot }
 	ai_tags = { weapon_role_anti_armor }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_melee
 
 	potential = {
 		ship_uses_mauler_components = yes

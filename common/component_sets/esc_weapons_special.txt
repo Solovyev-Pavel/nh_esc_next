@@ -957,6 +957,93 @@ component_set = {
 	icon_frame = 1
 }
 
+# psionic catastrophe
+component_set = {
+	key = ESC_PSIONIC_SHOCKWAVE
+	icon = GFX_esc_psionic_catastrophe
+	icon_frame = 1
+}
+
+# focused psionic disruptors
+component_set = {
+	key = ESC_PSIONIC_DISRUPTORS_2
+	icon = GFX_esc_psionic_disruptors_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PSIONIC_DISRUPTORS_2
+	icon = GFX_esc_bio_psionic_disruptors_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_DISRUPTORS_CREATURE_2
+	icon = GFX_esc_bio_psionic_disruptors_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# shroud-empowered disruptors
+component_set = {
+	key = ESC_PSIONIC_DISRUPTORS_3
+	icon = GFX_esc_psionic_disruptors_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PSIONIC_DISRUPTORS_3
+	icon = GFX_esc_bio_psionic_disruptors_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_DISRUPTORS_CREATURE_3
+	icon = GFX_esc_bio_psionic_disruptors_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# focused psionic lightning
+component_set = {
+	key = ESC_PSIONIC_LIGHTNING_2
+	icon = GFX_esc_psionic_lightning_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PSIONIC_LIGHTNING_2
+	icon = GFX_esc_bio_psionic_lightning_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_LIGHTNING_CREATURE_2
+	icon = GFX_esc_bio_psionic_lightning_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# shroud lightning
+component_set = {
+	key = ESC_PSIONIC_LIGHTNING_3
+	icon = GFX_esc_psionic_lightning_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_BIO_PSIONIC_LIGHTNING_3
+	icon = GFX_esc_bio_psionic_lightning_3
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_PSIONIC_LIGHTNING_CREATURE_3
+	icon = GFX_esc_bio_psionic_lightning_3
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 ############################################################
 ##              Component Sets: Tesla Weapons             ##
 ############################################################
@@ -1111,6 +1198,13 @@ component_set = {
 	icon = GFX_esc_bio_tesla_strikecraft
 	icon_frame = 1
 	is_space_fauna_component_set = yes
+}
+
+# tesla shockwave
+component_set = {
+	key = ESC_TESLA_SHOCKWAVE
+	icon = GFX_esc_tesla_shockwave
+	icon_frame = 1
 }
 
 ############################################################

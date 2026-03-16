@@ -13,11 +13,8 @@
 # - corvette
 # - destroyer
 # - cruiser
-# - cruiser_nsc ----------- legacy support
 # - battleship
-# - battleship_nsc -------- legacy support
 # - titan
-# - titan_nsc ------------- legacy support
 # - juggernaut
 # - platform
 # - platform2
@@ -25,7 +22,6 @@
 # - ion_cannon
 # - strikecruiser
 # - battlecruiser
-# - carrier --------------- legacy support
 # - dreadnought
 # - flagship
 
@@ -40,11 +36,11 @@
 
 @ESC_REACTOR_t6_power_corvette					= 285
 @ESC_REACTOR_MOD_t6_corvette                    = 0
-@ESC_REACTOR_MOD_t6_corvette_nsc                = 115 # total = 400
+@ESC_REACTOR_MOD_t6_corvette_nsc                = 535 # total = 820
 
 @ESC_REACTOR_t6_power_destroyer					= 550
 @ESC_REACTOR_MOD_t6_destroyer                   = 0
-@ESC_REACTOR_MOD_t6_destroyer_nsc               = 250 # total = 800
+@ESC_REACTOR_MOD_t6_destroyer_nsc               = 800 # total = 1350
 
 @ESC_REACTOR_t6_power_cruiser					= 1200
 @ESC_REACTOR_MOD_t6_cruiser                     = 0
@@ -60,7 +56,7 @@
 
 @ESC_REACTOR_t6_power_juggernaut				= 20000
 @ESC_REACTOR_MOD_t6_juggernaut                  = 0
-@ESC_REACTOR_MOD_t6_juggernaut_nsc              = 10000 # total = 30000
+@ESC_REACTOR_MOD_t6_juggernaut_nsc              = 11000 # total = 31000
 
 @ESC_REACTOR_t6_power_platform					= 2415
 @ESC_REACTOR_MOD_t6_platform                    = 0
@@ -86,20 +82,13 @@
 @ESC_REACTOR_MOD_t6_battlecruiser               = 0
 @ESC_REACTOR_MOD_t6_battlecruiser_nsc           = 0
 
-@ESC_REACTOR_t6_power_dreadnought				= 8000
+@ESC_REACTOR_t6_power_dreadnought				= 10000
 @ESC_REACTOR_MOD_t6_dreadnought                 = 0
 @ESC_REACTOR_MOD_t6_dreadnought_nsc             = 0
 
 @ESC_REACTOR_t6_power_flagship					= 55000
 @ESC_REACTOR_MOD_t6_flagship                    = 0
 @ESC_REACTOR_MOD_t6_flagship_nsc                = 0
-
-# power :: legacy
-
-@ESC_REACTOR_t6_power_cruiser_nsc				= 2410
-@ESC_REACTOR_t6_power_battleship_nsc			= 5000
-@ESC_REACTOR_t6_power_titan_nsc					= 12500
-@ESC_REACTOR_t6_power_carrier					= 5000
 
 # cost :: alloys
 @ESC_REACTOR_t6_cost_starbase					= 0
@@ -133,7 +122,7 @@
 
 @ESC_REACTOR_t7_power_corvette 					= 400
 @ESC_REACTOR_MOD_t7_corvette                    = 0
-@ESC_REACTOR_MOD_t7_corvette_nsc                = 450 # total = 850
+@ESC_REACTOR_MOD_t7_corvette_nsc                = 920 # total = 1320
 
 @ESC_REACTOR_t7_power_destroyer 				= 800
 @ESC_REACTOR_MOD_t7_destroyer                   = 0
@@ -141,7 +130,7 @@
 
 @ESC_REACTOR_t7_power_cruiser 					= 1600
 @ESC_REACTOR_MOD_t7_cruiser                     = 0
-@ESC_REACTOR_MOD_t7_cruiser_nsc                 = 1500 # total = 3100
+@ESC_REACTOR_MOD_t7_cruiser_nsc                 = 1510 # total = 3110
 
 @ESC_REACTOR_t7_power_battleship 				= 2800
 @ESC_REACTOR_MOD_t7_battleship                  = 0
@@ -153,7 +142,7 @@
 
 @ESC_REACTOR_t7_power_juggernaut				= 20000
 @ESC_REACTOR_MOD_t7_juggernaut                  = 0
-@ESC_REACTOR_MOD_t7_juggernaut_nsc              = 20000 # total = 40000
+@ESC_REACTOR_MOD_t7_juggernaut_nsc              = 16100 # total = 36100
 
 @ESC_REACTOR_t7_power_platform 					= 3400
 @ESC_REACTOR_MOD_t7_platform                    = 0
@@ -187,13 +176,6 @@
 @ESC_REACTOR_MOD_t7_flagship                    = 0
 @ESC_REACTOR_MOD_t7_flagship_nsc                = 0
 
-# power :: legacy
-
-@ESC_REACTOR_t7_power_cruiser_nsc				= 3110
-@ESC_REACTOR_t7_power_battleship_nsc 			= 7000
-@ESC_REACTOR_t7_power_carrier 					= 7000
-@ESC_REACTOR_t7_power_titan_nsc 				= 15000
-
 # cost :: alloys
 @ESC_REACTOR_t7_cost_starbase					= 0
 @ESC_REACTOR_t7_cost_corvette 					= 47
@@ -226,7 +208,7 @@
 
 @ESC_REACTOR_t8_power_corvette 					= 600
 @ESC_REACTOR_MOD_t8_corvette                    = 0
-@ESC_REACTOR_MOD_t8_corvette_nsc                = 1000 # total = 1600
+@ESC_REACTOR_MOD_t8_corvette_nsc                = 1470 # total = 2070
 
 @ESC_REACTOR_t8_power_destroyer 				= 1200
 @ESC_REACTOR_MOD_t8_destroyer                   = 0
@@ -246,7 +228,7 @@
 
 @ESC_REACTOR_t8_power_juggernaut				= 25000
 @ESC_REACTOR_MOD_t8_juggernaut                  = 0
-@ESC_REACTOR_MOD_t8_juggernaut_nsc              = 20000 # total = 45000
+@ESC_REACTOR_MOD_t8_juggernaut_nsc              = 18600 # total = 43600
 
 @ESC_REACTOR_t8_power_platform 					= 5000
 @ESC_REACTOR_MOD_t8_platform                    = 0
@@ -279,12 +261,6 @@
 @ESC_REACTOR_t8_power_flagship 					= 95000
 @ESC_REACTOR_MOD_t8_flagship                    = 0
 @ESC_REACTOR_MOD_t8_flagship_nsc                = 0
-
-# power :: legacy
-@ESC_REACTOR_t8_power_cruiser_nsc				= 4160
-@ESC_REACTOR_t8_power_battleship_nsc 			= 10000
-@ESC_REACTOR_t8_power_titan_nsc 				= 17500
-@ESC_REACTOR_t8_power_carrier 					= 9000
 
 # cost :: alloys
 @ESC_REACTOR_t8_cost_starbase					= 0

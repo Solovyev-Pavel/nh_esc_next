@@ -25,17 +25,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t6_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t6_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_6" }
@@ -58,17 +60,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t6_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t6_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_6" }
@@ -91,17 +95,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t6_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t6_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_6" }
@@ -124,17 +130,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_xl_t6_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t6_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t6_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_6" }
@@ -161,17 +169,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_7" }
@@ -194,17 +204,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_7" }
@@ -227,17 +239,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_7" }
@@ -260,17 +274,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_xl_t7_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_7" }
@@ -297,17 +313,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_s_t9_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t9_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_8" }
@@ -329,17 +347,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_m_t9_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t9_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_8" }
@@ -361,17 +381,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_l_t9_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t9_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_8" }
@@ -393,17 +415,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = @ESC_SHIELD_xl_t9_upkeep_alloys
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t9_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_8" }
@@ -429,17 +453,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t6_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_1" }
@@ -462,17 +488,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t6_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_1" }
@@ -495,17 +523,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t6_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_1" }
@@ -528,17 +558,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t6_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t6_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 6
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t6_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t6_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T4
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_1" }
@@ -565,17 +597,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t7_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_2" }
@@ -598,17 +632,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t7_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_2" }
@@ -631,17 +667,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t7_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_2" }
@@ -664,17 +702,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t7_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t7_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T5
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_2" }
@@ -701,17 +741,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t8_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
@@ -733,17 +775,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t8_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
@@ -765,17 +809,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t8_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
@@ -797,17 +843,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = exotic_gases
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t8_cost_special
 	}
 
 	modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t8_strength_cycl
 		ship_shield_regen_add_perc = 0.015
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_shields_cyclonic_3" }
@@ -833,17 +881,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t7_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_2" }
@@ -866,17 +916,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t7_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_2" }
@@ -899,17 +951,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t7_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_2" }
@@ -932,17 +986,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t7_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t7_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 7
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t7_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t7_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t7_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_2" }
@@ -969,17 +1025,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
@@ -1001,17 +1059,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
@@ -1033,17 +1093,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
@@ -1065,17 +1127,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_dark_matter
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_dark_matter_shields_3" }
@@ -1101,17 +1165,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_2" }
@@ -1139,17 +1205,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_2" }
@@ -1177,17 +1245,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_2" }
@@ -1215,17 +1285,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t8_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t8_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 8
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t8_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t8_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t8_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_2" }
@@ -1257,17 +1329,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_s_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_s_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = s
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_s_t9_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_s_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_s_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_3" }
@@ -1294,17 +1368,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_m_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_m_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = m
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_m_t9_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_m_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_m_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_3" }
@@ -1331,17 +1407,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_l_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_l_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = l
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_l_t9_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_l_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_l_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_3" }
@@ -1368,17 +1446,19 @@ utility_component_template = {
 	icon_frame = 1
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_bio_component_cost_sr
-		COMPONENT_COST = @ESC_SHIELD_xl_t9_cost_alloys
-		ENERGY_UPKEEP = @ESC_SHIELD_xl_t9_upkeep_energy
-		COMPONENT_UPKEEP_COST = 0
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = SHIELD
+		SIZE = xl
+		TIER = 9
 		STRATEGIC_RESOURCE_TYPE = sr_zro
-		STRATEGIC_RESOURCE_COST = @ESC_SHIELD_xl_t9_cost_special
 	}
 
     modifier = {
 		ship_shield_add = @ESC_SHIELD_xl_t9_strength
 		ship_shield_regen_add_static = @ESC_SHIELD_xl_t9_regen
+	}
+	ship_modifier = {
+		ship_shield_hardening_add = @hardening_T6
 	}
 
 	prerequisites = { "esc_tech_psionic_shield_3" }
