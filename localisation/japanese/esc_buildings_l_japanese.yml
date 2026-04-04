@@ -8,83 +8,83 @@
 
 # research buildings and special buildings
 esc_building_central_research_bureau: "Central Research Bureau"
-esc_building_central_research_bureau_desc: "A grand palace of science where the brightest mind of our empire gather together to unveil the mysteries of the universe."
+esc_building_central_research_bureau_desc: "A grand palace of science where our Empire's foremost scientific minds pool their brilliance in pursuit of the universe's deepest secrets."
 esc_central_research_bureau_effect_regular: "$job_head_researcher_effect_desc$\n$job_researcher_effect_desc$"
 
 esc_building_culture_nexus: "Culture Nexus"
-esc_building_culture_nexus_desc: "A place where people of our Empire can learn about the galaxy and various cultures that exist within it."
+esc_building_culture_nexus_desc: "A grand cultural institution where citizens immerse themselves in the collected knowledge of galactic civilizations past and present."
 esc_culture_nexus_effect_death_priests: "$job_death_priest_effect_desc$\n$job_mortal_initiate_effect_desc$"
 
 esc_building_cerebral_node: "Cerebral Node"
-esc_building_cerebral_node_desc: "A large cerebrate that constantly thinks about the ways to further improve the hive."
-job_esc_mind_walker_effect_desc: "£job_esc_mind_walker£ $job_esc_mind_walker_plural$ unify the hive, producing £unity£ §Y$unity$§!."
+esc_building_cerebral_node_desc: "A vast cerebrate whose ceaseless contemplation drives the Hive toward ever-greater perfection."
+job_esc_mind_walker_effect_desc: "£job_esc_mind_walker£ $job_esc_mind_walker_plural$ unify the Hive, producing £unity£ §Y$unity$§!."
 esc_cerebral_node_effect_regular: "$job_esc_mind_walker_effect_desc$\n$job_maintenance_drone_effect_desc$"
 esc_cerebral_node_effect_death_chronicle: "$job_esc_mind_walker_effect_desc$\n$job_maintenance_drone_effect_desc$"
 
 esc_building_network_regulator: "Network Regulator"
-esc_building_network_regulator_desc: "A specialized processing node that re-distributes information among the machines under its control, greatly improving their efficiency."
+esc_building_network_regulator_desc: "A specialized processing node that orchestrates the flow of data across all connected machines, bringing the collective to peak operational clarity."
 esc_network_regulator_effect_regular: "$job_evaluator_effect_desc$\n$job_maintenance_drone_effect_desc$"
 esc_network_regulator_effect_death_chronicle: "$job_chronicle_drone_effect_desc$\n$job_maintenance_drone_effect_desc$"
 
 esc_building_materials_laboratory: "Advanced Materials Laboratory"
-esc_building_materials_laboratory_desc: "A specialized laboratory dedicated to development better materials, both for governmental projects and everyday use."
+esc_building_materials_laboratory_desc: "A specialized laboratory where new alloys, composites, and various exotic substances are refined for both industrial projects and daily life."
 
 esc_building_technology_institute: "Technology Institute"
-esc_building_technology_institute_desc: "A large scientific complex dedicated to technological advancement of our Empire."
+esc_building_technology_institute_desc: "A towering scientific complex wholly devoted to pushing the boundaries of our Empire's technological prowess."
 
 esc_building_watcher: "Watcher of Eternity"
-esc_building_watcher_desc: "A massive complex that bends reality itself, allowing us to gaze upon past, present and future."
+esc_building_watcher_desc: "A colossal complex that bends the fabric of spacetime itself, granting its keepers sight across past, present, and futures yet to unfold."
 esc_watcher_of_eternity_effect_regular: "$job_head_researcher_effect_desc$\n$job_researcher_effect_desc$"
 
 esc_building_stellar_energy_tower: "Stellar Energy Tower"
-esc_building_stellar_energy_tower_desc: "A large tower that transforms light elements into pure energy, like a miniature sun."
+esc_building_stellar_energy_tower_desc: "A monolithic tower that fuses light elements into pure energy, burning with the fury of a captive star."
 esc_stellar_tower_effect_regular: "$job_researcher_effect_desc$\n$job_technician_effect_desc$\nAdditional $job_technician_plural$ jobs will be opened for every §Y20§! £pop£ pops on the planet"
 esc_stellar_tower_effect_hive: "$job_brain_drone_effect_desc$\n$job_technician_drone_effect_desc$\nAdditional $job_technician_drone_plural$ jobs will be opened for every §Y20§! £pop£ pops on the planet"
 esc_stellar_tower_effect_machine: "$job_calculator_effect_desc$\n$job_technician_drone_effect_desc$\nAdditional $job_technician_drone_plural$ jobs will be opened for every §Y20§! £pop£ pops on the planet"
 
 esc_building_quantum_node: "Quantum Computation Node"
-esc_building_quantum_node_desc: "A large computing complex based on advanced processors of the Infinity Machine. It provides a large amount of resources for our scientists to work with and can even conduct some basic research automatically with the help of an AI."
+esc_building_quantum_node_desc: "Built around processors derived from the Infinity Machine itself, this vast computing complex grants our scientists staggering computational power and can conduct autonomous research through its resident AI."
 
 esc_building_dragon_hatchery: "Dragon Hatchery"
-esc_building_dragon_hatchery_desc: "A specialized cloning facility constructed for the explicit purpose of cloning the mighty Ether Drake."
+esc_building_dragon_hatchery_desc: "A cloning facility of singular purpose: to replicate the fearsome Ether Drake and bend its terrible power to our will."
 
 # resource-producing buildings
 esc_building_magmaminer_1: "Mantle Mining Facility"
-esc_building_magmaminer_1_desc: "A megastructural mine that reaches to the very core of the planet. It requires untold amount of workers to operate and can produce tremendous amounts of resources. Can be built on Ecumenopolis or Habitable Molten planets.\n\n§RWARNING: This building requires $d_esc_large_borehole_1$ to function, which will permanently reduce number of available districts by 1.§!"
+esc_building_magmaminer_1_desc: "A megastructural mine that reaches to the very core of the planet. It requires untold amount of workers to operate and can produce tremendous amounts of resources.\n\n§RWARNING: This building requires $d_esc_large_borehole_1$ to function, which will permanently reduce number of available districts by 1.§!"
 esc_planetary_core_miner_effect_regular_1: "£job_esc_planetary_core_miner£ $job_esc_planetary_core_miner_plural$ produce large amounts of £minerals£ §Y$minerals$§! by mining planetary mantle and core."
 esc_planetary_core_miner_effect_regular_2: "$esc_planetary_core_miner_effect_regular_1$\n£job_esc_borehole_maintainer£ $job_esc_borehole_maintainer_plural$ maintain the abyssal borehole, producing £engineering_research£ §Y$engineering_research$§! and some £rare_crystals£ §Y$rare_crystals$§!"
 esc_planetary_core_miner_effect_gestalt_1: "£job_esc_planetary_core_miner_drone£ $job_esc_planetary_core_miner_drone_plural$ produce large amounts of £minerals£ §Y$minerals$§! by mining planetary mantle and core."
 esc_planetary_core_miner_effect_gestalt_2: "$esc_planetary_core_miner_effect_gestalt_1$\n£job_esc_borehole_maintainer_drone£ $job_esc_borehole_maintainer_drone_plural$ maintain the abyssal borehole, producing £engineering_research£ §Y$engineering_research$§! and some £rare_crystals£ §Y$rare_crystals$§!"
 
 esc_building_magmaminer_2: "Improved Mantle Mining Facility"
-esc_building_magmaminer_2_desc: "An even larger and more efficient mine to pull valuable resources straight from the planetary mantle and core."
+esc_building_magmaminer_2_desc: "An expanded mining operation that is pulling precious resources from the planet's mantle and core with ruthless efficiency."
 
 esc_building_zro_distillery: "Zro Distillery"
-esc_building_zro_distillery_desc: "This advanced processing facility sifts through literal mountains of raw materials to produce tiny crystals of synthetic £sr_zro£ §Y$sr_zro$§!."
-job_esc_zro_distiller_effect_desc: "£job_esc_zro_distiller£ $job_esc_zro_distiller_plural$ produces £sr_zro£ §Y$sr_zro$§! out of raw materials."
-job_esc_zro_distiller_drone_effect_desc: "£job_esc_zro_distiller_drone£ $job_esc_zro_distiller_drone_plural$ produces £sr_zro£ §Y$sr_zro$§! out of raw materials."
+esc_building_zro_distillery_desc: "Mountains of raw material pass through this facility's labyrinthine processors, yielding only the tiniest crystals of synthetic £sr_zro£ §Y$sr_zro$§!, each one worth the effort a thousandfold."
+job_esc_zro_distiller_effect_desc: "£job_esc_zro_distiller£ $job_esc_zro_distiller_plural$ produce £sr_zro£ §Y$sr_zro$§! out of raw materials."
+job_esc_zro_distiller_drone_effect_desc: "£job_esc_zro_distiller_drone£ $job_esc_zro_distiller_drone_plural$ produce £sr_zro£ §Y$sr_zro$§! out of raw materials."
 
 esc_building_dark_matter_facility: "Dark Matter Drawing Facility"
-esc_building_dark_matter_facility_desc: "A large complex built around a contained Kugelblitz black hole from which £sr_dark_matter£ §Y$sr_dark_matter$§! is harvested."
-job_esc_dark_matter_shaper_effect_desc: "£job_esc_dark_matter_shaper£ $job_esc_dark_matter_shaper_plural$ produce £sr_dark_matter£ §Y$sr_dark_matter$§! and £physics_research£ §Y$physics_research$§!"
-job_esc_dark_matter_shaper_drone_effect_desc: "£job_esc_dark_matter_shaper_drone£ $job_esc_dark_matter_shaper_drone_plural$ produce £sr_dark_matter£ §Y$sr_dark_matter$§! and £physics_research£ §Y$physics_research$§!"
+esc_building_dark_matter_facility_desc: "At the heart of this facility sits a contained Kugelblitz black hole, from which precious £sr_dark_matter£ §Y$sr_dark_matter$§! is harvested."
+job_esc_dark_matter_shaper_effect_desc: "£job_esc_dark_matter_shaper£ $job_esc_dark_matter_shaper_plural$ produce £sr_dark_matter£ §Y$sr_dark_matter$§! and £physics_research£ §Y$physics_research$§!."
+job_esc_dark_matter_shaper_drone_effect_desc: "£job_esc_dark_matter_shaper_drone£ $job_esc_dark_matter_shaper_drone_plural$ produce £sr_dark_matter£ §Y$sr_dark_matter$§! and £physics_research£ §Y$physics_research$§!."
 
 esc_building_nanite_foundry: "Nanite Foundry"
-esc_building_nanite_foundry_desc: "A vast complex of buildings, specialized for breeding nanites."
+esc_building_nanite_foundry_desc: "A sprawling industrial hive where nanites are bred by the billions, each one a microscopic instrument of our will."
 job_esc_nanite_breeder_effect_desc: "£job_esc_nanite_breeder£ $job_esc_nanite_breeder_plural$ produce £nanites£ §Y$nanites$§! from £alloys£ §Y$alloys$§!."
 job_esc_nanite_breeder_drone_effect_desc: "£job_esc_nanite_breeder_drone£ $job_esc_nanite_breeder_drone_plural$ produce £nanites£ §Y$nanites$§! from £alloys£ §Y$alloys$§!."
 
 esc_building_crystal_farm_1: "Crystal Farm"
-esc_building_crystal_farm_1_desc: "A facility where £rare_crystals£ §Y$rare_crystals$§! are artificially grown in large quantities for use within our empire."
+esc_building_crystal_farm_1_desc: "Row upon row of crystalline lattices grow under carefully controlled conditions, supplying our Empire with a steady harvest of £rare_crystals£ §Y$rare_crystals$§!."
 job_esc_crystal_farmer_effect_desc: "£job_esc_crystal_farmer£ $job_esc_crystal_farmer_plural$ turn £minerals£ §Y$minerals$§! into £rare_crystals£ §Y$rare_crystals$§!."
 job_esc_crystal_farmer_drone_effect_desc: "£job_esc_crystal_farmer_drone£ $job_esc_crystal_farmer_drone_plural$ turn £minerals£ §Y$minerals$§! into £rare_crystals£ §Y$rare_crystals$§!."
 
 esc_building_crystal_farm_2: "Improved Crystal Farm"
-esc_building_crystal_farm_2_desc: "A bigger and more efficient farm for growing £rare_crystals£ §Y$rare_crystals$§!."
+esc_building_crystal_farm_2_desc: "An expanded crystalline growth facility whose refined cultivation methods yield £rare_crystals£ §Y$rare_crystals$§! in far greater abundance."
 
 esc_building_reprocessing_plant: "Reprocessing Plant"
-esc_building_reprocessing_plant_desc: "This advanced recycling and reprocessing plant can pull incredible amounts of useful resources out of common trash."
-job_esc_reprocessor_effect_desc: "£job_esc_reprocessor£ $job_esc_reprocessor_plural$ turn £minerals£ §Y$minerals$§! and £energy£ §Y$energy$§! into £consumer_goods£ §Y$consumer_goods$§! and £alloys£ §Y$alloys$§!"
+esc_building_reprocessing_plant_desc: "What others discard as refuse, this facility transmutes into wealth, extracting astonishing quantities of usable material from common waste."
+job_esc_reprocessor_effect_desc: "£job_esc_reprocessor£ $job_esc_reprocessor_plural$ turn £minerals£ §Y$minerals$§! and £energy£ §Y$energy$§! into £consumer_goods£ §Y$consumer_goods$§! and £alloys£ §Y$alloys$§!."
 job_esc_reprocessor_drone_effect_desc: "£job_esc_reprocessor_drone£ $job_esc_reprocessor_drone_plural$ turn raw resources into £alloys£ §Y$alloys$§!."
 job_esc_reprocessor_drone_rs_effect_desc: "£job_esc_reprocessor_drone£ $job_esc_reprocessor_drone_plural$ turn raw resources into £alloys£ §Y$alloys$§! and £consumer_goods£ §Y$consumer_goods$§!."
 
@@ -96,36 +96,36 @@ job_esc_reprocessor_drone_rs_effect_desc: "£job_esc_reprocessor_drone£ $job_es
 job_esc_nanite_breeder: "Nanite Breeder"
 job_esc_nanite_breeder_plural: "Nanite Breeders"
 mod_job_esc_nanite_breeder_add: "$job_esc_nanite_breeder$"
-job_esc_nanite_breeder_desc: "Specialist pops working at the Nanite Foundry, ensuring the empire's continued access to vast quantities of usable £nanites£ §Y$nanites$§!."
+job_esc_nanite_breeder_desc: "Specialists who tend the Nanite Foundry's breeding vats, guaranteeing our Empire a steady supply of usable £nanites£ §Y$nanites$§!."
 
 job_esc_nanite_breeder_drone: "Nanite Breeding Drone"
 job_esc_nanite_breeder_drone_plural: "Nanite Breeding Drones"
 mod_job_esc_nanite_breeder_drone_add: "$job_esc_nanite_breeder_drone$"
-job_esc_nanite_breeder_drone_desc: "Complex drones working at the Nanite Foundry, ensuring the empire's continued access to vast quantities of usable £nanites£ §Y$nanites$§!."
+job_esc_nanite_breeder_drone_desc: "Complex drones that maintain the Nanite Foundry's breeding cycles, securing our Empire's access to usable £nanites£ §Y$nanites$§!."
 
 # Crystal Farm jobs
 job_esc_crystal_farmer: "Crystal Farmer"
 job_esc_crystal_farmer_plural: "Crystal Farmers"
 mod_job_esc_crystal_farmer_add: "$job_esc_crystal_farmer$"
-job_esc_crystal_farmer_desc: "Specialists overseeing Crystalline Farms that produce £rare_crystals£ §Y$rare_crystals$§!."
+job_esc_crystal_farmer_desc: "Specialists who oversee the delicate cultivation of £rare_crystals£ §Y$rare_crystals$§! within our Crystal Farms."
 
 job_esc_crystal_farmer_drone: "Crystal Farmer Drone"
 job_esc_crystal_farmer_drone_plural: "Crystal Farmer Drones"
 mod_job_esc_crystal_farmer_drone_add: "$job_esc_crystal_farmer_drone$"
-job_esc_crystal_farmer_drone_desc: "Complex drones overseeing Crystalline Farms that produce £rare_crystals£ §Y$rare_crystals$§!."
+job_esc_crystal_farmer_drone_desc: "Complex drones that tend our Crystal Farms, coaxing £rare_crystals£ §Y$rare_crystals$§! from carefully maintained growth lattices."
 
 # Reprocessing Plant jobs
 job_esc_reprocessor: "Reprocessing Plant Operator"
 job_esc_reprocessor_plural: "Reprocessing Plant Operators"
 mod_job_esc_reprocessor_add: "$job_esc_reprocessor$"
-job_esc_reprocessor_desc: "Specialists working at the Reprocessing Plants. They sort through disposable inorganic waste in order to pick out various still-useful materials."
+job_esc_reprocessor_desc: "Specialists who sift through mountains of discarded inorganic waste, recovering materials that lesser minds would have written off as worthless."
 mod_job_esc_reprocessor_per_pop: "§G+1§! $job_esc_reprocessor$ jobs per §Y$VALUE$§! pops"
 mod_job_esc_reprocessor_per_pop_short: "\n§G+1§! £job_esc_reprocessor£ per §Y$VALUE$§! £pop£"
 
 job_esc_reprocessor_drone: "Reprocessing Drone"
 job_esc_reprocessor_drone_plural: "Reprocessing Drones"
 mod_job_esc_reprocessor_drone_add: "$job_esc_reprocessor_drone$"
-job_esc_reprocessor_drone_desc: "Complex drones working at the Reprocessing Plants. They sort through disposable inorganic waste in order to pick out various still-useful materials."
+job_esc_reprocessor_drone_desc: "Complex drones assigned to the Reprocessing Plants, tirelessly sorting inorganic waste to reclaim every scrap of usable material."
 mod_job_esc_reprocessor_drone_per_pop: "§G+1§! $job_esc_reprocessor_drone$ jobs per §Y$VALUE$§! pops"
 mod_job_esc_reprocessor_drone_per_pop_short: "\n§G+1§! £job_esc_reprocessor_drone£ per §Y$VALUE$§! £pop£"
 
@@ -133,7 +133,7 @@ mod_job_esc_reprocessor_drone_per_pop_short: "\n§G+1§! £job_esc_reprocessor_d
 job_esc_zro_distiller: "Zro Distiller"
 job_esc_zro_distiller_plural: "Zro Distillers"
 mod_job_esc_zro_distiller_add: "$job_esc_zro_distiller$"
-job_esc_zro_distiller_desc: "Operators of the Zro Distillery that manage the process of extracting minute amounts of £sr_zro£ §Y$sr_zro$§! dust from raw materials."
+job_esc_zro_distiller_desc: "Patient operators who coax minute traces of £sr_zro£ §Y$sr_zro$§! dust from vast quantities of raw material through painstaking distillation."
 
 job_esc_zro_distiller_drone: "Zro Distiller Drone"
 job_esc_zro_distiller_drone_plural: "Zro Distiller Drones"
@@ -144,41 +144,41 @@ job_esc_zro_distiller_drone_desc: "$job_esc_zro_distiller_desc$"
 job_esc_dark_matter_shaper: "Dark Matter Shaper"
 job_esc_dark_matter_shaper_plural: "Dark Matter Shapers"
 mod_job_esc_dark_matter_shaper_add: "$job_esc_dark_matter_shaper$"
-job_esc_dark_matter_shaper_desc: "These specialists work at the Dark Matter Drawing Facility, ensuring the empire's continued access to vast quantities of £sr_dark_matter£ §Y$sr_dark_matter$§!."
+job_esc_dark_matter_shaper_desc: "Specialists who work at the very edge of known physics, drawing £sr_dark_matter£ §Y$sr_dark_matter$§! from a captive singularity to fuel our Empire's ambitions."
 
 job_esc_dark_matter_shaper_drone: "Dark Matter Shaping Drone"
 job_esc_dark_matter_shaper_drone_plural: "Dark Matter Shaping Drones"
 mod_job_esc_dark_matter_shaper_drone_add: "$job_esc_dark_matter_shaper_drone$"
-job_esc_dark_matter_shaper_drone_desc: "These complex drones work at the Dark Matter Drawing Facility, ensuring the empire's continued access to vast quantities of £sr_dark_matter£ §Y$sr_dark_matter$§!."
+job_esc_dark_matter_shaper_drone_desc: "Complex drones operating at the fringes of known physics, drawing £sr_dark_matter£ §Y$sr_dark_matter$§! from a captive singularity for our Empire's needs."
 
 # Mantle Mining Facility jobs
 job_esc_planetary_core_miner: "Planetary Core Miner"
 job_esc_planetary_core_miner_plural: "Planetary Core Miners"
 mod_job_esc_planetary_core_miner_add: "$job_esc_planetary_core_miner$"
-job_esc_planetary_core_miner_desc: "Miners that extract valuable resources from planetary mantle and core."
+job_esc_planetary_core_miner_desc: "Miners who brave crushing pressures and searing heat to tear precious resources from a planet's mantle and core."
 
 job_esc_planetary_core_miner_drone: "Planetary Core Mining Drone"
 job_esc_planetary_core_miner_drone_plural: "Planetary Core Mining Drones"
 mod_job_esc_planetary_core_miner_drone_add: "$job_esc_planetary_core_miner_drone$"
-job_esc_planetary_core_miner_drone_desc: "Mining drones that extract valuable resources from the planetary mantle and core."
+job_esc_planetary_core_miner_drone_desc: "Mining drones built to withstand the crushing depths of a planet's interior, ripping valuable resources from mantle and core alike."
 
 job_esc_borehole_maintainer: "Borehole Maintainer"
 job_esc_borehole_maintainer_plural: "Borehole Maintainers"
 mod_job_esc_borehole_maintainer_add: "$job_esc_borehole_maintainer$"
-job_esc_borehole_maintainer_desc: "Specialists that ensure the Mantle Mining Facility's borehole is in proper condition. They also pick additional resources brought to surface from the planet's core."
+job_esc_borehole_maintainer_desc: "Specialists who keep the abyssal borehole structurally sound and harvest rare materials dredged up from the planet's deepest strata."
 
 job_esc_borehole_maintainer_drone: "Borehole Maintenance Drone"
 job_esc_borehole_maintainer_drone_plural: "Borehole Maintenance Drones"
 mod_job_esc_borehole_maintainer_drone_add: "$job_esc_borehole_maintainer_drone$"
-job_esc_borehole_maintainer_drone_desc: "Complex Drones that ensure the Mantle Mining Facility's borehole is in proper condition. They also pick additional resources brought to surface from the planet's core."
+job_esc_borehole_maintainer_drone_desc: "Complex drones tasked with maintaining the abyssal borehole's structural integrity while collecting rare materials brought up from the planet's core."
 
 # Cerebral Node / Network Regulator jobs
 job_esc_mind_walker: "Mind Walker Drone"
 job_esc_mind_walker_plural: "Mind Walker Drones"
 mod_job_esc_mind_walker_add: "$job_esc_mind_walker$"
-job_esc_mind_walker_desc: "These Drones serve to guide their lost brethen back to the Great Mind that unifies them all."
+job_esc_mind_walker_desc: "Drones who walk between fractured thoughts, guiding lost brethren back into the embrace of the Great Mind."
 
 job_esc_network_curator: "Network Curator Unit"
 job_esc_network_curator_plural: "Network Curator Units"
 mod_job_esc_network_curator_add: "$job_esc_network_curator$"
-job_esc_network_curator_desc: "These Complex Drones tirelessly manage vast amounts of data circulating through the network, ensuring that every unit of the collective is working towards the uniting goal of the Machine Intelligence"
+job_esc_network_curator_desc: "Complex drones that prune and direct the torrents of data flowing through the network, keeping every unit of the collective aligned with the Machine Intelligence's directives."
