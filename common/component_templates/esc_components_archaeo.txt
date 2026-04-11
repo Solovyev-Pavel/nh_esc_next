@@ -3148,13 +3148,13 @@ weapon_component_template = {
 
 	inline_script = { # damage and collateral damage
 		script = weapon_effects/esc_inlines_collateral_damage
-		MIN_DAMAGE = 5500
+		MIN_DAMAGE = 5750
 		MAX_DAMAGE = 10000
 		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	windup = { min = 20 max = 90 }
+	windup = { min = 15 max = 60 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_L_6
 	accuracy = 0.85
@@ -3230,13 +3230,13 @@ weapon_component_template = {
 
 	inline_script = { # damage and collateral damage
 		script = weapon_effects/esc_inlines_collateral_damage
-		MIN_DAMAGE = 5500
+		MIN_DAMAGE = 5750
 		MAX_DAMAGE = 10000
 		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	windup = { min = 20 max = 90 }
+	windup = { min = 15 max = 60 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_L_6
 	accuracy = 0.85
@@ -3320,13 +3320,13 @@ weapon_component_template = {
 
 	inline_script = { # damage and collateral damage
 		script = weapon_effects/esc_inlines_collateral_damage
-		MIN_DAMAGE = 6000
+		MIN_DAMAGE = 6500
 		MAX_DAMAGE = 10000
 		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	windup = { min = 20 max = 90 }
+	windup = { min = 15 max = 60 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_G_4
 	accuracy = 0.85
@@ -3401,13 +3401,13 @@ weapon_component_template = {
 
 	inline_script = { # damage and collateral damage
 		script = weapon_effects/esc_inlines_collateral_damage
-		MIN_DAMAGE = 6000
+		MIN_DAMAGE = 6500
 		MAX_DAMAGE = 10000
 		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
 		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
 	}
 
-	windup = { min = 20 max = 90 }
+	windup = { min = 15 max = 60 }
 	total_fire_time = 90
 	range = @ESC_WEAPON_RANGE_G_4
 	accuracy = 0.85
