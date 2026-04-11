@@ -1018,6 +1018,10 @@ utility_component_template = {
 	power = 0
 	ship_limit = 1
 
+	blocked_by = {
+		ESC_AUX_DEAD_HAND_KILL_CMD_2
+	}
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -1049,6 +1053,10 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	ship_limit = 1
+
+	blocked_by = {
+		ESC_BIO_AUX_DEAD_HAND_KILL_CMD_2
+	}
 
 	resources = {
 		category = ship_components
@@ -1082,6 +1090,10 @@ utility_component_template = {
 	power = 0
 	ship_limit = 1
 
+	blocked_by = {
+		ESC_AUX_DEAD_HAND_KILL_CMD_1
+	}
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -1113,6 +1125,10 @@ utility_component_template = {
 	power = 0
 	ship_limit = 1
 
+	blocked_by = {
+		ESC_BIO_AUX_DEAD_HAND_KILL_CMD_1
+	}
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -1143,6 +1159,10 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	ship_limit = 1
+
+	blocked_by = {
+		ESC_AUX_DEAD_HAND_HEAL_CMD_2
+	}
 
 	resources = {
 		category = ship_components
@@ -1176,6 +1196,10 @@ utility_component_template = {
 	power = 0
 	ship_limit = 1
 
+	blocked_by = {
+		ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_2
+	}
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -1208,6 +1232,10 @@ utility_component_template = {
 	power = 0
 	ship_limit = 1
 
+	blocked_by = {
+		ESC_AUX_DEAD_HAND_HEAL_CMD_1
+	}
+
 	resources = {
 		category = ship_components
 		cost = {
@@ -1238,6 +1266,10 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	ship_limit = 1
+
+	blocked_by = {
+		ESC_BIO_AUX_DEAD_HAND_HEAL_CMD_1
+	}
 
 	resources = {
 		category = ship_components
