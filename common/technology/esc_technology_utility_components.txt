@@ -15,6 +15,8 @@
 # ── Hardlight Armor								: shield-regenerating armor [tier 7+]; requires killed Wraith / Leviathans DLC
 # ── Horror Armor									: self-repairing armor [tier 8+]; requires killed Dimensional Horror / Leviathans DLC
 # ── Reinforced Crystalline Plating					: hull-enhancing "armor"
+#     └─ Crystal-core Neutronium Armor				: hull-enhancing true armor [tier 7+]
+#         └─ Crystal-core Adamantium Armor			: hull-enhancing true armor [tier 8+]
 
 ############################################################
 ##               Improved Neutronium Armor                ##
@@ -825,6 +827,95 @@ esc_tech_crystal_armor_3 = {
 				has_technology = tech_crystal_armor_2
 			}
 		}
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_armor_3 }
+			}
+		}
+	}
+}
+
+############################################################
+##             Crystal-core Neutronium Armor              ##
+############################################################
+
+esc_tech_crystal_core_armor_1 = {
+	area = engineering
+	category = { materials }
+	tier = 5
+	cost = @tier5cost2
+	weight = @tier5weight2
+	prerequisites = { "esc_tech_armor_6" }
+	ai_update_type = all
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+	}
+}
+
+############################################################
+##             Crystal-core Adamantium Armor              ##
+############################################################
+
+esc_tech_crystal_core_armor_2 = {
+	area = engineering
+	category = { materials }
+	tier = 6
+	cost = @ESC_TECH_tier6_cost2
+	weight = @ESC_TECH_tier6_weight1
+	prerequisites = { "esc_tech_crystal_core_armor_1" }
+	is_rare = yes
+	ai_update_type = all
+
+	potential = {
+		NOT = { has_global_flag = ESC_GLOBAL_FLAG_armor_forbidden }
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = esc_tech_crystal_armor_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
 			has_ascension_perk = ap_technological_ascendancy

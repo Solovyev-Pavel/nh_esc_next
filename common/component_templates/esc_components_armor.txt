@@ -3305,3 +3305,236 @@ utility_component_template = {
 		}
 	}
 }
+
+############################################################
+##          ESC : Crystal-core Neutronium Armor           ##
+############################################################
+
+# small crystal-core neutronium armor
+utility_component_template = {
+	key = SMALL_ESC_CRYSTAL_CORE_ARMOR_1
+	size = small
+	icon = GFX_esc_crystal_core_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t6_str_primary_2
+		ship_hull_add = @ESC_ARMOR_s_t6_str_secondary
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_damage_reduction_add = 2
+	}
+
+	prerequisites = { "esc_tech_crystal_core_armor_1" }
+	component_set = ESC_CRYSTAL_CORE_ARMOR_1
+	upgrades_to = SMALL_ESC_CRYSTAL_CORE_ARMOR_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium crystal-core neutronium armor
+utility_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CORE_ARMOR_1
+	size = medium
+	icon = GFX_esc_crystal_core_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t6_str_primary_2
+		ship_hull_add = @ESC_ARMOR_m_t6_str_secondary
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_damage_reduction_add = 3
+	}
+
+	prerequisites = { "esc_tech_crystal_core_armor_1" }
+	component_set = ESC_CRYSTAL_CORE_ARMOR_1
+	upgrades_to = MEDIUM_ESC_CRYSTAL_CORE_ARMOR_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large crystal-core neutronium armor
+utility_component_template = {
+	key = LARGE_ESC_CRYSTAL_CORE_ARMOR_1
+	size = large
+	icon = GFX_esc_crystal_core_armor_1
+	icon_frame = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 7
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t6_str_primary_2
+		ship_hull_add = @ESC_ARMOR_l_t6_str_secondary
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_damage_reduction_add = 4
+	}
+
+	prerequisites = { "esc_tech_crystal_core_armor_1" }
+	component_set = ESC_CRYSTAL_CORE_ARMOR_1
+	upgrades_to = LARGE_ESC_CRYSTAL_CORE_ARMOR_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+############################################################
+##          ESC : Crystal-core Adamantium Armor           ##
+############################################################
+
+# small crystal-core adamantium armor
+utility_component_template = {
+	key = SMALL_ESC_CRYSTAL_CORE_ARMOR_2
+	size = small
+	icon = GFX_esc_crystal_core_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = s
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_s_t7_str_primary_2
+		ship_hull_add = @ESC_ARMOR_s_t7_str_secondary
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_damage_reduction_add = 3
+	}
+
+	prerequisites = { "esc_tech_crystal_core_armor_2" }
+	component_set = ESC_CRYSTAL_CORE_ARMOR_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# medium crystal-core adamantium armor
+utility_component_template = {
+	key = MEDIUM_ESC_CRYSTAL_CORE_ARMOR_2
+	size = medium
+	icon = GFX_esc_crystal_core_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = m
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_m_t7_str_primary_2
+		ship_hull_add = @ESC_ARMOR_m_t7_str_secondary
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_damage_reduction_add = 4.5
+	}
+
+	prerequisites = { "esc_tech_crystal_core_armor_2" }
+	component_set = ESC_CRYSTAL_CORE_ARMOR_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}
+
+# large crystal-core adamantium armor
+utility_component_template = {
+	key = LARGE_ESC_CRYSTAL_CORE_ARMOR_2
+	size = large
+	icon = GFX_esc_crystal_core_armor_2
+	icon_frame = 1
+
+	inline_script = {
+		script = component_costs/shorthands/esc_inlines_standard_cost
+		COMPONENT_TYPE = ARMOR
+		SIZE = l
+		TIER = 8
+		STRATEGIC_RESOURCE_TYPE = rare_crystals
+	}
+
+	modifier = {
+		ship_armor_add = @ESC_ARMOR_l_t7_str_primary_2
+		ship_hull_add = @ESC_ARMOR_l_t7_str_secondary
+	}
+	ship_modifier = {
+		ship_armor_hardening_add = @hardening_T6
+		ship_damage_reduction_add = 6
+	}
+
+	prerequisites = { "esc_tech_crystal_core_armor_2" }
+	component_set = ESC_CRYSTAL_CORE_ARMOR_2
+
+	ai_weight = {
+		weight = 1
+		### AI shouldn't use this component if it can't afford at least some upgrades right away
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+	}
+}

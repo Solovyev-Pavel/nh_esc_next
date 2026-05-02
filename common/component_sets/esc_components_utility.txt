@@ -232,6 +232,34 @@ component_set = {
 	icon_frame = 1
 }
 
+# crystal-core neutronium armor (ships + creatures)
+component_set = {
+	key = ESC_CRYSTAL_CORE_ARMOR_1
+	icon = GFX_esc_crystal_core_armor_1
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CRYSTAL_CORE_ARMOR_CREATURE_1
+	icon = GFX_esc_crystal_core_armor_1
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
+# crystal-core adamantium armor (ships + creatures)
+component_set = {
+	key = ESC_CRYSTAL_CORE_ARMOR_2
+	icon = GFX_esc_crystal_core_armor_2
+	icon_frame = 1
+}
+
+component_set = {
+	key = ESC_CRYSTAL_CORE_ARMOR_CREATURE_2
+	icon = GFX_esc_crystal_core_armor_2
+	icon_frame = 1
+	is_space_fauna_component_set = yes
+}
+
 ############################################################
 ##            Component Sets: Shield components           ##
 ############################################################
