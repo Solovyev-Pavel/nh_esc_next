@@ -24,6 +24,9 @@ ESC_ship_uses_starbase_components = {
 		is_ship_size = @MISC_Bastion
 	}
 }
+ESC_ship_uses_starbase_reactors = {
+	ESC_ship_uses_starbase_components = yes
+}
 ESC_ship_uses_big_starbase_components = {
 	OR = {
 		# vanilla or direct vanilla overwrites
@@ -46,12 +49,27 @@ ESC_ship_uses_big_starbase_components = {
 		is_ship_size = @MISC_Bastion
 	}
 }
+ESC_ship_uses_big_starbase_reactors = {
+	ESC_ship_uses_big_starbase_components = yes
+}
 
 # ESC overwrite for ship_sizes that use corvette components
 ESC_ship_uses_corvette_components = {
 	OR = {
 		# vanilla or direct vanilla overwrites
 		ship_uses_corvette_components = yes
+		# WACO ships
+		is_ship_size = @WACO_FlotillaShip
+		is_ship_size = @WACO_EmergencyShip
+		# EAC ships
+		is_ship_size = @EAC_PatrolCraft_1
+		is_ship_size = @EAC_PatrolCraft_2
+	}
+}
+ESC_ship_uses_corvette_reactors = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_corvette_reactors = yes
 		# WACO ships
 		is_ship_size = @WACO_FlotillaShip
 		is_ship_size = @WACO_EmergencyShip
@@ -72,6 +90,16 @@ ESC_ship_uses_destroyer_components = {
 		is_ship_size = @MISC_PirateCorvette
 	}
 }
+ESC_ship_uses_destroyer_reactors = {
+	OR = {
+		# vanilla or direct vanilla overwrites
+		ship_uses_destroyer_reactors = yes
+		# VSE ships
+		is_ship_size = @VSE_Artemis
+		# other ships
+		is_ship_size = @MISC_PirateCorvette
+	}
+}
 
 # ESC overwrite for ship_sizes that use cruiser components
 ESC_ship_uses_cruiser_components = {
@@ -85,11 +113,17 @@ ESC_ship_uses_cruiser_components = {
 		is_ship_size = graygoo_interdictor
 	}
 }
+ESC_ship_uses_cruiser_reactors = {
+	ESC_ship_uses_cruiser_components = yes
+}
 # special overwrite for the purposes of inline-scripting
 ESC_ship_uses_cruiser_nsc_components = {
 	OR = {
 		ESC_ship_uses_cruiser_components = yes
 	}
+}
+ESC_ship_uses_cruiser_nsc_reactors = {
+	ESC_ship_uses_cruiser_nsc_components = yes
 }
 
 # ESC overwrite for ship_sizes that use battleship components
@@ -133,11 +167,17 @@ ESC_ship_uses_battleship_components = {
 		is_ship_size = @PFE_Battlecruiser
 	}
 }
+ESC_ship_uses_battleship_reactors = {
+	ESC_ship_uses_battleship_components = yes
+}
 # special overwrite for the purposes of inline-scripting
 ESC_ship_uses_battleship_nsc_components = {
 	OR = {
 		ESC_ship_uses_battleship_components = yes
 	}
+}
+ESC_ship_uses_battleship_nsc_reactors = {
+	ESC_ship_uses_battleship_nsc_components = yes
 }
 
 # ESC overwrite for ship_sizes that use titan components
@@ -156,11 +196,17 @@ ESC_ship_uses_titan_components = {
 		is_ship_size = @MISC_MarauderGalleon
 	}
 }
+ESC_ship_uses_titan_reactors = {
+	ESC_ship_uses_titan_components = yes
+}
 # special overwrite for the purposes of inline-scripting
 ESC_ship_uses_titan_nsc_components = {
 	OR = {
 		ESC_ship_uses_titan_components = yes
 	}
+}
+ESC_ship_uses_titan_nsc_reactors = {
+	ESC_ship_uses_titan_nsc_components = yes
 }
 
 # ESC overwrite for ship_sizes that use juggernaut components
@@ -174,10 +220,14 @@ ESC_ship_uses_juggernaut_components = {
 		is_ship_size = @MISC_WarJuggernaut
 	}
 }
+ESC_ship_uses_juggernaut_reactors = {
+	ESC_ship_uses_juggernaut_components = yes
+}
 ESC_ship_uses_colossus_components = {
-	OR = {
-		ESC_ship_uses_juggernaut_components = yes
-	}
+	ESC_ship_uses_juggernaut_components = yes
+}
+ESC_ship_uses_colossus_reactors = {
+	ESC_ship_uses_colossus_components = yes
 }
 
 ###
@@ -191,6 +241,9 @@ ESC_ship_uses_platform_components = {
 		is_ship_size = military_station_small
 	}
 }
+ESC_ship_uses_platform_reactors = {
+	ESC_ship_uses_platform_components = yes
+}
 
 # ESC custom trigger for ship_sizes equivalent to medium defense platform
 ESC_ship_uses_platform2_components = {
@@ -203,6 +256,9 @@ ESC_ship_uses_platform2_components = {
 		is_ship_size = @MISC_DF_Medium
 	}
 }
+ESC_ship_uses_platform2_reactors = {
+	ESC_ship_uses_platform2_components = yes
+}
 
 # ESC custom trigger for ship_sizes equivalent to large defense platform
 ESC_ship_uses_platform3_components = {
@@ -214,6 +270,9 @@ ESC_ship_uses_platform3_components = {
 		is_ship_size = @MISC_DF_Large
 	}
 }
+ESC_ship_uses_platform3_reactors = {
+	ESC_ship_uses_platform3_components = yes
+}
 
 # ESC custom trigger for ship_sizes equivalent to the ion cannon
 ESC_ship_uses_ion_cannon_components = {
@@ -221,6 +280,9 @@ ESC_ship_uses_ion_cannon_components = {
 		# vanilla platforms
 		is_ship_size = ion_cannon
 	}
+}
+ESC_ship_uses_ion_cannon_reactors = {
+	ESC_ship_uses_ion_cannon_components = yes
 }
 
 ###
@@ -242,6 +304,9 @@ ESC_ship_uses_strikecruiser_components = {
 		is_ship_size = @MISC_MarauderCorvette
 	}
 }
+ESC_ship_uses_strikecruiser_reactors = {
+	ESC_ship_uses_strikecruiser_components = yes
+}
 
 # ESC custom trigger for ship_sizes that use battlecruiser components
 ESC_ship_uses_battlecruiser_components = {
@@ -259,6 +324,9 @@ ESC_ship_uses_battlecruiser_components = {
 		is_ship_size = @MISC_MarauderCorvette
 	}
 }
+ESC_ship_uses_battlecruiser_reactors = {
+	ESC_ship_uses_battlecruiser_components = yes
+}
 
 # ESC custom trigger for ship_sizes that use carrier components
 ESC_ship_uses_carrier_components = {
@@ -267,6 +335,9 @@ ESC_ship_uses_carrier_components = {
 	# 	# NSC ships
 	# 	#is_ship_size = @NSC_Carrier
 	# }
+}
+ESC_ship_uses_carrier_reactors = {
+	ESC_ship_uses_carrier_components = yes
 }
 
 # ESC custom trigger for ship_sizes that use dreadnought components
@@ -281,6 +352,9 @@ ESC_ship_uses_dreadnought_components = {
 		is_ship_size = @MISC_Dreadnought_PLR
 	}
 }
+ESC_ship_uses_dreadnought_reactors = {
+	ESC_ship_uses_dreadnought_components = yes
+}
 
 # ESC custom trigger for ship_sizes that use flagship components
 ESC_ship_uses_flagship_components = {
@@ -291,6 +365,9 @@ ESC_ship_uses_flagship_components = {
 		# other...
 		is_ship_size = @MISC_Ultrajuggernaut
 	}
+}
+ESC_ship_uses_flagship_reactors = {
+	ESC_ship_uses_flagship_components = yes
 }
 
 ###
@@ -303,6 +380,9 @@ ESC_ship_uses_dreadnought_carrier_components = {
 		ESC_ship_uses_dreadnought_components = yes
 		ESC_ship_uses_carrier_components = yes
 	}
+}
+ESC_ship_uses_dreadnought_carrier_reactors = {
+	ESC_ship_uses_dreadnought_carrier_components = yes
 }
 
 # ESC custom trigger for afterburners

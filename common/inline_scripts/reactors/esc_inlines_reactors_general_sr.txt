@@ -29,7 +29,7 @@ inline_script = {
 # potential / show_show_tech_unlock_if
 inline_script = {
 	script = ship_components_general/esc_inlines_uses_bio_ships_conditional
-	EXTRA_CONDITION = ESC_ship_uses_$SHIP_SIZE_GROUP$_components
+	EXTRA_CONDITION = ESC_ship_uses_$SHIP_SIZE_GROUP$_reactors
 	EXTRA_CONDITION_VALUE = yes
 	EVAL_TARGET = $IS_BIOSHIP_REACTOR$
 }
