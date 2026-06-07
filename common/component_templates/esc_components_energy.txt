@@ -1351,6 +1351,18 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
+
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
@@ -1402,6 +1414,18 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
+
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1456,6 +1480,18 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
+
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
@@ -1507,6 +1543,18 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
+
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1564,6 +1612,18 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
+
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
@@ -1614,6 +1674,18 @@ weapon_component_template = {
 	tags = { weapon_type_energy s_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
+
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1667,6 +1739,18 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
 
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
+
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
 		EVAL_TARGET = no
@@ -1717,6 +1801,18 @@ weapon_component_template = {
 	tags = { weapon_type_energy m_slot }
 	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
 	ai_tag_weight = 5
+
+	target_type = target_enemies
+	injected_modifier = {
+		modifier = {
+			modifier = disruptor_regen_debuff_3
+			days = 10
+		}
+		stack_info = {
+			id = disruptor_regen
+			priority = 3
+		}
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
