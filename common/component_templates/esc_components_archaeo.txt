@@ -3184,6 +3184,12 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 	upgrades_to = ESC_ARCHAEO_TITANLASER_3
 
+	# arkship T-slot weapons use different damage valuess
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -3305,6 +3311,76 @@ weapon_component_template = {
 	}
 }
 
+# arkship
+weapon_component_template = {
+	key = ESC_ARCHAEO_TITANLASER_2_ARKSHIP
+	size = titanic
+	icon = GFX_esc_archaeo_titan_laser_2
+	icon_frame = 1
+	type = instant
+	prio_projectile = yes
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5500
+		MAX_DAMAGE = 15000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 15 max = 60 }
+	total_fire_time = 90
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_titanic_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_titanic_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_titanic_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_titanic_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_titanic_shield_damage
+	tracking = 0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_archaeo_titanic_2" }
+	component_set = ESC_ARCHAEO_TITANLASER_2_ARKSHIP
+	projectile_gfx = "perdition_beam"
+	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	upgrades_to = ESC_ARCHAEO_TITANLASER_3_ARKSHIP
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
+		}
+	}
+}
+
 ############################################################
 ##           Advanced Tech-Synthetic Ruinator             ##
 ############################################################
@@ -3354,6 +3430,12 @@ weapon_component_template = {
 	projectile_gfx = "perdition_beam"
 	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	# arkship T-slot weapons use different damage valuess
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
 
 	target_weights = {
 		titan = 3
@@ -3471,6 +3553,75 @@ weapon_component_template = {
 					value > 250
 				}
 			}
+		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_ARCHAEO_TITANLASER_3_ARKSHIP
+	size = titanic
+	icon = GFX_esc_archaeo_titan_laser_3
+	icon_frame = 1
+	type = instant
+	prio_projectile = yes
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 16000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 15 max = 60 }
+	total_fire_time = 90
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_archaeo_titanic_hull_damage
+	armor_penetration = @ESC_WEAPON_archaeo_titanic_armor_penetration
+	armor_damage = @ESC_WEAPON_archaeo_titanic_armor_damage
+	shield_penetration = @ESC_WEAPON_archaeo_titanic_shield_penetration
+	shield_damage = @ESC_WEAPON_archaeo_titanic_shield_damage
+	tracking = 0
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_archaeo_titanic_3" }
+	component_set = ESC_ARCHAEO_TITANLASER_3_ARKSHIP
+	projectile_gfx = "perdition_beam"
+	tags = { weapon_type_energy weapon_archaeotech weapon_role_artillery t_slot }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			add = 2.5
+			owner = { has_ascension_perk = ap_archaeoengineers }
 		}
 	}
 }

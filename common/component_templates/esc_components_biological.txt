@@ -1125,6 +1125,12 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
+	# arkship T-slot weapons use different damage values
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
 		EFFECT_LEVEL = 2
@@ -1217,5 +1223,78 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = food }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_BIO_X_MISSILE_3_ARKSHIP
+	size = titanic
+	icon = GFX_esc_bio_x_weapon_3
+	icon_frame = 1
+	type = missile
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 750
+		MAX_DAMAGE = 2750
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
+	windup = { min = 15 max = 45 }
+	total_fire_time = 60
+	range = @ESC_WEAPON_RANGE_ARKSHIP_5
+	accuracy = 1.0
+	missile_speed = @ESC_MISSILE_SPEED_2
+	missile_evasion = 0.1
+	missile_health = 100
+	missile_armor = 0
+	missile_shield = 0
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_biological_hull_damage
+	armor_penetration = @ESC_WEAPON_biological_armor_penetration
+	armor_damage = @ESC_WEAPON_biological_armor_damage
+	shield_penetration = @ESC_WEAPON_biological_missile_shield_penetration
+	shield_damage = @ESC_WEAPON_biological_missile_shield_damage
+	tracking = 0.2
+
+	prerequisites = { "esc_tech_bio_missile_titanic" }
+	component_set = ESC_BIO_X_MISSILE_3_ARKSHIP
+	projectile_gfx = "esc_bio_missile"
+	tags = { weapon_type_explosive weapon_type_biological t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
+
+	# arkship T-slot weapons use different damage valuess
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_armor_weakening_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	# only regular empires and xenophile FE may use biological components
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }

@@ -1186,6 +1186,11 @@ weapon_component_template = {
 		CRITICAL_DAMAGE_AMOUNT = 6500 # (min damage + max damage) / 2
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -1286,5 +1291,82 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_CRYSTAL_LANCE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_crystal_lance_titanic
+	icon_frame = 1
+	type = instant
+
+    inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 5000
+		MAX_DAMAGE = 13000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_KINETIC_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 20 max = 60 }
+	total_fire_time = 160
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_crystalline_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_crystalline_armor_penetration
+	armor_damage = @ESC_WEAPON_crystalline_armor_damage
+	shield_penetration = @ESC_WEAPON_crystalline_shields_penetration
+	shield_damage = @ESC_WEAPON_crystalline_shields_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_crystal_lance_titanic" }
+	component_set = ESC_CRYSTAL_LANCE_ARKSHIP
+	projectile_gfx = "yellow_crystal_ship_projectile"
+	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_critical_hit
+		CRITICAL_HIT_CHANCE = 25
+		NORMAL_HIT_CHANCE = 75
+		CRITICAL_DAMAGE_AMOUNT = 6500 # (min damage + max damage) / 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	# only regular empires and xenophile FE should use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_xenophile_fe = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
