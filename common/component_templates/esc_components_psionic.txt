@@ -1212,6 +1212,11 @@ weapon_component_template = {
 		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -1306,6 +1311,81 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_PSIONIC_LANCE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_psionic_lance_3
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 7000
+		MAX_DAMAGE = 15000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 30 max = 100 }
+	total_fire_time = 170
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.85
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_psionic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_psionic_armor_penetration
+	armor_damage = @ESC_WEAPON_psionic_armor_damage
+	shield_penetration = @ESC_WEAPON_psionic_shield_penetration
+	shield_damage = @ESC_WEAPON_psionic_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_psionic_lance_titanic" }
+	component_set = ESC_PSIONIC_LANCE_ARKSHIP
+	projectile_gfx = "esc_psionic_lance"
+	tags = { weapon_type_energy weapon_type_psionic t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_accuracy_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	# only regular empires and spiritualist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_spiritualist_fe = yes
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -1549,6 +1629,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1556,6 +1641,61 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_PSIONIC_SHOCKWAVE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_psionic_catastrophe
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage with applied effect
+		script = weapon_effects/esc_inlines_shockwave_damage_with_effect
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 3500
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_ARKSHIP_1
+		MODIFIER_TYPE = esc_psionic_weapons_accuracy_debuff_2
+		MODIFIER_DURATION = 10
+		EFFECT_TOOLTIP = esc_psionic_shockwave_tooltip
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave_psionic" }
+	component_set = ESC_PSIONIC_SHOCKWAVE_ARKSHIP
+	projectile_gfx = "esc_psionic_shockwave"
+	tags = { weapon_type_energy weapon_type_psionic t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 

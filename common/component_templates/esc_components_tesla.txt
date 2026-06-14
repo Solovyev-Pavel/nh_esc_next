@@ -1335,7 +1335,7 @@ weapon_component_template = {
 }
 
 ############################################################
-##            Titanic Super-Graviton Cannon               ##
+##                   Titanic Tesla Cannon                 ##
 ############################################################
 
 # titan
@@ -1391,8 +1391,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = no
+		ARKSHIP_WEAPON = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -1467,8 +1468,9 @@ weapon_component_template = {
 	}
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = yes
+		ARKSHIP_WEAPON = no
 	}
 
 	# only regular empires and machine FE may use this component
@@ -1645,6 +1647,78 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_TESLA_CANNON_ARKSHIP
+	size = titanic
+	icon = GFX_esc_tesla_cannon_3
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 15000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 30 max = 100 }
+	total_fire_time = 160
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.85
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_tesla_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_tesla_armor_penetration
+	armor_damage = @ESC_WEAPON_tesla_armor_damage
+	shield_penetration = @ESC_WEAPON_tesla_shield_penetration
+	shield_damage = @ESC_WEAPON_tesla_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_tesla_cannon_titanic" }
+	component_set = ESC_TESLA_CANNON_ARKSHIP
+	projectile_gfx = "esc_tesla_2_titanic"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	# only regular empires and machine FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_machine_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -1845,6 +1919,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -1852,5 +1931,60 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_TESLA_SHOCKWAVE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_tesla_shockwave
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage with applied effect
+		script = weapon_effects/esc_inlines_shockwave_damage_with_effect
+		MIN_DAMAGE = 1500
+		MAX_DAMAGE = 3000
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_ARKSHIP_1
+		MODIFIER_TYPE = esc_tesla_weapons_fire_rate_debuff_2
+		MODIFIER_DURATION = 10
+		EFFECT_TOOLTIP = esc_tesla_shockwave_tooltip
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave_tesla" }
+	component_set = ESC_TESLA_SHOCKWAVE_ARKSHIP
+	projectile_gfx = "esc_arc_shockwave"
+	tags = { weapon_type_energy t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
