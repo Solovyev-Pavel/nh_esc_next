@@ -1401,8 +1401,9 @@ weapon_component_template = {
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = no
+		ARKSHIP_WEAPON = no
 	}
 
 	ai_weight = {
@@ -1483,5 +1484,69 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = exotic_gases }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_XMISSILE_3_ARKSHIP
+	size = titanic
+	icon = GFX_esc_x_missiles_3
+	icon_frame = 1
+	type = missile
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 2250
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_EXPLOSIVE_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER_BIG
+	}
+
+	size_damage_factor = 0.2
+	windup = { min = 15 max = 45 }
+	total_fire_time = 60
+	range = @ESC_WEAPON_RANGE_T_4
+	accuracy = 1.0
+	missile_speed = @ESC_WEAPON_RANGE_ARKSHIP_5
+	missile_evasion = 0.1
+	missile_health = 45
+	missile_armor = 30
+	missile_shield = 20
+	missile_retarget_range = @ESC_WEAPON_RANGE_G_2
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_exotic_hull_damage
+	armor_damage = @ESC_WEAPON_exotic_armor_damage
+	armor_penetration = @ESC_WEAPON_exotic_armor_penetration
+	shield_damage = @ESC_WEAPON_exotic_shield_damage
+	shield_penetration = @ESC_WEAPON_exotic_shield_penetration
+	tracking = 0.1
+
+	prerequisites = { "esc_tech_xmissile_titanic" }
+	component_set = ESC_XMISSILE_3_ARKSHIP
+	projectile_gfx = "esc_xmissile3"
+	tags = { weapon_type_explosive weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }

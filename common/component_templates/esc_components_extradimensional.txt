@@ -252,6 +252,7 @@ weapon_component_template = {
 ##               Titanic Matter Annihilator               ##
 ############################################################
 
+# titan
 weapon_component_template = {
 	key =ESC_EXTRADIMENSIONAL_WEAPON_2_T
 	size = titanic
@@ -300,6 +301,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -320,6 +326,78 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key =ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP
+	size = titanic
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 15500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	size_damage_factor = 0.05
+	windup = { min = 30 max = 70 }
+	total_fire_time = 170
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_extradimensional_hull_damage
+	armor_penetration = @ESC_WEAPON_extradimensional_armor_penetration
+	armor_damage = @ESC_WEAPON_extradimensional_armor_damage
+	shield_penetration = @ESC_WEAPON_extradimensional_shield_penetration
+	shield_damage = @ESC_WEAPON_extradimensional_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_extradimensional_weapon_2_t" }
+	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP
+	projectile_gfx = "esc_extradimensional_t_2"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -561,6 +639,7 @@ weapon_component_template = {
 ##                 Titanic Reality Eraser                 ##
 ############################################################
 
+# titan
 weapon_component_template = {
 	key = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 	size = titanic
@@ -608,6 +687,11 @@ weapon_component_template = {
 	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	# only regular empires may use this component
 	valid_for_country = {
 		is_fallen_empire = no
@@ -628,5 +712,76 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP
+	size = titanic
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 7500
+		MAX_DAMAGE = 17000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	size_damage_factor = 0.05
+	windup = { min = 30 max = 70 }
+	total_fire_time = 170
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_eraser_hull_damage
+	armor_penetration = @ESC_WEAPON_eraser_armor_penetration
+	armor_damage = @ESC_WEAPON_eraser_armor_damage
+	shield_penetration = @ESC_WEAPON_eraser_shield_penetration
+	shield_damage = @ESC_WEAPON_eraser_shield_damage
+	tracking = 0.0
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_extradimensional_weapon_3_t" }
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP
+	projectile_gfx = "esc_extradimensional_t_3"
+	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
