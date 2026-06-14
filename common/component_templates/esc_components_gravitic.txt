@@ -1397,8 +1397,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = no
+		ARKSHIP_WEAPON = no
 	}
 
 	inline_script = {
@@ -1476,8 +1477,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = yes
+		ARKSHIP_WEAPON = no
 	}
 
 	inline_script = {
@@ -1668,6 +1670,81 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_GRAVITY_LANCE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_gravitic_lance_3
+	icon_frame = 1
+	type = instant
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 7500
+		MAX_DAMAGE = 15500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 30 max = 100 }
+	total_fire_time = 165
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_gravitic_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_gravitic_armor_penetration
+	armor_damage = @ESC_WEAPON_gravitic_armor_damage
+	shield_penetration = @ESC_WEAPON_gravitic_shield_penetration
+	shield_damage = @ESC_WEAPON_gravitic_shield_damage
+	tracking = 0.05
+
+	prerequisites = { "esc_tech_gravity_lance_titanic" }
+	component_set = ESC_GRAVITY_LANCE_ARKSHIP
+	projectile_gfx = "esc_gravity_lance_titanic"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_evasion_debuff
+		EFFECT_LEVEL = 2
+	}
+
+	# only regular empires and materialist FE may use this component
+	valid_for_country = {
+		ESC_TRIGGER_is_normal_empire_or_materialist_fe = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
