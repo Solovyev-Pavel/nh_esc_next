@@ -342,6 +342,13 @@ component_set = {
 	icon_frame = 1
 }
 
+# light of destruction (arkship)
+component_set = {
+	key = ESC_PARTICLE_LANCE_ARKSHIP
+	icon = GFX_esc_particle_lance_titanic
+	icon_frame = 1
+}
+
 # lightning cannon (ships + creatures)
 component_set = {
 	key = ESC_ARC_EMITTER_3
@@ -408,6 +415,13 @@ component_set = {
 	icon_frame = 1
 }
 
+# divine thunder (arkship)
+component_set = {
+	key = ESC_ARC_EMITTER_ARKSHIP
+	icon = GFX_esc_arc_cannon_titanic
+	icon_frame = 1
+}
+
 # arc energy shockwave
 component_set = {
 	key = ESC_ARC_SHOCKWAVE
@@ -415,9 +429,23 @@ component_set = {
 	icon_frame = 1
 }
 
-# dark matter hale blast
+# arc energy shockwave (arkship)
+component_set = {
+	key = ESC_ARC_SHOCKWAVE_ARKSHIP
+	icon = GFX_esc_arc_shockwave
+	icon_frame = 1
+}
+
+# dark matter halo blast
 component_set = {
 	key = ESC_DARK_MATTER_SHOCKWAVE
+	icon = GFX_esc_dark_matter_shockwave
+	icon_frame = 1
+}
+
+# dark matter halo blast (arkship)
+component_set = {
+	key = ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP
 	icon = GFX_esc_dark_matter_shockwave
 	icon_frame = 1
 }
@@ -488,6 +516,13 @@ component_set = {
 	icon_frame = 1
 }
 
+# titanic dimensional wave cannon (arkship)
+component_set = {
+	key = ESC_WAVEMOTIONGUN_3_ARKSHIP
+	icon = GFX_esc_wave_motion_gun_3
+	icon_frame = 1
+}
+
 # arc-en-ciel (x-slot) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EN_CIEL
@@ -498,6 +533,13 @@ component_set = {
 # arc-en-ciel (titan) (ships + creatures)
 component_set = {
 	key = ESC_ARC_EN_CIEL_TITANIC
+	icon = GFX_esc_arc_en_ciel
+	icon_frame = 1
+}
+
+# arc-en-ciel (arkship)
+component_set = {
+	key = ESC_ARC_EN_CIEL_ARKSHIP
 	icon = GFX_esc_arc_en_ciel
 	icon_frame = 1
 }
@@ -537,6 +579,14 @@ component_set = {
 	icon_frame = 1
 }
 
+# matter annihilator (arkship)
+component_set = {
+	key = ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP
+	icon = GFX_esc_extradimensional_cannon_2
+	icon_frame = 1
+}
+
+
 # reality eraser
 component_set = {
 	key = ESC_EXTRADIMENSIONAL_WEAPON_3
@@ -561,6 +611,13 @@ component_set = {
 # reality eraser (titanic)
 component_set = {
 	key = ESC_EXTRADIMENSIONAL_WEAPON_3_T
+	icon = GFX_esc_extradimensional_cannon_3
+	icon_frame = 1
+}
+
+# reality eraser (arkship)
+component_set = {
+	key = ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP
 	icon = GFX_esc_extradimensional_cannon_3
 	icon_frame = 1
 }
@@ -755,6 +812,13 @@ component_set = {
 	icon_frame = 1
 }
 
+# rkkv (arkship)
+component_set = {
+	key = ESC_MASS_ACCELERATOR_ARKSHIP
+	icon = GFX_esc_mass_accelerator_titanic
+	icon_frame = 1
+}
+
 # hailstorm autocannon
 component_set = {
 	key = ESC_AUTOCANNON_X_1
@@ -804,6 +868,13 @@ component_set = {
 component_set = {
 	key = ESC_BIO_AUTOCANNON_J
 	icon = GFX_esc_bio_x_autocannon_3
+	icon_frame = 1
+}
+
+# tempest autocannon (arkship)
+component_set = {
+	key = ESC_AUTOCANNON_ARKSHIP
+	icon = GFX_esc_x_autocannon_3
 	icon_frame = 1
 }
 
@@ -899,9 +970,23 @@ component_set = {
 	icon_frame = 1
 }
 
+# magnetohydrodynamic cannon (arkship)
+component_set = {
+	key = ESC_MHD_CANNON_ARKSHIP
+	icon = GFX_esc_mhd_cannon_3
+	icon_frame = 1
+}
+
 # asteroid thrower
 component_set = {
 	key = ESC_ASTEROID_THROWER
+	icon = GFX_esc_asteroid_cannon
+	icon_frame = 1
+}
+
+# asteroid thrower (arkship
+component_set = {
+	key = ESC_ASTEROID_THROWER_ARKSHIP
 	icon = GFX_esc_asteroid_cannon
 	icon_frame = 1
 }
@@ -1086,6 +1171,13 @@ component_set = {
 # reflex warhead launcher (juggernaut)
 component_set = {
 	key = ESC_XMISSILE_3_JUGGERNAUT
+	icon = GFX_esc_x_missiles_3
+	icon_frame = 1
+}
+
+# reflex warhead launcher (arkship)
+component_set = {
+	key = ESC_XMISSILE_3_ARKSHIP
 	icon = GFX_esc_x_missiles_3
 	icon_frame = 1
 }

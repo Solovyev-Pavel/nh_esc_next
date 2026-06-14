@@ -1,0 +1,8 @@
+### since nomad arkship also uses titanic-sized weapons, but with buffed damage,
+### there needs to be a trigger to separate the titanic weapons for normal ships
+### and those that go into the arkship. this inline sets a potential trigger for
+### that purpose
+
+potential = {
+	is_arkship_ship = $ARKSHIP_WEAPON$
+}

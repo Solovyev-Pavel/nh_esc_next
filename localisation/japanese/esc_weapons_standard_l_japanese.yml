@@ -386,6 +386,9 @@ ESC_BIO_PARTICLE_LANCE_TITANIC_DESC: "The furthest point biological evolution ha
 ESC_BIO_PARTICLE_LANCE_JUGGERNAUT: "$ESC_PARTICLE_LANCE_TITANIC$ ($juggernaut$)"
 ESC_BIO_PARTICLE_LANCE_JUGGERNAUT_DESC: "$ESC_PARTICLE_LANCE_TITANIC_DESC$"
 
+ESC_PARTICLE_LANCE_ARKSHIP: "$ESC_PARTICLE_LANCE_TITANIC$"
+ESC_PARTICLE_LANCE_ARKSHIP_DESC: "$ESC_PARTICLE_LANCE_TITANIC_DESC$"
+
 # Lightning Cannon
 ESC_ARC_EMITTER_3: "Lightning Cannon"
 ESC_ARC_EMITTER_3_DESC: "Focused arc emitter technology advanced to the point where the electrical discharge bypasses both shields and armor entirely, striking internal systems directly."
@@ -431,6 +434,9 @@ ESC_ARC_BIO_EMITTER_TITANIC: "$ESC_ARC_EMITTER_TITANIC$"
 ESC_ARC_BIO_EMITTER_TITANIC_DESC: "$ESC_ARC_EMITTER_TITANIC_DESC$"
 ESC_ARC_BIO_EMITTER_JUGGERNAUT: "$ESC_ARC_EMITTER_TITANIC$ ($juggernaut$)"
 ESC_ARC_BIO_EMITTER_JUGGERNAUT_DESC: "$ESC_ARC_EMITTER_TITANIC_DESC$"
+
+ESC_ARC_EMITTER_ARKSHIP: "$ESC_ARC_EMITTER_TITANIC$"
+ESC_ARC_EMITTER_ARKSHIP_DESC: "$ESC_ARC_EMITTER_TITANIC_DESC$"
 
 # Wave-Motion Gun
 ESC_WAVEMOTIONGUN_1: "Wave-Motion Gun"
@@ -479,6 +485,9 @@ ESC_BIO_WAVEMOTIONGUN_3_DESC: "Only the most massive and powerful warbeasts can 
 ESC_BIO_WAVEMOTIONGUN_JUGGERNAUT: "$ESC_BIO_WAVEMOTIONGUN_3$ ($juggernaut$)"
 ESC_BIO_WAVEMOTIONGUN_JUGGERNAUT_DESC: "$ESC_BIO_WAVEMOTIONGUN_3_DESC$"
 
+ESC_WAVEMOTIONGUN_3_ARKSHIP: "$ESC_WAVEMOTIONGUN_3$"
+ESC_WAVEMOTIONGUN_3_ARKSHIP_DESC: "$ESC_WAVEMOTIONGUN_3_DESC$"
+
 # Arc-en-Ciel Cannon
 ESC_ARC_EN_CIEL: "Arc-en-Ciel Cannon"
 ESC_ARC_EN_CIEL_DESC: "A weapon without parallel in all known space: it seals the target within a pocket dimension and collapses that dimension entirely, subjecting the target to a localized Big Crunch that erases every atom of its existence."
@@ -486,6 +495,9 @@ ESC_ARC_EN_CIEL_TITANIC: "$ESC_ARC_EN_CIEL$"
 ESC_ARC_EN_CIEL_TITANIC_DESC: "$ESC_ARC_EN_CIEL_DESC$"
 ESC_ARC_EN_CIEL_JUGGERNAUT: "$ESC_ARC_EN_CIEL$ ($juggernaut$)"
 ESC_ARC_EN_CIEL_JUGGERNAUT_DESC: "$ESC_ARC_EN_CIEL_DESC$"
+
+ESC_ARC_EN_CIEL_ARKSHIP: "$ESC_ARC_EN_CIEL$"
+ESC_ARC_EN_CIEL_ARKSHIP_DESC: "$ESC_ARC_EN_CIEL_DESC$"
 
 # Matter Annihilator
 ESC_EXTRADIMENSIONAL_WEAPON_2: "Matter Annihilator"
@@ -513,6 +525,9 @@ ESC_EXTRADIMENSIONAL_WEAPON_2_X_DESC: "$ESC_EXTRADIMENSIONAL_WEAPON_2_DESC$"
 ESC_EXTRADIMENSIONAL_WEAPON_2_T: "$ESC_EXTRADIMENSIONAL_WEAPON_2$"
 ESC_EXTRADIMENSIONAL_WEAPON_2_T_DESC: "$ESC_EXTRADIMENSIONAL_WEAPON_2_DESC$"
 
+ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP: "$ESC_EXTRADIMENSIONAL_WEAPON_2$"
+ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP_DESC: "$ESC_EXTRADIMENSIONAL_WEAPON_2_DESC$"
+
 # Reality Eraser
 ESC_EXTRADIMENSIONAL_WEAPON_3: "Reality Eraser"
 ESC_EXTRADIMENSIONAL_WEAPON_3_DESC: "Null Void energy amplification pushes the Matter Annihilator concept beyond any limit its original creators could have imagined, producing a weapon capable of erasing not just matter but the very fabric of local spacetime."
@@ -539,13 +554,22 @@ ESC_EXTRADIMENSIONAL_WEAPON_3_X_DESC: "$ESC_EXTRADIMENSIONAL_WEAPON_3_DESC$"
 ESC_EXTRADIMENSIONAL_WEAPON_3_T: "$ESC_EXTRADIMENSIONAL_WEAPON_3$"
 ESC_EXTRADIMENSIONAL_WEAPON_3_T_DESC: "$ESC_EXTRADIMENSIONAL_WEAPON_3_DESC$"
 
+ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP: "$ESC_EXTRADIMENSIONAL_WEAPON_3$"
+ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP_DESC: "$ESC_EXTRADIMENSIONAL_WEAPON_3_DESC$"
+
 # Arc energy shockwave
 ESC_ARC_SHOCKWAVE: "Arc Energy Shockwave"
 ESC_ARC_SHOCKWAVE_DESC: "An area-effect application of lightning cannon technology, designed to discharge in all directions simultaneously and strip lightly-armored ships and strike craft from the surrounding space."
 
+ESC_ARC_SHOCKWAVE_ARKSHIP: "$ESC_ARC_SHOCKWAVE$"
+ESC_ARC_SHOCKWAVE_ARKSHIP_DESC: "$ESC_ARC_SHOCKWAVE_DECS$"
+
 # Dark Matter Halo Blast
 ESC_DARK_MATTER_SHOCKWAVE: "Dark Matter Halo Blast"
 ESC_DARK_MATTER_SHOCKWAVE_DESC: "Precursor dark-matter manipulation technologies repurposed as an omnidirectional shockwave weapon, delivering extreme force in every direction simultaneously to anything unfortunate enough to be in range."
+
+ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP: "$ESC_DARK_MATTER_SHOCKWAVE$"
+ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP_DESC: "$ESC_DARK_MATTER_SHOCKWAVE_DESC$"
 
 ############################################################
 ##                      Kinetic Weapons                   ##
@@ -754,6 +778,9 @@ ESC_BIO_MASS_ACCELERATOR_TITANIC_DESC: "Chitin projectiles accelerated to near-l
 ESC_BIO_MASS_ACCELERATOR_JUGGERNAUT: "$ESC_MASS_ACCELERATOR_TITANIC$ ($juggernaut$)"
 ESC_BIO_MASS_ACCELERATOR_JUGGERNAUT_DESC: "$ESC_BIO_MASS_ACCELERATOR_TITANIC_DESC$"
 
+ESC_MASS_ACCELERATOR_ARKSHIP: "$ESC_MASS_ACCELERATOR_TITANIC$"
+ESC_MASS_ACCELERATOR_ARKSHIP_DESC: "$ESC_MASS_ACCELERATOR_TITANIC_DESC$"
+
 # Hailstorm Autocannon
 ESC_AUTOCANNON_X_1: "Hailstorm Autocannon"
 ESC_AUTOCANNON_X_1_DESC: "Built to a scale that dwarfs standard autocannon mounts, this weapon sustains fire rates so extreme that ammunition consumption becomes a logistical challenge in its own right."
@@ -778,6 +805,9 @@ ESC_BIO_AUTOCANNON_T: "Tempest Quill Battery"
 ESC_BIO_AUTOCANNON_T_DESC: "No biological projectile weapon in existence can match both the rate of fire and the individual projectile power this titanic Quill Battery sustains simultaneously."
 ESC_BIO_AUTOCANNON_J: "$ESC_BIO_AUTOCANNON_T$ ($juggernaut$)"
 ESC_BIO_AUTOCANNON_J_DESC: "$ESC_BIO_AUTOCANNON_T_DESC$"
+
+ESC_AUTOCANNON_ARKSHIP: "$ESC_BIO_AUTOCANNON_T$"
+ESC_AUTOCANNON_ARKSHIP_DESC: "$ESC_BIO_AUTOCANNON_T_DESC$"
 
 # Juggernaut Artillery
 ESC_JUGGERNAUT_ARTILLERY_1: "Juggernaut Artillery"
@@ -840,9 +870,15 @@ ESC_BIO_MHD_CANNON_TITANIC_DESC: "An enormous biological acid jet weapon whose c
 ESC_BIO_MHD_CANNON_JUGGERNAUT: "$ESC_BIO_MHD_CANNON_TITANIC$ ($juggernaut$)"
 ESC_BIO_MHD_CANNON_JUGGERNAUT_DESC: "$ESC_BIO_MHD_CANNON_TITANIC_DESC$"
 
+ESC_MHD_CANNON_ARKSHIP: "$ESC_MHD_CANNON_TITANIC$"
+ESC_MHD_CANNON_ARKSHIP_DESC: "$ESC_MHD_CANNON_TITANIC_DESC$"
+
 # Asteroid Thrower
 ESC_ASTEROID_THROWER: "Asteroid Thrower"
 ESC_ASTEROID_THROWER_DESC: "Technologically unimpressive by almost any measure, this weapon compensates for its simplicity through the fundamental physics of large masses in motion: asteroids do not need to be sophisticated to be catastrophic."
+
+ESC_ASTEROID_THROWER_ARKSHIP: "$ESC_ASTEROID_THROWER$"
+ESC_ASTEROID_THROWER_ARKSHIP_DESC: "$ESC_ASTEROID_THROWER_DESC$"
 
 ############################################################
 ##                      Missile Weapons                   ##
@@ -1043,6 +1079,9 @@ ESC_XMISSILE_3_TITANIC: "Reflex Warhead Launcher"
 ESC_XMISSILE_3_TITANIC_DESC: "Designed specifically to destroy capital ships, this oversized missile carries a Reflex Warhead of such extraordinary power that no vessel currently in service was built to survive a direct hit."
 ESC_XMISSILE_3_JUGGERNAUT: "$ESC_XMISSILE_3_TITANIC$ ($juggernaut$)"
 ESC_XMISSILE_3_JUGGERNAUT_DESC: "$ESC_XMISSILE_3_TITANIC_DESC$"
+
+ESC_XMISSILE_3_ARKSHIP: "$ESC_XMISSILE_3_TITANIC$"
+ESC_XMISSILE_3_ARKSHIP_DESC: "$ESC_XMISSILE_3_TITANIC_DESC$"
 
 ############################################################
 ##                       Point Defense                    ##

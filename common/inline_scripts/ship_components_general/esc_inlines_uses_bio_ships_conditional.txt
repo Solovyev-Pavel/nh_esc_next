@@ -1,8 +1,14 @@
 ### general script block to be used for bio-ship potential
 
+### additionally checks for arkship as even bioship empires
+### use mechanical components on arkships
+
 potential = {
 	$EXTRA_CONDITION$ = $EXTRA_CONDITION_VALUE$
-	from = {
+	from = { country_uses_bio_ships = $EVAL_TARGET$ }
+	NAND = {
+		is_arkship_ship = yes
+		country_uses_bio_ships = yes
 		country_uses_bio_ships = $EVAL_TARGET$
 	}
 }

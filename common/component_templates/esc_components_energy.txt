@@ -3429,8 +3429,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = no
+		ARKSHIP_WEAPON = no
 	}
 
 	target_weights = {
@@ -3496,8 +3497,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = yes
+		ARKSHIP_WEAPON = no
 	}
 
 	target_weights = {
@@ -3653,6 +3655,70 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_PARTICLE_LANCE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_particle_lance_titanic
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 7500
+		MAX_DAMAGE = 15000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 30 max = 100 }
+	total_fire_time = 170
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_particle_lance_hull_damage
+	armor_penetration = @ESC_WEAPON_particle_lance_armor_penetration
+	armor_damage = @ESC_WEAPON_particle_lance_armor_damage
+	shield_penetration = @ESC_WEAPON_particle_lance_shield_penetration
+	shield_damage = @ESC_WEAPON_particle_lance_shield_damage
+	tracking = 0.05
+
+	firing_arc = 25.0
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_particle_lance_titanic" }
+	component_set = ESC_PARTICLE_LANCE_ARKSHIP
+	projectile_gfx = "esc_particle_lance_titanic_big"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -4002,8 +4068,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = no
+		ARKSHIP_WEAPON = no
 	}
 
 	target_weights = {
@@ -4075,8 +4142,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = yes
+		ARKSHIP_WEAPON = no
 	}
 
 	target_weights = {
@@ -4249,6 +4317,76 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_ARC_EMITTER_ARKSHIP
+	size = titanic
+	icon = GFX_esc_arc_cannon_titanic
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 2500
+		MAX_DAMAGE = 12500
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 20 max = 60 }
+	total_fire_time = 170
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 1.0
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arc_emitter_titanic" }
+	component_set = ESC_ARC_EMITTER_ARKSHIP
+	projectile_gfx = "esc_arc_emitter_4_titanic"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	inline_script = {
+		script = weapon_effects/esc_fire_rate_debuff
+		EFFECT_LEVEL = 1
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -4588,8 +4726,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = no
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = no
+		ARKSHIP_WEAPON = no
 	}
 
 	target_weights = {
@@ -4656,8 +4795,9 @@ weapon_component_template = {
 	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
 
 	inline_script = {
-		script = ship_components_general/esc_inlines_uses_bio_ships
-		EVAL_TARGET = yes
+		script = ship_components_general/esc_inlines_titanic_standard_bio
+		BIOSHIP_WEAPON = yes
+		ARKSHIP_WEAPON = no
 	}
 
 	target_weights = {
@@ -4818,6 +4958,71 @@ weapon_component_template = {
 	}
 }
 
+# arkship
+weapon_component_template = {
+	key = ESC_WAVEMOTIONGUN_3_ARKSHIP
+	size = titanic
+	icon = GFX_esc_wave_motion_gun_3
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 6000
+		MAX_DAMAGE = 15000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 20 max = 100 }
+	total_fire_time = 150
+	range = @ESC_WEAPON_RANGE_ARKSHIP_3
+	accuracy = 0.75
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_wmg_hull_damage
+	armor_penetration = @ESC_WEAPON_wmg_armor_penetration
+	armor_damage = @ESC_WEAPON_wmg_armor_damage
+	shield_penetration = @ESC_WEAPON_wmg_shield_penetration
+	shield_damage = @ESC_WEAPON_wmg_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_wave_motion_gun_titanic" }
+	component_set = ESC_WAVEMOTIONGUN_3_ARKSHIP
+	projectile_gfx = "esc_wavemotiongun_3_titanic"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
 ############################################################
 ##                   Arc-en-Ciel Cannon                   ##
 ############################################################
@@ -4948,6 +5153,11 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	target_weights = {
 		titan = 3
 		battleship = 2
@@ -5037,6 +5247,76 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_ARC_EN_CIEL_ARKSHIP
+	size = titanic
+	icon = GFX_esc_arc_en_ciel
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # damage and collateral damage
+		script = weapon_effects/esc_inlines_collateral_damage
+		MIN_DAMAGE = 7500
+		MAX_DAMAGE = 15000
+		COLLATERAL_RANGE = @ESC_COLLATERAL_RANGE_ENERGY_t
+		COLLATERAL_SCALE_MULTIPLIER = @ESC_COLLATERAL_MULTIPLIER
+	}
+
+	windup = { min = 20.0 max = 60.0 }
+	total_fire_time = 170
+	range = @ESC_WEAPON_RANGE_ARKSHIP_4
+	accuracy = 1.0
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_en_ciel_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_en_ciel_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_en_ciel_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_en_ciel_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_en_ciel_shield_damage
+	tracking = 0.1
+
+	firing_arc = 25.0
+	min_range = @ESC_WEAPON_MIN_RANGE_3
+	#use_ship_kill_target = no
+
+	prerequisites = { "esc_tech_arcenciel_titanic" }
+	component_set = ESC_ARC_EN_CIEL_ARKSHIP
+	projectile_gfx = "esc_arc_en_ciel_titanic"
+	tags = { weapon_type_energy t_slot weapon_role_artillery }
+	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+
+	# only regular empires may use this component
+	valid_for_country = {
+		is_fallen_empire = no
+	}
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	target_weights = {
+		titan = 3
+		battleship = 2
+		stinger_stage_1 = 2
+		stinger_stage_2 = 2
+		stinger_stage_3 = 2
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -5406,6 +5686,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -5413,6 +5698,58 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_ARC_SHOCKWAVE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_arc_shockwave
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage
+		script = weapon_effects/esc_inlines_shockwave_damage
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 3000
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_ARKSHIP_1
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave" }
+	component_set = ESC_ARC_SHOCKWAVE_ARKSHIP
+	projectile_gfx = "esc_arc_shockwave"
+	tags = { weapon_type_energy t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
 
@@ -5465,6 +5802,11 @@ weapon_component_template = {
 	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = no
+	}
+
 	ai_weight = {
 		weight = 1
 		### AI shouldn't use this component if it can't afford at least some upgrades right away
@@ -5472,5 +5814,60 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_dark_matter }
 		}
+	}
+}
+
+# arkship
+weapon_component_template = {
+	key = ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP
+	size = titanic
+	icon = GFX_esc_dark_matter_shockwave
+	icon_frame = 1
+	type = instant
+
+	inline_script = { # shockwave damage with applied effect
+		script = weapon_effects/esc_inlines_shockwave_damage_with_effect
+		MIN_DAMAGE = 1000
+		MAX_DAMAGE = 3750
+		ATTACK_RANGE = @ESC_WEAPON_RANGE_ARKSHIP_2
+		MODIFIER_TYPE = esc_gravitic_weapon_movement_speed_debuff_2
+		MODIFIER_DURATION = 10
+		EFFECT_TOOLTIP = esc_dark_matter_shockwave_tooltip
+	}
+
+	windup = { min = 10.0 max = 20.0 }
+	total_fire_time = 60
+	accuracy = 1.0
+	power = 0
+
+	resources = {
+		category = ship_components
+		upkeep = {
+			alloys = @titanic_t7_upkeep_alloys
+			energy = @titanic_t7_upkeep_energy
+		}
+	}
+
+	hull_damage = @ESC_WEAPON_arc_emitter_hull_damage
+	armor_penetration = @ESC_WEAPON_arc_emitter_armor_penetration
+	armor_damage = @ESC_WEAPON_arc_emitter_armor_damage
+	shield_penetration = @ESC_WEAPON_arc_emitter_shield_penetration
+	shield_damage = @ESC_WEAPON_arc_emitter_shield_damage
+	tracking = 1
+
+	prerequisites = { "esc_tech_shockwave_dark_matter" }
+	component_set = ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP
+	projectile_gfx = "esc_dark_matter_shockwave"
+	tags = { weapon_type_energy t_slot }
+	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
+
+	inline_script = {
+		script = ship_components_general/esc_inlines_titanic_standard
+		ARKSHIP_WEAPON = yes
+	}
+
+	ai_weight = {
+		weight = 1
 	}
 }
