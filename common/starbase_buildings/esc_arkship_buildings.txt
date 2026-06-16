@@ -1,0 +1,608 @@
+############################################################
+##        Arkship buildings : upgrades to vanilla         ##
+############################################################
+
+### NOTE: these 'building' should be hidden in component progression overwrite
+###       submod since it will ensure upgrades to vanilla components into
+###       their direct ESC successors.
+
+# Advanced armor plating
+esc_arkship_advanced_armor = {
+	icon = "GFX_esc_arkship_module_advanced_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+            is_galvanic_empire = no
+			has_technology = esc_tech_armor_6
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_armor_6"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+		}
+	}
+
+	equipped_component = LARGE_ESC_ARMOR_6
+	equipped_component = LARGE_ESC_ARMOR_6
+	equipped_component = LARGE_ESC_ARMOR_6
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Advanced armor plating : living metal version
+esc_arkship_advanced_lm_armor = {
+	icon = "GFX_esc_arkship_module_advanced_lm_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+            is_galvanic_empire = yes
+			has_technology = esc_tech_armor_6
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_armor_6"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+		}
+	}
+
+	equipped_component = LARGE_ESC_LM_ARMOR_6
+	equipped_component = LARGE_ESC_LM_ARMOR_6
+	equipped_component = LARGE_ESC_LM_ARMOR_6
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Advanced crystalline armor plating
+esc_arkship_advanced_crystal_armor = {
+	icon = "GFX_esc_arkship_module_advanced_crystal_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_crystal_armor_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_crystal_armor_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            rare_crystals = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_CRYSTAL_ARMOR_3
+	equipped_component = LARGE_ESC_CRYSTAL_ARMOR_3
+	equipped_component = LARGE_ESC_CRYSTAL_ARMOR_3
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Advanced shielding arrays
+esc_arkship_advanced_shields = {
+	icon = "GFX_esc_arkship_module_advanced_shields"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_shields_6
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_shields_6"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            exotic_gases = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_SHIELDS_6
+	equipped_component = LARGE_ESC_SHIELDS_6
+	equipped_component = LARGE_ESC_SHIELDS_6
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
+
+# Advanced psionic shielding arrays
+esc_arkship_advanced_psi_shields = {
+	icon = "GFX_esc_arkship_module_advanced_psi_shields"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_psionic_shield_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_psionic_shield_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            sr_zro= @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_PSI_SHIELD_2
+	equipped_component = LARGE_ESC_PSI_SHIELD_2
+	equipped_component = LARGE_ESC_PSI_SHIELD_2
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
+
+############################################################
+##       Arkship buildings : ESC armor and shields        ##
+############################################################
+
+# Crystal-core armor upgrade
+esc_arkship_crystal_core_armor = {
+	icon = "GFX_esc_arkship_module_crystal_core_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_crystal_core_armor_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_crystal_core_armor_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+            rare_crystals = @arkship_cost_alloys_150
+		}
+	}
+
+	equipped_component = LARGE_ESC_CRYSTAL_CORE_ARMOR_1
+	equipped_component = LARGE_ESC_CRYSTAL_CORE_ARMOR_1
+	equipped_component = LARGE_ESC_CRYSTAL_CORE_ARMOR_1
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Bio armor upgrade
+esc_arkship_bio_armor = {
+	icon = "GFX_esc_arkship_module_bio_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_bio_armor_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_bio_armor_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+            food = @arkship_cost_alloys_150
+		}
+	}
+
+	equipped_component = LARGE_ESC_BIO_ARMOR_1
+	equipped_component = LARGE_ESC_BIO_ARMOR_1
+	equipped_component = LARGE_ESC_BIO_ARMOR_1
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Nanite armor upgrade
+esc_arkship_nanite_armor = {
+	icon = "GFX_esc_arkship_module_nanite_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_armor_nanite_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_armor_nanite_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            nanites = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_NANO_ARMOR_1
+	equipped_component = LARGE_ESC_NANO_ARMOR_1
+	equipped_component = LARGE_ESC_NANO_ARMOR_1
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Shielding armor upgrade
+esc_arkship_shielding_armor = {
+	icon = "GFX_esc_arkship_module_shielding_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_armor_shield_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_armor_shield_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            nanites = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_SHIELD_ARMOR_1
+	equipped_component = LARGE_ESC_SHIELD_ARMOR_1
+	equipped_component = LARGE_ESC_SHIELD_ARMOR_1
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 1.5
+			always = yes
+		}
+	}
+}
+
+# Hardlight armor upgrade
+esc_arkship_hardlight_armor = {
+	icon = "GFX_esc_arkship_module_wraith_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_armor_wraith
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_armor_wraith"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            exotic_gases = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_HARDLIGHT_ARMOR
+	equipped_component = LARGE_ESC_HARDLIGHT_ARMOR
+	equipped_component = LARGE_ESC_HARDLIGHT_ARMOR
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
+
+# Dimensional Horror armor upgrade
+esc_arkship_horror_armor = {
+	icon = "GFX_esc_arkship_module_horror_armor"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_armor_horror
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_armor_horror"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+		}
+	}
+
+	equipped_component = LARGE_ESC_HORROR_ARMOR
+	equipped_component = LARGE_ESC_HORROR_ARMOR
+	equipped_component = LARGE_ESC_HORROR_ARMOR
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_armor = yes
+		}
+	}
+}
+
+# Cyclonic shields upgrade
+esc_arkship_cyclonic_shields = {
+	icon = "GFX_esc_arkship_module_cyclonic_shields"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_shields_cyclonic_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_shields_cyclonic_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            exotic_gases = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_CYCLONIC_SHIELDS_1
+	equipped_component = LARGE_ESC_CYCLONIC_SHIELDS_1
+	equipped_component = LARGE_ESC_CYCLONIC_SHIELDS_1
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}
+
+# Dark matter shields upgrade
+esc_arkship_dark_matter_shields = {
+	icon = "GFX_esc_arkship_module_dark_matter_shields"
+	starbase_type = arkship
+	construction_days = 180
+	category = sm_defense_cat
+
+	starbase_limit = {
+		base = -1
+	}
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_dark_matter_shields_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_dark_matter_shields_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+            sr_dark_matter = @arkship_cost_rare_75
+		}
+	}
+
+	equipped_component = LARGE_ESC_ENIGMATIC_SHIELD_2
+	equipped_component = LARGE_ESC_ENIGMATIC_SHIELD_2
+	equipped_component = LARGE_ESC_ENIGMATIC_SHIELD_2
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_shields = yes
+		}
+	}
+}

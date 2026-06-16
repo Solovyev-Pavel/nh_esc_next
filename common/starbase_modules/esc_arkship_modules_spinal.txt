@@ -1,0 +1,1034 @@
+############################################################
+##                     Arkship modules                    ##
+############################################################
+
+# Acid blob storm
+esc_arkship_spinal_bio_missile_mount = {
+	icon = "GFX_esc_arkship_spinal_bio_missiles"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_bio_missile_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_bio_missile_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			food = @arkship_cost_strategic_500
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			food = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_BIO_X_MISSILE_3_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Crystalline impaler
+esc_arkship_spinal_crystalline_mount = {
+	icon = "GFX_esc_arkship_spinal_crystal_impaler"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_crystal_lance_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_crystal_lance_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_CRYSTAL_LANCE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Light of Destruction
+esc_arkship_spinal_particle_lance_mount = {
+	icon = "GFX_esc_arkship_spinal_particle_lance"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_particle_lance_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_particle_lance_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_PARTICLE_LANCE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Divine Thunder
+esc_arkship_spinal_arc_cannon_mount = {
+	icon = "GFX_esc_arkship_spinal_arc_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_arc_emitter_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_arc_emitter_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_ARC_EMITTER_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Wave-motion Gun
+esc_arkship_spinal_wave_motion_gun_mount = {
+	icon = "GFX_esc_arkship_spinal_wave_motion_gun"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_wave_motion_gun_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_wave_motion_gun_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			exotic_gases = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			exotic_gases = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_WAVEMOTIONGUN_3_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Arc-en-Ciel
+esc_arkship_spinal_arc_en_ciel_mount = {
+	icon = "GFX_esc_arkship_spinal_arc_en_ciel"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_arcenciel_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_arcenciel_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			sr_dark_matter = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			sr_dark_matter = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_ARC_EN_CIEL_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Energy Shockwave
+esc_arkship_spinal_arc_shockwave_mount = {
+	icon = "GFX_esc_arkship_spinal_arc_shockwave"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_shockwave
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_shockwave"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_ARC_SHOCKWAVE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Dark Matter Halo Blast
+esc_arkship_spinal_dark_matter_shockwave_mount = {
+	icon = "GFX_esc_arkship_spinal_dark_matter_blast"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_shockwave_dark_matter
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_shockwave_dark_matter"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			sr_dark_matter = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			sr_dark_matter = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Extradimensional
+esc_arkship_spinal_extradimensional_mount = {
+	icon = "GFX_esc_arkship_spinal_extradimensional"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_extradimensional_weapon_2_t
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_extradimensional_weapon_2_t"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Super-graviton Cannon
+esc_arkship_spinal_gravitic_cannon_mount = {
+	icon = "GFX_esc_arkship_spinal_graviton_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_gravity_lance_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_gravity_lance_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			sr_dark_matter = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			sr_dark_matter = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_GRAVITY_LANCE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# RKKV
+esc_arkship_spinal_mass_accelerator_mount = {
+	icon = "GFX_esc_arkship_spinal_rkkv_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_giga_cannon_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_giga_cannon_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			volatile_motes = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			volatile_motes = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_MASS_ACCELERATOR_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Tempest Autocannon
+esc_arkship_spinal_autocannon_mount = {
+	icon = "GFX_esc_arkship_spinal_autocannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_autocannon_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_autocannon_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			volatile_motes = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			volatile_motes = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_AUTOCANNON_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Asteroid Thrower
+esc_arkship_spinal_asteroid_thrower_mount = {
+	icon = "GFX_esc_arkship_spinal_asteroid_thrower"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "tech_arkship_tier_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+		}
+	}
+
+	component_set = ESC_ASTEROID_THROWER_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# MHD Cannon
+esc_arkship_spinal_mhd_cannon_mount = {
+	icon = "GFX_esc_arkship_spinal_mhd_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_mhd_cannon_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_mhd_cannon_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			volatile_motes = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			volatile_motes = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_MHD_CANNON_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Enigmatic Lance
+esc_arkship_spinal_enigmatic_mount = {
+	icon = "GFX_esc_arkship_spinal_enigmatic_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_enigmatic_lance_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_enigmatic_lance_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			sr_dark_matter = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			sr_dark_matter = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_ENIGMATIC_LANCE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Tiyanki Beam Cannon
+esc_arkship_spinal_tiyanki_gun_mount = {
+	icon = "GFX_esc_arkship_spinal_tiyanki_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_tiyanki_beam_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_tiyanki_beam_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			exotic_gases = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			exotic_gases = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_TIYANKI_CANNON_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Reflex missiles
+esc_arkship_spinal_missile_mount = {
+	icon = "GFX_esc_arkship_spinal_reflex_missile"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_xmissile_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_xmissile_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			exotic_gases = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			exotic_gases = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_XMISSILE_3_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Nanite Warheads
+esc_arkship_spinal_nanite_missile_mount = {
+	icon = "GFX_esc_arkship_spinal_nanite_missile"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_nanite_missile_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_nanite_missile_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			nanites = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			nanites = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_NANITE_TSLOT_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Psionic Lance
+esc_arkship_spinal_psi_lance_mount = {
+	icon = "GFX_esc_arkship_spinal_void_ray"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_psionic_lance_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_psionic_lance_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			sr_zro = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			sr_zro = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_PSIONIC_LANCE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Psionic Catastrophe
+esc_arkship_spinal_psi_shockwave_mount = {
+	icon = "GFX_esc_arkship_spinal_psi_shockwave"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_shockwave_psionic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_shockwave_psionic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			sr_zro = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			sr_zro = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_PSIONIC_SHOCKWAVE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Tesla cannon
+esc_arkship_spinal_tesla_cannon_mount = {
+	icon = "GFX_esc_arkship_spinal_tesla_cannon"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_tesla_cannon_titanic
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_tesla_cannon_titanic"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_TESLA_CANNON_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# Tesla shockwave
+esc_arkship_spinal_tesla_shockwave_mount = {
+	icon = "GFX_esc_arkship_spinal_tesla_shockwave"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+            has_technology = esc_tech_shockwave_tesla
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_shockwave_tesla"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			rare_crystals = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_5
+			rare_crystals = @arkship_upkeep_strategic_1
+		}
+	}
+
+	component_set = ESC_TESLA_SHOCKWAVE_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

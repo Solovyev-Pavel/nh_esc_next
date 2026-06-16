@@ -1,0 +1,1862 @@
+############################################################
+##         Arkship modules : upgrades to vanilla          ##
+############################################################
+
+### NOTE: these 'building' should be hidden in component progression overwrite
+###       submod since it will ensure upgrades to vanilla components into
+###       their direct ESC successors.
+
+# advanced strikecrafts
+esc_arkship_hangar_bay_advanced = {
+	icon = "GFX_esc_arkship_module_hangar_advanced"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_strikecraft_4
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_strikecraft_4"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			exotic_gases = @arkship_cost_strategic_45
+		}
+	}
+
+	component_set = ESC_FIGHTERS_HANGAR_4
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# advanced archaeo strikecrafts
+esc_arkship_archaeo_hangar_bay_advanced = {
+	icon = "GFX_esc_arkship_module_archaeo_hangar_advanced"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_archaeo_strikecraft_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_strikecraft_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			minor_artifacts = @arkship_cost_rare_75
+		}
+	}
+
+	component_set = ESC_ARCHAEO_STRIKECRAFT_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+		modifier = {
+			factor = 1.25
+			ai_owner_has_archaeoengineers = yes
+		}
+	}
+}
+
+# bio-augmented amoebas
+esc_arkship_amoeba_hangar_bay_advanced = {
+	icon = "GFX_esc_arkship_module_hangar_amoeba_advanced"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_amoeba_3b
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_amoeba_3b"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			food = @arkship_cost_alloys_120
+		}
+	}
+
+	component_set = ESC_AMOEBA_BIO_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# advanced lasers
+esc_arkship_laser_battery_advanced = {
+	icon = "GFX_esc_arkship_module_lasers_advanced"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_laser_6
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_laser_6"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_100
+			rare_crystals = @arkship_cost_strategic_45
+		}
+	}
+
+	component_set = ESC_LASER_6
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# advanced archaeo lasers
+esc_arkship_archaeo_laser_battery_advanced = {
+	icon = "GFX_esc_arkship_module_archaeo_lasers_advanced"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_archaeo_laser_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_laser_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			minor_artifacts = @arkship_cost_rare_75
+		}
+	}
+
+	component_set = ESC_ARCHAEO_LASER_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+		modifier = {
+			factor = 1.25
+			ai_owner_has_archaeoengineers = yes
+		}
+	}
+}
+
+# advanced particle lances
+esc_arkship_lance_battery_advanced = {
+	icon = "GFX_esc_arkship_module_lance_battery_advanced"
+	section = "ARKSHIP_XL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_particle_lance_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_particle_lance_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_300
+			rare_crystals = @arkship_cost_strategic_150
+		}
+	}
+
+	component_set = ESC_PARTICLE_LANCE_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# advanced energy launchers
+esc_arkship_particle_launcher_advanced = {
+	icon = "GFX_esc_arkship_module_energy_launcher_advanced"
+	section = "ARKSHIP_TORPEDO_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_energy_torpedo_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_energy_torpedo_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_500
+			exotic_gases = @arkship_cost_strategic_250
+		}
+	}
+
+	component_set = ESC_ENERGY_TORPEDO_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# advanced arc emitters
+esc_arkship_arc_emitter_battery_advanced = {
+	icon = "GFX_esc_arkship_module_arc_cannon_advanced"
+	section = "ARKSHIP_XL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_arc_emitter_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_arc_emitter_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_300
+			rare_crystals = @arkship_cost_strategic_150
+		}
+	}
+
+	component_set = ESC_ARC_EMITTER_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# advanced mass drivers
+esc_arkship_mass_driver_battery_advanced = {
+	icon = "GFX_esc_arkship_module_mass_drivers_advanced"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_mass_driver_6
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_mass_driver_6"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_100
+			volatile_motes = @arkship_cost_strategic_45
+		}
+	}
+
+	component_set = ESC_MASS_DRIVER_6
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+	}
+}
+
+# advanced archaeo mass drivers
+esc_arkship_archaeo_mass_driver_battery_advanced = {
+	icon = "GFX_esc_arkship_module_archaeo_mass_drivers_advanced"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_archaeo_mass_driver_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_mass_driver_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			minor_artifacts = @arkship_cost_rare_75
+		}
+	}
+
+	component_set = ESC_ARCHAEO_MASS_DRIVER_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+		modifier = {
+			factor = 1.25
+			ai_owner_has_archaeoengineers = yes
+		}
+	}
+}
+
+# advanced kinetic artillery
+esc_arkship_kinetic_artillery_battery_advanced = {
+	icon = "GFX_esc_arkship_module_kinetic_artillery_advanced"
+	section = "ARKSHIP_LARGE_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_kinetic_artillery_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_kinetic_artillery_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_175
+			volatile_motes = @arkship_cost_strategic_150
+		}
+	}
+
+	component_set = ESC_ARTILLERY_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+	}
+}
+
+# advanced giga cannons
+esc_arkship_mass_accelerator_advanced = {
+	icon = "GFX_esc_arkship_module_giga_cannon_advanced"
+	section = "ARKSHIP_XL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_giga_cannon_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_giga_cannon_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_300
+			volatile_motes = @arkship_cost_strategic_150
+		}
+	}
+
+	component_set = ESC_MASS_ACCELERATOR_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+	}
+}
+
+# advanced archaeo giga cannons
+esc_arkship_archaeo_mass_accelerator_advanced = {
+	icon = "GFX_esc_arkship_module_archaeo_giga_cannon_advanced"
+	section = "ARKSHIP_XL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_archaeo_mass_accelerator_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_mass_accelerator_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_825
+			minor_artifacts = @arkship_cost_rare_125
+		}
+	}
+
+	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+		modifier = {
+			factor = 1.25
+			ai_owner_has_archaeoengineers = yes
+		}
+	}
+}
+
+# advanced missile batteries
+esc_arkship_missile_battery_advanced = {
+	icon = "GFX_esc_arkship_module_missiles_advanced"
+	section = "ARKSHIP_SMALL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_missiles_6
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_missiles_6"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_65
+			volatile_motes = @arkship_cost_strategic_45
+		}
+	}
+
+	component_set = ESC_MISSILE_6
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+	}
+}
+
+# advanced archaeo missile batteries
+esc_arkship_archaeo_missile_battery_advanced = {
+	icon = "GFX_esc_arkship_module_archaeo_missiles_advanced"
+	section = "ARKSHIP_SMALL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_archaeo_missiles_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_missiles_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			minor_artifacts = @arkship_cost_rare_150
+		}
+	}
+
+	component_set = ESC_ARCHAEO_MISSILES_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+		modifier = {
+			factor = 1.25
+			ai_owner_has_archaeoengineers = yes
+		}
+	}
+}
+
+# advanced swarmer missile batteries
+esc_arkship_swamer_missile_battery_advanced = {
+	icon = "GFX_esc_arkship_module_swarmer_missiles_advanced"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_swarmer_missiles_3
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_swarmer_missiles_3"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_120
+			volatile_motes = @arkship_cost_strategic_65
+		}
+	}
+
+	component_set = ESC_SWARMER_MISSILES_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+	}
+}
+
+# advanced flak batteries
+esc_arkship_flak_battery_advanced = {
+	icon = "GFX_arkship_flak_battery"
+	section = "ARKSHIP_PD_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_pd_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_flak_cannon_4
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_flak_cannon_4"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_85
+		}
+	}
+
+	component_set = ESC_FLAK_CANNON_4
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# advanced point defense batteries
+esc_arkship_pd_battery_advanced = {
+	icon = "GFX_arkship_pd_battery"
+	section = "ARKSHIP_PD_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_pd_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_point_defense_4
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_point_defense_4"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_85
+		}
+	}
+
+	component_set = ESC_POINT_DEFENSE_4
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+# advanced archaeo point defense batteries
+esc_arkship_archaeo_pd_battery_advanced = {
+	icon = "GFX_esc_arkship_module_archaeo_pd_advanced"
+	section = "ARKSHIP_PD_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_pd_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_archaeo_point_defense_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_point_defense_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_100
+			minor_artifacts = @arkship_cost_rare_400
+		}
+	}
+
+	component_set = ESC_ARCHAEO_POINTDEFENSE_2
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 1.25
+			ai_owner_has_archaeoengineers = yes
+		}
+	}
+}
+
+############################################################
+##         Arkship modules : ESC weapon modules           ##
+############################################################
+
+# bio-augmented amoebas
+esc_arkship_amoeba_hangar_bay_cybernetic = {
+	icon = "GFX_esc_arkship_module_hangar_amoeba_cybernetic"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_amoeba_3c
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_amoeba_3c"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			food = @arkship_cost_alloys_120
+		}
+	}
+
+	component_set = ESC_AMOEBA_CYBER_3
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# mercenary strikecrafts
+esc_arkship_hangar_bay_mercenary = {
+	icon = "GFX_esc_arkship_module_hangar_mercenary"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_strikecraft_mercenary_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_strikecraft_mercenary_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			energy = @arkship_cost_alloys_150
+		}
+	}
+
+	component_set = ESC_MERCENRY_HANGAR_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# chrono cannons
+esc_arkship_chrono_cannons = {
+	icon = "GFX_esc_arkship_module_chrono_cannons"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_chrono_cannon
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_chrono_cannon"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_250
+			sr_dark_matter = @arkship_cost_strategic_150
+		}
+	}
+
+	component_set = ESC_CHRONO_CANNON
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# plasma missiles
+esc_arkship_plasma_missile_battery = {
+	icon = "GFX_esc_arkship_module_plasma_missiles"
+	section = "ARKSHIP_SMALL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_plasma_missiles_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_plasma_missiles_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			exotic_gases = @arkship_cost_strategic_65
+		}
+	}
+
+	component_set = ESC_PLASMA_MISSILE_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+	}
+}
+
+# bio-missiles
+esc_arkship_bio_missile_battery = {
+	icon = "GFX_esc_arkship_module_bio_missiles"
+	section = "ARKSHIP_SMALL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_bio_missile_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_bio_missile_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			food = @arkship_cost_alloys_150
+		}
+	}
+
+	component_set = ESC_BIO_MISSILE_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+	}
+}
+
+# crystalline cannons
+esc_arkship_crystal_cannon_battery = {
+	icon = "GFX_esc_arkship_module_crystal_cannon"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_crystal_cannon_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_crystal_cannon_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_100
+			rare_crystals = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_CRYSTAL_CANNON_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+	}
+}
+
+# extradimensional
+esc_arkship_matter_annihilator_battery = {
+	icon = "GFX_esc_arkship_spinal_extradimensional"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_extradimensional_weapon_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_extradimensional_weapon_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			sr_dark_matter = @arkship_cost_strategic_75
+		}
+	}
+
+	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# gravitic cannons
+esc_arkship_gravitic_cannon_battery = {
+	icon = "GFX_esc_arkship_module_gravitic_cannons"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_gravity_cannon_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_gravity_cannon_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			sr_dark_matter = @arkship_cost_strategic_75
+		}
+	}
+
+	component_set = ESC_GRAVITY_CANNON_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# gravitic bombers
+esc_arkship_hangar_bay_gravitic = {
+	icon = "GFX_esc_arkship_module_gravitic_bombers"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_gravity_bombers
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_gravity_bombers"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_200
+			sr_dark_matter = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_GRAVITY_BOMBERS
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# nanite missiles
+esc_arkship_nanite_missile_battery = {
+	icon = "GFX_esc_arkship_module_nanite_missiles"
+	section = "ARKSHIP_SMALL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_nanite_torpedo_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_nanite_torpedo_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			nanites = @arkship_cost_strategic_75
+		}
+	}
+
+	component_set = ESC_NANITE_TORPEDO_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+	}
+}
+
+# nanite reconstructors
+esc_arkship_nanite_reconstructor_battery = {
+	icon = "GFX_esc_arkship_module_nanite_reconstructor"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_projectile_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_nanite_reconstructor
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_nanite_reconstructor"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			nanites = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_NANITE_RECONSTRUCTOR
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_ammunition_lines
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_kinetic_weapons = yes
+		}
+	}
+}
+
+# nanite bombers
+esc_arkship_hangar_bay_nanite = {
+	icon = "GFX_esc_arkship_module_nanite_bombers"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_nanite_bomber
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_gravity_bombers"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_200
+			nanites = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_NANITE_BOMBERS
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# enigmatic cannons
+esc_arkship_enigmatic_cannon_battery = {
+	icon = "GFX_esc_arkship_module_enigmatic_cannon"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_enigmatic_cannon
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_enigmatic_cannon"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			sr_dark_matter = @arkship_cost_alloys_150
+		}
+	}
+
+	component_set = ESC_ENIGMATIC_CANNON
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# advanced energy syphons
+esc_arkship_tiyanki_cannon_battery = {
+	icon = "GFX_esc_arkship_module_tiyanki_cannon"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_space_whale_weapon_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_space_whale_weapon_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+		}
+	}
+
+	component_set = ESC_SPACE_WHALE_WEAPON_2
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# voidspawn missiles
+esc_arkship_voidspawn_missile_battery = {
+	icon = "GFX_arkship_scourge_missile_battery"
+	section = "ARKSHIP_SMALL_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_explosive_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_voidspawn_missile
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_voidspawn_missile"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			volatile_motes = @arkship_cost_strategic_65
+		}
+	}
+
+	component_set = ESC_VOIDSPAWN_MISSILE
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_missile_silos
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_explosive_weapons = yes
+		}
+	}
+}
+
+# psionic cannons
+esc_arkship_psionic_cannon_battery = {
+	icon = "GFX_esc_arkship_module_psionic_cannon"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_psionic_cannon_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_psionic_cannon_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			sr_zro = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_PSIONIC_CANNON_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# psionic interceptors
+esc_arkship_hangar_bay_psionic = {
+	icon = "GFX_esc_arkship_module_psionic_strikecraft"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_psionic_interceptors
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_psionic_interceptors"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_200
+			sr_zro = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_PSIONIC_INTERCEPTORS
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
+
+# tesla cannons
+esc_arkship_tesla_cannon_battery = {
+	icon = "GFX_esc_arkship_module_tesla_cannon"
+	section = "ARKSHIP_MEDIUM_TURRET_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_energy_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_tesla_coil_1
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_tesla_coil_1"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_150
+			rare_crystals = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_TESLA_COIL_1
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_laser_capacitors
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_energy_weapons = yes
+		}
+	}
+}
+
+# tesla interdictors
+esc_arkship_hangar_bay_tesla = {
+	icon = "GFX_esc_arkship_module_tesla_strikecraft"
+	section = "ARKSHIP_HANGAR_MODULE"
+	construction_days = 180
+	starbase_type = arkship
+	category = sm_strike_craft_cat
+
+	potential = {
+		owner? = {
+			has_technology = esc_tech_tesla_interdictor
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_tesla_interdictor"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	cannot_fit_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_200
+			rare_crystals = @arkship_cost_alloys_75
+		}
+	}
+
+	component_set = ESC_TESLA_INTERDICTOR
+	show_component_tooltips = yes
+
+	inline_script = {
+		script = jobs/arkship_module_soldiers_add
+		ZONE = zone_ark_flight_decks
+		AMOUNT = @arkship_module_jobs
+	}
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+		modifier = {
+			factor = 2
+			ai_owner_prefers_strike_craft = yes
+		}
+	}
+}
