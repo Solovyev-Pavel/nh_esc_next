@@ -1049,6 +1049,172 @@ utility_component_template = {
 }
 
 ############################################################
+### Arkship computers
+
+# vanilla computer direct overwrite for upgrades
+utility_component_template = {
+	key = "COMBAT_COMPUTER_ARKSHIP"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+	}
+	ship_behavior = "arkship"
+
+	potential = {
+		is_arkship_ship = yes
+	}
+
+	component_set = "combat_computers"
+
+	scripted_action = {
+		arkship_build_megastructure
+		arkship_survey
+		arkship_deep_scan
+		arkship_harvest_resources
+		arkship_strip_mine
+		arkship_empty_spine
+		arkship_subspace_image
+		arkship_reprocess_planet
+		arkship_stellar_ignition
+		arkship_exodus_jump
+		arkship_settle
+		arkship_drop_off_prisoners
+		collect_waystation_stockpile
+		arkship_lithoid_consume_world
+		arkship_nanotech_consume_world
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+
+	upgrades_to = "ESC_NANITE_COMPUTER_ARKSHIP"
+}
+
+# Automated Dreadnought Computers : Arkship
+utility_component_template = {
+	key = "ESC_DREADNOUGHT_COMPUTER_ARKSHIP"
+	size = small
+	icon = "GFX_esc_dreadnought_computer"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+	}
+
+	ship_behavior = "arkship"
+	prerequisites = { "esc_tech_dreadnought_computer" }
+
+	potential = {
+		is_arkship_ship = yes
+	}
+
+	component_set = "combat_computers"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.25
+		ship_weapon_damage = 0.25
+		ship_accuracy_add = 10
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.15
+		ship_armor_mult = 0.15
+	}
+
+	scripted_action = {
+		arkship_build_megastructure
+		arkship_survey
+		arkship_deep_scan
+		arkship_harvest_resources
+		arkship_strip_mine
+		arkship_empty_spine
+		arkship_subspace_image
+		arkship_reprocess_planet
+		arkship_stellar_ignition
+		arkship_exodus_jump
+		arkship_settle
+		arkship_drop_off_prisoners
+		collect_waystation_stockpile
+		arkship_lithoid_consume_world
+		arkship_nanotech_consume_world
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+# Nanite Thought Matrix : Arkship
+utility_component_template = {
+	key = "ESC_NANITE_COMPUTER_ARKSHIP"
+	size = small
+	icon = "GFX_esc_nanite_computer_starbase"
+	icon_frame = 1
+	power = 0
+
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+	}
+
+	ship_behavior = "arkship"
+	prerequisites = { "esc_tech_nanite_thought_matrix" }
+
+	potential = {
+		is_arkship_ship = yes
+	}
+
+	component_set = "combat_computers"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.15
+		ship_weapon_damage = 0.15
+		ship_accuracy_add = 10
+		ship_tracking_add = 10
+	}
+	modifier = {
+		ship_shield_mult = 0.25
+		ship_armor_mult = 0.25
+		ship_hull_mult = 0.25
+	}
+
+	scripted_action = {
+		arkship_build_megastructure
+		arkship_survey
+		arkship_deep_scan
+		arkship_harvest_resources
+		arkship_strip_mine
+		arkship_empty_spine
+		arkship_subspace_image
+		arkship_reprocess_planet
+		arkship_stellar_ignition
+		arkship_exodus_jump
+		arkship_settle
+		arkship_drop_off_prisoners
+		collect_waystation_stockpile
+		arkship_lithoid_consume_world
+		arkship_nanotech_consume_world
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+############################################################
 ### Special computers
 
 # Automated Dreadnought Computer : NSC Headquarters
