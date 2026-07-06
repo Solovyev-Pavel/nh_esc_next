@@ -378,6 +378,52 @@ esc_arkship_spinal_dark_matter_shockwave_mount = {
 	}
 }
 
+# Archaeo
+esc_arkship_spinal_archaeo_mount = {
+	icon = "GFX_esc_arkship_spinal_ruinator"
+	section = "ARKSHIP_SPINAL_DEVASTATOR"
+	construction_days = @arkship_spinal_mount_build_time
+	starbase_type = arkship
+	category = sm_spinal_cat
+
+	potential = {
+		owner? = {
+			has_technology = tech_arkship_tier_3
+			has_technology = tech_military_arkship
+			has_technology = esc_tech_archaeo_titanic_2
+		}
+		is_arkship_starbase = yes
+	}
+
+	show_in_tech = "esc_tech_archaeo_titanic_2"
+
+	show_tech_unlock_if = {
+		is_nomadic = yes
+	}
+
+	fits_on_slots = { spinal_mount_1 }
+
+	resources = {
+		category = starbase_arkship_upgrades
+		cost = {
+			alloys = @arkship_cost_alloys_5000
+			minor_artifacts = @arkship_cost_strategic_250
+			unity = @arkship_cost_unity_500
+		}
+
+		upkeep = {
+			energy = @arkship_upkeep_energy_10
+		}
+	}
+
+	component_set = ESC_ARCHAEO_TITANLASER_2_ARKSHIP
+	show_component_tooltips = yes
+
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
 # Extradimensional
 esc_arkship_spinal_extradimensional_mount = {
 	icon = "GFX_esc_arkship_spinal_extradimensional"
