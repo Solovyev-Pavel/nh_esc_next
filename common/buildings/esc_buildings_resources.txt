@@ -33,7 +33,12 @@ esc_building_zro_distillery = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = { has_upgraded_capital = yes }
 
 	resources = {
@@ -110,7 +115,12 @@ esc_building_dark_matter_facility = {
 			has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
 		}
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = { has_upgraded_capital = yes }
 
 	resources = {
@@ -180,7 +190,12 @@ esc_building_nanite_foundry = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = {
 		has_upgraded_capital = yes
 		exists = owner
@@ -251,7 +266,12 @@ esc_building_crystal_farm_1 = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = { has_upgraded_capital = yes }
 
 	resources = {
@@ -320,7 +340,12 @@ esc_building_crystal_farm_2 = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_crystalline_weapons_forbidden }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = { has_upgraded_capital = yes }
 
     resources = {
@@ -391,7 +416,12 @@ esc_building_reprocessing_plant = {
 		exists = owner
 		owner = { has_country_flag = scrapper_killed }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = {
 		has_upgraded_capital = yes
 	}

@@ -34,7 +34,12 @@ esc_building_central_research_bureau = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_central_research_bureau_forbidden }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = {
 		has_major_upgraded_capital = yes
 	}
@@ -106,7 +111,9 @@ esc_building_culture_nexus = {
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
-
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
 	allow = {
 		has_major_upgraded_capital = yes
 	}
@@ -177,7 +184,6 @@ esc_building_cerebral_node = {
 	}
 
 	potential = {
-		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
 		exists = owner
 		owner = { is_hive_empire = yes }
@@ -275,7 +281,6 @@ esc_building_network_regulator = {
 	}
 
 	potential = {
-		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_culture_nexus_forbidden }
 		exists = owner
 		owner = { is_machine_empire = yes }
@@ -375,7 +380,9 @@ esc_building_materials_laboratory = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_advanced_materials_laboratory_forbidden }
 	}
-
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
 	allow = {
 		has_major_upgraded_capital = yes
 	}
@@ -429,7 +436,9 @@ esc_building_technology_institute = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_technology_institute_forbidden }
 	}
-
+	destroy_trigger = {
+		has_modifier = slave_colony
+	}
 	allow = {
 		has_major_upgraded_capital = yes
 	}
@@ -484,7 +493,12 @@ esc_building_watcher = {
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_global_flag = ESC_GLOBAL_FLAG_watcher_of_eternity_forbidden }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = {
 		has_major_upgraded_capital = yes
 	}
@@ -547,7 +561,12 @@ esc_building_stellar_energy_tower = {
 		exists = owner
 		owner = { has_country_flag = ESC_COUNTRY_FLAG_killed_stellarite_devourer }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = {
 		has_upgraded_capital = yes
 	}
@@ -632,6 +651,11 @@ esc_building_stellar_energy_tower = {
 		text = esc_stellar_tower_effect_machine
 	}
 
+	ai_resource_production = {
+		energy = 10
+		trigger = { has_any_generator_zone = yes }
+	}
+
 	show_tech_unlock_if = { NOT = { has_global_flag = ESC_GLOBAL_FLAG_stellarite_tech_forbidden } }
 	prerequisites = { "esc_tech_stellar_energy_tower" }
 }
@@ -658,7 +682,12 @@ esc_building_quantum_node = {
 		exists = owner
 		owner = { has_country_flag = technosphere_studied }
 	}
-
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
 	allow = { has_upgraded_capital = yes }
 
 	resources = {
