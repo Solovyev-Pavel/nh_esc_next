@@ -63,7 +63,7 @@ planet_event = {
 }
 
 ### learning about drake cloning via capturing the planet with the building
-colony_event = {
+carrier_event = {
 	id = esc_events.2001
 	is_triggered_only = yes
 	hide_window = yes
@@ -175,7 +175,7 @@ planet_event = {
 		# roll dice to decide if there should be another deposit
 		if = {
 			limit = {
-				NOT = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5 }
+				NOT = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5 }
 			}
 
 			if = { # normal mode
@@ -213,27 +213,27 @@ planet_event = {
         planet = {
 			add_deposit = d_esc_mantle_mineral_cluster
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -252,27 +252,27 @@ planet_event = {
         planet = {
 			add_deposit = d_esc_mantle_alloy_plume
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -291,27 +291,27 @@ planet_event = {
        	planet = {
 			add_deposit = d_esc_mantle_exotic_gases_pocket
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -330,27 +330,27 @@ planet_event = {
        	planet = {
 			add_deposit = d_esc_mantle_rare_crystal_cluster
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -369,27 +369,27 @@ planet_event = {
        	planet = {
 			add_deposit = d_esc_mantle_volatile_motes_cluster
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -408,27 +408,27 @@ planet_event = {
        	planet = {
 			add_deposit = d_esc_mantle_trade_value
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -447,27 +447,27 @@ planet_event = {
        	planet = {
 			add_deposit = d_esc_mantle_living_metal
 			if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
 			}
 			else_if = {
-				limit = { has_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1 }
-				remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
+				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1 }
+				remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
 			}
 			else = {
-				set_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
+				set_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
 			}
 		}
     }
@@ -581,11 +581,11 @@ planet_event = {
 				remove_deposit = d_esc_mantle_living_metal
 			}
 
-			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_1
-			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_2
-			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_3
-			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_4
-			remove_planet_flag = ESC_PLANET_FLAT_mantle_miner_deposits_5
+			remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_1
+			remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_2
+			remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_3
+			remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4
+			remove_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_5
 		}
     }
 }

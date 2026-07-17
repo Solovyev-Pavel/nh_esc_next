@@ -599,21 +599,21 @@ esc_building_magmaminer_1 = {
 	on_queued = {
 		if = {
 			limit = { NOT = { has_deposit = d_esc_large_borehole_1 } }
-			set_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
+			set_carrier_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
 			add_deposit = d_esc_large_borehole_1
 		}
 	}
 
 	on_unqueued = {
 		if = {
-			limit = { has_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner }
-			remove_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
+			limit = { has_carrier_flag = ESC_PLANET_FLAG_queued_first_mantle_miner }
+			remove_carrier_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
 			remove_deposit = d_esc_large_borehole_1
 		}
 	}
 
 	on_built = {
-		remove_planet_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
+		remove_carrier_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
 		# after this, it is impossible to remove the blocker without cheats
 		hidden_effect = {
 			planet = {
