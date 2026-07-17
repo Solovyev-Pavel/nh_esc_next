@@ -8,8 +8,10 @@ potential = {
 	from = { country_uses_bio_ships = $EVAL_TARGET$ }
 	NAND = {
 		is_arkship_ship = yes
-		country_uses_bio_ships = yes
-		country_uses_bio_ships = $EVAL_TARGET$
+		from = {
+			country_uses_bio_ships = yes
+			country_uses_bio_ships = $EVAL_TARGET$
+		}
 	}
 }
 
