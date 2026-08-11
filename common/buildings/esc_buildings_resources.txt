@@ -2,13 +2,13 @@
 ###               ESC buildings : resources              ###
 ############################################################
 
-# - Zro Distillery					: special building for Zro production
-# - Dark Matter Drawing Facility	: special building for Zro production
-# - Nanite foundry          		: provides jobs for generation of 'nanites' resources (nanite weapons, nanite-augmented armor, shielding armor)
-# - Crystal Farm	        		: provides jobs for generation of 'rare crystal' resources (crystalline weapons)
+# - Zro Distillery					: modifies biologist output with zro and increases upkeep
+# - Dark Matter Drawing Facility	: modifies physicist output with dark matter and increases upkeep
+# - Nanite foundry          		: modifies metallurgist output with nanites and increases upkeep
+# - Crystal Farm	        		: modifies farmer outpit with rare crystals and increases upkeep
 # - Improved Crystal Farm	   		: improved versin of Crystal Farm
 # - Reprocessing Plant				: special building that provides 'resource reprocessing manager' jobs that provide alloys and consumer goods. requires empire to have killed Scavenger Bot
-# - Mantle Mining Facility			: special ecumenopolis mining building
+# - Mantle Mining Facility			: greatly increases miners output and upkeep
 # - Imporved Mantle Mining Facility	: improved version of the Mantle Mining Facility
 
 ############################################################
@@ -176,6 +176,7 @@ esc_building_dark_matter_facility = {
 
 esc_building_nanite_foundry = {
 	base_buildtime = 540
+	planet_limit = 1
 	icon = esc_building_nanite_foundry
 	category = manufacturing
 
@@ -254,6 +255,7 @@ esc_building_nanite_foundry = {
 
 esc_building_crystal_farm_1 = {
     base_buildtime = 360
+	planet_limit = 1
 	icon = esc_building_crystal_farm_1
 	category = resource
 
@@ -294,7 +296,7 @@ esc_building_crystal_farm_1 = {
 		}
 		modifier = {
 			planet_farmers_food_produces_add = -1
-			planet_farmers_rare_crystals_produces_add = 0.5
+			planet_farmers_rare_crystals_produces_add = 0.75
 			planet_farmers_minerals_upkeep_add = 1
 			planet_farmers_consumer_goods_upkeep_add = 0.5
 		}
@@ -307,7 +309,7 @@ esc_building_crystal_farm_1 = {
 		}
 		modifier = {
 			planet_farmers_food_produces_add = -1
-			planet_farmers_rare_crystals_produces_add = 0.5
+			planet_farmers_rare_crystals_produces_add = 0.75
 			planet_farmers_minerals_upkeep_add = 1
 			planet_farmers_energy_upkeep_add = 1
 		}
@@ -367,7 +369,7 @@ esc_building_crystal_farm_2 = {
 		}
 		modifier = {
 			planet_farmers_food_produces_add = -1
-			planet_farmers_rare_crystals_produces_add = 1
+			planet_farmers_rare_crystals_produces_add = 1.5
 			planet_farmers_minerals_upkeep_add = 2
 			planet_farmers_consumer_goods_upkeep_add = 1
 		}
@@ -380,7 +382,7 @@ esc_building_crystal_farm_2 = {
 		}
 		modifier = {
 			planet_farmers_food_produces_add = -1
-			planet_farmers_rare_crystals_produces_add = 1
+			planet_farmers_rare_crystals_produces_add = 1.5
 			planet_farmers_minerals_upkeep_add = 2
 			planet_farmers_energy_upkeep_add = 2
 		}
