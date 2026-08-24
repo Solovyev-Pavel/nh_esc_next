@@ -59,7 +59,11 @@ weapon_component_template = {
 	component_set = ESC_FLAK_CANNON_4
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = ESC_FLAK_CANNON_5
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
@@ -108,7 +112,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_FLAK_CANNON_4
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = ESC_BIO_FLAK_CANNON_5
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
@@ -163,7 +171,11 @@ weapon_component_template = {
 	component_set = ESC_FLAK_CANNON_5
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -211,7 +223,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_FLAK_CANNON_5
 	projectile_gfx = "flak_pd_3"
 	tags = { weapon_type_point_defense weapon_type_kinetic }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -265,7 +281,11 @@ weapon_component_template = {
 	component_set = ESC_POINT_DEFENSE_4
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = ESC_POINT_DEFENSE_5
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
@@ -314,7 +334,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_POINT_DEFENSE_4
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = ESC_BIO_POINT_DEFENSE_5
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
@@ -369,7 +393,11 @@ weapon_component_template = {
 	component_set = ESC_POINT_DEFENSE_5
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -417,7 +445,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_POINT_DEFENSE_5
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -471,7 +503,11 @@ weapon_component_template = {
 	component_set = ESC_JUGGERNAUT_POINT_DEFENSE_1
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = ESC_JUGGERNAUT_POINT_DEFENSE_2
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
@@ -522,7 +558,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_1
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
@@ -577,7 +617,11 @@ weapon_component_template = {
 	component_set = ESC_JUGGERNAUT_POINT_DEFENSE_2
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -627,7 +671,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_JUGGERNAUT_POINT_DEFENSE_2
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -682,7 +730,11 @@ weapon_component_template = {
 	component_set = ESC_LIGHTSTORM_PD
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {
@@ -736,7 +788,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_LIGHTSTORM_PD
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_point_defense weapon_type_energy }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_point_defense
 
 	inline_script = {

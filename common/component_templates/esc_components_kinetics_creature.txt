@@ -50,7 +50,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_6
 	projectile_gfx = "gauss_cannon_s"
 	tags = { weapon_type_kinetic s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_MASS_DRIVER_CREATURE_7
 
 	ai_weight = {
@@ -100,7 +104,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_6
 	projectile_gfx = "gauss_cannon_m"
 	tags = { weapon_type_kinetic m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_MASS_DRIVER_CREATURE_7
 
 	ai_weight = {
@@ -151,7 +159,13 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_6
 	projectile_gfx = "gauss_cannon_l"
 	tags = { weapon_type_kinetic l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_MASS_DRIVER_CREATURE_7
 
 	ai_weight = {
@@ -206,7 +220,13 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_6
 	projectile_gfx = "gauss_cannon_l"
 	tags = { weapon_type_kinetic x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_MASS_DRIVER_CREATURE_7
 
 	ai_weight = {
@@ -264,7 +284,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_7
 	projectile_gfx = "gauss_cannon_s"
 	tags = { weapon_type_kinetic s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -313,7 +337,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_7
 	projectile_gfx = "gauss_cannon_m"
 	tags = { weapon_type_kinetic m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -363,7 +391,13 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_7
 	projectile_gfx = "gauss_cannon_l"
 	tags = { weapon_type_kinetic l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -417,7 +451,13 @@ weapon_component_template = {
 	component_set = ESC_MASS_DRIVER_CREATURE_7
 	projectile_gfx = "gauss_cannon_l"
 	tags = { weapon_type_kinetic x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -886,7 +926,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = SMALL_ESC_ARTILLERY_CREATURE_4
 
 	ai_weight = {
@@ -940,7 +984,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = MEDIUM_ESC_ARTILLERY_CREATURE_4
 
 	ai_weight = {
@@ -995,7 +1043,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_ARTILLERY_CREATURE_4
 
 	ai_weight = {
@@ -1050,7 +1102,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_ARTILLERY_CREATURE_4
 
 	ai_weight = {
@@ -1108,7 +1164,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1161,7 +1221,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1215,7 +1279,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1269,7 +1337,11 @@ weapon_component_template = {
 	component_set = ESC_ARTILLERY_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery artillery_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1326,7 +1398,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = SMALL_ESC_MASS_ACCELERATOR_CREATURE_4
 
 	ai_weight = {
@@ -1379,7 +1455,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = MEDIUM_ESC_MASS_ACCELERATOR_CREATURE_4
 
 	ai_weight = {
@@ -1435,7 +1515,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_MASS_ACCELERATOR_CREATURE_4
 
 	target_weights = {
@@ -1500,7 +1584,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_MASS_ACCELERATOR_CREATURE_4
 
 	target_weights = {
@@ -1565,7 +1653,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1617,7 +1709,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1672,7 +1768,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -1736,7 +1836,11 @@ weapon_component_template = {
 	component_set = ESC_MASS_ACCELERATOR_CREATURE_4
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -1800,7 +1904,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_1
 	projectile_gfx = "xray_laser_s"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = SMALL_ESC_MHD_CANNON_CREATURE_2
 
 	ai_weight = {
@@ -1846,7 +1954,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_1
 	projectile_gfx = "xray_laser_m"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = MEDIUM_ESC_MHD_CANNON_CREATURE_2
 
 	ai_weight = {
@@ -1895,7 +2007,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_1
 	projectile_gfx = "xray_laser_l"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_MHD_CANNON_CREATURE_2
 
 	target_weights = {
@@ -1953,7 +2069,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_1
 	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_MHD_CANNON_CREATURE_2
 
 	target_weights = {
@@ -2011,7 +2131,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_2
 	projectile_gfx = "xray_laser_s"
 	tags = { weapon_type_kinetic s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -2056,7 +2180,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_2
 	projectile_gfx = "xray_laser_m"
 	tags = { weapon_type_kinetic m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -2104,7 +2232,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_2
 	projectile_gfx = "xray_laser_l"
 	tags = { weapon_type_kinetic l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -2161,7 +2293,11 @@ weapon_component_template = {
 	component_set = ESC_MHD_CANNON_CREATURE_2
 	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3

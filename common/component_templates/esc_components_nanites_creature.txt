@@ -47,7 +47,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	upgrades_to = SMALL_ESC_NANITE_CANNON_CREATURE_2
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -103,7 +109,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	upgrades_to = MEDIUM_ESC_NANITE_CANNON_CREATURE_2
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -275,7 +287,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_CANNON_CREATURE_2
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -330,7 +348,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_CANNON_CREATURE_2
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_damage_debuff
@@ -501,7 +525,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_RECONSTRUCTOR_CREATURE
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
@@ -562,7 +592,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_RECONSTRUCTOR_CREATURE
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
@@ -1291,7 +1327,11 @@ strike_craft_component_template = {
 	component_set = ESC_NANITE_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_nanite_bomber" }
 	tags = { weapon_type_strike_craft s_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull carrier }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1357,7 +1397,11 @@ strike_craft_component_template = {
 	component_set = ESC_NANITE_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_nanite_bomber" }
 	tags = { weapon_type_strike_craft m_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull carrier }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1423,7 +1467,11 @@ strike_craft_component_template = {
 	component_set = ESC_NANITE_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_nanite_bomber" }
 	tags = { weapon_type_strike_craft l_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull carrier }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1489,7 +1537,11 @@ strike_craft_component_template = {
 	component_set = ESC_NANITE_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_nanite_bomber" }
 	tags = { weapon_type_strike_craft x_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull carrier }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {

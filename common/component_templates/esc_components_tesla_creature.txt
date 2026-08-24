@@ -46,7 +46,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_small"
 	upgrades_to = SMALL_ESC_TESLA_COIL_CREATURE_2
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -102,7 +108,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_medium"
 	upgrades_to = MEDIUM_ESC_TESLA_COIL_CREATURE_2
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -159,7 +171,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_large"
 	upgrades_to = LARGE_ESC_TESLA_COIL_CREATURE_2
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -216,7 +232,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_large"
 	upgrades_to = XL_ESC_TESLA_COIL_CREATURE_2
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -275,7 +295,13 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_CREATURE_2
 	projectile_gfx = "esc_tesla_2_small"
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -330,7 +356,13 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_CREATURE_2
 	projectile_gfx = "esc_tesla_2_medium"
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -386,7 +418,11 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_CREATURE_2
 	projectile_gfx = "esc_tesla_2_large"
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -442,7 +478,11 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_CREATURE_2
 	projectile_gfx = "esc_tesla_2_large"
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1041,7 +1081,11 @@ strike_craft_component_template = {
 	component_set = ESC_TESLA_INTERDICTOR_CREATURE
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component
@@ -1108,7 +1152,11 @@ strike_craft_component_template = {
 	component_set = ESC_TESLA_INTERDICTOR_CREATURE
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component
@@ -1175,7 +1223,11 @@ strike_craft_component_template = {
 	component_set = ESC_TESLA_INTERDICTOR_CREATURE
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component
@@ -1242,7 +1294,11 @@ strike_craft_component_template = {
 	component_set = ESC_TESLA_INTERDICTOR_CREATURE
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component

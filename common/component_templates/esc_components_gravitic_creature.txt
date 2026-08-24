@@ -46,7 +46,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_small"
 	upgrades_to = SMALL_ESC_GRAVITY_CANNON_CREATURE_2
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -102,7 +108,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_medium"
 	upgrades_to = MEDIUM_ESC_GRAVITY_CANNON_CREATURE_2
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -159,7 +171,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_large"
 	upgrades_to = LARGE_ESC_GRAVITY_CANNON_CREATURE_2
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -216,7 +232,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_large"
 	upgrades_to = XL_ESC_GRAVITY_CANNON_CREATURE_2
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -275,7 +295,13 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_CREATURE_2
 	projectile_gfx = "esc_gravity_cannon_small"
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -330,7 +356,13 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_CREATURE_2
 	projectile_gfx = "esc_gravity_cannon_medium"
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -386,7 +418,11 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_CREATURE_2
 	projectile_gfx = "esc_gravity_cannon_large"
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -442,7 +478,11 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_CREATURE_2
 	projectile_gfx = "esc_gravity_cannon_large"
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_evasion_debuff
@@ -1041,7 +1081,11 @@ strike_craft_component_template = {
 	component_set = ESC_GRAVITY_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft carrier s_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -1107,7 +1151,11 @@ strike_craft_component_template = {
 	component_set = ESC_GRAVITY_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft carrier m_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -1173,7 +1221,11 @@ strike_craft_component_template = {
 	component_set = ESC_GRAVITY_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft carrier l_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -1239,7 +1291,11 @@ strike_craft_component_template = {
 	component_set = ESC_GRAVITY_BOMBERS_CREATURE
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft carrier x_slot weapon_type_space_fauna }
-	ai_tags = { carrier weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {

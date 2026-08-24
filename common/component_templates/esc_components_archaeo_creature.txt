@@ -56,7 +56,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_2
 	projectile_gfx = "dark_matter_laser_s"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_ARCHAEO_LASER_CREATURE_3
 
 	ai_weight = {
@@ -118,7 +122,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_2
 	projectile_gfx = "dark_matter_laser_m"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_ARCHAEO_LASER_CREATURE_3
 
 	ai_weight = {
@@ -180,7 +188,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_2
 	projectile_gfx = "dark_matter_laser_l"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_ARCHAEO_LASER_CREATURE_3
 
 	ai_weight = {
@@ -242,7 +256,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_2
 	projectile_gfx = "dark_matter_laser_l"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech x_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_ARCHAEO_LASER_CREATURE_3
 
 	ai_weight = {
@@ -308,7 +328,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_3
 	projectile_gfx = "dark_matter_laser_s"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -369,7 +393,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_3
 	projectile_gfx = "dark_matter_laser_m"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -430,7 +458,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_3
 	projectile_gfx = "dark_matter_laser_l"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -491,7 +525,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_LASER_CREATURE_3
 	projectile_gfx = "dark_matter_laser_l"
 	tags = { weapon_type_energy weapon_type_space_fauna weapon_archaeotech x_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -556,7 +596,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
 	projectile_gfx = "mass_driver_s"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 
 	ai_weight = {
@@ -622,7 +666,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
 	projectile_gfx = "mass_driver_m"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 
 	ai_weight = {
@@ -688,7 +736,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
 	projectile_gfx = "mass_driver_l"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 
 	ai_weight = {
@@ -754,7 +808,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_2
 	projectile_gfx = "mass_driver_l"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 
 	ai_weight = {
@@ -824,7 +884,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 	projectile_gfx = "mass_driver_s"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -889,7 +953,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 	projectile_gfx = "mass_driver_m"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -954,7 +1022,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 	projectile_gfx = "mass_driver_l"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -1019,7 +1093,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_DRIVER_CREATURE_3
 	projectile_gfx = "mass_driver_l"
 	tags = { weapon_type_kinetic weapon_archaeotech weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_shield gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 0
@@ -1092,7 +1172,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery s_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = SMALL_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 
@@ -1175,7 +1261,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery m_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = MEDIUM_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 
@@ -1258,7 +1350,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery l_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = LARGE_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 
@@ -1341,7 +1439,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_2
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery x_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = XL_ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 
@@ -1428,7 +1532,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery s_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 
 	target_weights = {
@@ -1510,7 +1620,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery m_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 
 	target_weights = {
@@ -1592,7 +1708,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery l_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 
 	target_weights = {
@@ -1674,7 +1796,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MASS_ACCELERATOR_CREATURE_3
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic weapon_type_space_fauna weapon_archaeotech weapon_role_artillery x_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 
 	target_weights = {
@@ -1762,7 +1890,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_2
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech s_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = SMALL_ESC_ARCHAEO_MISSILES_CREATURE_3
 
@@ -1831,7 +1965,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_2
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech m_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = MEDIUM_ESC_ARCHAEO_MISSILES_CREATURE_3
 
@@ -1900,7 +2040,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_2
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech l_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = LARGE_ESC_ARCHAEO_MISSILES_CREATURE_3
 
@@ -1969,7 +2115,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_2
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech x_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = XL_ESC_ARCHAEO_MISSILES_CREATURE_3
 
@@ -2042,7 +2194,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_3
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech s_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 
 	ai_weight = {
@@ -2110,7 +2268,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_3
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech m_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 
 	ai_weight = {
@@ -2178,7 +2342,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_3
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech l_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 
 	ai_weight = {
@@ -2246,7 +2416,13 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_MISSILES_CREATURE_3
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive weapon_type_space_fauna weapon_archaeotech x_slot }
-	ai_tags = { weapon_role_artillery artillery energy_torpedoes }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 	ai_tag_weight = 0
 
 	ai_weight = {
@@ -2327,7 +2503,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_archaeo_strikecraft_2" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 	upgrades_to = SMALL_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 
@@ -2405,7 +2585,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_archaeo_strikecraft_2" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 	upgrades_to = MEDIUM_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 
@@ -2483,7 +2667,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_archaeo_strikecraft_2" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 	upgrades_to = LARGE_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 
@@ -2561,7 +2749,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_archaeo_strikecraft_2" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 	upgrades_to = XL_ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 
@@ -2643,7 +2835,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 	prerequisites = { "esc_tech_archaeo_strikecraft_3" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	ai_weight = {
@@ -2720,7 +2916,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 	prerequisites = { "esc_tech_archaeo_strikecraft_3" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	ai_weight = {
@@ -2797,7 +2997,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 	prerequisites = { "esc_tech_archaeo_strikecraft_3" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	ai_weight = {
@@ -2874,7 +3078,11 @@ strike_craft_component_template = {
 	component_set = ESC_ARCHAEO_STRIKECRAFT_CREATURE_3
 	prerequisites = { "esc_tech_archaeo_strikecraft_3" }
 	tags = { weapon_type_strike_craft weapon_archaeotech weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	ai_weight = {
@@ -2940,7 +3148,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = SMALL_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 
 	point_defence_targets = { "missile" "strike_craft" }
@@ -3004,7 +3216,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = MEDIUM_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 
 	point_defence_targets = { "missile" "strike_craft" }
@@ -3068,7 +3284,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = LARGE_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 
 	point_defence_targets = { "missile" "strike_craft" }
@@ -3132,7 +3352,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_2
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 	upgrades_to = XL_ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 
 	point_defence_targets = { "missile" "strike_craft" }
@@ -3200,7 +3424,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	point_defence_targets = { "missile" "strike_craft" }
 
@@ -3263,7 +3491,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	point_defence_targets = { "missile" "strike_craft" }
 
@@ -3326,7 +3558,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	point_defence_targets = { "missile" "strike_craft" }
 
@@ -3389,7 +3625,11 @@ weapon_component_template = {
 	component_set = ESC_ARCHAEO_POINTDEFENSE_CREATURE_3
 	projectile_gfx = "white_laser_pd"
 	tags = { weapon_type_point_defense weapon_type_energy weapon_archaeotech weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	point_defence_targets = { "missile" "strike_craft" }
 

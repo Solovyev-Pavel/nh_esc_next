@@ -60,7 +60,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_6
 	projectile_gfx = "esc_laser_6_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_LASER_CREATURE_7
 
 	ai_weight = {
@@ -106,7 +110,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_6
 	projectile_gfx = "esc_laser_6_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_LASER_CREATURE_7
 
 	ai_weight = {
@@ -152,7 +160,13 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_6
 	projectile_gfx = "esc_laser_6_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_LASER_CREATURE_7
 
 	ai_weight = {
@@ -198,7 +212,13 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_6
 	projectile_gfx = "esc_laser_6_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_LASER_CREATURE_7
 
 	ai_weight = {
@@ -248,7 +268,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_7
 	projectile_gfx = "esc_laser_7_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -293,7 +317,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_7
 	projectile_gfx = "esc_laser_7_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -338,7 +366,13 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_7
 	projectile_gfx = "esc_laser_7_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -383,7 +417,13 @@ weapon_component_template = {
 	component_set = ESC_LASER_CREATURE_7
 	projectile_gfx = "esc_laser_7_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -432,7 +472,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_4
 	projectile_gfx = "esc_plasma_4_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = SMALL_ESC_PLASMA_CREATURE_5
 
@@ -479,7 +523,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_4
 	projectile_gfx = "esc_plasma_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = MEDIUM_ESC_PLASMA_CREATURE_5
 
@@ -527,7 +575,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_4
 	projectile_gfx = "esc_plasma_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = LARGE_ESC_PLASMA_CREATURE_5
 
@@ -579,7 +631,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_4
 	projectile_gfx = "esc_plasma_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = XL_ESC_PLASMA_CREATURE_5
 
@@ -634,7 +690,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_5
 	projectile_gfx = "esc_plasma_5_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -680,7 +740,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_5
 	projectile_gfx = "esc_plasma_5_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -727,7 +791,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_5
 	projectile_gfx = "esc_plasma_5_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -778,7 +846,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_CREATURE_5
 	projectile_gfx = "esc_plasma_5_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	ai_weight = {
@@ -833,7 +905,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_small"
 	upgrades_to = SMALL_ESC_DISRUPTOR_CREATURE_5
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -892,7 +968,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_medium"
 	upgrades_to = MEDIUM_ESC_DISRUPTOR_CREATURE_5
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -951,7 +1031,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_large"
 	upgrades_to = LARGE_ESC_DISRUPTOR_CREATURE_5
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1010,7 +1094,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_large"
 	upgrades_to = XL_ESC_DISRUPTOR_CREATURE_5
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1072,7 +1160,11 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_CREATURE_5
 	projectile_gfx = "esc_disruptor_5_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1130,7 +1222,11 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_CREATURE_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1188,7 +1284,11 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_CREATURE_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1246,7 +1346,11 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_CREATURE_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1312,7 +1416,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = SMALL_ESC_ENERGY_TORPEDO_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1365,7 +1475,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = MEDIUM_ESC_ENERGY_TORPEDO_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1418,7 +1534,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = LARGE_ESC_ENERGY_TORPEDO_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1471,7 +1593,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = XL_ESC_ENERGY_TORPEDO_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1527,7 +1655,13 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1579,7 +1713,13 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1631,7 +1771,13 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1683,7 +1829,13 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_CREATURE_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -1736,7 +1888,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 	upgrades_to = SMALL_ESC_CLOUD_LIGHTNING_CREATURE_3
 
@@ -1781,7 +1938,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 	upgrades_to = MEDIUM_ESC_CLOUD_LIGHTNING_CREATURE_3
 
@@ -1826,7 +1988,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 	upgrades_to = LARGE_ESC_CLOUD_LIGHTNING_CREATURE_3
 
@@ -1871,7 +2038,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_2
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 	upgrades_to = XL_ESC_CLOUD_LIGHTNING_CREATURE_3
 
@@ -1920,7 +2092,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 
 	# only regular empires may use this component
@@ -1964,7 +2141,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 
 	# only regular empires may use this component
@@ -2008,7 +2190,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 
 	# only regular empires may use this component
@@ -2052,7 +2239,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_CREATURE_3
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 
 	# only regular empires may use this component
@@ -2448,7 +2640,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON_CREATURE
 	projectile_gfx = "esc_chronocannon_small"
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2498,7 +2697,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON_CREATURE
 	projectile_gfx = "esc_chronocannon_medium"
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2549,7 +2755,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON_CREATURE
 	projectile_gfx = "esc_chronocannon_large"
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2600,7 +2813,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON_CREATURE
 	projectile_gfx = "esc_chronocannon_large"
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2654,7 +2874,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = SMALL_ESC_PARTICLE_LANCE_CREATURE_4
 
 	ai_weight = {
@@ -2699,7 +2923,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = MEDIUM_ESC_PARTICLE_LANCE_CREATURE_4
 
 	ai_weight = {
@@ -2744,7 +2972,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_PARTICLE_LANCE_CREATURE_4
 
 	target_weights = {
@@ -2800,7 +3032,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_PARTICLE_LANCE_CREATURE_4
 
 	target_weights = {
@@ -2857,7 +3093,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -2901,7 +3141,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -2945,7 +3189,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3000,7 +3248,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_CREATURE_4
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3057,7 +3309,11 @@ weapon_component_template = {
 	projectile_gfx = "arc_emitter"
 	upgrades_to = SMALL_ESC_ARC_EMITTER_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -3102,7 +3358,11 @@ weapon_component_template = {
 	projectile_gfx = "arc_emitter"
 	upgrades_to = MEDIUM_ESC_ARC_EMITTER_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -3147,7 +3407,11 @@ weapon_component_template = {
 	projectile_gfx = "arc_emitter"
 	upgrades_to = LARGE_ESC_ARC_EMITTER_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3203,7 +3467,11 @@ weapon_component_template = {
 	projectile_gfx = "arc_emitter"
 	upgrades_to = XL_ESC_ARC_EMITTER_CREATURE_4
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3259,7 +3527,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_CREATURE_4
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -3303,7 +3575,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_CREATURE_4
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -3347,7 +3623,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_CREATURE_4
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3402,7 +3682,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_CREATURE_4
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3458,7 +3742,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
 	projectile_gfx = "infrared_laser_s"
 	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = SMALL_ESC_WAVEMOTIONGUN_CREATURE_2
 
 	ai_weight = {
@@ -3503,7 +3791,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
 	projectile_gfx = "infrared_laser_m"
 	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = MEDIUM_ESC_WAVEMOTIONGUN_CREATURE_2
 
 	ai_weight = {
@@ -3551,7 +3843,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
 	projectile_gfx = "infrared_laser_l"
 	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_WAVEMOTIONGUN_CREATURE_2
 
 	target_weights = {
@@ -3608,7 +3904,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_1
 	projectile_gfx = "esc_wavemotiongun_1"
 	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = XL_ESC_WAVEMOTIONGUN_CREATURE_2
 
 	target_weights = {
@@ -3665,7 +3965,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
 	projectile_gfx = "blue_laser_s"
 	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -3709,7 +4013,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
 	projectile_gfx = "blue_laser_m"
 	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	ai_weight = {
 		weight = 1
@@ -3756,7 +4064,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
 	projectile_gfx = "blue_laser_m"
 	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3
@@ -3812,7 +4124,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_CREATURE_2
 	projectile_gfx = "esc_wavemotiongun_2"
 	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	target_weights = {
 		titan = 3

@@ -52,7 +52,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_small"
 	upgrades_to = SMALL_ESC_PSIONIC_CANNON_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -108,7 +114,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_CANNON_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -165,7 +177,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_large"
 	upgrades_to = LARGE_ESC_PSIONIC_CANNON_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -222,7 +238,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_cannon_large"
 	upgrades_to = XL_ESC_PSIONIC_CANNON_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -281,7 +301,13 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_CREATURE_2
 	projectile_gfx = "esc_psionic_cannon_small"
 	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -336,7 +362,13 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_CREATURE_2
 	projectile_gfx = "esc_psionic_cannon_medium"
 	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor brawler gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -392,7 +424,11 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_CREATURE_2
 	projectile_gfx = "esc_psionic_cannon_large"
 	tags = { weapon_type_energy weapon_type_psionic l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -448,7 +484,11 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_CANNON_CREATURE_2
 	projectile_gfx = "esc_psionic_cannon_large"
 	tags = { weapon_type_energy weapon_type_psionic x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -508,7 +548,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_small"
 	upgrades_to = SMALL_ESC_PSIONIC_STRIKE_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -564,7 +610,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_psionic_strike_medium"
 	upgrades_to = MEDIUM_ESC_PSIONIC_STRIKE_CREATURE_2
 	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -737,7 +789,13 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_CREATURE_2
 	projectile_gfx = "esc_psionic_strike_small"
 	tags = { weapon_type_energy weapon_type_psionic s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -792,7 +850,13 @@ weapon_component_template = {
 	component_set = ESC_PSIONIC_STRIKE_CREATURE_2
 	projectile_gfx = "esc_psionic_strike_medium"
 	tags = { weapon_type_energy weapon_type_psionic m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_accuracy_debuff
@@ -1503,7 +1567,11 @@ strike_craft_component_template = {
 	component_set = ESC_PSIONIC_INTERCEPTORS_CREATURE
 	prerequisites = { "esc_tech_psionic_interceptors" }
 	tags = { weapon_type_strike_craft s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and spiritualist FE may use this component
@@ -1569,7 +1637,11 @@ strike_craft_component_template = {
 	component_set = ESC_PSIONIC_INTERCEPTORS_CREATURE
 	prerequisites = { "esc_tech_psionic_interceptors" }
 	tags = { weapon_type_strike_craft m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and spiritualist FE may use this component
@@ -1636,7 +1708,11 @@ strike_craft_component_template = {
 	component_set = ESC_PSIONIC_INTERCEPTORS_CREATURE
 	prerequisites = { "esc_tech_psionic_interceptors" }
 	tags = { weapon_type_strike_craft l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and spiritualist FE may use this component
@@ -1703,7 +1779,11 @@ strike_craft_component_template = {
 	component_set = ESC_PSIONIC_INTERCEPTORS_CREATURE
 	prerequisites = { "esc_tech_psionic_interceptors" }
 	tags = { weapon_type_strike_craft l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and spiritualist FE may use this component

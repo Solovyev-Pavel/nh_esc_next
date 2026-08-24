@@ -49,7 +49,13 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -100,7 +106,13 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -151,7 +163,13 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -202,7 +220,13 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_AUTOCANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_small"
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_shield gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -257,7 +281,14 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LASH_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	ai_tags = {
+		weapon_role_point_defense
+		weapon_role_anti_shield
+		screen
+		screen_stealth
+		gunship
+		gunship_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
@@ -315,7 +346,14 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LASH_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	ai_tags = {
+		weapon_role_point_defense
+		weapon_role_anti_shield
+		screen
+		screen_stealth
+		gunship
+		gunship_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
@@ -373,7 +411,14 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LASH_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	ai_tags = {
+		weapon_role_point_defense
+		weapon_role_anti_shield
+		screen
+		screen_stealth
+		gunship
+		gunship_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
@@ -431,7 +476,14 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LASH_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_medium"
 	tags = { weapon_type_point_defense weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense weapon_role_anti_shield screen gunship }
+	ai_tags = {
+		weapon_role_point_defense
+		weapon_role_anti_shield
+		screen
+		screen_stealth
+		gunship
+		gunship_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	inline_script = {
@@ -493,7 +545,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_CANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -544,7 +601,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_CANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -596,7 +658,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_CANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -648,7 +715,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_CANNON_CREATURE
 	projectile_gfx = "esc_enigmatic_cannon_large"
 	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -703,7 +775,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LANCE_CREATURE
 	projectile_gfx = "xray_laser_s"
 	tags = { weapon_type_energy s_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -754,7 +831,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LANCE_CREATURE
 	projectile_gfx = "xray_laser_m"
 	tags = { weapon_type_energy m_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -808,7 +890,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LANCE_CREATURE
 	projectile_gfx = "xray_laser_l"
 	tags = { weapon_type_energy l_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -863,7 +950,12 @@ weapon_component_template = {
 	component_set = ESC_ENIGMATIC_LANCE_CREATURE
 	projectile_gfx = "esc_enigmatic_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery weapon_type_space_fauna }
-	ai_tags = { weapon_role_artillery weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_enigmatic
 
 	# only regular empires may use this component
@@ -926,7 +1018,11 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -978,7 +1074,11 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1030,7 +1130,11 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1082,7 +1186,11 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_PD_CREATURE
 	projectile_gfx = "dimensional_horror_spike_weapon"
 	tags = { weapon_type_point_defense weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_point_defense screen }
+	ai_tags = {
+		weapon_role_point_defense
+		screen
+		screen_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1550,7 +1658,13 @@ weapon_component_template = {
 	component_set = ESC_TIYANKI_CANNON_CREATURE
 	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1600,7 +1714,13 @@ weapon_component_template = {
 	component_set = ESC_TIYANKI_CANNON_CREATURE
 	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1653,7 +1773,13 @@ weapon_component_template = {
 	component_set = ESC_TIYANKI_CANNON_CREATURE
 	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -1707,7 +1833,13 @@ weapon_component_template = {
 	component_set = ESC_TIYANKI_CANNON_CREATURE
 	projectile_gfx = "esc_tiyanki_lance"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {

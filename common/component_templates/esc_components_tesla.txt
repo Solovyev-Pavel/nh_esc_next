@@ -51,7 +51,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_small"
 	upgrades_to = SMALL_ESC_TESLA_COIL_2
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -112,7 +118,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_small"
 	upgrades_to = SMALL_ESC_BIO_TESLA_COIL_2
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -174,7 +186,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_medium"
 	upgrades_to = MEDIUM_ESC_TESLA_COIL_2
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -235,7 +253,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_medium"
 	upgrades_to = MEDIUM_ESC_BIO_TESLA_COIL_2
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -298,7 +322,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_large"
 	upgrades_to = LARGE_ESC_TESLA_COIL_2
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -360,7 +388,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_large"
 	upgrades_to = LARGE_ESC_BIO_TESLA_COIL_2
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -425,7 +457,13 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -485,7 +523,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -546,7 +590,13 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -606,7 +656,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -668,7 +724,11 @@ weapon_component_template = {
 	component_set = ESC_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -729,7 +789,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_TESLA_COIL_2
 	projectile_gfx = "esc_tesla_2_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1088,7 +1152,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_xl"
 	upgrades_to = ESC_TESLA_CANNON_2
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1158,7 +1226,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_1_xl"
 	upgrades_to = ESC_BIO_TESLA_CANNON_2
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1232,7 +1304,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_2_xl"
 	upgrades_to = ESC_TESLA_CANNON_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1302,7 +1378,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_tesla_2_xl"
 	upgrades_to = ESC_BIO_TESLA_CANNON_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1383,7 +1463,11 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_TITANIC
 	projectile_gfx = "esc_tesla_2_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1460,7 +1544,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_TESLA_CANNON_TITANIC
 	projectile_gfx = "esc_tesla_2_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1538,7 +1626,11 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_tesla_2_xl"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1616,7 +1708,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_TESLA_CANNON_JUGGERNAUT
 	projectile_gfx = "esc_tesla_2_xl"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1695,7 +1791,11 @@ weapon_component_template = {
 	component_set = ESC_TESLA_CANNON_ARKSHIP
 	projectile_gfx = "esc_tesla_2_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_fire_rate_debuff
@@ -1780,7 +1880,11 @@ strike_craft_component_template = {
 	component_set = ESC_TESLA_INTERDICTOR
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component
@@ -1852,7 +1956,11 @@ strike_craft_component_template = {
 	component_set = ESC_BIO_TESLA_INTERDICTOR
 	prerequisites = { "esc_tech_tesla_interdictor" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only regular empires and machine FE may use this component
@@ -1916,7 +2024,12 @@ weapon_component_template = {
 	component_set = ESC_TESLA_SHOCKWAVE
 	projectile_gfx = "esc_arc_shockwave"
 	tags = { weapon_type_energy t_slot }
-	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	inline_script = {
@@ -1976,7 +2089,12 @@ weapon_component_template = {
 	component_set = ESC_TESLA_SHOCKWAVE_ARKSHIP
 	projectile_gfx = "esc_arc_shockwave"
 	tags = { weapon_type_energy t_slot }
-	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	inline_script = {

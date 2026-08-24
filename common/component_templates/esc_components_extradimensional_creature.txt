@@ -44,7 +44,14 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_small"
 	upgrades_to = SMALL_ESC_ED_WEAPON_CREATURE_3
 	tags = { weapon_type_energy s_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -96,7 +103,13 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_medium"
 	upgrades_to = MEDIUM_ESC_ED_WEAPON_CREATURE_3
 	tags = { weapon_type_energy m_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -148,7 +161,12 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_large"
 	upgrades_to = LARGE_ESC_ED_WEAPON_CREATURE_3
 	tags = { weapon_type_energy l_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -200,7 +218,12 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_large"
 	upgrades_to = XL_ESC_ED_WEAPON_CREATURE_3
 	tags = { weapon_type_energy x_slot weapon_type_space_fauna }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -255,7 +278,14 @@ weapon_component_template = {
 	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -306,7 +336,14 @@ weapon_component_template = {
 	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -357,7 +394,12 @@ weapon_component_template = {
 	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -408,7 +450,12 @@ weapon_component_template = {
 	component_set = ESC_ED_WEAPON_CREATURE_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {

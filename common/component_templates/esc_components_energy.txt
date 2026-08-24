@@ -75,7 +75,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_6
 	projectile_gfx = "esc_laser_6_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_LASER_7
 
 	inline_script = {
@@ -125,7 +129,11 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_laser_6" }
 	component_set = ESC_BIO_LASER_6
 	projectile_gfx = "esc_laser_6_small"
-	tags = { weapon_type_energy s_slot }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tags = { weapon_role_anti_armor gunship }
 	upgrades_to = SMALL_ESC_BIO_LASER_7
 
@@ -178,7 +186,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_6
 	projectile_gfx = "esc_laser_6_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_LASER_7
 
 	inline_script = {
@@ -229,7 +241,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_LASER_6
 	projectile_gfx = "esc_laser_6_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_BIO_LASER_7
 
 	inline_script = {
@@ -281,7 +297,13 @@ weapon_component_template = {
 	component_set = ESC_LASER_6
 	projectile_gfx = "esc_laser_6_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_LASER_7
 
 	inline_script = {
@@ -332,7 +354,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_LASER_6
 	projectile_gfx = "esc_laser_6_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_BIO_LASER_7
 
 	inline_script = {
@@ -388,7 +416,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_7
 	projectile_gfx = "esc_laser_7_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -438,7 +470,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_LASER_7
 	projectile_gfx = "esc_laser_7_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -489,7 +525,11 @@ weapon_component_template = {
 	component_set = ESC_LASER_7
 	projectile_gfx = "esc_laser_7_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -539,7 +579,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_LASER_7
 	projectile_gfx = "esc_laser_7_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -590,7 +634,13 @@ weapon_component_template = {
 	component_set = ESC_LASER_7
 	projectile_gfx = "esc_laser_7_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -640,7 +690,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_LASER_7
 	projectile_gfx = "esc_laser_7_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -695,7 +751,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_4
 	projectile_gfx = "esc_plasma_4_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = SMALL_ESC_PLASMA_5
 
@@ -747,7 +807,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PLASMA_4
 	projectile_gfx = "esc_plasma_4_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = SMALL_ESC_BIO_PLASMA_5
 
@@ -800,7 +864,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_4
 	projectile_gfx = "esc_plasma_4_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = MEDIUM_ESC_PLASMA_5
 
@@ -852,7 +920,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PLASMA_4
 	projectile_gfx = "esc_plasma_4_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = MEDIUM_ESC_BIO_PLASMA_5
 
@@ -906,7 +978,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_4
 	projectile_gfx = "esc_plasma_4_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = LARGE_ESC_PLASMA_5
 
@@ -963,7 +1039,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PLASMA_4
 	projectile_gfx = "esc_plasma_4_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 	upgrades_to = LARGE_ESC_BIO_PLASMA_5
 
@@ -1024,7 +1104,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_5
 	projectile_gfx = "esc_plasma_5_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	inline_script = {
@@ -1075,7 +1159,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PLASMA_5
 	projectile_gfx = "esc_plasma_5_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	inline_script = {
@@ -1127,7 +1215,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_5
 	projectile_gfx = "esc_plasma_5_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	inline_script = {
@@ -1178,7 +1270,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PLASMA_5
 	projectile_gfx = "esc_plasma_5_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	inline_script = {
@@ -1231,7 +1327,11 @@ weapon_component_template = {
 	component_set = ESC_PLASMA_5
 	projectile_gfx = "esc_plasma_5_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	inline_script = {
@@ -1287,7 +1387,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PLASMA_5
 	projectile_gfx = "esc_plasma_5_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+	}
 	ai_tag_weight = 3
 
 	inline_script = {
@@ -1348,7 +1452,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_small"
 	upgrades_to = SMALL_ESC_DISRUPTOR_5
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1412,7 +1520,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_small"
 	upgrades_to = SMALL_ESC_BIO_DISRUPTOR_5
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1477,7 +1589,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_medium"
 	upgrades_to = MEDIUM_ESC_DISRUPTOR_5
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1541,7 +1657,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_disruptor_4_medium"
 	upgrades_to = MEDIUM_ESC_BIO_DISRUPTOR_5
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1609,7 +1729,11 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1672,7 +1796,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1736,7 +1864,11 @@ weapon_component_template = {
 	component_set = ESC_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1799,7 +1931,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_DISRUPTOR_5
 	projectile_gfx = "esc_disruptor_5_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+	}
 	ai_tag_weight = 5
 
 	target_type = target_enemies
@@ -1870,7 +2006,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = ESC_ENERGY_TORPEDO_4
 	tags = { weapon_type_energy g_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1928,7 +2070,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_energy_torpedoes_3"
 	upgrades_to = ESC_BIO_ENERGY_TORPEDO_4
 	tags = { weapon_type_energy g_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -1991,7 +2139,13 @@ weapon_component_template = {
 	component_set = ESC_ENERGY_TORPEDO_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy g_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -2048,7 +2202,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_ENERGY_TORPEDO_4
 	projectile_gfx = "esc_energy_torpedoes_4"
 	tags = { weapon_type_energy g_slot }
-	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+		energy_torpedoes
+		energy_torpedoes_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -2114,7 +2274,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2169,7 +2336,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2225,7 +2399,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2280,7 +2461,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2337,7 +2525,14 @@ weapon_component_template = {
 	component_set = ESC_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2393,7 +2588,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_CHRONO_CANNON
 	projectile_gfx = "esc_chronocannon_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_armor weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_anti_armor
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -2447,7 +2649,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_2
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 	upgrades_to = ESC_CLOUD_LIGHTNING_3
 
@@ -2496,7 +2703,12 @@ weapon_component_template = {
 	component_set = ESC_CLOUD_LIGHTNING_3
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 5
 
 	inline_script = {
@@ -3166,7 +3378,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_3
 	projectile_gfx = "esc_particle_lance_3"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_PARTICLE_LANCE_4
 
 	inline_script = {
@@ -3227,7 +3443,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PARTICLE_LANCE_3
 	projectile_gfx = "esc_particle_lance_3"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_BIO_PARTICLE_LANCE_4
 
 	inline_script = {
@@ -3293,7 +3513,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_particle_lance_4"
 	upgrades_to = ESC_PARTICLE_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -3354,7 +3578,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_particle_lance_4"
 	upgrades_to = ESC_BIO_PARTICLE_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -3426,7 +3654,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_TITANIC
 	projectile_gfx = "esc_particle_lance_titanic_big"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -3494,7 +3726,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PARTICLE_LANCE_TITANIC
 	projectile_gfx = "esc_particle_lance_titanic_big"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -3563,7 +3799,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_particle_lance_titanic"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -3632,7 +3872,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_PARTICLE_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_particle_lance_titanic"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -3702,7 +3946,11 @@ weapon_component_template = {
 	component_set = ESC_PARTICLE_LANCE_ARKSHIP
 	projectile_gfx = "esc_particle_lance_titanic_big"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard
@@ -3771,7 +4019,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_3"
 	upgrades_to = ESC_ARC_EMITTER_4
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -3840,7 +4092,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_3"
 	upgrades_to = ESC_BIO_ARC_EMITTER_4
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -3913,7 +4169,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_4"
 	upgrades_to = ESC_ARC_EMITTER_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -3987,7 +4247,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_arc_emitter_4"
 	upgrades_to = ESC_ARC_BIO_EMITTER_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -4065,7 +4329,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_TITANIC
 	projectile_gfx = "esc_arc_emitter_4_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -4139,7 +4407,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_BIO_EMITTER_TITANIC
 	projectile_gfx = "esc_arc_emitter_4_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -4214,7 +4486,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_JUGGERNAUT
 	projectile_gfx = "esc_arc_emitter_4"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -4289,7 +4565,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_BIO_EMITTER_JUGGERNAUT
 	projectile_gfx = "esc_arc_emitter_4"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -4365,7 +4645,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EMITTER_ARKSHIP
 	projectile_gfx = "esc_arc_emitter_4_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard
@@ -4438,7 +4722,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_1
 	projectile_gfx = "esc_wavemotiongun_1"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_WAVEMOTIONGUN_2
 
 	inline_script = {
@@ -4507,7 +4795,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_WAVEMOTIONGUN_1
 	projectile_gfx = "esc_wavemotiongun_1"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_BIO_WAVEMOTIONGUN_2
 
 	inline_script = {
@@ -4581,7 +4873,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_wavemotiongun_2"
 	upgrades_to = ESC_WAVEMOTIONGUN_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -4650,7 +4946,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_wavemotiongun_2"
 	upgrades_to = ESC_BIO_WAVEMOTIONGUN_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -4723,7 +5023,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_3
 	projectile_gfx = "esc_wavemotiongun_3_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -4792,7 +5096,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_WAVEMOTIONGUN_3
 	projectile_gfx = "esc_wavemotiongun_3_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -4862,7 +5170,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_JUGGERNAUT
 	projectile_gfx = "esc_wavemotiongun_3"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -4932,7 +5244,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_WAVEMOTIONGUN_JUGGERNAUT
 	projectile_gfx = "esc_wavemotiongun_3"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -5003,7 +5319,11 @@ weapon_component_template = {
 	component_set = ESC_WAVEMOTIONGUN_3_ARKSHIP
 	projectile_gfx = "esc_wavemotiongun_3_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard
@@ -5072,7 +5392,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EN_CIEL
 	projectile_gfx = "esc_arc_en_ciel"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -5146,7 +5470,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EN_CIEL_TITANIC
 	projectile_gfx = "esc_arc_en_ciel_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -5221,7 +5549,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EN_CIEL_JUGGERNAUT
 	projectile_gfx = "esc_arc_en_ciel"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	potential = {
 		ESC_ship_uses_juggernaut_components = yes
@@ -5295,7 +5627,11 @@ weapon_component_template = {
 	component_set = ESC_ARC_EN_CIEL_ARKSHIP
 	projectile_gfx = "esc_arc_en_ciel_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -5372,7 +5708,11 @@ weapon_component_template = {
 	projectile_gfx = "lens_flare_beam"
 	prerequisites = { "esc_tech_energy_lens_beam_2" }
 	tags = { weapon_type_energy weapon_role_artillery x_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 	upgrades_to = ESC_LENS_FLARE_GUN_3
 
@@ -5459,7 +5799,11 @@ weapon_component_template = {
 	projectile_gfx = "lens_flare_beam"
 	prerequisites = { "esc_tech_energy_lens_beam_3" }
 	tags = { weapon_type_energy weapon_role_artillery x_slot }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	ai_tag_weight = 0
 
 	on_hit = {
@@ -5535,6 +5879,11 @@ weapon_component_template = {
 	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	potential = { is_ship_size = starfire_cannon }
 	component_set = "ESC_NOVA_FLARE_GUN"
@@ -5607,6 +5956,11 @@ weapon_component_template = {
 	use_ship_main_target = no
 
 	tags = { weapon_type_energy weapon_role_artillery x_slot }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	potential = { is_ship_size = starfire_cannon }
 	component_set = "ESC_SUPERNOVA_FLARE_GUN"
@@ -5683,7 +6037,12 @@ weapon_component_template = {
 	component_set = ESC_ARC_SHOCKWAVE
 	projectile_gfx = "esc_arc_shockwave"
 	tags = { weapon_type_energy t_slot }
-	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	inline_script = {
@@ -5740,7 +6099,12 @@ weapon_component_template = {
 	component_set = ESC_ARC_SHOCKWAVE_ARKSHIP
 	projectile_gfx = "esc_arc_shockwave"
 	tags = { weapon_type_energy t_slot }
-	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	inline_script = {
@@ -5799,7 +6163,12 @@ weapon_component_template = {
 	component_set = ESC_DARK_MATTER_SHOCKWAVE
 	projectile_gfx = "esc_dark_matter_shockwave"
 	tags = { weapon_type_energy t_slot }
-	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	inline_script = {
@@ -5859,7 +6228,12 @@ weapon_component_template = {
 	component_set = ESC_DARK_MATTER_SHOCKWAVE_ARKSHIP
 	projectile_gfx = "esc_dark_matter_shockwave"
 	tags = { weapon_type_energy t_slot }
-	ai_tags = { weapon_role_anti_hull weapon_role_anti_armor brawler }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_anti_armor
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_omnidirectional
 
 	inline_script = {

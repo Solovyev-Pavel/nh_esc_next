@@ -55,7 +55,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_1
 	projectile_gfx = red_crystal_ship_projectile
 	tags = { weapon_type_kinetic s_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_2
 
 	inline_script = {
@@ -113,7 +119,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_1
 	projectile_gfx = "red_crystal_ship_projectile"
 	tags = { weapon_type_kinetic m_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_2
 
 	inline_script = {
@@ -172,7 +184,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_1
 	projectile_gfx = "red_crystal_ship_projectile"
 	tags = { weapon_type_kinetic l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_2
 
 	inline_script = {
@@ -234,7 +250,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_2
 	projectile_gfx = "red_crystal_ship_projectile"
 	tags = { weapon_type_kinetic s_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_3
 
 	inline_script = {
@@ -292,7 +314,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_2
 	projectile_gfx = "red_crystal_ship_projectile"
 	tags = { weapon_type_kinetic m_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_3
 
 	inline_script = {
@@ -351,7 +379,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_2
 	projectile_gfx = "red_crystal_ship_projectile"
 	tags = { weapon_type_kinetic l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_3
 
 	inline_script = {
@@ -413,7 +445,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_3
 	projectile_gfx = "crystal_ship_projectile"
 	tags = { weapon_type_kinetic s_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_4
 
 	inline_script = {
@@ -471,7 +509,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_3
 	projectile_gfx = "crystal_ship_projectile"
 	tags = { weapon_type_kinetic m_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_4
 
 	inline_script = {
@@ -530,7 +574,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_3
 	projectile_gfx = "crystal_ship_projectile"
 	tags = { weapon_type_kinetic l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_4
 
 	inline_script = {
@@ -592,7 +640,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_4
 	projectile_gfx = "crystal_ship_projectile"
 	tags = { weapon_type_kinetic s_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_CRYSTAL_CANNON_5
 
 	inline_script = {
@@ -650,7 +704,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_4
 	projectile_gfx = "crystal_ship_projectile"
 	tags = { weapon_type_kinetic m_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_CRYSTAL_CANNON_5
 
 	inline_script = {
@@ -709,7 +769,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_4
 	projectile_gfx = "crystal_ship_projectile"
 	tags = { weapon_type_kinetic l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = LARGE_ESC_CRYSTAL_CANNON_5
 
 	inline_script = {
@@ -771,7 +835,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_5
 	projectile_gfx = "green_crystal_ship_projectile"
 	tags = { weapon_type_kinetic s_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -828,7 +898,13 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_5
 	projectile_gfx = "green_crystal_ship_projectile"
 	tags = { weapon_type_kinetic m_slot }
-	ai_tags = { weapon_role_anti_shield brawler gunship }
+	ai_tags = {
+		weapon_role_anti_shield
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -886,7 +962,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_CANNON_5
 	projectile_gfx = "green_crystal_ship_projectile"
 	tags = { weapon_type_kinetic l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -951,7 +1031,11 @@ weapon_component_template = {
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_2
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -1024,7 +1108,11 @@ weapon_component_template = {
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_3
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -1097,7 +1185,11 @@ weapon_component_template = {
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	upgrades_to = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -1177,7 +1269,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_TITANIC
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit
@@ -1258,7 +1354,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_JUGGERNAUT
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	tags = { weapon_type_kinetic x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	potential = {
 		ESC_ship_uses_juggernaut_components = yes
@@ -1339,7 +1439,11 @@ weapon_component_template = {
 	component_set = ESC_CRYSTAL_LANCE_ARKSHIP
 	projectile_gfx = "yellow_crystal_ship_projectile"
 	tags = { weapon_type_kinetic t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_critical_hit

@@ -50,7 +50,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_small"
 	upgrades_to = SMALL_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -111,7 +117,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_small"
 	upgrades_to = SMALL_ESC_BIO_GRAVITY_CANNON_2
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -173,7 +185,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_medium"
 	upgrades_to = MEDIUM_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -234,7 +252,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_medium"
 	upgrades_to = MEDIUM_ESC_BIO_GRAVITY_CANNON_2
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -297,7 +321,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_large"
 	upgrades_to = LARGE_ESC_GRAVITY_CANNON_2
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -359,7 +387,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_cannon_large"
 	upgrades_to = LARGE_ESC_BIO_GRAVITY_CANNON_2
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -424,7 +456,13 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -484,7 +522,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_small"
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -545,7 +589,13 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -605,7 +655,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_medium"
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_shield gunship brawler }
+	ai_tags = {
+		weapon_role_anti_shield
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -667,7 +723,11 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -728,7 +788,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_GRAVITY_CANNON_2
 	projectile_gfx = "esc_gravity_cannon_large"
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_shield artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1087,7 +1151,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_GRAVITY_LANCE_2
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1160,7 +1228,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_BIO_GRAVITY_LANCE_2
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1237,7 +1309,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_GRAVITY_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1310,7 +1386,11 @@ weapon_component_template = {
 	projectile_gfx = "esc_gravity_lance"
 	upgrades_to = ESC_BIO_GRAVITY_LANCE_JUGGERNAUT
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -1394,7 +1474,11 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_TITANIC
 	projectile_gfx = "esc_gravity_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -1474,7 +1558,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_GRAVITY_LANCE_TITANIC
 	projectile_gfx = "esc_gravity_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard_bio
@@ -1555,7 +1643,11 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_gravity_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -1636,7 +1728,11 @@ weapon_component_template = {
 	component_set = ESC_BIO_GRAVITY_LANCE_JUGGERNAUT
 	projectile_gfx = "esc_gravity_lance"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships_conditional
@@ -1718,7 +1814,11 @@ weapon_component_template = {
 	component_set = ESC_GRAVITY_LANCE_ARKSHIP
 	projectile_gfx = "esc_gravity_lance_titanic"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery artillery }
+	ai_tags = {
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard
@@ -1806,7 +1906,11 @@ strike_craft_component_template = {
 	component_set = ESC_GRAVITY_BOMBERS
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft carrier }
-	ai_tags = { carrier weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {
@@ -1877,7 +1981,11 @@ strike_craft_component_template = {
 	component_set = ESC_BIO_GRAVITY_BOMBERS
 	prerequisites = { "esc_tech_gravity_bombers" }
 	tags = { weapon_type_strike_craft carrier }
-	ai_tags = { carrier weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and materialist FE may use this component
 	valid_for_country = {

@@ -50,7 +50,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_1
 	projectile_gfx = "esc_bio_projectile_small"
 	tags = { weapon_type_kinetic weapon_type_biological s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_BIO_CANNON_2
 
 	inline_script = {
@@ -106,7 +112,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_1
 	projectile_gfx = "esc_bio_projectile_medium"
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_2
 
 	inline_script = {
@@ -223,7 +235,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_2
 	projectile_gfx = "esc_bio_projectile_small"
 	tags = { weapon_type_kinetic weapon_type_biological s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_BIO_CANNON_3
 
 	inline_script = {
@@ -279,7 +297,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_2
 	projectile_gfx = "esc_bio_projectile_medium"
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_3
 
 	inline_script = {
@@ -396,7 +420,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_3
 	projectile_gfx = "esc_bio_projectile_small"
 	tags = { weapon_type_kinetic weapon_type_biological s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = SMALL_ESC_BIO_CANNON_4
 
 	inline_script = {
@@ -452,7 +482,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_3
 	projectile_gfx = "esc_bio_projectile_medium"
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 	upgrades_to = MEDIUM_ESC_BIO_CANNON_4
 
 	inline_script = {
@@ -569,7 +605,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_4
 	projectile_gfx = "esc_bio_projectile_small"
 	tags = { weapon_type_kinetic weapon_type_biological s_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -624,7 +666,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_CANNON_4
 	projectile_gfx = "esc_bio_projectile_medium"
 	tags = { weapon_type_kinetic weapon_type_biological m_slot }
-	ai_tags = { weapon_role_anti_hull brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_hull
+		brawler
+		brawler_stealth
+		gunship
+		gunship_stealth
+	}
 
 	inline_script = {
 		script = weapon_effects/esc_armor_weakening_debuff
@@ -971,7 +1019,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_1
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_BIO_X_MISSILE_2
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
@@ -1046,7 +1101,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_2
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
@@ -1122,7 +1184,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_3_TITAN
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	# arkship T-slot weapons use different damage values
@@ -1199,7 +1268,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_3_JUGGERNAUT
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_kinetic weapon_type_biological x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	potential = {
@@ -1275,7 +1351,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_X_MISSILE_3_ARKSHIP
 	projectile_gfx = "esc_bio_missile"
 	tags = { weapon_type_explosive weapon_type_biological t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_hull weapon_role_artillery explosive artillery }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	# arkship T-slot weapons use different damage valuess

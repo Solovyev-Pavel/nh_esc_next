@@ -51,7 +51,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	upgrades_to = SMALL_ESC_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
-	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -112,7 +118,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_small"
 	upgrades_to = SMALL_ESC_BIO_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
-	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -174,7 +186,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	upgrades_to = MEDIUM_ESC_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -235,7 +253,13 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanities_medium"
 	upgrades_to = MEDIUM_ESC_BIO_NANITE_CANNON_2
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -425,7 +449,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_CANNON_2
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -485,7 +515,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_NANITE_CANNON_2
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -546,7 +582,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_CANNON_2
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -606,7 +648,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_NANITE_CANNON_2
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_uses_bio_ships
@@ -794,7 +842,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_RECONSTRUCTOR
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
-	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
@@ -860,7 +914,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_NANITE_RECONSTRUCTOR
 	projectile_gfx = "esc_nanities_small"
 	tags = { weapon_type_kinetic weapon_type_nanite s_slot }
-	ai_tags = { weapon_role_anti_armor gunship brawler brawler_stealth }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
@@ -927,7 +987,13 @@ weapon_component_template = {
 	component_set = ESC_NANITE_RECONSTRUCTOR
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
@@ -993,7 +1059,13 @@ weapon_component_template = {
 	component_set = ESC_BIO_NANITE_RECONSTRUCTOR
 	projectile_gfx = "esc_nanities_medium"
 	tags = { weapon_type_kinetic weapon_type_nanite m_slot }
-	ai_tags = { weapon_role_anti_armor brawler brawler_stealth gunship }
+	ai_tags = {
+		weapon_role_anti_armor
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_nanite_reconstructor
 
 	inline_script = {
@@ -1506,7 +1578,14 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	upgrades_to = ESC_NANITE_XSLOT_2
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1585,7 +1664,14 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	upgrades_to = ESC_BIO_NANITE_XSLOT_2
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1668,7 +1754,14 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	upgrades_to = ESC_NANITE_TSLOT_JUGGERNAUT
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1747,7 +1840,14 @@ weapon_component_template = {
 	projectile_gfx = "esc_nanite_torpedo"
 	upgrades_to = ESC_BIO_NANITE_TSLOT_JUGGERNAUT
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1830,7 +1930,14 @@ weapon_component_template = {
 	component_set = ESC_NANITE_TSLOT_TITANIC
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1909,7 +2016,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_NANITE_TSLOT_TITANIC
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1989,7 +2103,14 @@ weapon_component_template = {
 	component_set = ESC_NANITE_TSLOT_JUGGERNAUT
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -2069,7 +2190,14 @@ weapon_component_template = {
 	component_set = ESC_BIO_NANITE_TSLOT_JUGGERNAUT
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_kinetic weapon_type_nanite x_slot weapon_role_artillery } # no explosive x-slot turrets
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -2150,7 +2278,14 @@ weapon_component_template = {
 	component_set = ESC_NANITE_TSLOT_ARKSHIP
 	projectile_gfx = "esc_nanite_torpedo"
 	tags = { weapon_type_explosive weapon_type_nanite t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor explosive artillery }
+	ai_tags = {
+		weapon_role_artillery
+		weapon_role_anti_armor
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -2231,7 +2366,11 @@ strike_craft_component_template = {
 	component_set = ESC_NANITE_BOMBERS
 	prerequisites = { "esc_tech_nanite_bomber" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier weapon_role_anti_hull carrier }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -2302,7 +2441,11 @@ strike_craft_component_template = {
 	component_set = ESC_BIO_NANITE_BOMBERS
 	prerequisites = { "esc_tech_nanite_bomber" }
 	tags = { weapon_type_strike_craft }
-	ai_tags = { carrier weapon_role_anti_hull carrier }
+	ai_tags = {
+		weapon_role_anti_hull
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {

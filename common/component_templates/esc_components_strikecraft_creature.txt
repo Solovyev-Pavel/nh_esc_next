@@ -61,7 +61,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CREATURE_2
 	prerequisites = { "esc_tech_amoeba_2" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = SMALL_ESC_AMOEBA_BIO_CREATURE_3
 
 	ai_weight = {
@@ -122,7 +126,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CREATURE_2
 	prerequisites = { "esc_tech_amoeba_2" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = MEDIUM_ESC_AMOEBA_BIO_CREATURE_3
 
 	ai_weight = {
@@ -183,7 +191,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CREATURE_2
 	prerequisites = { "esc_tech_amoeba_2" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_3
 
 	ai_weight = {
@@ -244,7 +256,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CREATURE_2
 	prerequisites = { "esc_tech_amoeba_2" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = XL_ESC_AMOEBA_BIO_CREATURE_3
 
 	ai_weight = {
@@ -310,7 +326,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = SMALL_ESC_AMOEBA_BIO_CREATURE_4
 
 	# only regular empires and xenophile FE may use biological components
@@ -381,7 +401,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_4
 
 	# only regular empires and xenophile FE may use biological components
@@ -452,7 +476,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_4
 
 	# only regular empires and xenophile FE may use biological components
@@ -523,7 +551,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = LARGE_ESC_AMOEBA_BIO_CREATURE_4
 
 	# only regular empires and xenophile FE may use biological components
@@ -598,7 +630,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -668,7 +704,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -738,7 +778,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -808,7 +852,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_BIO_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4b" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and xenophile FE may use biological components
 	valid_for_country = {
@@ -882,7 +930,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = SMALL_ESC_AMOEBA_CYBER_CREATURE_4
 
 	# only regular empires and machine FE may use this component
@@ -953,7 +1005,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = MEDIUM_ESC_AMOEBA_CYBER_CREATURE_4
 
 	# only regular empires and machine FE may use this component
@@ -1024,7 +1080,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = LARGE_ESC_AMOEBA_CYBER_CREATURE_4
 
 	# only regular empires and machine FE may use this component
@@ -1095,7 +1155,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_3
 	prerequisites = { "esc_tech_amoeba_3c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 	upgrades_to = XL_ESC_AMOEBA_CYBER_CREATURE_4
 
 	# only regular empires and machine FE may use this component
@@ -1170,7 +1234,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna s_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1240,7 +1308,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna m_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1310,7 +1382,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna l_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1380,7 +1456,11 @@ strike_craft_component_template = {
 	component_set = ESC_AMOEBA_CYBER_CREATURE_4
 	prerequisites = { "esc_tech_amoeba_4c" }
 	tags = { weapon_type_strike_craft weapon_type_space_fauna x_slot }
-	ai_tags = { carrier weapon_role_anti_shield carrier }
+	ai_tags = {
+		weapon_role_anti_shield
+		carrier
+		carrier_stealth
+	}
 
 	# only regular empires and machine FE may use this component
 	valid_for_country = {
@@ -1454,7 +1534,11 @@ strike_craft_component_template = {
 	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_swarm_strike_craft_2" }
 	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only normal empires may use this component
@@ -1525,7 +1609,11 @@ strike_craft_component_template = {
 	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_swarm_strike_craft_2" }
 	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only normal empires may use this component
@@ -1596,7 +1684,11 @@ strike_craft_component_template = {
 	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_swarm_strike_craft_2" }
 	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only normal empires may use this component
@@ -1667,7 +1759,11 @@ strike_craft_component_template = {
 	component_set = ESC_SWARMER_STRIKECRAFT_CREATURE_2
 	prerequisites = { "esc_tech_swarm_strike_craft_2" }
 	tags = { weapon_type_strike_craft weapon_swarm weapon_type_space_fauna x_slot }
-	ai_tags = { weapon_role_point_defense carrier }
+	ai_tags = {
+		weapon_role_point_defense
+		carrier
+		carrier_stealth
+	}
 	point_defence_targets = { "strike_craft" }
 
 	# only normal empires may use this component

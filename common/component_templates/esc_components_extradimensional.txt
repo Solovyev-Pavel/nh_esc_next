@@ -49,7 +49,13 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_small"
 	upgrades_to = SMALL_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy s_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -102,7 +108,14 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_medium"
 	upgrades_to = MEDIUM_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy m_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -155,7 +168,12 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_large"
 	upgrades_to = LARGE_ESC_EXTRADIMENSIONAL_WEAPON_3
 	tags = { weapon_type_energy l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -221,7 +239,12 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_2_X
 	projectile_gfx = "esc_extradimensional_x_2"
 	tags = { weapon_type_energy x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_X
 	# no clean way to enable upgrades both to Juggernaut version and to Reality Eraser, so using only the former
 
@@ -298,7 +321,12 @@ weapon_component_template = {
 	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_T
 	projectile_gfx = "esc_extradimensional_t_2"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 
 	inline_script = {
@@ -375,7 +403,12 @@ weapon_component_template = {
 	component_set =ESC_EXTRADIMENSIONAL_WEAPON_2_ARKSHIP
 	projectile_gfx = "esc_extradimensional_t_2"
 	tags = { weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 	upgrades_to = ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP
 
 	inline_script = {
@@ -440,7 +473,14 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_small"
 	tags = { weapon_type_energy weapon_type_space_fauna s_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -492,7 +532,14 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_medium"
 	tags = { weapon_type_energy weapon_type_space_fauna m_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		gunship
+		gunship_stealth
+		brawler
+		brawler_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -544,7 +591,13 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3
 	projectile_gfx = "esc_disruptor_4_large"
 	tags = { weapon_type_energy weapon_type_space_fauna l_slot }
-	ai_tags = { weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -610,7 +663,13 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_X
 	projectile_gfx = "esc_extradimensional_x_3"
 	tags = { weapon_type_energy weapon_type_space_fauna x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
+
 
 	# only regular empires may use this component
 	valid_for_country = {
@@ -685,7 +744,12 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_T
 	projectile_gfx = "esc_extradimensional_t_3"
 	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard
@@ -761,7 +825,12 @@ weapon_component_template = {
 	component_set = ESC_EXTRADIMENSIONAL_WEAPON_3_ARKSHIP
 	projectile_gfx = "esc_extradimensional_t_3"
 	tags = { weapon_type_energy weapon_type_space_fauna t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_hull }
+	ai_tags = {
+		weapon_role_anti_hull
+		weapon_role_artillery
+		artillery
+		artillery_stealth
+	}
 
 	inline_script = {
 		script = ship_components_general/esc_inlines_titanic_standard

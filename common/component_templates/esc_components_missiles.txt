@@ -816,7 +816,14 @@ weapon_component_template = {
 	component_set = ESC_CORROSIVE_WARHEAD
 	projectile_gfx = "esc_corrosive_warhead_torpedoes"
 	tags = { weapon_type_explosive weapon_type_energy g_slot weapon_role_artillery }
-	ai_tags = { weapon_role_anti_shield explosive explosive_stealth }
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_torpedo
 
 	inline_script = {
@@ -1251,7 +1258,14 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile1"
 	upgrades_to = ESC_XMISSILE_2
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1324,7 +1338,14 @@ weapon_component_template = {
 	projectile_gfx = "esc_xmissile2"
 	upgrades_to = ESC_XMISSILE_3_JUGGERNAUT
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1397,7 +1418,14 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_3_TITANIC
 	projectile_gfx = "esc_xmissile3"
 	tags = { weapon_type_explosive weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1467,7 +1495,14 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_3_JUGGERNAUT
 	projectile_gfx = "esc_xmissile3"
 	tags = { weapon_type_energy weapon_type_explosive x_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
@@ -1538,7 +1573,14 @@ weapon_component_template = {
 	component_set = ESC_XMISSILE_3_ARKSHIP
 	projectile_gfx = "esc_xmissile3"
 	tags = { weapon_type_explosive weapon_type_energy t_slot weapon_role_artillery }
-	ai_tags = { weapon_role_artillery weapon_role_anti_armor artillery }
+	ai_tags = {
+		weapon_role_anti_shield
+		weapon_role_artillery
+		explosive
+		explosive_stealth
+		artillery
+		artillery_stealth
+	}
 	military_power_multiplier = @ESC_MILITARY_POWER_MULT_missiles_special
 
 	inline_script = {
