@@ -390,6 +390,7 @@ ESC_ship_uses_afterburners = {
 	OR = {
 		is_ship_class = shipclass_military
 		is_ship_size = @NSC_ExplorationShip
+		is_arkship_ship = yes
 	}
 }
 
@@ -435,6 +436,7 @@ ESC_ship_uses_NSC_headquarters_computers = {
 # ESC custom trigger for carrier combat computers
 ESC_ship_uses_carrier_computers = {
 	OR = {
+		ship_uses_carrier_role = yes
 		ESC_ship_uses_cruiser_components = yes
 		ESC_ship_uses_battleship_components = yes
 		ESC_ship_uses_flagship_components = yes
@@ -476,6 +478,7 @@ ESC_ship_uses_artillery_adc_computers = {
 }
 ESC_ship_uses_artillery_computers = {
 	OR = {
+		ship_uses_artillery_role = yes
 		ESC_ship_uses_destroyer_components = yes
 		ESC_ship_uses_artillery_adc_computers = yes
 	}
@@ -500,6 +503,7 @@ ESC_ship_uses_line_adc_computers = {
 }
 ESC_ship_uses_line_computers = {
 	OR = {
+		ship_uses_line_role = yes
 		ESC_ship_uses_destroyer_components = yes
 		ESC_ship_uses_line_adc_computers = yes
 	}
@@ -515,6 +519,7 @@ ESC_ship_uses_picket_adc_computers = {
 }
 ESC_ship_uses_picket_computers = {
 	OR = {
+		ship_uses_picket_role = yes
 		ESC_ship_uses_destroyer_components = yes
 		ESC_ship_uses_picket_adc_computers = yes
 	}
@@ -523,6 +528,7 @@ ESC_ship_uses_picket_computers = {
 # ESC custom trigger for torpedo combat computers
 ESC_ship_uses_torpedo_computers = {
 	OR = {
+		ship_uses_torpedo_role = yes
 		ESC_ship_uses_destroyer_components = yes
 		ESC_ship_uses_cruiser_components = yes
 		is_ship_size = frigate
@@ -532,6 +538,7 @@ ESC_ship_uses_torpedo_computers = {
 # ESC custom trigger for swarm combat computers
 ESC_ship_uses_swarm_computers = {
 	OR = {
+		ship_uses_swarm_role = yes
 		ESC_ship_uses_corvette_components = yes
 		ESC_ship_uses_cruiser_components = yes
 		ESC_ship_uses_strikecruiser_components = yes
