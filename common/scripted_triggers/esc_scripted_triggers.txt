@@ -240,6 +240,16 @@ ESC_TRIGGER_may_research_tesla_weapons = {
         is_individual_machine = yes
         has_cybernetic_ascension = yes
         has_synthetic_ascension = yes
+        # is neighboring machine, synthetic or cybernetic empire
+        any_neighbor_country = {
+            OR = {
+                is_machine_empire = yes
+                is_synthetic_empire = yes
+                is_individual_machine = yes
+                has_cybernetic_ascension = yes
+                has_synthetic_ascension = yes
+            }
+        }
     }
 }
 
