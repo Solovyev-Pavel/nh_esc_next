@@ -1877,6 +1877,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1953,6 +1962,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -2032,6 +2050,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -2108,6 +2135,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -2190,6 +2226,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -2265,6 +2310,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -2343,6 +2397,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -2418,6 +2481,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = sr_zro }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }

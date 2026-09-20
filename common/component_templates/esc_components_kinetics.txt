@@ -822,6 +822,15 @@ weapon_component_template = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -877,6 +886,15 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -935,6 +953,15 @@ weapon_component_template = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -990,6 +1017,15 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1048,6 +1084,15 @@ weapon_component_template = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1103,6 +1148,15 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1164,6 +1218,15 @@ weapon_component_template = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1218,6 +1281,15 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1275,6 +1347,15 @@ weapon_component_template = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1329,6 +1410,15 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1386,6 +1476,15 @@ weapon_component_template = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1440,6 +1539,15 @@ weapon_component_template = {
 		modifier = {
 			factor = @cosmic_storm_shroud_ai_weight_factor
 			has_country_flag = affected_by_shroud_storm
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }

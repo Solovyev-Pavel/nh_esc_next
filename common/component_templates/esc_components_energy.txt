@@ -1483,6 +1483,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1550,6 +1559,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1620,6 +1638,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1687,6 +1714,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1760,6 +1796,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1826,6 +1871,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -1895,6 +1949,15 @@ weapon_component_template = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
 		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
 	}
 }
 
@@ -1961,6 +2024,15 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			no_resource_for_component = { RESOURCE = rare_crystals }
+		}
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
 		}
 	}
 }
@@ -2774,7 +2846,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 weapon_component_template = {
@@ -2822,7 +2905,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 # medium
@@ -2871,7 +2965,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 weapon_component_template = {
@@ -2919,7 +3024,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 ############################################################
@@ -2971,7 +3087,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 weapon_component_template = {
@@ -3018,7 +3145,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 # medium
@@ -3066,7 +3204,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 weapon_component_template = {
@@ -3113,7 +3262,18 @@ weapon_component_template = {
 		is_fallen_empire = no
 	}
 
-	ai_weight = { weight = 1 }
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			from = {
+				OR = {
+					is_defense_platform_ship = yes
+					ship_uses_starbase_components = yes
+				}
+			}
+		}
+	}
 }
 
 ############################################################
