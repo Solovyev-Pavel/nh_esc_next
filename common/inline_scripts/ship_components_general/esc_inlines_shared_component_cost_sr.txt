@@ -10,7 +10,10 @@ resources = {
 	# cost for mechanical ships
 	cost = {
 		trigger = {
-			from = { country_uses_bio_ships = no }
+			from = {
+				is_scope_type = country
+				country_uses_bio_ships = no
+			}
 		}
 		$PRIMARY_RESOURCE_TYPE_MECHANICAL$ = $PRIMARY_RESOURCE_COST$
 	}
@@ -18,6 +21,7 @@ resources = {
 	cost = {
 		trigger = {
 			from = {
+				is_scope_type = country
 				country_uses_bio_ships = yes
 				is_lithoid = no
 				is_mechanical_empire = no
@@ -30,6 +34,7 @@ resources = {
 	cost = {
 		trigger = {
 			from = {
+				is_scope_type = country
 				country_uses_bio_ships = yes
 				OR = {
 					is_lithoid = yes
@@ -48,7 +53,10 @@ resources = {
 	# upkeep for mechanical ships
 	upkeep = {
 		trigger = {
-			from = { country_uses_bio_ships = no }
+			from = {
+				is_scope_type = country
+				country_uses_bio_ships = no
+			}
 		}
 		$PRIMARY_RESOURCE_TYPE_MECHANICAL$ = $PRIMARY_RESOURCE_UPKEEP$
 	}
@@ -56,6 +64,7 @@ resources = {
 	upkeep = {
 		trigger = {
 			from = {
+				is_scope_type = country
 				country_uses_bio_ships = yes
 				is_lithoid = no
 				is_mechanical_empire = no
