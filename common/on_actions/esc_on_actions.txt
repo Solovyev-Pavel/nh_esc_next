@@ -9,10 +9,18 @@ on_game_start = {
 	}
 }
 
+on_game_start_country = {
+	events = {
+		esc_events.5001						# mercenary enclave boost
+		esc_events.5002						# ai boost reset
+	}
+}
+
 on_single_player_save_game_load  = {
 	events = {
 		esc_events.1 						# set mod-is-in-use flag
 		esc_dmm_integration.1 				# register in dynamic mod menu
+		esc_events.5003						# reset ai boost modifiers
 	}
 }
 
@@ -33,7 +41,6 @@ on_monthly_pulse_country = {
 	events = {
 		esc_events.4000						# dark matter technology check
 		esc_events.5000						# ai boost
-		esc_events.5001						# mercenary enclave boost
 		esc_special_projects.1000			# check for machine empires that can learn about psionics
 		esc_special_projects.2000			# checking whether conditions for dreadnought computer access are fulfilled
 		esc_special_projects.4000			# checking whether conditions for gigapredator instincts computer access are fulfilled
@@ -44,6 +51,18 @@ on_yearly_pulse_country = {
 	events = {
 		esc_special_projects.3001 			# roll for nanite thought matrix special project
 		esc_events_crisis.3000				# crisis dice roller
+	}
+}
+
+on_mid_game_pulse_country = {
+	events = {
+		esc_events.5002						# ai boost reset
+	}
+}
+
+on_late_game_pulse_country = {
+	events = {
+		esc_events.5002						# ai boost reset
 	}
 }
 

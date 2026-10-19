@@ -678,6 +678,7 @@ country_event = {
 ##             Setting up AI boost modifiers             ##
 ## ##################################################### ##
 
+# country science and resource boost
 country_event = {
 	id = esc_events.5000
 	is_triggered_only = yes
@@ -688,23 +689,31 @@ country_event = {
 	}
 
 	immediate = {
-		# remove AI bonus modifiers
-		ESC_EFFECT_ai_remove_science_boost = yes
-		# if is AI, set bonus modifiers
+		# if an empire is an AI and doesn't have boost modifiers - set them
 		if = {
-			limit = { is_ai = yes }
+			limit = {
+				is_ai = yes
+				NOT = { has_country_flag = ESC_COUNTRY_FLAG_was_ai_boosted }
+			}
+			set_country_flag = ESC_COUNTRY_FLAG_was_ai_boosted
 			ESC_EFFECT_ai_set_science_boost = yes
-		}
-		# remove AI economic modifiers
-		ESC_EFFECT_ai_remove_economic_boost = yes
-		# if is AI, set bonus modifiers
-		if = {
-			limit = { is_ai = yes }
 			ESC_EFFECT_ai_set_economic_boost = yes
+		}
+		# if an empire is NOT an AI and has boost modifiers - remove them
+		else if = {
+			limit = {
+				is_ai = no
+				has_country_flag = ESC_COUNTRY_FLAG_was_ai_boosted
+			}
+
+			remove_country_flag = ESC_COUNTRY_FLAG_was_ai_boosted
+			ESC_EFFECT_ai_remove_science_boost = yes
+			ESC_EFFECT_ai_remove_economic_boost = yes
 		}
 	}
 }
 
+# mercenary enclave boost
 country_event = {
 	id = esc_events.5001
 	is_triggered_only = yes
@@ -718,6 +727,38 @@ country_event = {
 		if = {
 			limit = { NOT = { has_modifier = esc_mercenary_boost } }
 			add_modifier = { modifier = esc_mercenary_boost days = -1 }
+		}
+	}
+}
+
+# specific country : remove ai modifiers and set new ones
+country_event = {
+	id = esc_events.5002
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		ESC_TRIGGER_is_playable_empire = yes
+	}
+
+	immediate = {
+		ESC_EFFECT_ai_remove_science_boost = yes
+		ESC_EFFECT_ai_remove_economic_boost = yes
+		remove_country_flag = ESC_COUNTRY_FLAG_was_ai_boosted
+
+		country_event = { id = esc_events.5000 days = 0 }
+	}
+}
+
+# all playable countries : remove ai modifiers and set new ones
+event = {
+	id = esc_events.5003
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_playable_country = {
+			country_event = { id = esc_events.5002 days = 0 }
 		}
 	}
 }
