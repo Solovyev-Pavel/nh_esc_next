@@ -129,6 +129,7 @@ weapon_component_template = {
 	prerequisites = { "esc_tech_laser_6" }
 	component_set = ESC_BIO_LASER_6
 	projectile_gfx = "esc_laser_6_small"
+	tags = { weapon_type_energy s_slot }
 	ai_tags = {
 		weapon_role_anti_armor
 		gunship
