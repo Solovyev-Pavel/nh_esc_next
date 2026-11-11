@@ -5,7 +5,7 @@
 on_game_start = {
 	events = {
 		esc_events.1 						# set mod-is-in-use flag
-		esc_dmm_integration.1 				# register in dynamic mod menu
+		#esc_dmm_integration.1 				# register in dynamic mod menu
 	}
 }
 
@@ -19,7 +19,7 @@ on_game_start_country = {
 on_single_player_save_game_load  = {
 	events = {
 		esc_events.1 						# set mod-is-in-use flag
-		esc_dmm_integration.1 				# register in dynamic mod menu
+		#esc_dmm_integration.1 				# register in dynamic mod menu
 		esc_events.5003						# reset ai boost modifiers
 	}
 }
@@ -27,7 +27,7 @@ on_single_player_save_game_load  = {
 on_monthly_pulse = {
 	events = {
 		esc_events.1 						# set mod-is-in-use flag
-		esc_dmm_integration.1 				# register in dynamic mod menu
+		#esc_dmm_integration.1 				# register in dynamic mod menu
 	}
 }
 
@@ -111,11 +111,11 @@ on_colony_transfer = {
 	}
 }
 
-dmm_mod_selected = {
-	events = {
-		esc_dmm_integration.10 # open mod menu
-	}
-}
+# dmm_mod_selected = {
+# 	events = {
+# 		esc_dmm_integration.10 # open mod menu
+# 	}
+# }
 
 on_building_demolished = {
 	events = {

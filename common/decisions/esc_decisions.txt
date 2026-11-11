@@ -99,7 +99,7 @@ decision_esc_clone_dragon = {
 
 	effect = {
 		owner = { set_timed_country_flag = { flag = ESC_COUNTRY_FLAG_drake_clone_requested days = 360 } }
-		planet_event = { id = esc_events.2000 days = 360 }
+		carrier = { colony = { colony_event = { id = esc_events.2000 days = 360 } } }
 	}
 }
 
@@ -143,6 +143,6 @@ decision_esc_clone_sky_dragon = {
 
 	effect = {
 		owner = { set_timed_country_flag = { flag = ESC_COUNTRY_FLAG_drake_clone_requested days = 360 } }
-		planet_event = { id = esc_events.2002 days = 360 }
+		carrier = { colony = { colony_event = { id = esc_events.2002 days = 360 } } }
 	}
 }
