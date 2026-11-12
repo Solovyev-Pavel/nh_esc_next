@@ -5,14 +5,7 @@
 
 potential = {
 	$EXTRA_CONDITION$ = $EXTRA_CONDITION_VALUE$
-	from = { country_uses_bio_ships = $EVAL_TARGET$ }
-	NAND = {
-		is_arkship_ship = yes
-		from = {
-			country_uses_bio_ships = yes
-			country_uses_bio_ships = $EVAL_TARGET$
-		}
-	}
+	ESC_TRIGGER_uses_biological_components = $EVAL_TARGET$
 }
 
 show_tech_unlock_if = {
