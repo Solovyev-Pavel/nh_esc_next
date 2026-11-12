@@ -778,3 +778,12 @@ ESC_TRIGGER_has_non_psionic_shields_mutation = {
         has_component = XL_ESC_ARCHAEO_SHIELDS_CREATURE_3
     }
 }
+
+############################################################
+###                Component type usage                  ###
+############################################################
+
+ESC_TRIGGER_uses_biological_components = {
+    is_arkship_ship = no
+    from = { country_uses_bio_ships = yes }
+}
