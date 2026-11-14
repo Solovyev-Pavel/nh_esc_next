@@ -46,7 +46,7 @@ esc_psionic_avatar_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_spiritualist }
+			is_fanatic_spiritualist = no
 		}
 	}
 }
@@ -292,7 +292,7 @@ esc_biohorror_army = {
 		modifier = {
 			set = 0
 			is_fallen_empire = yes
-			NOT = { has_ethic = ethic_fanatic_xenophobe }
+			is_fanatic_xenophobe = no
 		}
 	}
 }
