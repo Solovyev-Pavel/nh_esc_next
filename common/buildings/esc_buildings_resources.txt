@@ -618,9 +618,9 @@ esc_building_magmaminer_1 = {
 		remove_carrier_flag = ESC_PLANET_FLAG_queued_first_mantle_miner
 		# after this, it is impossible to remove the blocker without cheats
 		hidden_effect = {
-			planet = {
-				planet_event = { id = esc_events.3000 days = 360 random = 360 }
-				planet_event = { id = esc_events.3050 days = 1080 random = 720 }
+			colony = {
+				colony_event = { id = esc_events.3000 days = 360 random = 360 }
+				colony_event = { id = esc_events.3050 days = 1080 random = 720 }
 			}
 		}
 	}

@@ -699,10 +699,7 @@ esc_tech_armor_hardening_3 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -714,10 +711,7 @@ esc_tech_armor_hardening_3 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -749,10 +743,7 @@ esc_tech_armor_hardening_lm_2 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -764,10 +755,7 @@ esc_tech_armor_hardening_lm_2 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier

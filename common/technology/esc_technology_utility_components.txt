@@ -69,10 +69,7 @@ esc_tech_armor_6 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -80,10 +77,7 @@ esc_tech_armor_6 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -139,10 +133,7 @@ esc_tech_armor_7 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -162,10 +153,7 @@ esc_tech_armor_7 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -208,10 +196,7 @@ esc_tech_bio_armor_1 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -224,10 +209,7 @@ esc_tech_bio_armor_1 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -262,10 +244,7 @@ esc_tech_bio_armor_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -294,10 +273,7 @@ esc_tech_bio_armor_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -346,10 +322,7 @@ esc_tech_armor_nanite_1 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -361,10 +334,7 @@ esc_tech_armor_nanite_1 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -402,10 +372,7 @@ esc_tech_armor_nanite_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -429,10 +396,7 @@ esc_tech_armor_nanite_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -479,10 +443,7 @@ esc_tech_armor_dragonscales_nanite = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -494,10 +455,7 @@ esc_tech_armor_dragonscales_nanite = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -534,10 +492,7 @@ esc_tech_armor_shield_1 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -545,10 +500,7 @@ esc_tech_armor_shield_1 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -586,10 +538,7 @@ esc_tech_armor_shield_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -601,10 +550,7 @@ esc_tech_armor_shield_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -642,10 +588,7 @@ esc_tech_armor_shield_3 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -669,10 +612,7 @@ esc_tech_armor_shield_3 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier

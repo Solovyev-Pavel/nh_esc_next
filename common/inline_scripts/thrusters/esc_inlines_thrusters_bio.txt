@@ -1,0 +1,35 @@
+## same as vanilla
+## grand_archive/mutations/core_components/component_thrusters_bio
+## but doesn't have upgrades_to.
+
+key = "BIO_PROPULSION_$LEVEL$_$CORRESPONDING_SIZE$"
+size = small
+icon = "GFX_ship_part_bio_thruster_$LEVEL$"
+icon_frame = 1
+power = 0
+
+resources = {
+	category = ship_components
+	inline_script = {
+		script = "grand_archive/mutations/component_dynamic_cost"
+		COST = $COST$
+	}
+	cost = {
+		sr_dark_matter	= $DARK_MATTER$
+		mult = @fauna_cost_scaling
+	}
+}
+
+modifier = {
+	ship_base_speed_mult = $SPEED$
+	ship_evasion_add = $EVASION$
+}
+
+prerequisites = { $PREREQUISITE$ }
+component_set = "thruster_components_bio"
+
+potential = { $POTENTIAL$ }
+
+ai_weight = {
+	weight = $LEVEL$
+}

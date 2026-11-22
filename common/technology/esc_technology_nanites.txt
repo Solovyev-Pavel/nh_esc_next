@@ -42,24 +42,16 @@ esc_tech_nanite_cannon_1 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 	}
 
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 	}
 }
@@ -97,12 +89,8 @@ esc_tech_nanite_cannon_2 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -125,12 +113,8 @@ esc_tech_nanite_cannon_2 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -180,12 +164,8 @@ esc_tech_nanite_reconstructor = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -208,12 +188,8 @@ esc_tech_nanite_reconstructor = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -263,12 +239,8 @@ esc_tech_nanite_torpedo_1 = {
 			NOT = { has_technology = tech_torpedoes_3 }
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 	}
 
@@ -280,12 +252,8 @@ esc_tech_nanite_torpedo_1 = {
 			NOT = { has_technology = tech_torpedoes_3 }
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 	}
 }
@@ -323,12 +291,8 @@ esc_tech_nanite_torpedo_2 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -351,12 +315,8 @@ esc_tech_nanite_torpedo_2 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -407,12 +367,8 @@ esc_tech_nanite_missile_x_1 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -435,12 +391,8 @@ esc_tech_nanite_missile_x_1 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -491,12 +443,8 @@ esc_tech_nanite_missile_x_2 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -519,12 +467,8 @@ esc_tech_nanite_missile_x_2 = {
 			ESC_TRIGGER_may_research_nanite_weapons_advanced = no
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -582,12 +526,8 @@ esc_tech_nanite_missile_titanic = {
 			}
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -617,12 +557,8 @@ esc_tech_nanite_missile_titanic = {
 			}
 		}
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -667,12 +603,8 @@ esc_tech_nanite_bomber = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -691,12 +623,8 @@ esc_tech_nanite_bomber = {
 	ai_weight = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
-			factor = 1.1
-			has_ethic = ethic_xenophile
-		}
-		modifier = {
 			factor = 1.2
-			has_ethic = ethic_fanatic_xenophile
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier

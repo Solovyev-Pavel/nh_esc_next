@@ -72,10 +72,7 @@ esc_tech_reactor_6 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -83,10 +80,7 @@ esc_tech_reactor_6 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -128,10 +122,7 @@ esc_tech_reactor_7 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 
@@ -139,10 +130,7 @@ esc_tech_reactor_7 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 	}
 }
@@ -184,10 +172,7 @@ esc_tech_reactor_8 = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -207,10 +192,7 @@ esc_tech_reactor_8 = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -269,10 +251,7 @@ esc_tech_dark_matter_power_core_2 = {
 		}
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -296,10 +275,7 @@ esc_tech_dark_matter_power_core_2 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -358,10 +334,7 @@ esc_tech_dark_matter_power_core_3 = {
 		}
 		modifier = {
 			factor = 1.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -385,10 +358,7 @@ esc_tech_dark_matter_power_core_3 = {
 		}
 		modifier = {
 			factor = 1.15
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -439,17 +409,11 @@ esc_tech_reactor_psionic = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = yes
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -473,17 +437,11 @@ esc_tech_reactor_psionic = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = yes
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -792,17 +750,11 @@ esc_tech_sensors_psionic = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = yes
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier
@@ -822,17 +774,11 @@ esc_tech_sensors_psionic = {
 		factor = @ESC_AI_tech_weight_multiplier
 		modifier = {
 			factor = 1.5
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
+			is_spiritualist = yes
 		}
 		modifier = {
 			factor = 0.25
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = @ESC_TECH_Technology_Ascendancy_weight_modifier

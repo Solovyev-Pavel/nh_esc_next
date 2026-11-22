@@ -205,13 +205,13 @@ country_event = {
 						type = "extradimensional"
 						species = event_target:extradimensional_species
 						name_list = "Extradimensional"
-						effect = { set_country_flag = unbidden }
 						flag = {
 							icon= { category = "special" file = "extradimensional_01.dds" }
 							background= { category = "backgrounds" file = "circle.dds" }
 							colors={ "indigo" "blue" "null" "null" }
 						}
 						effect = {
+							set_country_flag = unbidden
 							create_ship_design = { design = "NAME_Void_Shaper" }
 							add_ship_design = last_created_design
 							create_ship_design = { design = "NAME_Unbidden_Anchor" }

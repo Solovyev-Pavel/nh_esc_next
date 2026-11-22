@@ -27,7 +27,7 @@ event = {
 ## ##################################################### ##
 
 ### spawn an ether drake hatchling
-planet_event = {
+colony_event = {
 	id = esc_events.2000
 	is_triggered_only = yes
 	picture = GFX_evt_space_dragon
@@ -85,7 +85,7 @@ carrier_event = {
 }
 
 ### spawn a sky dragon hatchling
-planet_event = {
+colony_event = {
 	id = esc_events.2002
 	is_triggered_only = yes
 	picture = GFX_evt_here_be_dragons
@@ -125,7 +125,7 @@ planet_event = {
 ## ##################################################### ##
 
 ### extra resource deposits for mantle miner
-planet_event = {
+colony_event = {
     id = esc_events.3000
     is_triggered_only = yes
     hide_window = yes
@@ -150,25 +150,25 @@ planet_event = {
 			5 = { # nothing, tough luck
 			}
 			15 = { # extra minerals
-				planet_event = { id = esc_events.3011 days = 0 }
+				colony_event = { id = esc_events.3011 days = 0 }
 			}
 			15 = { # alloys
-				planet_event = { id = esc_events.3012 days = 0 }
+				colony_event = { id = esc_events.3012 days = 0 }
 			}
 			15 = { # exotic gases
-				planet_event = { id = esc_events.3013 days = 0 }
+				colony_event = { id = esc_events.3013 days = 0 }
 			}
 			15 = { # rare crystals
-				planet_event = { id = esc_events.3014 days = 0 }
+				colony_event = { id = esc_events.3014 days = 0 }
 			}
 			15 = { # volatile motes
-				planet_event = { id = esc_events.3015 days = 0 }
+				colony_event = { id = esc_events.3015 days = 0 }
 			}
 			15 = { # trade
-				planet_event = { id = esc_events.3016 days = 0 }
+				colony_event = { id = esc_events.3016 days = 0 }
 			}
 			5 = { # living metal
-				planet_event = { id = esc_events.3017 days = 0 }
+				colony_event = { id = esc_events.3017 days = 0 }
 			}
 		}
 
@@ -185,13 +185,13 @@ planet_event = {
 						has_country_flag = ESC_COUNTRY_FLAG_guaranteed_extra_mantle_miner_deposits
 					}
 				}
-				planet_event = { id = esc_events.3000 days = 360 random = 720 }
+				colony_event = { id = esc_events.3000 days = 360 random = 720 }
 			}
 			else = { # guaranteed deposits cheat is enabled
 				random_list = {
 					75 = {}
 					25 = {
-						planet_event = { id = esc_events.3000 days = 360 random = 720 }
+						colony_event = { id = esc_events.3000 days = 360 random = 720 }
 					}
 				}
 			}
@@ -201,7 +201,7 @@ planet_event = {
 }
 
 # extra minerals
-planet_event = {
+colony_event = {
     id = esc_events.3011
     is_triggered_only = yes
     title = esc_events.3011.name
@@ -210,7 +210,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-        planet = {
+        colony = {
 			add_deposit = d_esc_mantle_mineral_cluster
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -240,7 +240,7 @@ planet_event = {
 }
 
 # some alloys
-planet_event = {
+colony_event = {
     id = esc_events.3012
     is_triggered_only = yes
     title = esc_events.3012.name
@@ -249,7 +249,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-        planet = {
+        colony = {
 			add_deposit = d_esc_mantle_alloy_plume
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -279,7 +279,7 @@ planet_event = {
 }
 
 # some exotic gases
-planet_event = {
+colony_event = {
     id = esc_events.3013
     is_triggered_only = yes
     title = esc_events.3013.name
@@ -288,7 +288,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-       	planet = {
+       	colony = {
 			add_deposit = d_esc_mantle_exotic_gases_pocket
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -318,7 +318,7 @@ planet_event = {
 }
 
 # some rare crystals
-planet_event = {
+colony_event = {
     id = esc_events.3014
     is_triggered_only = yes
     title = esc_events.3014.name
@@ -327,7 +327,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-       	planet = {
+       	colony = {
 			add_deposit = d_esc_mantle_rare_crystal_cluster
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -357,7 +357,7 @@ planet_event = {
 }
 
 # some volatile motes
-planet_event = {
+colony_event = {
     id = esc_events.3015
     is_triggered_only = yes
     title = esc_events.3015.name
@@ -366,7 +366,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-       	planet = {
+       	colony = {
 			add_deposit = d_esc_mantle_volatile_motes_cluster
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -396,7 +396,7 @@ planet_event = {
 }
 
 # some trade value
-planet_event = {
+colony_event = {
     id = esc_events.3016
     is_triggered_only = yes
     title = esc_events.3016.name
@@ -405,7 +405,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-       	planet = {
+       	colony = {
 			add_deposit = d_esc_mantle_trade_value
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -435,7 +435,7 @@ planet_event = {
 }
 
 # some living metal
-planet_event = {
+colony_event = {
     id = esc_events.3017
     is_triggered_only = yes
     title = esc_events.3017.name
@@ -444,7 +444,7 @@ planet_event = {
 
     option = {
         name = EXCELLENT
-       	planet = {
+       	colony = {
 			add_deposit = d_esc_mantle_living_metal
 			if = {
 				limit = { has_carrier_flag = ESC_PLANET_FLAG_mantle_miner_deposits_4 }
@@ -474,7 +474,7 @@ planet_event = {
 }
 
 # immanis colosseus (hidden dice roll)
-planet_event = {
+colony_event = {
     id = esc_events.3050
     is_triggered_only = yes
 	hide_window = yes
@@ -490,13 +490,13 @@ planet_event = {
     immediate = {
         random_list = {
 			95= {}
-			5 = { planet_event = { id = esc_events.3051 days = 0 } }
+			5 = { colony_event = { id = esc_events.3051 days = 0 } }
 		}
     }
 }
 
 # immanis colosseus (user notification on successfull roll)
-planet_event = {
+colony_event = {
     id = esc_events.3051
     is_triggered_only = yes
     title = esc_events.3051.name
@@ -513,20 +513,20 @@ planet_event = {
 
     option = {
         name = FASCINATING
-       	planet = {
+       	colony = {
 			add_deposit = d_esc_mantle_immanis_colosseus
 		}
     }
 }
 
 # when mantle miner is demolished or replaced, remove unique deposits tied to it
-planet_event = {
+colony_event = {
     id = esc_events.3100
     is_triggered_only = yes
     hide_window = yes
 
     trigger = {
-		planet = {
+		colony = {
 			NOR = {
 				has_building = esc_building_magmaminer_1
 				has_building = esc_building_magmaminer_2
@@ -544,7 +544,7 @@ planet_event = {
     }
 
     immediate = {
-		planet = {
+		colony = {
 			# remove all extra minerals deposits added by the mantle miner
 			while = {
 				limit = { has_deposit = d_esc_mantle_mineral_cluster }
@@ -700,7 +700,7 @@ country_event = {
 			ESC_EFFECT_ai_set_economic_boost = yes
 		}
 		# if an empire is NOT an AI and has boost modifiers - remove them
-		else if = {
+		else_if = {
 			limit = {
 				is_ai = no
 				has_country_flag = ESC_COUNTRY_FLAG_was_ai_boosted
